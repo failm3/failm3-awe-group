@@ -1,0 +1,48 @@
+{
+  "capability": "observation-digest-v1",
+  "source": "Lumen Harbor field pilot",
+  "period": "2026-W45",
+  "row_count": 3,
+  "scheduled": 30,
+  "completed": 26,
+  "incidents": 6,
+  "completion_percent": "86.67",
+  "completion_percent_value": 86.67,
+  "site_count": 2,
+  "sites": {
+    "North": {
+      "rows": 2,
+      "scheduled": 22,
+      "completed": 18,
+      "incidents": 5,
+      "completion_percent": "81.82",
+      "completion_ratio": "0.82"
+    },
+    "South": {
+      "rows": 1,
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1,
+      "completion_percent": "100.00",
+      "completion_ratio": "1.00"
+    }
+  },
+  "totals_reconciliation": {
+    "sites_scheduled_sum": 30,
+    "sites_completed_sum": 26,
+    "sites_incidents_sum": 6,
+    "matches_global": true
+  },
+  "method": {
+    "completion_percent": "completed / scheduled * 100, rounded half-up to 2 decimal places (integer arithmetic), rendered as a fixed 2-decimal string",
+    "row_count": "number of elements in observations[]",
+    "site_totals": "sum of scheduled/completed/incidents grouped by site over all rows; rows = number of contributing rows",
+    "sites_key_order": "alphabetical by site name",
+    "validation": "integer, non-negative, completed <= scheduled, non-empty observations, site totals reconcile with global totals"
+  },
+  "inputs": {
+    "fixture_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/input/pilot.observations.json",
+    "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "fixture_bytes": 474
+  }
+}

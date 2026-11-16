@@ -1,0 +1,1 @@
+observation-digest-v1 failed: DIGEST_INPUT_INVALID: observations[0].completed must be a non-negative integer, got 2.5

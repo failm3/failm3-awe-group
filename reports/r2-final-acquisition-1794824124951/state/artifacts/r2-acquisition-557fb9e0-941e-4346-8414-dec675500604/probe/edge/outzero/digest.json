@@ -1,0 +1,18 @@
+{
+  "source": "z",
+  "period": "t",
+  "row_count": 1,
+  "scheduled": 0,
+  "completed": 0,
+  "incidents": 0,
+  "completion_percent": 0.00,
+  "sites": {
+    "Q": {
+      "rows": 1,
+      "scheduled": 0,
+      "completed": 0,
+      "incidents": 0,
+      "completion_percent": 0.00
+    }
+  }
+}

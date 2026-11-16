@@ -1,0 +1,127 @@
+{
+  "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "saved_at": "2026-11-16T07:04:33.221Z",
+  "total_agents": 6,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T06:34:51.583Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: The mission objective requires the named competence observation-digest-v1 (read input/pilot.observations.json, compute exact row/site totals and completion_percent to 2 decimals, persist digest.json and digest.md). No registered capability provides it: the registered list contains file_read/file_write/file_list/shell/save_artifact, which can host the procedure but are not the named competence, so substitution is not permitted. Requesting one bounded acquisition: derive a single self-contained local procedure at a stable path under /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d, with fixed args exactly [<root>/input/pilot.observations.json, <root>], and record the qualified executable bytes plus a durable invocation receipt. No packages, network, publishing, deployment, purchases or external changes; no probe output directory may be used as the final args output. Once the procedure is qualified by a real host-verified execution, a new executable plan will be returned.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_write",
+        "file_list"
+      ],
+      "artifacts": [
+        "5a4c58b4-0627-4130-8e72-0e618cff7398",
+        "e2a8b042-31b8-4bb6-a913-bd2a7f353d3a",
+        "2c0c1d65-52c7-4a8c-b7fc-cd3a0e24d21c",
+        "c6510a21-450b-4b76-b000-692ff58600b4",
+        "c494cb87-7d8e-4ffe-9e1d-795d2a176e88",
+        "0622f291-3765-4f76-a102-e037ccd1edf1"
+      ],
+      "duration_ms": 240598,
+      "finished_at": "2026-11-16T06:38:52.170Z"
+    },
+    {
+      "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d:top1",
+      "role": "executor",
+      "started_at": "2026-11-16T06:39:29.225Z",
+      "task": "Invoke the host-qualified observation-digest-v1 procedure exactly once against the fixed arguments, then persist the durable invocation receipt and register the two produced digest deliverables as artifacts. Do not modify the procedure source, do not change the args, do not run it into any probe or alternate output directory, and do not re-run with any extra flags, wrappers, redirections or environment changes. Capture stdout, stderr, exit code, the executable sha256, the input sha256, and the observed output file hashes into the receipt. Then call save_artifact for digest.json, digest.md and the receipt itself.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_list",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "a117329d-a617-4ed2-9a99-b3ffde615a6f",
+        "6b07dfb7-4dab-4ac4-ba52-b75415b56e89",
+        "e8113a32-c368-4694-a822-05715ace8689"
+      ],
+      "duration_ms": 137652,
+      "finished_at": "2026-11-16T06:41:46.873Z"
+    },
+    {
+      "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d:top2",
+      "role": "analyst",
+      "started_at": "2026-11-16T06:41:46.887Z",
+      "task": "Independently verify the produced digests without reusing the procedure's logic. Read input/pilot.observations.json directly and recompute, by a separate mechanism (for example an independent python3 or awk pipeline over the fixture, not the observation-digest-v1 source), the following: row_count, scheduled, completed, incidents, completion_percent rounded half-up to exactly 2 decimals, and per-site totals keyed by site name with each site's own completion percentage. Cross-check that digest.json carries these as exact numbers (row_count, scheduled, completed, incidents integer; completion_percent numeric with 2 decimals; sites an object keyed by site with totals) and that digest.md presents the identical values with a reproducible stated method. Confirm the command actually executed was the exact fixed-arg invocation and that no probe directory was used as the final args output. Emit a verification report with the independent arithmetic shown step by step and an explicit PASS/FAIL per acceptance criterion, and save it as an artifact. Do not modify digest.json, digest.md, the procedure source or the input fixture; do not re-run the qualified command with altered arguments.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "shell",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "8902adef-2a78-4f46-bbde-0b1beea58861"
+      ],
+      "duration_ms": 200227,
+      "finished_at": "2026-11-16T06:45:07.109Z"
+    },
+    {
+      "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d:top3",
+      "role": "writer",
+      "started_at": "2026-11-16T06:45:07.122Z",
+      "task": "Assemble the final mission report that documents the replanned workflow end to end: capability identification, the single bounded acquisition and qualification under attempt ef05d5a7-86bd-4978-b834-152c37b98f88, the gated fixed-arg invocation, and the independent verification outcome. The report must state the reproducible digest method, reproduce the final figures exactly as they appear in digest.json and digest.md without rounding or restating them differently, and list every registered artifact with its artifact id and sha256 (digest.json, digest.md, invocation receipt, verification report). Register the report itself via save_artifact. Make no claims that are not backed by an artifact, and do not alter any existing deliverable.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "9460c058-b6c6-497d-a7e6-6019618e8f06"
+      ],
+      "duration_ms": 134246,
+      "finished_at": "2026-11-16T06:47:21.364Z"
+    },
+    {
+      "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d:top4",
+      "role": "executor",
+      "started_at": "2026-11-16T06:48:09.757Z",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MAJOR] No evidence anywhere in the candidate that the deliverables passed independent Nox QA; acceptance criterion 4 requires it, and both the verification report and the mission report openly leave this component open.\n[MINOR] receipt.json records sha256 as null / 'not-measured' for both digest.json and digest.md, so the durable invocation receipt cannot by itself tie the executed procedure to the registered output",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 332328,
+      "finished_at": "2026-11-16T06:53:42.087Z"
+    },
+    {
+      "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d:top5",
+      "role": "executor",
+      "started_at": "2026-11-16T06:54:51.924Z",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MAJOR] Independent Nox QA was not performed. The only QA executed was qa/nox-qa-verify.py, written and run by the same agent that produced the deliverables; the harness, the receipt and both reports all disclaim it as a Nox QA verdict. Acceptance criterion 4 therefore remains open on its QA component, even though its byte-verification component is met.\n[MINOR] mission-report.md section 5.1 still lists receipt.json u",
+      "depth": 0,
+      "parent_id": null,
+      "status": "failed",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 581295,
+      "finished_at": "2026-11-16T07:04:33.221Z",
+      "note": "aborted"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+$ node visible.test.cjs   (unmodified)
+visible PASS
+exit code 0
+
+Additional ad-hoc spec checks (not saved as tests) passed:
+- "" -> []; LF, CRLF, CR record endings; one trailing record ending allowed
+- quoted fields with "" escapes, ; = CR LF inside quotes; VALUE trimmed
+- INVALID_FORMAT: text after closing quote, unterminated quote, quote in unquoted field,
+  bad key, two '=' in unquoted field, duplicate key (also quoted vs. unquoted), empty field/blank line
+- INVALID_VALUE: leading zero, +3, 3.0, out-of-range WINDOW/RATE/LIMIT, missing required, COLOR case mismatch
+- unknown keys dropped; output keys in schema order; result prototype is Object.prototype

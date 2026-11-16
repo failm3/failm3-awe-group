@@ -1,0 +1,14 @@
+{
+  "id": "79a7c9d4-53eb-47e7-bcfc-c6f1278edcdf",
+  "mission_id": "r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+  "type": "json",
+  "name": "qa/_invocation_timing_capture.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/qa/_invocation_timing_capture.json",
+  "created_at": "2026-11-16T11:26:06.260Z",
+  "metadata": {
+    "size_bytes": 2646,
+    "sha256": "4a7ef66d22ff1c615b2dd275e4318b6ae98320644975062c7249de7c388d53e8",
+    "reconciled": true,
+    "revision": 1
+  }
+}

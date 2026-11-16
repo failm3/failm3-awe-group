@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "b22cc0cb-12a7-42f0-835c-f962bb35b3d0",
+  "mission_id": "r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd",
+  "role": "researcher",
+  "model": "deepseek-v4-flash",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T03:10:09.834Z",
+  "finished_at": null,
+  "status": "started",
+  "outcome": "UNKNOWN",
+  "usage": {
+    "input_tokens": "UNKNOWN",
+    "output_tokens": "UNKNOWN",
+    "total_tokens": "UNKNOWN",
+    "reasoning_tokens": "UNKNOWN",
+    "cached_input_tokens": "UNKNOWN"
+  },
+  "usage_status": "UNKNOWN",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

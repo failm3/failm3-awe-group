@@ -1,0 +1,115 @@
+{
+  "receipt_kind": "final-host-qualified-invocation",
+  "schema": "invocation-receipt/v1",
+  "mission_id": "r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+  "spec_sha256": "f0b77e998946cea75d32a43e7ca402e62c6407e10374fd1bfddb75c6d7a3bf67",
+  "attempt_id": "dec738dd-7ae3-469d-9c73-32166444bd9b",
+  "qualification_id": "q-r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+  "admission_id": "61bdd551-8065-42a0-84e1-884752eee63d",
+  "receipt_id": "r-a25ad357-e121-4fd7-be4e-bbeaf12b67ae",
+  "root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+  "invocation_count": 1,
+  "retried": false,
+  "substituted_command": false,
+  "gate_decision": "admitted-and-executed",
+  "gate_notes": "Exactly one shell invocation was issued and it was byte-identical to the fixed command in the admission. No pre-run hash check, listing, probe or argument change was attempted, and no disallowed command was refused. The host independently rehashes the executable and re-verifies the probes before release.",
+  "command": "node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b'",
+  "command_argv": [
+    "node",
+    "--",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b"
+  ],
+  "fixed_args": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b"
+  ],
+  "fixed_args_match_spec": true,
+  "final_args_output_is_probe_dir": false,
+  "command_sha256": "5ed351b2bade8b3f7292e6fd9a3f4d9a33fb04163e631b0897054c808ba117ae",
+  "command_sha256_source": "supplied by the host admission record for this attempt; not recomputed in this delegation (shell is restricted to the single fixed invocation, so hashing was neither available nor requested)",
+  "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs",
+  "executable_sha256": "1e6ee2f392fdb7656e567e37f571e39471feefb62562a8512391d470faddf7c9",
+  "executable_sha256_source": "bound by the host admission/qualification record for this attempt; rehashed independently by the host before release, not recomputed here",
+  "procedure_id": "observation-digest-v1",
+  "procedure_version": "1.0.0",
+  "runtime": "node v22.23.3",
+  "runtime_binary": "node",
+  "runtime_reported_by_procedure": "node 22.23.3",
+  "exit_code": 0,
+  "timing": {
+    "started_at": null,
+    "finished_at": null,
+    "duration_ms": null,
+    "wall_clock_note": "The single permitted invocation was issued through a shell gate that returns only exit_code/stderr/stdout; no timestamp or duration was surfaced and no second command (e.g. date) was permitted, so no wall-clock values were observed. They are recorded as null rather than fabricated. Observed ordering is unambiguous: this receipt was written after the one invocation returned, and the digest outputs embedded below were read from disk after that same invocation.",
+    "observed_sequence": [
+      "1. single fixed invocation issued",
+      "2. invocation returned exit_code 0 with the stdout recorded below",
+      "3. digest.json read from ROOT",
+      "4. digest.md read from ROOT",
+      "5. this receipt written to ROOT"
+    ]
+  },
+  "stdout": "{\"wrote\":{\"digest_json\":\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.json\",\"digest_md\":\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.md\"},\"digest\":{\"row_count\":3,\"scheduled\":30,\"completed\":26,\"incidents\":6,\"completion_percent\":86.67,\"sites\":{\"North\":{\"scheduled\":22,\"completed\":18,\"incidents\":5},\"South\":{\"scheduled\":8,\"completed\":8,\"incidents\":1}}}}",
+  "stderr": "",
+  "observed_output_files": [
+    {
+      "name": "digest.json",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.json",
+      "reported_by_stdout": true,
+      "observed_on_disk": true,
+      "bytes": 301
+    },
+    {
+      "name": "digest.md",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.md",
+      "reported_by_stdout": true,
+      "observed_on_disk": true,
+      "bytes": 3294
+    }
+  ],
+  "output_sha256_carried_from_host_verified_record": {
+    "digest.json": "3f3d1e13591a57d7fb9c12e50b7bf6f4396bc70080335859cfde0cf6f63aec4f",
+    "digest.md": "e03394a3ecb9c9f31f9b32b2c8c31aa74e073ed5932d4e99db0318b9257b8c58",
+    "note": "Values carried from the host-verified qualification record for this same executable and these same fixed args and output root; not recomputed in this delegation because shell was restricted to the single fixed invocation. The host re-verifies artifact bytes independently."
+  },
+  "observed_values": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "sites": {
+      "North": {
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5
+      },
+      "South": {
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1
+      }
+    }
+  },
+  "hostile_edit_check": {
+    "hand_edited": false,
+    "rederived_or_reformatted": false,
+    "note": "Values above and the embedded file contents below were read back verbatim from the files the procedure wrote. Nothing was hand-edited, reformatted or independently re-derived in this delegation; the independent arithmetic check belongs to the qualification record and to Nox QA."
+  },
+  "digest_json_content": "{\n  \"row_count\": 3,\n  \"scheduled\": 30,\n  \"completed\": 26,\n  \"incidents\": 6,\n  \"completion_percent\": 86.67,\n  \"sites\": {\n    \"North\": {\n      \"scheduled\": 22,\n      \"completed\": 18,\n      \"incidents\": 5\n    },\n    \"South\": {\n      \"scheduled\": 8,\n      \"completed\": 8,\n      \"incidents\": 1\n    }\n  }\n}\n",
+  "digest_md_content": "# Operational digest — observation-digest-v1\n\n- Procedure: `observation-digest-v1` v1.0.0 (dependency-free Node.js ESM)\n- Input fixture: `/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json`\n- Output root: `/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b`\n- Runtime: node 22.23.3\n\n## Totals\n\n| metric | value |\n| --- | --- |\n| row_count | 3 |\n| scheduled | 30 |\n| completed | 26 |\n| incidents | 6 |\n| completion_percent | 86.67 |\n\n## Per-site totals\n\n| site | scheduled | completed | incidents |\n| --- | --- | --- | --- |\n| North | 22 | 18 | 5 |\n| South | 8 | 8 | 1 |\n| **all sites** | **30** | **26** | **6** |\n\n## Method (reproducible)\n\n1. Read the fixture at the fixed absolute path `/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json` as UTF-8 and parse it as JSON.\n2. Take the row array: the top-level value when it is an array, otherwise the value of its `observations` member. Each row must carry a non-empty string `site` and integer `scheduled`, `completed`, `incidents`; anything else aborts with a non-zero exit code.\n3. `row_count` = number of rows in that array (3 for this fixture).\n4. `scheduled`, `completed`, `incidents` = arithmetic sums of the like-named field over every row.\n5. `completion_percent` = `round(completed * 10000 / scheduled) / 100`, i.e. completed/scheduled as a percentage rounded to exactly two decimals with half-up rounding on the integer numerator (0 when `scheduled` is 0). For this fixture: 26 * 10000 / 30 = 8666.66... -> 8667 -> 86.67.\n6. `sites` = one key per distinct `site` value, each holding the same three sums restricted to the rows of that site. Keys are emitted in ascending code-unit order of the site name, so the file is byte-stable across runs and locales.\n7. Consistency check before writing: the per-site sums must equal the aggregate sums for all three counters, otherwise the run aborts with a non-zero exit code and writes nothing.\n8. Persist `digest.json` (2-space indented JSON + trailing newline) and this `digest.md` in the output root; `digest.md` restates the same numbers and records this method.\n\n## Reproduction\n\nRun the same procedure with the same two fixed arguments:\n\n```\nnode -- /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b\n```\n\nThe run is deterministic: the same input bytes always yield the same `digest.json` and `digest.md` values.\n",
+  "acceptance_criteria_mapping": {
+    "qualified_local_procedure_invoked_with_exact_bytes_and_fixed_args": "met — one invocation of observation-digest-v1.mjs (sha256 1e6ee2f3…) with exactly the two fixed args, exit 0",
+    "durable_invocation_receipt_present": "met — this file, ROOT/invocation-receipt.json, registered as an artifact",
+    "digest_numeric_fields_exact": "met — row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67 (2 decimals), sites keyed by site with totals",
+    "digest_md_restates_same_values_with_reproducible_method": "met — embedded verbatim above; digest.md carries a numbered method and a reproduction command",
+    "no_probe_output_dir_as_final_output": "met — the final output root is ROOT itself, never a probe directory",
+    "scope_and_exclusions_preserved": "no packages, no network, no publishing, no deployment, no purchases, no external or host changes; csv_analytics and improvised shell procedures not used; the .mjs source was not edited and the probe artifact was not touched"
+  },
+  "risks_carried": [
+    "A model-authored observation is not qualification — qualification rests on the real invocation and the independent arithmetic check, not on the observation.json narrative.",
+    "Visible example values do not replace independent arithmetic verification — no value here was hand-edited, reformatted or re-derived in this delegation; the host and Nox QA verify the bytes independently."
+  ]
+}

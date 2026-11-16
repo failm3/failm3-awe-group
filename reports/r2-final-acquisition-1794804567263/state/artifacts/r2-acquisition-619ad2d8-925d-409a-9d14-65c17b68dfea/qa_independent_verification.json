@@ -1,0 +1,314 @@
+{
+  "verification": "qa_independent_verification",
+  "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+  "verdict": "PASS",
+  "summary": "Independently recomputed all digest figures from input/pilot.observations.json with three separate implementations that do not reuse the procedure's logic; they match digest.json and digest.md field for field, and the two deliverables agree with each other exactly on all 15 compared values.",
+  "method_of_verification": {
+    "language": "python3 3.14.4 (stdlib only) plus awk",
+    "numeric_core": "decimal.Decimal, quantize(Decimal('0.01'), ROUND_HALF_UP)",
+    "percent_formula_used": "round_half_up(completed / scheduled * 100, 2); 0.00 when scheduled == 0",
+    "digest_json_parsing": "json.loads(parse_float=Decimal) so the literal token 86.67 is compared as an exact decimal, never a binary float",
+    "digest_md_parsing": "independent pipe-table scraper over the raw markdown, not generated from digest.json",
+    "reuse_of_procedure_logic": false,
+    "rationale": "The procedure computes Math.round(completed*10000/scheduled)/100 with JavaScript binary doubles. This verifier computes the same quantity as an exact rational with Decimal ROUND_HALF_UP, and separately with pure integer arithmetic and with awk printf. Agreement across four code paths is not a re-run of the procedure's own arithmetic."
+  },
+  "inputs": {
+    "fixture": {
+      "path": "input/pilot.observations.json",
+      "measured_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "measured_size_bytes": 474
+    }
+  },
+  "independent_recomputation": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "source": "Lumen Harbor field pilot",
+    "period": "2026-W45",
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": "81.82"
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": "100.00"
+      }
+    }
+  },
+  "hand_check": {
+    "row_count": "3 observation records in the fixture",
+    "scheduled": "12 + 8 + 10 = 30",
+    "completed": "11 + 8 + 7 = 26",
+    "incidents": "2 + 1 + 3 = 6",
+    "completion_percent": "26 / 30 = 0.866666...; x100 = 86.6666...; two-decimal half-up = 86.67",
+    "North": "rows 2 (Harbor 12/11/2 + Ridge 10/7/3) = 22/18/5; 18/22 = 81.8181... -> 81.82",
+    "South": "rows 1 (Harbor 8/8/1) = 8/8/1; 8/8 = 100% -> 100.00 in markdown, 100 as a JSON number"
+  },
+  "comparison_table_totals": [
+    {
+      "field": "row_count",
+      "digest_md_row": "Rows",
+      "independent": "3",
+      "digest_json": "3",
+      "digest_md": "3",
+      "digest_json_type": "int",
+      "match_json": true,
+      "match_md": true
+    },
+    {
+      "field": "scheduled",
+      "digest_md_row": "Scheduled",
+      "independent": "30",
+      "digest_json": "30",
+      "digest_md": "30",
+      "digest_json_type": "int",
+      "match_json": true,
+      "match_md": true
+    },
+    {
+      "field": "completed",
+      "digest_md_row": "Completed",
+      "independent": "26",
+      "digest_json": "26",
+      "digest_md": "26",
+      "digest_json_type": "int",
+      "match_json": true,
+      "match_md": true
+    },
+    {
+      "field": "incidents",
+      "digest_md_row": "Incidents",
+      "independent": "6",
+      "digest_json": "6",
+      "digest_md": "6",
+      "digest_json_type": "int",
+      "match_json": true,
+      "match_md": true
+    },
+    {
+      "field": "completion_percent",
+      "digest_md_row": "Completion %",
+      "independent": "86.67",
+      "digest_json": "86.67",
+      "digest_md": "86.67",
+      "digest_json_type": "decimal",
+      "match_json": true,
+      "match_md": true
+    }
+  ],
+  "comparison_table_sites": [
+    {"site": "North", "field": "rows", "independent": "2", "digest_json": "2", "digest_md": "2", "match_json": true, "match_md": true},
+    {"site": "North", "field": "scheduled", "independent": "22", "digest_json": "22", "digest_md": "22", "match_json": true, "match_md": true},
+    {"site": "North", "field": "completed", "independent": "18", "digest_json": "18", "digest_md": "18", "match_json": true, "match_md": true},
+    {"site": "North", "field": "incidents", "independent": "5", "digest_json": "5", "digest_md": "5", "match_json": true, "match_md": true},
+    {"site": "North", "field": "completion_percent", "independent": "81.82", "digest_json": "81.82", "digest_md": "81.82", "match_json": true, "match_md": true},
+    {"site": "South", "field": "rows", "independent": "1", "digest_json": "1", "digest_md": "1", "match_json": true, "match_md": true},
+    {"site": "South", "field": "scheduled", "independent": "8", "digest_json": "8", "digest_md": "8", "match_json": true, "match_md": true},
+    {"site": "South", "field": "completed", "independent": "8", "digest_json": "8", "digest_md": "8", "match_json": true, "match_md": true},
+    {"site": "South", "field": "incidents", "independent": "1", "digest_json": "1", "digest_md": "1", "match_json": true, "match_md": true},
+    {"site": "South", "field": "completion_percent", "independent": "100.00", "digest_json": "100", "digest_md": "100.00", "match_json": true, "match_md": true}
+  ],
+  "sites_key_check": {
+    "independent_keys_sorted": ["North", "South"],
+    "digest_json_keys": ["North", "South"],
+    "digest_md_row_order": ["North", "South"],
+    "key_sets_identical": true,
+    "sort_order_respected": true,
+    "both_sites_present_with_all_five_fields": true
+  },
+  "digest_json_vs_digest_md": {
+    "values_compared": 15,
+    "all_agree": true,
+    "detail": "5 grand-total fields plus 2 sites x 5 fields, each compared as exact decimal equality; the only textual difference is South completion_percent, 100 in JSON vs 100.00 in markdown, which are numerically equal"
+  },
+  "internal_cross_checks": {
+    "sum_site_rows_equals_row_count": true,
+    "sum_site_scheduled_equals_scheduled": true,
+    "sum_site_completed_equals_completed": true,
+    "sum_site_incidents_equals_incidents": true,
+    "completed_le_scheduled": true
+  },
+  "numeric_type_check": {
+    "row_count": "JSON integer 3",
+    "scheduled": "JSON integer 30",
+    "completed": "JSON integer 26",
+    "incidents": "JSON integer 6",
+    "completion_percent": "JSON number 86.67 (decimal token, exponent -2)",
+    "site_counters": "all JSON integers",
+    "site_completion_percent": "81.82 decimal; 100 integer-valued number, numerically equal to 100.00",
+    "strings_found_where_numbers_expected": false,
+    "verdict": "no field is a string; all counters are integral JSON numbers"
+  },
+  "rendering_judgements": [
+    {
+      "topic": "South completion_percent is the JSON literal 100, rendered 100.00 in digest.md",
+      "judgement": "accepted",
+      "reason": "JSON has no fixed-decimal type. The approved criterion requires completion_percent to 2 decimals; digest.md's method section states the percentages are 'JSON numbers rounded to two decimals' and are rendered with toFixed(2) in the document. 100 == 100.00 as a value and its decimal exponent (0) satisfies the 2-decimal constraint rather than violating it. Every non-integral percentage (86.67, 81.82) carries exactly 2 decimals. Flagged for transparency, not treated as a failure."
+    }
+  ],
+  "digest_md_method_review": {
+    "reproducible": true,
+    "numbered_steps": 6,
+    "required_elements_present": {
+      "names_completion_formula": true,
+      "defines_row_count": true,
+      "lists_summed_fields": true,
+      "states_two_decimal_rendering": true,
+      "states_site_grouping_and_order": true,
+      "states_zero_scheduled_rule": true,
+      "states_json_number_typing": true,
+      "provides_cross_check": true
+    },
+    "assessment": "digest.md states the exact row and site summation rule, the two-decimal percentage formula, the zero-scheduled behaviour, the site sort order, and the JSON-versus-markdown rendering difference, and supplies a cross-check. Every number can be reproduced by a third party from the fixture alone."
+  },
+  "byte_provenance": {
+    "deliverables": {
+      "digest.json": {
+        "path": "digest.json",
+        "measured_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "measured_size_bytes": 467,
+        "receipt_size_bytes": 467,
+        "size_bytes_agrees": true,
+        "receipt_sha256": null,
+        "receipt_unverified_expectation_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "matches_receipt_expectation": true,
+        "matches_published_probe_hash": true,
+        "published_probe_artifact_id": "feb52242-6525-4158-8a36-a5939df0fd0a",
+        "registered_artifact_id": "ed814a62-3a2d-4b87-9d1e-7c74d41f81bc"
+      },
+      "digest.md": {
+        "path": "digest.md",
+        "measured_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+        "measured_size_bytes": 1488,
+        "receipt_size_bytes": 1486,
+        "size_bytes_agrees": false,
+        "receipt_sha256": null,
+        "receipt_unverified_expectation_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+        "matches_receipt_expectation": true,
+        "matches_published_probe_hash": true,
+        "published_probe_artifact_id": "66edbef4-8e3a-4017-a01a-f2701cd92884",
+        "registered_artifact_id": "4a141baf-12c9-4fb6-9ab1-64a48cb10fe9"
+      },
+      "invocation_receipt.json": {
+        "path": "invocation_receipt.json",
+        "measured_sha256": "f9ffa2b882d17683e81eea7e467a77939a9934361bfbd5250f3ca1762967a1d6",
+        "measured_size_bytes": 3712,
+        "registered_artifact_id": "80c625b2-2c0e-412f-bb72-e08c39d9898b",
+        "note": "self-hash: no prior expectation exists for the receipt itself, so its measured hash is recorded to pin its bytes"
+      }
+    },
+    "all_three_registered_artifacts_byte_verified": true,
+    "procedure_pin": {
+      "path": "procedures/observation_digest_v1.mjs",
+      "measured_sha256": "7d1dd3ca97e4c1cbec9c1399c507d5b9d80aa8fea1b62075ac79219739b779c3",
+      "observation_json_expected_sha256": "7d1dd3ca97e4c1cbec9c1399c507d5b9d80aa8fea1b62075ac79219739b779c3",
+      "receipt_expected_sha256": "7d1dd3ca97e4c1cbec9c1399c507d5b9d80aa8fea1b62075ac79219739b779c3",
+      "matches_observation_json": true,
+      "matches_receipt_expected": true,
+      "note": "upstream could not hash the procedure before running it because its shell gate denied every non-node command. Measured post-run here and it equals both pins, so the bytes that executed are the qualified bytes. This closes the upstream receipt's 'verified_before_run: false' gap retrospectively."
+    },
+    "provenance_conclusion": "digest.json and digest.md on disk hash exactly to the probe outputs pinned in observation.json, despite the receipt recording sha256:null. The registration re-write described by the upstream agent therefore preserved bytes exactly. The three registered artifact IDs are accounted for and their content is confirmed."
+  },
+  "receipt_metadata_discrepancy": {
+    "present": true,
+    "severity": "metadata only, no effect on digest values or on content hashes",
+    "measured_bytes": 1488,
+    "measured_utf8_characters": 1486,
+    "byte_minus_char_delta": 2,
+    "receipt_size_bytes": 1486,
+    "receipt_value_equals_character_count": true,
+    "cause": "one U+2014 EM DASH in the digest.md title line encodes as 3 UTF-8 bytes but counts as 1 JavaScript string unit, so the receipt recorded a character count rather than a byte count",
+    "digest_json_agrees_exactly": true,
+    "content_sha256_matches_pin": true,
+    "affects_digest_values": false,
+    "action_taken": "recorded only; the artifacts were left byte-identical and the receipt was not edited. Correcting it is not QA's call, and its content hashes are right even where its size field is wrong."
+  },
+  "triangulation": {
+    "purpose": "guard against a single verifier sharing a bug with the procedure or with itself",
+    "independent_implementations": [
+      {
+        "id": "A",
+        "tool": "python3 + decimal.Decimal ROUND_HALF_UP",
+        "percent_code_path": "(Decimal(c)*100/Decimal(s)).quantize(0.01, ROUND_HALF_UP)",
+        "totals": {"row_count": 3, "scheduled": 30, "completed": 26, "incidents": 6, "completion_percent": "86.67"},
+        "sites": {
+          "North": {"rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": "81.82"},
+          "South": {"rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": "100.00"}
+        }
+      },
+      {
+        "id": "B",
+        "tool": "python3 pure integer arithmetic, no Decimal",
+        "percent_code_path": "(2*n + d)//(2*d) with n = completed*10000, d = scheduled",
+        "totals": {"row_count": 3, "scheduled": 30, "completed": 26, "incidents": 6, "completion_percent": "86.67"},
+        "sites": {
+          "North": {"rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": "81.82"},
+          "South": {"rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": "100.00"}
+        }
+      },
+      {
+        "id": "C",
+        "tool": "awk field scanner over the raw fixture text",
+        "percent_code_path": "printf %.2f of 100*C/S, independent parser and libc rounding",
+        "totals": {"row_count": 3, "scheduled": 30, "completed": 26, "incidents": 6, "completion_percent": "86.67"},
+        "sites": {
+          "North": {"rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": "81.82"},
+          "South": {"rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": "100.00"}
+        }
+      }
+    ],
+    "jq_attempted": "jq is not installed on this host (command not found); python3 stdlib and awk were used instead",
+    "all_three_agree": true,
+    "all_three_agree_with_deliverables": true
+  },
+  "checks": {
+    "independent_arithmetic_internally_consistent": true,
+    "digest_json_matches_independent": true,
+    "digest_md_matches_independent": true,
+    "digest_json_and_digest_md_agree": true,
+    "numeric_types_valid_not_strings": true,
+    "completion_percent_two_decimal": true,
+    "sites_object_keyed_by_site_with_totals": true,
+    "digest_md_documents_reproducible_method": true,
+    "artifact_bytes_match_receipt_and_probe_pins": true
+  },
+  "findings": [],
+  "notes": [
+    "All three registered artifacts are now byte-verified. digest.json 95777cc3... and digest.md 86a99639... both equal the pinned probe expectations despite the receipt's sha256:null, and the procedure source 7d1dd3ca... equals both the qualified executable_sha256 and the receipt's expected value.",
+    "The upstream nulls were measurement gaps caused by a locked shell gate, not fabrication: the upstream agent explicitly refused to invent hashes, timestamps or attempt IDs, and nothing it left null was filled in with a guess. The values it did report are all confirmed correct here.",
+    "The upstream receipt could not verify the procedure hash before invocation. That check is now satisfied after the fact, and the digests are deterministic and clock-free, so a matching post-run hash is sufficient evidence that the qualified bytes produced these outputs.",
+    "Independent implementation differs by construction. The procedure uses JavaScript Math.round over completed*10000/scheduled with binary doubles; this QA used Decimal ROUND_HALF_UP over completed/scheduled*100, plus a pure-integer path and an awk path. Four distinct code paths agree, so the agreement is not a re-run of the procedure's own logic.",
+    "digest.json and digest.md are byte-identical to the independent probe outputs under probe/out/01 and probe_digest.*, which is consistent with the procedure being deterministic and reinforces that the final output did not come from a probe directory."
+  ],
+  "read_only_attestation": {
+    "shell_access_note": "unlike the upstream agent, this QA shell was not gated, so the receipt's null hashes and sizes were measurable here",
+    "pre_and_post_hashes_identical": true,
+    "files_reopened_read_only": true,
+    "writes_performed": ["qa/independent_verify.py", "qa/qa_independent_verification.json"],
+    "digest_values_adjusted": false
+  },
+  "immutability_proof": {
+    "statement": "re-hashed after this verification; every pin is unchanged, so QA did not alter any artifact it examined",
+    "digest_json_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+    "digest_md_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+    "procedure_sha256": "7d1dd3ca97e4c1cbec9c1399c507d5b9d80aa8fea1b62075ac79219739b779c3",
+    "invocation_receipt_sha256": "f9ffa2b882d17683e81eea7e467a77939a9934361bfbd5250f3ca1762967a1d6",
+    "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+  },
+  "not_modified": [
+    "input/pilot.observations.json",
+    "digest.json",
+    "digest.md",
+    "procedures/observation_digest_v1.mjs",
+    "invocation_receipt.json"
+  ]
+}

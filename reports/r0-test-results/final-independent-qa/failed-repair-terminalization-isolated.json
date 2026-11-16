@@ -1,0 +1,59 @@
+{
+  "probe": "manager failed-repair terminalization; injected offline executors/QA; real storage/checkpoint/recovery APIs",
+  "no_provider_network_browser": true,
+  "isolated_data_dir": "/home/nox/awe-group-cleanroom-20261112/reports/r0-test-results/final-independent-qa/probe-state-TewLRX/data",
+  "results": [
+    {
+      "mode": "returned",
+      "status_after_run": "failed",
+      "current_status": "failed",
+      "original_calls": 1,
+      "repair_calls": 1,
+      "measured_effects": 1,
+      "marker_durable_inside_repair": [
+        [
+          {
+            "kind": "repair",
+            "marked": true
+          }
+        ]
+      ],
+      "checkpoint_after_run": null,
+      "recovery_blocked_after_run": null,
+      "explicit_retry_error": "MissionStateError: Mission 626b692d-64b9-447a-9c73-14c43718e74c is 'failed'; ambiguous outcomes can only be resolved while paused",
+      "resume_error": "MissionStateError: Mission 626b692d-64b9-447a-9c73-14c43718e74c is 'failed'; expected one of: approved, paused",
+      "effects_after_resolution_and_resume_attempts": 1
+    },
+    {
+      "mode": "thrown",
+      "status_after_run": "failed",
+      "current_status": "failed",
+      "original_calls": 1,
+      "repair_calls": 1,
+      "measured_effects": 1,
+      "marker_durable_inside_repair": [
+        [
+          {
+            "kind": "repair",
+            "marked": true
+          }
+        ]
+      ],
+      "checkpoint_after_run": {
+        "completed": 1,
+        "in_flight": [
+          {
+            "kind": "repair",
+            "marked": true,
+            "failed_outcome": false,
+            "ambiguous": false
+          }
+        ]
+      },
+      "recovery_blocked_after_run": null,
+      "explicit_retry_error": "MissionStateError: Mission ab9110d7-e511-41cc-a85b-9431777d9d9f is 'failed'; ambiguous outcomes can only be resolved while paused",
+      "resume_error": "MissionStateError: Mission ab9110d7-e511-41cc-a85b-9431777d9d9f is 'failed'; expected one of: approved, paused",
+      "effects_after_resolution_and_resume_attempts": 1
+    }
+  ]
+}

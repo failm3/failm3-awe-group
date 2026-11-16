@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "491aff58-68aa-4a6d-b64d-09704b898fa2",
+  "mission_id": "r2-experience-reuse-1794858271974-t13-on",
+  "role": "coder",
+  "model": "claude-fable-5-2",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T20:06:02.306Z",
+  "finished_at": "2026-11-16T20:10:48.696Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 89321,
+    "output_tokens": 38621,
+    "total_tokens": 127942,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 39729
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

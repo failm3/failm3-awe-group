@@ -1,0 +1,155 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "5f812012-545f-4b1a-9364-f6679d4504ae",
+    "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+    "repair_iteration": 0,
+    "spec_hash": "e862979d30d3ce2612785be46731d8f273613bdaae4e48cb061172905571f76c",
+    "plan_hash": "07c915b1107e2b3562217984d748c86a30d8e2438923bb82cb6627729f158f7b",
+    "artifacts": [
+      {
+        "artifact_id": "cb088c37-e178-40be-b652-cb664a5fdb86",
+        "name": "evidence-alder.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/evidence-alder.md",
+        "sha256": "5a628a6d7269e669df326fe3a44be423cfcd65dd734f92f874ef1f6fe10c0af1",
+        "size_bytes": 2977
+      },
+      {
+        "artifact_id": "01c9fe51-c825-4110-b139-6910488b45a6",
+        "name": "evidence-brook-cove.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/evidence-brook-cove.md",
+        "sha256": "12774f1af634f7484ae2e18b2f33d5e9165c8de887e1b87e956b34a9ca8e2a98",
+        "size_bytes": 3435
+      },
+      {
+        "artifact_id": "4ad00bcd-7e80-4461-ab4e-d712e3f1ff83",
+        "name": "research-brief.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/research-brief.md",
+        "sha256": "f601621362de469771b143a5963b2f4d6900787051609f7f23448e2c4e272505",
+        "size_bytes": 7204
+      },
+      {
+        "artifact_id": "4f1dc7b7-5827-4e64-8ec6-6b48dec3c957",
+        "name": "sources/pilot-charter.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/sources/pilot-charter.txt",
+        "sha256": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+        "size_bytes": 523
+      },
+      {
+        "artifact_id": "f422b5d7-922a-4a96-ad37-1e42a844fb92",
+        "name": "sources/reviewer-note.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/sources/reviewer-note.txt",
+        "sha256": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3",
+        "size_bytes": 421
+      },
+      {
+        "artifact_id": "496b3397-2e8f-4313-b5e4-ac0c02046928",
+        "name": "sources/weekly-observations.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/sources/weekly-observations.txt",
+        "sha256": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+        "size_bytes": 593
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "61cdabae587e9381ddf239abb58f937d71ef0e0c174b4834a4a554e874e8ce0d",
+    "created_at": "2026-11-16T17:09:07.301Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+    "epoch_id": "5f812012-545f-4b1a-9364-f6679d4504ae",
+    "candidate_sha256": "61cdabae587e9381ddf239abb58f937d71ef0e0c174b4834a4a554e874e8ce0d",
+    "execution_output_sha256": "c0e1d1f94000fa7b9d61b728de5e55b58cea62726db35ae9b7529c2898688570",
+    "evidence_sha256": "9e5b3d692336db9d3ad52191eec35e0139c608aae37b71d2a647da78064a2230",
+    "review": {
+      "passed": true,
+      "score": 9,
+      "criteria_results": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "notes": "research-brief.md (7204 bytes, sha256 f6016213…) contains a distinct 'Executive Recommendation', 'Factual Findings' (6 numbered subsections) and 'Limitations' (8 items), with inline citations strictly in [S1]/[S2]/[S3] form — no other citation syntax appears. Both child evidence notes are persisted as separate artifacts (evidence-alder.md 2977 bytes, evidence-brook-cove.md 3435 bytes) and each carries a header attributing it to the specific producing child (evidence-analyst-alder / evidence-analyst-brook-cove), plus a 'Persisted by' provenance line."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+          "passed": true,
+          "notes": "Sources table maps S1→sources/pilot-charter.txt, S2→sources/weekly-observations.txt, S3→sources/reviewer-note.txt with per-source descriptions. Every factual/numerical statement in the brief and both evidence notes carries a bracketed citation (window, owner, sites, 120 requests/site-week, 18/11 medians, runbook date, all per-site rows, delay definition, 60-per-site sampling, 180 reconciliation, reviewer recommendation and gate). No source ID outside S1–S3 is referenced and no content appears that is absent from the three input files; the artifact set contains exactly the three declared inputs plus the three deliverables."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "notes": "Section 'Per-site request totals' states Alder 480 [S2], Brook 480 [S2], Cove 480 [S2] and reiterates all three carry 480. Section 'Delayed acknowledgements and escalations' gives Alder 31, Brook 43, Cove 37, each cited [S2]. Section 'Acknowledgement median change' states 18 minutes manual baseline → 11 minutes routed, cited [S1], and the executive summary repeats it [S1]. All three required numeric sets are present and correctly cited."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "notes": "Limitations 1, 2, 3 and 8 explicitly state weekday-only coverage [S1][S3], Depot exclusion [S1][S3], that no source reports a completed wider rollout, and that every finding is bounded to weekday sites Alder/Brook/Cove with generalization to weekends, Depot or any other population unsupported. The two-week extension is framed as the reviewer's prospective, gate-bound recommendation, not as something executed or measured — the brief explicitly notes no source records that the extension occurred. The 'Proceed to a bounded, time-boxed extension' recommendation is attributed to the reviewer and conditioned on repeat measurement, so it does not amount to a wider-rollout claim."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": true,
+          "notes": "Executor trace shows one coordinator run with exactly one top-level `delegate` call issued with parallel:true carrying exactly two distinct children (evidence-analyst-alder for Alder-only analysis; evidence-analyst-brook-cove for Brook and Cove), issued before any synthesis, with no other top-level delegation and no extra analysts/reviewers/writers. Independent corroboration in the bytes: the two evidence artifacts are substantively distinct and non-generic (site-scoped rows, different non-support lists, Brook/Cove ranking analysis vs Alder-only analysis), each attributed to its own child, and the brief's synthesis demonstrably draws on both plus the source inventory. The children's success:false status reflects a read-only tool grant, not a failure to launch; their full analytical output was captured and persisted by the coordinator as the spec assigns."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "Both children returned success:false because their delegated tool grants were read-only (file_read, file_list) with no file_write/save_artifact, so persistence had to be performed by the coordinator rather than the children.",
+          "severity": "minor"
+        },
+        {
+          "issue": "evidence-brook-cove.md carries redundant attribution lines (a bold 'Produced by/Persisted by' header block followed by a plain 'Producing child:' line), a cosmetic duplication.",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Grant source-analysis children file_write/save_artifact in future runs so their notes are persisted directly by the producing agent and the persisted bytes are provably verbatim without coordinator mediation.",
+        "Trim the duplicated attribution header in evidence-brook-cove.md to a single provenance block for consistency with evidence-alder.md.",
+        "Retain the parallel delegate-call trace alongside the artifacts; the production tree is not present in this review payload, so criterion 5 was confirmed from the executor trace plus the distinctly-differentiated attributed child outputs."
+      ],
+      "verdict": "PASS: PASS: All five acceptance criteria are satisfied on the bytes themselves — research-brief.md has an executive recommendation, separate findings and limitations, exact [S1]/[S2]/[S3] inline citations, a correct S1–S3 source mapping, all required figures (480 requests per site, 31/43/37 delayed acknowledgements, 18→11-minute median) with citations, and explicit weekday/Depot/wider-rollout bounds; both attributed child evidence notes are persisted as required, and exactly one top-level coordinator delegation launched two distinct parallel children before synthesis. Only two minor defects remain, neither affecting substance."
+    },
+    "gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "reason": "research-brief.md (7204 bytes, sha256 f6016213…) contains a distinct 'Executive Recommendation', 'Factual Findings' (6 numbered subsections) and 'Limitations' (8 items), with inline citations strictly in [S1]/[S2]/[S3] form — no other citation syntax appears. Both child evidence notes are persisted as separate artifacts (evidence-alder.md 2977 bytes, evidence-brook-cove.md 3435 bytes) and each carries a header attributing it to the specific producing child (evidence-analyst-alder / evidence-analyst-brook-cove), plus a 'Persisted by' provenance line."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+          "passed": true,
+          "reason": "Sources table maps S1→sources/pilot-charter.txt, S2→sources/weekly-observations.txt, S3→sources/reviewer-note.txt with per-source descriptions. Every factual/numerical statement in the brief and both evidence notes carries a bracketed citation (window, owner, sites, 120 requests/site-week, 18/11 medians, runbook date, all per-site rows, delay definition, 60-per-site sampling, 180 reconciliation, reviewer recommendation and gate). No source ID outside S1–S3 is referenced and no content appears that is absent from the three input files; the artifact set contains exactly the three declared inputs plus the three deliverables."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "reason": "Section 'Per-site request totals' states Alder 480 [S2], Brook 480 [S2], Cove 480 [S2] and reiterates all three carry 480. Section 'Delayed acknowledgements and escalations' gives Alder 31, Brook 43, Cove 37, each cited [S2]. Section 'Acknowledgement median change' states 18 minutes manual baseline → 11 minutes routed, cited [S1], and the executive summary repeats it [S1]. All three required numeric sets are present and correctly cited."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "reason": "Limitations 1, 2, 3 and 8 explicitly state weekday-only coverage [S1][S3], Depot exclusion [S1][S3], that no source reports a completed wider rollout, and that every finding is bounded to weekday sites Alder/Brook/Cove with generalization to weekends, Depot or any other population unsupported. The two-week extension is framed as the reviewer's prospective, gate-bound recommendation, not as something executed or measured — the brief explicitly notes no source records that the extension occurred. The 'Proceed to a bounded, time-boxed extension' recommendation is attributed to the reviewer and conditioned on repeat measurement, so it does not amount to a wider-rollout claim."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": true,
+          "reason": "Executor trace shows one coordinator run with exactly one top-level `delegate` call issued with parallel:true carrying exactly two distinct children (evidence-analyst-alder for Alder-only analysis; evidence-analyst-brook-cove for Brook and Cove), issued before any synthesis, with no other top-level delegation and no extra analysts/reviewers/writers. Independent corroboration in the bytes: the two evidence artifacts are substantively distinct and non-generic (site-scoped rows, different non-support lists, Brook/Cove ranking analysis vs Alder-only analysis), each attributed to its own child, and the brief's synthesis demonstrably draws on both plus the source inventory. The children's success:false status reflects a read-only tool grant, not a failure to launch; their full analytical output was captured and persisted by the coordinator as the spec assigns."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": true
+    },
+    "receipt_sha256": "2ded7ae127b1da55ec17c0c09b2967ed4fb6b894197ac2e457f16226851f1650",
+    "created_at": "2026-11-16T17:09:39.290Z"
+  }
+}

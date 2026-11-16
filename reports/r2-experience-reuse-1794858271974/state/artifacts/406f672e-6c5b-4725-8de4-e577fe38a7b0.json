@@ -1,0 +1,13 @@
+{
+  "id": "406f672e-6c5b-4725-8de4-e577fe38a7b0",
+  "mission_id": "r2-experience-reuse-1794858271974-t18-off",
+  "type": "file",
+  "name": "adapters/bundle.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t18-off/adapters/bundle.cjs",
+  "created_at": "2026-11-16T20:20:39.360Z",
+  "metadata": {
+    "size_bytes": 4575,
+    "sha256": "d3a44f3cb3aa1a5fc1a785f7b30e34ee22c85eb0dc0e3c1cd3275585ba90bf6e",
+    "revision": 2
+  }
+}

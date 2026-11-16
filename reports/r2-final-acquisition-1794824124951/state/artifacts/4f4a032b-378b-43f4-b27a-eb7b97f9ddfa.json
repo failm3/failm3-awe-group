@@ -1,0 +1,13 @@
+{
+  "id": "4f4a032b-378b-43f4-b27a-eb7b97f9ddfa",
+  "mission_id": "r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "type": "code",
+  "name": "verify/recompute.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/verify/recompute.py",
+  "created_at": "2026-11-16T10:28:01.461Z",
+  "metadata": {
+    "size_bytes": 11236,
+    "sha256": "30907ce5f93cc8e70b5ca6bc09dba660eebbeac20556ceb5c14376c90198b6e9",
+    "revision": 3
+  }
+}

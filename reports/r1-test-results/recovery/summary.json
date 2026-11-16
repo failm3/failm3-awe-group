@@ -1,0 +1,25 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-13T21:25:10.669Z",
+  "finished_at": "2026-11-13T21:25:50.429Z",
+  "suites": [
+    {
+      "suite": "src/tests/r0-closure-adapters.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 7913
+    },
+    {
+      "suite": "src/tests/r0-closure-process-lifecycle.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 31847
+    }
+  ],
+  "passed": 2,
+  "failed": 0
+}

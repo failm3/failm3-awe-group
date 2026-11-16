@@ -1,0 +1,130 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "67fefa04-4b8d-47dc-abd6-03075eef5560",
+    "mission_id": "r2-acquisition-76ac1c93-aa28-4eea-b5a0-6a50c01cb52d",
+    "repair_iteration": 0,
+    "spec_hash": "7017b12dd292c0f074739a0cd139aedad89c7dbc73837879d0696b91ceadef3b",
+    "plan_hash": "210ce7357412b661bcc0317584634ae90f0723883bd70fba8332c8dfcb6d04d5",
+    "artifacts": [
+      {
+        "artifact_id": "9602d750-c652-4c6b-8fd7-c9593ad2d08b",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810408369/state/artifacts/r2-acquisition-76ac1c93-aa28-4eea-b5a0-6a50c01cb52d/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "9a0c575777cd892ffe793892e3886d66d6b94eae197d1ec6f6d60e896dde7481",
+    "created_at": "2026-11-16T06:27:17.136Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-76ac1c93-aa28-4eea-b5a0-6a50c01cb52d",
+    "epoch_id": "67fefa04-4b8d-47dc-abd6-03075eef5560",
+    "candidate_sha256": "9a0c575777cd892ffe793892e3886d66d6b94eae197d1ec6f6d60e896dde7481",
+    "execution_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence_sha256": "0c833a9d0c789129cc9c5ca52bd55ecfaddaedc34282c152b407ee17334a3147",
+    "review": {
+      "passed": false,
+      "score": 0,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": false,
+          "notes": "No head/orchestrator output is present at all. Nothing identifies observation-digest-v1 as the missing capability, no bounded acquisition is recorded, and no replan referencing a qualified local procedure exists. The only artifact is the pre-supplied input fixture."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "notes": "No procedure source, no executable bytes or hash, no invocation record, and no durable receipt appear in the candidate. There is no evidence any procedure was ever run."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": false,
+          "notes": "Neither digest.json nor digest.md was produced. Only input/pilot.observations.json exists. For reference, correct independent arithmetic from the fixture is row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67, with sites North {scheduled:22, completed:18, incidents:5} and South {scheduled:8, completed:8, incidents:1}; none of this is delivered."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "notes": "The artifact registry lists exactly one entry, the input fixture (412c65c3...). The required deliverables (digest.json, digest.md, procedure source, receipt) are absent, so there is nothing to verify and no independent Nox QA record exists."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "Mission produced no deliverables. The candidate epoch contains only the provided input fixture; digest.json and digest.md were never created.",
+          "severity": "critical"
+        },
+        {
+          "issue": "No acquisition event: the observation-digest-v1 capability was never identified as missing, never acquired, and no qualified local procedure was established.",
+          "severity": "critical"
+        },
+        {
+          "issue": "No invocation receipt or execution evidence of any kind; the digest computation was never performed or recorded.",
+          "severity": "critical"
+        },
+        {
+          "issue": "Execution output section is empty, so there is no reasoning trace, plan revision, or agent work to review.",
+          "severity": "major"
+        },
+        {
+          "issue": "FAIL: Capability decision rejected: acquire requires a named capability",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Implement the observation-digest-v1 procedure as a stable-path local executable under the mission artifact directory, then record its sha256 as the qualified executable bytes before any use.",
+        "Invoke the procedure exactly once with fixed args [<mission>/input/pilot.observations.json, <mission>] — not a probe output directory — and persist a durable invocation receipt containing command, args, hash, exit status, and timestamp.",
+        "Emit digest.json with row_count, scheduled, completed, incidents, completion_percent (86.67), and a sites object keyed by site, then mirror every value in digest.md with the aggregation method stated so it can be reproduced.",
+        "Register digest.json, digest.md, the procedure source, and the receipt as artifacts and run independent host byte verification plus independent Nox QA against them before resubmitting."
+      ],
+      "verdict": "FAIL: FAIL: Capability decision rejected: acquire requires a named capability"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "LLM score 0 is below the threshold 6",
+        "Criterion failed: \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\"",
+        "Criterion failed: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\"",
+        "Criterion failed: \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\"",
+        "Criterion failed: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"",
+        "Unresolved critical defect: Mission produced no deliverables. The candidate epoch contains only the provided input fixture; digest.json and digest.md were never created.",
+        "Unresolved critical defect: No acquisition event: the observation-digest-v1 capability was never identified as missing, never acquired, and no qualified local procedure was established.",
+        "Unresolved critical defect: No invocation receipt or execution evidence of any kind; the digest computation was never performed or recorded.",
+        "Unresolved major defect: Execution output section is empty, so there is no reasoning trace, plan revision, or agent work to review.",
+        "FAIL: Capability decision rejected: acquire requires a named capability"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": false,
+          "reason": "No head/orchestrator output is present at all. Nothing identifies observation-digest-v1 as the missing capability, no bounded acquisition is recorded, and no replan referencing a qualified local procedure exists. The only artifact is the pre-supplied input fixture."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "reason": "No procedure source, no executable bytes or hash, no invocation record, and no durable receipt appear in the candidate. There is no evidence any procedure was ever run."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": false,
+          "reason": "Neither digest.json nor digest.md was produced. Only input/pilot.observations.json exists. For reference, correct independent arithmetic from the fixture is row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67, with sites North {scheduled:22, completed:18, incidents:5} and South {scheduled:8, completed:8, incidents:1}; none of this is delivered."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "reason": "The artifact registry lists exactly one entry, the input fixture (412c65c3...). The required deliverables (digest.json, digest.md, procedure source, receipt) are absent, so there is nothing to verify and no independent Nox QA record exists."
+        }
+      ],
+      "llm_score": 0,
+      "llm_passed": false
+    },
+    "receipt_sha256": "f89e1f796a48e1ffe25b9d91b2d499ffbff8344b259df58f2ed8f782a9947dfe",
+    "created_at": "2026-11-16T06:27:31.145Z"
+  }
+}

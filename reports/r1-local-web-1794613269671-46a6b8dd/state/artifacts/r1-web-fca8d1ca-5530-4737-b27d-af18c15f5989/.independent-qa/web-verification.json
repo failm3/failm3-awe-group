@@ -1,0 +1,196 @@
+{
+  "verifier_version": "r1-static-task-tracker-v1",
+  "contract_digest": "4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8",
+  "mode": "independent-local-verification",
+  "tree_sha256": "f339e1604779762fff6f2f11023c75f10f329d282756d2f86447b28f8aa6a6a1",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 3411,
+      "sha256": "c6a9d737bec80f3c745111b7d7d9d25d2d29f7b1d2286e79c871040af9e71108"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 126,
+      "sha256": "49ebf5e6cb34928cb16315f274fb24c92e6bfc7891e6cdaa0136c289bf273541"
+    },
+    {
+      "path": "index.html",
+      "bytes": 888,
+      "sha256": "3d465aba365194a31cb67a2c1464b1bfac70241db401017aa1ec93691cb2370a"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 1217,
+      "sha256": "f2d9c0c0764dd0014ad46dc9fda329715add02b920928c2d79b442127017d1ff"
+    }
+  ],
+  "checks": [
+    {
+      "id": "bounded-artifact-snapshot",
+      "passed": true
+    },
+    {
+      "id": "source-url-contract",
+      "passed": true
+    },
+    {
+      "id": "sandboxed-js-syntax",
+      "passed": true
+    },
+    {
+      "id": "load-local-product",
+      "passed": true
+    },
+    {
+      "id": "accessible-empty-state",
+      "passed": true
+    },
+    {
+      "id": "reject-blank-input",
+      "passed": true
+    },
+    {
+      "id": "add-trim-and-keyboard",
+      "passed": true
+    },
+    {
+      "id": "toggle-and-filter",
+      "passed": true
+    },
+    {
+      "id": "persist-task-and-completion",
+      "passed": true
+    },
+    {
+      "id": "reverse-toggle-and-delete",
+      "passed": true
+    },
+    {
+      "id": "responsive-layout",
+      "passed": true
+    },
+    {
+      "id": "dom-url-contract",
+      "passed": false,
+      "detail": "Error: Forbidden URL or embedded document in DOM"
+    },
+    {
+      "id": "runtime-errors-and-resource-policy",
+      "passed": false
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/systemd-run",
+        "--user",
+        "--scope",
+        "--quiet",
+        "--collect",
+        "--expand-environment=no",
+        "--unit=awe-exec-15df8635-d299-4887-af05-2586dcbc1f50.scope",
+        "--property=MemoryMax=1073741824",
+        "--property=MemorySwapMax=0",
+        "--property=OOMPolicy=kill",
+        "--property=TasksMax=64",
+        "--property=CPUQuota=100%",
+        "--property=RuntimeMaxSec=5000ms",
+        "--property=TimeoutStopSec=500ms",
+        "--property=SendSIGKILL=yes",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-c",
+        "\nimport json, os, pathlib, sys\ntry:\n    policy = json.loads(sys.argv[1])\n    entries = pathlib.Path('/proc/self/cgroup').read_text().splitlines()\n    group = next(line[3:] for line in entries if line.startswith('0::'))\n    if not group.startswith('/') or '..' in group.split('/') or group.split('/')[-1] != policy['unit']:\n        raise RuntimeError('execution did not enter its unique cgroup')\n    root = pathlib.Path('/sys/fs/cgroup' + group)\n    def read(name):\n        return (root / name).read_text().strip()\n    for name, maximum in [('memory.max', policy['memoryBytes']), ('memory.swap.max', 0), ('pids.max', policy['tasks'])]:\n        raw = read(name)\n        if raw == 'max' or int(raw) > maximum:\n            raise RuntimeError(name + ' is not bounded by policy')\n    if read('memory.oom.group') != '1':\n        raise RuntimeError('whole-execution OOM termination unavailable')\n    quota, period = read('cpu.max').split()\n    if quota == 'max' or int(quota) * 100 > policy['cpuPercent'] * int(period):\n        raise RuntimeError('CPU bandwidth cap unavailable')\n    os.execv(sys.argv[2], sys.argv[2:])\nexcept Exception as error:\n    print('Resource isolation unavailable: ' + str(error), file=sys.stderr)\n    sys.exit(125)\n",
+        "{\"memoryBytes\":1073741824,\"tasks\":64,\"cpuPercent\":100,\"cpuSeconds\":30,\"fileBytes\":67108864,\"openFiles\":256,\"wallMs\":5000,\"unit\":\"awe-exec-15df8635-d299-4887-af05-2586dcbc1f50.scope\"}",
+        "/usr/bin/prlimit",
+        "--cpu=30:30",
+        "--fsize=67108864:67108864",
+        "--nofile=256:256",
+        "--core=0:0",
+        "--memlock=0:0",
+        "--",
+        "/usr/bin/env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "/usr/bin/bwrap",
+        "--unshare-pid",
+        "--die-with-parent",
+        "--unshare-net",
+        "--unshare-ipc",
+        "--unshare-uts",
+        "--cap-drop",
+        "ALL",
+        "--ro-bind",
+        "/usr",
+        "/usr",
+        "--ro-bind",
+        "/bin",
+        "/bin",
+        "--ro-bind",
+        "/sbin",
+        "/sbin",
+        "--ro-bind",
+        "/lib",
+        "/lib",
+        "--ro-bind",
+        "/lib64",
+        "/lib64",
+        "--dir",
+        "/etc",
+        "--ro-bind",
+        "/etc/ld.so.cache",
+        "/etc/ld.so.cache",
+        "--ro-bind",
+        "/etc/alternatives",
+        "/etc/alternatives",
+        "--ro-bind",
+        "/etc/ssl/certs",
+        "/etc/ssl/certs",
+        "--tmpfs",
+        "/tmp",
+        "--dir",
+        "/tmp/home",
+        "--setenv",
+        "HOME",
+        "/tmp/home",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--setenv",
+        "PATH",
+        "/usr/bin:/bin",
+        "--unsetenv",
+        "LD_LIBRARY_PATH",
+        "--ro-bind",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/web-qa-ATyUu9",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/web-qa-ATyUu9",
+        "--bind",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/web-qa-ATyUu9",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/web-qa-ATyUu9",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--chdir",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/web-qa-ATyUu9",
+        "--",
+        "/usr/bin/node",
+        "--input-type=module",
+        "--check"
+      ],
+      "file": "app.js",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "issues": [
+    "BROWSER_CONSOLE: Loading the image 'data:,' violates the following Content Security Policy directive: \"default-src 'self'\". Note that 'img-src' was not explicitly set, so 'default-src' is used as a fallback. The action has been blocked.",
+    "BEHAVIOR: dom-url-contract"
+  ],
+  "outcome": "FAIL",
+  "qualification": "NOT_ASSESSED",
+  "browser_version": "158.0.8127.18",
+  "receipt_sha256": "e2f968b05a8c1ddb5b1f4365012992ac9d00f0a26e5aed970e7a4227f3e21dc6"
+}

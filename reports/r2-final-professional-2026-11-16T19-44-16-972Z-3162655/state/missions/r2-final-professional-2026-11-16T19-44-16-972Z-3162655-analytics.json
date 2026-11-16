@@ -1,0 +1,267 @@
+{
+  "id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics",
+  "title": "Six-week operations analytics and management brief",
+  "description": "Bounded local professional-mission harness; engineering practice only.",
+  "objective": "Compute exact team operations metrics from an independent local CSV and produce a reproducible management document.",
+  "acceptance_criteria": [
+    "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+    "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+    "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+    "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+    "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted."
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-16T19:44:17.170Z",
+  "updated_at": "2026-11-16T19:47:25.171Z",
+  "artifacts": [
+    "696c13f2-ae5f-4c75-a0f8-4f9e5fe46b92",
+    "cf410671-0ea1-417f-8134-b6f957ac2e56",
+    "7820e063-3d5c-4821-b968-fe4e0d736dc5"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "Six-week operations analytics and management brief",
+      "objective": "Compute exact team operations metrics from an independent local CSV and produce a reproducible management document.",
+      "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T19-44-16-972Z-3162655/state/artifacts/r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics. The sole factual input is input/operations.csv and it must remain byte-identical. Deliver metrics.json and operations-brief.md. metrics.json must use this exact shape and no extra fields: {\"row_count\":18,\"totals\":{\"work_orders\":233,\"completed_orders\":217,\"defects\":18,\"planned_minutes\":14985,\"actual_minutes\":15440,\"completion_percent\":93.13,\"minutes_per_completed_order\":71.15,\"schedule_variance_minutes\":455},\"teams\":{\"Atlas\":{\"work_orders\":95,\"completed_orders\":89,\"defects\":7,\"planned_minutes\":5700,\"actual_minutes\":5780,\"completion_percent\":93.68,\"minutes_per_completed_order\":64.94,\"schedule_variance_minutes\":80},\"Birch\":{\"work_orders\":75,\"completed_orders\":71,\"defects\":3,\"planned_minutes\":4875,\"actual_minutes\":4910,\"completion_percent\":94.67,\"minutes_per_completed_order\":69.15,\"schedule_variance_minutes\":35},\"Cedar\":{\"work_orders\":63,\"completed_orders\":57,\"defects\":8,\"planned_minutes\":4410,\"actual_minutes\":4750,\"completion_percent\":90.48,\"minutes_per_completed_order\":83.33,\"schedule_variance_minutes\":340}}} Head should assign at least two genuinely distinct specialist delegations; calculation and document synthesis may be sequential when the document depends on exact metrics. Use ordinary local file tools only: no shell, web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+      "acceptance_criteria": [
+        "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+        "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+        "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+        "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+        "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted."
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "analyst",
+        "writer"
+      ],
+      "estimated_complexity": "moderate",
+      "risks": [
+        "Rounded aggregates must be recomputed from raw integers",
+        "Document totals must match the independently parsed metrics"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-16T19:44:17.175Z",
+      "spec_hash": "ad02aeb29b346ed05639c3148ecbedf317e09c856dd7b381609b9b3be52f1379",
+      "snapshot": {
+        "mission_id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics",
+        "title": "Six-week operations analytics and management brief",
+        "description": "Bounded local professional-mission harness; engineering practice only.",
+        "objective": "Compute exact team operations metrics from an independent local CSV and produce a reproducible management document.",
+        "acceptance_criteria": [
+          "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+          "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+          "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+          "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+          "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted."
+        ],
+        "specification": {
+          "title": "Six-week operations analytics and management brief",
+          "objective": "Compute exact team operations metrics from an independent local CSV and produce a reproducible management document.",
+          "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T19-44-16-972Z-3162655/state/artifacts/r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics. The sole factual input is input/operations.csv and it must remain byte-identical. Deliver metrics.json and operations-brief.md. metrics.json must use this exact shape and no extra fields: {\"row_count\":18,\"totals\":{\"work_orders\":233,\"completed_orders\":217,\"defects\":18,\"planned_minutes\":14985,\"actual_minutes\":15440,\"completion_percent\":93.13,\"minutes_per_completed_order\":71.15,\"schedule_variance_minutes\":455},\"teams\":{\"Atlas\":{\"work_orders\":95,\"completed_orders\":89,\"defects\":7,\"planned_minutes\":5700,\"actual_minutes\":5780,\"completion_percent\":93.68,\"minutes_per_completed_order\":64.94,\"schedule_variance_minutes\":80},\"Birch\":{\"work_orders\":75,\"completed_orders\":71,\"defects\":3,\"planned_minutes\":4875,\"actual_minutes\":4910,\"completion_percent\":94.67,\"minutes_per_completed_order\":69.15,\"schedule_variance_minutes\":35},\"Cedar\":{\"work_orders\":63,\"completed_orders\":57,\"defects\":8,\"planned_minutes\":4410,\"actual_minutes\":4750,\"completion_percent\":90.48,\"minutes_per_completed_order\":83.33,\"schedule_variance_minutes\":340}}} Head should assign at least two genuinely distinct specialist delegations; calculation and document synthesis may be sequential when the document depends on exact metrics. Use ordinary local file tools only: no shell, web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+          "acceptance_criteria": [
+            "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+            "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+            "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+            "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+            "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted."
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_list",
+            "file_write",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "analyst",
+            "writer"
+          ],
+          "estimated_complexity": "moderate",
+          "risks": [
+            "Rounded aggregates must be recomputed from raw integers",
+            "Document totals must match the independently parsed metrics"
+          ]
+        }
+      }
+    },
+    "execution_owner": {
+      "owner_id": "4fe53664-2ea7-4988-a7f0-9353705800bc",
+      "pid": 3162655,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-16T19:44:17.220Z",
+      "released_at": "2026-11-16T19:47:25.171Z"
+    },
+    "mission_admission": {
+      "version": 1,
+      "mode": "engineering-practice",
+      "missionId": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics",
+      "specHash": "ad02aeb29b346ed05639c3148ecbedf317e09c856dd7b381609b9b3be52f1379"
+    },
+    "execution": {
+      "delegations": [
+        {
+          "agent_role": "analyst",
+          "status": "success",
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_list",
+            "file_write"
+          ],
+          "artifacts": [
+            "cf410671-0ea1-417f-8134-b6f957ac2e56",
+            "22dfc0f2-bcb8-4c0b-ac3b-37aa8af067c3"
+          ],
+          "qualified_attempt_ids": [],
+          "usage": {
+            "input_tokens": 49723,
+            "output_tokens": 6364,
+            "total_tokens": 56087,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 36870
+          },
+          "duration_ms": 63135
+        },
+        {
+          "agent_role": "writer",
+          "status": "success",
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_write"
+          ],
+          "artifacts": [
+            "7820e063-3d5c-4821-b968-fe4e0d736dc5"
+          ],
+          "qualified_attempt_ids": [],
+          "usage": {
+            "input_tokens": 118424,
+            "output_tokens": 6655,
+            "total_tokens": 125079,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 48091
+          },
+          "duration_ms": 72334
+        }
+      ],
+      "models_used": [
+        "claude-sonnet-5-5"
+      ],
+      "tools_used": [
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "totals": {
+        "input_tokens": 168147,
+        "output_tokens": 13019,
+        "total_tokens": 181166,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 84961
+      },
+      "qa_score": 9,
+      "qa_passed": true,
+      "repair_iterations": 0
+    },
+    "execution_adaptations": 0,
+    "candidate": {
+      "epoch_id": "3fd824a3-fbf9-48ea-b295-e5d807cdfc80",
+      "candidate_sha256": "50d9b79c8a8f1ce1f0ad1349a4a2a74491cf241708759f6203c034bcfca0d555",
+      "repair_iteration": 0,
+      "evidence_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T19-44-16-972Z-3162655/state/candidate-evidence/r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics/3fd824a3-fbf9-48ea-b295-e5d807cdfc80.json"
+    },
+    "delegation_tree": {
+      "total_agents": 2,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics:top0",
+          "role": "analyst",
+          "started_at": "2026-11-16T19:44:40.689Z",
+          "task": "Read input/operations.csv from the mission working directory using file_list and file_read only, verify its structure and row count, and independently recompute all operations metrics from the raw integer records: per-team and overall work_orders, completed_orders, defects, planned_minutes, actual_minutes, schedule_variance_minutes (actual minus planned), completion_percent (completed/work_orders x100) and minutes_per_completed_order (actual/completed). Round only at final serialization, to exactly two decimal places, from unrounded raw arithmetic. Persist the result as metrics.json with root keys row_count, totals, teams in that order; teams in the order Atlas, Birch, Cedar; each totals/team object containing exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order, schedule_variance_minutes in that order and no extra fields. All integer metrics must be JSON numbers with no decimal point; completion_percent and minutes_per_completed_order must serialize with exactly two decimal places. Use the already-given expected values only as a cross-check after your own computation, and report any mismatch explicitly instead of forcing the numbers to match.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_list",
+            "file_write"
+          ],
+          "artifacts": [
+            "cf410671-0ea1-417f-8134-b6f957ac2e56",
+            "22dfc0f2-bcb8-4c0b-ac3b-37aa8af067c3"
+          ],
+          "duration_ms": 63133,
+          "finished_at": "2026-11-16T19:45:43.815Z"
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics:top1",
+          "role": "writer",
+          "started_at": "2026-11-16T19:45:43.830Z",
+          "task": "Read the persisted metrics.json produced by the analyst delegation and input/operations.csv, then write operations-brief.md containing: a concise executive recommendation; exact overall and per-team findings for completion, defects and schedule variance derived only from input/operations.csv and the verified metrics; and a Method section that names input/operations.csv explicitly and states the exact formulas completed/work orders x100, actual/completed minutes, and actual minus planned minutes. Every number quoted must match the persisted metrics.json exactly, using the same two-decimal formatting for completion_percent and minutes_per_completed_order. Keep conclusions limited to the supplied six-week three-team dataset and draw no causal claims beyond the data.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_write"
+          ],
+          "artifacts": [
+            "7820e063-3d5c-4821-b968-fe4e0d736dc5"
+          ],
+          "duration_ms": 72331,
+          "finished_at": "2026-11-16T19:46:56.157Z"
+        }
+      ]
+    },
+    "qa_gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+          "passed": true,
+          "reason": "Root keys, team order and per-object key order match the spec exactly, with no extra fields. I recomputed from the 18 CSV rows. Atlas: 95/89/7/5700/5780, 89/95=93.68, 5780/89=64.94, variance +80. Birch: 75/71/3/4875/4910, 94.67, 69.15, +35. Cedar: 63/57/8/4410/4750, 90.48, 83.33, +340. Totals: 233/217/18/14985/15440, 217/233=93.13, 15440/217=71.15, +455. row_count is 18. All values match. Integers are bare JSON numbers, and both decimal metrics serialize with exactly two places."
+        },
+        {
+          "criterion": "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+          "passed": true,
+          "reason": "The brief has a short Executive recommendation section and overall and per-team tables whose figures all match the recomputed values. I checked the narrative arithmetic. Cedar is 93.13-90.48=2.65 points below the overall rate and 4.19 below Birch. Atlas and Birch are within 1.54 points of the overall rate. Cedar's 340 plus 80 and 35 makes 455. No external data is used."
+        },
+        {
+          "criterion": "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+          "passed": true,
+          "reason": "The Method section names input/operations.csv and states all three formulas. It says no records were added, no values were interpolated and no units were converted. The figures are consistent with that statement: minutes stay in minutes and the brief reports 18 records."
+        },
+        {
+          "criterion": "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+          "passed": true,
+          "reason": "The CSV content shown is consistent with the raw data, and its size (547 bytes) is plausible for that content. Both agents report reading the CSV only. The candidate epoch lists only the input CSV, metrics.json and operations-brief.md, and earlier brief drafts were superseded by revision 3. The Scope limits and Executive recommendation sections restrict conclusions to the six-week, three-team dataset and make no causal claims."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted.",
+          "passed": true,
+          "reason": "The execution output shows two distinct specialist delegations: the analyst did extraction and calculation, and the writer did document synthesis. They ran in sequence, as the spec allows. No direct specialist call outside the delegation flow is evident. The analyst also wrote an early brief draft, which the writer's version superseded."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": true
+    }
+  },
+  "_rev": 7
+}

@@ -1,0 +1,405 @@
+{
+  "schema": "nox-live-generalization-v1",
+  "id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+  "status": "completed",
+  "approved_spec_hash": "4d5eeada6843877f46350cc0c6d14c984a74ac5beda2e7494cf006605d4dfd11",
+  "planning": [
+    {
+      "kind": "acquire",
+      "capability": "render_dashboard"
+    },
+    {
+      "kind": "replan"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "72fc40d4-cab2-41a6-aa9e-07e5d350c0a3",
+      "name": "input/rescue-shifts.csv",
+      "sha256": "502022dd7e1166df8d709461c3ca81dfe5c8c59e79ea4e23e37aac69966e5181"
+    },
+    {
+      "id": "4e34d2df-d51a-4c30-a31e-13ac76333993",
+      "name": "capability-probe.html",
+      "sha256": "ebe8b01816dc32cc4005e963b734a356acad79a69058f1117a8cbceda2540b3b"
+    },
+    {
+      "id": "4d78a02a-2233-46eb-95f1-acac6eb5ef89",
+      "name": "capability-probe.png",
+      "sha256": "35dc21b97ba26c865187d3f00064e0455854c93c836bf431a57606b77d25958a"
+    },
+    {
+      "id": "3c8b4763-fbd8-4602-ae64-904cc87d6539",
+      "name": ".probe-rerender.png",
+      "sha256": "35dc21b97ba26c865187d3f00064e0455854c93c836bf431a57606b77d25958a"
+    },
+    {
+      "id": "cc41fd7f-59bc-49f2-bc9b-8668544a21f8",
+      "name": "capability-observation.json",
+      "sha256": "7d6488433bda7145779f6b23d3ba4ab32d943f479b92193a201d02501735a691"
+    },
+    {
+      "id": "4ecffe14-8ff5-49fc-b1d8-4121c6c3df6a",
+      "name": "metrics.json",
+      "sha256": "c86780ccc3bd239feb4a5bb2c33412153da9bab3272235c0cb48445788a79a62"
+    },
+    {
+      "id": "ee2b8b96-76d6-446e-8cae-0b22c8aba165",
+      "name": "dashboard.html",
+      "sha256": "9b0c20106442b2d05479dd943422c7b8f20c39750c758921068f83682e78ad5d"
+    },
+    {
+      "id": "2002a253-7dbf-4909-89a8-61d1e5ed367a",
+      "name": "dashboard.png",
+      "sha256": "34375951b6f345c59bd136dbe79c4bb91b59a02b29cd58c87eb14dfc475a30d9"
+    },
+    {
+      "id": "c23ec7b0-5ca2-42ce-b249-fce794034c3c",
+      "name": "render-verification.txt",
+      "sha256": "a69319495795b75b5f25036fb720e451175e8d74c82d1f7d120ab16723bb433b"
+    },
+    {
+      "id": "00d4c404-99d8-4c5d-960d-900aa9ce7b23",
+      "name": ".tmp-old.html",
+      "sha256": "b23edc73ae2022c5130398f8f551efcc4ca174004a2984b962f4c002dbb85a8e"
+    },
+    {
+      "id": "67641caa-b86f-4ee5-858e-bad38c797cf5",
+      "name": ".tmp-old.png",
+      "sha256": "ad132c2cee5e689a69ce9ced935c7087a1096e929b4254560d54d1d760d3016c"
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "12854f71-9808-4cad-9090-ace96412eb39",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:42:29.349Z",
+      "finished_at": "2026-11-15T03:42:41.870Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 2954,
+        "output_tokens": 1139,
+        "total_tokens": 4093,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "7d83ff09-2ed9-4503-add4-7d52f80c402f",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "executor",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:42:41.976Z",
+      "finished_at": "2026-11-15T03:45:44.269Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 200370,
+        "output_tokens": 12888,
+        "total_tokens": 213258,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 179704
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "997aa374-468d-4cbe-aab3-678af7449bee",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:45:44.363Z",
+      "finished_at": "2026-11-15T03:46:31.006Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 4503,
+        "output_tokens": 5420,
+        "total_tokens": 9923,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 891
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "87d33598-ead7-4db4-bcdd-92c61541660f",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "analyst",
+      "model": "deepseek-v4-flash",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:46:31.204Z",
+      "finished_at": "2026-11-15T03:47:13.381Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 73026,
+        "output_tokens": 5140,
+        "total_tokens": 78166,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 61184
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "e05c2784-95cd-4380-89fd-f63f6a22994d",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "designer",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:47:13.484Z",
+      "finished_at": "2026-11-15T03:51:48.059Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 354729,
+        "output_tokens": 25293,
+        "total_tokens": 380022,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 269700
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "2a41b950-13f7-4f7f-afda-2d0778e9a097",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "devops",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:51:48.160Z",
+      "finished_at": "2026-11-15T03:55:36.735Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 283842,
+        "output_tokens": 17509,
+        "total_tokens": 301351,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 246722
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "5e1a74c7-f1bf-4511-864d-3d633e3a63d4",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:55:36.814Z",
+      "finished_at": "2026-11-15T03:56:07.149Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 22268,
+        "output_tokens": 3022,
+        "total_tokens": 25290,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "342030c8-8f29-4735-9e4c-ebf994b1c662",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "executor",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T03:56:07.265Z",
+      "finished_at": "2026-11-15T04:01:59.571Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 350226,
+        "output_tokens": 36396,
+        "total_tokens": 386622,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 314689
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "3d067421-82aa-44a6-ae11-8e65c64654c1",
+      "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T04:01:59.659Z",
+      "finished_at": "2026-11-15T04:02:38.399Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 30012,
+        "output_tokens": 3721,
+        "total_tokens": 33733,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "provider_cost": "UNKNOWN",
+  "checks": [
+    {
+      "check": "mission completed through independent QA",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "real Head model call recorded",
+      "passed": true
+    },
+    {
+      "check": "independent QA model call recorded",
+      "passed": true
+    },
+    {
+      "check": "Head exercised capability-gap diagnosis",
+      "passed": true,
+      "detail": "[{\"kind\":\"acquire\",\"capability\":\"render_dashboard\"},{\"kind\":\"replan\"}]"
+    },
+    {
+      "check": "capability result caused replanning",
+      "passed": true
+    },
+    {
+      "check": "capability acquisition persisted exactly once",
+      "passed": true
+    },
+    {
+      "check": "capability evidence hash remains current",
+      "passed": true
+    },
+    {
+      "check": "all required canonical artifacts registered",
+      "passed": true,
+      "detail": "input/rescue-shifts.csv, capability-probe.html, capability-probe.png, .probe-rerender.png, capability-observation.json, metrics.json, dashboard.html, dashboard.png, render-verification.txt, .tmp-old.html, .tmp-old.png"
+    },
+    {
+      "check": "metrics contain exact expected scalar fields",
+      "passed": true
+    },
+    {
+      "check": "metrics contain exact district totals",
+      "passed": true
+    },
+    {
+      "check": "metrics describe a reproducible method",
+      "passed": true
+    },
+    {
+      "check": "dashboard visibly contains exact totals",
+      "passed": true
+    },
+    {
+      "check": "dashboard is self-contained",
+      "passed": true
+    },
+    {
+      "check": "PNG bytes match registry hash",
+      "passed": true
+    },
+    {
+      "check": "PNG is exactly 1280x720",
+      "passed": true
+    },
+    {
+      "check": "independent browser render has all metrics and no JS error",
+      "passed": true
+    },
+    {
+      "check": "independent visual evidence saved",
+      "passed": true
+    },
+    {
+      "check": "submitted and independently rendered PNG pixels stay within the bounded render difference",
+      "passed": true,
+      "detail": "54708/921600 pixels differ (5.9362%); exact_equal=false"
+    },
+    {
+      "check": "immutable reviewed-candidate receipt exists",
+      "passed": true
+    },
+    {
+      "check": "candidate and review receipt hashes authenticate",
+      "passed": true
+    },
+    {
+      "check": "independent QA approved the exact final candidate",
+      "passed": true
+    },
+    {
+      "check": "every final artifact hash matches backing bytes",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "runRoot": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208"
+}

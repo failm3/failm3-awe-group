@@ -1,0 +1,12 @@
+{
+  "id": "7a9ea2bb-6e5e-4553-86d5-357a65b28bb5",
+  "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "type": "file",
+  "name": "app.js",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/app.js",
+  "created_at": "2026-11-14T00:25:47.215Z",
+  "metadata": {
+    "size_bytes": 9058,
+    "sha256": "ab7f2ebd7beca9906503e1902e4279dfe578455ba4ee5b10c12665b70225d19d"
+  }
+}

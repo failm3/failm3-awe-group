@@ -1,0 +1,84 @@
+{
+  "record_type": "acquisition-qualification-probe",
+  "capability_under_qualification": "observation-digest-v1",
+  "probe_only": true,
+  "executes_deliverable": false,
+  "executable_path": "/usr/bin/node",
+  "executable_sha256": "40e30bceabac44bfbf4b9e4bd0b3267b3c46ae01f335aeb9b54eef62454ea108",
+  "runtime_path": "/usr/bin/node",
+  "runtime_sha256": "fde6a4bf8d0562f7751d1a2d6cb9b417c4cfe107bbcb0aa3e9a24e125e348f48",
+  "runtime_version": "v22.23.3",
+  "arguments": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798867011/state/artifacts/r2-acquisition-b11696ba-a8ed-402a-b142-dba609123793/procedure/observation-digest.js",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798867011/state/artifacts/r2-acquisition-b11696ba-a8ed-402a-b142-dba609123793/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798867011/state/artifacts/r2-acquisition-b11696ba-a8ed-402a-b142-dba609123793/out"
+  ],
+  "argument_semantics": "[procedure-script, fixture-json, output-directory]",
+  "network_required": false,
+  "packages_required": false,
+  "writes": [
+    "<output-directory>/digest.json",
+    "<output-directory>/digest.md"
+  ],
+  "reads": [
+    "<fixture-json>"
+  ],
+  "determinism": "rerun produced byte-identical digest.json (7f99b465de63ee82194538b40d13eba619e58fe3eff5e16a6d016cc1475a83bf) and digest.md (cbc8095b3ec1c1d67c84ca2031b6b40c92bf47677ab3401073a1e7ff2f9f58ae)",
+  "independent_recomputation": {
+    "tool": "separate /usr/bin/node one-liner implemented independently of the procedure",
+    "rows": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": "81.82"
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": "100.00"
+      }
+    },
+    "matches_procedure": true
+  },
+  "edge_cases": [
+    {
+      "case": "rounding 4/9 -> 44.44",
+      "result": "pass"
+    },
+    {
+      "case": "malformed fixture (completed>scheduled)",
+      "result": "fail-closed exit=2, no output written"
+    },
+    {
+      "case": "missing fixture",
+      "result": "fail-closed exit=2"
+    },
+    {
+      "case": "missing arguments",
+      "result": "fail-closed exit=2"
+    }
+  ],
+  "security": {
+    "no_network_calls": true,
+    "no_child_process": true,
+    "no_require_of_external_modules": true,
+    "path_pinned_absolute_args": true,
+    "outputs_kept_to_given_dir": true,
+    "guard": "refuses to emit reserved keys capability/status/detail/local_target/acquired"
+  },
+  "checks": "rejects non-integer or negative counts and completed>scheduled per row",
+  "input_fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+  "probe_artifacts": [],
+  "self_reference_note": "consolidated registry copy; contains full probe detail inline",
+  "final_script_sha256": "40e30bceabac44bfbf4b9e4bd0b3267b3c46ae01f335aeb9b54eef62454ea108",
+  "final_runtime_sha256": "fde6a4bf8d0562f7751d1a2d6cb9b417c4cfe107bbcb0aa3e9a24e125e348f48"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ab30cb47-30b3-4eb7-8635-74b61b9370ec",
+  "mission_id": "r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+  "type": "json",
+  "name": "probe/perturb/perturbed.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397/probe/perturb/perturbed.json",
+  "created_at": "2026-11-16T09:02:20.139Z",
+  "metadata": {
+    "size_bytes": 598,
+    "sha256": "7b78e7e51cbfe9c4154d862b77dd3d5842b95dd6deeec169994f5a9cb25f87c0",
+    "reconciled": true,
+    "revision": 1
+  }
+}

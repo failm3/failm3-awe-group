@@ -1,0 +1,86 @@
+{
+  "id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+  "status": "completed",
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "4dfe3c5a-275b-4b44-92d1-ea87af3b5f3c",
+      "mission_id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-13T21:38:54.264Z",
+      "finished_at": "2026-11-13T21:39:11.381Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 2312,
+        "output_tokens": 1487,
+        "total_tokens": 3799,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "00f0fb4a-75cd-4721-807f-6eec8b2e215b",
+      "mission_id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+      "role": "analyst",
+      "model": "deepseek-v4-flash",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-13T21:39:11.411Z",
+      "finished_at": "2026-11-13T21:39:25.257Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 12183,
+        "output_tokens": 1147,
+        "total_tokens": 13330,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 7936
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "c4a432ad-e95c-4e99-b087-77cfb54e3210",
+      "mission_id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-13T21:39:25.295Z",
+      "finished_at": "2026-11-13T21:39:35.674Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 4907,
+        "output_tokens": 824,
+        "total_tokens": 5731,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "provider_cost": "UNKNOWN",
+  "runRoot": "/home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179"
+}

@@ -1,0 +1,9 @@
+
+Immutable reviewed candidate is bound to terminalization
+  ✓ QA receives the host candidate identity
+  ✓ terminal mission stores candidate hash
+  ✓ durable receipt binds review, evidence and candidate
+  ✓ mutation during QA cannot produce completed
+
+────────────────────────────────────────────────────────────
+candidate-binding: passed 4, failed 0

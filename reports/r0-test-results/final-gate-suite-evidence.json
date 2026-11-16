@@ -1,0 +1,188 @@
+{
+  "started_at": "2026-11-13T14:55:34.466Z",
+  "finished_at": "2026-11-13T15:04:37.777Z",
+  "suites_passed": 22,
+  "suites_failed": 0,
+  "duration_ms": 543310,
+  "source_manifest": "reports/r0-test-results/final-source.sha256",
+  "source_manifest_sha256": "d2562ef0a50a7d25e4da83dc01fe632720708192a756a4adf7ded77bce3680a7",
+  "rows": [
+    {
+      "suite": "artifact-reconciliation",
+      "result": "PASS",
+      "checks": "10/10",
+      "duration_ms": 2036,
+      "log": "reports/r0-test-results/artifact-reconciliation.log",
+      "log_sha256": "620a3e90c2f8f2839d3732798a53a6b8f2940424f86b254fdf1d8702e53ef154"
+    },
+    {
+      "suite": "lifecycle-recovery",
+      "result": "PASS",
+      "checks": "12/12",
+      "duration_ms": 17919,
+      "log": "reports/r0-test-results/lifecycle-recovery.log",
+      "log_sha256": "13e6ae7b79fcfa636153b44359448540cf48e50fa46670ef7a92951756303b81"
+    },
+    {
+      "suite": "qa-gate",
+      "result": "PASS",
+      "checks": "30/30",
+      "duration_ms": 1194,
+      "log": "reports/r0-test-results/qa-gate.log",
+      "log_sha256": "c66b2b09c0bc39ac6f92bdb190dcc8b69001d70aec61b56083bb04fbfb10ebca"
+    },
+    {
+      "suite": "r0-closure-adapters",
+      "result": "PASS",
+      "checks": "23/23",
+      "duration_ms": 12913,
+      "log": "reports/r0-test-results/r0-closure-adapters.log",
+      "log_sha256": "68a66da137401a8404ff68ab67ddfc0b251b0208c88c3909feb4c64dd1e33d57"
+    },
+    {
+      "suite": "r0-closure-core",
+      "result": "PASS",
+      "checks": "13/13",
+      "duration_ms": 5706,
+      "log": "reports/r0-test-results/r0-closure-core.log",
+      "log_sha256": "ccef23f67ea513ad3faee4a4eb9a40a90b0c39f3347d6f971ace46a9c49a5685"
+    },
+    {
+      "suite": "r0-closure-interfaces",
+      "result": "PASS",
+      "checks": "93/93",
+      "duration_ms": 120324,
+      "log": "reports/r0-test-results/r0-closure-interfaces.log",
+      "log_sha256": "4d1371ed9b831dffecd1b4e7fff90b4c23c1707d5def9d39c593796a06acb8b8"
+    },
+    {
+      "suite": "r0-closure-process-lifecycle",
+      "result": "PASS",
+      "checks": "9/9",
+      "duration_ms": 58924,
+      "log": "reports/r0-test-results/r0-closure-process-lifecycle.log",
+      "log_sha256": "2c1a043a743fcff39d8b361df2d5791a3dbd01d263041a2b0bd7df173caf71e9"
+    },
+    {
+      "suite": "r0-final-manager",
+      "result": "PASS",
+      "checks": "79/79",
+      "duration_ms": 34667,
+      "log": "reports/r0-test-results/r0-final-manager.log",
+      "log_sha256": "c1fb99ae2b2fb09ccf72db6ef6949b015baf53e319fd7f9b935ffe239fa95339"
+    },
+    {
+      "suite": "r0-final-production-intent",
+      "result": "PASS",
+      "checks": "4/4",
+      "duration_ms": 9652,
+      "log": "reports/r0-test-results/r0-final-production-intent.log",
+      "log_sha256": "8036aefc3180c31726f5c81b7547e6b6dac611295095cecde8b466d11aa5c945"
+    },
+    {
+      "suite": "r0-final-recursion",
+      "result": "PASS",
+      "checks": "8/8",
+      "duration_ms": 14842,
+      "log": "reports/r0-test-results/r0-final-recursion.log",
+      "log_sha256": "3fa90ff2a5c5052744eb8e52ac1cb5dc4fe553657b179bd2d566cbb6e64510bf"
+    },
+    {
+      "suite": "r0-final-tools",
+      "result": "PASS",
+      "checks": "12/12",
+      "duration_ms": 4007,
+      "log": "reports/r0-test-results/r0-final-tools.log",
+      "log_sha256": "971ec50b98447a95def977aeae28b2570c06f661ed2f2dce76cb0f250cb6cd23"
+    },
+    {
+      "suite": "r0-independent-contracts",
+      "result": "PASS",
+      "checks": "34/34",
+      "duration_ms": 150467,
+      "log": "reports/r0-test-results/r0-independent-contracts.log",
+      "log_sha256": "e8318a750b3723e04df250936d7e89aaac09ff680466df750ef899bbe0dc2be4"
+    },
+    {
+      "suite": "r0-qa-evidence",
+      "result": "PASS",
+      "checks": "PASS",
+      "duration_ms": 9731,
+      "log": "reports/r0-test-results/r0-qa-evidence.log",
+      "log_sha256": "b80bdc1a3309f21dba06b97157b0d524da2c47a528f29bc1e375d29cbf000280"
+    },
+    {
+      "suite": "r0-reqa-adapters",
+      "result": "PASS",
+      "checks": "3/3",
+      "duration_ms": 12513,
+      "log": "reports/r0-test-results/r0-reqa-adapters.log",
+      "log_sha256": "84b2c949c58bc92fd26aefaa0bedbba4fb5401f1603d5ef687cd6dc0fc02d403"
+    },
+    {
+      "suite": "r0-reqa-manager",
+      "result": "PASS",
+      "checks": "95/95",
+      "duration_ms": 39663,
+      "log": "reports/r0-test-results/r0-reqa-manager.log",
+      "log_sha256": "464898f04ff38d0f3257d95c3ec878dc237559aab1caccc7dbe6cf8a916f3b02"
+    },
+    {
+      "suite": "r0-runtime-manager",
+      "result": "PASS",
+      "checks": "76/76",
+      "duration_ms": 9826,
+      "log": "reports/r0-test-results/r0-runtime-manager.log",
+      "log_sha256": "8e0287b7b84521b7f869197c0456422222b4955dbc17c5425ff8bb5cc1ef5df8"
+    },
+    {
+      "suite": "r0-runtime-recursion",
+      "result": "PASS",
+      "checks": "37/37",
+      "duration_ms": 1814,
+      "log": "reports/r0-test-results/r0-runtime-recursion.log",
+      "log_sha256": "d7b5f9118124eadb26cfd325035dd188492d5b985c9c7d9598af57d108cdb791"
+    },
+    {
+      "suite": "r0-runtime-storage-lease",
+      "result": "PASS",
+      "checks": "75/75",
+      "duration_ms": 17924,
+      "log": "reports/r0-test-results/r0-runtime-storage-lease.log",
+      "log_sha256": "9962698e7ee82c7866b009973b1a12db03556ab901f42dd8b4db649bb2b34304"
+    },
+    {
+      "suite": "r0-security-tools",
+      "result": "PASS",
+      "checks": "5/5",
+      "duration_ms": 3730,
+      "log": "reports/r0-test-results/r0-security-tools.log",
+      "log_sha256": "b95514336a91b599252d6626f507c64d57755a2102b931dde68a1c0e4491782c"
+    },
+    {
+      "suite": "r0-test-harness",
+      "result": "PASS",
+      "checks": "PASS",
+      "duration_ms": 1174,
+      "log": "reports/r0-test-results/r0-test-harness.log",
+      "log_sha256": "2a2d61ffcb7ea9053b755d2fc7d6b195a23fe48af5d32d323489330daed417ce"
+    },
+    {
+      "suite": "resume-policy",
+      "result": "PASS",
+      "checks": "16/16",
+      "duration_ms": 10292,
+      "log": "reports/r0-test-results/resume-policy.log",
+      "log_sha256": "adad2be697b5209b4956b26c6752628f33bb09012f9ef46241c8f98ff2aef2b3"
+    },
+    {
+      "suite": "stage1-integration",
+      "result": "PASS",
+      "checks": "20/20",
+      "duration_ms": 3992,
+      "log": "reports/r0-test-results/stage1-integration.log",
+      "log_sha256": "900c64515c8c890a2d908e8f91826476d3093b7c623e789a63b98b6d75abed6c"
+    }
+  ],
+  "note": "Counts come from persisted per-suite logs; PASS without a ratio denotes no uniform aggregate check count."
+}

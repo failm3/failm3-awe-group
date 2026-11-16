@@ -1,0 +1,15 @@
+Baseline captured 2026-11-13
+HEAD=446adaea833b0ebade1a21fbda3f71118d19b0d6
+BRANCH=hotfix/e1-recovery-hotfix-01
+PREEXISTING UNTRACKED:
+?? .r0-work/
+?? design-spec.md
+?? reports/NOX-OWNER-READINESS-REVIEW-01.md
+?? reports/r0-baseline-critical.sha256
+?? reports/r0-baseline/
+?? screenshots/
+?? scripts/capture-viewports.cjs
+?? scripts/dbg.cjs
+?? scripts/verify-nivict.cjs
+?? tokens.css
+?? tokens.json

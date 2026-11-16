@@ -1,0 +1,14 @@
+{
+  "id": "874cc834-f03d-491c-9f93-989325e1a57a",
+  "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+  "type": "file",
+  "name": "work/qual/qualify.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualify.py",
+  "created_at": "2026-11-16T05:39:45.716Z",
+  "metadata": {
+    "size_bytes": 8800,
+    "sha256": "219d1a762afe88b24ba76128daa0488395a73c89c9fc522b4fa144b4659e3353",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "aa158723-dff7-412a-aa50-6aba07c6362b",
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "type": "file",
+  "name": "styles.css",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/styles.css",
+  "content": "*, *::before, *::after { box-sizing: border-box; }\nhtml, body { margin: 0; padding: 0; max-width: 100%; }\nbody { font-family: system-ui, sans-serif; line-height: 1.4; background: #f6f7f9; color: #1a1d21; overflow-wrap: anywhere; }\n.container { max-width: 40rem; margin: 0 auto; padding: 1rem; }\nh1 { font-size: 1.6rem; margin: 0 0 1rem; }\n.task-form, .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }\n.task-form input[type=\"text\"] { flex: 1 1 12rem; min-width: 0; }\ninput, select, button { font: inherit; padding: 0.4rem 0.6rem; max-width: 100%; }\nbutton:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }\n.task-list { list-style: none; margin: 0; padding: 0; }\n.task { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding: 0.5rem; margin-bottom: 0.5rem; background: #ffffff; border: 1px solid #d5d9df; border-radius: 6px; }\n.task input[type=\"checkbox\"] { flex: 0 0 auto; width: 1.2rem; height: 1.2rem; padding: 0; }\n.task-text { flex: 1 1 8rem; min-width: 0; overflow-wrap: anywhere; word-break: break-word; }\n.task.done .task-text { text-decoration: line-through; color: #5b6470; }\n",
+  "created_at": "2026-11-13T23:47:19.690Z",
+  "metadata": {
+    "size_bytes": 1217,
+    "sha256": "f2d9c0c0764dd0014ad46dc9fda329715add02b920928c2d79b442127017d1ff"
+  }
+}

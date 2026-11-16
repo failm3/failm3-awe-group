@@ -1,0 +1,536 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+  "status": "paused",
+  "started_at": "2026-11-16T03:59:26.748Z",
+  "finished_at": "2026-11-16T04:04:13.329Z",
+  "execution_error": null,
+  "approved_spec_hash": "831d2b8ca7e95775a150dac475c34e04aeec5847c3bf5b26dd9f8b323cb5f2c6",
+  "host_execution_policy": {
+    "composition": "trusted-host-only",
+    "mode": "engineering-practice",
+    "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+    "spec_hash": "831d2b8ca7e95775a150dac475c34e04aeec5847c3bf5b26dd9f8b323cb5f2c6",
+    "fail_closed": true,
+    "allowed_stages": [
+      "mission",
+      "delegation",
+      "repair",
+      "effect",
+      "acceptance"
+    ],
+    "allowed_tools": [
+      "delegate",
+      "file_list",
+      "file_read",
+      "file_write",
+      "save_artifact"
+    ],
+    "selection_inputs": [
+      "approved mission identity",
+      "approved spec hash",
+      "host target role/tools/stage"
+    ],
+    "prohibited_selection_inputs": [
+      "request metadata",
+      "model metadata",
+      "model-authored configuration"
+    ]
+  },
+  "artifacts": [],
+  "intervals": [
+    {
+      "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top0",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "researcher",
+      "started_at": "2026-11-16T04:00:13.864Z",
+      "finished_at": "2026-11-16T04:02:09.517Z",
+      "artifact_ids": [
+        "eea67f9b-c4a2-4de0-b9dd-051df7241714"
+      ]
+    },
+    {
+      "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top3",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "researcher",
+      "started_at": "2026-11-16T04:02:09.559Z",
+      "finished_at": "2026-11-16T04:03:00.727Z",
+      "artifact_ids": [
+        "8f000638-f100-4e7b-bd4d-c6545e9011f1"
+      ]
+    },
+    {
+      "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top4",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "researcher",
+      "started_at": "2026-11-16T04:02:09.562Z",
+      "finished_at": "2026-11-16T04:03:04.846Z",
+      "artifact_ids": [
+        "1962d5ca-9566-462a-a9d2-5524794e44ad"
+      ]
+    },
+    {
+      "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top5",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "analyst",
+      "started_at": "2026-11-16T04:03:04.869Z",
+      "finished_at": "2026-11-16T04:04:13.301Z",
+      "artifact_ids": []
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "f790c758-a791-4132-a843-938a0a1ecd86",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T03:59:29.226Z",
+      "finished_at": "2026-11-16T04:00:13.831Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 3028,
+        "output_tokens": 5332,
+        "total_tokens": 8360,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 629
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "bf457b8f-296d-4976-93a6-d7fa6718dc37",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T04:00:13.880Z",
+      "finished_at": "2026-11-16T04:02:09.509Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 104511,
+        "output_tokens": 10642,
+        "total_tokens": 115153,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 78583
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "1cbfa420-1d2f-4cca-a24e-542c8f2cfe6a",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "alder-source-analysis",
+      "model": "deepseek-v4-flash",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T04:00:55.011Z",
+      "finished_at": "2026-11-16T04:01:13.334Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 14203,
+        "output_tokens": 2169,
+        "total_tokens": 16372,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 8448
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "4a5fbc9e-8fb1-4873-ad3b-25def290b13e",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "brook-cove-source-analysis",
+      "model": "deepseek-v4-flash",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T04:00:55.030Z",
+      "finished_at": "2026-11-16T04:01:11.674Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 14584,
+        "output_tokens": 2246,
+        "total_tokens": 16830,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 8704
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "bdb4ccea-78ea-4fdd-9cf4-ebf184c0cfa2",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T04:02:09.571Z",
+      "finished_at": "2026-11-16T04:03:00.720Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 70847,
+        "output_tokens": 5782,
+        "total_tokens": 76629,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 35374
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "e40790fd-ca14-4e6a-b67a-1969915ded01",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T04:02:09.604Z",
+      "finished_at": "2026-11-16T04:03:04.839Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 71302,
+        "output_tokens": 5760,
+        "total_tokens": 77062,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 51105
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "741bee62-5f0b-4419-a8e8-4571377a7bb9",
+      "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+      "role": "analyst",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T04:03:04.875Z",
+      "finished_at": "2026-11-16T04:04:13.292Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 48457,
+        "output_tokens": 8217,
+        "total_tokens": 56674,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "qa_review": null,
+  "qa_candidate_receipt": null,
+  "candidate_evidence_path": null,
+  "candidate_evidence_sha256": null,
+  "delegation_tree": null,
+  "independent_verification": {
+    "schema": "r2-final-professional-independent-verification-v1",
+    "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+    "independent": true,
+    "artifacts": [],
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top0",
+        "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T04:00:13.864Z",
+        "finished_at": "2026-11-16T04:02:09.517Z",
+        "artifact_ids": [
+          "eea67f9b-c4a2-4de0-b9dd-051df7241714"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top3",
+        "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T04:02:09.559Z",
+        "finished_at": "2026-11-16T04:03:00.727Z",
+        "artifact_ids": [
+          "8f000638-f100-4e7b-bd4d-c6545e9011f1"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top4",
+        "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T04:02:09.562Z",
+        "finished_at": "2026-11-16T04:03:04.846Z",
+        "artifact_ids": [
+          "1962d5ca-9566-462a-a9d2-5524794e44ad"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top5",
+        "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+        "role": "analyst",
+        "started_at": "2026-11-16T04:03:04.869Z",
+        "finished_at": "2026-11-16T04:04:13.301Z",
+        "artifact_ids": []
+      }
+    ],
+    "checks": [
+      {
+        "check": "mission reached completed through production independent QA",
+        "passed": false,
+        "detail": "paused"
+      },
+      {
+        "check": "real Head plan and successful specialist delegation tree recorded",
+        "passed": false,
+        "detail": "0 tree nodes; 0 successful top-level nodes"
+      },
+      {
+        "check": "every durable specialist used only approved tools and host-allowlisted models",
+        "passed": false,
+        "detail": ""
+      },
+      {
+        "check": "top-level coordinator recursively launched at least two real children",
+        "passed": false,
+        "detail": "no qualifying parent"
+      },
+      {
+        "check": "recursive children are distinct and actually overlapped in time",
+        "passed": false,
+        "detail": "one parallel reservation, artifact-producing distinct children and common host-observed overlap required"
+      },
+      {
+        "check": "real Head model call completed",
+        "passed": true,
+        "detail": "completed"
+      },
+      {
+        "check": "independent QA model call completed",
+        "passed": false,
+        "detail": ""
+      },
+      {
+        "check": "real specialist model calls completed",
+        "passed": true,
+        "detail": "researcher:completed, alder-source-analysis:completed, brook-cove-source-analysis:completed, researcher:completed, researcher:completed, analyst:completed"
+      },
+      {
+        "check": "all model ledger records are terminal and attributed to this mission",
+        "passed": true,
+        "detail": "7 calls"
+      },
+      {
+        "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+        "passed": true,
+        "detail": "head-agent:claude-opus-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | alder-source-analysis:deepseek-v4-flash:routercheap | brook-cove-source-analysis:deepseek-v4-flash:routercheap | researcher:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | analyst:claude-sonnet-5-5:routercheap"
+      },
+      {
+        "check": "specialist role routing uses the host-selected Sonnet route",
+        "passed": false,
+        "detail": "role overrides are host configuration, not model output"
+      },
+      {
+        "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+        "passed": false,
+        "detail": ""
+      },
+      {
+        "check": "exactly two research extras are delegated evidence notes",
+        "passed": true,
+        "detail": "two evidence-note artifacts required"
+      },
+      {
+        "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+        "passed": true,
+        "detail": "0 supplied / 0 terminal IDs"
+      },
+      {
+        "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+        "passed": false,
+        "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top0:researcher"
+      },
+      {
+        "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+        "passed": false,
+        "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top3:researcher"
+      },
+      {
+        "check": "observed delegation 3 has a valid mission-bound interval and unique node",
+        "passed": false,
+        "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top4:researcher"
+      },
+      {
+        "check": "observed delegation 4 has a valid mission-bound interval and unique node",
+        "passed": false,
+        "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top5:analyst"
+      },
+      {
+        "check": "immutable local input bytes",
+        "passed": true,
+        "detail": "sources/pilot-charter.txt:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; sources/weekly-observations.txt:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; sources/reviewer-note.txt:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+      },
+      {
+        "check": "research brief available for independent citation verification",
+        "passed": false,
+        "detail": "missing artifact"
+      }
+    ],
+    "passed": false
+  },
+  "checks": [
+    {
+      "check": "mission execution boundary returned without a host exception",
+      "passed": true,
+      "detail": "settled"
+    },
+    {
+      "check": "independent candidate review receipt authenticates exact final artifact set",
+      "passed": false,
+      "detail": "No absolute candidate evidence path"
+    },
+    {
+      "check": "mission reached completed through production independent QA",
+      "passed": false,
+      "detail": "paused"
+    },
+    {
+      "check": "real Head plan and successful specialist delegation tree recorded",
+      "passed": false,
+      "detail": "0 tree nodes; 0 successful top-level nodes"
+    },
+    {
+      "check": "every durable specialist used only approved tools and host-allowlisted models",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "check": "top-level coordinator recursively launched at least two real children",
+      "passed": false,
+      "detail": "no qualifying parent"
+    },
+    {
+      "check": "recursive children are distinct and actually overlapped in time",
+      "passed": false,
+      "detail": "one parallel reservation, artifact-producing distinct children and common host-observed overlap required"
+    },
+    {
+      "check": "real Head model call completed",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "independent QA model call completed",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "check": "real specialist model calls completed",
+      "passed": true,
+      "detail": "researcher:completed, alder-source-analysis:completed, brook-cove-source-analysis:completed, researcher:completed, researcher:completed, analyst:completed"
+    },
+    {
+      "check": "all model ledger records are terminal and attributed to this mission",
+      "passed": true,
+      "detail": "7 calls"
+    },
+    {
+      "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+      "passed": true,
+      "detail": "head-agent:claude-opus-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | alder-source-analysis:deepseek-v4-flash:routercheap | brook-cove-source-analysis:deepseek-v4-flash:routercheap | researcher:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | analyst:claude-sonnet-5-5:routercheap"
+    },
+    {
+      "check": "specialist role routing uses the host-selected Sonnet route",
+      "passed": false,
+      "detail": "role overrides are host configuration, not model output"
+    },
+    {
+      "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "check": "exactly two research extras are delegated evidence notes",
+      "passed": true,
+      "detail": "two evidence-note artifacts required"
+    },
+    {
+      "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+      "passed": true,
+      "detail": "0 supplied / 0 terminal IDs"
+    },
+    {
+      "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+      "passed": false,
+      "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top0:researcher"
+    },
+    {
+      "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+      "passed": false,
+      "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top3:researcher"
+    },
+    {
+      "check": "observed delegation 3 has a valid mission-bound interval and unique node",
+      "passed": false,
+      "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top4:researcher"
+    },
+    {
+      "check": "observed delegation 4 has a valid mission-bound interval and unique node",
+      "passed": false,
+      "detail": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top5:analyst"
+    },
+    {
+      "check": "immutable local input bytes",
+      "passed": true,
+      "detail": "sources/pilot-charter.txt:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; sources/weekly-observations.txt:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; sources/reviewer-note.txt:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+    },
+    {
+      "check": "research brief available for independent citation verification",
+      "passed": false,
+      "detail": "missing artifact"
+    },
+    {
+      "check": "immutable candidate and QA evidence copied byte-identically",
+      "passed": false,
+      "detail": ""
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,14 @@
+{
+  "id": "3035201a-739d-4826-8130-3ca2df9f84f2",
+  "mission_id": "r2-experience-reuse-1794858271974-t05-off",
+  "type": "file",
+  "name": "src/export.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t05-off/src/export.cjs",
+  "created_at": "2026-11-16T19:50:49.724Z",
+  "metadata": {
+    "size_bytes": 196,
+    "sha256": "687aa260170ab05c0f2e5fc1bbb2d1b25094c7e77580c0a9258b23a869a73ede",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "verifier_version": "r1-static-task-tracker-v1",
+  "contract_digest": "4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8",
+  "mode": "independent-local-verification",
+  "tree_sha256": "198243a173248fd3ca8e21ff5a2cea15bc14034bdbe908f2fd3ef25b46b223c5",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 9058,
+      "sha256": "ab7f2ebd7beca9906503e1902e4279dfe578455ba4ee5b10c12665b70225d19d"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 267,
+      "sha256": "6b36de353846d23c70b25cfe3049cbaabd99e9dbc7134170456d346703c86cb2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 930,
+      "sha256": "7ab4096b237c0ea62bd8a747209a48fe67728bf0647c45dbea834a6cbc61d6ff"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 2501,
+      "sha256": "78ad22edf3eaee5bfb075286c11e36da8ec8f0761bc4ba92c97361db351a0a70"
+    }
+  ],
+  "checks": [
+    {
+      "id": "bounded-artifact-snapshot",
+      "passed": true
+    },
+    {
+      "id": "source-url-contract",
+      "passed": false
+    }
+  ],
+  "commands": [],
+  "issues": [
+    "FORBIDDEN_URL_LITERAL: favicon.svg"
+  ],
+  "outcome": "FAIL",
+  "qualification": "NOT_ASSESSED",
+  "browser_version": null,
+  "receipt_sha256": "b5e344c652e7bbc3dc53b56863696c8dc35dbfe612944a2eed7abe449a6d00d0"
+}

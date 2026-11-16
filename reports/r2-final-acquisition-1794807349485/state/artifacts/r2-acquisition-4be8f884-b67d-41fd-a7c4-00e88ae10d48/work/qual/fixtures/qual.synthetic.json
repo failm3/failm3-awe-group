@@ -1,0 +1,11 @@
+{
+  "source": "Qualification synthetic",
+  "period": "2026-W46",
+  "observations": [
+    {"site": "Tie",   "cohort": "A", "scheduled": 32, "completed": 1,  "incidents": 0},
+    {"site": "Tie",   "cohort": "B", "scheduled": 32, "completed": 1,  "incidents": 0},
+    {"site": "Exact", "cohort": "A", "scheduled": 16, "completed": 1,  "incidents": 5},
+    {"site": "Full",  "cohort": "A", "scheduled": 7,  "completed": 7,  "incidents": 0},
+    {"site": "Zero",  "cohort": "A", "scheduled": 9,  "completed": 0,  "incidents": 4}
+  ]
+}

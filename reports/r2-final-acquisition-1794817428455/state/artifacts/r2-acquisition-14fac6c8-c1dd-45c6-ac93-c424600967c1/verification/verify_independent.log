@@ -1,0 +1,115 @@
+========================================================================================================
+SECTION 1 - INDEPENDENT ARITHMETIC FROM THE RAW FIXTURE
+========================================================================================================
+raw fixture rows, in file order:
+  row 0: site=North  scheduled=12  completed=11  incidents=2  
+  row 1: site=South  scheduled=8   completed=8   incidents=1  
+  row 2: site=North  scheduled=10  completed=7   incidents=3  
+hand sums:
+  row_count   = 3 rows
+  scheduled   = 12 + 8 + 10            = 30
+  completed   = 11 + 8 +  7            = 26
+  incidents   =  2 + 1 +  3            = 6
+  percent     = 26*100/30 = 86.67%
+  North       = 2 rows, 22 sched, 18 comp, 5 inc, 81.82%
+  South       = 1 row,  8 sched, 8 comp, 1 inc, 100.00%
+
+========================================================================================================
+SECTION 2 - FIELD-BY-FIELD COMPARISON AGAINST digest.json
+========================================================================================================
+digest.json bytes > 0                                mine=480            digest=480            PASS  :: 480 bytes
+digest.json sha256                                   mine=989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7 digest=989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7 PASS
+row_count                                            mine=3              digest=3              PASS
+row_count is exact int type                          mine=int            digest=int            PASS
+scheduled                                            mine=30             digest=30             PASS
+scheduled is exact int type                          mine=int            digest=int            PASS
+completed                                            mine=26             digest=26             PASS
+completed is exact int type                          mine=int            digest=int            PASS
+incidents                                            mine=6              digest=6              PASS
+incidents is exact int type                          mine=int            digest=int            PASS
+completion_percent                                   mine=86.67          digest=86.67          PASS
+completion_percent occurrence count                  mine=3              digest=3              PASS  :: 1 global + 2 per-site
+completion_percent raw JSON token                    mine=86.67          digest=86.67          PASS  :: unquoted, exactly 2 decimals
+completion_percent not quoted                        mine=unquoted       digest=unquoted       PASS
+site North completion_percent raw token              mine=81.82          digest=81.82          PASS  :: 2-decimal text rendering
+site South completion_percent raw token              mine=100.00         digest=100.00         PASS  :: 2-decimal text rendering
+source passthrough                                   mine=Lumen Harbor field pilot digest=Lumen Harbor field pilot PASS
+period passthrough                                   mine=2026-W45       digest=2026-W45       PASS
+
+per-site objects (exact key set + every value):
+sites is a JSON object                               mine=dict           digest=dict           PASS
+sites key set                                        mine=['North', 'South'] digest=['North', 'South'] PASS
+site North row_count                                 mine=2              digest=2              PASS
+site North row_count is exact int type               mine=int            digest=int            PASS
+site North scheduled                                 mine=22             digest=22             PASS
+site North scheduled is exact int type               mine=int            digest=int            PASS
+site North completed                                 mine=18             digest=18             PASS
+site North completed is exact int type               mine=int            digest=int            PASS
+site North incidents                                 mine=5              digest=5              PASS
+site North incidents is exact int type               mine=int            digest=int            PASS
+site North completion_percent                        mine=81.82          digest=81.82          PASS
+site South row_count                                 mine=1              digest=1              PASS
+site South row_count is exact int type               mine=int            digest=int            PASS
+site South scheduled                                 mine=8              digest=8              PASS
+site South scheduled is exact int type               mine=int            digest=int            PASS
+site South completed                                 mine=8              digest=8              PASS
+site South completed is exact int type               mine=int            digest=int            PASS
+site South incidents                                 mine=1              digest=1              PASS
+site South incidents is exact int type               mine=int            digest=int            PASS
+site South completion_percent                        mine=100.00         digest=100.00         PASS
+
+========================================================================================================
+SECTION 3 - PER-SITE TOTALS MUST SUM TO THE GLOBAL TOTALS
+========================================================================================================
+sum(per-site row_count) vs global row_count (digest) mine=3              digest=3              PASS
+sum(per-site row_count) vs my global row_count       mine=3              digest=3              PASS
+sum(per-site scheduled) vs global scheduled (digest) mine=30             digest=30             PASS
+sum(per-site scheduled) vs my global scheduled       mine=30             digest=30             PASS
+sum(per-site completed) vs global completed (digest) mine=26             digest=26             PASS
+sum(per-site completed) vs my global completed       mine=26             digest=26             PASS
+sum(per-site incidents) vs global incidents (digest) mine=6              digest=6              PASS
+sum(per-site incidents) vs my global incidents       mine=6              digest=6              PASS
+
+========================================================================================================
+SECTION 4 - completion_percent INTERNAL CONSISTENCY (two decimals, derived from completed/scheduled)
+========================================================================================================
+global pct recomputed from digest's own completed/scheduled mine=86.67          digest=86.67          PASS
+global pct has exactly 2 decimals in text            mine=2dp            digest=2dp            PASS
+site North pct recomputed from its own completed/scheduled mine=81.82          digest=81.82          PASS
+site South pct recomputed from its own completed/scheduled mine=100.00         digest=100.00         PASS
+0 <= global completion_percent <= 100                mine=0..100         digest=86.67          PASS
+site North completed <= scheduled                    mine=<= 22          digest=18             PASS
+site South completed <= scheduled                    mine=<= 8           digest=8              PASS
+
+========================================================================================================
+SECTION 5 - digest.md MUST CARRY THE SAME VALUES
+========================================================================================================
+digest.md bytes > 0                                  mine=1603           digest=1603           PASS  :: 1603 bytes
+digest.md sha256                                     mine=7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af digest=7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af PASS
+digest.md totals cell row_count                      mine=3              digest=3              PASS
+digest.md totals cell scheduled                      mine=30             digest=30             PASS
+digest.md totals cell completed                      mine=26             digest=26             PASS
+digest.md totals cell incidents                      mine=6              digest=6              PASS
+digest.md totals cell completion_percent             mine=86.67          digest=86.67          PASS
+digest.md site row North                             mine=| North | 2 | 22 | 18 | 5 | 81.82 | digest=| North | 2 | 22 | 18 | 5 | 81.82 | PASS
+digest.md site row South                             mine=| South | 1 | 8 | 8 | 1 | 100.00 | digest=| South | 1 | 8 | 8 | 1 | 100.00 | PASS
+digest.md total row equals digest.json               mine=| **total** | 3 | 30 | 26 | 6 | 86.67 | digest=| **total** | 3 | 30 | 26 | 6 | 86.67 | PASS
+digest.md source line matches digest.json.source     mine=Lumen Harbor field pilot digest=present        PASS
+digest.md period line matches digest.json.period     mine=2026-W45       digest=present        PASS
+digest.md fixture sha256 matches on-disk fixture     mine=412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766 digest=present        PASS
+digest.md has reproducible method section            mine=## Reproducible method digest=present        PASS
+digest.md has cap-01 method section header           mine=present        digest=present        PASS
+percentages in digest.md table rows all exist in digest.json mine=['100.00', '81.82', '86.67'] digest=['100.00', '81.82', '86.67'] PASS  :: table rows only; method prose excluded
+digest.md method prose 0.00 is not presented as a data value mine=prose only     digest=in method text PASS
+
+========================================================================================================
+SECTION 6 - SCHEMA KEYS (exact)
+========================================================================================================
+digest.json top-level key set exact                  mine=['source', 'period', 'row_count', 'scheduled', 'completed', 'incidents', 'completion_percent', 'sites'] digest=['completed', 'completion_percent', 'incidents', 'period', 'row_count', 'scheduled', 'sites', 'source'] PASS  :: no extra, no missing
+site North key set exact                             mine=['row_count', 'scheduled', 'completed', 'incidents', 'completion_percent'] digest=['completed', 'completion_percent', 'incidents', 'row_count', 'scheduled'] PASS
+site South key set exact                             mine=['row_count', 'scheduled', 'completed', 'incidents', 'completion_percent'] digest=['completed', 'completion_percent', 'incidents', 'row_count', 'scheduled'] PASS
+
+========================================================================================================
+TOTALS: checks=73 pass=73 fail=0
+VERDICT: INDEPENDENT_ARITHMETIC_PARITY_OK
+========================================================================================================

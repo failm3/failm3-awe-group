@@ -1,0 +1,14 @@
+{
+  "id": "fa94b184-5cc7-4340-a319-98071bbd17c7",
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "type": "text",
+  "name": "invocation/outputs.sha256.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/invocation/outputs.sha256.txt",
+  "created_at": "2026-11-16T08:30:26.896Z",
+  "metadata": {
+    "size_bytes": 508,
+    "sha256": "5736ed7d80f29f6c8758f4c10cee630f3a8fc2ea80326102da83785e76cbf91d",
+    "reconciled": true,
+    "revision": 1
+  }
+}

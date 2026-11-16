@@ -1,0 +1,13 @@
+{
+  "id": "4b14ea51-6eb1-48c1-af66-786c2b6e3e34",
+  "mission_id": "r2-final-transfer-1794798010397-t00-off",
+  "type": "file",
+  "name": "lib/records.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t00-off/lib/records.cjs",
+  "created_at": "2026-11-16T03:06:36.231Z",
+  "metadata": {
+    "size_bytes": 6027,
+    "sha256": "5ce616edd00007ba58c34d7499ec2dda3ec7bba8cf961c4f6f768dd68a4592c9",
+    "revision": 2
+  }
+}

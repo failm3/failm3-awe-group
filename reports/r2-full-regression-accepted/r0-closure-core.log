@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: effect-bearing failed repairs pause durably; accept verifies attempt evidence and retry alone repeats
+ok 1 - effect-bearing failed repairs pause durably; accept verifies attempt evidence and retry alone repeats
+  ---
+  duration_ms: 146.250095
+  type: 'test'
+  ...
+# Subtest: pre-effect failed repairs remain bounded, preserve original bytes, and seal terminal failure
+ok 2 - pre-effect failed repairs remain bounded, preserve original bytes, and seal terminal failure
+  ---
+  duration_ms: 42.004032
+  type: 'test'
+  ...
+# Subtest: success then QA timeout resumes the stored plan under paraphrase, concurrent rivals, and repeated terminal attempts
+ok 3 - success then QA timeout resumes the stored plan under paraphrase, concurrent rivals, and repeated terminal attempts
+  ---
+  duration_ms: 137.62527
+  type: 'test'
+  ...
+# Subtest: operator-accepted delegation survives a paraphrased resume with stable identity and no repeated effect
+ok 4 - operator-accepted delegation survives a paraphrased resume with stable identity and no repeated effect
+  ---
+  duration_ms: 27.267593
+  type: 'test'
+  ...
+# Subtest: malformed, unreadable, and wrong-mission checkpoints block before planning/effects and preserve damage
+ok 5 - malformed, unreadable, and wrong-mission checkpoints block before planning/effects and preserve damage
+  ---
+  duration_ms: 380.060336
+  type: 'test'
+  ...
+# Subtest: invalid stored plan hash fails closed before Head or specialist without replacing evidence
+ok 6 - invalid stored plan hash fails closed before Head or specialist without replacing evidence
+  ---
+  duration_ms: 126.524887
+  type: 'test'
+  ...
+# Subtest: absent checkpoint remains a legitimate fresh run
+ok 7 - absent checkpoint remains a legitimate fresh run
+  ---
+  duration_ms: 16.49898
+  type: 'test'
+  ...
+# Subtest: schemas and the real deterministic gate reject missing or blank acceptance evidence
+ok 8 - schemas and the real deterministic gate reject missing or blank acceptance evidence
+  ---
+  duration_ms: 4.669791
+  type: 'test'
+  ...
+# Subtest: manager bypassing schemas cannot start with zero criteria or produce any execution effects
+ok 9 - manager bypassing schemas cannot start with zero criteria or produce any execution effects
+  ---
+  duration_ms: 1.181199
+  type: 'test'
+  ...
+# Subtest: real endpoint ids do not authenticate manufactured same-name or A(index) to B/C(notes) lineage
+ok 10 - real endpoint ids do not authenticate manufactured same-name or A(index) to B/C(notes) lineage
+  ---
+  duration_ms: 120.195257
+  type: 'test'
+  ...
+# Subtest: genuine repair provenance is required and old/new hash-size-byte substitutions fail without replaying original work
+ok 11 - genuine repair provenance is required and old/new hash-size-byte substitutions fail without replaying original work
+  ---
+  duration_ms: 755.884645
+  type: 'test'
+  ...
+# Subtest: completed, failed, and cancelled missions reject late metadata, bytes, writes, and reconciliation
+ok 12 - completed, failed, and cancelled missions reject late metadata, bytes, writes, and reconciliation
+  ---
+  duration_ms: 59.7552
+  type: 'test'
+  ...
+# Subtest: approved-before-running orphan is paused without work, live owners are protected, then resume executes once
+ok 13 - approved-before-running orphan is paused without work, live owners are protected, then resume executes once
+  ---
+  duration_ms: 52.760715
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1887.17318

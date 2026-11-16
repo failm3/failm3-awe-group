@@ -1,0 +1,24 @@
+{
+  "capability": "observation-digest-v1",
+  "status": "available",
+  "detail": "Local Node procedure bin/observation-digest-v1.js was run once and produced byte-hashed digest.json and digest.md with arithmetically verified totals.",
+  "local_target": {
+    "runtime": "node",
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723/state/artifacts/r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d/bin/observation-digest-v1.js",
+    "executable_sha256": "504a591a7bab893395bcfc92f10a795c820ca8c962a8b1edbcfaddd51dfdc0e1",
+    "args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723/state/artifacts/r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723/state/artifacts/r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d"
+    ],
+    "probe_artifacts": [
+      {
+        "artifact_id": "a62a4903-a9e6-4215-8d8c-1644a510d05b",
+        "sha256": "25d658bf097b156404e4c4f76f169845ee1a2ce092fa451b3324f8d5e3ff3518"
+      },
+      {
+        "artifact_id": "81d4bc52-bb88-48bb-8433-f51484cccb6b",
+        "sha256": "6047831055ea85e56c216d04c2a37c39aba92fa79c14d0caa6f70984f3db70cd"
+      }
+    ]
+  }
+}

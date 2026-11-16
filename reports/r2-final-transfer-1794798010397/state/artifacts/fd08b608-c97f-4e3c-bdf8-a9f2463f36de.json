@@ -1,0 +1,14 @@
+{
+  "id": "fd08b608-c97f-4e3c-bdf8-a9f2463f36de",
+  "mission_id": "r2-final-transfer-1794798010397-t20-on",
+  "type": "file",
+  "name": "scratch/edge.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t20-on/scratch/edge.cjs",
+  "created_at": "2026-11-16T05:23:39.495Z",
+  "metadata": {
+    "size_bytes": 4374,
+    "sha256": "1c4afd592a18b73b1f539c11525ccc0c87240e41c0cc841c3dc79808633fe871",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "equal": false,
+  "width": 1280,
+  "height": 720,
+  "independent_width": 1280,
+  "independent_height": 720,
+  "differing_pixels": 54708,
+  "total_pixels": 921600,
+  "difference_ratio": 0.05936197916666667,
+  "maximum_difference_ratio": 0.1
+}

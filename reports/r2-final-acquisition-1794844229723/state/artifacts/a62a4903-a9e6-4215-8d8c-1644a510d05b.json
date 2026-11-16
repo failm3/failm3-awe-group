@@ -1,0 +1,14 @@
+{
+  "id": "a62a4903-a9e6-4215-8d8c-1644a510d05b",
+  "mission_id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d",
+  "type": "file",
+  "name": "probe/digest.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723/state/artifacts/r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d/probe/digest.json",
+  "content": "{\n  \"source\": \"Lumen Harbor field pilot\",\n  \"period\": \"2026-W45\",\n  \"fixture\": \"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723/state/artifacts/r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d/input/pilot.observations.json\",\n  \"fixture_sha256\": \"412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766\",\n  \"row_count\": 3,\n  \"scheduled\": 30,\n  \"completed\": 26,\n  \"incidents\": 6,\n  \"completion_percent\": 86.67,\n  \"site_count\": 2,\n  \"sites\": {\n    \"North\": {\n      \"rows\": 2,\n      \"scheduled\": 22,\n      \"completed\": 18,\n      \"incidents\": 5,\n      \"completion_percent\": 81.82\n    },\n    \"South\": {\n      \"rows\": 1,\n      \"scheduled\": 8,\n      \"completed\": 8,\n      \"incidents\": 1,\n      \"completion_percent\": 100.00\n    }\n  }\n}\n",
+  "created_at": "2026-11-16T15:58:12.571Z",
+  "metadata": {
+    "size_bytes": 800,
+    "sha256": "25d658bf097b156404e4c4f76f169845ee1a2ce092fa451b3324f8d5e3ff3518",
+    "revision": 2
+  }
+}

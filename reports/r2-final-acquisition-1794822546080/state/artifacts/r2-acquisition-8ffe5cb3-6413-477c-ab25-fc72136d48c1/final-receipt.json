@@ -1,0 +1,160 @@
+{
+  "receipt_type": "final-mission-receipt",
+  "receipt_version": 1,
+  "mission_id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1",
+  "capability": "observation-digest-v1",
+  "attempt_id": "970749d1-2824-45bf-8062-ee3d9f07c59e",
+  "qualification_id": "q-r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1",
+  "spec_sha256": "19c3bbe49c4aa93437b300b17eb41819f8da4d759e7d83615e13284c5c401346",
+  "status": "complete",
+  "artifact_root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1",
+
+  "gate_check_before_registration": {
+    "executor_ran_fixed_command": true,
+    "evidence": "invocation-receipt.json records invocation_count=1, exact_command executed verbatim, exit_code=0, empty stderr; a refused supplementary hash command is documented in gate_events[0] and was not worked around",
+    "analyst_reported_arithmetic_mismatch": false,
+    "analyst_verdict_detail": "Independent recomputation from the fixture returned zero arithmetic mismatches across all global and per-site fields. One cosmetic finding only (F1): sites.South.completion_percent serializes as the JSON number 100 rather than 100.00; the analyst marked this PASS numerically. Site percentages are correctly weighted rather than averaged.",
+    "decision": "REGISTER (both refusal conditions absent)"
+  },
+
+  "executable": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/bin/observation-digest.js",
+    "sha256": "731ab85916cc270a6518e1068556f3b947b0b4a84b400b7e96201e936b40d6ee",
+    "sha256_provenance": "qualification record (observation.json -> local_target.executable_sha256); host rehashes the executable and re-verifies its probes immediately before releasing the fixed command. Not independently re-hashed by this delegation: the host shell gate accepts only the single fixed node command."
+  },
+
+  "exact_fixed_arguments": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1"
+  ],
+  "fixed_arguments_match_approved_spec": true,
+  "final_output_dir_is_probe_dir": false,
+  "final_output_dir_note": "fixed args write to the artifact root; the probe/ subtree was never used as the final output directory",
+
+  "exact_command_executed": "node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/bin/observation-digest.js' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1'",
+  "command_modifications": "none",
+  "invocation_count": 1,
+  "exit_code": 0,
+  "stderr": "",
+
+  "measured_result_values": {
+    "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "sites": {
+      "North": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": 81.82 },
+      "South": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": 100 }
+    },
+    "source": "procedure stdout, captured verbatim in run-stdout.json (artifact c29b5722-a022-4507-a1cb-fcbbcfc87960)",
+    "reconciliation": "22+8=30 scheduled, 18+8=26 completed, 5+1=6 incidents, 2+1=3 rows; 26/30=86.666... -> 86.67"
+  },
+
+  "registered_deliverables": [
+    {
+      "name": "digest.json",
+      "artifact_id": "bd4d5694-38a0-4220-82d4-1bfebb085567",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/digest.json",
+      "size_bytes": 467,
+      "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+      "sha256_provenance": "self-reported by the qualified procedure on stdout (digest_json_sha256). Byte-identical to the qualified probe output.",
+      "registered_from": "artifact root (not probe/out)",
+      "bytes_unmodified_by_registration": true
+    },
+    {
+      "name": "digest.md",
+      "artifact_id": "9140e8ac-2791-41c9-a4b9-8696dcf17307",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/digest.md",
+      "size_bytes": 2255,
+      "sha256": "e7712379543158681d0d64923189ae3b1fe3e08a19fb3101ea69835ae39ae978",
+      "sha256_provenance": "self-reported by the qualified procedure on stdout (digest_md_sha256).",
+      "registered_from": "artifact root (not probe/out)",
+      "bytes_unmodified_by_registration": true,
+      "note": "Differs from the probe digest.md (ff539722...) only because the reproducible-method block embeds the output-directory argument, now the artifact root. All metric values are identical; this is expected, not a discrepancy."
+    },
+    {
+      "name": "invocation-receipt.json",
+      "artifact_id": "bd9f1a14-35be-4e2e-b81c-582d1a97c7f6",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/invocation-receipt.json",
+      "size_bytes": 7439,
+      "sha256": null,
+      "sha256_provenance": "NOT MEASURED. The artifact service returned only artifact_id and path for this save; it did not return a sha256, and the host shell gate forbids any independent hashing command. No value is fabricated here.",
+      "registered_from": "artifact root"
+    }
+  ],
+
+  "excluded_from_registration": [
+    {
+      "note": "Probe artifacts from the separate probe invocation are NOT deliverables of this run and were not registered",
+      "ids": ["ff4b9f87-5c18-4572-ba67-ca70b3a31185", "5c7f683b-bd16-4e1a-82ee-256ef44aed9a"]
+    }
+  ],
+
+  "host_verification": {
+    "status": "PASS",
+    "basis": [
+      "host rehashed the executable (731ab859...) and re-verified its probes before releasing the fixed command",
+      "fixed args matched the approved spec exactly, including the artifact root as output dir rather than a probe dir",
+      "exit code 0, empty stderr, no writes outside the artifact root",
+      "digest.json and digest.md confirmed present in the artifact root by file_list",
+      "digest.json bytes are byte-identical to the independently qualified probe output (95777cc3...)"
+    ],
+    "limitation": "An independent re-hash of the executable and outputs by this delegation was refused by the host shell gate (see gate_events in invocation-receipt.json). Executable and output hashes are therefore attested by the qualification record and the procedure's own stdout, not by a second local hashing pass."
+  },
+
+  "nox_qa": {
+    "status": "PASS",
+    "verdict": "PASS with zero arithmetic mismatches",
+    "method": "independent manual recomputation from the fixture bytes only; prior model assertions, the executor hand-check, and observation.json's Python cross-check were treated as non-authoritative",
+    "recomputed": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": "86.67",
+      "sites": {
+        "North": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": "81.82" },
+        "South": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": "100.00" }
+      }
+    },
+    "field_checks": "every digest.json numeric field is an unquoted JSON number; digest.md values match digest.json and state source, period, fixture path and a 7-step reproducible method",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "cosmetic",
+        "detail": "sites.South.completion_percent serializes as the JSON number 100, not 100.00. Numerically equal; JSON numbers carry no fixed scale. Marked PASS numerically by the analyst.",
+        "action": "not altered — the digest bytes produced by the qualified procedure must not be modified"
+      },
+      {
+        "id": "F2",
+        "severity": "informational",
+        "detail": "Half-up rounding claim is consistent with the code but untested by this fixture, since neither percentage lands on an exact half.",
+        "action": "recorded, no change"
+      }
+    ],
+    "persistence_note": "The analyst delegation was granted only file_read/file_list, so it could not write its report to disk. Its full verification content is preserved in the upstream findings and reflected here; no analyst report artifact exists."
+  },
+
+  "acceptance_criteria_assessment": [
+    { "criterion": "Missing capability identified, one bounded acquisition, replan with a qualified local procedure", "verdict": "PASS", "basis": "observation.json documents the named gap and the single bounded acquisition with a real qualification run" },
+    { "criterion": "Acquired procedure invoked with exact qualified executable bytes and fixed args; durable invocation receipt present", "verdict": "PASS", "basis": "one verbatim invocation, exit 0, receipt persisted and registered as bd9f1a14-35be-4e2e-b81c-582d1a97c7f6" },
+    { "criterion": "digest.json exact numeric fields and sites object; digest.md presents the same values with a reproducible method", "verdict": "PASS", "basis": "independent recomputation matched every field; F1 cosmetic only" },
+    { "criterion": "All deliverables registered, bytes pass independent host verification and independent Nox QA", "verdict": "PASS", "basis": "three deliverables registered; host verification PASS; Nox QA PASS with zero arithmetic mismatches" }
+  ],
+
+  "constraints_respected": [
+    "all work confined to the mission artifact root",
+    "no packages, network, publishing, deployment, purchases or external changes",
+    "digest bytes produced by the qualified procedure not altered",
+    "probe artifacts not registered as deliverables",
+    "no hash or timing value fabricated"
+  ],
+
+  "known_gaps": [
+    "invocation-receipt.json has no sha256 recorded: the artifact service returned none and independent hashing is gated off",
+    "executable sha256 is attested by the qualification record, not re-derived locally in this delegation",
+    "elapsed run time was never measured; left explicitly unmeasured rather than estimated"
+  ]
+}

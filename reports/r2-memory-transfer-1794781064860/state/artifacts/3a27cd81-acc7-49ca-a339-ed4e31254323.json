@@ -1,0 +1,14 @@
+{
+  "id": "3a27cd81-acc7-49ca-a339-ed4e31254323",
+  "mission_id": "r2-memory-transfer-1794781064860-target-off",
+  "type": "file",
+  "name": "verify.edge.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-target-off/verify.edge.cjs",
+  "content": "'use strict';\n// Independent verification of lib/roster.cjs against FORMAT.md (not a test file\n// shipped with the task; visible.test.cjs is left untouched).\nconst assert = require('node:assert/strict');\nconst { parseRosterExport: p } = require('./lib/roster.cjs');\n\nlet okN = 0;\nlet badN = 0;\nconst bad = (s) => {\n  assert.throws(\n    () => p(s),\n    (e) => e instanceof Error && e.message === 'INVALID_FORMAT',\n    'should throw INVALID_FORMAT: ' + JSON.stringify(s),\n  );\n  badN++;\n};\nconst ok = (s, exp) => {\n  assert.deepEqual(p(s), exp, 'should parse: ' + JSON.stringify(s));\n  okN++;\n};\n\n// Empty input\nok('', []);\n\n// Basic rows, trailing separator does not create an extra row\nok('a;b\\n1;2\\n', [['a', 'b'], ['1', '2']]);\nok('a;b', [['a', 'b']]);\nok('a;b\\n1;2', [['a', 'b'], ['1', '2']]);\nok('a;b\\r\\n1;2\\r\\n', [['a', 'b'], ['1', '2']]);\n\n// Blank line is a record with one empty field\nok('a;b\\n\\n1;2\\n', [['a', 'b'], [''], ['1', '2']]);\n\n// Empty fields, including trailing\nok(';', [['', '']]);\nok('a;;c', [['a', '', 'c']]);\nok('a;b;', [['a', 'b', '']]);\nok(';a', [['', 'a']]);\n\n// Quoted fields\nok('\"\";\"\"', [['', '']]);\nok('\"a;b\";c', [['a;b', 'c']]);\nok('\"line1\\nline2\";x', [['line1\\nline2', 'x']]);\nok('\"line1\\r\\nline2\";x', [['line1\\r\\nline2', 'x']]);\nok('\"say \"\"hi\"\"\";z', [['say \"hi\"', 'z']]);   // \"\" escape\nok('\"\"\"\"', [['\"']]);                          // one literal quote\nok('x;\"a\"\"b\"', [['x', 'a\"b']]);\nok('\"a\"\"\"', [['a\"']]);\n\n// UTF-8 content\nok('ünï;cødé', [['ünï', 'cødé']]);\nok('café;日本\\n\"x\"\"y\";z\\r\\n', [['café', '日本'], ['x\"y', 'z']]);\n\n// Malformed input must throw Error('INVALID_FORMAT')\nbad('\"abc');          // unterminated quote\nbad('\"abc\\ndef');     // unterminated across newline\nbad('\"ab\"c');         // characters after closing quote\nbad('\"ab\" x');        // space after closing quote\nbad('ab\"cd');         // quote inside unquoted field\nbad('a\"b;c');         // quote inside unquoted field\nbad('a;b\"');          // quote inside unquoted field (last)\nbad('\"a\"\"\"b');        // text after closing quote\n\nconsole.log(`edge cases PASS (${okN} ok / ${badN} invalid)`);\n",
+  "created_at": "2026-11-15T22:20:47.395Z",
+  "metadata": {
+    "size_bytes": 2112,
+    "sha256": "dd6aa72bfc613b38bc2a9f8a56759b5baf0a6840c5f0b2ff63343d584839480f",
+    "revision": 1
+  }
+}

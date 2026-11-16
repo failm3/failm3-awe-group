@@ -1,0 +1,156 @@
+[
+  {
+    "path": "reports/ucl-source/delivery/data/db/ucl.sqlite",
+    "sha256": "ef2bee5e689d484b86c2dbff0138347cb5f6e1a5f9a4dcd45c58aef51e39e1be",
+    "integrity": "ok",
+    "tables": [
+      {
+        "name": "ucl_meta",
+        "rows": 1,
+        "schema": "CREATE TABLE ucl_meta (\n  key   TEXT PRIMARY KEY,\n  value TEXT NOT NULL\n)"
+      },
+      {
+        "name": "capability",
+        "rows": 4466,
+        "schema": "CREATE TABLE capability (\n  canonical_id     TEXT PRIMARY KEY,\n  canonical_url    TEXT NOT NULL UNIQUE,\n  duplicate_group  TEXT NOT NULL,\n  title            TEXT NOT NULL,\n  description      TEXT NOT NULL,\n  host             TEXT NOT NULL,\n  category         TEXT NOT NULL,\n  kind             TEXT NOT NULL,\n  kind_basis       TEXT NOT NULL,\n  capability_certainty TEXT NOT NULL,\n  license          TEXT NOT NULL DEFAULT 'UNKNOWN',\n  license_evidence TEXT,\n  version          TEXT NOT NULL DEFAULT 'UNKNOWN',\n  trust_state      TEXT NOT NULL DEFAULT 'UNVETTED',\n  installed        TEXT NOT NULL DEFAULT 'UNKNOWN',\n  security         TEXT NOT NULL DEFAULT 'NOT_TESTED',\n  compatibility    TEXT NOT NULL DEFAULT 'NOT_TESTED',\n  cost_micros      TEXT,\n  cost_currency    TEXT,\n  cost_basis       TEXT NOT NULL DEFAULT 'UNKNOWN',\n  raw_digest       TEXT NOT NULL,\n  last_seen        TEXT NOT NULL\n)"
+      },
+      {
+        "name": "source_record",
+        "rows": 4504,
+        "schema": "CREATE TABLE source_record (\n  snapshot_id   TEXT NOT NULL,\n  original_id   TEXT NOT NULL,\n  canonical_id  TEXT NOT NULL REFERENCES capability(canonical_id),\n  source        TEXT NOT NULL,\n  source_row    INTEGER NOT NULL,\n  locator       TEXT NOT NULL,\n  url           TEXT NOT NULL,\n  raw_digest    TEXT NOT NULL,\n  source_flags  TEXT NOT NULL DEFAULT '',\n  PRIMARY KEY (snapshot_id, original_id)\n)"
+      },
+      {
+        "name": "capability_tag",
+        "rows": 2414,
+        "schema": "CREATE TABLE capability_tag (\n  canonical_id TEXT NOT NULL REFERENCES capability(canonical_id),\n  tag          TEXT NOT NULL,\n  tag_kind     TEXT NOT NULL,      -- 'capability' | 'hazard'\n  certainty    TEXT NOT NULL,\n  PRIMARY KEY (canonical_id, tag, tag_kind)\n)"
+      },
+      {
+        "name": "import_snapshot",
+        "rows": 1,
+        "schema": "CREATE TABLE import_snapshot (\n  snapshot_id  TEXT PRIMARY KEY,\n  source_sha   TEXT NOT NULL,\n  source_rows  INTEGER NOT NULL,\n  imported_at  TEXT NOT NULL,\n  body_digest  TEXT NOT NULL,\n  status       TEXT NOT NULL       -- 'IMPORTED' | 'REPLAY'\n)"
+      },
+      {
+        "name": "blueprint",
+        "rows": 0,
+        "schema": "CREATE TABLE blueprint (\n  blueprint_id  TEXT NOT NULL,\n  version       TEXT NOT NULL,\n  status        TEXT NOT NULL,\n  role          TEXT NOT NULL,\n  purpose       TEXT NOT NULL,\n  body          TEXT NOT NULL,     -- canonical JSON of the full record\n  recipe_digest TEXT NOT NULL,\n  created_at    TEXT NOT NULL,\n  revoked_reason TEXT,\n  PRIMARY KEY (blueprint_id, version)\n)"
+      },
+      {
+        "name": "submission",
+        "rows": 0,
+        "schema": "CREATE TABLE submission (\n  submission_id     TEXT PRIMARY KEY,\n  tool_id           TEXT NOT NULL,\n  at                TEXT NOT NULL,\n  eligible          INTEGER NOT NULL,\n  proposable        INTEGER NOT NULL,\n  reason            TEXT NOT NULL,\n  submission_digest TEXT NOT NULL,\n  payload           TEXT NOT NULL\n)"
+      },
+      {
+        "name": "qualification",
+        "rows": 0,
+        "schema": "CREATE TABLE qualification (\n  tool_id        TEXT NOT NULL,\n  revision       INTEGER NOT NULL,\n  state          TEXT NOT NULL,\n  scope          TEXT NOT NULL,\n  receipt_digest TEXT NOT NULL,\n  receipt        TEXT NOT NULL,\n  issued_at      TEXT NOT NULL,\n  expires_at     TEXT,\n  issuer         TEXT NOT NULL,\n  revoked_at     TEXT,\n  revoke_reason  TEXT,\n  PRIMARY KEY (tool_id, revision)\n)"
+      },
+      {
+        "name": "capability_fts",
+        "rows": 4466,
+        "schema": "CREATE VIRTUAL TABLE capability_fts USING fts5(\n  canonical_id UNINDEXED,\n  title,\n  description,\n  tags,\n  tokenize = 'unicode61 remove_diacritics 2'\n)"
+      },
+      {
+        "name": "capability_fts_data",
+        "rows": 337,
+        "schema": "CREATE TABLE 'capability_fts_data'(id INTEGER PRIMARY KEY, block BLOB)"
+      },
+      {
+        "name": "capability_fts_idx",
+        "rows": 396,
+        "schema": "CREATE TABLE 'capability_fts_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID"
+      },
+      {
+        "name": "capability_fts_content",
+        "rows": 4466,
+        "schema": "CREATE TABLE 'capability_fts_content'(id INTEGER PRIMARY KEY, c0, c1, c2, c3)"
+      },
+      {
+        "name": "capability_fts_docsize",
+        "rows": 4466,
+        "schema": "CREATE TABLE 'capability_fts_docsize'(id INTEGER PRIMARY KEY, sz BLOB)"
+      },
+      {
+        "name": "capability_fts_config",
+        "rows": 1,
+        "schema": "CREATE TABLE 'capability_fts_config'(k PRIMARY KEY, v) WITHOUT ROWID"
+      }
+    ]
+  },
+  {
+    "path": "data/db/ucl.sqlite",
+    "sha256": "ef2bee5e689d484b86c2dbff0138347cb5f6e1a5f9a4dcd45c58aef51e39e1be",
+    "integrity": "ok",
+    "tables": [
+      {
+        "name": "ucl_meta",
+        "rows": 1,
+        "schema": "CREATE TABLE ucl_meta (\n  key   TEXT PRIMARY KEY,\n  value TEXT NOT NULL\n)"
+      },
+      {
+        "name": "capability",
+        "rows": 4466,
+        "schema": "CREATE TABLE capability (\n  canonical_id     TEXT PRIMARY KEY,\n  canonical_url    TEXT NOT NULL UNIQUE,\n  duplicate_group  TEXT NOT NULL,\n  title            TEXT NOT NULL,\n  description      TEXT NOT NULL,\n  host             TEXT NOT NULL,\n  category         TEXT NOT NULL,\n  kind             TEXT NOT NULL,\n  kind_basis       TEXT NOT NULL,\n  capability_certainty TEXT NOT NULL,\n  license          TEXT NOT NULL DEFAULT 'UNKNOWN',\n  license_evidence TEXT,\n  version          TEXT NOT NULL DEFAULT 'UNKNOWN',\n  trust_state      TEXT NOT NULL DEFAULT 'UNVETTED',\n  installed        TEXT NOT NULL DEFAULT 'UNKNOWN',\n  security         TEXT NOT NULL DEFAULT 'NOT_TESTED',\n  compatibility    TEXT NOT NULL DEFAULT 'NOT_TESTED',\n  cost_micros      TEXT,\n  cost_currency    TEXT,\n  cost_basis       TEXT NOT NULL DEFAULT 'UNKNOWN',\n  raw_digest       TEXT NOT NULL,\n  last_seen        TEXT NOT NULL\n)"
+      },
+      {
+        "name": "source_record",
+        "rows": 4504,
+        "schema": "CREATE TABLE source_record (\n  snapshot_id   TEXT NOT NULL,\n  original_id   TEXT NOT NULL,\n  canonical_id  TEXT NOT NULL REFERENCES capability(canonical_id),\n  source        TEXT NOT NULL,\n  source_row    INTEGER NOT NULL,\n  locator       TEXT NOT NULL,\n  url           TEXT NOT NULL,\n  raw_digest    TEXT NOT NULL,\n  source_flags  TEXT NOT NULL DEFAULT '',\n  PRIMARY KEY (snapshot_id, original_id)\n)"
+      },
+      {
+        "name": "capability_tag",
+        "rows": 2414,
+        "schema": "CREATE TABLE capability_tag (\n  canonical_id TEXT NOT NULL REFERENCES capability(canonical_id),\n  tag          TEXT NOT NULL,\n  tag_kind     TEXT NOT NULL,      -- 'capability' | 'hazard'\n  certainty    TEXT NOT NULL,\n  PRIMARY KEY (canonical_id, tag, tag_kind)\n)"
+      },
+      {
+        "name": "import_snapshot",
+        "rows": 1,
+        "schema": "CREATE TABLE import_snapshot (\n  snapshot_id  TEXT PRIMARY KEY,\n  source_sha   TEXT NOT NULL,\n  source_rows  INTEGER NOT NULL,\n  imported_at  TEXT NOT NULL,\n  body_digest  TEXT NOT NULL,\n  status       TEXT NOT NULL       -- 'IMPORTED' | 'REPLAY'\n)"
+      },
+      {
+        "name": "blueprint",
+        "rows": 0,
+        "schema": "CREATE TABLE blueprint (\n  blueprint_id  TEXT NOT NULL,\n  version       TEXT NOT NULL,\n  status        TEXT NOT NULL,\n  role          TEXT NOT NULL,\n  purpose       TEXT NOT NULL,\n  body          TEXT NOT NULL,     -- canonical JSON of the full record\n  recipe_digest TEXT NOT NULL,\n  created_at    TEXT NOT NULL,\n  revoked_reason TEXT,\n  PRIMARY KEY (blueprint_id, version)\n)"
+      },
+      {
+        "name": "submission",
+        "rows": 0,
+        "schema": "CREATE TABLE submission (\n  submission_id     TEXT PRIMARY KEY,\n  tool_id           TEXT NOT NULL,\n  at                TEXT NOT NULL,\n  eligible          INTEGER NOT NULL,\n  proposable        INTEGER NOT NULL,\n  reason            TEXT NOT NULL,\n  submission_digest TEXT NOT NULL,\n  payload           TEXT NOT NULL\n)"
+      },
+      {
+        "name": "qualification",
+        "rows": 0,
+        "schema": "CREATE TABLE qualification (\n  tool_id        TEXT NOT NULL,\n  revision       INTEGER NOT NULL,\n  state          TEXT NOT NULL,\n  scope          TEXT NOT NULL,\n  receipt_digest TEXT NOT NULL,\n  receipt        TEXT NOT NULL,\n  issued_at      TEXT NOT NULL,\n  expires_at     TEXT,\n  issuer         TEXT NOT NULL,\n  revoked_at     TEXT,\n  revoke_reason  TEXT,\n  PRIMARY KEY (tool_id, revision)\n)"
+      },
+      {
+        "name": "capability_fts",
+        "rows": 4466,
+        "schema": "CREATE VIRTUAL TABLE capability_fts USING fts5(\n  canonical_id UNINDEXED,\n  title,\n  description,\n  tags,\n  tokenize = 'unicode61 remove_diacritics 2'\n)"
+      },
+      {
+        "name": "capability_fts_data",
+        "rows": 337,
+        "schema": "CREATE TABLE 'capability_fts_data'(id INTEGER PRIMARY KEY, block BLOB)"
+      },
+      {
+        "name": "capability_fts_idx",
+        "rows": 396,
+        "schema": "CREATE TABLE 'capability_fts_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID"
+      },
+      {
+        "name": "capability_fts_content",
+        "rows": 4466,
+        "schema": "CREATE TABLE 'capability_fts_content'(id INTEGER PRIMARY KEY, c0, c1, c2, c3)"
+      },
+      {
+        "name": "capability_fts_docsize",
+        "rows": 4466,
+        "schema": "CREATE TABLE 'capability_fts_docsize'(id INTEGER PRIMARY KEY, sz BLOB)"
+      },
+      {
+        "name": "capability_fts_config",
+        "rows": 1,
+        "schema": "CREATE TABLE 'capability_fts_config'(k PRIMARY KEY, v) WITHOUT ROWID"
+      }
+    ]
+  }
+]

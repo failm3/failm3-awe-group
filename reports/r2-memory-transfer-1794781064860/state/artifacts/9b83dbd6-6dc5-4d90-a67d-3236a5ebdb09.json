@@ -1,0 +1,14 @@
+{
+  "id": "9b83dbd6-6dc5-4d90-a67d-3236a5ebdb09",
+  "mission_id": "r2-memory-transfer-1794781064860-target-on",
+  "type": "file",
+  "name": "lib/roster.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-target-on/lib/roster.cjs",
+  "created_at": "2026-11-15T22:21:07.054Z",
+  "metadata": {
+    "size_bytes": 143,
+    "sha256": "a2db9f82f4586e8762838f5280cd5eb0fee7ac18ab64f70f6f7d0e8929268fc3",
+    "reconciled": true,
+    "revision": 1
+  }
+}

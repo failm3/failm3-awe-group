@@ -1,0 +1,14 @@
+{
+  "id": "366148d5-ce6c-4e0d-9add-b1b1eb080b73",
+  "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+  "type": "text",
+  "name": "work/invocation_timestamp.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/invocation_timestamp.txt",
+  "created_at": "2026-11-16T05:42:03.875Z",
+  "metadata": {
+    "size_bytes": 21,
+    "sha256": "7ae11990ebfae39bcfeb3908e4de6ddf4cd9a1d94eaff41e1c3710a4aa267390",
+    "reconciled": true,
+    "revision": 1
+  }
+}

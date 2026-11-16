@@ -1,0 +1,13 @@
+{
+  "id": "60db3a94-be3c-4d5b-b37e-20fd7cb57eae",
+  "mission_id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1",
+  "type": "file",
+  "name": "invocation-receipt.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/invocation-receipt.md",
+  "created_at": "2026-11-16T09:56:40.184Z",
+  "metadata": {
+    "size_bytes": 4236,
+    "sha256": "23a265165faf2f936481de95a5caf936661044cda40887f09cc77b836868dbea",
+    "revision": 1
+  }
+}

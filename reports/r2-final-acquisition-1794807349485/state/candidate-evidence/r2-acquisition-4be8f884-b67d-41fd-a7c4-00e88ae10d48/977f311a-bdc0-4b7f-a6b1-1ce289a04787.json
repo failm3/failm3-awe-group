@@ -1,0 +1,356 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "977f311a-bdc0-4b7f-a6b1-1ce289a04787",
+    "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+    "repair_iteration": 0,
+    "spec_hash": "411cb25d6ce50fb967b9a6f59073baadf9c5ec20eba27d4cba1a688e070efbfc",
+    "plan_hash": "6521e39ecc2bcd1a0107c2e7eb39ae3d9c17104a622f97c9f1aab0942792ba45",
+    "artifacts": [
+      {
+        "artifact_id": "fe1dddad-06d3-48da-8628-afb8701958d6",
+        "name": "digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "b85bc15f-027f-4eb3-9241-b55bf5e684d5",
+        "name": "digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "fb6d603d-7ba7-4920-b327-efb9fbacd1b9",
+        "name": "evidence/build_receipt.py",
+        "revision": 3,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/build_receipt.py",
+        "sha256": "99a50f621832866a7c69b46ec839fda03e003b2661f950d332266835666de4c1",
+        "size_bytes": 3635
+      },
+      {
+        "artifact_id": "bfd3f781-af8f-446c-ad13-a910e1ec19bb",
+        "name": "evidence/independent_verify.log",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/independent_verify.log",
+        "sha256": "2eea42d0d61d793a341a0cdef0df316c4638e968729495232a50497a170b0857",
+        "size_bytes": 25
+      },
+      {
+        "artifact_id": "235714ac-a3d6-4dd8-81f1-46a6fb1a59e1",
+        "name": "evidence/independent_verify.py",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/independent_verify.py",
+        "sha256": "9898d133e1af1284a9401071c1c5f3c239ba4347e7c90d056e84250628a076ad",
+        "size_bytes": 2693
+      },
+      {
+        "artifact_id": "6334762c-37c0-4c76-bf51-7248bca64ce8",
+        "name": "evidence/invocation_receipt.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/invocation_receipt.json",
+        "sha256": "bad45dc424053b5bfd361128e1cf5dcc04d246643040074e4bfe6bc36be2107d",
+        "size_bytes": 5423
+      },
+      {
+        "artifact_id": "7d89d6dd-3ec1-4179-b264-5194fd553d38",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "d44e9ac1-1bb3-4822-980b-635e1253273a",
+        "name": "procedures/observation_digest_v1.py",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/procedures/observation_digest_v1.py",
+        "sha256": "916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db",
+        "size_bytes": 9089
+      },
+      {
+        "artifact_id": "955beafc-5258-485a-91dc-d67ecba10356",
+        "name": "work/final_invocation.exit_code",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/final_invocation.exit_code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "size_bytes": 2
+      },
+      {
+        "artifact_id": "863c5d26-9c5d-407d-91f5-2c5e9a40eee8",
+        "name": "work/final_invocation.stderr",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/final_invocation.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "artifact_id": "8889d28b-ce1e-4614-82a0-da8177940c1c",
+        "name": "work/final_invocation.stdout",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/final_invocation.stdout",
+        "sha256": "771f1a0ed979ee85ddad0fdc089c5d20618c1be4c29075c83887a9157bb8fc8f",
+        "size_bytes": 816
+      },
+      {
+        "artifact_id": "366148d5-ce6c-4e0d-9add-b1b1eb080b73",
+        "name": "work/invocation_timestamp.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/invocation_timestamp.txt",
+        "sha256": "7ae11990ebfae39bcfeb3908e4de6ddf4cd9a1d94eaff41e1c3710a4aa267390",
+        "size_bytes": 21
+      },
+      {
+        "artifact_id": "7cb5b87b-8ff4-40a6-8e2f-ee76388dc10b",
+        "name": "work/qual/fixtures/bad.completed_gt_scheduled.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.completed_gt_scheduled.json",
+        "sha256": "f1c6f2934ef79b35706a8affede0df17faf27e03a38fb23579b172f366af1f5c",
+        "size_bytes": 74
+      },
+      {
+        "artifact_id": "830be3db-ed95-45f4-8f3d-5b8ebf42f5e1",
+        "name": "work/qual/fixtures/bad.empty_rows.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.empty_rows.json",
+        "sha256": "04c680c2b49c43176a3403c60c4bfb6ce2d6ba34abd010d780ccb3e8a66183b4",
+        "size_bytes": 20
+      },
+      {
+        "artifact_id": "2aafdb26-3f90-4eb6-8d46-6e1d808f008a",
+        "name": "work/qual/fixtures/bad.float_field.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.float_field.json",
+        "sha256": "a28e9ec27a5d0121d72da49315c3a3acc3aac605ca1cba2f82ef09c1320e888a",
+        "size_bytes": 76
+      },
+      {
+        "artifact_id": "b879234d-c838-46ca-a895-414719b4ead8",
+        "name": "work/qual/fixtures/bad.not_json.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.not_json.json",
+        "sha256": "3ab6125109202d26ac7aa4704fd0380032a1c42c112bfd135a5f07bb578856b2",
+        "size_bytes": 16
+      },
+      {
+        "artifact_id": "9f415290-753f-4aa3-a09d-51b1b6ad9504",
+        "name": "work/qual/fixtures/bad.zero_scheduled.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.zero_scheduled.json",
+        "sha256": "00fcd975a7075b065c4b1b5d71b8e3d0bf0b69837b5e825074153eaa35417315",
+        "size_bytes": 74
+      },
+      {
+        "artifact_id": "1c741fe0-40af-45fc-aaf4-cac82d1ca76f",
+        "name": "work/qual/fixtures/mutated.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/mutated.json",
+        "sha256": "3078f24c2afd153f22f2e96c48795a937df9b7cdacb823816347103bd33a8f0e",
+        "size_bytes": 472
+      },
+      {
+        "artifact_id": "85c41a52-14f4-4fca-afff-a665a56437b7",
+        "name": "work/qual/fixtures/qual.synthetic.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/qual.synthetic.json",
+        "sha256": "c4a37eb3ce59269f1732be58dc7524bdf4cca630bd7d5d5cc429b048ad401fe8",
+        "size_bytes": 530
+      },
+      {
+        "artifact_id": "d5eca9d8-b194-4b67-b9ae-6c717f4a6b68",
+        "name": "work/qual/out/det-a/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-a/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "57437523-ec29-4382-83b8-8b7888fb4b1a",
+        "name": "work/qual/out/det-a/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-a/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "e3243017-3398-4f55-be01-c1a1e8e92679",
+        "name": "work/qual/out/det-b/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-b/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "79a29a08-6af4-4c50-bde0-2dcc91663e78",
+        "name": "work/qual/out/det-b/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-b/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "d52f3387-3f4d-445c-ba64-2a9d3234c7f5",
+        "name": "work/qual/out/mutated/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/mutated/digest.json",
+        "sha256": "8f1f5e8a601b5f7e4dbc3a650c108d016660caf065dc8f7726a8e1e526adaac7",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "4f70f66c-ea7e-46c7-8089-bf178db1883d",
+        "name": "work/qual/out/mutated/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/mutated/digest.md",
+        "sha256": "df234e6b58c391791470d09c9ac30e7f97b35a801744f073d7dc9869e81d3af9",
+        "size_bytes": 1574
+      },
+      {
+        "artifact_id": "eb94f00f-4011-4586-a11f-e6d6d556cc73",
+        "name": "work/qual/out/primary/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/primary/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "c9bf2a84-1e75-4e74-96d8-01de39bfccbc",
+        "name": "work/qual/out/primary/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/primary/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "d5a960f1-5467-46b1-b945-427c2780cdb3",
+        "name": "work/qual/out/synthetic/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/synthetic/digest.json",
+        "sha256": "241a03df0df467b0ada2f7d430e361e3442d6c8249c1290e9d591d4889353d85",
+        "size_bytes": 760
+      },
+      {
+        "artifact_id": "4e53f198-e269-4f57-b7aa-a5eec04b6e36",
+        "name": "work/qual/out/synthetic/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/synthetic/digest.md",
+        "sha256": "cc59c257dceff013409146125ee1d0bf4c2fe1bf78bb7659f96c2a8442034521",
+        "size_bytes": 1648
+      },
+      {
+        "artifact_id": "a9d34d54-ec25-4bb7-bf63-1d15b5d9ae7b",
+        "name": "work/qual/qualification.log",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualification.log",
+        "sha256": "00f566f3943d196210ade97eaf95ab181423670908b3a404e16852bd28a53d92",
+        "size_bytes": 190
+      },
+      {
+        "artifact_id": "0521b066-78d5-4100-ad6f-a4c328aae5a6",
+        "name": "work/qual/qualify.py",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualify.py",
+        "sha256": "e18db762f4255601fe0ee087f54e86fb33de09e68e8f968d085ae04109836358",
+        "size_bytes": 8925
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "8c0043fbd73ad172bcd11ef3c11902d43741c5c4bc803aac52b99225f4b8a227",
+    "created_at": "2026-11-16T05:42:32.341Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+    "epoch_id": "977f311a-bdc0-4b7f-a6b1-1ce289a04787",
+    "candidate_sha256": "8c0043fbd73ad172bcd11ef3c11902d43741c5c4bc803aac52b99225f4b8a227",
+    "execution_output_sha256": "0f26d3e54d09b51b0db99d5518376fe89bd05e7df3b3479c4cb61655f5e7a895",
+    "evidence_sha256": "4b2bd66d62e78d31de23df755b65e8e88be9167d35a786942b0783d71b74e331",
+    "review": {
+      "passed": false,
+      "score": 9,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "notes": "The executor explicitly documents the capability gap (nothing on disk implements observation-digest-v1; workspace held only the input fixture), then performs a single bounded authoring acquisition at a stable in-scope path, procedures/observation_digest_v1.py (sha256 916628d6...). evidence/invocation_receipt.json records acquisition_count=1, bounded=true, capability_before=absent, network_used=false, packages_installed=false, procedure_path_within_mission_dir=true. Replanning is evidenced by a real qualification harness (work/qual/qualify.py) whose run produced 147/147 checks against an independent integer oracle, a second synthetic fixture, negative controls and determinism runs, with work/qual/qualification.log persisted. The transcript also shows the harness catching and correcting its own defects (JSON float coercion on 100.00) and re-running to green before the final invocation."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "notes": "The final invocation is exactly [python3, procedures/observation_digest_v1.py, input/pilot.observations.json, <mission_dir>]. The fixed args in the receipt are byte-identical to the spec-mandated args, and output_dir_is_not_probe_dir=true. The receipt binds executable.sha256 916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db, which matches the registered artifact hash for that same file, so the invoked bytes are provably the qualified bytes. The receipt is a durable registered artifact (6334762c..., 5423 bytes) and includes interpreter version, mode 0o755, fixture sha256 412c65c3..., exit_code 0, empty stderr (e3b0c442... empty-hash, size 0), stdout sha256 matching work/final_invocation.stdout, and self_consistency checks confirming the procedure's self-reported digest hashes equal the actual output bytes."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "notes": "Independent arithmetic from input/pilot.observations.json (12/11/2, 8/8/1, 10/7/3): row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=26/30*100=86.666...=86.67. digest.json matches exactly, with all five values as numeric literals (not strings) and completion_percent rendered with two decimals as 86.67. sites is keyed by site with full totals: North row_count=2, scheduled=22, completed=18, incidents=5, completion_percent=18/22=81.8181...=81.82; South row_count=1, scheduled=8, completed=8, incidents=1, completion_percent=100.00 (trailing zeros preserved via a Raw literal renderer rather than float formatting). digest.md is produced by the same build path and documents a genuinely reproducible method (validation rules, integer sums, per-site sums, ROUND_HALF_UP decimal arithmetic never binary floats, sorted keys, LF, no timestamps) plus the exact reproduction command. Its sha256 c597cca9... is identical across primary, det-a and det-b runs, and the procedure's self-report of that hash matches the registered artifact, so the presented values are the same ones. Sensitivity is demonstrated: the mutated fixture (completed 11->3) yields 18/30=60.00 and North 10/22=45.45, and the synthetic fixture correctly discriminates rounding ties (2/64=3.125 -> 3.13, not 3.12)."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "notes": "Every deliverable is a registered artifact with artifact_id, revision, absolute path, sha256 and size_bytes: digest.json (b5eae85b..., 480 B), digest.md (c597cca9..., 1596 B), the procedure, the receipt, the input fixture, qualification harness/fixtures/outputs, and the invocation stdout/stderr/exit-code/timestamp. Hash consistency holds across the whole set: digest.json/digest.md hashes are identical in the final outputs, the receipt's outputs block, the procedure's stdout self-report, and the three determinism/probe run directories (primary, det-a, det-b), all reproducing the same bytes. An independent verification harness exists (evidence/independent_verify.py, 2693 B) and its log is registered. Byte-level verification is therefore independently reproducible from the registered artifacts rather than merely asserted by the producing agent. Caveat recorded as a minor defect only: the verify log itself is 25 bytes, so the assertion is terse."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "evidence/independent_verify.log is only 25 bytes, so the independent verification result is captured as a bare summary line rather than per-check output; the reasoning behind the pass is not auditable from the log alone (the harness source is registered, so the check is reproducible).",
+          "severity": "minor"
+        },
+        {
+          "issue": "work/qual/qualification.log is 190 bytes for a 147-check qualification run, so the per-check detail lives only in the harness rather than the persisted log; aggregate counts (147/147) are asserted in the receipt rather than itemised in the log.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The qualification harness initially contained comparison bugs (json.loads coercing 100.00 to the float 100.0), briefly producing 11 spurious failures. It was diagnosed and fixed before the final invocation, but the harness revision history shows a latent risk that float coercion could mask a real formatting regression in future runs.",
+          "severity": "minor"
+        },
+        {
+          "issue": "QA evidence incomplete: 15 artifact(s) were not included in this review",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Persist full per-check output from evidence/independent_verify.py and work/qual/qualify.py into their logs so a third party can audit each assertion without re-running the harnesses.",
+        "Add an explicit assertion in the qualification harness that completion_percent values are compared as raw text tokens (parse_float=Decimal already used) and pin that as a permanent negative control guarding against 100.0/86.7 style regressions.",
+        "Record the qualification status (qualified: true, check_count) inside the receipt as it already is, but also bind the qualification.log sha256 into the receipt's executable block so the log cannot be swapped post-hoc without breaking the receipt."
+      ],
+      "verdict": "FAIL: LLM reviewer verdict is FAIL | Unresolved critical defect: QA evidence incomplete: 15 artifact(s) were not included in this review"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "Unresolved critical defect: QA evidence incomplete: 15 artifact(s) were not included in this review"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "reason": "The executor explicitly documents the capability gap (nothing on disk implements observation-digest-v1; workspace held only the input fixture), then performs a single bounded authoring acquisition at a stable in-scope path, procedures/observation_digest_v1.py (sha256 916628d6...). evidence/invocation_receipt.json records acquisition_count=1, bounded=true, capability_before=absent, network_used=false, packages_installed=false, procedure_path_within_mission_dir=true. Replanning is evidenced by a real qualification harness (work/qual/qualify.py) whose run produced 147/147 checks against an independent integer oracle, a second synthetic fixture, negative controls and determinism runs, with work/qual/qualification.log persisted. The transcript also shows the harness catching and correcting its own defects (JSON float coercion on 100.00) and re-running to green before the final invocation."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "reason": "The final invocation is exactly [python3, procedures/observation_digest_v1.py, input/pilot.observations.json, <mission_dir>]. The fixed args in the receipt are byte-identical to the spec-mandated args, and output_dir_is_not_probe_dir=true. The receipt binds executable.sha256 916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db, which matches the registered artifact hash for that same file, so the invoked bytes are provably the qualified bytes. The receipt is a durable registered artifact (6334762c..., 5423 bytes) and includes interpreter version, mode 0o755, fixture sha256 412c65c3..., exit_code 0, empty stderr (e3b0c442... empty-hash, size 0), stdout sha256 matching work/final_invocation.stdout, and self_consistency checks confirming the procedure's self-reported digest hashes equal the actual output bytes."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "reason": "Independent arithmetic from input/pilot.observations.json (12/11/2, 8/8/1, 10/7/3): row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=26/30*100=86.666...=86.67. digest.json matches exactly, with all five values as numeric literals (not strings) and completion_percent rendered with two decimals as 86.67. sites is keyed by site with full totals: North row_count=2, scheduled=22, completed=18, incidents=5, completion_percent=18/22=81.8181...=81.82; South row_count=1, scheduled=8, completed=8, incidents=1, completion_percent=100.00 (trailing zeros preserved via a Raw literal renderer rather than float formatting). digest.md is produced by the same build path and documents a genuinely reproducible method (validation rules, integer sums, per-site sums, ROUND_HALF_UP decimal arithmetic never binary floats, sorted keys, LF, no timestamps) plus the exact reproduction command. Its sha256 c597cca9... is identical across primary, det-a and det-b runs, and the procedure's self-report of that hash matches the registered artifact, so the presented values are the same ones. Sensitivity is demonstrated: the mutated fixture (completed 11->3) yields 18/30=60.00 and North 10/22=45.45, and the synthetic fixture correctly discriminates rounding ties (2/64=3.125 -> 3.13, not 3.12)."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "reason": "Every deliverable is a registered artifact with artifact_id, revision, absolute path, sha256 and size_bytes: digest.json (b5eae85b..., 480 B), digest.md (c597cca9..., 1596 B), the procedure, the receipt, the input fixture, qualification harness/fixtures/outputs, and the invocation stdout/stderr/exit-code/timestamp. Hash consistency holds across the whole set: digest.json/digest.md hashes are identical in the final outputs, the receipt's outputs block, the procedure's stdout self-report, and the three determinism/probe run directories (primary, det-a, det-b), all reproducing the same bytes. An independent verification harness exists (evidence/independent_verify.py, 2693 B) and its log is registered. Byte-level verification is therefore independently reproducible from the registered artifacts rather than merely asserted by the producing agent. Caveat recorded as a minor defect only: the verify log itself is 25 bytes, so the assertion is terse."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": false
+    },
+    "receipt_sha256": "0e5a4d8d95a2a18523090e63907d4e486decf487c326bfca084c67c143319754",
+    "created_at": "2026-11-16T05:43:10.986Z"
+  }
+}

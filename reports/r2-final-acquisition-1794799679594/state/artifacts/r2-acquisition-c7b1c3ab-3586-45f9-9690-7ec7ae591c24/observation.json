@@ -1,0 +1,19 @@
+{
+  "capability": "observation-digest-v1",
+  "status": "available",
+  "detail": "No registered tool (browser_*, csv_analytics, file_*, shell, web_*, etc.) computes the required digest.json/digest.md contract with exact per-site totals and completion_percent formatted to 2 decimals. Bounded acquisition: authored a dependency-free Node 22 procedure observation_digest_v1.js (9,833 bytes, syntax-checked) that reads input/pilot.observations.json, validates each row, computes row_count/scheduled/completed/incidents, per-site totals keyed by site (alphabetical), and completion_percent via integer round-half-up arithmetic rendered as a fixed 2-decimal string, writes digest.json + digest.md, and reconciles site sums against global sums. Feasibility proven by a real probe run into probe_out/ (not the final output dir): result row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67, sites North{rows 2, scheduled 22, completed 18, incidents 5, 81.82} and South{rows 1, scheduled 8, completed 8, incidents 1, 100.00}. Independently re-derived with python3 decimal ROUND_HALF_UP (identical totals and percentages) and fixture SHA-256 412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766 (474 bytes) matched in both. Determinism confirmed by byte-identical reruns of digest.json and digest.md; negative tests confirm exit code 2 for completed>scheduled rows and for wrong argument count. Node stdlib only, no packages installed, no network, no host configuration changed. Not a grant to invoke: execution still requires the trusted gate.",
+  "acquired": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/observation_digest_v1.js",
+  "local_target": {
+    "runtime": "node",
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/observation_digest_v1.js",
+    "executable_sha256": "86f03fb43c30f077e0a22e2540be136847cc19721ac4d677651cac8be7a8071c",
+    "args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24"
+    ],
+    "probe_artifacts": [
+      { "artifact_id": "76ffadf5-5174-4041-b374-d49759b35482", "sha256": "7a66c2d82b4f2e221a9bc0d7ac1a0b6a176a8393b31aac05440f562f9ca2e4e4" },
+      { "artifact_id": "94add600-7759-4e6a-b191-ee4bf9bf2fad", "sha256": "8f9bd4645e00b5e476303b4971e2194993717d05357c15ebe3d787e37513cc5a" }
+    ]
+  }
+}

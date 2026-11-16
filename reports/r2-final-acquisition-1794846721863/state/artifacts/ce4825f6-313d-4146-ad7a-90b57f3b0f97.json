@@ -1,0 +1,13 @@
+{
+  "id": "ce4825f6-313d-4146-ad7a-90b57f3b0f97",
+  "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+  "type": "file",
+  "name": "procedures/observation-digest-v1.js",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/procedures/observation-digest-v1.js",
+  "created_at": "2026-11-16T16:33:36.296Z",
+  "metadata": {
+    "size_bytes": 4728,
+    "sha256": "7d340bab553ba2e89be7a07f6c91a1094ed67751976ffdfa801a62d0dec20445",
+    "revision": 1
+  }
+}

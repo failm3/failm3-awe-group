@@ -1,0 +1,51 @@
+{
+  "source_repository": "failm3/nivict-ai-academy",
+  "source_path": "04 - Инструменты/Каталог кандидатов/90 - Данные",
+  "downloaded_at_utc": "2026-11-12T03:54:57.770781+00:00",
+  "row_count": 4504,
+  "columns": [
+    "id",
+    "source",
+    "source_row",
+    "url",
+    "description",
+    "host",
+    "title",
+    "category",
+    "confidence",
+    "resource_type",
+    "multi_service_description",
+    "exact_duplicate_group_size",
+    "address_group_size",
+    "note_path",
+    "secondary_categories",
+    "flags"
+  ],
+  "files": {
+    "NIVICT-Tool-Shortlist-2026-11-04.json": {
+      "size": 16486,
+      "sha256": "31745efd9f4f15cdedb09620fe718de899a18da010e3265dc4f5c67fa1026f0f"
+    },
+    "catalog-all-4504.csv": {
+      "size": 4048275,
+      "sha256": "8ad601eb0ff81cf8b8597da7276819c58bd4f156d1c269789fd4907bae9b3fa4"
+    },
+    "duplicates.csv": {
+      "size": 8260,
+      "sha256": "d3bbbd6b26aeabd46c1bd85f4ba6a029fc5b5b50390c9d04f7db4a545494bbd9"
+    },
+    "import-manifest.json": {
+      "size": 669,
+      "sha256": "a4c1d6debdb69c447ae15c8f3c03edc154fd0a6b6edf9c257c5d3221dc82c652"
+    },
+    "issues.csv": {
+      "size": 315799,
+      "sha256": "43568762d8f8ae8f3a151db94e0bc67fc2c0334c4a1a3ce43d272b3a755f214b"
+    },
+    "validation-report.json": {
+      "size": 2584,
+      "sha256": "dfd4a0bbb143d86c9fe420c5c98b5accaeeb3333e6700f3b9a085799b4cc27b5"
+    }
+  },
+  "note": "Entries are tool candidates, not installed or live-verified integrations."
+}

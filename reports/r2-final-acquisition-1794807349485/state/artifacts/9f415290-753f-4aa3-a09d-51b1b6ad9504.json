@@ -1,0 +1,14 @@
+{
+  "id": "9f415290-753f-4aa3-a09d-51b1b6ad9504",
+  "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+  "type": "json",
+  "name": "work/qual/fixtures/bad.zero_scheduled.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.zero_scheduled.json",
+  "created_at": "2026-11-16T05:39:45.682Z",
+  "metadata": {
+    "size_bytes": 74,
+    "sha256": "00fcd975a7075b065c4b1b5d71b8e3d0bf0b69837b5e825074153eaa35417315",
+    "reconciled": true,
+    "revision": 1
+  }
+}

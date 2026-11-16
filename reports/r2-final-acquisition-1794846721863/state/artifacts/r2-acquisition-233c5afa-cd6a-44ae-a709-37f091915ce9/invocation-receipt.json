@@ -1,0 +1,71 @@
+{
+  "receipt_version": "invocation-receipt/1",
+  "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+  "attempt_id": "repair-1-7dd43f3f-reinvocation",
+  "refers_to_original_attempt": "7dd43f3f-7dda-4201-87ca-74ff0d5eda72",
+  "relationship": "Repair-iteration re-invocation of the same qualified bytes with the same fixed args. This is NOT the original attempt; the original run left no receipt.",
+  "capability": "observation-digest-v1",
+  "invoked_at": "2026-11-16T16:58:39Z",
+  "completed_at": "2026-11-16T16:58:39Z",
+  "command_argv": [
+    "node",
+    "--",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/procedures/observation-digest-v1.js",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9"
+  ],
+  "command_sha256": "cdee352863ea9d97fe75754931eaa72b22bc4a98780613199571a1854ba8950c",
+  "command_sha256_preimage": "[\"node\",\"--\",\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/procedures/observation-digest-v1.js\",\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/input/pilot.observations.json\",\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9\"]",
+  "command_sha256_preimage_encoding": "UTF-8 JSON array of command_argv, separators ',' and ':', no trailing newline",
+  "cwd": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+  "exit_code": 0,
+  "stdout": "observation-digest-v1: wrote digest.json and digest.md to /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9\n",
+  "stderr": "",
+  "runtime": {
+    "binary": "/usr/bin/node",
+    "version": "v22.23.3",
+    "sha256": "fde6a4bf8d0562f7751d1a2d6cb9b417c4cfe107bbcb0aa3e9a24e125e348f48"
+  },
+  "executable": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/procedures/observation-digest-v1.js",
+    "bytes": 4728,
+    "sha256_before_run": "7d340bab553ba2e89be7a07f6c91a1094ed67751976ffdfa801a62d0dec20445",
+    "sha256_after_run": "7d340bab553ba2e89be7a07f6c91a1094ed67751976ffdfa801a62d0dec20445",
+    "unchanged": true
+  },
+  "args": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9"
+  ],
+  "args_match_specification": true,
+  "pre_run_outputs": {
+    "digest.json": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/digest.json",
+      "bytes": 403,
+      "sha256": "b6f19e586465d349d74bb1999e5788fb72d502d46dcba8b320ad84f3d0cdab46"
+    },
+    "digest.md": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/digest.md",
+      "bytes": 921,
+      "sha256": "291f2efbd827b5c1f5a5334025e1162eafd1829cd350ddc1d9c67c8b71a4edd1"
+    }
+  },
+  "outputs_after_run": {
+    "digest.json": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/digest.json",
+      "bytes": 403,
+      "sha256": "b6f19e586465d349d74bb1999e5788fb72d502d46dcba8b320ad84f3d0cdab46"
+    },
+    "digest.md": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/digest.md",
+      "bytes": 921,
+      "sha256": "291f2efbd827b5c1f5a5334025e1162eafd1829cd350ddc1d9c67c8b71a4edd1"
+    }
+  },
+  "outputs_byte_identical_to_pre_run": true,
+  "original_claim_not_reproduced": {
+    "original_command_sha256_claim": "b78d6c60bd27d12679364d77630da41d9c2751b3600ef6f4bd6ddc90a443cab9",
+    "status": "unverified",
+    "detail": "This value appears only in earlier narrative. No canonical encoding of the qualified argv that was tried (JSON array, space/NUL-joined, JSON objects, with or without '--', absolute or relative paths, with the executable sha mixed in) reproduces it, and the original preimage was not recorded. It is carried here as a claim, not as a verified value. The host should compare it with its own record of attempt 7dd43f3f-7dda-4201-87ca-74ff0d5eda72."
+  }
+}

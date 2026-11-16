@@ -1,0 +1,138 @@
+
+D8.A — returned success:false after a local effect, SIGKILL before terminalization
+  ✓ owner died by SIGKILL after the failed checkpoint
+  ✓ exactly one receipt was sent
+  ✓ failed outcome is checkpointed
+  ✓ effect-marked failed attempt keeps its durable intent
+  ✓ retained intent records the failed outcome
+  ✓ fresh manager does not execute again and is paused
+  ✓ mission is paused with recovery_blocked
+  ✓ blocked reason names the recorded failure
+  ✓ QA never ran on the unresolved mission
+  ✓ accept with an invented artifact is refused
+  ✓ explicit accept preserves the verified result: completes, nothing re-executed
+  ✓ completed mission carries the accepted artifact
+
+D8.B — explicit retry is the only repeat
+  ✓ setup: failed attempt, one receipt
+  ✓ blocked before resolution, no repeat
+  ✓ after explicit retry the effect repeats exactly once and the mission completes
+
+D8.C — returned failure with an effect marker but no artifact
+  ✓ setup: killed after the failed checkpoint, one receipt
+  ✓ marker-only failed attempt keeps its intent
+  ✓ no repeat; paused with recovery_blocked
+  ✓ accept without evidence stays refused
+  ✓ retry repeats once
+
+D8.D — thrown non-abort provider error after a local effect, SIGKILL before terminalization
+  ✓ setup: killed, one receipt
+  ✓ thrown effect-marked attempt keeps its intent
+  ✓ fresh manager makes no repeat; paused with recovery_blocked
+
+D8.E — non-effect definite failure keeps the old behaviour
+  ✓ setup: killed in QA
+  ✓ no intent retained for a failure with no footprint
+  ✓ fresh manager is not blocked and re-runs the delegation
+
+D8.F — in-process failed checkpoints gate before QA even without a crash
+  ✓ returned: ordinary failed outcome pauses before QA
+  ✓ returned: failed intent survived the timeout checkpoint
+  ✓ returned: fresh manager repeats nothing and pauses recovery_blocked
+  ✓ thrown: ordinary failed outcome pauses before QA
+  ✓ thrown: failed intent survived the timeout checkpoint
+  ✓ thrown: fresh manager repeats nothing and pauses recovery_blocked
+
+D8.G — ordinary returned/thrown effect failures pause before QA and terminalization
+  ✓ returned: live ordinary failure pauses without QA and retains its intent
+  ✓ returned: explicit accept completes without repeating the effect
+  ✓ thrown: live ordinary failure pauses without QA and retains its intent
+  ✓ thrown: explicit accept completes without repeating the effect
+
+D8.H — failed effect-bearing repair keeps its intent
+  ✓ returned: repair ran once and the failed repair intent is still durable
+  ✓ returned failure is recorded on the retained intent
+  ✓ returned: fresh manager executes nothing; paused, recovery_blocked for the repair
+  ✓ thrown: repair ran once and the failed repair intent is still durable
+  ✓ thrown: fresh manager executes nothing; paused, recovery_blocked for the repair
+
+D8.I — failed repairs quiesce real descendants before paused state
+  ✓ returned: repair pause follows child death, process-record cleanup and lease release
+  ✓ returned: quiesced repair recovery retains its failed outcome and QA blockers
+  ✓ thrown: repair pause follows child death, process-record cleanup and lease release
+  ✓ thrown: quiesced repair recovery retains its failed outcome and QA blockers
+
+B.1 — 12 originals + failed initial QA: repair 13 is refused before any effect
+  ✓ exactly 12 specialists executed
+  ✓ mission fails and names the refused repair
+  ✓ no repair artifact or intent was created
+  ✓ durable ledger and tree agree on 12
+  ✓ repair iteration count was not consumed by the refusal
+
+B.2 — under-cap repair registers and finalizes in the tree
+  ✓ repaired mission completes
+  ✓ ledger and tree both count original + repair
+  ✓ both nodes are depth 0, finalized as success
+
+B.3 — failed repair node is finalized failed, slot stays consumed
+  ✓ mission fails on the failed repair
+  ✓ repair node exists and is failed; ledger counts 2
+
+D3.A — same-name repair, QA fail then pass, completes with current B
+  ✓ mission completes (no false 'not registered' rejection)
+  ✓ attached artifact is the current B only
+  ✓ auditable supersession mapping A -> B is preserved
+  ✓ mapping keeps A's recorded sha256 and size
+  ✓ B passes the immutable check on disk
+
+D3.B — supersession never waives integrity or accepts invented ids
+  ✓ tampered B is still rejected despite the mapping
+  ✓ unreported replacement records no supersession and pauses for explicit recovery
+  ✓ deleted original record without a repair is still 'not registered'
+  ✓ forged mapping for an invented id is ignored
+  ✓ genuine repair provenance resolves a real hidden predecessor to integrity-valid B
+  ✓ mapping cannot launder a tampered B
+
+D3.C — different-name repair control stays green
+  ✓ completes with no supersession recorded
+  ✓ both artifacts attached
+
+D3.D — crash during a same-name repair: explicit accept applies equivalent supersession
+  ✓ setup: original and repair effect once each; repair died
+  ✓ resume blocked on the repair, nothing executed
+  ✓ setup: listArtifacts shows B, original record A is hidden
+  ✓ checkpoint now references B, no stale A
+  ✓ supersession mapping recorded with operator_accept source
+  ✓ resume completes without repeating any effect
+  ✓ terminal record holds only B
+
+D3.E — accept of a different-name repair records no supersession
+  ✓ setup
+  ✓ a new artifact of a different name supersedes nothing
+
+D3.F — explicit same-name repair retry executes once and preserves A→B→C
+  ✓ setup pauses after exactly one effect-marked failed repair
+  ✓ retry retains checkpoint-backed original A to ambiguous B lineage without accepting quality
+  ✓ one explicit retry causes exactly one additional repair and completes
+  ✓ A→B retry lineage and B→C repair lineage are both durable
+  ✓ terminal mission contains only current C
+
+D3.G — crash after repair provenance commit restores A→B metadata on resume
+  ✓ real child died at the committed-checkpoint fault schedule
+  ✓ setup has committed A→B provenance but no repair intent or metadata index
+  ✓ resume restores the checkpoint-authenticated metadata and performs no new effects
+  ✓ terminal mission contains committed B only
+
+D3.H — two committed same-name repairs survive two post-checkpoint crashes
+  ✓ first real crash commits A→B before its metadata write
+  ✓ first committed-chain owner is reconciled without new work
+  ✓ second real crash preserves A→B→C with no repair intent in flight
+  ✓ only the first metadata link existed before final recovery
+  ✓ B and C share a path but retain distinct authenticated hashes; current C is intact
+  ✓ second committed-chain owner is reconciled
+  ✓ final recovery restores both proofs and performs no new plan or effects
+  ✓ two-link recovery delivers only intact current C
+  ✓ same-name fixture ids are distinct
+
+────────────────────────────────────────────────────────────
+r0-reqa-manager: passed 95, failed 0

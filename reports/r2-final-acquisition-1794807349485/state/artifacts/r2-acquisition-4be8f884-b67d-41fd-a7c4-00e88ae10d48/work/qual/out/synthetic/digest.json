@@ -1,0 +1,39 @@
+{
+  "completed": 10,
+  "completion_percent": 10.42,
+  "incidents": 9,
+  "period": "2026-W46",
+  "row_count": 5,
+  "scheduled": 96,
+  "sites": {
+    "Exact": {
+      "completed": 1,
+      "completion_percent": 6.25,
+      "incidents": 5,
+      "row_count": 1,
+      "scheduled": 16
+    },
+    "Full": {
+      "completed": 7,
+      "completion_percent": 100.00,
+      "incidents": 0,
+      "row_count": 1,
+      "scheduled": 7
+    },
+    "Tie": {
+      "completed": 2,
+      "completion_percent": 3.13,
+      "incidents": 0,
+      "row_count": 2,
+      "scheduled": 64
+    },
+    "Zero": {
+      "completed": 0,
+      "completion_percent": 0.00,
+      "incidents": 4,
+      "row_count": 1,
+      "scheduled": 9
+    }
+  },
+  "source": "Qualification synthetic"
+}

@@ -1,0 +1,91 @@
+name: awe-tool-intelligence
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: awe_ti
+      POSTGRES_DB: awe_ti
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a strong URL-safe POSTGRES_PASSWORD in private .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U awe_ti -d awe_ti"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    security_opt:
+      - no-new-privileges:true
+
+  api:
+    build:
+      context: .
+      args:
+        INSTALL_EXTRAS: ${INSTALL_EXTRAS:-}
+    image: awe-tool-intelligence:local
+    user: "${TI_UID:-1000}:${TI_GID:-1000}"
+    restart: unless-stopped
+    init: true
+    command: [python, -m, awe_ti.cli, serve, --host, 0.0.0.0]
+    environment:
+      DATABASE_URL: "postgresql://awe_ti:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/awe_ti"
+      API_TOKEN: ${API_TOKEN:?Set API_TOKEN}
+      ADMIN_API_TOKEN: ${ADMIN_API_TOKEN:-}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      LIVE_TEST_MAX_AGE_DAYS: ${LIVE_TEST_MAX_AGE_DAYS:-30}
+      SEMANTIC_MODEL_PATH: ${CONTAINER_SEMANTIC_MODEL_PATH:-}
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./research:/app/research:ro
+      - ./evidence:/app/evidence:ro
+      - ./exports:/app/exports:ro
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: [CMD, python, -c, "import os,urllib.request; r=urllib.request.Request('http://127.0.0.1:8000/health',headers={'Authorization':'Bearer '+os.environ['API_TOKEN']}); urllib.request.urlopen(r,timeout=3)"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+
+  worker:
+    image: awe-tool-intelligence:local
+    build:
+      context: .
+      args:
+        INSTALL_EXTRAS: ${INSTALL_EXTRAS:-}
+    user: "${TI_UID:-1000}:${TI_GID:-1000}"
+    restart: unless-stopped
+    init: true
+    command: [sh, -c, "python -m awe_ti.cli init && exec python -m awe_ti.cli worker"]
+    environment:
+      DATABASE_URL: "postgresql://awe_ti:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/awe_ti"
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      COLLECTOR_TIMEOUT: ${COLLECTOR_TIMEOUT:-600}
+      TELEGRAM_SESSION_PATH: ${CONTAINER_TELEGRAM_SESSION_PATH:-}
+      API_ID: ${API_ID:-}
+      API_HASH: ${API_HASH:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./research:/app/research
+      - ./evidence:/app/evidence
+      - ./exports:/app/exports
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 11m
+
+volumes:
+  postgres_data:

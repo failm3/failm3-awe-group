@@ -1,0 +1,59 @@
+{
+  "probe": "manager failed-repair terminalization; injected offline executors/QA; real storage/checkpoint/recovery APIs",
+  "no_provider_network_browser": true,
+  "isolated_data_dir": "/tmp/opencode/awe-final-reqa-failed-repair-P4LhMS/data",
+  "results": [
+    {
+      "mode": "returned",
+      "status_after_run": "failed",
+      "current_status": "failed",
+      "original_calls": 1,
+      "repair_calls": 1,
+      "measured_effects": 1,
+      "marker_durable_inside_repair": [
+        [
+          {
+            "kind": "repair",
+            "marked": true
+          }
+        ]
+      ],
+      "checkpoint_after_run": null,
+      "recovery_blocked_after_run": null,
+      "explicit_retry_error": "MissionStateError: Mission d7020513-b56c-4131-b993-79645447e216 is 'failed'; ambiguous outcomes can only be resolved while paused",
+      "resume_error": "MissionStateError: Mission d7020513-b56c-4131-b993-79645447e216 is 'failed'; expected one of: approved, paused",
+      "effects_after_resolution_and_resume_attempts": 1
+    },
+    {
+      "mode": "thrown",
+      "status_after_run": "failed",
+      "current_status": "failed",
+      "original_calls": 1,
+      "repair_calls": 1,
+      "measured_effects": 1,
+      "marker_durable_inside_repair": [
+        [
+          {
+            "kind": "repair",
+            "marked": true
+          }
+        ]
+      ],
+      "checkpoint_after_run": {
+        "completed": 1,
+        "in_flight": [
+          {
+            "kind": "repair",
+            "marked": true,
+            "failed_outcome": false,
+            "ambiguous": false
+          }
+        ]
+      },
+      "recovery_blocked_after_run": null,
+      "explicit_retry_error": "MissionStateError: Mission 95fc5858-92a7-46f4-b90a-1988cce3830a is 'failed'; ambiguous outcomes can only be resolved while paused",
+      "resume_error": "MissionStateError: Mission 95fc5858-92a7-46f4-b90a-1988cce3830a is 'failed'; expected one of: approved, paused",
+      "effects_after_resolution_and_resume_attempts": 1
+    }
+  ]
+}

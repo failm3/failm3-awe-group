@@ -1,0 +1,14 @@
+{
+  "id": "2aafdb26-3f90-4eb6-8d46-6e1d808f008a",
+  "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+  "type": "json",
+  "name": "work/qual/fixtures/bad.float_field.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.float_field.json",
+  "created_at": "2026-11-16T05:39:45.677Z",
+  "metadata": {
+    "size_bytes": 76,
+    "sha256": "a28e9ec27a5d0121d72da49315c3a3acc3aac605ca1cba2f82ef09c1320e888a",
+    "reconciled": true,
+    "revision": 1
+  }
+}

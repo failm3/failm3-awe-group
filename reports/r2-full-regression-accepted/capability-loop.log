@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: missing capability produces real observation, bounded acquisition, replan and verified delivery
+ok 1 - missing capability produces real observation, bounded acquisition, replan and verified delivery
+  ---
+  duration_ms: 580.212799
+  type: 'test'
+  ...
+# Subtest: a genuine repair revision keeps exact acquisition lineage current
+ok 2 - a genuine repair revision keeps exact acquisition lineage current
+  ---
+  duration_ms: 33.595914
+  type: 'test'
+  ...
+# Subtest: unprovenanced replacement of acquisition evidence cannot complete
+ok 3 - unprovenanced replacement of acquisition evidence cannot complete
+  ---
+  duration_ms: 22.753806
+  type: 'test'
+  ...
+# Subtest: multi-hop capability evidence rejects forged, broken and damaged lineage
+ok 4 - multi-hop capability evidence rejects forged, broken and damaged lineage
+  ---
+  duration_ms: 6.812571
+  type: 'test'
+  ...
+# Subtest: capability acquisition resumes through repaired observation without repeating work
+ok 5 - capability acquisition resumes through repaired observation without repeating work
+  ---
+  duration_ms: 18.336536
+  type: 'test'
+  ...
+# Subtest: candidate evidence authenticates ordinary and operator repair lineage after checkpoint cleanup
+ok 6 - candidate evidence authenticates ordinary and operator repair lineage after checkpoint cleanup
+  ---
+  duration_ms: 12.528849
+  type: 'test'
+  ...
+# Subtest: capability diagnoses ignore non-executable illustrative delegations
+ok 7 - capability diagnoses ignore non-executable illustrative delegations
+  ---
+  duration_ms: 21.535204
+  type: 'test'
+  ...
+# Subtest: capability attempts survive timeout without repeating acquisition
+ok 8 - capability attempts survive timeout without repeating acquisition
+  ---
+  duration_ms: 17.498965
+  type: 'test'
+  ...
+# Subtest: missing capability observation is terminal without an ordinary replan
+ok 9 - missing capability observation is terminal without an ordinary replan
+  ---
+  duration_ms: 17.452362
+  type: 'test'
+  ...
+# Subtest: failed capability observation is terminal without an ordinary replan
+ok 10 - failed capability observation is terminal without an ordinary replan
+  ---
+  duration_ms: 18.073214
+  type: 'test'
+  ...
+# Subtest: a restored terminal capability observation cannot replan or execute
+ok 11 - a restored terminal capability observation cannot replan or execute
+  ---
+  duration_ms: 12.997988
+  type: 'test'
+  ...
+# Subtest: restored capability evidence is authenticated before planning or execution
+ok 12 - restored capability evidence is authenticated before planning or execution
+  ---
+  duration_ms: 5.167433
+  type: 'test'
+  ...
+# Subtest: an accepted replacement failure cannot unlock another adaptation on resume
+ok 13 - an accepted replacement failure cannot unlock another adaptation on resume
+  ---
+  duration_ms: 9.940133
+  type: 'test'
+  ...
+# Subtest: unapproved acquisition fails closed before execution
+ok 14 - unapproved acquisition fails closed before execution
+  ---
+  duration_ms: 10.135949
+  type: 'test'
+  ...
+# Subtest: blank acquired is normalized away for a terminal missing observation
+ok 15 - blank acquired is normalized away for a terminal missing observation
+  ---
+  duration_ms: 15.63941
+  type: 'test'
+  ...
+# Subtest: catalogue access alone does not make acquisition actionable
+ok 16 - catalogue access alone does not make acquisition actionable
+  ---
+  duration_ms: 8.380202
+  type: 'test'
+  ...
+# Subtest: catalogue is offered only within approved acquisition grants
+ok 17 - catalogue is offered only within approved acquisition grants
+  ---
+  duration_ms: 20.222194
+  type: 'test'
+  ...
+# Subtest: one ordinary execution failure adapts, acquires within grants and appends verified work
+ok 18 - one ordinary execution failure adapts, acquires within grants and appends verified work
+  ---
+  duration_ms: 28.078052
+  type: 'test'
+  ...
+# Subtest: adaptation preserves a successful parallel result and never repeats the failed attempt
+ok 19 - adaptation preserves a successful parallel result and never repeats the failed attempt
+  ---
+  duration_ms: 22.489083
+  type: 'test'
+  ...
+# Subtest: real post-acquisition checkpoints resume service history without repeating it
+ok 20 - real post-acquisition checkpoints resume service history without repeating it
+  ---
+  duration_ms: 28.469284
+  type: 'test'
+  ...
+# Subtest: interrupted adaptation resumes Head once and appends work without re-executing failure
+ok 21 - interrupted adaptation resumes Head once and appends work without re-executing failure
+  ---
+  duration_ms: 23.008227
+  type: 'test'
+  ...
+# Subtest: superseded adaptation failure without a replacement result still executes accepted work
+ok 22 - superseded adaptation failure without a replacement result still executes accepted work
+  ---
+  duration_ms: 24.722671
+  type: 'test'
+  ...
+# Subtest: a second ordinary execution failure is terminal without another replan
+ok 23 - a second ordinary execution failure is terminal without another replan
+  ---
+  duration_ms: 17.331352
+  type: 'test'
+  ...
+# Subtest: QA receives trailing artifact evidence beyond the legacy 15000-character slice
+ok 24 - QA receives trailing artifact evidence beyond the legacy 15000-character slice
+  ---
+  duration_ms: 20.855247
+  type: 'test'
+  ...
+# Subtest: QA artifact loading remains bounded while preserving the truncation signal
+ok 25 - QA artifact loading remains bounded while preserving the truncation signal
+  ---
+  duration_ms: 53.052543
+  type: 'test'
+  ...
+# Subtest: a blocked failure adaptation is terminal, durable and independently reviewable
+ok 26 - a blocked failure adaptation is terminal, durable and independently reviewable
+  ---
+  duration_ms: 15.699415
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1072.988774

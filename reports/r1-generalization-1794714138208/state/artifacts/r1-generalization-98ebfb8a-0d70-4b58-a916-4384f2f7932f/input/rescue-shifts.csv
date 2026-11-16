@@ -1,0 +1,7 @@
+shift_id,district,team,scheduled_hours,completed_hours,incidents
+S-01,North,Harbor,12,11,2
+S-02,South,Harbor,8,8,1
+S-03,North,Ridge,10,7,3
+S-04,West,Ridge,14,13,0
+S-05,South,Harbor,6,5,2
+S-06,West,Ridge,9,9,1

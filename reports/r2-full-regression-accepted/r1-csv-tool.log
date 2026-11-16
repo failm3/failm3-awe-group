@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: CSV tool performs real file read, independent check and saved hash-bound evidence artifact
+ok 1 - CSV tool performs real file read, independent check and saved hash-bound evidence artifact
+  ---
+  duration_ms: 16.711099
+  type: 'test'
+  ...
+# Subtest: CSV tool saves correctly verified BLOCKED input without partial totals or success report
+ok 2 - CSV tool saves correctly verified BLOCKED input without partial totals or success report
+  ---
+  duration_ms: 7.1734
+  type: 'test'
+  ...
+# Subtest: CSV factory creates a Mastra tool and executes with the same guards
+ok 3 - CSV factory creates a Mastra tool and executes with the same guards
+  ---
+  duration_ms: 6.612353
+  type: 'test'
+  ...
+# Subtest: CSV tool fails before reading or saving without grant, approved limits, or safe path
+ok 4 - CSV tool fails before reading or saving without grant, approved limits, or safe path
+  ---
+  duration_ms: 4.936114
+  type: 'test'
+  ...
+# Subtest: CSV tool enforces byte limits before allocation and row limits before totals
+ok 5 - CSV tool enforces byte limits before allocation and row limits before totals
+  ---
+  duration_ms: 9.004054
+  type: 'test'
+  ...
+# Subtest: CSV tool rejects nonregular files and symlink escapes
+ok 6 - CSV tool rejects nonregular files and symlink escapes
+  ---
+  duration_ms: 5.835588
+  type: 'test'
+  ...
+# Subtest: CSV tool honors cancellation and loss of owner before read and before save
+ok 7 - CSV tool honors cancellation and loss of owner before read and before save
+  ---
+  duration_ms: 7.699645
+  type: 'test'
+  ...
+# Subtest: CSV tool does not report success or register an artifact when saving fails
+ok 8 - CSV tool does not report success or register an artifact when saving fails
+  ---
+  duration_ms: 3.544697
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 67.767572

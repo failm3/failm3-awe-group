@@ -1,0 +1,81 @@
+================================================================================================
+NOX QA - digest.json
+================================================================================================
+  [PASS] file exists                                    
+  [PASS] file is non-empty                              
+  [PASS] file is regular (not a dir/symlink target)     
+  [PASS] bytes decode as UTF-8                          
+  [PASS] parses as valid JSON                           
+  [PASS] top level is an object                         
+  [PASS] exact top-level keys                           
+  [PASS] row_count present and numeric int              
+  [PASS] scheduled present and numeric int              
+  [PASS] completed present and numeric int              
+  [PASS] incidents present and numeric int              
+  [PASS] completion_percent is numeric                  
+  [PASS] sites is an object                             
+  [PASS] sites key North present                        
+  [PASS] sites[North] exact keys                        
+  [PASS] sites key South present                        
+  [PASS] sites[South] exact keys                        
+  [PASS] no null values anywhere                        
+  [PASS] no additional/unknown top-level keys beyond spec 
+  [PASS] sha256 recorded                                
+
+================================================================================================
+NOX QA - digest.md
+================================================================================================
+  [PASS] file exists                                    
+  [PASS] file is non-empty                              
+  [PASS] starts with a top-level heading                
+  [PASS] has Totals section                             
+  [PASS] has Sites section                              
+  [PASS] has Reproducible method section                
+  [PASS] has a Totals markdown table                    
+  [PASS] Sites table header complete                    
+  [PASS] no unrendered placeholders                     
+  [PASS] no NaN/Infinity tokens                         
+  [PASS] sha256 recorded                                
+
+================================================================================================
+NOX QA - digest.md <-> digest.json CONSISTENCY
+================================================================================================
+  [PASS] totals row_count matches JSON                  
+  [PASS] totals scheduled matches JSON                  
+  [PASS] totals completed matches JSON                  
+  [PASS] totals incidents matches JSON                  
+  [PASS] totals completion_percent matches JSON         
+  [PASS] site row North matches JSON object             
+  [PASS] site row South matches JSON object             
+  [PASS] total row equals sum line                      
+  [PASS] source string matches                          
+  [PASS] period string matches                          
+  [PASS] Totals table has exactly 5 metric rows         
+
+================================================================================================
+NOX QA - invocation_receipt.json (durable receipt)
+================================================================================================
+  [PASS] file exists                                    
+  [PASS] file is non-empty                              
+  [PASS] parses as valid JSON                           
+  [PASS] capability is observation-digest-v1            
+  [PASS] mission_id correct                             
+  [PASS] records procedure sha256                       
+  [PASS] procedure source file still matches that sha256 
+  [PASS] records exit code 0                            
+  [PASS] records exact argv of length 2                 
+  [PASS] argv[1] is the mission root (not a probe dir)  
+  [PASS] explicitly denies probe-dir-as-output          
+  [PASS] lists both deliverables with sha256            
+  [PASS] deliverable digest.json sha256 matches bytes   
+  [PASS] deliverable digest.json byte size matches      
+  [PASS] deliverable digest.md sha256 matches bytes     
+  [PASS] deliverable digest.md byte size matches        
+  [PASS] records stdout/stderr/exit capture             
+  [PASS] records mission root                           
+  [PASS] records approved spec sha256                   
+
+================================================================================================
+NOX QA: checks=61 pass=61 fail=0
+VERDICT: NOX_QA_PASS
+================================================================================================

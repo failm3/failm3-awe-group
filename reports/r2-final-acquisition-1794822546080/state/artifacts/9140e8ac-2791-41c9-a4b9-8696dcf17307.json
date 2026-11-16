@@ -1,0 +1,14 @@
+{
+  "id": "9140e8ac-2791-41c9-a4b9-8696dcf17307",
+  "mission_id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1",
+  "type": "file",
+  "name": "digest.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/digest.md",
+  "content": "# Observation digest (observation-digest-v1)\n\n- Source: Lumen Harbor field pilot\n- Period: 2026-W45\n- Fixture: `/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/input/pilot.observations.json`\n- Fixture SHA-256: `412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766`\n\n## Totals\n\n| Metric | Value |\n| --- | --- |\n| Rows | 3 |\n| Scheduled | 30 |\n| Completed | 26 |\n| Incidents | 6 |\n| Completion percent | 86.67% |\n\n## Per site\n\n| Site | Rows | Scheduled | Completed | Incidents | Completion percent |\n| --- | --- | --- | --- | --- | --- |\n| North | 2 | 22 | 18 | 5 | 81.82% |\n| South | 1 | 8 | 8 | 1 | 100.00% |\n\n## Method (reproducible)\n\n1. Read the fixture bytes and record their SHA-256 (above).\n2. Parse the JSON; `observations` is the only data array consulted.\n3. `row_count` = number of elements in `observations`.\n4. Global totals are plain sums over every row: `scheduled` = sum of `scheduled`,\n   `completed` = sum of `completed`, `incidents` = sum of `incidents`.\n5. `sites` is keyed by the exact `site` string, sorted ascending; each entry holds\n   that site's `rows`, summed `scheduled`/`completed`/`incidents`, and its own\n   `completion_percent`.\n6. `completion_percent` = completed / scheduled * 100, rounded half-up to exactly two\n   decimals (`round(completed * 10000 / scheduled) / 100`); 0 scheduled yields 0.00.\n7. Invariants enforced before writing: per-site sums equal the global totals and\n   per-site row counts equal `row_count`; mismatch aborts without writing output.\n\nReproduce with:\n\n```\nnode -- /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/bin/observation-digest.js /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/input/pilot.observations.json /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1\n```\n",
+  "created_at": "2026-11-16T10:00:59.790Z",
+  "metadata": {
+    "size_bytes": 2255,
+    "sha256": "e7712379543158681d0d64923189ae3b1fe3e08a19fb3101ea69835ae39ae978",
+    "revision": 2
+  }
+}

@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: nested paths are independent and same-millisecond writes select the latest revision
+ok 1 - nested paths are independent and same-millisecond writes select the latest revision
+  ---
+  duration_ms: 20.762639
+  type: 'test'
+  ...
+# Subtest: saveArtifactFile canonicalizes names without weakening traversal fences
+ok 2 - saveArtifactFile canonicalizes names without weakening traversal fences
+  ---
+  duration_ms: 5.186035
+  type: 'test'
+  ...
+# Subtest: legacy records keep basename dedup and new writes do not rewrite them
+ok 3 - legacy records keep basename dedup and new writes do not rewrite them
+  ---
+  duration_ms: 2.671624
+  type: 'test'
+  ...
+# Subtest: reconciliation assigns revisions and creates no root or nested duplicates
+ok 4 - reconciliation assigns revisions and creates no root or nested duplicates
+  ---
+  duration_ms: 8.328298
+  type: 'test'
+  ...
+# Subtest: reconciliation supersedes changed same-path bytes without mutating audit history
+ok 5 - reconciliation supersedes changed same-path bytes without mutating audit history
+  ---
+  duration_ms: 5.885793
+  type: 'test'
+  ...
+# Subtest: file_write registers the mission-relative nested path
+ok 6 - file_write registers the mission-relative nested path
+  ---
+  duration_ms: 6.025905
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 452.075266

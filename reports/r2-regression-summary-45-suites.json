@@ -1,0 +1,326 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-15T21:56:21.378Z",
+  "finished_at": "2026-11-15T22:00:57.059Z",
+  "suites": [
+    {
+      "suite": "src/tests/artifact-identity.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 885
+    },
+    {
+      "suite": "src/tests/artifact-reconciliation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 455
+    },
+    {
+      "suite": "src/tests/candidate-binding.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 605
+    },
+    {
+      "suite": "src/tests/capability-loop.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1840
+    },
+    {
+      "suite": "src/tests/lifecycle-recovery.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 9562
+    },
+    {
+      "suite": "src/tests/qa-gate.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 363
+    },
+    {
+      "suite": "src/tests/r0-closure-adapters.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 8197
+    },
+    {
+      "suite": "src/tests/r0-closure-core.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2542
+    },
+    {
+      "suite": "src/tests/r0-closure-interfaces.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 31855
+    },
+    {
+      "suite": "src/tests/r0-closure-process-lifecycle.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 32524
+    },
+    {
+      "suite": "src/tests/r0-final-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 12014
+    },
+    {
+      "suite": "src/tests/r0-final-production-intent.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3651
+    },
+    {
+      "suite": "src/tests/r0-final-recursion.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 5628
+    },
+    {
+      "suite": "src/tests/r0-final-tools.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1398
+    },
+    {
+      "suite": "src/tests/r0-independent-contracts.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 55696
+    },
+    {
+      "suite": "src/tests/r0-qa-evidence.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3570
+    },
+    {
+      "suite": "src/tests/r0-reqa-adapters.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 5204
+    },
+    {
+      "suite": "src/tests/r0-reqa-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 9425
+    },
+    {
+      "suite": "src/tests/r0-runtime-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 6250
+    },
+    {
+      "suite": "src/tests/r0-runtime-recursion.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 557
+    },
+    {
+      "suite": "src/tests/r0-runtime-storage-lease.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 8023
+    },
+    {
+      "suite": "src/tests/r0-security-tools.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1892
+    },
+    {
+      "suite": "src/tests/r0-test-harness.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 443
+    },
+    {
+      "suite": "src/tests/r1-analytics-mission.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3024
+    },
+    {
+      "suite": "src/tests/r1-csv-analytics.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 314
+    },
+    {
+      "suite": "src/tests/r1-csv-tool.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 505
+    },
+    {
+      "suite": "src/tests/r1-csv-verifier.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 305
+    },
+    {
+      "suite": "src/tests/r1-host-policy.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 264
+    },
+    {
+      "suite": "src/tests/r1-mission-admission.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2977
+    },
+    {
+      "suite": "src/tests/r1-model-ledger.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3831
+    },
+    {
+      "suite": "src/tests/r1-p1-ledger-evaluation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 411
+    },
+    {
+      "suite": "src/tests/r1-p1-lesson-comparison.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2740
+    },
+    {
+      "suite": "src/tests/r1-p1-model-routing.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 284
+    },
+    {
+      "suite": "src/tests/r1-parallel-artifacts.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1555
+    },
+    {
+      "suite": "src/tests/r1-qualification.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2132
+    },
+    {
+      "suite": "src/tests/r1-resource-limits.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3456
+    },
+    {
+      "suite": "src/tests/r1-shell-isolation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 4581
+    },
+    {
+      "suite": "src/tests/r1-spec-binding.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 7050
+    },
+    {
+      "suite": "src/tests/r1-web-product.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 22824
+    },
+    {
+      "suite": "src/tests/r1-web-qa.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 5356
+    },
+    {
+      "suite": "src/tests/r1-workspace-fs.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 513
+    },
+    {
+      "suite": "src/tests/r2-verified-experience.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3030
+    },
+    {
+      "suite": "src/tests/resume-policy.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3368
+    },
+    {
+      "suite": "src/tests/stage1-integration.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1504
+    },
+    {
+      "suite": "src/tests/ucl-bridge.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3077
+    }
+  ],
+  "passed": 45,
+  "failed": 0
+}

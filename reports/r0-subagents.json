@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-13",
+  "mechanism": "OpenCode subagent tool (real child sessions)",
+  "max_concurrent": 3,
+  "provider_catalog_checked": "routercheap via tools.opencode.models",
+  "subagents": [
+    {
+      "role": "Runtime Engineer",
+      "session_id": "ses_e2d5bd74dffeR8cf1fo9CuEfJT",
+      "model": "routercheap/claude-sonnet-5-5",
+      "variant": "high",
+      "workspace": ".r0-work/runtime",
+      "writes": "lifecycle/storage/mission-manager/recursion/API/CLI and r0-runtime tests"
+    },
+    {
+      "role": "Security & Tools Engineer",
+      "session_id": "ses_e2d5bd747ffeECQFrwXIv4ktI4",
+      "model": "routercheap/gpt-6.1-sol",
+      "variant": "high",
+      "workspace": ".r0-work/security",
+      "writes": "tools/specialists/Playwright MCP and r0-security tests"
+    },
+    {
+      "role": "Independent QA Engineer",
+      "session_id": "ses_e2d5bd736ffekmpmtX9Qj2aypb",
+      "model": "routercheap/gpt-6-astra",
+      "variant": "high",
+      "workspace": ".r0-work/qa",
+      "writes": "independent adversarial tests only"
+    },
+    {
+      "role": "Independent adversarial code audit",
+      "session_id": "ses_e2d2cf734ffehI8uf4etcxFjqN",
+      "model": "routercheap/kimi-k3.1-pro",
+      "variant": "high",
+      "workspace": "main tree",
+      "writes": "read-only audit report"
+    },
+    {
+      "role": "Independent P0 re-audit",
+      "session_id": "ses_e2d142e0cffeqS9bR2YQsYRX0E",
+      "model": "routercheap/kimi-k3.1-pro",
+      "variant": "high",
+      "workspace": "main tree",
+      "writes": "read-only audit report"
+    },
+    {
+      "role": "Final independent QA and closure re-audits",
+      "session_id": "ses_e2ce55c53ffeA1JCdAfHZDba6B",
+      "model": "routercheap/kimi-k3.1-pro",
+      "variant": "high",
+      "workspace": "main tree",
+      "writes": "independent QA reports and isolated negative probes only"
+    },
+    {
+      "role": "Final tool boundary fixes",
+      "session_id": "ses_e2cd72044ffeUt9e8xRhGSt1Io",
+      "model": "routercheap/gpt-6.1-sol",
+      "variant": "high",
+      "workspace": ".r0-work/r0-final-tools",
+      "writes": "file/browser/search cancellation and ownership boundaries with focused tests"
+    },
+    {
+      "role": "Integrity and recovery fixes",
+      "session_id": "ses_e2cd72036ffeDY1tkXpVg6GmnS",
+      "model": "routercheap/claude-sonnet-5-5",
+      "variant": "high",
+      "workspace": ".r0-work/r0-final-manager",
+      "writes": "artifact integrity, durable intents, manager recovery and focused tests"
+    },
+    {
+      "role": "Recursive grants and budget fixes",
+      "session_id": "ses_e2cd72027ffelmaSU9i1i3iE39",
+      "model": "routercheap/gpt-6-astra",
+      "variant": "high",
+      "workspace": ".r0-work/r0-final-recursion",
+      "writes": "recursive grant ceilings, durable agent accounting and focused tests"
+    },
+    {
+      "role": "Failed-outcome recovery, repair budget and supersession fixes",
+      "session_id": "ses_e2c916224ffeuCc1pOjyYmjtZx",
+      "model": "routercheap/claude-sonnet-5-5",
+      "variant": "high",
+      "workspace": ".r0-work/r0-reqa-manager",
+      "writes": "mission-manager.ts, r0-reqa-manager.test.ts and two isolated test helpers"
+    }
+  ],
+  "isolation": "Initial and remediation engineers used disjoint directories under .r0-work with no shared real .awe-data; independent audits used production-path review and fresh isolated temporary AWE_DATA_DIR fixtures.",
+  "cost_accounting": "Router.Cheap token/cost totals are not provider invoices. OpenCode session metadata is retained separately in reports/r0-test-results/r0-subagent-usage.json; actual provider spend is UNKNOWN."
+}

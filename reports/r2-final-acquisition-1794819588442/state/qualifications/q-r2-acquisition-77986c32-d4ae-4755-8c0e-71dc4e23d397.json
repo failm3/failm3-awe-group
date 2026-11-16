@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "qualificationId": "q-r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+  "generation": 1,
+  "status": "provisional",
+  "receipt": {
+    "solverId": "local-capability",
+    "scope": "local-acquisition",
+    "specHash": "fbaccc1042e87b9e1130c15a15b29b50fcfb06dd0596fc4abdd7f89842b42a3a",
+    "capabilityHash": "8ed9a877267fdcb30226f91f472c91d6588e74e9a55a41afdb2bc85441a3ec95",
+    "profileHash": "3d6bdf2f8dd874204c2e5ae3d38bd5b845352c8936351aee9d6afe975d6e3aca",
+    "qualificationId": "q-r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+    "receiptId": "r-a3e9ccc4-be5f-4cdf-b129-0bb19ba46532",
+    "issuer": "independent-acquisition-qa",
+    "evidenceHash": "3612fd2ab772f9b4f0323ec362d45caefbe4e53c465d0ea041967eb9f9b04312",
+    "evidenceRefs": [
+      "a051cf91-8bc8-4636-a836-8f228c366eab",
+      "8f29f4da-43b4-43f2-a6dc-2525f8885409"
+    ],
+    "issuedAt": 1794819848244,
+    "expiresAt": 1794827048244
+  },
+  "receipts": [
+    {
+      "solverId": "local-capability",
+      "scope": "local-acquisition",
+      "specHash": "fbaccc1042e87b9e1130c15a15b29b50fcfb06dd0596fc4abdd7f89842b42a3a",
+      "capabilityHash": "8ed9a877267fdcb30226f91f472c91d6588e74e9a55a41afdb2bc85441a3ec95",
+      "profileHash": "3d6bdf2f8dd874204c2e5ae3d38bd5b845352c8936351aee9d6afe975d6e3aca",
+      "qualificationId": "q-r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+      "receiptId": "r-a3e9ccc4-be5f-4cdf-b129-0bb19ba46532",
+      "issuer": "independent-acquisition-qa",
+      "evidenceHash": "3612fd2ab772f9b4f0323ec362d45caefbe4e53c465d0ea041967eb9f9b04312",
+      "evidenceRefs": [
+        "a051cf91-8bc8-4636-a836-8f228c366eab",
+        "8f29f4da-43b4-43f2-a6dc-2525f8885409"
+      ],
+      "issuedAt": 1794819848244,
+      "expiresAt": 1794827048244
+    }
+  ],
+  "admissions": [
+    {
+      "solverId": "local-capability",
+      "scope": "local-acquisition",
+      "specHash": "fbaccc1042e87b9e1130c15a15b29b50fcfb06dd0596fc4abdd7f89842b42a3a",
+      "capabilityHash": "8ed9a877267fdcb30226f91f472c91d6588e74e9a55a41afdb2bc85441a3ec95",
+      "profileHash": "3d6bdf2f8dd874204c2e5ae3d38bd5b845352c8936351aee9d6afe975d6e3aca",
+      "qualificationId": "q-r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+      "admissionId": "450b79a8-0ba4-4d5d-8d42-cafbe8bc6200",
+      "receiptId": "r-a3e9ccc4-be5f-4cdf-b129-0bb19ba46532",
+      "generation": 1,
+      "admittedAt": 1794819848252,
+      "expiresAt": 1794827048244
+    }
+  ],
+  "transitions": [
+    {
+      "generation": 1,
+      "status": "provisional",
+      "at": 1794819848246,
+      "principal": "independent-acquisition-qa",
+      "reason": "independent qualification"
+    }
+  ]
+}

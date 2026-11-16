@@ -1,0 +1,216 @@
+{
+  "receipt_type": "observation-digest-v1 qualification receipt",
+  "receipt_version": 1,
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "capability": "observation-digest-v1",
+  "acquisition_step": "bounded acquisition - one procedure source authored, then actually executed",
+  "qualified_at_utc": "2026-11-16T08:27:09Z",
+  "mission_root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "source": {
+    "absolute_stable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/procedures/observation_digest_v1.py",
+    "relative_path_from_root": "procedures/observation_digest_v1.py",
+    "sha256": "7881ed13610034bb0a985cdd548a009ac2cdec8ec17f3532ca72453098e2b017",
+    "bytes": 16350,
+    "interpreter": "python3",
+    "interpreter_version": "Python 3.14.4",
+    "stdlib_only": true,
+    "evidence": "source sha256 re-hashed after the probe run and byte-for-byte unchanged (see integrity.source_unchanged_after_qualification)"
+  },
+  "fixed_args": {
+    "argv_1_input": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json",
+    "argv_2_output_dir": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+    "exact_ordered_argv": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1"
+    ],
+    "exact_ordered_argv_sha256": "142a50d06165bf2ab4a0aa6f728d9da9359e79b9d83f965907eb313b32c3eea1",
+    "exact_ordered_argv_sha256_note": "sha256 of the compact JSON encoding of exact_ordered_argv (json.dumps(argv, separators=(',',':'), ensure_ascii=True)) - reproducible from exact_ordered_argv",
+    "final_args_output_is_probe_dir": false
+  },
+  "input_fixture": {
+    "absolute_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json",
+    "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "bytes": 474,
+    "read_only": true,
+    "rows": 3,
+    "sites": [
+      "North",
+      "South"
+    ]
+  },
+  "probe_run": {
+    "run_id": "qualification-run-1",
+    "probe_output_directory": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/probe/qualification-run-1",
+    "note": "Same source sha256 and same argv[1]; argv[2] swapped to the probe directory so that no final digest is written into the mission root.",
+    "command": "python3 /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/procedures/observation_digest_v1.py /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/probe/qualification-run-1",
+    "exit_code": 0,
+    "exit_code_file": "probe/qualification-run-1/exit_code.txt",
+    "stdout": "observation-digest-v1: ok\n  input:  /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json\n  output: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/probe/qualification-run-1/digest.json\n  output: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/probe/qualification-run-1/digest.md\n  totals: row_count=3 scheduled=30 completed=26 incidents=6 completion_percent=86.67\n",
+    "stderr": "",
+    "stdout_sha256": "fa642c1fafc7c1e5b94521fa0c73c202636749a44b286c8073ac9e63579c5965",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256_note": "e3b0c442...b855 is the sha256 of the empty string, consistent with an empty stderr"
+  },
+  "probe_outputs": [
+    {
+      "name": "digest.json",
+      "absolute_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/probe/qualification-run-1/digest.json",
+      "sha256": "989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7",
+      "bytes": 480
+    },
+    {
+      "name": "digest.md",
+      "absolute_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/probe/qualification-run-1/digest.md",
+      "sha256": "7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af",
+      "bytes": 1603
+    }
+  ],
+  "probe_capture_artifacts": [
+    {
+      "name": "stdout.txt",
+      "sha256": "fa642c1fafc7c1e5b94521fa0c73c202636749a44b286c8073ac9e63579c5965"
+    },
+    {
+      "name": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "exit_code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "name": "source.sha256.txt",
+      "sha256": "0b11a1d377cd0118e9bc0e7b31729aa6d92b50cdb8c646d229ec1e84c27cf375"
+    },
+    {
+      "name": "outputs.sha256.txt",
+      "sha256": "e123baeeab29ae3becbf28c31429e8194160a71fa32cdd36d410b06578998b2f"
+    }
+  ],
+  "observed_values_from_probe": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "completion_percent_rendering": "2 decimal places, half-up rounding, emitted as an unquoted JSON number",
+    "sites": {
+      "North": {
+        "row_count": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": 81.82
+      },
+      "South": {
+        "row_count": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": 100.0
+      }
+    },
+    "reconciliation": "per-site row_count/scheduled/completed/incidents sum to the global totals (3/30/26/6)"
+  },
+  "verification": {
+    "host_independent_parity_check": {
+      "method": "separate checker process re-parsed the read-only fixture and the probe digest.json with an independent Decimal implementation; it did not import or reuse the procedure",
+      "checks_passed": 22,
+      "checks_failed": 0,
+      "verdict": "PARITY_OK",
+      "checker_exit_code": 0
+    },
+    "determinism_check": {
+      "method": "full second execution of the same source bytes into a throwaway temp directory, then byte comparison against qualification-run-1 outputs",
+      "digest_json": "BYTE-IDENTICAL (989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7)",
+      "digest_md": "BYTE-IDENTICAL (7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af)",
+      "temp_dir_removed": true
+    },
+    "nonstandard_arithmetic_recheck": {
+      "method": "hand/independent arithmetic performed before the procedure was authored",
+      "result": "3 rows, scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30*100=86.666...->86.67; North 22/18/5 -> 81.82; South 8/8/1 -> 100.00",
+      "agrees_with_procedure": true
+    },
+    "nonzero_exit_negative_tests": {
+      "method": "each malformed input run in a throwaway temp dir; no output written",
+      "cases": [
+        {
+          "case": "truncated/invalid JSON",
+          "exit_code": 4
+        },
+        {
+          "case": "root missing 'observations'",
+          "exit_code": 5
+        },
+        {
+          "case": "empty observations array",
+          "exit_code": 5
+        },
+        {
+          "case": "scheduled given as string",
+          "exit_code": 5
+        },
+        {
+          "case": "completed > scheduled",
+          "exit_code": 5
+        },
+        {
+          "case": "row missing 'incidents'",
+          "exit_code": 5
+        },
+        {
+          "case": "empty site name",
+          "exit_code": 5
+        },
+        {
+          "case": "no arguments",
+          "exit_code": 2
+        },
+        {
+          "case": "input file does not exist",
+          "exit_code": 3
+        }
+      ],
+      "all_nonzero": true,
+      "exit_code_taxonomy": {
+        "0": "ok",
+        "2": "usage",
+        "3": "input read failure",
+        "4": "JSON parse failure",
+        "5": "schema/contract failure",
+        "6": "output write failure"
+      }
+    }
+  },
+  "integrity": {
+    "source_unchanged_after_qualification": true,
+    "source_sha256_after_qualification": "7881ed13610034bb0a985cdd548a009ac2cdec8ec17f3532ca72453098e2b017",
+    "final_digest_written_into_mission_root_during_qualification": false,
+    "mission_root_top_level_listing_after_qualification": [
+      ".oc-isolated",
+      "input",
+      "probe",
+      "procedures"
+    ],
+    "root_digest_json_present": false,
+    "root_digest_md_present": false,
+    "probe_dir_presented_as_final_args_output": false
+  },
+  "scope_compliance": {
+    "writes_outside_mission_root": false,
+    "network_used": false,
+    "packages_installed": false,
+    "publishing_or_deployment": false,
+    "purchases": false,
+    "external_changes": false,
+    "input_fixture_modified": false,
+    "temp_dirs_used": "system temp only for negative tests and the determinism check; all removed before completion"
+  },
+  "replan": {
+    "missing_capability_identified": "observation-digest-v1 - no local procedure existed to parse the observation fixture and persist an exact digest",
+    "bounded_acquisition": "one procedure source authored at a stable path below the mission root; no packages or network used",
+    "status": "QUALIFIED",
+    "next_step": "invoke this exact source sha256 with the exact fixed args [<root>/input/pilot.observations.json, <root>] to produce the final digest.json and digest.md in the mission root - not performed in this step"
+  },
+  "confirmation": "No final digest.json or digest.md was written into the mission root during qualification; all probe outputs were confined to <root>/probe/qualification-run-1."
+}

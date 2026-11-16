@@ -1,0 +1,107 @@
+[
+  {
+    "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research",
+    "tree": {
+      "total_agents": 1,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research:top0",
+          "role": "researcher",
+          "started_at": "2026-11-16T03:28:42.962Z",
+          "task": "Investigate and acquire a reusable way to provide the missing capability 'delegate'. Reason: Approved capability 'delegate' is not registered; bounded acquisition is required before execution. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}. executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "file_write"
+          ],
+          "duration_ms": 94515,
+          "finished_at": "2026-11-16T03:30:17.473Z"
+        }
+      ]
+    },
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research:top0",
+        "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T03:28:42.970Z",
+        "finished_at": "2026-11-16T03:30:17.472Z",
+        "artifact_ids": [
+          "cbd62ba4-1721-4eb9-890b-108c3e9f231d"
+        ]
+      }
+    ]
+  },
+  {
+    "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics",
+    "tree": {
+      "total_agents": 2,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics:top0",
+          "role": "analyst",
+          "started_at": "2026-11-16T03:28:21.210Z",
+          "task": "Independently parse input/operations.csv (six weeks, three teams) and persist metrics.json in the required schema: row_count, totals, and per-team entries, including completed/work orders, completion_percent (completed/work orders ×100), minutes_per_completed_order (actual/completed minutes), and schedule variance (actual minus planned minutes). Compute all integers from raw rows first, then derive the two decimal metrics, and serialize completion_percent and minutes_per_completed_order with exactly two decimal places. All integer metrics must be JSON numbers, not strings. Verify the recomputed totals against a second independent pass over the rows before writing.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_list",
+            "file_write"
+          ],
+          "duration_ms": 87508,
+          "finished_at": "2026-11-16T03:29:48.713Z"
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics:top1",
+          "role": "writer",
+          "started_at": "2026-11-16T03:29:48.731Z",
+          "task": "Synthesize operations-brief.md from input/operations.csv and the persisted metrics.json: a concise executive recommendation plus exact overall and per-team findings on completion, defects and schedule variance. Include a Method section that names input/operations.csv and states the exact formulas — completed/work orders ×100, actual/completed minutes, and actual minus planned minutes. Cross-check every figure quoted in the document against metrics.json and the raw rows so document totals match the independently parsed metrics.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_write"
+          ],
+          "duration_ms": 60226,
+          "finished_at": "2026-11-16T03:30:48.950Z"
+        }
+      ]
+    },
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics:top0",
+        "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics",
+        "role": "analyst",
+        "started_at": "2026-11-16T03:28:21.221Z",
+        "finished_at": "2026-11-16T03:29:48.710Z",
+        "artifact_ids": [
+          "5d453c96-d9a7-4dbc-8445-18fdedd2d51c"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics:top1",
+        "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics",
+        "role": "writer",
+        "started_at": "2026-11-16T03:29:48.738Z",
+        "finished_at": "2026-11-16T03:30:48.947Z",
+        "artifact_ids": [
+          "ab75f754-a31a-46b2-8c09-78fecc87c673"
+        ]
+      }
+    ]
+  }
+]

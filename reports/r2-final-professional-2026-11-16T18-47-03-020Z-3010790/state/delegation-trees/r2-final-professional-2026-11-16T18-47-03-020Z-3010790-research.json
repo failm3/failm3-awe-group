@@ -1,0 +1,82 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research",
+  "saved_at": "2026-11-16T18:53:01.455Z",
+  "total_agents": 3,
+  "max_depth": 1,
+  "nodes": [
+    {
+      "id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:top0",
+      "role": "research-coordinator",
+      "started_at": "2026-11-16T18:47:49.549Z",
+      "task": "Act as the sole research-coordinator for mission r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research. Step 1 (inventory): use file_list and file_read on the workspace to confirm the three inputs sources/pilot-charter.txt (S1), sources/weekly-observations.txt (S2) and sources/reviewer-note.txt (S3) exist; read them without modifying them. Step 2 (recursion): issue exactly ONE delegate call that launches exactly TWO distinct children in parallel, granting each child only file_read, file_list, file_write and save_artifact. Child A (researcher, Alder evidence): read the three sources and extract every Alder-relevant fact, including its weekday request total (expected 480) and delayed acknowledgements (expected 31), plus any cross-site or charter facts that bear on Alder, each with an exact [S1]/[S2]/[S3] citation and a short quoted or paraphrased source line; persist the note itself as evidence-alder.md via file_write and register it with save_artifact. Child B (researcher, Brook and Cove evidence): same method for Brook (expected 480 requests, 43 delayed acknowledgements) and Cove (expected 480 requests, 37 delayed acknowledgements), including the acknowledgement median change (expected 18 to 11 minutes) and any reviewer caveats; persist the note itself as evidence-brook-cove.md via file_write and register it with save_artifact. Tell both children: the expected values are checks, not facts; report what the sources actually say and flag any mismatch explicitly; cite every claim; record limitations and exclusions found in the sources; do not extrapolate. Step 3 (synthesis): after both children have registered their artifacts, read evidence-alder.md and evidence-brook-cove.md from disk, cross-check them against the sources, and write research-brief.md via file_write, then register it with save_artifact. The brief must contain: (a) an Executive Recommendation; (b) a Factual Findings section separate from (c) a Limitations section; (d) inline citations in the exact form [S1], [S2] or [S3] on every substantive factual or numerical claim; (e) the three 480-request site totals, the 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change, each cited; (f) an explicit scope statement that conclusions apply only to the weekday pilot sites Alder, Brook and Cove, that they do not generalize to weekend operation or to Depot, and that no wider rollout has been completed; (g) a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt and S3 to sources/reviewer-note.txt; (h) an Evidence Notes section naming evidence-alder.md and evidence-brook-cove.md and attributing each to its child. Do not invent sources or citation labels beyond S1-S3.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [
+        "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:d1n1",
+        "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:d1n2"
+      ],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "delegate",
+        "file_write",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "3436f5b8-fae4-49bc-a934-e350ed51f77d"
+      ],
+      "duration_ms": 311909,
+      "finished_at": "2026-11-16T18:53:01.454Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:d1n1",
+      "role": "researcher",
+      "task": "Extract all Alder-relevant evidence from the three immutable sources and persist it as evidence-alder.md.\n\nSteps:\n1. Use file_read (and file_list if useful) to read sources/pilot-charter.txt ([S1]), sources/weekly-observations.txt ([S2]) and sources/reviewer-note.txt ([S3]) from the workspace. Do not open any source for writing.\n2. Build an evidence note covering EVERY Alder-relevant fact, including:\n   - Alder's weekday request total (expected as a check: 480) and site-weeks observed (4) — cite [S2].\n   - Alder's delayed acknowledgements (expected as a check: 31) and supervisor escalations (2) — cite [S2].\n   - The definition of a delayed acknowledgement (elapsed acknowledgement time greater than 15 minutes, measured after routing) — cite [S2], since this defines what '31' counts.\n   - The reviewer's statement that Alder has the smallest delayed-acknowledgement count and the fewest escalations — cite [S3].\n   - The reviewer's recommendation to extend Alder routing practices to Brook and Cove for two weeks — cite [S3].\n   - Baseline and pilot acknowledgement medians (manual 18 minutes, routed 11 minutes) and the receipt-timestamp basis of acknowledgement — cite [S1].\n   - Baseline request rate (120 requests per site-week) — cite [S1] — noting it as a charter baseline, and that 120 x 4 = 480 is consistent arithmetic, labelled as derived.\n   - Program window 2026-01-05 through 2026-01-30 (four operating weeks), owner Service Operations, sites Alder/Brook/Cove with the Depot trial explicitly excluded, and the routing runbook v2 change on 2026-01-12 — cite [S1].\n   - Any cross-site or charter facts that bear on Alder, such as the reviewer sampling 60 records per site (180 total) and the reconciliation of those samples to the weekly totals — cite [S2] and [S3]; and the control/data-quality lines of [S2] (no missing weekday records; the log does not identify individual customers).\n3. For each fact give its citation AND a short quoted or closely paraphrased source line so the coordinator can verify the number on sight. Use a table or a bulleted list with columns/fields: Fact | Value | Citation | Source line.\n4. Add a 'Limitations and exclusions found in the sources' section, at minimum: weekday-only coverage with no weekend or Depot conclusion supported [S1]; the Depot trial explicitly excluded [S1]; no individual customer identification and the 15-minute measurement convention [S2]; the reviewer's caution that the pilot cannot establish weekend performance or Depot outcomes and the decision gate to repeat measurement before any wider rollout [S3]; the runbook change on 2026-01-12 occurring mid-window [S1]; the note that supervisor escalations are counted but not defined by threshold in the sources.\n5. Add an 'Expected-value check' section explicitly stating whether each expected value (480 requests; 31 delayed acknowledgements) matches the source text, and flagging any mismatch prominently. Do not alter a source reading to fit an expectation.\n6. Do NOT extrapolate beyond Alder's weekday pilot data; do not infer causes, weekend or Depot behaviour, or rollout outcomes.\n7. Persist the finished note itself with file_write to the path evidence-alder.md (relative to the workspace) using mission_id=\"r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research\" so it registers as an artifact, then also register the same content with save_artifact name=\"evidence-alder.md\" and the same mission_id. Confirm both succeeded.\n\nConstraints: cite only as [S1], [S2], [S3]; never invent sources, labels or numbers; do not write to any file except evidence-alder.md; do not delegate (you have no delegate tool).",
+      "depth": 1,
+      "parent_id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:top0",
+      "status": "success",
+      "started_at": "2026-11-16T18:48:40.002Z",
+      "parallel_group_id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:pg1-2",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "file_write",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "9b55e98b-188f-4364-8b47-7bd170815042",
+        "0c382936-f020-4be8-991d-66ff22cdce22"
+      ],
+      "finished_at": "2026-11-16T18:50:18.190Z",
+      "duration_ms": 98184
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:d1n2",
+      "role": "researcher",
+      "task": "Extract all Brook and Cove evidence (plus reviewer caveats) from the three immutable sources and persist it as evidence-brook-cove.md.\n\nSteps:\n1. Use file_read (and file_list if useful) to read sources/pilot-charter.txt ([S1]), sources/weekly-observations.txt ([S2]) and sources/reviewer-note.txt ([S3]) from the workspace. Do not open any source for writing.\n2. Build an evidence note covering EVERY Brook- and Cove-relevant fact, including:\n   - Brook: 4 site-weeks, weekday request total (expected as a check: 480), delayed acknowledgements (expected as a check: 43), supervisor escalations (4) — cite [S2].\n   - Cove: 4 site-weeks, weekday request total (expected as a check: 480), delayed acknowledgements (expected as a check: 37), supervisor escalations (3) — cite [S2].\n   - The definition of a delayed acknowledgement (elapsed acknowledgement time greater than 15 minutes, measured after routing) — cite [S2].\n   - The acknowledgement median change from 18 minutes (manual baseline) to 11 minutes (routed pilot) — cite [S1] — stating it as written in the charter, without attributing the change to a specific site.\n   - The reviewer's recommendation to extend Alder routing practices to Brook and Cove for two weeks, and the decision gate to repeat measurement before any wider rollout — cite [S3].\n   - Reviewer sampling of 60 acknowledgement records per site (180 total), and those samples reconciling to the weekly observation totals — cite [S2] and [S3].\n   - Charter facts bearing on Brook and Cove: program window 2026-01-05 through 2026-01-30 (four operating weeks), owner Service Operations, sites Alder/Brook/Cove with the Depot trial explicitly excluded, baseline 120 requests per site-week, routing runbook v2 replaced v1 on 2026-01-12 — cite [S1]. Note that 120 x 4 = 480 is consistent arithmetic, labelled as derived.\n   - The Alder comparison values needed for context (480 requests, 31 delayed acknowledgements, 2 escalations) — cite [S2] and [S3] — clearly marked as comparison context, not your primary assignment.\n3. For each fact give its citation AND a short quoted or closely paraphrased source line. Use a table or bulleted fields: Fact | Value | Citation | Source line.\n4. Add a 'Limitations and exclusions found in the sources' section, at minimum: weekday-only coverage with no weekend or Depot conclusion supported [S1]; Depot trial explicitly excluded [S1]; the reviewer's caution that the pilot cannot establish weekend performance or Depot outcomes [S3]; no missing weekday records but no individual customer identification [S2]; the runbook change on 2026-01-12 mid-window [S1]; no per-week or per-site breakdown of delayed acknowledgements is given, so trend direction within the window cannot be established from the sources [S2]; supervisor escalations are counted but no threshold is defined [S2]; the 18-to-11-minute median change is stated program-wide with no per-site medians [S1].\n5. Add an 'Expected-value check' section explicitly stating whether each expected value (Brook 480 requests / 43 delayed; Cove 480 requests / 37 delayed; median change 18 to 11 minutes) matches the source text, and flagging any mismatch prominently. Do not alter a source reading to fit an expectation.\n6. Do NOT extrapolate beyond Brook and Cove weekday pilot data; do not infer causes, weekend or Depot behaviour, or rollout outcomes. Do not rank sites beyond what [S3] states.\n7. Persist the finished note itself with file_write to the path evidence-brook-cove.md (relative to the workspace) using mission_id=\"r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research\" so it registers as an artifact, then also register the same content with save_artifact name=\"evidence-brook-cove.md\" and the same mission_id. Confirm both succeeded.\n\nConstraints: cite only as [S1], [S2], [S3]; never invent sources, labels or numbers; do not write to any file except evidence-brook-cove.md; do not delegate (you have no delegate tool).",
+      "depth": 1,
+      "parent_id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:top0",
+      "status": "success",
+      "started_at": "2026-11-16T18:48:40.002Z",
+      "parallel_group_id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research:pg1-2",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "file_write",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "fcb1d9ac-1f9d-48ec-9c82-bb508bdd816d",
+        "853e9f30-9502-4105-8317-b9b394144084"
+      ],
+      "finished_at": "2026-11-16T18:50:28.394Z",
+      "duration_ms": 108387
+    }
+  ]
+}

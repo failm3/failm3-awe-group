@@ -1,0 +1,195 @@
+{
+  "id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+  "title": "Read-only reusable browser capability research",
+  "description": "Bounded live UCL integration verification.",
+  "objective": "Identify one existing browser automation candidate through the approved local catalogue and record an honest acquisition observation.",
+  "acceptance_criteria": [
+    "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+    "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+    "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired."
+  ],
+  "status": "failed",
+  "priority": "normal",
+  "created_at": "2026-11-15T14:39:54.034Z",
+  "updated_at": "2026-11-15T14:41:10.948Z",
+  "artifacts": [
+    "3354fca8-d710-4a56-8edd-87a3b23cc178",
+    "136fac66-6694-4cfd-86a3-1d46d66d8cbf",
+    "4e0301f3-93bf-4ada-95ae-cafd79aba78b"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "Read-only reusable browser capability research",
+      "objective": "Identify one existing browser automation candidate through the approved local catalogue and record an honest acquisition observation.",
+      "scope": "Local catalogue research and a bounded local availability check only. No package installation, candidate execution, external changes or grant expansion.",
+      "acceptance_criteria": [
+        "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+        "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+        "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired."
+      ],
+      "suggested_tools": [
+        "capability_library",
+        "file_list",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "researcher"
+      ],
+      "estimated_complexity": "simple",
+      "risks": [
+        "Catalogue entries are unvetted and may be stale; no authority follows from a search result"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-15T14:39:54.065Z",
+      "spec_hash": "24efcb19dffa5cfb860e1604789dbda900111024a1ab7aa79ed4acf386308f22",
+      "snapshot": {
+        "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+        "title": "Read-only reusable browser capability research",
+        "description": "Bounded live UCL integration verification.",
+        "objective": "Identify one existing browser automation candidate through the approved local catalogue and record an honest acquisition observation.",
+        "acceptance_criteria": [
+          "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+          "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+          "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired."
+        ],
+        "specification": {
+          "title": "Read-only reusable browser capability research",
+          "objective": "Identify one existing browser automation candidate through the approved local catalogue and record an honest acquisition observation.",
+          "scope": "Local catalogue research and a bounded local availability check only. No package installation, candidate execution, external changes or grant expansion.",
+          "acceptance_criteria": [
+            "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+            "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+            "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired."
+          ],
+          "suggested_tools": [
+            "capability_library",
+            "file_list",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "researcher"
+          ],
+          "estimated_complexity": "simple",
+          "risks": [
+            "Catalogue entries are unvetted and may be stale; no authority follows from a search result"
+          ]
+        }
+      }
+    },
+    "execution_owner": {
+      "owner_id": "b562b1fe-603c-4914-a1c1-7db65cc7afc5",
+      "pid": 2649,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-15T14:39:54.169Z",
+      "released_at": "2026-11-15T14:41:10.948Z"
+    },
+    "mission_admission": {
+      "version": 1,
+      "mode": "engineering-practice",
+      "missionId": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+      "specHash": "24efcb19dffa5cfb860e1604789dbda900111024a1ab7aa79ed4acf386308f22"
+    },
+    "capability_plane": {
+      "outcome": "observed",
+      "attempts": [
+        {
+          "attempt_id": "4410df2c-8f0a-441e-ad51-6e4edf8792a0",
+          "capability": "missing-browser-renderer",
+          "observation": {
+            "capability": "missing-browser-renderer",
+            "status": "missing",
+            "detail": "capability_library consulted first, per the approved specification, before any network research. Catalogue queried twice: (a) capabilities=[browser.screenshot], need='render an HTML page and produce a PNG screenshot using a local headless browser' -> 10 candidates from 43 examined; (b) capabilities=[browser.automation,browser.screenshot] restricted to kinds=[mcp_server,agent_skill], need='headless chromium or playwright already installed locally on the host for HTML to PNG rendering' -> 3 candidates from 5 examined. Preserved candidate evidence (all trust_state=UNVETTED, execution_authority=false, approved=false): cap_48c31e1ffa04c91de3657e08fe85e980a6c892db puppeteer/puppeteer (browser.automation,browser.screenshot, score 70, https://github.com/puppeteer/puppeteer); cap_ba31bde2dfc28f63582ffedfebd302c295c4fa85 microsoft/playwright-mcp (browser.automation,browser.screenshot,mcp.server, score 111.88 / 61.71, https://github.com/microsoft/playwright-mcp); cap_aaf27143872fdfa660bc5ae0d3ba6baecd43fd0e sensepost/gowitness; cap_f631cd8b61103bf3014815b0ceb8968bccdbc496 opennookorg/screenshot-studio; cap_3fbb0d0462685f17c7ee5a52ebbeb07b49bd094f lightpanda-io/browser; cap_5f1572a7669adcb566d54001eb4fdbd8ebe8d66d lackeyjb/playwright-skill. No hazards were flagged on these rows. Per the catalogue note and the approved acceptance criterion, this metadata is NOT execution authority: it proves a candidate exists in the index and nothing more. Bounded local availability check outcome: this delegation was granted only capability_library, file_list and save_artifact. No shell/runtime execution tool was granted (file_list on /usr/bin returned 'Access denied: path is outside the mission workspace'; workspace listing returned only this delegation's own artifacts). Therefore the prescribed tiny HTML/PNG probe could not be run: no exit status, no PNG signature and no dimensions could be read. A probe script was authored and saved as probe_local_renderer.sh for a future grant holder, but authoring it is not execution and confers no evidence. Per the terminal-status rule, nothing was acquired and no fallback was invented. No package was installed, no host configuration changed, no candidate was executed, no network research was performed, and no grant was expanded. Detail of what a qualified run must still establish: presence of an absolute local renderer path (chromium/google-chrome/headless_shell or a playwright/node install), a successful HTML->PNG render, exit status 0, PNG magic bytes 89 50 4E 47 0D 0A 1A 0A, and declared pixel dimensions."
+          },
+          "artifact_id": "136fac66-6694-4cfd-86a3-1d46d66d8cbf",
+          "artifact_sha256": "04e44307dbee75b1667590e46a645306492ef445a92d9a969f813005902aa3d3",
+          "created_at": "2026-11-15T14:40:49.690Z"
+        }
+      ],
+      "plan_hash": "210ce7357412b661bcc0317584634ae90f0723883bd70fba8332c8dfcb6d04d5"
+    },
+    "execution": {
+      "delegations": [],
+      "models_used": [
+        "deepseek-v4-flash"
+      ],
+      "tools_used": [
+        "capability_library",
+        "file_list",
+        "save_artifact"
+      ],
+      "totals": {
+        "input_tokens": "UNKNOWN",
+        "output_tokens": "UNKNOWN",
+        "total_tokens": "UNKNOWN",
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 29440
+      },
+      "qa_score": 8,
+      "qa_passed": false,
+      "repair_iterations": 0
+    },
+    "execution_adaptations": 0,
+    "candidate": {
+      "epoch_id": "ff2de2a6-52fb-41e8-8030-1412a4ccaa51",
+      "candidate_sha256": "4457e74c88ae8673b5c64ac93e906cff2a839eb9fbdcb588ebb69d60e79a05f3",
+      "repair_iteration": 0,
+      "evidence_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557/state/candidate-evidence/ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369/ff2de2a6-52fb-41e8-8030-1412a4ccaa51.json"
+    },
+    "delegation_tree": {
+      "total_agents": 1,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369:top0",
+          "role": "researcher",
+          "task": "Investigate and acquire a reusable way to provide the missing capability 'missing-browser-renderer'. Reason: Probe the approved UCL acquisition path before web research. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object; keep commands, hashes and probe evidence in detail. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. For a local renderer, a tiny HTML/PNG probe in the mission workspace is sufficient verification when its exit status, PNG signature and dimensions are checked. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "deepseek-v4-flash",
+          "tools_used": [
+            "capability_library",
+            "file_list",
+            "save_artifact"
+          ],
+          "duration_ms": 47568
+        }
+      ]
+    },
+    "qa_gate": {
+      "passed": false,
+      "blockers": [
+        "Missing deliverable (image): criterion requires an image artifact but none is present in the evidence",
+        "FAIL: Capability 'missing-browser-renderer' observation is terminal (missing): capability_library consulted first, per the approved specification, before any network research. Catalogue queried twice: (a) capabilities=[browser.screenshot], need='render an HTML page and produce a PNG screenshot using a local headless browser' -> 10 candidates from 43 examined; (b) capabilities=[browser.automation,browser.screenshot] restricted to kinds=[mcp_server,agent_skill], need='headless chromium or playwright already installed locally on the host for HTML to PNG rendering' -> 3 candidates from 5 examined. Preserved candidate evidence (all trust_state=UNVETTED, execution_authority=false, approved=false): cap_48c31e1ffa04c91de3657e08fe85e980a6c892db puppeteer/puppeteer (browser.automation,browser.screenshot, score 70, https://github.com/puppeteer/puppeteer); cap_ba31bde2dfc28f63582ffedfebd302c295c4fa85 microsoft/playwright-mcp (browser.automation,browser.screenshot,mcp.server, score 111.88 / 61.71, https://github.com/microsoft/playwright-mcp); cap_aaf27143872fdfa660bc5ae0d3ba6baecd43fd0e sensepost/gowitness; cap_f631cd8b61103bf3014815b0ceb8968bccdbc496 opennookorg/screenshot-studio; cap_3fbb0d0462685f17c7ee5a52ebbeb07b49bd094f lightpanda-io/browser; cap_5f1572a7669adcb566d54001eb4fdbd8ebe8d66d lackeyjb/playwright-skill. No hazards were flagged on these rows. Per the catalogue note and the approved acceptance criterion, this metadata is NOT execution authority: it proves a candidate exists in the index and nothing more. Bounded local availability check outcome: this delegation was granted only capability_library, file_list and save_artifact. No shell/runtime execution tool was granted (file_list on /usr/bin returned 'Access denied: path is outside the mission workspace'; workspace listing returned only this delegation's own artifacts). Therefore the prescribed tiny HTML/PNG probe could not be run: no exit status, no PNG signature and no dimensions could be read. A probe script was authored and saved as probe_local_renderer.sh for a future grant holder, but authoring it is not execution and confers no evidence. Per the terminal-status rule, nothing was acquired and no fallback was invented. No package was installed, no host configuration changed, no candidate was executed, no network research was performed, and no grant was expanded. Detail of what a qualified run must still establish: presence of an absolute local renderer path (chromium/google-chrome/headless_shell or a playwright/node install), a successful HTML->PNG render, exit status 0, PNG magic bytes 89 50 4E 47 0D 0A 1A 0A, and declared pixel dimensions.",
+        "Execution plan contains no delegations",
+        "Execution plan contains no delegations"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+          "passed": true,
+          "reason": "capability_library was queried twice for browser.screenshot (43 examined -> 10 candidates; 5 examined -> 3 candidates). Candidate evidence (candidate_id, title, kind, trust_state, hazards, score, capabilities, url) is preserved both verbatim in capability_library_raw_queries.json and summarised inside observation.json's detail field, naming six specific candidates including puppeteer/puppeteer and microsoft/playwright-mcp. This is real, checkable evidence, not a placeholder."
+        },
+        {
+          "criterion": "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+          "passed": true,
+          "reason": "Exactly one observation.json artifact is present (revision 1). It is valid JSON with capability=\"missing-browser-renderer\", status=\"missing\" (within the allowed enum), a substantive detail string, and no acquired field (an optional field, so its absence is compliant). Additional fields (evidence_artifact, probe_script_path, probe_executed, installed_anything, executed_candidate, network_used) are additive bookkeeping, not competing observations."
+        },
+        {
+          "criterion": "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired.",
+          "passed": true,
+          "reason": "Both raw query records carry approved=false and execution_authority=false with an explicit note that UNVETTED rows are research evidence only. The detail field states outright that metadata proves only that a candidate exists in the index and nothing more, records that no exit status, PNG signature or dimensions could be read, and states nothing was acquired and no fallback was invented. No install, no candidate execution, no network use."
+        }
+      ],
+      "llm_score": 8,
+      "llm_passed": true
+    }
+  },
+  "_rev": 8
+}

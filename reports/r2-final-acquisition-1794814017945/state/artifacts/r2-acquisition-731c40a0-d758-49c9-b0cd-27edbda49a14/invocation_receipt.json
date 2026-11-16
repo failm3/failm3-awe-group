@@ -1,0 +1,83 @@
+{
+  "receipt_version": 2,
+  "receipt_kind": "durable_invocation_receipt",
+  "receipt_scope": "final authoritative invocation whose output bytes are the shipped deliverables",
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "capability": "observation-digest-v1",
+  "written_after_run": true,
+  "receipt_written_at": "2026-11-16T07:43:40.579Z",
+  "runtime": {
+    "node_path": "/usr/bin/node",
+    "node_version": "v22.23.3",
+    "platform": "linux",
+    "cwd": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14"
+  },
+  "executable": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs",
+    "declared_sha256": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+    "sha256_before_run": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+    "sha256_after_run": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+    "unchanged_by_run": true,
+    "bytes": 6541,
+    "mtime_before_run": "2026-11-16T07:28:33.163Z",
+    "mtime_after_run": "2026-11-16T07:28:33.163Z",
+    "mtime_unchanged": true
+  },
+  "invocation": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14"
+    ],
+    "argv_sha256": "40b6c0302a418543b327edef1aa3fb9fbb6eaee4216cd4e00b30eb9732877702",
+    "fixed_args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14"
+    ],
+    "fixed_args_sha256": "37612165f80ac3bf3bf7ecf2bc3cd4a0f304956f6c8740f171d426dac2ce4d08",
+    "fixed_args_match_spec": true,
+    "output_dir_arg": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+    "output_dir_is_mission_root": true,
+    "output_dir_is_probe_dir": false,
+    "cwd": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+    "started_at": "2026-11-16T07:43:40.543Z",
+    "completed_at": "2026-11-16T07:43:40.576Z",
+    "duration_ms": 33,
+    "exit_code": 0,
+    "signal": null,
+    "stdout": "wrote /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.json\nwrote /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.md\n",
+    "stderr": ""
+  },
+  "reproduce_command": "/usr/bin/node /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/input/pilot.observations.json /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "reproduce_method": "Run reproduce_command from cwd; output bytes are a pure function of the input fixture and depend on no timestamps or environment.",
+  "input": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/input/pilot.observations.json",
+    "bytes": 474,
+    "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+  },
+  "outputs": [
+    {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.json",
+      "bytes": 467,
+      "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+      "mtime": "2026-11-16T07:43:40.570Z"
+    },
+    {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.md",
+      "bytes": 1290,
+      "sha256": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+      "mtime": "2026-11-16T07:43:40.570Z"
+    }
+  ],
+  "output_mtime_spread_ms": 0,
+  "integrity_notes": [
+    "Executable sha256 was computed before and after the run and equals the declared qualified hash e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db; the procedure file mtime is unchanged, so the run did not modify the pinned capability.",
+    "Output sha256 values were read from disk after the process exited, not taken from the process stdout.",
+    "Both deliverables were written by this single process and share an identical mtime (spread 0 ms), so a copy-then-touch path is excluded for these bytes.",
+    "This receipt postdates both deliverables."
+  ],
+  "known_deviations": [
+    "South completion_percent serializes as JSON number 100 rather than the token 100.00. This is inherent to the immutable pinned procedure (JSON.stringify drops trailing zeros in numeric literals). The numeric value is exact; digest.md renders 100.00. The procedure may not be modified, so this is recorded as a bounded, non-substantive serialization deviation, not an open failure."
+  ]
+}

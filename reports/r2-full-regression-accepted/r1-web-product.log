@@ -1,0 +1,171 @@
+TAP version 13
+# Subtest: real sandbox/Chromium accept an independently authored finite product and bind evidence
+ok 1 - real sandbox/Chromium accept an independently authored finite product and bind evidence
+  ---
+  duration_ms: 1609.143445
+  type: 'test'
+  ...
+# Subtest: real interactions reject missing persistence, filter, deletion, completion and literal rendering
+    # Subtest: persistence
+    ok 1 - persistence
+      ---
+      duration_ms: 1395.150739
+      type: 'test'
+      ...
+    # Subtest: filter
+    ok 2 - filter
+      ---
+      duration_ms: 1266.93701
+      type: 'test'
+      ...
+    # Subtest: deletion
+    ok 3 - deletion
+      ---
+      duration_ms: 1465.265448
+      type: 'test'
+      ...
+    # Subtest: completion
+    ok 4 - completion
+      ---
+      duration_ms: 1315.206278
+      type: 'test'
+      ...
+    # Subtest: literal text
+    ok 5 - literal text
+      ---
+      duration_ms: 1375.430623
+      type: 'test'
+      ...
+    # Subtest: blank validation
+    ok 6 - blank validation
+      ---
+      duration_ms: 1304.167653
+      type: 'test'
+      ...
+    1..6
+ok 2 - real interactions reject missing persistence, filter, deletion, completion and literal rendering
+  ---
+  duration_ms: 8123.676577
+  type: 'test'
+  ...
+# Subtest: syntax verifier rejects unused broken JS; browser catches inline syntax and runtime errors
+    # Subtest: unused JS parsed by real sandboxed node
+    ok 1 - unused JS parsed by real sandboxed node
+      ---
+      duration_ms: 218.544108
+      type: 'test'
+      ...
+    # Subtest: inline syntax
+    ok 2 - inline syntax
+      ---
+      duration_ms: 1207.658668
+      type: 'test'
+      ...
+    # Subtest: runtime
+    ok 3 - runtime
+      ---
+      duration_ms: 1375.036604
+      type: 'test'
+      ...
+    1..3
+ok 3 - syntax verifier rejects unused broken JS; browser catches inline syntax and runtime errors
+  ---
+  duration_ms: 2802.341072
+  type: 'test'
+  ...
+# Subtest: URL contract rejects literals, encoded DOM links and computed fetch without external network
+    # Subtest: dead literal
+    ok 1 - dead literal
+      ---
+      duration_ms: 2.196284
+      type: 'test'
+      ...
+    # Subtest: HTML entity encoded external link
+    ok 2 - HTML entity encoded external link
+      ---
+      duration_ms: 1356.265325
+      type: 'test'
+      ...
+    # Subtest: computed external fetch is CSP blocked
+    ok 3 - computed external fetch is CSP blocked
+      ---
+      duration_ms: 1254.765829
+      type: 'test'
+      ...
+    1..3
+ok 4 - URL contract rejects literals, encoded DOM links and computed fetch without external network
+  ---
+  duration_ms: 2613.820187
+  type: 'test'
+  ...
+# Subtest: missing local resources, inaccessible controls and horizontal overflow fail
+    # Subtest: missing stylesheet
+    ok 1 - missing stylesheet
+      ---
+      duration_ms: 1186.3236
+      type: 'test'
+      ...
+    # Subtest: inaccessible input label
+    ok 2 - inaccessible input label
+      ---
+      duration_ms: 1415.309568
+      type: 'test'
+      ...
+    # Subtest: mobile overflow
+    ok 3 - mobile overflow
+      ---
+      duration_ms: 1614.217618
+      type: 'test'
+      ...
+    1..3
+ok 5 - missing local resources, inaccessible controls and horizontal overflow fail
+  ---
+  duration_ms: 4216.460636
+  type: 'test'
+  ...
+# Subtest: artifact scope fails closed for links, missing entry, oversized files and wrong root
+    # Subtest: symlink
+    ok 1 - symlink
+      ---
+      duration_ms: 2.553514
+      type: 'test'
+      ...
+    # Subtest: missing index
+    ok 2 - missing index
+      ---
+      duration_ms: 2.100676
+      type: 'test'
+      ...
+    # Subtest: oversized
+    ok 3 - oversized
+      ---
+      duration_ms: 3.955231
+      type: 'test'
+      ...
+    # Subtest: hardlink
+    ok 4 - hardlink
+      ---
+      duration_ms: 1.840554
+      type: 'test'
+      ...
+    1..4
+ok 6 - artifact scope fails closed for links, missing entry, oversized files and wrong root
+  ---
+  duration_ms: 11.317547
+  type: 'test'
+  ...
+# Subtest: unavailable browser is BLOCKED, never an accepted or silently skipped control
+ok 7 - unavailable browser is BLOCKED, never an accepted or silently skipped control
+  ---
+  duration_ms: 140.166233
+  type: 'test'
+  ...
+1..7
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 19523.848078

@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: production specialist durably marks model and actual tool boundaries in order
+ok 1 - production specialist durably marks model and actual tool boundaries in order
+  ---
+  duration_ms: 15.047959
+  type: 'test'
+  ...
+# Subtest: failed durable model marker prevents Agent.generate completely
+ok 2 - failed durable model marker prevents Agent.generate completely
+  ---
+  duration_ms: 2.890042
+  type: 'test'
+  ...
+# Subtest: failed durable tool marker prevents raw artifact bytes and metadata
+ok 3 - failed durable tool marker prevents raw artifact bytes and metadata
+  ---
+  duration_ms: 2.785333
+  type: 'test'
+  ...
+# Subtest: real manager + production specialist + artifact tool persist intent before model execution
+ok 4 - real manager + production specialist + artifact tool persist intent before model execution
+  ---
+  duration_ms: 27.267081
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 52.35648

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+  "generation": 1,
+  "status": "provisional",
+  "receipt": {
+    "solverId": "coder",
+    "scope": "delimited-text-recovery",
+    "specHash": "7aa73a077263e8a6801ff4605e028992c5d585dce5d67c2c2d2f18c1b73b5c8d",
+    "capabilityHash": "98914a1ac8365b1cedfa31aad9b1705936e57566b9cb5e4ce09ad7b9ae4110cb",
+    "profileHash": "b1c8d071c46d3704a282149f619746900c2b5c1169a252461272519715248c69",
+    "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+    "receiptId": "r2-memory-transfer-1794781064860-receipt",
+    "issuer": "independent-host-tests",
+    "evidenceHash": "37f77ac8008a534dd3b99dc071649d7c8eb3fa649533aa08797517076ae10513",
+    "evidenceRefs": [
+      "f7466f33-3a19-48ba-b48b-c2d38427f290",
+      "a2219908-4e5d-4a80-a189-603c6485a058"
+    ],
+    "issuedAt": 1794781154956,
+    "expiresAt": 1794784754956
+  },
+  "receipts": [
+    {
+      "solverId": "coder",
+      "scope": "delimited-text-recovery",
+      "specHash": "7aa73a077263e8a6801ff4605e028992c5d585dce5d67c2c2d2f18c1b73b5c8d",
+      "capabilityHash": "98914a1ac8365b1cedfa31aad9b1705936e57566b9cb5e4ce09ad7b9ae4110cb",
+      "profileHash": "b1c8d071c46d3704a282149f619746900c2b5c1169a252461272519715248c69",
+      "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+      "receiptId": "r2-memory-transfer-1794781064860-receipt",
+      "issuer": "independent-host-tests",
+      "evidenceHash": "37f77ac8008a534dd3b99dc071649d7c8eb3fa649533aa08797517076ae10513",
+      "evidenceRefs": [
+        "f7466f33-3a19-48ba-b48b-c2d38427f290",
+        "a2219908-4e5d-4a80-a189-603c6485a058"
+      ],
+      "issuedAt": 1794781154956,
+      "expiresAt": 1794784754956
+    }
+  ],
+  "admissions": [
+    {
+      "solverId": "coder",
+      "scope": "delimited-text-recovery",
+      "specHash": "7aa73a077263e8a6801ff4605e028992c5d585dce5d67c2c2d2f18c1b73b5c8d",
+      "capabilityHash": "98914a1ac8365b1cedfa31aad9b1705936e57566b9cb5e4ce09ad7b9ae4110cb",
+      "profileHash": "b1c8d071c46d3704a282149f619746900c2b5c1169a252461272519715248c69",
+      "admissionId": "f54a6e3a-5f82-477c-826b-c9f05dbbf925",
+      "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+      "receiptId": "r2-memory-transfer-1794781064860-receipt",
+      "generation": 1,
+      "admittedAt": 1794781154982,
+      "expiresAt": 1794784754956
+    },
+    {
+      "solverId": "coder",
+      "scope": "delimited-text-recovery",
+      "specHash": "7aa73a077263e8a6801ff4605e028992c5d585dce5d67c2c2d2f18c1b73b5c8d",
+      "capabilityHash": "98914a1ac8365b1cedfa31aad9b1705936e57566b9cb5e4ce09ad7b9ae4110cb",
+      "profileHash": "b1c8d071c46d3704a282149f619746900c2b5c1169a252461272519715248c69",
+      "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+      "admissionId": "45938671-6fd8-4ceb-9520-a73c26f44573",
+      "receiptId": "r2-memory-transfer-1794781064860-receipt",
+      "generation": 1,
+      "admittedAt": 1794781267045,
+      "expiresAt": 1794784754956
+    }
+  ],
+  "transitions": [
+    {
+      "generation": 1,
+      "status": "provisional",
+      "at": 1794781154959,
+      "principal": "independent-host-tests",
+      "reason": "independent qualification"
+    }
+  ]
+}

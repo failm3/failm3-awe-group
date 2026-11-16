@@ -1,0 +1,39 @@
+=== baseline captured ===
+2026-11-16T11:59:56Z
+--- mtimes (ns) baseline ---
+digest.json | mtime=2026-11-16 11:47:04.630535313 +0000
+digest.md | mtime=2026-11-16 11:47:04.638535299 +0000
+invocation-receipt.json | mtime=2026-11-16 11:47:48.490460953 +0000
+verification/independent-verification.md | mtime=2026-11-16 11:49:42.898268367 +0000
+verification/independent-verification.json | mtime=2026-11-16 11:48:59.490342477 +0000
+observation.json | mtime=2026-11-16 11:41:00.531963258 +0000
+artifact-registration.json | mtime=2026-11-16 11:50:47.774157493 +0000
+qa-summary.md | mtime=2026-11-16 11:51:34.874077654 +0000
+bin/observation-digest-v1.js | mtime=2026-11-16 11:38:57.417845138 +0000
+input/pilot.observations.json | mtime=2026-11-16 11:35:29.734030485 +0000
+--- sha256 baseline ---
+571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599  digest.json
+cfbdcf29070d8c958529740c803d2ce91d0bf4f9b4d8a770d9192dfdd60599e8  digest.md
+9867178166f3a2d82c6710ca62091913b768ed2690bf7731e5ed1be7a4af586f  invocation-receipt.json
+5a345a73549476ee3250328bf87a1211c7245412f6dd64aace3669fe93e3bbec  verification/independent-verification.json
+16c154ddb8ac11f46666cfe46c02aa3234fee2727fe27c5680c673ae6e5cfa20  verification/independent-verification.md
+de1ff635cba1c9a38ef4bec84b189270fd2b6054a2f305e9d15bf09e74af5824  observation.json
+45754c51a17e8a5609a2b4b614ddfdbe7ce79135b21d232af18bd6d12938cfe9  artifact-registration.json
+37812f0e20de3bcb71689b2c50e79d21ad6d9de87c970758723e44ec8adb7ae4  qa-summary.md
+8daae21f0617c3ac4e1e178344ff8e1f10be46331bd10d245a302ad1574e6017  bin/observation-digest-v1.js
+412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766  input/pilot.observations.json
+--- bytes/chars baseline ---
+digest.json bytes=477 chars=477
+digest.md bytes=1516 chars=1514
+invocation-receipt.json bytes=5920 chars=5920
+verification/independent-verification.json bytes=13535 chars=13535
+verification/independent-verification.md bytes=10412 chars=10241
+observation.json bytes=3451 chars=3451
+qa-summary.md bytes=14105 chars=13969
+--- non-ascii census digest.md (em dash etc) ---
+digest.md bytes 1516 chars 1514 multi-byte chars 1 extra bytes 2
+   Counter({'—': 1})
+verification/independent-verification.md bytes 10412 chars 10241 multi-byte chars 91 extra bytes 171
+   Counter({'✅': 45, '—': 15, '×': 9, '…': 8, '→': 6, '≥': 2, '≠': 2, '❌': 2, '÷': 1, 'Σ': 1})
+qa-summary.md bytes 14105 chars 13969 multi-byte chars 73 extra bytes 136
+   Counter({'—': 22, '✅': 20, '→': 13, '·': 6, '≥': 3, '§': 3, '…': 2, '❌': 2, 'Σ': 1, '–': 1})

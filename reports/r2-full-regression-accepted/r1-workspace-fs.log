@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: descriptor file operations deny parent replacement, final links and hardlink aliases
+ok 1 - descriptor file operations deny parent replacement, final links and hardlink aliases
+  ---
+  duration_ms: 17.067229
+  type: 'test'
+  ...
+# Subtest: file reads are bounded and reject special files; list checks cancellation
+ok 2 - file reads are bounded and reject special files; list checks cancellation
+  ---
+  duration_ms: 1.91106
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 28.208462

@@ -1,0 +1,32 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-13T23:16:34.986Z",
+  "finished_at": "2026-11-13T23:17:04.954Z",
+  "suites": [
+    {
+      "suite": "src/tests/r1-mission-admission.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 5381
+    },
+    {
+      "suite": "src/tests/r1-p1-ledger-evaluation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 945
+    },
+    {
+      "suite": "src/tests/r0-runtime-manager.test.ts",
+      "passed": false,
+      "exit_code": 1,
+      "signal": null,
+      "duration_ms": 23641
+    }
+  ],
+  "passed": 2,
+  "failed": 1
+}

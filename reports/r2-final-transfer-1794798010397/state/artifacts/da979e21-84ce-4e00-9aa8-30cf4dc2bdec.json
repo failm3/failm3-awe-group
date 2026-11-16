@@ -1,0 +1,13 @@
+{
+  "id": "da979e21-84ce-4e00-9aa8-30cf4dc2bdec",
+  "mission_id": "r2-final-transfer-1794798010397-t33-on",
+  "type": "file",
+  "name": "core/decoder.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t33-on/core/decoder.cjs",
+  "created_at": "2026-11-16T06:50:03.474Z",
+  "metadata": {
+    "size_bytes": 5885,
+    "sha256": "6a9233bebabad0c52448188c9acf012e5c2dfe2acf523c00097a811a02b23776",
+    "revision": 3
+  }
+}

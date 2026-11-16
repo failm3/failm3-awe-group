@@ -1,0 +1,13 @@
+{
+  "id": "9460c058-b6c6-497d-a7e6-6019618e8f06",
+  "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "type": "file",
+  "name": "mission-report.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/mission-report.md",
+  "created_at": "2026-11-16T06:47:07.682Z",
+  "metadata": {
+    "size_bytes": 20730,
+    "sha256": "b7023cf94dc480d63c1c47a707642f0d272df893c3efdf064eb1ecb359bd6a3b",
+    "revision": 1
+  }
+}

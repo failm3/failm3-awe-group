@@ -1,0 +1,28 @@
+{
+  "test": "write-scope and determinism",
+  "output_dir_used": "a fresh temp dir OUTSIDE the mission root (created and removed inside one shell call)",
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "files_written_to_cwd": [],
+  "files_written_to_output_dir": [
+    "digest.json",
+    "digest.md"
+  ],
+  "files_written_outside_output_dir": [],
+  "writes_outside_artifact_root_count": 0,
+  "mission_artifact_root_unchanged_by_rerun": true,
+  "determinism": {
+    "digest.json": {
+      "rerun_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+      "delivered_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+      "byte_identical": true
+    },
+    "digest.md": {
+      "rerun_sha256": "ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef",
+      "delivered_sha256": "ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef",
+      "byte_identical": true
+    }
+  },
+  "static_audit": "grep of procedures/observation-digest-v1.js: writes only via fs.mkdirSync/fs.writeFileSync under the resolved output-dir argument at lines 223-225; no child_process, no network modules, no writes to the input path or script directory; validation failures call fail() which exits 2 before any write.",
+  "pass": true
+}

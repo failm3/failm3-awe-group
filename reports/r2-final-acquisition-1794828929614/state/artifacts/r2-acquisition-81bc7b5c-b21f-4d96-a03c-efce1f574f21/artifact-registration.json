@@ -1,0 +1,140 @@
+{
+  "record": "artifact_registration",
+  "record_version": "1.0",
+  "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "workspace": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "registered_at_session": "close-out delegation (post-execution, post-verification)",
+  "registration_method": "save_artifact",
+  "sha256_support": {
+    "host_returned_sha256_available": false,
+    "detail": "save_artifact returned artifact_id, path and success for every registration, but no sha256 field. No shell and no hashing facility were exposed in this session, so no worker-side recomputation of any sha256 was possible either.",
+    "consequence": "The sha256 values recorded below for digest.json and digest.md are the values the qualified procedure itself reported at run time from the bytes it had just written. They are NOT an independent recomputation by this agent. The verification actually performed here is byte-size equality plus full content equality across the registration write, which is stated per artifact rather than presented as a hash check."
+  },
+  "artifacts": [
+    {
+      "name": "digest.json",
+      "role": "primary deliverable - exact operational digest, machine-readable",
+      "artifact_id": "07dbba0c-e33e-4d4e-ad0d-c86b3d4c3cbd",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/digest.json",
+      "bytes_before_registration": 477,
+      "bytes_after_registration": 477,
+      "bytes_unchanged": true,
+      "content_identical_after_registration": true,
+      "sha256": "571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599",
+      "sha256_provenance": "reported by the qualified procedure observation-digest-v1 at invocation time from the bytes it had just written; not recomputed in this session",
+      "produced_by": "qualified procedure invocation, attempt c38a40ad-d8b7-4de2-b4f6-57d4155f4e14, exit 0",
+      "post_hoc_edit_detected": false,
+      "conformance": {
+        "row_count_numeric": 3,
+        "scheduled_numeric": 30,
+        "completed_numeric": 26,
+        "incidents_numeric": 6,
+        "completion_percent_numeric": 86.67,
+        "completion_percent_lexically_2dp": true,
+        "sites_is_object_keyed_by_site": true,
+        "site_keys": ["North", "South"]
+      }
+    },
+    {
+      "name": "digest.md",
+      "role": "primary deliverable - human-readable digest with reproducible method",
+      "artifact_id": "8802926a-175f-4f9d-8563-2145ec8ba6d1",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/digest.md",
+      "bytes_before_registration": 1514,
+      "bytes_after_registration": 1514,
+      "bytes_unchanged": true,
+      "content_identical_after_registration": true,
+      "sha256": "cfbdcf29070d8c958529740c803d2ce91d0bf4f9b4d8a770d9192dfdd60599e8",
+      "sha256_provenance": "reported by the qualified procedure observation-digest-v1 at invocation time from the bytes it had just written; not recomputed in this session",
+      "produced_by": "qualified procedure invocation, attempt c38a40ad-d8b7-4de2-b4f6-57d4155f4e14, exit 0",
+      "post_hoc_edit_detected": false,
+      "conformance": {
+        "totals_parity_with_json": true,
+        "site_rows_parity_with_json": true,
+        "method_section_present": true,
+        "method_elements_present": 4,
+        "method_elements_required": 5,
+        "missing_element": "fixture path (deficiency D1)",
+        "south_percent_lexeme": "100.00"
+      }
+    },
+    {
+      "name": "invocation-receipt.json",
+      "role": "durable invocation receipt (acceptance criterion 2)",
+      "artifact_id": "54b2eedb-9eb9-410a-97e5-6e719a93dff8",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/invocation-receipt.json",
+      "bytes_after_registration": 5920,
+      "content_identical_after_registration": true,
+      "sha256": null,
+      "sha256_note": "no sha256 was reported for this file by any agent and none could be computed in this session; the receipt is content-verified, not hash-verified",
+      "key_fields": {
+        "attempt_id": "c38a40ad-d8b7-4de2-b4f6-57d4155f4e14",
+        "capability": "observation-digest-v1",
+        "gate_mediated": true,
+        "invocation_count": 1,
+        "exit_code": 0,
+        "stderr": "",
+        "executable_sha256": "8daae21f0617c3ac4e1e178344ff8e1f10be46331bd10d245a302ad1574e6017",
+        "fixed_args": [
+          "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/input/pilot.observations.json",
+          "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21"
+        ],
+        "probe_output_used_as_final_output": false
+      }
+    },
+    {
+      "name": "verification/independent-verification.json",
+      "role": "independent verification report, structured (acceptance criterion 4)",
+      "artifact_id": "8b07b548-4591-4407-9756-5c840fdf4c9f",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/verification/independent-verification.json",
+      "bytes_before_registration": 13535,
+      "bytes_after_registration": 13535,
+      "bytes_unchanged": true,
+      "content_identical_after_registration": true,
+      "sha256": null,
+      "sha256_note": "no sha256 was reported for this file by any agent and none could be computed in this session; content-verified only",
+      "verifier": "independent data-analyst role",
+      "verdict": "PASS",
+      "analyst_independent_arithmetic_pass": true
+    },
+    {
+      "name": "verification/independent-verification.md",
+      "role": "independent verification report, human-readable",
+      "artifact_id": "e1fc6aec-e3b7-44ba-8830-e6136c220840",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/verification/independent-verification.md",
+      "bytes_before_registration": 10241,
+      "bytes_after_registration": 10241,
+      "bytes_unchanged": true,
+      "content_identical_after_registration": true,
+      "sha256": null,
+      "sha256_note": "no sha256 was reported for this file by any agent and none could be computed in this session; content-verified only",
+      "verdict": "PASS"
+    }
+  ],
+  "not_registered_as_deliverables": {
+    "probe_artifacts": {
+      "paths": ["probe/", "probe/neg/", "probe/neg/out_zero/"],
+      "reason": "acquisition probe and negative-test evidence only; the specification forbids using a probe output directory as the final output. Deliberately excluded from the deliverable set.",
+      "existing_artifact_id": "199893ec-5515-4719-b4de-c3220a23742d"
+    },
+    "observation_json": {
+      "path": "observation.json",
+      "reason": "capability-acquisition declaration; upstream evidence for criterion 1, not one of the four named deliverables"
+    }
+  },
+  "chain_of_custody": {
+    "digest_bytes_authored_by_this_agent": false,
+    "digest_bytes_regenerated_by_hand": false,
+    "registration_wrote_same_paths": true,
+    "registration_write_altered_digest_bytes": false,
+    "evidence_for_no_alteration": "full content re-read after registration is identical to the pre-registration read, and byte sizes 477 / 1514 / 5920 / 13535 / 10241 are unchanged for every file",
+    "deliverable_files_cross_checked_against_procedure_output": true,
+    "procedure_output_values": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": 86.67
+    }
+  }
+}

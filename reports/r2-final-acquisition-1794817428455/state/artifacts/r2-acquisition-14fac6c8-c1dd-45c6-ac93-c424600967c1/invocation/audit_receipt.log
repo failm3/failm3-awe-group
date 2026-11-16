@@ -1,0 +1,72 @@
+PASS  deliverable digest.json sha256 matches file
+PASS  deliverable digest.json byte size matches
+PASS  deliverable digest.json inode matches
+PASS  deliverable digest.md sha256 matches file
+PASS  deliverable digest.md byte size matches
+PASS  deliverable digest.md inode matches
+PASS  capture invocation/preflight_source.sha256.txt exists
+PASS  capture invocation/preflight_source.sha256.txt sha256
+PASS  capture invocation/argv.json exists
+PASS  capture invocation/argv.json sha256
+PASS  capture invocation/argv_compact.txt exists
+PASS  capture invocation/argv_compact.txt sha256
+PASS  capture invocation/argv.sha256.txt exists
+PASS  capture invocation/argv.sha256.txt sha256
+PASS  capture invocation/start_utc.txt exists
+PASS  capture invocation/start_utc.txt sha256
+PASS  capture invocation/end_utc.txt exists
+PASS  capture invocation/end_utc.txt sha256
+PASS  capture invocation/duration_seconds.txt exists
+PASS  capture invocation/duration_seconds.txt sha256
+PASS  capture invocation/exit_code.txt exists
+PASS  capture invocation/exit_code.txt sha256
+PASS  capture invocation/stdout.txt exists
+PASS  capture invocation/stdout.txt sha256
+PASS  capture invocation/outputs.sha256.txt exists
+PASS  capture invocation/outputs.sha256.txt sha256
+PASS  procedure sha256_at_invocation matches on-disk source
+PASS  procedure unchanged at/after invocation
+PASS  post-invocation re-hash of source equals receipt value
+PASS  fixture unchanged
+PASS  argv has exactly 2 elements
+PASS  argv[0] is <root>/input/pilot.observations.json
+PASS  argv[1] is exactly <root>
+PASS  argv[1] is not the probe dir
+PASS  argv sha256 reproducible from receipt's own argv
+PASS  argv sha256 equals qualification receipt value
+PASS  preflight observed == qualified source sha256
+PASS  gate match flag true
+PASS  gate was not triggered (no mismatch)
+PASS  all three gates match
+PASS  exit code 0
+PASS  exit_code capture file agrees
+PASS  stderr empty
+PASS  stdout names root digest.json
+PASS  stdout names root digest.md
+PASS  stdout does not name the probe dir
+PASS  single attempt, no retry
+PASS  receipt row_count mirrors digest.json
+PASS  receipt scheduled mirrors digest.json
+PASS  receipt completed mirrors digest.json
+PASS  receipt incidents mirrors digest.json
+PASS  receipt completion_percent mirrors digest.json
+PASS  receipt sites mirror digest.json sites
+PASS  row_count numeric and exact 3
+PASS  scheduled numeric and exact 30
+PASS  completed numeric and exact 26
+PASS  incidents numeric and exact 6
+PASS  completion_percent 2dp numeric 86.67
+PASS  sites keys are North/South
+PASS  root inodes distinct from probe inodes
+PASS  probe digest.json unmodified by this step
+PASS  probe digest.md unmodified by this step
+PASS  probe not used as final output
+PASS  no writes outside mission root
+PASS  input fixture unmodified
+PASS  no network
+PASS  no packages
+PASS  no publishing/deployment
+PASS  no external changes
+
+receipt_audit_checks=69 failures=0
+VERDICT: RECEIPT_AUDIT_CLEAN

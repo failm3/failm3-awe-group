@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "call_id": "6052c784-9b0a-43a2-9f05-a054459373c1",
+  "mission_id": "r2-final-transfer-1794798010397-t01-off",
+  "role": "coder",
+  "model": "claude-fable-5-2",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T03:06:41.397Z",
+  "finished_at": "2026-11-16T03:10:43.468Z",
+  "status": "unknown",
+  "outcome": "UNKNOWN",
+  "usage": {
+    "input_tokens": 48360,
+    "output_tokens": 19919,
+    "total_tokens": 68279,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 15370
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  },
+  "reason": "provider_aborted"
+}

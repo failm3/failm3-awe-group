@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "criterion": "row_count/scheduled/completed/incidents/completion_percent are JSON numbers, not strings",
+      "status": "PASS",
+      "detail": "types: row_count=int, scheduled=int, completed=int, incidents=int, completion_percent=float"
+    },
+    {
+      "criterion": "global completion_percent has exactly two decimal places in digest.json",
+      "status": "PASS",
+      "detail": "literal token in JSON: 86.67"
+    },
+    {
+      "criterion": "ADVISORY: every per-site completion_percent also renders with two decimals",
+      "status": "FAIL",
+      "detail": "per-site literal tokens: 81.82, 100"
+    },
+    {
+      "criterion": "sites is a JSON object keyed by site name",
+      "status": "PASS",
+      "detail": "keys=['North', 'South']"
+    },
+    {
+      "criterion": "per-site totals sum to the global totals",
+      "status": "PASS",
+      "detail": "site sums={'scheduled': 30, 'completed': 26, 'incidents': 6, 'rows': 3} vs global scheduled=30 completed=26 incidents=6 row_count=3"
+    },
+    {
+      "criterion": "completion_percent equals completed/scheduled rounded to two decimals",
+      "status": "PASS",
+      "detail": "26/30*100 = 86.67, file says 86.67"
+    },
+    {
+      "criterion": "digest.json matches the independent reduction on every number",
+      "status": "PASS",
+      "detail": "all fields equal"
+    },
+    {
+      "criterion": "digest.md states the identical global values",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "criterion": "digest.md per-site table rows match digest.json exactly",
+      "status": "PASS",
+      "detail": "all site rows match"
+    },
+    {
+      "criterion": "digest.md documents a reproducible method",
+      "status": "PASS",
+      "detail": "contains '## Method' section and a 'Reproduce with' command line"
+    }
+  ],
+  "digest_json": {
+    "source": "Lumen Harbor field pilot",
+    "period": "2026-W45",
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": 81.82
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": 100
+      }
+    }
+  },
+  "independent": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67"
+  },
+  "independent_sites": {
+    "North": {
+      "rows": 2,
+      "scheduled": 22,
+      "completed": 18,
+      "incidents": 5,
+      "completion_percent": "81.82"
+    },
+    "South": {
+      "rows": 1,
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1,
+      "completion_percent": "100.00"
+    }
+  },
+  "md_expected_rows": [
+    "| North | 2 | 22 | 18 | 5 | 81.82 |",
+    "| South | 1 | 8 | 8 | 1 | 100.00 |"
+  ],
+  "failures": [
+    "ADVISORY: every per-site completion_percent also renders with two decimals"
+  ]
+}

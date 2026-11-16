@@ -1,0 +1,14 @@
+{
+  "id": "830be3db-ed95-45f4-8f3d-5b8ebf42f5e1",
+  "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+  "type": "json",
+  "name": "work/qual/fixtures/bad.empty_rows.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.empty_rows.json",
+  "created_at": "2026-11-16T05:39:45.674Z",
+  "metadata": {
+    "size_bytes": 20,
+    "sha256": "04c680c2b49c43176a3403c60c4bfb6ce2d6ba34abd010d780ccb3e8a66183b4",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "f9320818-2da3-44b6-a7bf-79a88e5afb3f",
+  "mission_id": "r2-experience-reuse-1794858271974-t12-on",
+  "type": "file",
+  "name": "conformance.local.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t12-on/conformance.local.cjs",
+  "created_at": "2026-11-16T20:05:57.303Z",
+  "metadata": {
+    "size_bytes": 6339,
+    "sha256": "fcad014b31b7f213c169dc3589b4133bd10e057a534c04c2fb3a9a75f6188803",
+    "revision": 1
+  }
+}

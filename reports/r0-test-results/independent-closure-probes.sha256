@@ -1,0 +1,4 @@
+0990b611e90f939ef63c63d79b516db8ddd29d36e939eb6d900dbda068644d48  reports/r0-test-results/final-independent-qa/empty-acceptance-criteria.json
+934b9aa6a0148c93e6c28d15cc0da851b2d9a3ef68227a1528d2429976366fdd  reports/r0-test-results/final-independent-qa/failed-repair-terminalization-isolated.json
+34969b1b76277e0fbc60c4c17fbb7bf962613e876e9028d864014370993aaffd  reports/r0-test-results/final-independent-qa/failed-repair-terminalization.json
+d646169c1c6acefcede6e715bfee1002146cab8ad5ee1af40022dcfbd2e21e21  reports/r0-test-results/final-independent-qa/resume-repeat-and-corrupt-checkpoint.json

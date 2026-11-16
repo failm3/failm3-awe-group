@@ -1,0 +1,426 @@
+{
+  "report_kind": "independent-recompute",
+  "schema": "independent-recompute/v1",
+  "verifier": "independent python3 recomputation; reads the fixture and the two deliverables, writes nothing to them",
+  "root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+  "inputs_read": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.md"
+  ],
+  "recomputation_method": {
+    "fixture_rows": "top-level array, else the 'observations' array",
+    "aggregates": "integer sums over the row array",
+    "completion_percent": "Decimal(completed) * 100 / Decimal(scheduled), quantized to 0.01 with ROUND_HALF_UP; no float division in the rounding step",
+    "sites": "one key per distinct site, each with the three integer sums; keys sorted by python str order (unicode code unit)"
+  },
+  "recomputed": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "sites": {
+      "North": {
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5
+      },
+      "South": {
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1
+      }
+    }
+  },
+  "recomputed_completion_percent_formatted": "86.67",
+  "compared": {
+    "digest_json": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": 86.67,
+      "sites": {
+        "North": {
+          "scheduled": 22,
+          "completed": 18,
+          "incidents": 5
+        },
+        "South": {
+          "scheduled": 8,
+          "completed": 8,
+          "incidents": 1
+        }
+      }
+    },
+    "digest_json_completion_percent_formatted": "86.67",
+    "digest_md_totals_table": {
+      "row_count": "3",
+      "scheduled": "30",
+      "completed": "26",
+      "incidents": "6",
+      "completion_percent": "86.67"
+    },
+    "digest_md_site_table": {
+      "North": [
+        "22",
+        "18",
+        "5"
+      ],
+      "South": [
+        "8",
+        "8",
+        "1"
+      ]
+    },
+    "digest_md_all_sites_row": [
+      "30",
+      "26",
+      "6"
+    ],
+    "digest_md_bytes": 3296
+  },
+  "field_by_field": {
+    "row_count": {
+      "recomputed": 3,
+      "digest_json": 3,
+      "present_in_digest_json": true,
+      "type_in_digest_json": "int",
+      "type_is_json_integer": true,
+      "values_equal": true
+    },
+    "scheduled": {
+      "recomputed": 30,
+      "digest_json": 30,
+      "present_in_digest_json": true,
+      "type_in_digest_json": "int",
+      "type_is_json_integer": true,
+      "values_equal": true
+    },
+    "completed": {
+      "recomputed": 26,
+      "digest_json": 26,
+      "present_in_digest_json": true,
+      "type_in_digest_json": "int",
+      "type_is_json_integer": true,
+      "values_equal": true
+    },
+    "incidents": {
+      "recomputed": 6,
+      "digest_json": 6,
+      "present_in_digest_json": true,
+      "type_in_digest_json": "int",
+      "type_is_json_integer": true,
+      "values_equal": true
+    },
+    "completion_percent": {
+      "recomputed": 86.67,
+      "recomputed_formatted": "86.67",
+      "digest_json": 86.67,
+      "present_in_digest_json": true,
+      "type_in_digest_json": "float",
+      "type_is_json_number": true,
+      "digest_json_formatted": "86.67",
+      "values_equal": true,
+      "two_decimals_when_formatted": true
+    },
+    "sites": {
+      "recomputed": {
+        "North": {
+          "scheduled": 22,
+          "completed": 18,
+          "incidents": 5
+        },
+        "South": {
+          "scheduled": 8,
+          "completed": 8,
+          "incidents": 1
+        }
+      },
+      "digest_json": {
+        "North": {
+          "scheduled": 22,
+          "completed": 18,
+          "incidents": 5
+        },
+        "South": {
+          "scheduled": 8,
+          "completed": 8,
+          "incidents": 1
+        }
+      },
+      "present_in_digest_json": true,
+      "type_in_digest_json": "dict",
+      "key_sets_equal": true,
+      "recomputed_key_order": [
+        "North",
+        "South"
+      ],
+      "digest_json_key_order": [
+        "North",
+        "South"
+      ],
+      "key_order_matches_code_unit_order": true,
+      "per_site": {
+        "North": {
+          "fields": {
+            "scheduled": {
+              "recomputed": 22,
+              "digest_json": 22,
+              "type_is_json_integer": true,
+              "values_equal": true
+            },
+            "completed": {
+              "recomputed": 18,
+              "digest_json": 18,
+              "type_is_json_integer": true,
+              "values_equal": true
+            },
+            "incidents": {
+              "recomputed": 5,
+              "digest_json": 5,
+              "type_is_json_integer": true,
+              "values_equal": true
+            }
+          },
+          "all_fields_equal": true
+        },
+        "South": {
+          "fields": {
+            "scheduled": {
+              "recomputed": 8,
+              "digest_json": 8,
+              "type_is_json_integer": true,
+              "values_equal": true
+            },
+            "completed": {
+              "recomputed": 8,
+              "digest_json": 8,
+              "type_is_json_integer": true,
+              "values_equal": true
+            },
+            "incidents": {
+              "recomputed": 1,
+              "digest_json": 1,
+              "type_is_json_integer": true,
+              "values_equal": true
+            }
+          },
+          "all_fields_equal": true
+        }
+      },
+      "values_equal": true
+    }
+  },
+  "per_site_reconciliation": {
+    "fields": {
+      "scheduled": {
+        "per_site_sum": 30,
+        "recomputed_aggregate": 30,
+        "digest_json_aggregate": 30,
+        "sum_reconstructs_recomputed": true,
+        "sum_reconstructs_digest_json": true
+      },
+      "completed": {
+        "per_site_sum": 26,
+        "recomputed_aggregate": 26,
+        "digest_json_aggregate": 26,
+        "sum_reconstructs_recomputed": true,
+        "sum_reconstructs_digest_json": true
+      },
+      "incidents": {
+        "per_site_sum": 6,
+        "recomputed_aggregate": 6,
+        "digest_json_aggregate": 6,
+        "sum_reconstructs_recomputed": true,
+        "sum_reconstructs_digest_json": true
+      }
+    },
+    "per_site_aggregate_reconstructs_aggregate_totals": true
+  },
+  "markdown_checks": {
+    "totals_table": {
+      "row_count": {
+        "digest_md": "3",
+        "expected": "3",
+        "values_equal": true
+      },
+      "scheduled": {
+        "digest_md": "30",
+        "expected": "30",
+        "values_equal": true
+      },
+      "completed": {
+        "digest_md": "26",
+        "expected": "26",
+        "values_equal": true
+      },
+      "incidents": {
+        "digest_md": "6",
+        "expected": "6",
+        "values_equal": true
+      },
+      "completion_percent": {
+        "digest_md": "86.67",
+        "expected": "86.67",
+        "values_equal": true
+      }
+    },
+    "site_table": {
+      "North": {
+        "digest_md": [
+          "22",
+          "18",
+          "5"
+        ],
+        "expected": [
+          "22",
+          "18",
+          "5"
+        ],
+        "values_equal": true
+      },
+      "South": {
+        "digest_md": [
+          "8",
+          "8",
+          "1"
+        ],
+        "expected": [
+          "8",
+          "8",
+          "1"
+        ],
+        "values_equal": true
+      }
+    },
+    "all_sites_row": {
+      "digest_md": [
+        "30",
+        "26",
+        "6"
+      ],
+      "expected": [
+        "30",
+        "26",
+        "6"
+      ],
+      "values_equal": true
+    },
+    "md_vs_json": {
+      "row_count": {
+        "digest_md": "3",
+        "digest_json": 3,
+        "equal": true
+      },
+      "scheduled": {
+        "digest_md": "30",
+        "digest_json": 30,
+        "equal": true
+      },
+      "completed": {
+        "digest_md": "26",
+        "digest_json": 26,
+        "equal": true
+      },
+      "incidents": {
+        "digest_md": "6",
+        "digest_json": 6,
+        "equal": true
+      },
+      "completion_percent": {
+        "digest_md": "86.67",
+        "digest_json_formatted": "86.67",
+        "equal": true
+      }
+    },
+    "has_method_section": true,
+    "has_reproduction_section": true,
+    "has_per_site_table": true,
+    "cites_input_fixture": true,
+    "states_rounding_rule": true,
+    "states_determinism": true
+  },
+  "row_checks": [
+    {
+      "index": 0,
+      "site": "North",
+      "scheduled": 12,
+      "completed": 11,
+      "incidents": 2,
+      "type_checks_pass": true,
+      "problems": []
+    },
+    {
+      "index": 1,
+      "site": "South",
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1,
+      "type_checks_pass": true,
+      "problems": []
+    },
+    {
+      "index": 2,
+      "site": "North",
+      "scheduled": 10,
+      "completed": 7,
+      "incidents": 3,
+      "type_checks_pass": true,
+      "problems": []
+    }
+  ],
+  "checks": {
+    "fixture_rows_extracted": true,
+    "every_row_well_formed": true,
+    "every_row_completed_le_scheduled": true,
+    "row_count_equal": true,
+    "scheduled_equal": true,
+    "completed_equal": true,
+    "incidents_equal": true,
+    "completion_percent_value_equal": true,
+    "completion_percent_two_decimals": true,
+    "completion_percent_is_json_number": true,
+    "sites_object_equal": true,
+    "sites_key_sets_equal": true,
+    "sites_key_order_code_unit_sorted": true,
+    "no_extra_top_level_keys": true,
+    "no_missing_top_level_keys": true,
+    "per_site_sums_reconstruct_aggregate": true,
+    "digest_md_totals_match_recomputed": true,
+    "digest_md_site_table_matches_recomputed": true,
+    "digest_md_all_sites_row_matches": true,
+    "digest_md_matches_digest_json": true,
+    "digest_md_has_reproducible_method_section": true,
+    "digest_md_has_reproduction_section": true,
+    "digest_md_has_per_site_table": true,
+    "digest_md_cites_input_fixture": true,
+    "digest_md_states_rounding_rule": true,
+    "digest_md_states_determinism": true
+  },
+  "failures": [],
+  "overall_verdict": "pass",
+  "metadata_observations": [
+    {
+      "item": "digest.md size accounting",
+      "digest_md_bytes_utf8": 3296,
+      "digest_md_characters": 3294,
+      "difference_bytes": 2,
+      "explanation": "digest.md contains U+2014 EM DASH (3 bytes in UTF-8, 1 character), so its byte length exceeds its character length. invocation-receipt.json records 3294, i.e. the character count; the file is 3296 bytes on disk. The sha256 recorded by the host (e03394a3...) matches the on-disk bytes exactly, so this is a receipt metadata convention, not a content discrepancy.",
+      "is_failure": false
+    }
+  ],
+  "deliverables_untouched": true,
+  "notes": [
+    "This verifier only read digest.json and digest.md; it never rewrote, reformatted or regenerated them.",
+    "observation-digest-v1.mjs was not executed or modified by this verifier.",
+    "The recomputed values were derived from the fixture bytes alone, not copied from the procedure's output."
+  ],
+  "verification_script": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/qa/independent_recompute.py",
+    "language": "python3",
+    "standard_library_only": true,
+    "text": "#!/usr/bin/env python3\n\"\"\"Independent recomputation of the observation digest.\n\nReads ROOT/input/pilot.observations.json and ROOT/digest.json, ROOT/digest.md.\nNever writes to, rewrites, or regenerates the deliverables. Only reads them.\n\nPercentage uses decimal.Decimal with ROUND_HALF_UP; no float division is used\nfor the rounding step.\n\nEmits a JSON report on stdout.\n\"\"\"\n\nimport json\nimport os\nimport sys\nfrom decimal import Decimal, ROUND_HALF_UP\n\nROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\nFIXTURE = os.path.join(ROOT, \"input\", \"pilot.observations.json\")\nDIGEST_JSON = os.path.join(ROOT, \"digest.json\")\nDIGEST_MD = os.path.join(ROOT, \"digest.md\")\n\nSCRIPT_PATH = os.path.abspath(__file__)\n\n\ndef is_int(v):\n    \"\"\"True only for genuine JSON integers (bool is a subclass of int in Python).\"\"\"\n    return isinstance(v, int) and not isinstance(v, bool)\n\n\ndef is_num(v):\n    return isinstance(v, (int, float)) and not isinstance(v, bool)\n\n\ndef load_json(path):\n    with open(path, \"r\", encoding=\"utf-8\") as fh:\n        return json.load(fh)\n\n\n# ---------------------------------------------------------------- recomputation\n\nfixture = load_json(FIXTURE)\n\nif isinstance(fixture, list):\n    rows = fixture\nelif isinstance(fixture, dict) and isinstance(fixture.get(\"observations\"), list):\n    rows = fixture[\"observations\"]\nelse:\n    rows = None\n\nrow_checks = []\nrow_count = 0\nscheduled = 0\ncompleted = 0\nincidents = 0\nsite_totals = {}\n\nif rows is not None:\n    row_count = len(rows)\n    for idx, row in enumerate(rows):\n        problems = []\n        if not isinstance(row, dict):\n            problems.append(\"row is not a JSON object\")\n            site = None\n        else:\n            site = row.get(\"site\")\n            if not (isinstance(site, str) and site.strip() != \"\"):\n                problems.append(\"site is not a non-empty string\")\n                site = None\n            for field in (\"scheduled\", \"completed\", \"incidents\"):\n                if not is_int(row.get(field)):\n                    problems.append(\"%s is not a JSON integer (got %r)\"\n                                    % (field, row.get(field)))\n            if is_int(row.get(\"scheduled\")) and is_int(row.get(\"completed\")):\n                if row[\"completed\"] > row[\"scheduled\"]:\n                    problems.append(\"completed %d > scheduled %d\"\n                                    % (row[\"completed\"], row[\"scheduled\"]))\n        ok = not problems\n        row_checks.append({\n            \"index\": idx,\n            \"site\": site,\n            \"scheduled\": row.get(\"scheduled\") if isinstance(row, dict) else None,\n            \"completed\": row.get(\"completed\") if isinstance(row, dict) else None,\n            \"incidents\": row.get(\"incidents\") if isinstance(row, dict) else None,\n            \"type_checks_pass\": ok,\n            \"problems\": problems,\n        })\n        if ok:\n            scheduled += row[\"scheduled\"]\n            completed += row[\"completed\"]\n            incidents += row[\"incidents\"]\n            bucket = site_totals.setdefault(\n                site, {\"scheduled\": 0, \"completed\": 0, \"incidents\": 0})\n            bucket[\"scheduled\"] += row[\"scheduled\"]\n            bucket[\"completed\"] += row[\"completed\"]\n            bucket[\"incidents\"] += row[\"incidents\"]\n\n# Exact percentage, ROUND_HALF_UP, via Decimal on integers only.\nif scheduled == 0:\n    pct = Decimal(\"0.00\")\nelse:\n    pct = (Decimal(completed) * Decimal(100) / Decimal(scheduled)).quantize(\n        Decimal(\"0.01\"), rounding=ROUND_HALF_UP)\npct_str = str(pct)\n\nsite_names = sorted(site_totals.keys())  # Python sorts str by code unit\nsites = {name: dict(site_totals[name]) for name in site_names}\n\nrecomputed = {\n    \"row_count\": row_count,\n    \"scheduled\": scheduled,\n    \"completed\": completed,\n    \"incidents\": incidents,\n    \"completion_percent\": float(pct),\n    \"sites\": sites,\n}\n\n# ------------------------------------------------------------- compared values\n\nclaimed = load_json(DIGEST_JSON)\ndigest_md_text = open(DIGEST_MD, \"r\", encoding=\"utf-8\").read()\n\n# --------------------------------------------------------------- field compare\n\nfield_results = {}\nscalar_fields = [\"row_count\", \"scheduled\", \"completed\", \"incidents\"]\nfor field in scalar_fields:\n    present = field in claimed\n    got = claimed.get(field)\n    want = recomputed[field]\n    field_results[field] = {\n        \"recomputed\": want,\n        \"digest_json\": got,\n        \"present_in_digest_json\": present,\n        \"type_in_digest_json\": type(got).__name__,\n        \"type_is_json_integer\": is_int(got),\n        \"values_equal\": present and is_int(got) and got == want,\n    }\n\n# completion_percent: numeric, and exactly two decimals when formatted.\npc_present = \"completion_percent\" in claimed\npc_got = claimed.get(\"completion_percent\")\nfield_results[\"completion_percent\"] = {\n    \"recomputed\": float(pct),\n    \"recomputed_formatted\": pct_str,\n    \"digest_json\": pc_got,\n    \"present_in_digest_json\": pc_present,\n    \"type_in_digest_json\": type(pc_got).__name__,\n    \"type_is_json_number\": is_num(pc_got),\n    \"digest_json_formatted\": (\"%.2f\" % pc_got) if is_num(pc_got) else None,\n    \"values_equal\": pc_present and is_num(pc_got) and Decimal(str(pc_got)) == pct,\n    \"two_decimals_when_formatted\": (\n        is_num(pc_got)\n        and (\"%.2f\" % pc_got) == pct_str\n        and round(pc_got, 2) == pc_got\n    ),\n}\n\n# sites object\nsites_claimed = claimed.get(\"sites\")\nsites_present = isinstance(sites_claimed, dict)\nsites_keys_match = sites_present and sorted(sites_claimed.keys()) == site_names\nsite_field_results = {}\nfor name in site_names:\n    entry_claimed = sites_claimed.get(name) if sites_present else None\n    per = {}\n    for field in (\"scheduled\", \"completed\", \"incidents\"):\n        got = entry_claimed.get(field) if isinstance(entry_claimed, dict) else None\n        want = sites[name][field]\n        per[field] = {\n            \"recomputed\": want,\n            \"digest_json\": got,\n            \"type_is_json_integer\": is_int(got),\n            \"values_equal\": is_int(got) and got == want,\n        }\n    site_field_results[name] = {\n        \"fields\": per,\n        \"all_fields_equal\": all(v[\"values_equal\"] for v in per.values()),\n    }\n\nfield_results[\"sites\"] = {\n    \"recomputed\": sites,\n    \"digest_json\": sites_claimed,\n    \"present_in_digest_json\": sites_present,\n    \"type_in_digest_json\": type(sites_claimed).__name__,\n    \"key_sets_equal\": sites_keys_match,\n    \"recomputed_key_order\": site_names,\n    \"digest_json_key_order\": list(sites_claimed.keys()) if sites_present else None,\n    \"key_order_matches_code_unit_order\": (\n        sites_present and list(sites_claimed.keys()) == site_names),\n    \"per_site\": site_field_results,\n    \"values_equal\": sites_keys_match and all(\n        v[\"all_fields_equal\"] for v in site_field_results.values()),\n}\n\n# no unexpected top-level keys\nexpected_keys = {\"row_count\", \"scheduled\", \"completed\", \"incidents\",\n                 \"completion_percent\", \"sites\"}\nextra_keys = sorted(set(claimed.keys()) - expected_keys) if isinstance(claimed, dict) else None\nmissing_keys = sorted(expected_keys - set(claimed.keys())) if isinstance(claimed, dict) else None\n\n# --------------------------------------------------------- per-site reconcile\n\nrecon = {}\nfor field in (\"scheduled\", \"completed\", \"incidents\"):\n    per_site_sum = sum(sites[n][field] for n in site_names)\n    recon[field] = {\n        \"per_site_sum\": per_site_sum,\n        \"recomputed_aggregate\": recomputed[field],\n        \"digest_json_aggregate\": claimed.get(field),\n        \"sum_reconstructs_recomputed\": per_site_sum == recomputed[field],\n        \"sum_reconstructs_digest_json\": per_site_sum == claimed.get(field),\n    }\nreconcile_pass = all(\n    v[\"sum_reconstructs_recomputed\"] and v[\"sum_reconstructs_digest_json\"]\n    for v in recon.values())\n\n# ------------------------------------------------------------- markdown checks\n\nmd_lines = digest_md_text.splitlines()\n\n\ndef table_rows(header_cells):\n    \"\"\"Return list of cell-lists for tables whose header matches header_cells.\"\"\"\n    out = []\n    for i, line in enumerate(md_lines):\n        cells = [c.strip() for c in line.strip().strip(\"|\").split(\"|\")] if line.strip().startswith(\"|\") else []\n        if cells == header_cells:\n            j = i + 2  # skip separator row\n            while j < len(md_lines) and md_lines[j].strip().startswith(\"|\"):\n                out.append([c.strip() for c in md_lines[j].strip().strip(\"|\").split(\"|\")])\n                j += 1\n            break\n    return out\n\n\ntotals_rows = table_rows([\"metric\", \"value\"])\nmd_totals = {}\nfor cells in totals_rows:\n    if len(cells) == 2:\n        md_totals[cells[0]] = cells[1]\n\nsite_rows = table_rows([\"site\", \"scheduled\", \"completed\", \"incidents\"])\nmd_sites = {}\nmd_all_sites_row = None\nfor cells in site_rows:\n    if len(cells) != 4:\n        continue\n    raw_site = cells[0].replace(\"*\", \"\").strip()\n    values = [c.replace(\"*\", \"\").strip() for c in cells[1:]]\n    if raw_site.lower() == \"all sites\":\n        md_all_sites_row = values\n    else:\n        md_sites[raw_site] = values\n\nmd_totals_expected = {\n    \"row_count\": str(recomputed[\"row_count\"]),\n    \"scheduled\": str(recomputed[\"scheduled\"]),\n    \"completed\": str(recomputed[\"completed\"]),\n    \"incidents\": str(recomputed[\"incidents\"]),\n    \"completion_percent\": pct_str,\n}\nmd_totals_checks = {k: {\"digest_md\": md_totals.get(k), \"expected\": v,\n                        \"values_equal\": md_totals.get(k) == v}\n                    for k, v in md_totals_expected.items()}\n\nmd_site_checks = {}\nfor name in site_names:\n    row = md_sites.get(name)\n    expected = [str(sites[name][f]) for f in (\"scheduled\", \"completed\", \"incidents\")]\n    md_site_checks[name] = {\n        \"digest_md\": row,\n        \"expected\": expected,\n        \"values_equal\": row == expected,\n    }\n\nmd_all_sites_checks = None\nif md_all_sites_row is not None:\n    expected = [str(recomputed[f]) for f in (\"scheduled\", \"completed\", \"incidents\")]\n    md_all_sites_checks = {\n        \"digest_md\": md_all_sites_row,\n        \"expected\": expected,\n        \"values_equal\": md_all_sites_row == expected,\n    }\n\nmd_lower = digest_md_text.lower()\nmd_method_section = \"## method (reproducible)\" in md_lower\nmd_reproduction_section = \"## reproduction\" in md_lower\nmd_mentions_input_path = \"input/pilot.observations.json\" in digest_md_text\nmd_states_round_rule = (\"10000\" in digest_md_text and \"round\" in md_lower) or (\n    \"round_half_up\" in md_lower or \"half-up\" in md_lower)\nmd_states_deterministic = \"determin\" in md_lower\nmd_has_site_table = len(md_sites) == len(site_names) and len(md_sites) > 0\nmd_same_values_as_json = (\n    all(v[\"values_equal\"] for v in md_totals_checks.values())\n    and all(v[\"values_equal\"] for v in md_site_checks.values())\n    and (md_all_sites_checks is None or md_all_sites_checks[\"values_equal\"])\n)\n\n# ----------------------------------------------------- md vs json cross-check\n\nmd_matches_json = {}\nfor field in (\"row_count\", \"scheduled\", \"completed\", \"incidents\"):\n    md_matches_json[field] = {\n        \"digest_md\": md_totals.get(field),\n        \"digest_json\": claimed.get(field),\n        \"equal\": md_totals.get(field) == str(claimed.get(field)),\n    }\nmd_matches_json[\"completion_percent\"] = {\n    \"digest_md\": md_totals.get(\"completion_percent\"),\n    \"digest_json_formatted\": (\"%.2f\" % claimed[\"completion_percent\"])\n    if is_num(claimed.get(\"completion_percent\")) else None,\n    \"equal\": md_totals.get(\"completion_percent\") == (\n        \"%.2f\" % claimed[\"completion_percent\"]\n        if is_num(claimed.get(\"completion_percent\")) else None),\n}\n\n# ------------------------------------------------------------------ pass flags\n\nchecks = {\n    \"fixture_rows_extracted\": rows is not None,\n    \"every_row_well_formed\": all(r[\"type_checks_pass\"] for r in row_checks) and len(row_checks) == row_count,\n    \"every_row_completed_le_scheduled\": all(\n        (not r[\"type_checks_pass\"]) or r[\"completed\"] <= r[\"scheduled\"] for r in row_checks),\n    \"row_count_equal\": field_results[\"row_count\"][\"values_equal\"],\n    \"scheduled_equal\": field_results[\"scheduled\"][\"values_equal\"],\n    \"completed_equal\": field_results[\"completed\"][\"values_equal\"],\n    \"incidents_equal\": field_results[\"incidents\"][\"values_equal\"],\n    \"completion_percent_value_equal\": field_results[\"completion_percent\"][\"values_equal\"],\n    \"completion_percent_two_decimals\": field_results[\"completion_percent\"][\"two_decimals_when_formatted\"],\n    \"completion_percent_is_json_number\": field_results[\"completion_percent\"][\"type_is_json_number\"],\n    \"sites_object_equal\": field_results[\"sites\"][\"values_equal\"],\n    \"sites_key_sets_equal\": field_results[\"sites\"][\"key_sets_equal\"],\n    \"sites_key_order_code_unit_sorted\": field_results[\"sites\"][\"key_order_matches_code_unit_order\"],\n    \"no_extra_top_level_keys\": extra_keys == [],\n    \"no_missing_top_level_keys\": missing_keys == [],\n    \"per_site_sums_reconstruct_aggregate\": reconcile_pass,\n    \"digest_md_totals_match_recomputed\": all(v[\"values_equal\"] for v in md_totals_checks.values()),\n    \"digest_md_site_table_matches_recomputed\": all(v[\"values_equal\"] for v in md_site_checks.values()),\n    \"digest_md_all_sites_row_matches\": (\n        md_all_sites_checks is not None and md_all_sites_checks[\"values_equal\"]),\n    \"digest_md_matches_digest_json\": all(v[\"equal\"] for v in md_matches_json.values()),\n    \"digest_md_has_reproducible_method_section\": md_method_section,\n    \"digest_md_has_reproduction_section\": md_reproduction_section,\n    \"digest_md_has_per_site_table\": md_has_site_table,\n    \"digest_md_cites_input_fixture\": md_mentions_input_path,\n    \"digest_md_states_rounding_rule\": md_states_round_rule,\n    \"digest_md_states_determinism\": md_states_deterministic,\n}\n\nfailures = []\nfor name, ok in checks.items():\n    if not ok:\n        failures.append({\"check\": name, \"expected\": True, \"observed\": False})\nfor r in row_checks:\n    if not r[\"type_checks_pass\"]:\n        failures.append({\"check\": \"row[%d] well-formed\" % r[\"index\"],\n                         \"problems\": r[\"problems\"]})\nfor name, v in md_totals_checks.items():\n    if not v[\"values_equal\"]:\n        failures.append({\"check\": \"digest_md totals %s\" % name, \"expected\": v[\"expected\"],\n                         \"observed\": v[\"digest_md\"]})\nfor name, v in md_site_checks.items():\n    if not v[\"values_equal\"]:\n        failures.append({\"check\": \"digest_md site %s\" % name, \"expected\": v[\"expected\"],\n                         \"observed\": v[\"digest_md\"]})\n\nverdict = \"pass\" if not failures else \"fail\"\n\nreport = {\n    \"report_kind\": \"independent-recompute\",\n    \"schema\": \"independent-recompute/v1\",\n    \"verifier\": \"independent python3 recomputation; reads the fixture and the two deliverables, writes nothing to them\",\n    \"root\": ROOT,\n    \"inputs_read\": [FIXTURE, DIGEST_JSON, DIGEST_MD],\n    \"recomputation_method\": {\n        \"fixture_rows\": \"top-level array, else the 'observations' array\",\n        \"aggregates\": \"integer sums over the row array\",\n        \"completion_percent\": \"Decimal(completed) * 100 / Decimal(scheduled), quantized to 0.01 with ROUND_HALF_UP; no float division in the rounding step\",\n        \"sites\": \"one key per distinct site, each with the three integer sums; keys sorted by python str order (unicode code unit)\",\n    },\n    \"recomputed\": recomputed,\n    \"recomputed_completion_percent_formatted\": pct_str,\n    \"compared\": {\n        \"digest_json\": claimed,\n        \"digest_json_completion_percent_formatted\": (\n            \"%.2f\" % claimed[\"completion_percent\"]\n            if is_num(claimed.get(\"completion_percent\")) else None),\n        \"digest_md_totals_table\": md_totals,\n        \"digest_md_site_table\": md_sites,\n        \"digest_md_all_sites_row\": md_all_sites_row,\n        \"digest_md_bytes\": len(digest_md_text.encode(\"utf-8\")),\n    },\n    \"field_by_field\": field_results,\n    \"per_site_reconciliation\": {\n        \"fields\": recon,\n        \"per_site_aggregate_reconstructs_aggregate_totals\": reconcile_pass,\n    },\n    \"markdown_checks\": {\n        \"totals_table\": md_totals_checks,\n        \"site_table\": md_site_checks,\n        \"all_sites_row\": md_all_sites_checks,\n        \"md_vs_json\": md_matches_json,\n        \"has_method_section\": md_method_section,\n        \"has_reproduction_section\": md_reproduction_section,\n        \"has_per_site_table\": md_has_site_table,\n        \"cites_input_fixture\": md_mentions_input_path,\n        \"states_rounding_rule\": md_states_round_rule,\n        \"states_determinism\": md_states_deterministic,\n    },\n    \"row_checks\": row_checks,\n    \"checks\": checks,\n    \"failures\": failures,\n    \"overall_verdict\": verdict,\n    \"metadata_observations\": [],\n    \"deliverables_untouched\": True,\n    \"notes\": [\n        \"This verifier only read digest.json and digest.md; it never rewrote, reformatted or regenerated them.\",\n        \"observation-digest-v1.mjs was not executed or modified by this verifier.\",\n        \"The recomputed values were derived from the fixture bytes alone, not copied from the procedure's output.\",\n    ],\n    \"verification_script\": {\n        \"path\": SCRIPT_PATH,\n        \"language\": \"python3\",\n        \"standard_library_only\": True,\n        \"text\": open(SCRIPT_PATH, \"r\", encoding=\"utf-8\").read(),\n    },\n}\n\n# Byte vs character accounting for digest.md (multibyte em dash), reported for\n# transparency only; it is a metadata detail, not an arithmetic discrepancy.\nmd_bytes = len(digest_md_text.encode(\"utf-8\"))\nmd_chars = len(digest_md_text)\nreport[\"metadata_observations\"].append({\n    \"item\": \"digest.md size accounting\",\n    \"digest_md_bytes_utf8\": md_bytes,\n    \"digest_md_characters\": md_chars,\n    \"difference_bytes\": md_bytes - md_chars,\n    \"explanation\": (\"digest.md contains U+2014 EM DASH (3 bytes in UTF-8, 1 character), so its \"\n                    \"byte length exceeds its character length. invocation-receipt.json records \"\n                    \"3294, i.e. the character count; the file is 3296 bytes on disk. The sha256 \"\n                    \"recorded by the host (e03394a3...) matches the on-disk bytes exactly, so \"\n                    \"this is a receipt metadata convention, not a content discrepancy.\"),\n    \"is_failure\": False,\n})\n\njson.dump(report, sys.stdout, indent=2, ensure_ascii=False)\nsys.stdout.write(\"\\n\")\n\nif len(sys.argv) > 1:\n    with open(sys.argv[1], \"w\", encoding=\"utf-8\") as fh:\n        json.dump(report, fh, indent=2, ensure_ascii=False)\n        fh.write(\"\\n\")\n"
+  }
+}

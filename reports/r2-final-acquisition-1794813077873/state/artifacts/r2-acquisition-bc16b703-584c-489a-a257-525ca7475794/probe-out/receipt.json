@@ -1,0 +1,31 @@
+{
+  "procedure_id": "observation-digest-v1",
+  "argv": {
+    "fixture": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/input/pilot.observations.json",
+    "output_dir": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/probe-out"
+  },
+  "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+  "procedure_source": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/observation_digest_v1.js",
+  "procedure_sha256": "7dadf4b36d82566be70a08ee97f1625dcd364e7b10b61c679a47c88f662ccbde",
+  "node_version": "v22.23.3",
+  "result": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67
+  },
+  "outputs": [
+    {
+      "name": "digest.json",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/probe-out/digest.json",
+      "sha256": "a00d0e4893ce6ea40f554c1ebc6175bda7e714c5b6048c563d91411fe6eb23b4"
+    },
+    {
+      "name": "digest.md",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/probe-out/digest.md",
+      "sha256": "0389a496fcedee6d08e766a5651ce524addb9305c0904208dec7c5949b979f63"
+    }
+  ],
+  "run_status": "ok"
+}

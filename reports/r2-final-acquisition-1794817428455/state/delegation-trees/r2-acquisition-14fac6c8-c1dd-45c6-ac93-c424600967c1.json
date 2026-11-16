@@ -1,0 +1,119 @@
+{
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "saved_at": "2026-11-16T08:53:48.617Z",
+  "total_agents": 4,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1:top0",
+      "role": "executor",
+      "started_at": "2026-11-16T08:24:47.448Z",
+      "task": "Bounded acquisition of the missing named capability observation-digest-v1. Create exactly one procedure source file at a stable path below the mission root (e.g. <root>/procedures/observation_digest_v1.py) that independently parses <root>/input/pilot.observations.json and emits digest.json plus digest.md into its second fixed argument directory, exiting nonzero on any parse or schema failure. Record the source sha256, its absolute stable path, and its fixed args exactly as [<root>/input/pilot.observations.json, <root>]. Then qualify once: run the procedure with the same executable bytes but a probe output directory (e.g. <root>/probe/qualification-run-1) instead of <root>, and capture stdout, stderr, exit code, and the sha256 of the probe outputs as a qualification receipt. Do not write the final digest.json/digest.md into <root> in this step.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "5425be5c-cda7-4597-98d8-6e40841f5b4f",
+        "687f042c-92e1-430c-85d6-35fe71b818e6",
+        "d8b3ee4e-46eb-45c1-a30c-81be8e1472f8",
+        "4a5d7873-4e6f-4258-8993-189e7dbdfa66",
+        "b749d62e-a345-4c95-ac99-9506d32f157e",
+        "c01431db-e2ed-442b-b67b-a41d8fd2d5b7",
+        "512603dd-009e-40b1-9deb-f518c66fb6d7",
+        "cead6979-4aa8-4dad-b780-830dab458292",
+        "4832bd72-9428-4f82-a081-7d55a11f20b5"
+      ],
+      "duration_ms": 295378,
+      "finished_at": "2026-11-16T08:29:42.821Z"
+    },
+    {
+      "id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1:top1",
+      "role": "executor",
+      "started_at": "2026-11-16T08:29:42.836Z",
+      "task": "Replan-and-invoke step. Using the qualified procedure from the acquisition step, invoke it with its exact qualified executable bytes (verify the source sha256 matches the qualification receipt before running) and its fixed args exactly [<root>/input/pilot.observations.json, <root>], writing the final deliverables into the mission root. Capture a durable invocation receipt recording: procedure path, source sha256, exact argv, start/end timestamps, exit code, stdout/stderr, and sha256 of digest.json and digest.md. Abort without retrying the output directory if the sha256 does not match the qualified receipt.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "6967defe-cb1d-436e-a232-25171c5c1eea",
+        "84a0d184-47b0-49df-b4f8-b7f95a5ff7da",
+        "f5ca71a4-aff3-49a0-951b-975e250a6d66",
+        "d46cf149-acf3-4c6b-94de-763289f267b5",
+        "b2a73c41-bb13-4ac9-a703-cd6c748efbcc",
+        "bed2ca3d-ae72-4f8f-9d7a-e8efedcc3385",
+        "ed0d1003-3f23-4e1c-8a13-a9d1bb3db4ad",
+        "aef242de-0c3e-497d-81bc-9b4340304c39",
+        "89cc9820-ee91-4600-8c56-a5181ae1ba26",
+        "fa94b184-5cc7-4340-a319-98071bbd17c7",
+        "3174796f-afc2-44a2-bedd-9fe541283389",
+        "3d32d03f-e0f9-4393-bada-f96d66fc4fc0",
+        "944842f7-f2b8-438a-9646-49de03094462",
+        "4309ac49-6c68-4e17-bd92-fa4e6e4aca99",
+        "ca714976-ef91-4cdb-af25-6e3d7fe0e3d8",
+        "de9e50cf-0875-4a2e-ac7f-9b659de76811",
+        "4f800132-a29e-4986-9a11-3047b32949cc",
+        "2c7cf1d2-5918-43c4-b0f9-393abd49110e",
+        "e67da3b1-5956-481d-86a3-fab69e8b1bd7"
+      ],
+      "duration_ms": 276392,
+      "finished_at": "2026-11-16T08:34:19.223Z"
+    },
+    {
+      "id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1:top2",
+      "role": "analyst",
+      "started_at": "2026-11-16T08:34:19.240Z",
+      "task": "Independent verification and registration. Re-read <root>/input/pilot.observations.json and independently compute row_count, scheduled, completed, incidents, completion_percent to 2 decimals, and per-site totals using your own arithmetic - do not use the digest as the source of truth. Compare against digest.json field by field, confirm per-site totals sum to the global totals, confirm completion_percent is exactly two decimals and internally consistent with completed/scheduled, and confirm every value in digest.md matches digest.json. Then perform Nox QA on both deliverables (bytes present, non-empty, valid JSON parse, schema keys exact, markdown consistent) and register digest.json, digest.md, and the invocation receipt via save_artifact. Report any mismatch as a failure with the specific field and both values.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "b300daa8-c125-4812-a6cb-0b4afef4a488",
+        "270056f4-f1da-4077-813d-dad7ab6a6966",
+        "78673adc-1b4c-49ab-b1cc-b174b00fa20a",
+        "1b723e7f-b2e9-4ec7-a318-8f26f85b0045",
+        "ae9ca510-66ba-4bd5-a66d-4d39e56be7eb",
+        "772fb6bf-a305-4820-ad57-a829e1a28060",
+        "39864acb-9303-4ac5-ba37-929eb229f9d3",
+        "4c38edbd-5433-4bc3-9a7d-6a1be7a6ea2a",
+        "dab45b7c-522c-412e-96c6-641090ad9a0d"
+      ],
+      "duration_ms": 289783,
+      "finished_at": "2026-11-16T08:39:09.019Z"
+    },
+    {
+      "id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1:top3",
+      "role": "executor",
+      "started_at": "2026-11-16T08:42:53.882Z",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MINOR] invocation_receipt.json retains invocation-time inode/output_mtime values for digest.json and digest.md that became stale when save_artifact re-registered the deliverables byte-identically; the receipt therefore carries fields no longer true of the live filesystem. Disclosed in a post_registration_note, so documented rather than concealed.\n[MINOR] The invocation receipt is a post-hoc reconstruction by invocat",
+      "depth": 0,
+      "parent_id": null,
+      "status": "failed",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 654733,
+      "finished_at": "2026-11-16T08:53:48.617Z",
+      "note": "aborted"
+    }
+  ]
+}

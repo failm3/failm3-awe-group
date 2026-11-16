@@ -1,0 +1,265 @@
+{
+  "schema": "r2-final-acquisition-live-v1",
+  "id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+  "runRoot": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440",
+  "status": "failed",
+  "failure": null,
+  "approved_spec_hash": "bc1b5f25f5f23335e55a16c0091cb4144f559751b283d40eb2c077293defed83",
+  "planning": [
+    {
+      "kind": "acquire",
+      "capability": "observation-digest-v1"
+    },
+    {
+      "kind": "replan",
+      "attempt": "9550605c-b361-4a19-8a5a-f95c1b9a4f5a"
+    }
+  ],
+  "attempts": [
+    {
+      "attempt_id": "9550605c-b361-4a19-8a5a-f95c1b9a4f5a",
+      "capability": "observation-digest-v1",
+      "observation": {
+        "capability": "observation-digest-v1",
+        "status": "available",
+        "detail": "Acquired one bounded local procedure at /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/procedures/observation_digest_v1.py (sha256 8d0636f7e9e2dfe3752a50aee359862e9d9e69dd05a444504f1581da1743b275, python3 3.14.4 at /usr/bin/python3, stdlib only). Fixed args are exactly [/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/input/pilot.observations.json, /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae]. Qualification was by execution into the separate probe directory probes/probe-run-1, never the final output directory: the procedure emitted row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67, with sites North (row_count 2, scheduled 22, completed 18, incidents 5, completion_percent 81.82) and South (row_count 1, scheduled 8, completed 8, incidents 1, completion_percent 100.00). Those figures were then compared against totals computed independently from the raw fixture by an unrelated awk pass over the JSON text, which produced the same numbers (rows 3, scheduled 30, completed 26, incidents 6, 86.67 percent; North 22/18/5 at 81.82 percent, South 8/8/1 at 100.00 percent). Two probe runs produced byte-identical digest.json and digest.md, and three negative cases were rejected with non-zero exits (malformed JSON and a missing required field both exit 4, wrong argument count exits 2). Probe output is evidence only and carries no capability or status fields. Nothing was executed against the final output directory during acquisition, and no network, package install, publishing, deployment, purchase or external change occurred.",
+        "acquired": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/procedures/observation_digest_v1.py"
+      },
+      "artifact_id": "0a31e8ba-971f-4f13-bf12-ed2b4a9add62",
+      "artifact_sha256": "b18f2b1cd1ad74848996fa3b3469ad0d8a78a98309a893a337fd8baae405b606",
+      "created_at": "2026-11-16T08:15:29.396Z"
+    }
+  ],
+  "qualification_publications": 0,
+  "acquisition_policy_calls": 0,
+  "invocation_receipts": [],
+  "artifacts": [
+    {
+      "id": "32e94705-187c-4374-a74e-40116d9db797",
+      "name": "input/pilot.observations.json",
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+    },
+    {
+      "id": "50100302-8eab-4e35-813a-c757d52c2d09",
+      "name": "procedures/observation_digest_v1.py",
+      "sha256": "8d0636f7e9e2dfe3752a50aee359862e9d9e69dd05a444504f1581da1743b275"
+    },
+    {
+      "id": "bef85584-c938-43d0-83dd-8d83ba4adb78",
+      "name": "probes/probe-run-1/digest.json",
+      "sha256": "8ac8593f71638a3df3e51a9b65a1bfc9ae263ab0242e40dd4af6a70c7f44e824"
+    },
+    {
+      "id": "4bd0dbd5-cce7-4715-9379-de14a1cccc2f",
+      "name": "probes/probe-run-1/digest.md",
+      "sha256": "c0157cb3227052af9480524b3ef2a7af66523dc7e1e936f2285bbfc6190483b1"
+    },
+    {
+      "id": "dd122e7e-4d3a-44d6-bb5a-a5a7685dedcb",
+      "name": "probes/probe-run-2/digest.json",
+      "sha256": "8ac8593f71638a3df3e51a9b65a1bfc9ae263ab0242e40dd4af6a70c7f44e824"
+    },
+    {
+      "id": "a8f5ad3d-79b4-4404-b821-0d7c24a48a5b",
+      "name": "probes/probe-run-2/digest.md",
+      "sha256": "c0157cb3227052af9480524b3ef2a7af66523dc7e1e936f2285bbfc6190483b1"
+    },
+    {
+      "id": "0a31e8ba-971f-4f13-bf12-ed2b4a9add62",
+      "name": "observation.json",
+      "sha256": "b18f2b1cd1ad74848996fa3b3469ad0d8a78a98309a893a337fd8baae405b606"
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "85388d71-8dda-416a-9558-0bdf6d3f0a59",
+      "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T08:09:55.426Z",
+      "finished_at": "2026-11-16T08:10:10.434Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 2998,
+        "output_tokens": 1385,
+        "total_tokens": 4383,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "8cfa8c84-5c60-4675-af0f-048211545ec6",
+      "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T08:10:10.442Z",
+      "finished_at": "2026-11-16T08:10:23.220Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 3642,
+        "output_tokens": 1245,
+        "total_tokens": 4887,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "75d7c12e-19e4-44fd-9fe9-83932cba8056",
+      "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T08:10:23.251Z",
+      "finished_at": "2026-11-16T08:15:29.377Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 189111,
+        "output_tokens": 26314,
+        "total_tokens": 215425,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 140072
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "49e39e0e-d586-4f2d-b374-2748f9c15f9e",
+      "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T08:15:29.404Z",
+      "finished_at": "2026-11-16T08:16:02.783Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 4174,
+        "output_tokens": 4065,
+        "total_tokens": 8239,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "751fae45-0241-412e-9788-66be6fa5d275",
+      "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T08:16:02.803Z",
+      "finished_at": "2026-11-16T08:17:04.675Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 12672,
+        "output_tokens": 6204,
+        "total_tokens": 18876,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "provider_cost": "UNKNOWN",
+  "checks": [
+    {
+      "check": "mission completed through independent Nox QA",
+      "passed": false,
+      "detail": "failed"
+    },
+    {
+      "check": "real Head and independent QA calls recorded",
+      "passed": true
+    },
+    {
+      "check": "unknown capability caused acquisition then replan",
+      "passed": true,
+      "detail": "[{\"kind\":\"acquire\",\"capability\":\"observation-digest-v1\"},{\"kind\":\"replan\",\"attempt\":\"9550605c-b361-4a19-8a5a-f95c1b9a4f5a\"}]"
+    },
+    {
+      "check": "exactly one structured qualified acquisition",
+      "passed": false
+    },
+    {
+      "check": "host published and reused one qualification across replan policy checks",
+      "passed": false
+    },
+    {
+      "check": "actual invocation receipt bound to mission, attempt, executable and command",
+      "passed": false
+    },
+    {
+      "check": "specialist result attributes actual qualified invocation",
+      "passed": false,
+      "detail": "attributed=[] status=failed"
+    },
+    {
+      "check": "exact independently recomputed digest totals",
+      "passed": false
+    },
+    {
+      "check": "exact independently recomputed site totals",
+      "passed": false
+    },
+    {
+      "check": "human digest is present and consistent",
+      "passed": false
+    },
+    {
+      "check": "fixture unchanged",
+      "passed": true
+    },
+    {
+      "check": "all final artifact hashes match bytes",
+      "passed": true
+    },
+    {
+      "check": "provider monetary cost remains unknown",
+      "passed": true,
+      "detail": "UNKNOWN"
+    }
+  ],
+  "passed": false
+}

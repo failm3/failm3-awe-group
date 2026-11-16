@@ -1,0 +1,46 @@
+{
+  "schema": "r2-final-professional-approval-v1",
+  "approval": "Operator explicitly approved these two bounded Nox engineering-practice specifications by invoking the dedicated live flag; no external action or product admission is approved.",
+  "approved_at": "2026-11-16T03:27:59.812Z",
+  "spec_hash": "d30f9bab2c3339ef6fb2130a37f817d980a132a34098d6fed3d913b2e6087b97",
+  "approved_spec": {
+    "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics",
+    "title": "Six-week operations analytics and management brief",
+    "description": "Bounded local professional-mission harness; engineering practice only.",
+    "objective": "Compute exact team operations metrics from an independent local CSV and produce a reproducible management document.",
+    "acceptance_criteria": [
+      "Persist metrics.json with row_count, totals and teams exactly matching the required schema and independently reproducible values; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+      "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+      "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+      "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+      "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted."
+    ],
+    "specification": {
+      "title": "Six-week operations analytics and management brief",
+      "objective": "Compute exact team operations metrics from an independent local CSV and produce a reproducible management document.",
+      "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T03-27-59-584Z-557913/state/artifacts/r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics. The sole factual input is input/operations.csv and it must remain byte-identical. Deliver metrics.json and operations-brief.md. Head should assign at least two genuinely distinct specialist delegations; calculation and document synthesis may be sequential when the document depends on exact metrics. Use ordinary local file tools only: no shell, web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+      "acceptance_criteria": [
+        "Persist metrics.json with row_count, totals and teams exactly matching the required schema and independently reproducible values; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+        "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+        "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+        "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+        "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted."
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "analyst",
+        "writer"
+      ],
+      "estimated_complexity": "moderate",
+      "risks": [
+        "Rounded aggregates must be recomputed from raw integers",
+        "Document totals must match the independently parsed metrics"
+      ]
+    }
+  }
+}

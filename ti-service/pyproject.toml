@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awe-tool-intelligence"
+version = "0.1.0"
+description = "Private PostgreSQL resource intelligence registry with evidence and conservative verification"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+telegram = ["telethon>=1.40,<2"]
+semantic = ["model2vec>=0.10,<1"]
+
+[project.scripts]
+awe-ti = "awe_ti.cli:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["awe_ti*"]
+
+[tool.setuptools.package-data]
+awe_ti = ["sql/*.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["postgres: requires a reachable PostgreSQL DATABASE_URL"]

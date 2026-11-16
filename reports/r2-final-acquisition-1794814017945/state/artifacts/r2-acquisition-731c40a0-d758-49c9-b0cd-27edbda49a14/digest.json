@@ -1,0 +1,25 @@
+{
+  "source": "Lumen Harbor field pilot",
+  "period": "2026-W45",
+  "row_count": 3,
+  "scheduled": 30,
+  "completed": 26,
+  "incidents": 6,
+  "completion_percent": 86.67,
+  "sites": {
+    "North": {
+      "rows": 2,
+      "scheduled": 22,
+      "completed": 18,
+      "incidents": 5,
+      "completion_percent": 81.82
+    },
+    "South": {
+      "rows": 1,
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1,
+      "completion_percent": 100
+    }
+  }
+}

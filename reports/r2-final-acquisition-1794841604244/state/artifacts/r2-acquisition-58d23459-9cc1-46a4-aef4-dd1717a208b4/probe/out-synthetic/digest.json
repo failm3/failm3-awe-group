@@ -1,0 +1,26 @@
+{
+  "source": "probe synthetic",
+  "period": "2026-W00",
+  "input_sha256": "1632591f429a3bd122890ca571967f647b6bc35b41dc2694b3056439eea86005",
+  "row_count": 3,
+  "scheduled": 10,
+  "completed": 8,
+  "incidents": 3,
+  "completion_percent": 80,
+  "sites": {
+    "Alpha": {
+      "row_count": 2,
+      "scheduled": 10,
+      "completed": 8,
+      "incidents": 1,
+      "completion_percent": 80
+    },
+    "Zeta": {
+      "row_count": 1,
+      "scheduled": 0,
+      "completed": 0,
+      "incidents": 2,
+      "completion_percent": 0
+    }
+  }
+}

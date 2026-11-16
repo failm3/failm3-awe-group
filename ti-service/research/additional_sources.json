@@ -1,0 +1,712 @@
+{
+  "schema_version": "1.0",
+  "language": "ru",
+  "status": "completed",
+  "observed_at": "2026-11-12T05:54:07Z",
+  "author": "Manus AI",
+  "scope": "Обнаружение рынка источников и способов мониторинга. Не проверка отдельных инструментов, не аудит безопасности и не подключение источников.",
+  "contract_path": "/home/ubuntu/awe-tool-intelligence/CONTRACT.md",
+  "selection_rationale": "Небольшой набор первичных инфраструктурных источников дополняется одним прозрачным community-каталогом, инженерными публикациями и одним публичным Telegram-кандидатом. Полнота рынка не утверждается.",
+  "trust_model": {
+    "A": "Первичный источник оператора протокола, платформы, реестра или производителя. Уровень относится к происхождению инфраструктурных фактов, а не к каждому размещённому проекту.",
+    "B": "Telegram, technical communities, research and news blogs; information sources, not official tool attestations",
+    "C": "Aggregators, historical catalogs and Awesome Lists"
+  },
+  "scoring_model": {
+    "name": "documented_monitorability_v1",
+    "meaning": "Техническая наблюдаемость источника по прочитанной документации и видимым образцам, НЕ историческое качество рекомендаций и НЕ безопасность инструментов.",
+    "component_values": "1 — возможность прямо подтверждена первичной документацией или видимым образцом; 0 — прямо подтверждено отсутствие; null — не установлено. Необнаружение документации не превращается в 0.",
+    "component_order": [
+      "structured_read",
+      "stable_item_ids",
+      "full_timestamps",
+      "older_items_access",
+      "new_items_monitoring"
+    ],
+    "components": {
+      "structured_read": "Документированный read-only API или RSS для метаданных/сообщений; возможность у GitHub-каталога наследуется от GitHub API.",
+      "stable_item_ids": "Идентификатор версии, коммита, проекта, статьи или permalink сообщения, пригодный для дедупликации; не обещание вечной доступности.",
+      "full_timestamps": "Полная дата или дата-время записи/версии/коммита есть в документации или образце; только часы и минуты не считаются полной датой.",
+      "older_items_access": "Можно получить ранее опубликованные доступные записи, версии или коммиты; не доказательство полного архива и не гарантия восстановления удалённых данных.",
+      "new_items_monitoring": "Документирован механизм выборки новых событий/изменений: фильтр since, RSS обновлений, webhook либо GitHub commits по пути и времени. Полнота доставки отдельно не установлена."
+    },
+    "weight_per_component": 20,
+    "max_score": 100,
+    "formula": "technical_score = 20 * sum(component_values), только если все пять значений известны; иначе null. known_subtotal = 20 * sum(известных значений), unknown не подменяются нулями.",
+    "history_metrics": {
+      "publication_frequency_per_week": "Число публикаций за полное окно наблюдения / число недель. Здесь null: окно и история не собраны.",
+      "historical_precision": "Доля уникальных исследованных находок, чьи заявленные свойства подтверждены первичными доказательствами. Здесь null: когорты проверок нет.",
+      "verified_discovery_rate": "Доля находок, прошедших записанный live test и ручное разрешение. Здесь null: тестов отдельных инструментов не проводили.",
+      "historical_quality_score": "Не рассчитывается до появления воспроизводимой выборки с периодом, числителем, знаменателем и критериями ошибок."
+    },
+    "promotion_policy": "Приоритет подключения — аналитическая рекомендация по тематике, происхождению и способу сбора. Не измеренная историческая результативность. Технический балл не повышает trust и не разрешает выполнение кода."
+  },
+  "sources": [
+    {
+      "id": "mcp_registry",
+      "name": "Official MCP Registry",
+      "trust": "A",
+      "topic": [
+        "MCP-серверы",
+        "namespace и версии",
+        "remote endpoints",
+        "связи с пакетными реестрами"
+      ],
+      "source_url": "https://registry.modelcontextprotocol.io/",
+      "evidence_url": "https://modelcontextprotocol.io/registry/about",
+      "official_evidence_url": "https://modelcontextprotocol.io/registry/registry-aggregators",
+      "evidence_urls": [
+        "https://modelcontextprotocol.io/registry/about",
+        "https://modelcontextprotocol.io/registry/registry-aggregators",
+        "https://registry.modelcontextprotocol.io/v0.1/servers?limit=1"
+      ],
+      "official_affiliation_confirmed": true,
+      "evidence_summary": "Официальный централизованный реестр метаданных. Namespace связан с подтверждённым GitHub-аккаунтом или доменом. Проверка кода делегируется другим участникам экосистемы. Живой read-only образец содержит server.name, version, status, publishedAt, updatedAt и nextCursor.",
+      "collection_method": {
+        "preferred": "Неавторизованный GET /v0.1/servers с cursor и limit; сохранять метаданные в собственной БД. После начальной выгрузки — updated_since в RFC 3339 с перекрытием окна и дедупликацией name+version.",
+        "entrypoints": [
+          "https://registry.modelcontextprotocol.io/v0.1/servers",
+          "https://registry.modelcontextprotocol.io/docs"
+        ],
+        "authorization_required_for_public_read": false,
+        "documented_polling_example_hours": 1,
+        "polling_example_is_publication_frequency": false,
+        "collector_live_test": "Прочитан только один ответ API, не полная выгрузка и не проверка MCP-сервера."
+      },
+      "history_access": {
+        "mode": "API списка версий /v0.1/servers/{serverName}/versions и конкретной версии; cursor по реестру",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "Preview: возможны breaking changes и сбросы данных.",
+          "Нет гарантий uptime и долговечности данных.",
+          "status изменяем: deprecated/deleted нужно повторно синхронизировать.",
+          "Публичные серверы: не каталог закрытой инфраструктуры."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "core",
+        "decision": "Рекомендовать первым инфраструктурным источником метаданных после ручного разрешения домена и адаптера.",
+        "basis": "Прямое соответствие MCP, namespace authentication, структурные версии и инкрементальная синхронизация.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Только карантин метаданных; никакого исполнения remotes/packages/commands."
+      },
+      "score": {
+        "components": {
+          "structured_read": 1,
+          "stable_item_ids": 1,
+          "full_timestamps": 1,
+          "older_items_access": 1,
+          "new_items_monitoring": 1
+        },
+        "technical_score": 100,
+        "known_subtotal": 100,
+        "known_components": 5,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": "Публичное чтение без авторизации",
+        "amount": null,
+        "currency": null,
+        "evidence_url": "https://modelcontextprotocol.io/registry/registry-aggregators"
+      },
+      "enrollment_status": "recommended_not_enrolled"
+    },
+    {
+      "id": "github_search_releases",
+      "name": "GitHub REST Search + Releases + Commits",
+      "trust": "A",
+      "topic": [
+        "репозитории инструментов и SDK",
+        "MCP",
+        "релизы",
+        "изменения исходных метаданных"
+      ],
+      "source_url": "https://github.com/",
+      "evidence_url": "https://docs.github.com/en/rest/search/search",
+      "official_evidence_url": "https://docs.github.com/en/rest/releases/releases",
+      "evidence_urls": [
+        "https://docs.github.com/en/rest/search/search",
+        "https://docs.github.com/en/rest/releases/releases",
+        "https://docs.github.com/en/rest/commits/commits",
+        "https://github.com/modelcontextprotocol/servers"
+      ],
+      "official_affiliation_confirmed": true,
+      "evidence_summary": "Search выдаёт репозитории и метаданные, Releases — опубликованные релизы с published_at и tag_name, Commits — SHA, даты, фильтры since/until и path. Репозиторий modelcontextprotocol/servers является небольшим набором эталонных реализаций, не полным каталогом и не production-ready решениями.",
+      "collection_method": {
+        "preferred": "GET /search/repositories по MCP/agent/tool и тематическим qualifiers с сохранением total_count и incomplete_results. Для найденных разрешённых репозиториев — пагинация /releases и /commits; читать JSON/README, не архивы с кодом.",
+        "entrypoints": [
+          "https://api.github.com/search/repositories",
+          "https://api.github.com/repos/{owner}/{repo}/releases",
+          "https://api.github.com/repos/{owner}/{repo}/commits"
+        ],
+        "seed_urls": [
+          "https://github.com/modelcontextprotocol/servers",
+          "https://github.com/modelcontextprotocol/registry",
+          "https://github.com/huggingface/huggingface_hub"
+        ],
+        "authorization_required_for_public_read": false,
+        "search_auth_note": "Code Search требует авторизацию. Не запрашивать write-scopes для мониторинга; использовать разрешённый read-only доступ при необходимости.",
+        "documented_search_limit_results_per_query": 1000,
+        "documented_search_per_page_max": 100,
+        "documented_search_requests_per_minute_unauthenticated": 10,
+        "documented_search_requests_per_minute_authenticated_except_code": 30,
+        "collector_live_test": null
+      },
+      "history_access": {
+        "mode": "Пагинируемые опубликованные Releases плюс доступная Git-история Commits; tags запрашиваются отдельно",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "Search ограничен 1000 результатами на запрос; incomplete_results и ограничение поиска нельзя скрывать.",
+          "Релизы не включают обычные tags без release; draft доступны только при соответствующих правах.",
+          "created_at релиза не равно published_at; для даты публикации использовать published_at.",
+          "История может быть переписана или записи удалены; stars не мера надёжности.",
+          "Trust A относится к документации GitHub и фактам платформы, не ко всем пользователям GitHub."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "core",
+        "decision": "Основной канал обнаружения новых репозиториев и наблюдения за изменениями уже отобранных проектов.",
+        "basis": "Прямые ссылки владельцев, история изменений и независимые идентификаторы.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Автоматически добавлять только discovery-кандидатов; происхождение каждого проекта подтверждать отдельно."
+      },
+      "score": {
+        "components": {
+          "structured_read": 1,
+          "stable_item_ids": 1,
+          "full_timestamps": 1,
+          "older_items_access": 1,
+          "new_items_monitoring": 1
+        },
+        "technical_score": 100,
+        "known_subtotal": 100,
+        "known_components": 5,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": "Публичные опубликованные данные доступны всем; ограничения API отдельно",
+        "amount": null,
+        "currency": null,
+        "evidence_url": "https://docs.github.com/en/rest/releases/releases"
+      },
+      "enrollment_status": "recommended_not_enrolled"
+    },
+    {
+      "id": "awesome_mcp",
+      "name": "punkpeye/awesome-mcp-servers",
+      "trust": "C",
+      "topic": [
+        "community discovery MCP",
+        "категории серверов",
+        "клиенты и фреймворки"
+      ],
+      "source_url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "evidence_url": "https://raw.githubusercontent.com/punkpeye/awesome-mcp-servers/main/README.md",
+      "official_evidence_url": null,
+      "evidence_urls": [
+        "https://github.com/punkpeye/awesome-mcp-servers",
+        "https://raw.githubusercontent.com/punkpeye/awesome-mcp-servers/main/README.md",
+        "https://github.com/punkpeye/awesome-mcp-servers/blob/main/CONTRIBUTING.md",
+        "https://docs.github.com/en/rest/commits/commits"
+      ],
+      "official_affiliation_confirmed": null,
+      "evidence_summary": "Первичная страница владельца community-каталога и CONTRIBUTING показывают тематические категории, ссылки на репозитории и публичный PR-процесс. README содержит рекламу и Glama badges; маркировка official является заявлением каталогизатора. Каталог включает экспериментальные проекты; hosted-only серверы вынесены в другой список.",
+      "collection_method": {
+        "preferred": "Читать README через GitHub Contents/Raw на закреплённом SHA; отслеживать /commits?path=README.md&since=... и изменения ссылок. Ограничивать объём README и считать удалённые ссылки отдельным событием.",
+        "entrypoints": [
+          "https://raw.githubusercontent.com/punkpeye/awesome-mcp-servers/main/README.md",
+          "https://api.github.com/repos/punkpeye/awesome-mcp-servers/commits?path=README.md"
+        ],
+        "authorization_required_for_public_read": false,
+        "collector_live_test": "README и CONTRIBUTING прочитаны; полного diff-monitoring не запускали."
+      },
+      "history_access": {
+        "mode": "Доступная Git-история README и pull requests; дата добавления в список не дата релиза инструмента",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "Community-curation не аудит; CONTRIBUTING допускает ускоренный процесс для agent PR.",
+          "Реклама и badges не независимая проверка безопасности.",
+          "Синхронизированная веб-версия Glama не считается вторым независимым подтверждением той же записи."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "secondary",
+        "decision": "Подключить как источник широкого охвата после ручного allowlist; не использовать как источник статуса verified/official.",
+        "basis": "Публичная история и прозрачный способ добавления полезны для обнаружения; первичная проверка обязательна.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Только неподтверждённые кандидаты и provenance; рекламные описания не повышают статус."
+      },
+      "score": {
+        "components": {
+          "structured_read": 1,
+          "stable_item_ids": 1,
+          "full_timestamps": 1,
+          "older_items_access": 1,
+          "new_items_monitoring": 1
+        },
+        "technical_score": 100,
+        "known_subtotal": 100,
+        "known_components": 5,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": "Публичный README; цены дополнительных коммерческих продуктов не проверялись",
+        "amount": null,
+        "currency": null,
+        "evidence_url": "https://github.com/punkpeye/awesome-mcp-servers"
+      },
+      "enrollment_status": "recommended_not_enrolled"
+    },
+    {
+      "id": "huggingface_hub",
+      "name": "Hugging Face Hub API и Spaces",
+      "trust": "A",
+      "topic": [
+        "модели",
+        "Spaces и AI-приложения",
+        "агентные компоненты",
+        "datasets и model cards"
+      ],
+      "source_url": "https://huggingface.co/",
+      "evidence_url": "https://huggingface.co/docs/hub/en/api",
+      "official_evidence_url": "https://huggingface.co/docs/huggingface_hub/en/package_reference/hf_api",
+      "evidence_urls": [
+        "https://huggingface.co/docs/hub/en/api",
+        "https://huggingface.co/docs/huggingface_hub/en/package_reference/hf_api",
+        "https://huggingface.co/docs/hub/en/webhooks",
+        "https://huggingface.co/pricing"
+      ],
+      "official_affiliation_confirmed": true,
+      "evidence_summary": "Открытые Hub endpoints и официальный Python/JS клиент. list_models/list_spaces поддерживают search, author, sort created_at/last_modified и расширяемые метаданные; list_repo_commits возвращает коммиты выбранной ревизии с датами. Webhooks могут следить за выбранными репозиториями и владельцами, не являются открытой глобальной лентой всего Hub.",
+      "collection_method": {
+        "preferred": "Read-only list_models/list_spaces с тематическими фильтрами и списком выбранных владельцев; сохранять repo_id, SHA, cardData, createdAt/lastModified и ссылки. Инкрементальные webhooks — только отдельное разрешённое подключение с проверкой секрета и дедупликацией Webhook-Id.",
+        "entrypoints": [
+          "https://huggingface.co/.well-known/openapi.json",
+          "https://huggingface.co/api/models",
+          "https://huggingface.co/api/spaces"
+        ],
+        "authorization_required_for_public_read": false,
+        "authorization_note": "Для явно анонимного клиента token=False; gated/private объекты и paid-only endpoints не обходить.",
+        "documented_webhook_max_triggers_per_24_hours": 1000,
+        "webhook_limit_is_publication_frequency": false,
+        "collector_live_test": null
+      },
+      "history_access": {
+        "mode": "list_repo_commits по доступной ревизии модели/Space/dataset; известные SHA дают историю контента. Activity webhooks показывает отправленные payloads после настройки",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "Likes/downloads/trending отражают интерес, не качество и не совместимость с AWE.",
+          "lastModified означает изменение репозитория, не обязательно новый инструмент или модель.",
+          "Spaces — демонстрации/приложения, а не автоматически разрешённые remote инструменты.",
+          "Webhook delivery не гарантирует порядок; глобальная подписка на весь Hub для обычного пользователя не предоставляется.",
+          "Срок хранения webhook history неизвестен; buckets не имеют Git-истории."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "core_adjacent",
+        "decision": "Основной дополнительный источник AI-компонентов и приложений, но не замена каталогу MCP.",
+        "basis": "Структурные карточки и Git-история помогают связывать приложение, модель и репозиторий.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Только метаданные public repos; не запускать Spaces и не загружать trust_remote_code."
+      },
+      "score": {
+        "components": {
+          "structured_read": 1,
+          "stable_item_ids": 1,
+          "full_timestamps": 1,
+          "older_items_access": 1,
+          "new_items_monitoring": 1
+        },
+        "technical_score": 100,
+        "known_subtotal": 100,
+        "known_components": 5,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": "Открытые метаданные; дополнительные планы и compute платные",
+        "amount": null,
+        "currency": null,
+        "evidence_url": "https://huggingface.co/pricing"
+      },
+      "enrollment_status": "recommended_not_enrolled"
+    },
+    {
+      "id": "pypi",
+      "name": "PyPI RSS + Index/JSON API",
+      "trust": "A",
+      "topic": [
+        "Python-пакеты",
+        "MCP-серверы и SDK",
+        "агентные библиотеки",
+        "релизы и yanked status"
+      ],
+      "source_url": "https://pypi.org/",
+      "evidence_url": "https://docs.pypi.org/api/",
+      "official_evidence_url": "https://docs.pypi.org/api/index-api/",
+      "evidence_urls": [
+        "https://docs.pypi.org/api/",
+        "https://docs.pypi.org/api/feeds/",
+        "https://docs.pypi.org/api/index-api/",
+        "https://docs.pypi.org/api/json/"
+      ],
+      "official_affiliation_confirmed": true,
+      "evidence_summary": "PyPI рекомендует RSS для периодического обнаружения новых пакетов и обновлений. JSON Index API даёт доступные версии/файлы, upload-time, hashes и yanked. JSON API даёт project URLs и метаданные; ключ releases deprecated, downloads всегда -1 и не пригоден для оценки.",
+      "collection_method": {
+        "preferred": "Читать newest packages и latest updates RSS, отбирать по теме и первичным ссылкам. Backfill для отобранных пакетов через /simple/{project}/ с Accept application/vnd.pypi.simple.v1+json; описание/URLs через /pypi/{project}/json. Учитывать ETag и last-serial, не строить новую XML-RPC интеграцию.",
+        "entrypoints": [
+          "https://pypi.org/rss/packages.xml",
+          "https://pypi.org/rss/updates.xml",
+          "https://pypi.org/rss/project/{project}/releases.xml",
+          "https://pypi.org/simple/{project}/",
+          "https://pypi.org/pypi/{project}/json"
+        ],
+        "authorization_required_for_public_read": false,
+        "collector_live_test": null
+      },
+      "history_access": {
+        "mode": "RSS последних записей плюс Index API доступных версий и файлов для отобранного проекта",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "RSS не документирован как полный бессрочный архив; срок и глубина неизвестны.",
+          "Upload metadata не обязательно совпадает с содержимым опубликованного файла.",
+          "Все доступные версии не означают восстановление удалённых релизов.",
+          "Пустой vulnerabilities не доказательство отсутствия уязвимостей; Python package name не доказательство принадлежности вендору.",
+          "PyPI может блокировать безответственный сбор; отсутствие общего edge rate limit не разрешает агрессивный crawl."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "core_crosscheck",
+        "decision": "Добавить как источник фактов о публикации Python-пакетов и релизах; широкое RSS discovery требует фильтра.",
+        "basis": "Первичные даты, versions, hashes и статусы публикации; полезно для сопоставления MCP Registry и GitHub.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Чтение метаданных; запрет pip install/uvx и исполнения setup/build на этапе discovery."
+      },
+      "score": {
+        "components": {
+          "structured_read": 1,
+          "stable_item_ids": 1,
+          "full_timestamps": 1,
+          "older_items_access": 1,
+          "new_items_monitoring": 1
+        },
+        "technical_score": 100,
+        "known_subtotal": 100,
+        "known_components": 5,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": "Публичные API и RSS; цены организационных сервисов не исследовались",
+        "amount": null,
+        "currency": null,
+        "evidence_url": "https://docs.pypi.org/api/"
+      },
+      "enrollment_status": "recommended_not_enrolled"
+    },
+    {
+      "id": "npm",
+      "name": "npm Registry Search и package metadata",
+      "trust": "A",
+      "topic": [
+        "JavaScript/TypeScript-пакеты",
+        "MCP-серверы и SDK",
+        "версии, dist-tags и deprecation"
+      ],
+      "source_url": "https://www.npmjs.com/",
+      "evidence_url": "https://api-docs.npmjs.com/",
+      "official_evidence_url": "https://registry.npmjs.org/@modelcontextprotocol%2Fsdk",
+      "evidence_urls": [
+        "https://api-docs.npmjs.com/",
+        "https://registry.npmjs.org/@modelcontextprotocol%2Fsdk",
+        "https://github.com/orgs/community/discussions/152515",
+        "https://github.com/npm/registry"
+      ],
+      "official_affiliation_confirmed": true,
+      "evidence_summary": "Официальный API описывает /-/v1/search с text,size,from. Прочитанный live packument содержит versions, dist-tags, time.created/time.modified и даты версий. Архивный npm/registry не следует считать актуальной полной спецификацией. Объявление миграции replication в GitHub Community указывает новые пути и запрет include_docs/streaming; актуальную полноту replication в этом исследовании не тестировали.",
+      "collection_method": {
+        "preferred": "Поиск /-/v1/search по MCP и агентным библиотекам; затем GET https://registry.npmjs.org/{url_encoded_package_name} для отобранных имён. Повторные snapshots сравнивать по версии и полям deprecation/dist-tags. Массовую replication рассматривать отдельно после live-проверки актуального контракта.",
+        "entrypoints": [
+          "https://registry.npmjs.org/-/v1/search",
+          "https://registry.npmjs.org/{url_encoded_package_name}"
+        ],
+        "authorization_required_for_public_read": false,
+        "replication_candidate_endpoint": "https://replicate.npmjs.com/registry/_changes",
+        "replication_candidate_evidence_url": "https://github.com/orgs/community/discussions/152515",
+        "replication_current_contract_verified": null,
+        "collector_live_test": "Прочитан и структурно разобран один публичный packument; код, tarballs и scripts не выполнялись."
+      },
+      "history_access": {
+        "mode": "versions и time в текущем публичном packument; собственные snapshots нужны для истории изменяемых dist-tags и deprecation",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "Один образец подтверждает структуру, но не полноту рынка и не качество SDK.",
+          "Search score/popularity/quality/maintenance являются метриками npm, не AWE-проверкой.",
+          "Package metadata заявлены издателем; namespace и repository URL требуют сопоставления с официальным владельцем.",
+          "Удалённые версии могут отсутствовать; изменяемые tags не равны неизменной истории.",
+          "Не применять старые skimdb, streaming feed и include_docs без проверки актуальности; replication не включён в технический балл."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "core_crosscheck",
+        "decision": "Добавить поиск и чтение метаданных как источник публикаций JS/TS; broad replication пока только кандидат отдельного адаптера.",
+        "basis": "Версии и ссылки на пакеты дают независимые факты относительно GitHub README и MCP Registry.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Метаданные в карантин; не выполнять npx/npm install и lifecycle scripts."
+      },
+      "score": {
+        "components": {
+          "structured_read": 1,
+          "stable_item_ids": 1,
+          "full_timestamps": 1,
+          "older_items_access": 1,
+          "new_items_monitoring": null
+        },
+        "technical_score": null,
+        "known_subtotal": 80,
+        "known_components": 4,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": "Публичный поиск и packument; цены private/paid сервисов не исследовались",
+        "amount": null,
+        "currency": null,
+        "evidence_url": "https://api-docs.npmjs.com/"
+      },
+      "enrollment_status": "recommended_not_enrolled"
+    },
+    {
+      "id": "anthropic_engineering",
+      "name": "Anthropic Engineering",
+      "trust": "A",
+      "topic": [
+        "tool discovery",
+        "MCP",
+        "agent skills",
+        "контекст, sandboxing и безопасность выполнения"
+      ],
+      "source_url": "https://www.anthropic.com/engineering",
+      "evidence_url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "official_evidence_url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "evidence_urls": [
+        "https://www.anthropic.com/engineering",
+        "https://www.anthropic.com/engineering/code-execution-with-mcp"
+      ],
+      "official_affiliation_confirmed": true,
+      "evidence_summary": "Первичная инженерная статья Published Nov 04, 2025 описывает on-demand поиск определений инструментов, code execution через MCP и необходимость sandboxing/resource limits/monitoring. Это архитектурное свидетельство и канал discovery, не каталог безопасных серверов.",
+      "collection_method": {
+        "preferred": "Отбирать новые страницы Engineering по ссылкам и сохранять URL, заголовок, явно указанную дату и ссылки на первичные проекты. Для динамического индекса — браузерный read-only просмотр/контролируемый HTML-адаптер; API/RSS здесь не подтверждены.",
+        "entrypoints": [
+          "https://www.anthropic.com/engineering"
+        ],
+        "authorization_required_for_public_read": false,
+        "collector_live_test": "Статья извлечена успешно. Извлечение общего индекса вернуло навигацию, поэтому автоматическая полнота ленты не подтверждена."
+      },
+      "history_access": {
+        "mode": "Старая датированная статья доступна по прямому URL; полный архив и история редакций не установлены",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "Динамический индекс требует проверки адаптера; не считать пустую выдачу доказательством отсутствия публикаций.",
+          "Vendor engineering и демонстрационные результаты не являются независимым сравнительным тестом.",
+          "Указанная месячная developer newsletter не устанавливает частоту Engineering-публикаций."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "context_watch",
+        "decision": "Рекомендовать тематический инженерный watchlist и ручной отбор; автоматический crawl после проверки адаптера.",
+        "basis": "Полезно для обнаружения архитектурных возможностей и рисков, которые каталоги пакетов не описывают.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Статьи и ссылки в очередь исследования; примеры кода не исполнять."
+      },
+      "score": {
+        "components": {
+          "structured_read": null,
+          "stable_item_ids": 1,
+          "full_timestamps": 1,
+          "older_items_access": 1,
+          "new_items_monitoring": null
+        },
+        "technical_score": null,
+        "known_subtotal": 60,
+        "known_components": 3,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": "Публичная статья; продуктовые подписки не исследовались",
+        "amount": null,
+        "currency": null,
+        "evidence_url": "https://www.anthropic.com/engineering/code-execution-with-mcp"
+      },
+      "enrollment_status": "recommended_not_enrolled"
+    },
+    {
+      "id": "telegram_github_repos",
+      "name": "Telegram: GitHub repos (@github_repos)",
+      "trust": "B",
+      "topic": [
+        "trending GitHub projects",
+        "MCP",
+        "AI-репозитории",
+        "вторичные ссылки"
+      ],
+      "source_url": "https://t.me/github_repos",
+      "evidence_url": "https://t.me/s/github_repos/11770",
+      "official_evidence_url": null,
+      "evidence_urls": [
+        "https://t.me/s/github_repos/11766",
+        "https://t.me/s/github_repos/11770"
+      ],
+      "official_affiliation_confirmed": null,
+      "operator_identity": null,
+      "evidence_summary": "Публичная страница заявляет подборку trending projects и содержит message permalinks: /11770 с github.com/coleam00/mcp-crawl4ai-rag, /11771 с mcp-windbg и /11773 с huggingface/nanoVLM. Это подтверждает тематическую релевантность канала, не качество инструментов. Принадлежность GitHub/Hugging Face не установлена; имя канала не доказательство официальности.",
+      "collection_method": {
+        "preferred": "Только read-only публичный HTML https://t.me/s/github_repos с видимыми before/after ссылками; сохранять source_handle, message_id, permalink, raw_hash и извлечённые GitHub-ссылки по контракту. Авторизованная Telegram API-история — только отдельно разрешённым collector, которого здесь не использовали.",
+        "entrypoints": [
+          "https://t.me/s/github_repos"
+        ],
+        "authorization_required_for_public_read": false,
+        "collector_live_test": "Прочитаны два соседних публичных окна. Полная пагинация, API-доступ и сбор всех сообщений не выполнялись.",
+        "coverage_completeness": "public_web_only",
+        "history_boundary_reached": null,
+        "media_limitations": "HTML-preview: полнота медиа, captions, edits и удалённых сообщений не доказана."
+      },
+      "history_access": {
+        "mode": "Видимые старые сообщения и before/after в публичном preview; это не вся Telegram API-история",
+        "complete_history_proven": null,
+        "retention_days": null,
+        "full_export_performed": false,
+        "limitations": [
+          "В извлечённом тексте видны часы, но не полные даты: published_at для этого наблюдения null.",
+          "Оператор, политика рекламы и проверка публикаций неизвестны.",
+          "Канал публикует и нетематические проекты; частота и доля полезных находок не измерены.",
+          "Stars в сообщениях — чужой исторический snapshot, не текущая GitHub-метрика."
+        ]
+      },
+      "promotion_recommendation": {
+        "priority": "manual_candidate",
+        "decision": "Сохранить как дополнительный Telegram-кандидат; не подключать автоматически и не повышать выше C до проверки владельца/выборки.",
+        "basis": "Есть видимые первичные GitHub-ссылки по MCP и Hugging Face, но нет оснований считать канал официальным или исторически точным.",
+        "measured_historical_quality": false,
+        "auto_enrollment_scope": "Авто-enrollment запрещён. После ручного разрешения возможен только карантин ссылок; ни один пост не одобряет инструмент."
+      },
+      "score": {
+        "components": {
+          "structured_read": null,
+          "stable_item_ids": 1,
+          "full_timestamps": null,
+          "older_items_access": 1,
+          "new_items_monitoring": null
+        },
+        "technical_score": null,
+        "known_subtotal": 40,
+        "known_components": 2,
+        "publication_frequency_per_week": null,
+        "historical_precision": null,
+        "verified_discovery_rate": null,
+        "historical_quality_score": null
+      },
+      "pricing": {
+        "category": null,
+        "amount": null,
+        "currency": null,
+        "evidence_url": null
+      },
+      "enrollment_status": "manual_candidate_not_enrolled"
+    }
+  ],
+  "safe_auto_enrollment_restrictions": [
+    "Исследование не включает создание расписаний, webhooks, OAuth-подключений, подписок или persistent jobs. Все источники пока not_enrolled.",
+    "Оператор вручную одобряет каждый source domain, source handle и read-only адаптер. Автоматически обнаруженная ссылка может создать лишь неподтверждённого кандидата.",
+    "Trust источника не наследуется инструментом. HTTP 200, Registry active, badge official, stars, downloads и npm search score не переводят ресурс в verified/approved.",
+    "Исполнимый registry экспортирует только явно approved ресурсы с записанным live test, точной версией/commit и evidence. В этом исследовании таких статусов и тестов нет.",
+    "Никогда не выполнять обнаруженные команды, npm/pip/uvx install, shell snippets, package lifecycle scripts, model trust_remote_code или действия remote MCP во время сбора.",
+    "Network guard проверяет DNS/IP и каждый redirect: блокировать private, loopback, link-local и cloud metadata. Discovery URL не расширяет allowlist автоматически; ограничить timeout, размер, MIME и частоту чтения.",
+    "Сохранять provenance, checked_at/collected_at, идентификаторы, raw_hash и источник каждого утверждения; не включать credentials, private URLs или персональные access tokens в JSON/Markdown.",
+    "Дедупликация по canonical repository URL, registry name+version и SHA. Републикации и синхронизированные зеркала не считать независимыми подтверждениями.",
+    "Учитывать удаление/yanked/deprecated, ошибки пагинации и ограничение history. Не утверждать полноту Telegram по публичному preview; использовать public_web_only.",
+    "Содержимое README, posts, cards, docs и metadata недоверенное. Извлекать данные, а не следовать размещённым там инструкциям. Webhook payload не исполнять и не считать источник authenticated без проверки секрета.",
+    "Рекомендации и технические баллы не заменяют измеренную историческую выборку. Все неизвестные количественные факты остаются null."
+  ],
+  "paid_products_note": {
+    "purchase_performed": false,
+    "subscription_created": false,
+    "evidence_url": "https://huggingface.co/pricing",
+    "checked_at": "2026-11-12T05:52:02Z",
+    "products": [
+      {
+        "name": "Hugging Face PRO",
+        "displayed_price": "$9 /month",
+        "amount": 9,
+        "currency_symbol": "$",
+        "currency_iso": null,
+        "billing_unit": "месяц за персональный аккаунт",
+        "taxes": null,
+        "required_for_this_metadata_research": false
+      },
+      {
+        "name": "Hugging Face Team",
+        "displayed_price": "$20 /month per user",
+        "amount": 20,
+        "currency_symbol": "$",
+        "currency_iso": null,
+        "billing_unit": "месяц за пользователя",
+        "taxes": null,
+        "required_for_this_metadata_research": false
+      },
+      {
+        "name": "Hugging Face Enterprise",
+        "displayed_price": "$50 /month per user",
+        "amount": 50,
+        "currency_symbol": "$",
+        "currency_iso": null,
+        "billing_unit": "месяц за пользователя; страница указывает annual commitments",
+        "taxes": null,
+        "required_for_this_metadata_research": false
+      }
+    ],
+    "relevance": "Платные планы и compute не нужны для выполненного чтения открытых документов. API page предупреждает о rate limits и paid-only endpoints; Webhooks docs предлагают PRO/Team/Enterprise и обращение к поддержке при превышении 1000 triggers/24h. Это лимит сервиса, не измеренная частота публикаций.",
+    "cost_limitations": "Цены зафиксированы только как отображённые на официальной странице в момент проверки; налоги, точная ISO-валюта и итоговые условия неизвестны. Цены иных продуктов/маркетплейсов не проверены и равны null. Покупки не рекомендованы автоматически.",
+    "additional_cost_evidence_url": "https://huggingface.co/docs/hub/en/webhooks"
+  },
+  "limitations": [
+    "Нет старого каталога AWE и полного исторического корпуса; historical quality и частота публикаций не рассчитаны.",
+    "Полные выгрузки реестров и live-тесты инструментов не выполнялись. Проверена документация способов сбора и отдельные read-only образцы.",
+    "Общий индекс Anthropic требует отдельной проверки HTML/браузерного адаптера.",
+    "Официальный связанный Telegram-канал операторов MCP/GitHub/Hugging Face не подтверждён; найден только релевантный независимый кандидат.",
+    "Список приоритетный, не исчерпывающий обзор всех агрегаторов и инженерных изданий."
+  ],
+  "blockers": []
+}

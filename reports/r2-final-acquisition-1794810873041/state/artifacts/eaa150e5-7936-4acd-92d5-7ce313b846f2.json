@@ -1,0 +1,15 @@
+{
+  "id": "eaa150e5-7936-4acd-92d5-7ce313b846f2",
+  "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "type": "file",
+  "name": "qa/repair2-verify.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/qa/repair2-verify.py",
+  "created_at": "2026-11-16T07:02:32.138Z",
+  "metadata": {
+    "size_bytes": 17378,
+    "sha256": "be9882d3091482dba041ce7de17aab0f3937bdbe5d35b3a61b2eed44f3d1c280",
+    "reconciled": true,
+    "previous_artifact_id": "e5217195-8195-4bd9-8719-4e0da03b76d4",
+    "revision": 2
+  }
+}

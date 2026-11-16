@@ -1,0 +1,599 @@
+{
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "checks": [
+    {
+      "field": "digest.json bytes > 0",
+      "recomputed": 480,
+      "digest": 480,
+      "pass": true,
+      "note": "480 bytes"
+    },
+    {
+      "field": "digest.json sha256",
+      "recomputed": "989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7",
+      "digest": "989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "row_count",
+      "recomputed": 3,
+      "digest": 3,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "row_count is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "scheduled",
+      "recomputed": 30,
+      "digest": 30,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "scheduled is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "completed",
+      "recomputed": 26,
+      "digest": 26,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "completed is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "incidents",
+      "recomputed": 6,
+      "digest": 6,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "incidents is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "completion_percent",
+      "recomputed": "86.67",
+      "digest": "86.67",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "completion_percent occurrence count",
+      "recomputed": 3,
+      "digest": 3,
+      "pass": true,
+      "note": "1 global + 2 per-site"
+    },
+    {
+      "field": "completion_percent raw JSON token",
+      "recomputed": "86.67",
+      "digest": "86.67",
+      "pass": true,
+      "note": "unquoted, exactly 2 decimals"
+    },
+    {
+      "field": "completion_percent not quoted",
+      "recomputed": "unquoted",
+      "digest": "unquoted",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North completion_percent raw token",
+      "recomputed": "81.82",
+      "digest": "81.82",
+      "pass": true,
+      "note": "2-decimal text rendering"
+    },
+    {
+      "field": "site South completion_percent raw token",
+      "recomputed": "100.00",
+      "digest": "100.00",
+      "pass": true,
+      "note": "2-decimal text rendering"
+    },
+    {
+      "field": "source passthrough",
+      "recomputed": "Lumen Harbor field pilot",
+      "digest": "Lumen Harbor field pilot",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "period passthrough",
+      "recomputed": "2026-W45",
+      "digest": "2026-W45",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sites is a JSON object",
+      "recomputed": "dict",
+      "digest": "dict",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sites key set",
+      "recomputed": [
+        "North",
+        "South"
+      ],
+      "digest": [
+        "North",
+        "South"
+      ],
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North row_count",
+      "recomputed": 2,
+      "digest": 2,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North row_count is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North scheduled",
+      "recomputed": 22,
+      "digest": 22,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North scheduled is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North completed",
+      "recomputed": 18,
+      "digest": 18,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North completed is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North incidents",
+      "recomputed": 5,
+      "digest": 5,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North incidents is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North completion_percent",
+      "recomputed": "81.82",
+      "digest": "81.82",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South row_count",
+      "recomputed": 1,
+      "digest": 1,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South row_count is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South scheduled",
+      "recomputed": 8,
+      "digest": 8,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South scheduled is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South completed",
+      "recomputed": 8,
+      "digest": 8,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South completed is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South incidents",
+      "recomputed": 1,
+      "digest": 1,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South incidents is exact int type",
+      "recomputed": "int",
+      "digest": "int",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South completion_percent",
+      "recomputed": "100.00",
+      "digest": "100.00",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site row_count) vs global row_count (digest)",
+      "recomputed": 3,
+      "digest": 3,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site row_count) vs my global row_count",
+      "recomputed": 3,
+      "digest": 3,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site scheduled) vs global scheduled (digest)",
+      "recomputed": 30,
+      "digest": 30,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site scheduled) vs my global scheduled",
+      "recomputed": 30,
+      "digest": 30,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site completed) vs global completed (digest)",
+      "recomputed": 26,
+      "digest": 26,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site completed) vs my global completed",
+      "recomputed": 26,
+      "digest": 26,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site incidents) vs global incidents (digest)",
+      "recomputed": 6,
+      "digest": 6,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "sum(per-site incidents) vs my global incidents",
+      "recomputed": 6,
+      "digest": 6,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "global pct recomputed from digest's own completed/scheduled",
+      "recomputed": "86.67",
+      "digest": "86.67",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "global pct has exactly 2 decimals in text",
+      "recomputed": "2dp",
+      "digest": "2dp",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North pct recomputed from its own completed/scheduled",
+      "recomputed": "81.82",
+      "digest": "81.82",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South pct recomputed from its own completed/scheduled",
+      "recomputed": "100.00",
+      "digest": "100.00",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "0 <= global completion_percent <= 100",
+      "recomputed": "0..100",
+      "digest": "86.67",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site North completed <= scheduled",
+      "recomputed": "<= 22",
+      "digest": 18,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South completed <= scheduled",
+      "recomputed": "<= 8",
+      "digest": 8,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md bytes > 0",
+      "recomputed": 1603,
+      "digest": 1603,
+      "pass": true,
+      "note": "1603 bytes"
+    },
+    {
+      "field": "digest.md sha256",
+      "recomputed": "7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af",
+      "digest": "7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md totals cell row_count",
+      "recomputed": "3",
+      "digest": "3",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md totals cell scheduled",
+      "recomputed": "30",
+      "digest": "30",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md totals cell completed",
+      "recomputed": "26",
+      "digest": "26",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md totals cell incidents",
+      "recomputed": "6",
+      "digest": "6",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md totals cell completion_percent",
+      "recomputed": "86.67",
+      "digest": "86.67",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md site row North",
+      "recomputed": "| North | 2 | 22 | 18 | 5 | 81.82 |",
+      "digest": "| North | 2 | 22 | 18 | 5 | 81.82 |",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md site row South",
+      "recomputed": "| South | 1 | 8 | 8 | 1 | 100.00 |",
+      "digest": "| South | 1 | 8 | 8 | 1 | 100.00 |",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md total row equals digest.json",
+      "recomputed": "| **total** | 3 | 30 | 26 | 6 | 86.67 |",
+      "digest": "| **total** | 3 | 30 | 26 | 6 | 86.67 |",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md source line matches digest.json.source",
+      "recomputed": "Lumen Harbor field pilot",
+      "digest": "present",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md period line matches digest.json.period",
+      "recomputed": "2026-W45",
+      "digest": "present",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md fixture sha256 matches on-disk fixture",
+      "recomputed": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "digest": "present",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md has reproducible method section",
+      "recomputed": "## Reproducible method",
+      "digest": "present",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.md has cap-01 method section header",
+      "recomputed": "present",
+      "digest": "present",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "percentages in digest.md table rows all exist in digest.json",
+      "recomputed": [
+        "100.00",
+        "81.82",
+        "86.67"
+      ],
+      "digest": [
+        "100.00",
+        "81.82",
+        "86.67"
+      ],
+      "pass": true,
+      "note": "table rows only; method prose excluded"
+    },
+    {
+      "field": "digest.md method prose 0.00 is not presented as a data value",
+      "recomputed": "prose only",
+      "digest": "in method text",
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "digest.json top-level key set exact",
+      "recomputed": [
+        "source",
+        "period",
+        "row_count",
+        "scheduled",
+        "completed",
+        "incidents",
+        "completion_percent",
+        "sites"
+      ],
+      "digest": [
+        "completed",
+        "completion_percent",
+        "incidents",
+        "period",
+        "row_count",
+        "scheduled",
+        "sites",
+        "source"
+      ],
+      "pass": true,
+      "note": "no extra, no missing"
+    },
+    {
+      "field": "site North key set exact",
+      "recomputed": [
+        "row_count",
+        "scheduled",
+        "completed",
+        "incidents",
+        "completion_percent"
+      ],
+      "digest": [
+        "completed",
+        "completion_percent",
+        "incidents",
+        "row_count",
+        "scheduled"
+      ],
+      "pass": true,
+      "note": ""
+    },
+    {
+      "field": "site South key set exact",
+      "recomputed": [
+        "row_count",
+        "scheduled",
+        "completed",
+        "incidents",
+        "completion_percent"
+      ],
+      "digest": [
+        "completed",
+        "completion_percent",
+        "incidents",
+        "row_count",
+        "scheduled"
+      ],
+      "pass": true,
+      "note": ""
+    }
+  ],
+  "checks_total": 73,
+  "checks_pass": 73,
+  "checks_fail": 0,
+  "recomputed": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "sites": {
+      "North": {
+        "row_count": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": "81.82"
+      },
+      "South": {
+        "row_count": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": "100.00"
+      }
+    }
+  },
+  "verdict": "INDEPENDENT_ARITHMETIC_PARITY_OK"
+}

@@ -1,0 +1,35 @@
+{
+  "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+  "saved_at": "2026-11-16T08:15:29.390Z",
+  "total_agents": 1,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T08:10:23.232Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: observation-digest-v1 is the competence named in the objective and scope, but it is not in REGISTERED CAPABILITIES. Writing it ad hoc in shell now would be a silent substitution, so it must be acquired first. Run one bounded acquisition with no network, packages, publishing, deployment, purchases or external changes. The scope excludes network, so web_search and web_fetch must not be used. Use only file_list, file_read, file_write and shell. Let W=/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae. Author exactly one local procedure source at the stable path W/procedures/observation_digest_v1.py, using python3 if it is present locally or otherwise a POSIX sh equivalent. The procedure must independently read the observation JSON at argv[1]. It must compute exact numeric row_count, scheduled, completed, incidents and completion_percent (completed/scheduled*100, rounded to 2 decimals). It must also build a sites object keyed by site with per-site totals. It must write digest.json, and digest.md with the same values plus a reproducible method, into argv[2]. Fixed args are exactly [W/input/pilot.observations.json, W]. A probe output directory must never be the final output. Qualify the procedure only by running it against a separate probe directory and comparing its output to totals computed independently from the raw fixture. A model-authored observation is not qualification, and visible examples do not replace independent arithmetic. Report the procedure path, its sha256, the fixed args, and the probe evidence so the Head can replan with the qualified procedure and a durable invocation receipt.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "shell",
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "50100302-8eab-4e35-813a-c757d52c2d09",
+        "bef85584-c938-43d0-83dd-8d83ba4adb78",
+        "4bd0dbd5-cce7-4715-9379-de14a1cccc2f",
+        "dd122e7e-4d3a-44d6-bb5a-a5a7685dedcb",
+        "a8f5ad3d-79b4-4404-b821-0d7c24a48a5b",
+        "0a31e8ba-971f-4f13-bf12-ed2b4a9add62"
+      ],
+      "duration_ms": 306162,
+      "finished_at": "2026-11-16T08:15:29.390Z"
+    }
+  ]
+}

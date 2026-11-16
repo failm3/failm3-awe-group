@@ -1,0 +1,950 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+  "status": "completed",
+  "started_at": "2026-11-16T20:21:29.666Z",
+  "finished_at": "2026-11-16T20:26:21.398Z",
+  "execution_error": null,
+  "approved_spec_hash": "fd3368e3104914d0db4ef9c8f802788906c168e15bc10bdfe9ed86116b2addca",
+  "host_execution_policy": {
+    "composition": "trusted-host-only",
+    "mode": "engineering-practice",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "spec_hash": "fd3368e3104914d0db4ef9c8f802788906c168e15bc10bdfe9ed86116b2addca",
+    "fail_closed": true,
+    "allowed_stages": [
+      "mission",
+      "delegation",
+      "repair",
+      "effect",
+      "acceptance"
+    ],
+    "allowed_tools": [
+      "delegate",
+      "file_list",
+      "file_read",
+      "file_write",
+      "save_artifact"
+    ],
+    "selection_inputs": [
+      "approved mission identity",
+      "approved spec hash",
+      "host target role/tools/stage"
+    ],
+    "prohibited_selection_inputs": [
+      "request metadata",
+      "model metadata",
+      "model-authored configuration"
+    ]
+  },
+  "artifacts": [
+    {
+      "id": "bd670e15-71a2-43c0-9196-925df85a842e",
+      "name": "sources/pilot-charter.txt",
+      "revision": 1,
+      "sha256": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+      "size_bytes": 523
+    },
+    {
+      "id": "c7d4af07-aae0-445d-8cd0-787ad635a1c2",
+      "name": "sources/weekly-observations.txt",
+      "revision": 1,
+      "sha256": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+      "size_bytes": 593
+    },
+    {
+      "id": "fdc97e11-a464-41bf-aef8-9cf425bc71e8",
+      "name": "sources/reviewer-note.txt",
+      "revision": 1,
+      "sha256": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3",
+      "size_bytes": 421
+    },
+    {
+      "id": "8efced30-fa4a-4054-970e-dd62546d9392",
+      "name": "evidence-brook-cove.md",
+      "revision": 2,
+      "sha256": "2438439bb3f60ad60ee8d85ee82dfc4d2eea765cc35e0c9efb9acbf2612fb065",
+      "size_bytes": 6232
+    },
+    {
+      "id": "eb4db0c9-dfde-44a0-8418-dc76987ee8fe",
+      "name": "evidence-alder.md",
+      "revision": 2,
+      "sha256": "46d9da4e04f3e0caca52f0608008aded2fc591b07ac8098a3ebd3e50d17e43fe",
+      "size_bytes": 7881
+    },
+    {
+      "id": "8b70c2db-49d5-493d-a612-3cb877b44756",
+      "name": "research-brief.md",
+      "revision": 2,
+      "sha256": "8115716b5c81f9e4b3d67703be798793996f0ff5fa7e452ec3e8c2f250537853",
+      "size_bytes": 4636
+    }
+  ],
+  "intervals": [
+    {
+      "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "researcher",
+      "started_at": "2026-11-16T20:23:16.685Z",
+      "finished_at": "2026-11-16T20:24:09.230Z",
+      "artifact_ids": [
+        "ccfe94ef-b7c7-45a6-b8bd-4b968bd7c7f0",
+        "8efced30-fa4a-4054-970e-dd62546d9392"
+      ]
+    },
+    {
+      "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "researcher",
+      "started_at": "2026-11-16T20:23:16.684Z",
+      "finished_at": "2026-11-16T20:24:40.695Z",
+      "artifact_ids": [
+        "25d293e0-3bef-48b2-8555-284b384fcda6",
+        "eb4db0c9-dfde-44a0-8418-dc76987ee8fe"
+      ]
+    },
+    {
+      "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "research-coordinator",
+      "started_at": "2026-11-16T20:22:00.790Z",
+      "finished_at": "2026-11-16T20:25:50.746Z",
+      "artifact_ids": [
+        "7f51f998-2db5-44ce-893d-328328170795",
+        "8b70c2db-49d5-493d-a612-3cb877b44756"
+      ]
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "56df0f6c-cd29-47f2-a75b-ec95d9a4ed7b",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:21:32.536Z",
+      "finished_at": "2026-11-16T20:22:00.753Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 3394,
+        "output_tokens": 2324,
+        "total_tokens": 5718,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "ccd1502a-38e7-40bc-8488-66743b769a86",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "research-coordinator",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:22:00.815Z",
+      "finished_at": "2026-11-16T20:25:50.737Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": "UNKNOWN",
+        "output_tokens": "UNKNOWN",
+        "total_tokens": "UNKNOWN",
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 116448
+      },
+      "usage_status": "partial",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "ffecaa68-c770-402e-af60-f33d61306fb8",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:23:16.690Z",
+      "finished_at": "2026-11-16T20:24:40.688Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 52761,
+        "output_tokens": 9978,
+        "total_tokens": 62739,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 31655
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "46c70347-418d-4e7d-9703-0b2d7ff86a43",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:23:16.711Z",
+      "finished_at": "2026-11-16T20:24:09.221Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 40092,
+        "output_tokens": 6756,
+        "total_tokens": 46848,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 15464
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "c9c96ae7-767c-401d-baf5-66bf595636d1",
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:25:50.773Z",
+      "finished_at": "2026-11-16T20:26:21.370Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 14171,
+        "output_tokens": 2321,
+        "total_tokens": 16492,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "qa_review": {
+    "passed": true,
+    "score": 9,
+    "criteria_results": [
+      {
+        "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+        "passed": true,
+        "notes": "research-brief.md is registered (rev 2, 4636 bytes). It has section 1, Executive recommendation; section 2, Factual findings; and a separate section 3, Limitations. Every inline citation uses the exact form [S1], [S2] or [S3]. evidence-alder.md and evidence-brook-cove.md are retained as registered artifacts, and each carries an attribution header naming the researcher child role, its site scope and the mission ID."
+      },
+      {
+        "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources. Put an inline citation on every factual bullet and every factual Markdown table row, including the site-totals rows.",
+        "passed": true,
+        "notes": "Section 4, Sources, maps S1, S2 and S3 to the correct files. All three site-totals table rows (Alder, Brook, Cove) carry [S2]. Every bullet in the recommendation, findings and limitations sections carries a citation. Each cited claim checked against the source text is supported (for example, 31/43/37 and 2/4/3 from S2, 18/11 minutes from S1, and the Alder ranking and decision gate from S3). No other source is referenced."
+      },
+      {
+        "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+        "passed": true,
+        "notes": "The table and section 2.1 state 480/480/480 requests and 31/43/37 delayed acknowledgements, cited [S2]. These match the S2 lines for ALDER, BROOK and COVE. Section 2.2 states the median change from 18 to 11 minutes, cited [S1], which matches the S1 BASELINE and PILOT lines."
+      },
+      {
+        "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+        "passed": true,
+        "notes": "The executive recommendation states the conclusions apply only to the weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization [S1] [S3]. It says the brief is not approval of a wider rollout and that no wider rollout is reported as completed. The limitations section repeats the weekday-only and no-wider-rollout bounds."
+      },
+      {
+        "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+        "passed": true,
+        "notes": "The execution output shows only the research-coordinator at top level, and its tools list includes delegate. The coordinator reports one executed delegate call with parallel:true and two distinct researcher children, one for Alder and one for Brook and Cove. A first malformed attempt was rejected on a schema error and reportedly spawned no children. The two attributed child notes were persisted before research-brief.md, which is consistent with this account. The delegation tree itself was not supplied for direct inspection, so this check relies on the execution record and the artifact set."
+      }
+    ],
+    "defects": [
+      {
+        "issue": "evidence-brook-cove.md open question 2 says the sources do not state how many sampled records came from Brook or Cove individually, but S2 states 60 records were sampled per site, as the same note says elsewhere. The note contradicts itself. The brief does not repeat the error.",
+        "severity": "minor"
+      },
+      {
+        "issue": "The brief's executive recommendation refers to 'the Depot site', while S1 calls it 'the Depot trial'. The scope meaning is unchanged, but the wording drifts slightly from the source.",
+        "severity": "minor"
+      },
+      {
+        "issue": "Parallel recursion is evidenced by the execution record and the artifact set, not by a directly supplied delegation tree. The rejected first delegate attempt is disclosed but cannot be independently confirmed as childless.",
+        "severity": "minor"
+      }
+    ],
+    "recommendations": [
+      "Correct open question 2 in evidence-brook-cove.md to acknowledge that S2 states 60 sampled records per site.",
+      "Use the source term 'Depot trial' consistently in the brief.",
+      "Include the delegation tree or run log in future candidate epochs so parallel recursion can be verified directly."
+    ],
+    "verdict": "PASS: PASS: research-brief.md has a cited executive recommendation, separate findings and limitations, a cited site-totals table with 480/480/480 and 31/43/37, the cited 18-to-11-minute median change, a correct Sources mapping, and explicit weekday, Alder/Brook/Cove-only bounds with no wider-rollout claim. Both attributed child evidence notes are retained, and the execution record shows one coordinator issuing a single parallel delegation to two children. Only minor defects were found."
+  },
+  "qa_candidate_receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "epoch_id": "87ea40bc-2b33-41d5-828b-03de5dbde759",
+    "candidate_sha256": "6c7b71d1de45b1abbf3190388f5c58112f8ca22d4fc932b2854b95271d185940",
+    "execution_output_sha256": "4c91a4ce1655abd9de22236a15e917c53d3fa313a4e951360d5bbadfe4f4c19c",
+    "evidence_sha256": "f0e3bf612233eee1dd4f65c479228d6882809a60357448097f0a293ca5b50212",
+    "review": {
+      "passed": true,
+      "score": 9,
+      "criteria_results": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "notes": "research-brief.md is registered (rev 2, 4636 bytes). It has section 1, Executive recommendation; section 2, Factual findings; and a separate section 3, Limitations. Every inline citation uses the exact form [S1], [S2] or [S3]. evidence-alder.md and evidence-brook-cove.md are retained as registered artifacts, and each carries an attribution header naming the researcher child role, its site scope and the mission ID."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources. Put an inline citation on every factual bullet and every factual Markdown table row, including the site-totals rows.",
+          "passed": true,
+          "notes": "Section 4, Sources, maps S1, S2 and S3 to the correct files. All three site-totals table rows (Alder, Brook, Cove) carry [S2]. Every bullet in the recommendation, findings and limitations sections carries a citation. Each cited claim checked against the source text is supported (for example, 31/43/37 and 2/4/3 from S2, 18/11 minutes from S1, and the Alder ranking and decision gate from S3). No other source is referenced."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "notes": "The table and section 2.1 state 480/480/480 requests and 31/43/37 delayed acknowledgements, cited [S2]. These match the S2 lines for ALDER, BROOK and COVE. Section 2.2 states the median change from 18 to 11 minutes, cited [S1], which matches the S1 BASELINE and PILOT lines."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "notes": "The executive recommendation states the conclusions apply only to the weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization [S1] [S3]. It says the brief is not approval of a wider rollout and that no wider rollout is reported as completed. The limitations section repeats the weekday-only and no-wider-rollout bounds."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": true,
+          "notes": "The execution output shows only the research-coordinator at top level, and its tools list includes delegate. The coordinator reports one executed delegate call with parallel:true and two distinct researcher children, one for Alder and one for Brook and Cove. A first malformed attempt was rejected on a schema error and reportedly spawned no children. The two attributed child notes were persisted before research-brief.md, which is consistent with this account. The delegation tree itself was not supplied for direct inspection, so this check relies on the execution record and the artifact set."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "evidence-brook-cove.md open question 2 says the sources do not state how many sampled records came from Brook or Cove individually, but S2 states 60 records were sampled per site, as the same note says elsewhere. The note contradicts itself. The brief does not repeat the error.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The brief's executive recommendation refers to 'the Depot site', while S1 calls it 'the Depot trial'. The scope meaning is unchanged, but the wording drifts slightly from the source.",
+          "severity": "minor"
+        },
+        {
+          "issue": "Parallel recursion is evidenced by the execution record and the artifact set, not by a directly supplied delegation tree. The rejected first delegate attempt is disclosed but cannot be independently confirmed as childless.",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Correct open question 2 in evidence-brook-cove.md to acknowledge that S2 states 60 sampled records per site.",
+        "Use the source term 'Depot trial' consistently in the brief.",
+        "Include the delegation tree or run log in future candidate epochs so parallel recursion can be verified directly."
+      ],
+      "verdict": "PASS: PASS: research-brief.md has a cited executive recommendation, separate findings and limitations, a cited site-totals table with 480/480/480 and 31/43/37, the cited 18-to-11-minute median change, a correct Sources mapping, and explicit weekday, Alder/Brook/Cove-only bounds with no wider-rollout claim. Both attributed child evidence notes are retained, and the execution record shows one coordinator issuing a single parallel delegation to two children. Only minor defects were found."
+    },
+    "gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "reason": "research-brief.md is registered (rev 2, 4636 bytes). It has section 1, Executive recommendation; section 2, Factual findings; and a separate section 3, Limitations. Every inline citation uses the exact form [S1], [S2] or [S3]. evidence-alder.md and evidence-brook-cove.md are retained as registered artifacts, and each carries an attribution header naming the researcher child role, its site scope and the mission ID."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources. Put an inline citation on every factual bullet and every factual Markdown table row, including the site-totals rows.",
+          "passed": true,
+          "reason": "Section 4, Sources, maps S1, S2 and S3 to the correct files. All three site-totals table rows (Alder, Brook, Cove) carry [S2]. Every bullet in the recommendation, findings and limitations sections carries a citation. Each cited claim checked against the source text is supported (for example, 31/43/37 and 2/4/3 from S2, 18/11 minutes from S1, and the Alder ranking and decision gate from S3). No other source is referenced."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "reason": "The table and section 2.1 state 480/480/480 requests and 31/43/37 delayed acknowledgements, cited [S2]. These match the S2 lines for ALDER, BROOK and COVE. Section 2.2 states the median change from 18 to 11 minutes, cited [S1], which matches the S1 BASELINE and PILOT lines."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "reason": "The executive recommendation states the conclusions apply only to the weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization [S1] [S3]. It says the brief is not approval of a wider rollout and that no wider rollout is reported as completed. The limitations section repeats the weekday-only and no-wider-rollout bounds."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": true,
+          "reason": "The execution output shows only the research-coordinator at top level, and its tools list includes delegate. The coordinator reports one executed delegate call with parallel:true and two distinct researcher children, one for Alder and one for Brook and Cove. A first malformed attempt was rejected on a schema error and reportedly spawned no children. The two attributed child notes were persisted before research-brief.md, which is consistent with this account. The delegation tree itself was not supplied for direct inspection, so this check relies on the execution record and the artifact set."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": true
+    },
+    "receipt_sha256": "fd2380154f024c1c58b5f1bd55695ec3b3805bfefb29525fbb95eb191dcec7e6",
+    "created_at": "2026-11-16T20:26:21.379Z"
+  },
+  "candidate_evidence_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-21-29-437Z-3269230/candidate-evidence/research-87ea40bc-2b33-41d5-828b-03de5dbde759.json",
+  "candidate_evidence_sha256": "6c7b71d1de45b1abbf3190388f5c58112f8ca22d4fc932b2854b95271d185940",
+  "delegation_tree": {
+    "total_agents": 3,
+    "max_depth": 1,
+    "nodes": [
+      {
+        "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+        "role": "research-coordinator",
+        "started_at": "2026-11-16T20:22:00.779Z",
+        "task": "Act as the single top-level research-coordinator for mission r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research and do all of the following yourself, in this order. (1) Source inventory: use file_list on the workspace, then file_read only sources/pilot-charter.txt (S1), sources/weekly-observations.txt (S2) and sources/reviewer-note.txt (S3). Never write to, move or modify these three files; they must remain byte-identical. (2) Recursion: make exactly ONE delegate call containing a 'children' array of exactly two distinct children and 'parallel': true. Do not make separate delegate calls for each child, and do not launch any other children. Grant each child only the tools file_read, file_list, file_write and save_artifact. Child A, role researcher, analyses the Alder site. It reads only the three sources, extracts Alder-relevant facts (request total, delayed acknowledgements, acknowledgement timing, pilot scope and reviewer caveats), cites every claim inline as [S1], [S2] or [S3], and records any source discrepancy instead of resolving it by assumption. Child A must itself persist its output as exactly evidence-alder.md in the workspace and register it with save_artifact, with an attribution header naming the child, its role and the sources read. Child B, role researcher, does the same analysis for the Brook and Cove sites and must itself persist exactly evidence-brook-cove.md, with the same attribution header and citation rules. Tell each child that a text-only reply fails, and that you cannot re-attribute a child's text. (3) Synthesis: after both children have registered their artifacts, file_read evidence-alder.md and evidence-brook-cove.md. Verify every number in them against the sources. Then write research-brief.md with file_write and register it with save_artifact. Leave both child evidence notes in place as attributed artifacts.",
+        "depth": 0,
+        "parent_id": null,
+        "status": "success",
+        "children": [
+          "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+          "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2"
+        ],
+        "model": "claude-sonnet-5-5",
+        "tools_used": [
+          "file_list",
+          "file_read",
+          "delegate",
+          "file_write",
+          "save_artifact"
+        ],
+        "artifacts": [
+          "8b70c2db-49d5-493d-a612-3cb877b44756"
+        ],
+        "duration_ms": 229976,
+        "finished_at": "2026-11-16T20:25:50.749Z"
+      },
+      {
+        "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+        "role": "researcher",
+        "task": "Analyse the ALDER site only, from the three immutable local pilot sources, and persist your analysis as exactly evidence-alder.md.\n\nStep 1 — Source inventory. Use file_list to see the workspace, then file_read ONLY these three files: sources/pilot-charter.txt (S1), sources/weekly-observations.txt (S2), sources/reviewer-note.txt (S3). Read nothing else. Never write to, move or modify those three files.\n\nStep 2 — Extract every Alder-relevant fact: the Alder request total and site-weeks, Alder delayed-acknowledgement count, Alder supervisor escalations, the definition of a delayed acknowledgement, the acknowledgement timing figures (baseline manual median and pilot routed median) and how acknowledgement is measured, the pilot window and scope, the weekday-only limit, the Depot exclusion, the runbook change, the reviewer sampling and reconciliation, and the reviewer's caveats and recommendation as they bear on Alder.\n\nStep 3 — Write evidence-alder.md with:\n(a) An attribution header naming you as the child analyst, your role (researcher), and the three sources read.\n(b) An Alder fact table or bullet list where EVERY factual or numerical claim carries an inline citation in exactly the form [S1], [S2] or [S3], placed after the claim. No uncited factual claim.\n(c) A short 'Discrepancies and open questions' section. If any two sources disagree, or a figure is implied rather than stated, record it with citations instead of resolving it by assumption. Do not silently reconcile anything, and do not invent a number that no source states.\n(d) A closing scope note that your evidence is limited to the weekday Alder pilot and supports no weekend or Depot conclusion.\n\nStep 4 — Persist. Call file_write to create evidence-alder.md in the workspace root, then call save_artifact with mission_id='r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research' and name='evidence-alder.md'.\n\nCRITICAL: A text-only reply fails. A reply in chat is not an artifact and the coordinator cannot re-attribute your prose to you. The deliverable exists only when you have written and registered evidence-alder.md yourself.",
+        "depth": 1,
+        "parent_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+        "status": "success",
+        "started_at": "2026-11-16T20:23:16.679Z",
+        "parallel_group_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:pg1-2",
+        "children": [],
+        "model": "claude-sonnet-5-5",
+        "tools_used": [
+          "file_list",
+          "file_read",
+          "file_write",
+          "save_artifact"
+        ],
+        "artifacts": [
+          "25d293e0-3bef-48b2-8555-284b384fcda6",
+          "eb4db0c9-dfde-44a0-8418-dc76987ee8fe"
+        ],
+        "finished_at": "2026-11-16T20:24:40.695Z",
+        "duration_ms": 84012
+      },
+      {
+        "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2",
+        "role": "researcher",
+        "task": "Analyse the BROOK and COVE sites only, from the three immutable local pilot sources, and persist your analysis as exactly evidence-brook-cove.md.\n\nStep 1 — Source inventory. Use file_list to see the workspace, then file_read ONLY these three files: sources/pilot-charter.txt (S1), sources/weekly-observations.txt (S2), sources/reviewer-note.txt (S3). Read nothing else. Never write to, move or modify those three files.\n\nStep 2 — Extract every Brook- and Cove-relevant fact: the Brook and Cove request totals and site-weeks, their delayed-acknowledgement counts, their supervisor escalations, the definition of a delayed acknowledgement, the acknowledgement timing figures (baseline manual median and pilot routed median) and how acknowledgement is measured, the pilot window and scope, the weekday-only limit, the Depot exclusion, the runbook change, the reviewer sampling and reconciliation, and the reviewer's caveats and recommendation as they bear on Brook and Cove.\n\nStep 3 — Write evidence-brook-cove.md with:\n(a) An attribution header naming you as the child analyst, your role (researcher), and the three sources read.\n(b) Separate Brook and Cove fact tables or bullet lists where EVERY factual or numerical claim carries an inline citation in exactly the form [S1], [S2] or [S3], placed after the claim. No uncited factual claim.\n(c) A short 'Discrepancies and open questions' section. If any two sources disagree, or a figure is implied rather than stated, record it with citations instead of resolving it by assumption. Do not silently reconcile anything, and do not invent a number that no source states.\n(d) A closing scope note that your evidence is limited to the weekday Brook and Cove pilot sites and supports no weekend or Depot conclusion.\n\nStep 4 — Persist. Call file_write to create evidence-brook-cove.md in the workspace root, then call save_artifact with mission_id='r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research' and name='evidence-brook-cove.md'.\n\nCRITICAL: A text-only reply fails. A reply in chat is not an artifact and the coordinator cannot re-attribute your prose to you. The deliverable exists only when you have written and registered evidence-brook-cove.md yourself.",
+        "depth": 1,
+        "parent_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+        "status": "success",
+        "started_at": "2026-11-16T20:23:16.679Z",
+        "parallel_group_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:pg1-2",
+        "children": [],
+        "model": "claude-sonnet-5-5",
+        "tools_used": [
+          "file_list",
+          "file_read",
+          "file_write",
+          "save_artifact"
+        ],
+        "artifacts": [
+          "ccfe94ef-b7c7-45a6-b8bd-4b968bd7c7f0",
+          "8efced30-fa4a-4054-970e-dd62546d9392"
+        ],
+        "finished_at": "2026-11-16T20:24:09.230Z",
+        "duration_ms": 52546
+      }
+    ]
+  },
+  "independent_verification": {
+    "schema": "r2-final-professional-independent-verification-v1",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "independent": true,
+    "artifacts": [
+      {
+        "id": "bd670e15-71a2-43c0-9196-925df85a842e",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "name": "sources/pilot-charter.txt",
+        "revision": 1,
+        "sha256": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+        "size_bytes": 523,
+        "attributed_delegations": []
+      },
+      {
+        "id": "c7d4af07-aae0-445d-8cd0-787ad635a1c2",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "name": "sources/weekly-observations.txt",
+        "revision": 1,
+        "sha256": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+        "size_bytes": 593,
+        "attributed_delegations": []
+      },
+      {
+        "id": "fdc97e11-a464-41bf-aef8-9cf425bc71e8",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "name": "sources/reviewer-note.txt",
+        "revision": 1,
+        "sha256": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3",
+        "size_bytes": 421,
+        "attributed_delegations": []
+      },
+      {
+        "id": "8efced30-fa4a-4054-970e-dd62546d9392",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "name": "evidence-brook-cove.md",
+        "revision": 2,
+        "sha256": "2438439bb3f60ad60ee8d85ee82dfc4d2eea765cc35e0c9efb9acbf2612fb065",
+        "size_bytes": 6232,
+        "attributed_delegations": [
+          "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:researcher"
+        ]
+      },
+      {
+        "id": "eb4db0c9-dfde-44a0-8418-dc76987ee8fe",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "name": "evidence-alder.md",
+        "revision": 2,
+        "sha256": "46d9da4e04f3e0caca52f0608008aded2fc591b07ac8098a3ebd3e50d17e43fe",
+        "size_bytes": 7881,
+        "attributed_delegations": [
+          "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:researcher"
+        ]
+      },
+      {
+        "id": "8b70c2db-49d5-493d-a612-3cb877b44756",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "name": "research-brief.md",
+        "revision": 2,
+        "sha256": "8115716b5c81f9e4b3d67703be798793996f0ff5fa7e452ec3e8c2f250537853",
+        "size_bytes": 4636,
+        "attributed_delegations": [
+          "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:research-coordinator"
+        ]
+      }
+    ],
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T20:23:16.685Z",
+        "finished_at": "2026-11-16T20:24:09.230Z",
+        "artifact_ids": [
+          "ccfe94ef-b7c7-45a6-b8bd-4b968bd7c7f0",
+          "8efced30-fa4a-4054-970e-dd62546d9392"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T20:23:16.684Z",
+        "finished_at": "2026-11-16T20:24:40.695Z",
+        "artifact_ids": [
+          "25d293e0-3bef-48b2-8555-284b384fcda6",
+          "eb4db0c9-dfde-44a0-8418-dc76987ee8fe"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "role": "research-coordinator",
+        "started_at": "2026-11-16T20:22:00.790Z",
+        "finished_at": "2026-11-16T20:25:50.746Z",
+        "artifact_ids": [
+          "7f51f998-2db5-44ce-893d-328328170795",
+          "8b70c2db-49d5-493d-a612-3cb877b44756"
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "check": "mission reached completed through production independent QA",
+        "passed": true,
+        "detail": "completed"
+      },
+      {
+        "check": "real Head plan and successful specialist delegation tree recorded",
+        "passed": true,
+        "detail": "3 tree nodes; 1 successful top-level nodes"
+      },
+      {
+        "check": "every durable specialist used only approved tools and host-allowlisted models",
+        "passed": true,
+        "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:[\"file_list\",\"file_read\",\"delegate\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5"
+      },
+      {
+        "check": "exactly one top-level coordinator recursively launched exactly two real children",
+        "passed": true,
+        "detail": "1 top-level / 2 nested; qualifying parents: r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+      },
+      {
+        "check": "recursive children are distinct and actually overlapped in time",
+        "passed": true,
+        "detail": "one parallel reservation, artifact-producing distinct children and common host-observed overlap required"
+      },
+      {
+        "check": "real Head model call completed",
+        "passed": true,
+        "detail": "completed"
+      },
+      {
+        "check": "independent QA model call completed",
+        "passed": true,
+        "detail": "completed"
+      },
+      {
+        "check": "real specialist model calls completed",
+        "passed": true,
+        "detail": "research-coordinator:completed, researcher:completed, researcher:completed"
+      },
+      {
+        "check": "all model ledger records are terminal and attributed to this mission",
+        "passed": true,
+        "detail": "5 calls"
+      },
+      {
+        "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+        "passed": true,
+        "detail": "head-agent:claude-opus-5-5:routercheap | research-coordinator:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+      },
+      {
+        "check": "specialist role routing uses the host-selected Sonnet route",
+        "passed": true,
+        "detail": "role overrides are host configuration, not model output"
+      },
+      {
+        "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+        "passed": true,
+        "detail": "evidence-alder.md, evidence-brook-cove.md, research-brief.md, sources/pilot-charter.txt, sources/reviewer-note.txt, sources/weekly-observations.txt"
+      },
+      {
+        "check": "exactly two research extras are delegated evidence notes",
+        "passed": true,
+        "detail": "two evidence-note artifacts required"
+      },
+      {
+        "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+        "passed": true,
+        "detail": "6 supplied / 6 terminal IDs"
+      },
+      {
+        "check": "artifact sources/pilot-charter.txt bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "bd670e15-71a2-43c0-9196-925df85a842e:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; producer=trusted-host-input"
+      },
+      {
+        "check": "artifact sources/weekly-observations.txt bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "c7d4af07-aae0-445d-8cd0-787ad635a1c2:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; producer=trusted-host-input"
+      },
+      {
+        "check": "artifact sources/reviewer-note.txt bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "fdc97e11-a464-41bf-aef8-9cf425bc71e8:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3; producer=trusted-host-input"
+      },
+      {
+        "check": "artifact evidence-brook-cove.md bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "8efced30-fa4a-4054-970e-dd62546d9392:2438439bb3f60ad60ee8d85ee82dfc4d2eea765cc35e0c9efb9acbf2612fb065; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2"
+      },
+      {
+        "check": "artifact evidence-alder.md bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "eb4db0c9-dfde-44a0-8418-dc76987ee8fe:46d9da4e04f3e0caca52f0608008aded2fc591b07ac8098a3ebd3e50d17e43fe; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1"
+      },
+      {
+        "check": "artifact research-brief.md bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "8b70c2db-49d5-493d-a612-3cb877b44756:8115716b5c81f9e4b3d67703be798793996f0ff5fa7e452ec3e8c2f250537853; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+      },
+      {
+        "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+        "passed": true,
+        "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:researcher"
+      },
+      {
+        "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+        "passed": true,
+        "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:researcher"
+      },
+      {
+        "check": "observed delegation 3 has a valid mission-bound interval and unique node",
+        "passed": true,
+        "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:research-coordinator"
+      },
+      {
+        "check": "immutable local input bytes",
+        "passed": true,
+        "detail": "sources/pilot-charter.txt:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; sources/weekly-observations.txt:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; sources/reviewer-note.txt:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+      },
+      {
+        "check": "sources section maps every citation key to an immutable input",
+        "passed": false,
+        "detail": "Sources section found"
+      },
+      {
+        "check": "all three source citations used in brief body",
+        "passed": true,
+        "detail": "[S1], [S2], [S3]"
+      },
+      {
+        "check": "no malformed or invented citation keys",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "executive recommendation is separately identified",
+        "passed": true,
+        "detail": "recommendation language found"
+      },
+      {
+        "check": "factual findings and limitations are separately identified",
+        "passed": true,
+        "detail": "Findings and Limitations headings required"
+      },
+      {
+        "check": "exact site request and delay observations are bound to S2",
+        "passed": true,
+        "detail": "each site's 480 requests and 31/43/37 delays must occur together with S2"
+      },
+      {
+        "check": "acknowledgement median change and citation present",
+        "passed": true,
+        "detail": "18-to-11-minute change must cite S1"
+      },
+      {
+        "check": "weekday/site limitations and exclusions explicit",
+        "passed": true,
+        "detail": "bounded conclusion required"
+      },
+      {
+        "check": "no completed wider-rollout claim",
+        "passed": true,
+        "detail": "future/repeated measurement only"
+      },
+      {
+        "check": "every substantive factual paragraph carries a source citation",
+        "passed": false,
+        "detail": "Prepared by: research-coordinator, mission r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research.\nEvidence base: sources S1, S2 and S3 only (see Sources). Child evidence "
+      },
+      {
+        "check": "brief remains within independent QA evidence window",
+        "passed": true,
+        "detail": "4636 bytes"
+      }
+    ],
+    "passed": false
+  },
+  "checks": [
+    {
+      "check": "mission execution boundary returned without a host exception",
+      "passed": true,
+      "detail": "settled"
+    },
+    {
+      "check": "independent candidate review receipt authenticates exact final artifact set",
+      "passed": true,
+      "detail": "87ea40bc-2b33-41d5-828b-03de5dbde759:6c7b71d1de45b1abbf3190388f5c58112f8ca22d4fc932b2854b95271d185940"
+    },
+    {
+      "check": "mission reached completed through production independent QA",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "real Head plan and successful specialist delegation tree recorded",
+      "passed": true,
+      "detail": "3 tree nodes; 1 successful top-level nodes"
+    },
+    {
+      "check": "every durable specialist used only approved tools and host-allowlisted models",
+      "passed": true,
+      "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:[\"file_list\",\"file_read\",\"delegate\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5"
+    },
+    {
+      "check": "exactly one top-level coordinator recursively launched exactly two real children",
+      "passed": true,
+      "detail": "1 top-level / 2 nested; qualifying parents: r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+    },
+    {
+      "check": "recursive children are distinct and actually overlapped in time",
+      "passed": true,
+      "detail": "one parallel reservation, artifact-producing distinct children and common host-observed overlap required"
+    },
+    {
+      "check": "real Head model call completed",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "independent QA model call completed",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "real specialist model calls completed",
+      "passed": true,
+      "detail": "research-coordinator:completed, researcher:completed, researcher:completed"
+    },
+    {
+      "check": "all model ledger records are terminal and attributed to this mission",
+      "passed": true,
+      "detail": "5 calls"
+    },
+    {
+      "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+      "passed": true,
+      "detail": "head-agent:claude-opus-5-5:routercheap | research-coordinator:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+    },
+    {
+      "check": "specialist role routing uses the host-selected Sonnet route",
+      "passed": true,
+      "detail": "role overrides are host configuration, not model output"
+    },
+    {
+      "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+      "passed": true,
+      "detail": "evidence-alder.md, evidence-brook-cove.md, research-brief.md, sources/pilot-charter.txt, sources/reviewer-note.txt, sources/weekly-observations.txt"
+    },
+    {
+      "check": "exactly two research extras are delegated evidence notes",
+      "passed": true,
+      "detail": "two evidence-note artifacts required"
+    },
+    {
+      "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+      "passed": true,
+      "detail": "6 supplied / 6 terminal IDs"
+    },
+    {
+      "check": "artifact sources/pilot-charter.txt bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "bd670e15-71a2-43c0-9196-925df85a842e:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; producer=trusted-host-input"
+    },
+    {
+      "check": "artifact sources/weekly-observations.txt bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "c7d4af07-aae0-445d-8cd0-787ad635a1c2:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; producer=trusted-host-input"
+    },
+    {
+      "check": "artifact sources/reviewer-note.txt bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "fdc97e11-a464-41bf-aef8-9cf425bc71e8:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3; producer=trusted-host-input"
+    },
+    {
+      "check": "artifact evidence-brook-cove.md bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "8efced30-fa4a-4054-970e-dd62546d9392:2438439bb3f60ad60ee8d85ee82dfc4d2eea765cc35e0c9efb9acbf2612fb065; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2"
+    },
+    {
+      "check": "artifact evidence-alder.md bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "eb4db0c9-dfde-44a0-8418-dc76987ee8fe:46d9da4e04f3e0caca52f0608008aded2fc591b07ac8098a3ebd3e50d17e43fe; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1"
+    },
+    {
+      "check": "artifact research-brief.md bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "8b70c2db-49d5-493d-a612-3cb877b44756:8115716b5c81f9e4b3d67703be798793996f0ff5fa7e452ec3e8c2f250537853; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+    },
+    {
+      "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+      "passed": true,
+      "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:researcher"
+    },
+    {
+      "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+      "passed": true,
+      "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:researcher"
+    },
+    {
+      "check": "observed delegation 3 has a valid mission-bound interval and unique node",
+      "passed": true,
+      "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:research-coordinator"
+    },
+    {
+      "check": "immutable local input bytes",
+      "passed": true,
+      "detail": "sources/pilot-charter.txt:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; sources/weekly-observations.txt:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; sources/reviewer-note.txt:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+    },
+    {
+      "check": "sources section maps every citation key to an immutable input",
+      "passed": false,
+      "detail": "Sources section found"
+    },
+    {
+      "check": "all three source citations used in brief body",
+      "passed": true,
+      "detail": "[S1], [S2], [S3]"
+    },
+    {
+      "check": "no malformed or invented citation keys",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "executive recommendation is separately identified",
+      "passed": true,
+      "detail": "recommendation language found"
+    },
+    {
+      "check": "factual findings and limitations are separately identified",
+      "passed": true,
+      "detail": "Findings and Limitations headings required"
+    },
+    {
+      "check": "exact site request and delay observations are bound to S2",
+      "passed": true,
+      "detail": "each site's 480 requests and 31/43/37 delays must occur together with S2"
+    },
+    {
+      "check": "acknowledgement median change and citation present",
+      "passed": true,
+      "detail": "18-to-11-minute change must cite S1"
+    },
+    {
+      "check": "weekday/site limitations and exclusions explicit",
+      "passed": true,
+      "detail": "bounded conclusion required"
+    },
+    {
+      "check": "no completed wider-rollout claim",
+      "passed": true,
+      "detail": "future/repeated measurement only"
+    },
+    {
+      "check": "every substantive factual paragraph carries a source citation",
+      "passed": false,
+      "detail": "Prepared by: research-coordinator, mission r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research.\nEvidence base: sources S1, S2 and S3 only (see Sources). Child evidence "
+    },
+    {
+      "check": "brief remains within independent QA evidence window",
+      "passed": true,
+      "detail": "4636 bytes"
+    },
+    {
+      "check": "immutable candidate and QA evidence copied byte-identically",
+      "passed": true,
+      "detail": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-21-29-437Z-3269230/candidate-evidence/research-87ea40bc-2b33-41d5-828b-03de5dbde759.json"
+    }
+  ],
+  "passed": false
+}

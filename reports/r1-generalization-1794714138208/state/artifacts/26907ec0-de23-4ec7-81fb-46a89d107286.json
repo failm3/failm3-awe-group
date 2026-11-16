@@ -1,0 +1,15 @@
+{
+  "id": "26907ec0-de23-4ec7-81fb-46a89d107286",
+  "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+  "type": "file",
+  "name": "dashboard.html",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.html",
+  "created_at": "2026-11-15T03:49:21.849Z",
+  "metadata": {
+    "size_bytes": 11123,
+    "sha256": "b23edc73ae2022c5130398f8f551efcc4ca174004a2984b962f4c002dbb85a8e",
+    "reconciled": true,
+    "previous_artifact_id": "8a0758da-fe5c-4af0-8cae-b44ed4057be9",
+    "revision": 2
+  }
+}

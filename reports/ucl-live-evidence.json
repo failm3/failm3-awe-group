@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "run_root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557",
+  "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+  "passed": true,
+  "mission_status": "failed",
+  "checks": {
+    "honest_bounded_terminal_outcome": true,
+    "real_specialist_model_call": true,
+    "independent_qa_model_call": true,
+    "capability_library_actually_invoked": true,
+    "one_bounded_acquisition": true,
+    "observation_saved": true,
+    "index_hash_unchanged": true,
+    "no_unapproved_candidate_execution": true
+  },
+  "model_calls": [
+    {
+      "role": "researcher",
+      "status": "completed",
+      "model": "deepseek-v4-flash",
+      "usage": {
+        "input_tokens": "UNKNOWN",
+        "output_tokens": "UNKNOWN",
+        "total_tokens": "UNKNOWN",
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 29440
+      }
+    },
+    {
+      "role": "qa-agent",
+      "status": "completed",
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 7535,
+        "output_tokens": 2385,
+        "total_tokens": 9920,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 713
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "probe_local_renderer.sh",
+      "sha256": "3f28b42cb19fab992d3f9a10f2b27ac80173c53eb9877f13c4dbe0b65a1d22c0"
+    },
+    {
+      "name": "observation.json",
+      "sha256": "04e44307dbee75b1667590e46a645306492ef445a92d9a969f813005902aa3d3"
+    },
+    {
+      "name": "capability_library_raw_queries.json",
+      "sha256": "994eb351afc61b4f781e9c494967779c72edb4b0445434adb468c2082f30ff1d"
+    }
+  ],
+  "attempt_observation": {
+    "capability": "missing-browser-renderer",
+    "status": "missing",
+    "acquired_present": false,
+    "artifact_id": "136fac66-6694-4cfd-86a3-1d46d66d8cbf",
+    "artifact_sha256": "04e44307dbee75b1667590e46a645306492ef445a92d9a969f813005902aa3d3"
+  },
+  "qa": {
+    "llm_passed": true,
+    "llm_score": 8,
+    "criterion_checks": [
+      {
+        "criterion": "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+        "passed": true,
+        "reason": "capability_library was queried twice for browser.screenshot (43 examined -> 10 candidates; 5 examined -> 3 candidates). Candidate evidence (candidate_id, title, kind, trust_state, hazards, score, capabilities, url) is preserved both verbatim in capability_library_raw_queries.json and summarised inside observation.json's detail field, naming six specific candidates including puppeteer/puppeteer and microsoft/playwright-mcp. This is real, checkable evidence, not a placeholder."
+      },
+      {
+        "criterion": "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+        "passed": true,
+        "reason": "Exactly one observation.json artifact is present (revision 1). It is valid JSON with capability=\"missing-browser-renderer\", status=\"missing\" (within the allowed enum), a substantive detail string, and no acquired field (an optional field, so its absence is compliant). Additional fields (evidence_artifact, probe_script_path, probe_executed, installed_anything, executed_candidate, network_used) are additive bookkeeping, not competing observations."
+      },
+      {
+        "criterion": "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired.",
+        "passed": true,
+        "reason": "Both raw query records carry approved=false and execution_authority=false with an explicit note that UNVETTED rows are research evidence only. The detail field states outright that metadata proves only that a candidate exists in the index and nothing more, records that no exit status, PNG signature or dimensions could be read, and states nothing was acquired and no fallback was invented. No install, no candidate execution, no network use."
+      }
+    ]
+  },
+  "limits": [
+    "Terminal missing is the correct mission result under bounded grants.",
+    "No candidate execution, installation, renderer verification or successful reuse is claimed.",
+    "This is not R3 readiness evidence."
+  ]
+}

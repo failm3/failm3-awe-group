@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem 1rem 3rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1a202c;
+  background: #f7fafc;
+}
+
+.app {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.08);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+.task-form,
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-form label,
+.filter-row label {
+  flex: 0 0 auto;
+}
+
+.task-form input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  padding: 0.5rem 0.625rem;
+  font: inherit;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+}
+
+.task-form button {
+  flex: 0 0 auto;
+  padding: 0.5rem 0.875rem;
+  font: inherit;
+  color: #ffffff;
+  background: #2b6cb0;
+  border: 1px solid #2b6cb0;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #2c5282;
+  border-color: #2c5282;
+}
+
+select {
+  flex: 0 1 auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0.5rem 0.625rem;
+  font: inherit;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+}
+
+#tasks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tasks li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+#tasks li:first-child {
+  border-top: 0;
+}
+
+#tasks input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+#tasks .task-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#tasks .task-text.completed {
+  text-decoration: line-through;
+  color: #4a5568;
+}
+
+#tasks button {
+  flex: 0 0 auto;
+  padding: 0.375rem 0.75rem;
+  font: inherit;
+  color: #9b2c2c;
+  background: #ffffff;
+  border: 1px solid #e2b4b4;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+#tasks button:hover {
+  background: #fff5f5;
+}
+
+:focus-visible {
+  outline: 3px solid #2b6cb0;
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #2b6cb0;
+  outline-offset: 2px;
+}
+
+@media (max-width: 30rem) {
+  body {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .app {
+    padding: 1rem;
+  }
+}

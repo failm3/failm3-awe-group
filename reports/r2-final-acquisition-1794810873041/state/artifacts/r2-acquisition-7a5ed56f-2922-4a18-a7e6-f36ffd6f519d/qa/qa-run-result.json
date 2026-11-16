@@ -1,0 +1,259 @@
+{
+  "harness": "qa/nox-qa-verify.py",
+  "harness_sha256_self": "not self-recordable; compute with sha256sum qa/nox-qa-verify.py",
+  "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "independent_arithmetic": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent_hundredths": 8667,
+    "completion_percent": "86.67",
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent_hundredths": 8182,
+        "completion_percent": "81.82"
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent_hundredths": 10000,
+        "completion_percent": "100.00"
+      }
+    }
+  },
+  "manifest": [
+    {
+      "path": "digest.json",
+      "bytes": 467,
+      "chars_utf8": 467,
+      "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+    },
+    {
+      "path": "digest.md",
+      "bytes": 1983,
+      "chars_utf8": 1981,
+      "sha256": "d9a8a7d9da08e57ee355b2b043608b32235246c8043c88cd13864df55d93a384"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 8086,
+      "chars_utf8": 8086,
+      "sha256": "c3a653d3c849cc253664b77805167961c11a06bf760999b853acc6fa7be10ada"
+    },
+    {
+      "path": "verification-report.md",
+      "bytes": 9508,
+      "chars_utf8": 9508,
+      "sha256": "cccc8bcc2bb288157580aa59d28bbb9eae622b8e70d3770d57d45035ab2d85e6"
+    },
+    {
+      "path": "mission-report.md",
+      "bytes": 20730,
+      "chars_utf8": 20668,
+      "sha256": "b7023cf94dc480d63c1c47a707642f0d272df893c3efdf064eb1ecb359bd6a3b"
+    },
+    {
+      "path": "bin/observation-digest-v1.js",
+      "bytes": 8837,
+      "chars_utf8": 8835,
+      "sha256": "a2fee381effeb02550470b381804b096c59237f84df69e3f8601cd39c4d871e0"
+    },
+    {
+      "path": "input/pilot.observations.json",
+      "bytes": 474,
+      "chars_utf8": 474,
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+    }
+  ],
+  "checks_total": 35,
+  "checks_passed": 35,
+  "checks_failed": 0,
+  "result": "PASS",
+  "failures": [],
+  "checks": [
+    {
+      "id": "manifest.all_present",
+      "result": "PASS",
+      "detail": "7/7 pinned files present"
+    },
+    {
+      "id": "arith.totals",
+      "result": "PASS",
+      "detail": "rows=3 scheduled=30 completed=26 incidents=6"
+    },
+    {
+      "id": "arith.total_pct",
+      "result": "PASS",
+      "detail": "q=8667 r=20 -> 86.67 (2*r=40 >= denominator=30 rounds up)"
+    },
+    {
+      "id": "arith.sites_sum_to_totals",
+      "result": "PASS",
+      "detail": "site aggregates equal whole-set aggregates"
+    },
+    {
+      "id": "digest.json.row_count",
+      "result": "PASS",
+      "detail": "file=3 independent=3"
+    },
+    {
+      "id": "digest.json.scheduled",
+      "result": "PASS",
+      "detail": "file=30 independent=30"
+    },
+    {
+      "id": "digest.json.completed",
+      "result": "PASS",
+      "detail": "file=26 independent=26"
+    },
+    {
+      "id": "digest.json.incidents",
+      "result": "PASS",
+      "detail": "file=6 independent=6"
+    },
+    {
+      "id": "digest.json.completion_percent",
+      "result": "PASS",
+      "detail": "file=86.67 independent=86.67 (100.00 renders as the JSON number 100; JSON numbers carry no trailing zeros)"
+    },
+    {
+      "id": "digest.json.completion_percent_is_numeric",
+      "result": "PASS",
+      "detail": "numeric, not a string, as the criterion requires"
+    },
+    {
+      "id": "digest.json.sites_keys",
+      "result": "PASS",
+      "detail": "sites=['North', 'South'] expected=['North', 'South']"
+    },
+    {
+      "id": "digest.json.site_values",
+      "result": "PASS",
+      "detail": "every per-site field matches independent arithmetic"
+    },
+    {
+      "id": "digest.md.line:| Rows | 3 |",
+      "result": "PASS",
+      "detail": "line present verbatim: '| Rows | 3 |'"
+    },
+    {
+      "id": "digest.md.line:| Scheduled | 30 |",
+      "result": "PASS",
+      "detail": "line present verbatim: '| Scheduled | 30 |'"
+    },
+    {
+      "id": "digest.md.line:| Completed | 26 |",
+      "result": "PASS",
+      "detail": "line present verbatim: '| Completed | 26 |'"
+    },
+    {
+      "id": "digest.md.line:| Incidents | 6 |",
+      "result": "PASS",
+      "detail": "line present verbatim: '| Incidents | 6 |'"
+    },
+    {
+      "id": "digest.md.line:| Completion percent | 86.67",
+      "result": "PASS",
+      "detail": "line present verbatim: '| Completion percent | 86.67 |'"
+    },
+    {
+      "id": "digest.md.line:| **All sites** | **3** | **",
+      "result": "PASS",
+      "detail": "line present verbatim: '| **All sites** | **3** | **30** | **26** | **6** | **86.67** |'"
+    },
+    {
+      "id": "digest.md.line:| North | 2 | 22 | 18 | 5 | ",
+      "result": "PASS",
+      "detail": "line present verbatim: '| North | 2 | 22 | 18 | 5 | 81.82 |'"
+    },
+    {
+      "id": "digest.md.line:| South | 1 | 8 | 8 | 1 | 10",
+      "result": "PASS",
+      "detail": "line present verbatim: '| South | 1 | 8 | 8 | 1 | 100.00 |'"
+    },
+    {
+      "id": "digest.md.two_decimal_south",
+      "result": "PASS",
+      "detail": "South rendered as literal 100.00 in the markdown table"
+    },
+    {
+      "id": "digest.md.method_section",
+      "result": "PASS",
+      "detail": "reproducible method section present and states the half-up integer rule"
+    },
+    {
+      "id": "receipt.arguments_exact",
+      "result": "PASS",
+      "detail": "receipt args equal the specification's fixed args literally"
+    },
+    {
+      "id": "receipt.no_probe_in_args",
+      "result": "PASS",
+      "detail": "args[1] is the final root, not a probe directory"
+    },
+    {
+      "id": "receipt.executable_sha256_matches_file",
+      "result": "PASS",
+      "detail": "attested executable sha256 equals the measured hash of the file on disk"
+    },
+    {
+      "id": "receipt.input_sha256_matches_file",
+      "result": "PASS",
+      "detail": "recorded input sha256 equals the measured fixture hash"
+    },
+    {
+      "id": "receipt.exit_code",
+      "result": "PASS",
+      "detail": "exit_code=0"
+    },
+    {
+      "id": "receipt.invocation_count",
+      "result": "PASS",
+      "detail": "single gated invocation: 1"
+    },
+    {
+      "id": "receipt.output_hashes_and_sizes",
+      "result": "PASS",
+      "detail": "receipt sha256 and byte size match the on-disk outputs (no null / not-measured values)"
+    },
+    {
+      "id": "receipt.durable_fields",
+      "result": "PASS",
+      "detail": "attempt id, qualification id, command line and mission id all present"
+    },
+    {
+      "id": "integrity.final_equals_probe_bytes",
+      "result": "PASS",
+      "detail": "final digest.json/digest.md are byte-identical to the procedure's own probe output"
+    },
+    {
+      "id": "integrity.json_is_canonical",
+      "result": "PASS",
+      "detail": "digest.json re-serialises to itself (2-space indent, trailing newline, stable site key order)"
+    },
+    {
+      "id": "scope.procedure_source_unmodified",
+      "result": "PASS",
+      "detail": "pinned capability bytes equal the qualification value (immutable path untouched)"
+    },
+    {
+      "id": "scope.no_binary_or_foreign_outputs",
+      "result": "PASS",
+      "detail": "no binary deliverable was regenerated by a text tool"
+    },
+    {
+      "id": "scope.qa_not_self_asserted",
+      "result": "PASS",
+      "detail": "the receipt does not claim a Nox QA verdict that this delegation cannot obtain"
+    }
+  ],
+  "verdict_authority": "NONE -- this run is mechanical evidence only. Only an independent Nox QA reviewer may issue the QA verdict for acceptance criterion 4."
+}

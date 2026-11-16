@@ -1,0 +1,13 @@
+{
+  "id": "8d3553f1-046d-423d-83e4-a8ee1c596226",
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "type": "file",
+  "name": "verify/conformance.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/verify/conformance.py",
+  "created_at": "2026-11-16T07:45:25.923Z",
+  "metadata": {
+    "size_bytes": 10669,
+    "sha256": "5a051192da56f529a0404ab73b673ff07bb3eb92dd14689bd87c4ff31ebbd274",
+    "revision": 1
+  }
+}

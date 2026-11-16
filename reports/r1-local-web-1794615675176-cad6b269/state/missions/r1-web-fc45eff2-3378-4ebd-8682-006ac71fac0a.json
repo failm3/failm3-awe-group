@@ -1,0 +1,127 @@
+{
+  "id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "title": "Agent-built local static task tracker",
+  "description": "Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.\n\nFINITE VERIFIER CONTRACT:\n{\n  \"digest\": \"4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8\",\n  \"requirements\": {\n    \"version\": \"r1-static-task-tracker-v1\",\n    \"files\": \"index.html plus local .html/.css/.js/.mjs/.json/.txt/.svg files; UTF-8, no symlinks, max 64 files/1 MiB/8 levels\",\n    \"build\": \"Zero-dependency static site. Snapshot is the deployable tree; every JS module must pass sandboxed node --check. No package scripts run.\",\n    \"controls\": \"One heading Task tracker; textbox New task; button Add task; combobox Filter tasks with all/active/completed values; list Tasks; each listitem contains exact task text, checkbox Complete <task text>, button Delete <task text>.\",\n    \"behavior\": \"Initially empty; trim input, reject whitespace; add via button and Enter; render task text literally; toggle completion both ways; exact all/active/completed filtering; task text/completion/deletion survive reload; deletion removes only selected item.\",\n    \"accessibility\": \"Named native/ARIA controls above are visible and keyboard operable; narrow 375px and desktop 1280px layouts have no horizontal overflow. This is a finite accessibility check, not WCAG certification.\",\n    \"network\": \"No external URL literals (http/https/ws/wss or protocol-relative) in source; no nonlocal URL attributes, remote requests, workers, frames, objects, WebSockets or connections. All resources must be in the snapshot.\",\n    \"acceptance\": \"No browser page errors, error console messages, failed/missing resources or CSP violations during the bounded scenario. PASS applies only to this contract and exact tree hash, not qualification.\"\n  }\n}",
+  "objective": "Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.",
+  "acceptance_criteria": [
+    "Persist a solver-authored zero-dependency static task tracker at product/index.html.",
+    "The independent r1-static-task-tracker-v1 verifier returns PASS for the exact persisted product tree, including bounded keyboard, persistence, filtering, literal-rendering and viewport checks."
+  ],
+  "status": "paused",
+  "priority": "normal",
+  "created_at": "2026-11-14T00:21:17.265Z",
+  "updated_at": "2026-11-14T00:31:17.521Z",
+  "artifacts": [],
+  "metadata": {
+    "specification": {
+      "title": "Agent-built local static task tracker",
+      "objective": "Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.",
+      "scope": "Only the local product/ static source tree and its registered artifacts. Create only the source files needed there; no reports, duplicate root-level files, tests or unrelated artifacts. No external content or network grants, no package installation/build scripts, no deployment, no external publication, no changes to host configuration or other missions. Do not create or edit independent verification receipts. Use the approved file tools; no solver-issued QA receipt can establish PASS.",
+      "acceptance_criteria": [
+        "Persist a solver-authored zero-dependency static task tracker at product/index.html.",
+        "The independent r1-static-task-tracker-v1 verifier returns PASS for the exact persisted product tree, including bounded keyboard, persistence, filtering, literal-rendering and viewport checks."
+      ],
+      "suggested_tools": [
+        "file_write",
+        "file_read",
+        "file_list",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "coder",
+        "executor"
+      ],
+      "estimated_complexity": "simple",
+      "risks": [
+        "A visually plausible or syntactically valid page is insufficient: every bounded real-browser interaction must pass.",
+        "Every resource URL must resolve inside the product snapshot. Use relative paths only; data:, blob:, external and protocol-relative URLs are not permitted. To avoid an unsolicited /favicon.ico resource error, include a local product/favicon.svg and reference it from index.html as favicon.svg, with no external or data: URL."
+      ],
+      "web_product": {
+        "directory": "product",
+        "verifier": "r1-static-task-tracker-v1"
+      }
+    },
+    "finite_web_contract": {
+      "digest": "4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8",
+      "requirements": {
+        "version": "r1-static-task-tracker-v1",
+        "files": "index.html plus local .html/.css/.js/.mjs/.json/.txt/.svg files; UTF-8, no symlinks, max 64 files/1 MiB/8 levels",
+        "build": "Zero-dependency static site. Snapshot is the deployable tree; every JS module must pass sandboxed node --check. No package scripts run.",
+        "controls": "One heading Task tracker; textbox New task; button Add task; combobox Filter tasks with all/active/completed values; list Tasks; each listitem contains exact task text, checkbox Complete <task text>, button Delete <task text>.",
+        "behavior": "Initially empty; trim input, reject whitespace; add via button and Enter; render task text literally; toggle completion both ways; exact all/active/completed filtering; task text/completion/deletion survive reload; deletion removes only selected item.",
+        "accessibility": "Named native/ARIA controls above are visible and keyboard operable; narrow 375px and desktop 1280px layouts have no horizontal overflow. This is a finite accessibility check, not WCAG certification.",
+        "network": "No external URL literals (http/https/ws/wss or protocol-relative) in source; no nonlocal URL attributes, remote requests, workers, frames, objects, WebSockets or connections. All resources must be in the snapshot.",
+        "acceptance": "No browser page errors, error console messages, failed/missing resources or CSP violations during the bounded scenario. PASS applies only to this contract and exact tree hash, not qualification."
+      }
+    },
+    "engineering_authorization": "User-authorized local R1 engineering-practice mission; no product qualification, deployment or publication",
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-14T00:21:17.301Z",
+      "spec_hash": "f4dce2697161ab18ede9acc1c185576c18488848fd8d9704c9eb294c2c6dacb2",
+      "snapshot": {
+        "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+        "title": "Agent-built local static task tracker",
+        "description": "Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.\n\nFINITE VERIFIER CONTRACT:\n{\n  \"digest\": \"4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8\",\n  \"requirements\": {\n    \"version\": \"r1-static-task-tracker-v1\",\n    \"files\": \"index.html plus local .html/.css/.js/.mjs/.json/.txt/.svg files; UTF-8, no symlinks, max 64 files/1 MiB/8 levels\",\n    \"build\": \"Zero-dependency static site. Snapshot is the deployable tree; every JS module must pass sandboxed node --check. No package scripts run.\",\n    \"controls\": \"One heading Task tracker; textbox New task; button Add task; combobox Filter tasks with all/active/completed values; list Tasks; each listitem contains exact task text, checkbox Complete <task text>, button Delete <task text>.\",\n    \"behavior\": \"Initially empty; trim input, reject whitespace; add via button and Enter; render task text literally; toggle completion both ways; exact all/active/completed filtering; task text/completion/deletion survive reload; deletion removes only selected item.\",\n    \"accessibility\": \"Named native/ARIA controls above are visible and keyboard operable; narrow 375px and desktop 1280px layouts have no horizontal overflow. This is a finite accessibility check, not WCAG certification.\",\n    \"network\": \"No external URL literals (http/https/ws/wss or protocol-relative) in source; no nonlocal URL attributes, remote requests, workers, frames, objects, WebSockets or connections. All resources must be in the snapshot.\",\n    \"acceptance\": \"No browser page errors, error console messages, failed/missing resources or CSP violations during the bounded scenario. PASS applies only to this contract and exact tree hash, not qualification.\"\n  }\n}",
+        "objective": "Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.",
+        "acceptance_criteria": [
+          "Persist a solver-authored zero-dependency static task tracker at product/index.html.",
+          "The independent r1-static-task-tracker-v1 verifier returns PASS for the exact persisted product tree, including bounded keyboard, persistence, filtering, literal-rendering and viewport checks."
+        ],
+        "specification": {
+          "title": "Agent-built local static task tracker",
+          "objective": "Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.",
+          "scope": "Only the local product/ static source tree and its registered artifacts. Create only the source files needed there; no reports, duplicate root-level files, tests or unrelated artifacts. No external content or network grants, no package installation/build scripts, no deployment, no external publication, no changes to host configuration or other missions. Do not create or edit independent verification receipts. Use the approved file tools; no solver-issued QA receipt can establish PASS.",
+          "acceptance_criteria": [
+            "Persist a solver-authored zero-dependency static task tracker at product/index.html.",
+            "The independent r1-static-task-tracker-v1 verifier returns PASS for the exact persisted product tree, including bounded keyboard, persistence, filtering, literal-rendering and viewport checks."
+          ],
+          "suggested_tools": [
+            "file_write",
+            "file_read",
+            "file_list",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "coder",
+            "executor"
+          ],
+          "estimated_complexity": "simple",
+          "risks": [
+            "A visually plausible or syntactically valid page is insufficient: every bounded real-browser interaction must pass.",
+            "Every resource URL must resolve inside the product snapshot. Use relative paths only; data:, blob:, external and protocol-relative URLs are not permitted. To avoid an unsolicited /favicon.ico resource error, include a local product/favicon.svg and reference it from index.html as favicon.svg, with no external or data: URL."
+          ],
+          "web_product": {
+            "directory": "product",
+            "verifier": "r1-static-task-tracker-v1"
+          }
+        }
+      }
+    },
+    "approved_local_practice_at": "2026-11-14T00:21:17.318Z",
+    "execution_owner": {
+      "owner_id": "2ab48bb0-c5df-47f8-87be-c0b8f95376bc",
+      "pid": 699597,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-14T00:21:17.354Z",
+      "released_at": "2026-11-14T00:31:17.521Z"
+    },
+    "mission_admission": {
+      "version": 1,
+      "mode": "engineering-practice",
+      "missionId": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+      "specHash": "f4dce2697161ab18ede9acc1c185576c18488848fd8d9704c9eb294c2c6dacb2"
+    },
+    "timeout_recovery": {
+      "quiesced": true,
+      "pending_operations": 0,
+      "elapsed_ms": 600121,
+      "budget_ms": 600000,
+      "confirmed_at": "2026-11-14T00:31:17.511Z"
+    }
+  },
+  "_rev": 7
+}

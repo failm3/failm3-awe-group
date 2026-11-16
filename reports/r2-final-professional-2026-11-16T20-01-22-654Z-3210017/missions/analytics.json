@@ -1,0 +1,730 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+  "status": "completed",
+  "started_at": "2026-11-16T20:01:22.873Z",
+  "finished_at": "2026-11-16T20:04:20.973Z",
+  "execution_error": null,
+  "approved_spec_hash": "d0de097eeb6b3357dcc54bba480ec3b99c3b5be832f34e4eb7fa2f428e99f5fc",
+  "host_execution_policy": {
+    "composition": "trusted-host-only",
+    "mode": "engineering-practice",
+    "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+    "spec_hash": "d0de097eeb6b3357dcc54bba480ec3b99c3b5be832f34e4eb7fa2f428e99f5fc",
+    "fail_closed": true,
+    "allowed_stages": [
+      "mission",
+      "delegation",
+      "repair",
+      "effect",
+      "acceptance"
+    ],
+    "allowed_tools": [
+      "file_list",
+      "file_read",
+      "file_write",
+      "save_artifact"
+    ],
+    "selection_inputs": [
+      "approved mission identity",
+      "approved spec hash",
+      "host target role/tools/stage"
+    ],
+    "prohibited_selection_inputs": [
+      "request metadata",
+      "model metadata",
+      "model-authored configuration"
+    ]
+  },
+  "artifacts": [
+    {
+      "id": "2e89b834-534e-4155-9759-c3f84c103ae4",
+      "name": "input/operations.csv",
+      "revision": 1,
+      "sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+      "size_bytes": 547
+    },
+    {
+      "id": "3e49f076-2136-4d7d-90f0-212d3bbb78cc",
+      "name": "metrics.json",
+      "revision": 2,
+      "sha256": "f9f573db6405affb9be382de925f17e66458a89e08e338a0acc831cf118d88cc",
+      "size_bytes": 835
+    },
+    {
+      "id": "c5aae02d-1a98-4e3c-9df5-b3369f3783bb",
+      "name": "operations-brief.md",
+      "revision": 2,
+      "sha256": "66340124562a364bd8277498aa11f2a37f03fe5084a12c09495d556ec7f8811a",
+      "size_bytes": 6266
+    }
+  ],
+  "intervals": [
+    {
+      "node_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0",
+      "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+      "role": "analyst",
+      "started_at": "2026-11-16T20:01:55.783Z",
+      "finished_at": "2026-11-16T20:02:43.825Z",
+      "artifact_ids": [
+        "04154c4c-fc84-4d7b-92fd-496aea93b29b",
+        "3e49f076-2136-4d7d-90f0-212d3bbb78cc"
+      ]
+    },
+    {
+      "node_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1",
+      "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+      "role": "writer",
+      "started_at": "2026-11-16T20:02:43.851Z",
+      "finished_at": "2026-11-16T20:03:55.404Z",
+      "artifact_ids": [
+        "67f00d53-06a3-4c6d-9be6-f876b9a66572",
+        "c5aae02d-1a98-4e3c-9df5-b3369f3783bb"
+      ]
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "f6eb7e3e-a7a1-4702-808a-8cf2d4704a01",
+      "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:01:25.654Z",
+      "finished_at": "2026-11-16T20:01:55.746Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 3728,
+        "output_tokens": 3055,
+        "total_tokens": 6783,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 630
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "9cc59021-dac3-4cd3-abf0-9bdab0128e09",
+      "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+      "role": "analyst",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:01:55.793Z",
+      "finished_at": "2026-11-16T20:02:43.813Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 48400,
+        "output_tokens": 4575,
+        "total_tokens": 52975,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 29090
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "df1e1c3e-c64c-48f3-9311-2d84e8ba2c8b",
+      "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+      "role": "writer",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:02:43.860Z",
+      "finished_at": "2026-11-16T20:03:55.393Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 49776,
+        "output_tokens": 8214,
+        "total_tokens": 57990,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 24082
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "be40c4f4-9be9-4ad7-8d57-a0e3c4392442",
+      "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T20:03:55.432Z",
+      "finished_at": "2026-11-16T20:04:20.929Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 10253,
+        "output_tokens": 2796,
+        "total_tokens": 13049,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "qa_review": {
+    "passed": true,
+    "score": 10,
+    "criteria_results": [
+      {
+        "criterion": "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+        "passed": true,
+        "notes": "Independently re-summed all 18 CSV rows. Atlas 95/89/7/5700/5780, Birch 75/71/3/4875/4910, Cedar 63/57/8/4410/4750, totals 233/217/18/14985/15440 — all match. Ratios recomputed: 217/233=93.13, 15440/217=71.15, 89/95=93.68, 5780/89=64.94, 71/75=94.67, 4910/71=69.15, 57/63=90.48, 4750/57=83.33; variances 80/35/340 and 455 all correct. Key order is row_count, totals, teams; per-object keys in the required order; teams Atlas, Birch, Cedar; integers are bare JSON numbers; all percentages and rates serialize with exactly two decimals. No extra fields."
+      },
+      {
+        "criterion": "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+        "passed": true,
+        "notes": "Brief opens with a four-item executive recommendation grounded in observed figures only. Overall findings give 217/233 = 93.13%, 18 defects, +455 minutes (14,985 planned vs 15,440 actual), 71.15 min/order. Per-team table and paragraphs cover completion, defects and schedule variance for Atlas, Birch and Cedar with values matching metrics.json exactly. All figures traceable to the CSV; no external data introduced."
+      },
+      {
+        "criterion": "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+        "passed": true,
+        "notes": "Method section names input/operations.csv, its 18 rows and column list, and states all three formulas exactly: completion percent = completed orders ÷ work orders × 100; minutes per completed order = actual minutes ÷ completed orders; schedule variance = actual minutes − planned minutes. Explicit integrity notes confirm minutes retained with no conversion and that no records were added, removed, filtered or transformed."
+      },
+      {
+        "criterion": "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+        "passed": true,
+        "notes": "CSV present at revision 1 with sha256 3724e240… and 547 bytes; analyst reports read-only access and no scratch files. Only metrics.json and operations-brief.md are delivered as substantive artifacts beyond the immutable input. The brief's closing 'Limits of this document' section explicitly bounds every statement to the 18 records, disclaims benchmarks, targets, causal attribution and forecasts."
+      },
+      {
+        "criterion": "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted.",
+        "passed": true,
+        "notes": "Execution trace shows the Head delegating to two distinct specialists: an analyst for extraction and independent double-pass calculation (two summation orders cross-checked), and a writer for document synthesis that independently re-verified the metrics against the raw CSV before writing. Sequential dependency (synthesis after metrics) is explicitly permitted by the specification."
+      }
+    ],
+    "defects": [],
+    "recommendations": [
+      "Optional: state the basis for the half-up rounding convention in the Method section if full reproducibility by a third party is desired, though observed rounding is correct in every case."
+    ],
+    "verdict": "PASS: PASS: All five acceptance criteria are satisfied. Independent recomputation of all 18 CSV rows reproduces every integer, ratio and variance in metrics.json exactly; the key/team ordering and two-decimal serialization requirements are met; the brief contains the required executive recommendation, overall and per-team findings, an accurate Method section with the three exact formulas, and explicit scope limits; the input CSV is unmodified and only the two required artifacts are delivered; and the trace shows two distinct specialist delegations under the Head."
+  },
+  "qa_candidate_receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+    "epoch_id": "e7d9a024-584e-4361-83e9-c2b5bbecfa87",
+    "candidate_sha256": "b65afe39c21f7fb370dd72fcf5861a8430d6d4930357bd59680997d8530d89d4",
+    "execution_output_sha256": "0ab873fc435084877c4585c3b778d6d1eecb40c8590eee0eed055b704894defb",
+    "evidence_sha256": "2236e76cd3a38169e3720d3e06d5652e007690b57701fdd157429a4afa280621",
+    "review": {
+      "passed": true,
+      "score": 10,
+      "criteria_results": [
+        {
+          "criterion": "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+          "passed": true,
+          "notes": "Independently re-summed all 18 CSV rows. Atlas 95/89/7/5700/5780, Birch 75/71/3/4875/4910, Cedar 63/57/8/4410/4750, totals 233/217/18/14985/15440 — all match. Ratios recomputed: 217/233=93.13, 15440/217=71.15, 89/95=93.68, 5780/89=64.94, 71/75=94.67, 4910/71=69.15, 57/63=90.48, 4750/57=83.33; variances 80/35/340 and 455 all correct. Key order is row_count, totals, teams; per-object keys in the required order; teams Atlas, Birch, Cedar; integers are bare JSON numbers; all percentages and rates serialize with exactly two decimals. No extra fields."
+        },
+        {
+          "criterion": "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+          "passed": true,
+          "notes": "Brief opens with a four-item executive recommendation grounded in observed figures only. Overall findings give 217/233 = 93.13%, 18 defects, +455 minutes (14,985 planned vs 15,440 actual), 71.15 min/order. Per-team table and paragraphs cover completion, defects and schedule variance for Atlas, Birch and Cedar with values matching metrics.json exactly. All figures traceable to the CSV; no external data introduced."
+        },
+        {
+          "criterion": "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+          "passed": true,
+          "notes": "Method section names input/operations.csv, its 18 rows and column list, and states all three formulas exactly: completion percent = completed orders ÷ work orders × 100; minutes per completed order = actual minutes ÷ completed orders; schedule variance = actual minutes − planned minutes. Explicit integrity notes confirm minutes retained with no conversion and that no records were added, removed, filtered or transformed."
+        },
+        {
+          "criterion": "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+          "passed": true,
+          "notes": "CSV present at revision 1 with sha256 3724e240… and 547 bytes; analyst reports read-only access and no scratch files. Only metrics.json and operations-brief.md are delivered as substantive artifacts beyond the immutable input. The brief's closing 'Limits of this document' section explicitly bounds every statement to the 18 records, disclaims benchmarks, targets, causal attribution and forecasts."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted.",
+          "passed": true,
+          "notes": "Execution trace shows the Head delegating to two distinct specialists: an analyst for extraction and independent double-pass calculation (two summation orders cross-checked), and a writer for document synthesis that independently re-verified the metrics against the raw CSV before writing. Sequential dependency (synthesis after metrics) is explicitly permitted by the specification."
+        }
+      ],
+      "defects": [],
+      "recommendations": [
+        "Optional: state the basis for the half-up rounding convention in the Method section if full reproducibility by a third party is desired, though observed rounding is correct in every case."
+      ],
+      "verdict": "PASS: PASS: All five acceptance criteria are satisfied. Independent recomputation of all 18 CSV rows reproduces every integer, ratio and variance in metrics.json exactly; the key/team ordering and two-decimal serialization requirements are met; the brief contains the required executive recommendation, overall and per-team findings, an accurate Method section with the three exact formulas, and explicit scope limits; the input CSV is unmodified and only the two required artifacts are delivered; and the trace shows two distinct specialist delegations under the Head."
+    },
+    "gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+          "passed": true,
+          "reason": "Independently re-summed all 18 CSV rows. Atlas 95/89/7/5700/5780, Birch 75/71/3/4875/4910, Cedar 63/57/8/4410/4750, totals 233/217/18/14985/15440 — all match. Ratios recomputed: 217/233=93.13, 15440/217=71.15, 89/95=93.68, 5780/89=64.94, 71/75=94.67, 4910/71=69.15, 57/63=90.48, 4750/57=83.33; variances 80/35/340 and 455 all correct. Key order is row_count, totals, teams; per-object keys in the required order; teams Atlas, Birch, Cedar; integers are bare JSON numbers; all percentages and rates serialize with exactly two decimals. No extra fields."
+        },
+        {
+          "criterion": "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+          "passed": true,
+          "reason": "Brief opens with a four-item executive recommendation grounded in observed figures only. Overall findings give 217/233 = 93.13%, 18 defects, +455 minutes (14,985 planned vs 15,440 actual), 71.15 min/order. Per-team table and paragraphs cover completion, defects and schedule variance for Atlas, Birch and Cedar with values matching metrics.json exactly. All figures traceable to the CSV; no external data introduced."
+        },
+        {
+          "criterion": "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+          "passed": true,
+          "reason": "Method section names input/operations.csv, its 18 rows and column list, and states all three formulas exactly: completion percent = completed orders ÷ work orders × 100; minutes per completed order = actual minutes ÷ completed orders; schedule variance = actual minutes − planned minutes. Explicit integrity notes confirm minutes retained with no conversion and that no records were added, removed, filtered or transformed."
+        },
+        {
+          "criterion": "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+          "passed": true,
+          "reason": "CSV present at revision 1 with sha256 3724e240… and 547 bytes; analyst reports read-only access and no scratch files. Only metrics.json and operations-brief.md are delivered as substantive artifacts beyond the immutable input. The brief's closing 'Limits of this document' section explicitly bounds every statement to the 18 records, disclaims benchmarks, targets, causal attribution and forecasts."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted.",
+          "passed": true,
+          "reason": "Execution trace shows the Head delegating to two distinct specialists: an analyst for extraction and independent double-pass calculation (two summation orders cross-checked), and a writer for document synthesis that independently re-verified the metrics against the raw CSV before writing. Sequential dependency (synthesis after metrics) is explicitly permitted by the specification."
+        }
+      ],
+      "llm_score": 10,
+      "llm_passed": true
+    },
+    "receipt_sha256": "2fd6b4112867742343cb07b731e73457751c9cf4f7b419fca00fba6bf9d6e8b8",
+    "created_at": "2026-11-16T20:04:20.949Z"
+  },
+  "candidate_evidence_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/candidate-evidence/analytics-e7d9a024-584e-4361-83e9-c2b5bbecfa87.json",
+  "candidate_evidence_sha256": "b65afe39c21f7fb370dd72fcf5861a8430d6d4930357bd59680997d8530d89d4",
+  "delegation_tree": {
+    "total_agents": 2,
+    "max_depth": 0,
+    "nodes": [
+      {
+        "id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0",
+        "role": "analyst",
+        "started_at": "2026-11-16T20:01:55.769Z",
+        "task": "Extract and compute exact operations metrics. Working directory is /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics. List the directory, then read input/operations.csv in full with file_read. Parse all 18 rows into (team, work_orders, completed_orders, defects, planned_minutes, actual_minutes). Compute overall totals and per-team totals for Atlas, Birch and Cedar using only these formulas: completion_percent = completed_orders / work_orders * 100 rounded to two decimals; minutes_per_completed_order = actual_minutes / completed_orders rounded to two decimals; schedule_variance_minutes = actual_minutes - planned_minutes as an integer. Then independently recompute every cell a second time from a re-read of the raw rows and assert the two passes are identical before writing anything. Serialize metrics.json with exactly the root keys row_count, totals, teams in that order; each totals and team object with exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order, schedule_variance_minutes in that order; teams in the order Atlas, Birch, Cedar. row_count must be 18. All integer metrics must be JSON numbers (no strings, no thousands separators); completion_percent and minutes_per_completed_order must serialize with exactly two decimal places. The expected values are fixed by the specification: totals work_orders 233, completed_orders 217, defects 18, planned_minutes 14985, actual_minutes 15440, completion_percent 93.13, minutes_per_completed_order 71.15, schedule_variance_minutes 455; Atlas 95/89/7/5700/5780/93.68/64.94/80; Birch 75/71/3/4875/4910/94.67/69.15/35; Cedar 63/57/8/4410/4750/90.48/83.33/340. If your independent computation disagrees with any of these, do not silently adopt the specification value and do not write a corrected variant: stop and report the discrepancy with the offending rows. Write the file with file_write and register it with save_artifact under the artifact name metrics.json.",
+        "depth": 0,
+        "parent_id": null,
+        "status": "success",
+        "children": [],
+        "model": "claude-sonnet-5-5",
+        "tools_used": [
+          "file_list",
+          "file_read",
+          "file_write",
+          "save_artifact"
+        ],
+        "artifacts": [
+          "3e49f076-2136-4d7d-90f0-212d3bbb78cc"
+        ],
+        "duration_ms": 48066,
+        "finished_at": "2026-11-16T20:02:43.828Z"
+      },
+      {
+        "id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1",
+        "role": "writer",
+        "started_at": "2026-11-16T20:02:43.842Z",
+        "task": "Synthesize the management document operations-brief.md in the same working directory. Read the analyst's persisted metrics.json and re-read input/operations.csv to confirm the figures it cites are derived from those rows. Write a concise brief with: (1) an executive recommendation that is actionable for a three-team six-week operation, grounded only in the observed completion, defects and schedule variance; (2) overall findings — 233 work orders, 217 completed, 93.13% completion, 18 defects, 14,985 planned against 15,440 actual minutes, 71.15 minutes per completed order, and +455 minutes of schedule variance; (3) per-team findings stating each team's work orders, completed orders, completion percent, defects and schedule variance, making the contrast explicit (Cedar lowest completion at 90.48% and highest overrun at 340 minutes with the highest defect count at 8; Birch highest completion at 94.67% with only 3 defects and 35 minutes overrun; Atlas mid-pack at 93.68% with 7 defects and 80 minutes overrun, and the tightest minutes per completed order at 64.94); (4) a Method section that names input/operations.csv as the sole source and states the exact formulas used — completion percent = completed orders divided by work orders, multiplied by 100; minutes per completed order = actual minutes divided by completed orders; schedule variance minutes = actual minutes minus planned minutes — noting units are unchanged minutes and no records were added, removed or transformed. Every number in the prose must match metrics.json exactly; do not recompute, re-round or restate a figure the analyst did not persist. Write with file_write and register with save_artifact under the artifact name operations-brief.md.",
+        "depth": 0,
+        "parent_id": null,
+        "status": "success",
+        "children": [],
+        "model": "claude-sonnet-5-5",
+        "tools_used": [
+          "file_read",
+          "file_write",
+          "save_artifact"
+        ],
+        "artifacts": [
+          "c5aae02d-1a98-4e3c-9df5-b3369f3783bb"
+        ],
+        "duration_ms": 71570,
+        "finished_at": "2026-11-16T20:03:55.408Z"
+      }
+    ]
+  },
+  "independent_verification": {
+    "schema": "r2-final-professional-independent-verification-v1",
+    "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+    "independent": true,
+    "artifacts": [
+      {
+        "id": "2e89b834-534e-4155-9759-c3f84c103ae4",
+        "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+        "name": "input/operations.csv",
+        "revision": 1,
+        "sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+        "size_bytes": 547,
+        "attributed_delegations": []
+      },
+      {
+        "id": "3e49f076-2136-4d7d-90f0-212d3bbb78cc",
+        "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+        "name": "metrics.json",
+        "revision": 2,
+        "sha256": "f9f573db6405affb9be382de925f17e66458a89e08e338a0acc831cf118d88cc",
+        "size_bytes": 835,
+        "attributed_delegations": [
+          "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0:analyst"
+        ]
+      },
+      {
+        "id": "c5aae02d-1a98-4e3c-9df5-b3369f3783bb",
+        "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+        "name": "operations-brief.md",
+        "revision": 2,
+        "sha256": "66340124562a364bd8277498aa11f2a37f03fe5084a12c09495d556ec7f8811a",
+        "size_bytes": 6266,
+        "attributed_delegations": [
+          "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1:writer"
+        ]
+      }
+    ],
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0",
+        "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+        "role": "analyst",
+        "started_at": "2026-11-16T20:01:55.783Z",
+        "finished_at": "2026-11-16T20:02:43.825Z",
+        "artifact_ids": [
+          "04154c4c-fc84-4d7b-92fd-496aea93b29b",
+          "3e49f076-2136-4d7d-90f0-212d3bbb78cc"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1",
+        "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+        "role": "writer",
+        "started_at": "2026-11-16T20:02:43.851Z",
+        "finished_at": "2026-11-16T20:03:55.404Z",
+        "artifact_ids": [
+          "67f00d53-06a3-4c6d-9be6-f876b9a66572",
+          "c5aae02d-1a98-4e3c-9df5-b3369f3783bb"
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "check": "mission reached completed through production independent QA",
+        "passed": true,
+        "detail": "completed"
+      },
+      {
+        "check": "real Head plan and successful specialist delegation tree recorded",
+        "passed": true,
+        "detail": "2 tree nodes; 2 successful top-level nodes"
+      },
+      {
+        "check": "every durable specialist used only approved tools and host-allowlisted models",
+        "passed": true,
+        "detail": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1:[\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5"
+      },
+      {
+        "check": "at least two distinct successful production specialist delegations",
+        "passed": true,
+        "detail": "analyst:r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0, writer:r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1"
+      },
+      {
+        "check": "real Head model call completed",
+        "passed": true,
+        "detail": "completed"
+      },
+      {
+        "check": "independent QA model call completed",
+        "passed": true,
+        "detail": "completed"
+      },
+      {
+        "check": "real specialist model calls completed",
+        "passed": true,
+        "detail": "analyst:completed, writer:completed"
+      },
+      {
+        "check": "all model ledger records are terminal and attributed to this mission",
+        "passed": true,
+        "detail": "4 calls"
+      },
+      {
+        "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+        "passed": true,
+        "detail": "head-agent:claude-opus-5-5:routercheap | analyst:claude-sonnet-5-5:routercheap | writer:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+      },
+      {
+        "check": "specialist role routing uses the host-selected Sonnet route",
+        "passed": true,
+        "detail": "role overrides are host configuration, not model output"
+      },
+      {
+        "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+        "passed": true,
+        "detail": "input/operations.csv, metrics.json, operations-brief.md"
+      },
+      {
+        "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+        "passed": true,
+        "detail": "3 supplied / 3 terminal IDs"
+      },
+      {
+        "check": "artifact input/operations.csv bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "2e89b834-534e-4155-9759-c3f84c103ae4:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414; producer=trusted-host-input"
+      },
+      {
+        "check": "artifact metrics.json bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "3e49f076-2136-4d7d-90f0-212d3bbb78cc:f9f573db6405affb9be382de925f17e66458a89e08e338a0acc831cf118d88cc; producer=r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0"
+      },
+      {
+        "check": "artifact operations-brief.md bytes, identity and accepted attribution",
+        "passed": true,
+        "detail": "c5aae02d-1a98-4e3c-9df5-b3369f3783bb:66340124562a364bd8277498aa11f2a37f03fe5084a12c09495d556ec7f8811a; producer=r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1"
+      },
+      {
+        "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+        "passed": true,
+        "detail": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0:analyst"
+      },
+      {
+        "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+        "passed": true,
+        "detail": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1:writer"
+      },
+      {
+        "check": "immutable local input bytes",
+        "passed": true,
+        "detail": "input/operations.csv:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414"
+      },
+      {
+        "check": "metrics JSON parses",
+        "passed": true,
+        "detail": "valid JSON"
+      },
+      {
+        "check": "metrics exactly match independent raw-CSV recomputation and numeric serialization",
+        "passed": true,
+        "detail": "all integer totals and two-decimal derived metrics match"
+      },
+      {
+        "check": "metrics schema includes exact groups and two-decimal derived JSON numbers",
+        "passed": true,
+        "detail": "exact aggregate groups and canonical two-decimal JSON numbers"
+      },
+      {
+        "check": "brief has exact Atlas operational findings",
+        "passed": false,
+        "detail": "Atlas does not associate exact completion/defects/variance values 93.68, 7, 80"
+      },
+      {
+        "check": "brief has exact Birch operational findings",
+        "passed": false,
+        "detail": "Birch does not associate exact completion/defects/variance values 94.67, 3, 35"
+      },
+      {
+        "check": "brief has exact Cedar operational findings",
+        "passed": false,
+        "detail": "Cedar does not associate exact completion/defects/variance values 90.48, 8, 340"
+      },
+      {
+        "check": "brief has exact overall operational findings",
+        "passed": false,
+        "detail": "overall does not associate exact completion/defects/variance values 93.13, 18, 455"
+      },
+      {
+        "check": "brief has executive recommendation and bounded six-week conclusion",
+        "passed": true,
+        "detail": "recommendation must not generalize beyond supplied data"
+      },
+      {
+        "check": "brief documents input and exact formulas",
+        "passed": true,
+        "detail": "three calculation formulas including ×100 required"
+      },
+      {
+        "check": "brief contains only independently supported numeric facts",
+        "passed": false,
+        "detail": "unsupported brief numbers: 985, 410, 750, 985, 440, 985, 440, 700, 780, 875, 910, 410, 750, 410, 750, 875, 910, 700, 780"
+      },
+      {
+        "check": "both documents remain within independent QA evidence window",
+        "passed": true,
+        "detail": "7101 bytes"
+      }
+    ],
+    "passed": false
+  },
+  "checks": [
+    {
+      "check": "mission execution boundary returned without a host exception",
+      "passed": true,
+      "detail": "settled"
+    },
+    {
+      "check": "independent candidate review receipt authenticates exact final artifact set",
+      "passed": true,
+      "detail": "e7d9a024-584e-4361-83e9-c2b5bbecfa87:b65afe39c21f7fb370dd72fcf5861a8430d6d4930357bd59680997d8530d89d4"
+    },
+    {
+      "check": "mission reached completed through production independent QA",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "real Head plan and successful specialist delegation tree recorded",
+      "passed": true,
+      "detail": "2 tree nodes; 2 successful top-level nodes"
+    },
+    {
+      "check": "every durable specialist used only approved tools and host-allowlisted models",
+      "passed": true,
+      "detail": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1:[\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5"
+    },
+    {
+      "check": "at least two distinct successful production specialist delegations",
+      "passed": true,
+      "detail": "analyst:r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0, writer:r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1"
+    },
+    {
+      "check": "real Head model call completed",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "independent QA model call completed",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "check": "real specialist model calls completed",
+      "passed": true,
+      "detail": "analyst:completed, writer:completed"
+    },
+    {
+      "check": "all model ledger records are terminal and attributed to this mission",
+      "passed": true,
+      "detail": "4 calls"
+    },
+    {
+      "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+      "passed": true,
+      "detail": "head-agent:claude-opus-5-5:routercheap | analyst:claude-sonnet-5-5:routercheap | writer:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+    },
+    {
+      "check": "specialist role routing uses the host-selected Sonnet route",
+      "passed": true,
+      "detail": "role overrides are host configuration, not model output"
+    },
+    {
+      "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+      "passed": true,
+      "detail": "input/operations.csv, metrics.json, operations-brief.md"
+    },
+    {
+      "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+      "passed": true,
+      "detail": "3 supplied / 3 terminal IDs"
+    },
+    {
+      "check": "artifact input/operations.csv bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "2e89b834-534e-4155-9759-c3f84c103ae4:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414; producer=trusted-host-input"
+    },
+    {
+      "check": "artifact metrics.json bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "3e49f076-2136-4d7d-90f0-212d3bbb78cc:f9f573db6405affb9be382de925f17e66458a89e08e338a0acc831cf118d88cc; producer=r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0"
+    },
+    {
+      "check": "artifact operations-brief.md bytes, identity and accepted attribution",
+      "passed": true,
+      "detail": "c5aae02d-1a98-4e3c-9df5-b3369f3783bb:66340124562a364bd8277498aa11f2a37f03fe5084a12c09495d556ec7f8811a; producer=r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1"
+    },
+    {
+      "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+      "passed": true,
+      "detail": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0:analyst"
+    },
+    {
+      "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+      "passed": true,
+      "detail": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1:writer"
+    },
+    {
+      "check": "immutable local input bytes",
+      "passed": true,
+      "detail": "input/operations.csv:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414"
+    },
+    {
+      "check": "metrics JSON parses",
+      "passed": true,
+      "detail": "valid JSON"
+    },
+    {
+      "check": "metrics exactly match independent raw-CSV recomputation and numeric serialization",
+      "passed": true,
+      "detail": "all integer totals and two-decimal derived metrics match"
+    },
+    {
+      "check": "metrics schema includes exact groups and two-decimal derived JSON numbers",
+      "passed": true,
+      "detail": "exact aggregate groups and canonical two-decimal JSON numbers"
+    },
+    {
+      "check": "brief has exact Atlas operational findings",
+      "passed": false,
+      "detail": "Atlas does not associate exact completion/defects/variance values 93.68, 7, 80"
+    },
+    {
+      "check": "brief has exact Birch operational findings",
+      "passed": false,
+      "detail": "Birch does not associate exact completion/defects/variance values 94.67, 3, 35"
+    },
+    {
+      "check": "brief has exact Cedar operational findings",
+      "passed": false,
+      "detail": "Cedar does not associate exact completion/defects/variance values 90.48, 8, 340"
+    },
+    {
+      "check": "brief has exact overall operational findings",
+      "passed": false,
+      "detail": "overall does not associate exact completion/defects/variance values 93.13, 18, 455"
+    },
+    {
+      "check": "brief has executive recommendation and bounded six-week conclusion",
+      "passed": true,
+      "detail": "recommendation must not generalize beyond supplied data"
+    },
+    {
+      "check": "brief documents input and exact formulas",
+      "passed": true,
+      "detail": "three calculation formulas including ×100 required"
+    },
+    {
+      "check": "brief contains only independently supported numeric facts",
+      "passed": false,
+      "detail": "unsupported brief numbers: 985, 410, 750, 985, 440, 985, 440, 700, 780, 875, 910, 410, 750, 410, 750, 875, 910, 700, 780"
+    },
+    {
+      "check": "both documents remain within independent QA evidence window",
+      "passed": true,
+      "detail": "7101 bytes"
+    },
+    {
+      "check": "immutable candidate and QA evidence copied byte-identically",
+      "passed": true,
+      "detail": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/candidate-evidence/analytics-e7d9a024-584e-4361-83e9-c2b5bbecfa87.json"
+    }
+  ],
+  "passed": false
+}

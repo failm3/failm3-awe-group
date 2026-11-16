@@ -1,0 +1,25 @@
+{
+  "source": "edge probe",
+  "period": "probe",
+  "row_count": 3,
+  "scheduled": 35,
+  "completed": 3,
+  "incidents": 1,
+  "completion_percent": 8.57,
+  "sites": {
+    "Alpha": {
+      "rows": 2,
+      "scheduled": 35,
+      "completed": 3,
+      "incidents": 1,
+      "completion_percent": 8.57
+    },
+    "Beta": {
+      "rows": 1,
+      "scheduled": 0,
+      "completed": 0,
+      "incidents": 0,
+      "completion_percent": 0.00
+    }
+  }
+}

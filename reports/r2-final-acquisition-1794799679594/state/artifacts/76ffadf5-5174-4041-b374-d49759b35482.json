@@ -1,0 +1,14 @@
+{
+  "id": "76ffadf5-5174-4041-b374-d49759b35482",
+  "mission_id": "r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24",
+  "type": "data",
+  "name": "probe_digest.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/probe_digest.json",
+  "content": "{\n  \"capability\": \"observation-digest-v1\",\n  \"source\": \"Lumen Harbor field pilot\",\n  \"period\": \"2026-W45\",\n  \"row_count\": 3,\n  \"scheduled\": 30,\n  \"completed\": 26,\n  \"incidents\": 6,\n  \"completion_percent\": \"86.67\",\n  \"completion_percent_value\": 86.67,\n  \"site_count\": 2,\n  \"sites\": {\n    \"North\": {\n      \"rows\": 2,\n      \"scheduled\": 22,\n      \"completed\": 18,\n      \"incidents\": 5,\n      \"completion_percent\": \"81.82\",\n      \"completion_ratio\": \"0.82\"\n    },\n    \"South\": {\n      \"rows\": 1,\n      \"scheduled\": 8,\n      \"completed\": 8,\n      \"incidents\": 1,\n      \"completion_percent\": \"100.00\",\n      \"completion_ratio\": \"1.00\"\n    }\n  },\n  \"totals_reconciliation\": {\n    \"sites_scheduled_sum\": 30,\n    \"sites_completed_sum\": 26,\n    \"sites_incidents_sum\": 6,\n    \"matches_global\": true\n  },\n  \"method\": {\n    \"completion_percent\": \"completed / scheduled * 100, rounded half-up to 2 decimal places (integer arithmetic), rendered as a fixed 2-decimal string\",\n    \"row_count\": \"number of elements in observations[]\",\n    \"site_totals\": \"sum of scheduled/completed/incidents grouped by site over all rows; rows = number of contributing rows\",\n    \"sites_key_order\": \"alphabetical by site name\",\n    \"validation\": \"integer, non-negative, completed <= scheduled, non-empty observations, site totals reconcile with global totals\"\n  },\n  \"inputs\": {\n    \"fixture_path\": \"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/input/pilot.observations.json\",\n    \"fixture_sha256\": \"412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766\",\n    \"fixture_bytes\": 474\n  }\n}\n",
+  "created_at": "2026-11-16T03:28:58.511Z",
+  "metadata": {
+    "size_bytes": 1696,
+    "sha256": "7a66c2d82b4f2e221a9bc0d7ac1a0b6a176a8393b31aac05440f562f9ca2e4e4",
+    "revision": 1
+  }
+}

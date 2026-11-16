@@ -1,0 +1,295 @@
+{
+  "verdict": "FAIL",
+  "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+  "computed": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": "81.82"
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": "100.00"
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "field": "row_count",
+      "expected": "3",
+      "actual": "3",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "scheduled",
+      "expected": "30",
+      "actual": "30",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "completed",
+      "expected": "26",
+      "actual": "26",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "incidents",
+      "expected": "6",
+      "actual": "6",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "completion_percent (value)",
+      "expected": "86.67",
+      "actual": "86.67",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "completion_percent (serialized 2 decimals)",
+      "expected": "86.67",
+      "actual": "86.67",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "top-level keys",
+      "expected": "row_count,scheduled,completed,incidents,completion_percent,sites",
+      "actual": "row_count,scheduled,completed,incidents,completion_percent,sites",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites keys (site names)",
+      "expected": "North,South",
+      "actual": "North,South",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.North.rows",
+      "expected": "2",
+      "actual": "2",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.North.scheduled",
+      "expected": "22",
+      "actual": "22",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.North.completed",
+      "expected": "18",
+      "actual": "18",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.North.incidents",
+      "expected": "5",
+      "actual": "5",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.North.completion_percent (value)",
+      "expected": "81.82",
+      "actual": "81.82",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.North.completion_percent (serialized 2 decimals)",
+      "expected": "81.82",
+      "actual": "81.82",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.South.rows",
+      "expected": "1",
+      "actual": "1",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.South.scheduled",
+      "expected": "8",
+      "actual": "8",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.South.completed",
+      "expected": "8",
+      "actual": "8",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.South.incidents",
+      "expected": "1",
+      "actual": "1",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.South.completion_percent (value)",
+      "expected": "100.00",
+      "actual": "100",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "sites.South.completion_percent (serialized 2 decimals)",
+      "expected": "100.00",
+      "actual": "100",
+      "result": "FAIL",
+      "note": "literal in digest.json is `100`; spec requires 2 decimals"
+    },
+    {
+      "field": "digest.md row_count",
+      "expected": "3",
+      "actual": "3",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md scheduled",
+      "expected": "30",
+      "actual": "30",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md completed",
+      "expected": "26",
+      "actual": "26",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md incidents",
+      "expected": "6",
+      "actual": "6",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md completion_percent",
+      "expected": "86.67",
+      "actual": "86.67",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md site row North",
+      "expected": "2|22|18|5|81.82",
+      "actual": "2|22|18|5|81.82",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md site row South",
+      "expected": "1|8|8|1|100.00",
+      "actual": "1|8|8|1|100.00",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md Input SHA-256",
+      "expected": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "actual": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md Source",
+      "expected": "Lumen Harbor field pilot",
+      "actual": "Lumen Harbor field pilot",
+      "result": "PASS",
+      "note": ""
+    },
+    {
+      "field": "digest.md Period",
+      "expected": "2026-W45",
+      "actual": "2026-W45",
+      "result": "PASS",
+      "note": ""
+    }
+  ],
+  "reconciliation": [
+    {
+      "check": "scheduled",
+      "site_sum": 30,
+      "global_value": 30,
+      "ok": true
+    },
+    {
+      "check": "completed",
+      "site_sum": 26,
+      "global_value": 26,
+      "ok": true
+    },
+    {
+      "check": "incidents",
+      "site_sum": 6,
+      "global_value": 6,
+      "ok": true
+    },
+    {
+      "check": "rows vs row_count",
+      "site_sum": 3,
+      "global_value": 3,
+      "ok": true
+    }
+  ],
+  "method_checks": [
+    {
+      "check": "method section present",
+      "ok": true
+    },
+    {
+      "check": "row counting rule stated",
+      "ok": true
+    },
+    {
+      "check": "summing rule (global and per site) stated",
+      "ok": true
+    },
+    {
+      "check": "percent formula stated",
+      "ok": true
+    },
+    {
+      "check": "rounding rule stated (half-up, 2 decimals)",
+      "ok": true
+    },
+    {
+      "check": "fixture identified by sha256",
+      "ok": true
+    }
+  ],
+  "digest_sha256": {
+    "json": "b6f19e586465d349d74bb1999e5788fb72d502d46dcba8b320ad84f3d0cdab46",
+    "md": "291f2efbd827b5c1f5a5334025e1162eafd1829cd350ddc1d9c67c8b71a4edd1"
+  }
+}

@@ -1,0 +1,214 @@
+TAP version 13
+# Subtest: R0 storage-roundtrip: storage preserves successful artifact bytes and unrelated mission data
+ok 1 - R0 storage-roundtrip: storage preserves successful artifact bytes and unrelated mission data
+  ---
+  duration_ms: 540.960586
+  type: 'test'
+  ...
+# Subtest: R0 cancelled-artifact: cancelled mission rejects late artifact and creates no file or metadata
+ok 2 - R0 cancelled-artifact: cancelled mission rejects late artifact and creates no file or metadata
+  ---
+  duration_ms: 518.221178
+  type: 'test'
+  ...
+# Subtest: R0 cancelled-update: cancelled mission cannot be resurrected to completed by late update
+ok 3 - R0 cancelled-update: cancelled mission cannot be resurrected to completed by late update
+  ---
+  duration_ms: 518.678217
+  type: 'test'
+  ...
+# Subtest: R0 cancelled-running: cancelled mission cannot be resurrected to running by late update
+ok 4 - R0 cancelled-running: cancelled mission cannot be resurrected to running by late update
+  ---
+  duration_ms: 517.17119
+  type: 'test'
+  ...
+# Subtest: R0 cross-process: concurrent processes preserve disjoint mission patches without write collisions
+ok 5 - R0 cross-process: concurrent processes preserve disjoint mission patches without write collisions
+  ---
+  duration_ms: 3929.28097
+  type: 'test'
+  ...
+# Subtest: R0 parallel-missions: concurrent independent missions do not overwrite each other
+ok 6 - R0 parallel-missions: concurrent independent missions do not overwrite each other
+  ---
+  duration_ms: 2316.43709
+  type: 'test'
+  ...
+# Subtest: R0 empty-tools: empty specialist tool request grants no ambient shell or allTools
+ok 7 - R0 empty-tools: empty specialist tool request grants no ambient shell or allTools
+  ---
+  duration_ms: 3410.95073
+  type: 'test'
+  ...
+# Subtest: R0 unknown-tools: unknown specialist tool request grants no ambient shell or allTools
+ok 8 - R0 unknown-tools: unknown specialist tool request grants no ambient shell or allTools
+  ---
+  duration_ms: 2917.258746
+  type: 'test'
+  ...
+# Subtest: R0 mixed-tools: mixed known/unknown request grants only the requested known tool
+ok 9 - R0 mixed-tools: mixed known/unknown request grants only the requested known tool
+  ---
+  duration_ms: 2192.740386
+  type: 'test'
+  ...
+# Subtest: R0 allowed-tools: allowedTools intersects requested tools and denies requested shell
+ok 10 - R0 allowed-tools: allowedTools intersects requested tools and denies requested shell
+  ---
+  duration_ms: 2196.409801
+  type: 'test'
+  ...
+# Subtest: R0 empty-allowlist: explicit empty allowedTools denies every requested tool
+ok 11 - R0 empty-allowlist: explicit empty allowedTools denies every requested tool
+  ---
+  duration_ms: 2018.303114
+  type: 'test'
+  ...
+# Subtest: R0 shell-success: shell returns actual stdout, stderr and exit code
+ok 12 - R0 shell-success: shell returns actual stdout, stderr and exit code
+  ---
+  duration_ms: 1181.675554
+  type: 'test'
+  ...
+# Subtest: R0 shell-failure: shell nonzero exit is not success
+ok 13 - R0 shell-failure: shell nonzero exit is not success
+  ---
+  duration_ms: 1245.87903
+  type: 'test'
+  ...
+# Subtest: R0 shell-cwd: shell denies outside cwd before any side effect
+ok 14 - R0 shell-cwd: shell denies outside cwd before any side effect
+  ---
+  duration_ms: 1086.084449
+  type: 'test'
+  ...
+# Subtest: R0 shell-abort: AbortSignal stops running shell process tree before late marker
+ok 15 - R0 shell-abort: AbortSignal stops running shell process tree before late marker
+  ---
+  duration_ms: 2421.555148
+  type: 'test'
+  ...
+# Subtest: R0 shell-preabort: pre-aborted shell performs no side effect
+ok 16 - R0 shell-preabort: pre-aborted shell performs no side effect
+  ---
+  duration_ms: 886.058634
+  type: 'test'
+  ...
+# Subtest: R0 recursion-depth: recursion depth refusal creates zero children and explicit issue
+ok 17 - R0 recursion-depth: recursion depth refusal creates zero children and explicit issue
+  ---
+  duration_ms: 420.633293
+  type: 'test'
+  ...
+# Subtest: R0 recursion-budget: recursion exhausted budget creates zero children and explicit issue
+ok 18 - R0 recursion-budget: recursion exhausted budget creates zero children and explicit issue
+  ---
+  duration_ms: 418.139085
+  type: 'test'
+  ...
+# Subtest: R0 recursion-isolation: independent mission delegation sessions remain isolated
+ok 19 - R0 recursion-isolation: independent mission delegation sessions remain isolated
+  ---
+  duration_ms: 433.331656
+  type: 'test'
+  ...
+# Subtest: R0 timeout-success: timeout wrapper propagates the exact successful result
+ok 20 - R0 timeout-success: timeout wrapper propagates the exact successful result
+  ---
+  duration_ms: 419.954437
+  type: 'test'
+  ...
+# Subtest: R0 timeout-failure: timeout wrapper preserves underlying failure without timeout callback
+ok 21 - R0 timeout-failure: timeout wrapper preserves underlying failure without timeout callback
+  ---
+  duration_ms: 423.314917
+  type: 'test'
+  ...
+# Subtest: R0 timeout-expiry: timeout has explicit error identity and invokes checkpoint callback once
+ok 22 - R0 timeout-expiry: timeout has explicit error identity and invokes checkpoint callback once
+  ---
+  duration_ms: 2456.261908
+  type: 'test'
+  ...
+# Subtest: R0 reconcile-exclusion: orphan reconciliation preserves explicitly active missions
+ok 23 - R0 reconcile-exclusion: orphan reconciliation preserves explicitly active missions
+  ---
+  duration_ms: 606.80977
+  type: 'test'
+  ...
+# Subtest: R0 crash-recovery: SIGKILL preserves durable success checkpoint and artifact through orphan recovery
+ok 24 - R0 crash-recovery: SIGKILL preserves durable success checkpoint and artifact through orphan recovery
+  ---
+  duration_ms: 1041.021799
+  type: 'test'
+  ...
+# Subtest: R0 qa-empty-criterion: blank QA criterion cannot certify a real acceptance criterion
+ok 25 - R0 qa-empty-criterion: blank QA criterion cannot certify a real acceptance criterion
+  ---
+  duration_ms: 616.609815
+  type: 'test'
+  ...
+# Subtest: R0 qa-unique-criteria: one QA result cannot certify multiple mission criteria
+ok 26 - R0 qa-unique-criteria: one QA result cannot certify multiple mission criteria
+  ---
+  duration_ms: 624.177709
+  type: 'test'
+  ...
+# Subtest: R0 provider: offline provider outcome evaluator preserves failures and actual new artifact IDs
+ok 27 - R0 provider: offline provider outcome evaluator preserves failures and actual new artifact IDs
+  ---
+  duration_ms: 2322.560842
+  type: 'test'
+  ...
+# Subtest: R0 children: pure children plan resolver executes distinct tasks without cloning
+ok 28 - R0 children: pure children plan resolver executes distinct tasks without cloning
+  ---
+  duration_ms: 515.065565
+  type: 'test'
+  ...
+# Subtest: R0 lease: cross-process acquire/release lease and live-owner reconciliation API
+ok 29 - R0 lease: cross-process acquire/release lease and live-owner reconciliation API
+  ---
+  duration_ms: 1141.812489
+  type: 'test'
+  ...
+# Subtest: R0 manager: offline manager success, false-success refusal, approved grants and model cancellation
+ok 30 - R0 manager: offline manager success, false-success refusal, approved grants and model cancellation
+  ---
+  duration_ms: 806.859119
+  type: 'test'
+  ...
+# Subtest: R0 manager-tool-cancel: manager cancellation aborts a real shell tool and prevents late side effects
+ok 31 - R0 manager-tool-cancel: manager cancellation aborts a real shell tool and prevents late side effects
+  ---
+  duration_ms: 2639.202856
+  type: 'test'
+  ...
+# Subtest: R0 manager-double-run: second manager cannot run alongside a live owner in another process
+ok 32 - R0 manager-double-run: second manager cannot run alongside a live owner in another process
+  ---
+  duration_ms: 2088.124983
+  type: 'test'
+  ...
+# Subtest: R0 manager-crash-resume: SIGKILL after a durable effect resumes without repeating that effect
+ok 33 - R0 manager-crash-resume: SIGKILL after a durable effect resumes without repeating that effect
+  ---
+  duration_ms: 1186.223892
+  type: 'test'
+  ...
+# Subtest: R0 resume: side-effect-free resume policy import matches task identity
+ok 34 - R0 resume: side-effect-free resume policy import matches task identity
+  ---
+  duration_ms: 474.745638
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 46545.287467

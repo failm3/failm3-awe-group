@@ -1,0 +1,21 @@
+{
+  "schema": "awe.research-publication-status.v1",
+  "date": "2026-11-17",
+  "target_repository": "https://github.com/failm3/awe-group",
+  "published": false,
+  "target_public_api_http_status": 404,
+  "authentication": {
+    "gh_cli": false,
+    "git_credential_helper": false,
+    "github_token_environment": false
+  },
+  "remote_readback_performed": false,
+  "expected_urls_after_publication": [
+    "https://github.com/failm3/awe-group",
+    "https://github.com/failm3/awe-group/blob/main/PROJECT-INDEX.md",
+    "https://github.com/failm3/awe-group/blob/main/AWE-RESEARCH-REPOSITORY-ASSEMBLY-REPORT.md",
+    "https://github.com/failm3/awe-group/blob/main/RELEASE-MANIFEST.sha256"
+  ],
+  "owner_action": "Create public failm3/awe-group and configure an authorized Git/GitHub mechanism in the environment; do not send tokens in chat.",
+  "note": "Expected URLs are not claimed as published or verified. Private repository visibility was not changed."
+}

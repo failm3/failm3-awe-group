@@ -1,0 +1,354 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-16T04:02:00.656Z",
+  "finished_at": "2026-11-16T04:06:12.343Z",
+  "suites": [
+    {
+      "suite": "src/tests/artifact-identity.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 771
+    },
+    {
+      "suite": "src/tests/artifact-reconciliation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 461
+    },
+    {
+      "suite": "src/tests/candidate-binding.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 469
+    },
+    {
+      "suite": "src/tests/capability-loop.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1737
+    },
+    {
+      "suite": "src/tests/lifecycle-recovery.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 8792
+    },
+    {
+      "suite": "src/tests/qa-gate.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 285
+    },
+    {
+      "suite": "src/tests/r0-closure-adapters.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 7814
+    },
+    {
+      "suite": "src/tests/r0-closure-core.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2265
+    },
+    {
+      "suite": "src/tests/r0-closure-interfaces.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 29702
+    },
+    {
+      "suite": "src/tests/r0-closure-process-lifecycle.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 31944
+    },
+    {
+      "suite": "src/tests/r0-final-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 8701
+    },
+    {
+      "suite": "src/tests/r0-final-production-intent.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2344
+    },
+    {
+      "suite": "src/tests/r0-final-recursion.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 4286
+    },
+    {
+      "suite": "src/tests/r0-final-tools.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 969
+    },
+    {
+      "suite": "src/tests/r0-independent-contracts.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 50582
+    },
+    {
+      "suite": "src/tests/r0-qa-evidence.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2771
+    },
+    {
+      "suite": "src/tests/r0-reqa-adapters.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 4932
+    },
+    {
+      "suite": "src/tests/r0-reqa-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 10230
+    },
+    {
+      "suite": "src/tests/r0-runtime-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 6140
+    },
+    {
+      "suite": "src/tests/r0-runtime-recursion.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 734
+    },
+    {
+      "suite": "src/tests/r0-runtime-storage-lease.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 7373
+    },
+    {
+      "suite": "src/tests/r0-security-tools.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 988
+    },
+    {
+      "suite": "src/tests/r0-test-harness.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 251
+    },
+    {
+      "suite": "src/tests/r1-analytics-mission.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3118
+    },
+    {
+      "suite": "src/tests/r1-csv-analytics.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 349
+    },
+    {
+      "suite": "src/tests/r1-csv-tool.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 601
+    },
+    {
+      "suite": "src/tests/r1-csv-verifier.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 325
+    },
+    {
+      "suite": "src/tests/r1-host-policy.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 336
+    },
+    {
+      "suite": "src/tests/r1-mission-admission.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3567
+    },
+    {
+      "suite": "src/tests/r1-model-ledger.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2997
+    },
+    {
+      "suite": "src/tests/r1-p1-ledger-evaluation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 341
+    },
+    {
+      "suite": "src/tests/r1-p1-lesson-comparison.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3133
+    },
+    {
+      "suite": "src/tests/r1-p1-model-routing.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 302
+    },
+    {
+      "suite": "src/tests/r1-parallel-artifacts.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1688
+    },
+    {
+      "suite": "src/tests/r1-qualification.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2157
+    },
+    {
+      "suite": "src/tests/r1-resource-limits.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2851
+    },
+    {
+      "suite": "src/tests/r1-shell-isolation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2391
+    },
+    {
+      "suite": "src/tests/r1-spec-binding.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3139
+    },
+    {
+      "suite": "src/tests/r1-web-product.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 18778
+    },
+    {
+      "suite": "src/tests/r1-web-qa.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3898
+    },
+    {
+      "suite": "src/tests/r1-workspace-fs.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 374
+    },
+    {
+      "suite": "src/tests/r2-concurrent-missions.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 641
+    },
+    {
+      "suite": "src/tests/r2-final-transfer-fixtures.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2976
+    },
+    {
+      "suite": "src/tests/r2-qualified-acquisition.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2709
+    },
+    {
+      "suite": "src/tests/r2-qualified-local-capability.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2995
+    },
+    {
+      "suite": "src/tests/r2-verified-experience.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2616
+    },
+    {
+      "suite": "src/tests/resume-policy.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2070
+    },
+    {
+      "suite": "src/tests/stage1-integration.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 800
+    },
+    {
+      "suite": "src/tests/ucl-bridge.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1994
+    }
+  ],
+  "passed": 49,
+  "failed": 0
+}

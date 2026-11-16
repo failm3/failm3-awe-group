@@ -1,0 +1,14 @@
+{
+  "id": "44b939a0-85f2-4916-ab65-97a0b47f4bc3",
+  "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "type": "json",
+  "name": "probe/neg/bad1.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad1.json",
+  "created_at": "2026-11-16T11:39:40.699Z",
+  "metadata": {
+    "size_bytes": 75,
+    "sha256": "98e89957bf48445d8cb299078fa17295a2f2babba853f4bb18ab69ed7068e6e1",
+    "reconciled": true,
+    "revision": 1
+  }
+}

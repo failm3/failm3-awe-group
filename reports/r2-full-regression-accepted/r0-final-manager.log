@@ -1,0 +1,106 @@
+
+D3.1 — original evidence: only path + sha256 + size + matching bytes completes
+  ✓ control: complete saveArtifactFile evidence completes
+  ✓ inline-only record (no path, no metadata) fails closed into original-delegation recovery
+  ✓ inline-only retained failure names the recovery path
+  ✓ inline content with self-consistent metadata but no backing file is not trusted
+  ✓ path-backed record with metadata {} fails into original-delegation recovery
+  ✓ sha256 without size_bytes fails into original-delegation recovery
+  ✓ size_bytes without sha256 fails into original-delegation recovery
+  ✓ malformed sha256 fails into original-delegation recovery
+  ✓ same-size byte replacement is caught by the hash
+  ✓ size change is caught
+  ✓ inline content that differs from the verified file fails into original-delegation recovery
+  ✓ replacement by a same-bytes symlink fails closed; its refused repair write has no effect
+  ✓ a new ID in prose cannot pass
+
+D3.2 — repair evidence uses the same complete predicate
+  ✓ control: complete repair evidence completes after QA re-review
+  ✓ repair artifact with metadata {} fails with no verified new artifact
+  ✓ repair metadata-less blocker is explicit and critical
+  ✓ repair artifact with only sha256 fails
+  ✓ repair artifact with only size_bytes fails
+  ✓ inline-only repair evidence fails closed
+  ✓ same-size replacement of repair evidence after repair is caught before completion
+  ✓ a new repair ID in prose cannot pass
+
+D3.3 — resumed (checkpointed) evidence is re-verified before completion
+  ✓ control: intact checkpointed evidence completes without re-running
+  ✓ same-size tamper between crash and resume fails (hash)
+  ✓ legacy inline-only record in a checkpoint fails closed
+  ✓ checkpointed path-backed record with stripped metadata fails closed
+  ✓ checkpointed record with sha256 only fails
+  ✓ checkpointed record with size_bytes only fails
+  ✓ checkpoint naming an unregistered artifact id cannot pass
+
+D3.4 — reconciled (unregistered file) evidence is verified too
+  ✓ control: reconciled file is registered with sha256+size and completes
+  ✓ same-size replacement of a reconciled file fails
+  ✓ reconciled record stripped of integrity metadata fails
+  ✓ reconciled record downgraded to inline-only fails
+
+D8.1 — SIGKILL in the effect -> success-checkpoint gap blocks re-execution and completion
+  ✓ owner died by SIGKILL inside the gap
+  ✓ exactly one receipt was appended before the crash
+  ✓ a real artifact was saved before the crash
+  ✓ no success checkpoint exists for the delegation
+  ✓ durable intent was written before execution
+  ✓ orphan reconciliation pauses the dead owner's mission
+  ✓ fresh manager did NOT report completed
+  ✓ fresh receipt sink stayed empty (delegation not executed again)
+  ✓ original receipt count remains exactly one
+  ✓ QA never ran on an unresolved mission
+  ✓ durable ambiguous / recovery-blocked state is surfaced
+  ✓ blocked entry explains the evidence
+  ✓ ambiguity is persisted in the checkpoint
+  ✓ lease released while blocked
+  ✓ a second fresh restart is still blocked and still executes nothing
+  ✓ in-process fresh manager also executes nothing and does not complete
+  ✓ resolution without operator/note is refused
+  ✓ accept without artifact evidence is refused
+  ✓ accept naming an invented artifact id is refused
+  ✓ unknown intent id is refused
+  ✓ refused resolutions leave the mission blocked
+  ✓ explicit accept resolves the last ambiguity
+  ✓ resolution is audited in the mission record
+  ✓ after explicit accept the mission completes without any new execution
+  ✓ completed mission has verified artifacts and no checkpoint
+
+D8.2 — explicit retry is the only way to repeat the effect
+  ✓ setup: crash in gap
+  ✓ blocked before resolution
+  ✓ after explicit retry the delegation runs again exactly once
+
+D8.3 — explicit evidence policy permits only the controlled pre-effect retry
+  ✓ setup: killed before any effect
+  ✓ intent was already durable
+  ✓ explicit evidence policy executes the known pre-effect delegation and completes
+
+D8.4 — cooperative beginEffect marker covers effects that leave no artifact
+  ✓ setup: receipt written, no artifact, SIGKILL
+  ✓ marked effect blocks re-execution
+
+D8.5 — default strict policy blocks unmarked external effects with no local footprint
+  ✓ setup: unmarked receipt with no artifact, SIGKILL
+  ✓ default resume is blocked and executes nothing
+
+D8.5b — default strict policy never equates missing evidence with pre-effect safety
+  ✓ setup: no receipt, artifact or marker
+  ✓ default resume blocks instead of blindly retrying
+
+D8.6 — parallel batch: A's durable success is kept, only B is ambiguous
+  ✓ setup: both effects once, B died in the gap
+  ✓ A has a durable success checkpoint, B does not
+  ✓ resume is blocked, A is not repeated and B is not re-executed
+  ✓ only B is reported ambiguous
+  ✓ after resolving B the mission completes with zero new executions
+
+D8.7 — repair gap: SIGKILL after a repair effect blocks a second repair
+  ✓ setup: original and repair effects once each, repair died in the gap
+  ✓ repair intent is durable
+  ✓ resume is blocked, nothing executes, not completed
+  ✓ accepted repair is recorded as performed
+  ✓ resume re-reviews and completes without repeating any effect
+
+────────────────────────────────────────────────────────────
+r0-final-manager: passed 79, failed 0

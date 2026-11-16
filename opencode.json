@@ -1,0 +1,287 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "routercheap/claude-opus-5-5",
+  "providers": {
+    "routercheap": {
+      "name": "Router.Cheap",
+      "env": [
+        "ROUTER_CHEAP_API_KEY"
+      ],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://router.cheap/v1"
+      },
+      "models": {
+        "claude-opus-5-5": {
+          "name": "Claude Opus 5.5"
+        },
+        "claude-sonnet-5-5": {
+          "name": "Claude Sonnet 5.5"
+        },
+        "claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5"
+        },
+        "gpt-6.1-sol": {
+          "name": "GPT-6.1 Sol"
+        },
+        "deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash"
+        },
+        "gpt-6-astra": {
+          "name": "GPT-6 Astra",
+          "modelID": "gpt-6-astra"
+        },
+        "kimi-k3.1-pro": {
+          "name": "Kimi K3.1 Pro",
+          "modelID": "kimi-k3.1-pro"
+        },
+        "grok-4.6": {
+          "name": "grok-4.6",
+          "modelID": "grok-4.6",
+          "type": "chat"
+        },
+        "gpt-6-sol": {
+          "name": "gpt-6-sol",
+          "modelID": "gpt-6-sol",
+          "type": "chat"
+        },
+        "qwen3.8-27b": {
+          "name": "qwen3.8-27b",
+          "modelID": "qwen3.8-27b",
+          "type": "chat"
+        },
+        "claude-opus-4-8": {
+          "name": "claude-opus-4-8",
+          "modelID": "claude-opus-4-8",
+          "type": "chat"
+        },
+        "deepseek-v4-pro-0813": {
+          "name": "deepseek-v4-pro-0813",
+          "modelID": "deepseek-v4-pro-0813",
+          "type": "chat"
+        },
+        "gpt-6.1-terra": {
+          "name": "gpt-6.1-terra",
+          "modelID": "gpt-6.1-terra",
+          "type": "chat"
+        },
+        "gemini-3.8-flash": {
+          "name": "gemini-3.8-flash",
+          "modelID": "gemini-3.8-flash",
+          "type": "chat"
+        },
+        "claude-fable-5": {
+          "name": "claude-fable-5",
+          "modelID": "claude-fable-5",
+          "type": "chat"
+        },
+        "qwen3.8-flash": {
+          "name": "qwen3.8-flash",
+          "modelID": "qwen3.8-flash",
+          "type": "chat"
+        },
+        "gemini-4-argon": {
+          "name": "gemini-4-argon",
+          "modelID": "gemini-4-argon",
+          "type": "chat"
+        },
+        "deepseek-v4-flash-0731": {
+          "name": "deepseek-v4-flash-0731",
+          "modelID": "deepseek-v4-flash-0731",
+          "type": "chat"
+        },
+        "kimi-k2.7-code": {
+          "name": "kimi-k2.7-code",
+          "modelID": "kimi-k2.7-code",
+          "type": "chat"
+        },
+        "glm-5.3": {
+          "name": "glm-5.3",
+          "modelID": "glm-5.3",
+          "type": "chat"
+        },
+        "deepseek-v4.1-flash": {
+          "name": "deepseek-v4.1-flash",
+          "modelID": "deepseek-v4.1-flash",
+          "type": "chat"
+        },
+        "mimo-v2.6-pro": {
+          "name": "mimo-v2.6-pro",
+          "modelID": "mimo-v2.6-pro",
+          "type": "chat"
+        },
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6",
+          "modelID": "claude-opus-4-6",
+          "type": "chat"
+        },
+        "grok-4.5": {
+          "name": "grok-4.5",
+          "modelID": "grok-4.5",
+          "type": "chat"
+        },
+        "minimax-h3-768p": {
+          "name": "minimax-h3-768p",
+          "modelID": "minimax-h3-768p",
+          "type": "chat"
+        },
+        "gpt-5.6-terra": {
+          "name": "gpt-5.6-terra",
+          "modelID": "gpt-5.6-terra",
+          "type": "chat"
+        },
+        "gpt-5.6-luna": {
+          "name": "gpt-5.6-luna",
+          "modelID": "gpt-5.6-luna",
+          "type": "chat"
+        },
+        "gemini-omni-fast": {
+          "name": "gemini-omni-fast",
+          "modelID": "gemini-omni-fast",
+          "type": "chat"
+        },
+        "claude-sonnet-5": {
+          "name": "claude-sonnet-5",
+          "modelID": "claude-sonnet-5",
+          "type": "chat"
+        },
+        "gemini-4-carbon": {
+          "name": "gemini-4-carbon",
+          "modelID": "gemini-4-carbon",
+          "type": "chat"
+        },
+        "claude-opus-5": {
+          "name": "claude-opus-5",
+          "modelID": "claude-opus-5",
+          "type": "chat"
+        },
+        "kimi-k3": {
+          "name": "kimi-k3",
+          "modelID": "kimi-k3",
+          "type": "chat"
+        },
+        "minimax-m3.1-flash-preview": {
+          "name": "minimax-m3.1-flash-preview",
+          "modelID": "minimax-m3.1-flash-preview",
+          "type": "chat"
+        },
+        "glm-5.3-flash": {
+          "name": "glm-5.3-flash",
+          "modelID": "glm-5.3-flash",
+          "type": "chat"
+        },
+        "kimi-k2.7-code-highspeed": {
+          "name": "kimi-k2.7-code-highspeed",
+          "modelID": "kimi-k2.7-code-highspeed",
+          "type": "chat"
+        },
+        "gpt-6-luna": {
+          "name": "gpt-6-luna",
+          "modelID": "gpt-6-luna",
+          "type": "chat"
+        },
+        "qwen3.8-max": {
+          "name": "qwen3.8-max",
+          "modelID": "qwen3.8-max",
+          "type": "chat"
+        },
+        "minimax-m3.1-flash": {
+          "name": "minimax-m3.1-flash",
+          "modelID": "minimax-m3.1-flash",
+          "type": "chat"
+        },
+        "deepseek-v4.1-flash-1017": {
+          "name": "deepseek-v4.1-flash-1017",
+          "modelID": "deepseek-v4.1-flash-1017",
+          "type": "chat"
+        },
+        "claude-fable-5-2": {
+          "name": "claude-fable-5-2",
+          "modelID": "claude-fable-5-2",
+          "type": "chat"
+        },
+        "glm-5.2": {
+          "name": "glm-5.2",
+          "modelID": "glm-5.2",
+          "type": "chat"
+        },
+        "claude-fable-5-1": {
+          "name": "claude-fable-5-1",
+          "modelID": "claude-fable-5-1",
+          "type": "chat"
+        },
+        "claude-sonnet-4-6": {
+          "name": "claude-sonnet-4-6",
+          "modelID": "claude-sonnet-4-6",
+          "type": "chat"
+        },
+        "claude-opus-4-7": {
+          "name": "claude-opus-4-7",
+          "modelID": "claude-opus-4-7",
+          "type": "chat"
+        },
+        "claude-haiku-5-5": {
+          "name": "claude-haiku-5-5",
+          "modelID": "claude-haiku-5-5",
+          "type": "chat"
+        },
+        "deepseek-v4-pro": {
+          "name": "deepseek-v4-pro",
+          "modelID": "deepseek-v4-pro",
+          "type": "chat"
+        },
+        "gpt-5.5": {
+          "name": "gpt-5.5",
+          "modelID": "gpt-5.5",
+          "type": "chat"
+        },
+        "deepseek-v4-flash-vision-exp": {
+          "name": "deepseek-v4-flash-vision-exp",
+          "modelID": "deepseek-v4-flash-vision-exp",
+          "type": "chat"
+        },
+        "grok-4.7": {
+          "name": "grok-4.7",
+          "modelID": "grok-4.7",
+          "type": "chat"
+        },
+        "gpt-5.6-sol": {
+          "name": "gpt-5.6-sol",
+          "modelID": "gpt-5.6-sol",
+          "type": "chat"
+        }
+      }
+    }
+  },
+  "experimental": {
+    "subagent_depth": 3,
+    "background_compaction": true
+  },
+  "permissions": [
+    {
+      "action": "subagent",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "read",
+      "resource": "*.env",
+      "effect": "ask"
+    },
+    {
+      "action": "read",
+      "resource": "*.env.*",
+      "effect": "ask"
+    }
+  ]
+}

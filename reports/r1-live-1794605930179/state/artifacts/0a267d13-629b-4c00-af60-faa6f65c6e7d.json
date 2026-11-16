@@ -1,0 +1,13 @@
+{
+  "id": "0a267d13-629b-4c00-af60-faa6f65c6e7d",
+  "mission_id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+  "type": "text",
+  "name": "transactions.csv",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv",
+  "created_at": "2026-11-13T21:39:25.281Z",
+  "metadata": {
+    "size_bytes": 196,
+    "sha256": "dc8688503d27d1b45303147b8e2fe2cf8ef98f2e1d807e38112a1cfe8e9bd645",
+    "reconciled": true
+  }
+}

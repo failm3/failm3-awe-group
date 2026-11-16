@@ -1,0 +1,137 @@
+{
+  "schema": "r2-final-acquisition-live-v1",
+  "id": "r2-acquisition-76ac1c93-aa28-4eea-b5a0-6a50c01cb52d",
+  "runRoot": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810408369",
+  "status": "failed",
+  "failure": null,
+  "approved_spec_hash": "7017b12dd292c0f074739a0cd139aedad89c7dbc73837879d0696b91ceadef3b",
+  "planning": [
+    {
+      "kind": "acquire"
+    }
+  ],
+  "attempts": [],
+  "qualification_publications": 0,
+  "acquisition_policy_calls": 0,
+  "invocation_receipts": [],
+  "artifacts": [
+    {
+      "id": "9602d750-c652-4c6b-8fd7-c9593ad2d08b",
+      "name": "input/pilot.observations.json",
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "9498c045-09c7-47fe-b085-f13764c20a16",
+      "mission_id": "r2-acquisition-76ac1c93-aa28-4eea-b5a0-6a50c01cb52d",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:26:50.967Z",
+      "finished_at": "2026-11-16T06:27:17.114Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 2961,
+        "output_tokens": 2708,
+        "total_tokens": 5669,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "0a0b3009-b91a-46a2-8bde-26f9d7867158",
+      "mission_id": "r2-acquisition-76ac1c93-aa28-4eea-b5a0-6a50c01cb52d",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:27:17.138Z",
+      "finished_at": "2026-11-16T06:27:31.135Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 3505,
+        "output_tokens": 1386,
+        "total_tokens": 4891,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "provider_cost": "UNKNOWN",
+  "checks": [
+    {
+      "check": "mission completed through independent Nox QA",
+      "passed": false,
+      "detail": "failed"
+    },
+    {
+      "check": "real Head and independent QA calls recorded",
+      "passed": true
+    },
+    {
+      "check": "unknown capability caused acquisition then replan",
+      "passed": false,
+      "detail": "[{\"kind\":\"acquire\"}]"
+    },
+    {
+      "check": "exactly one structured qualified acquisition",
+      "passed": false
+    },
+    {
+      "check": "host published and reused one qualification across replan policy checks",
+      "passed": false
+    },
+    {
+      "check": "actual invocation receipt bound to mission, attempt, executable and command",
+      "passed": false
+    },
+    {
+      "check": "specialist result attributes actual qualified invocation",
+      "passed": false
+    },
+    {
+      "check": "exact independently recomputed digest totals",
+      "passed": false
+    },
+    {
+      "check": "exact independently recomputed site totals",
+      "passed": false
+    },
+    {
+      "check": "human digest is present and consistent",
+      "passed": false
+    },
+    {
+      "check": "fixture unchanged",
+      "passed": true
+    },
+    {
+      "check": "all final artifact hashes match bytes",
+      "passed": true
+    },
+    {
+      "check": "provider monetary cost remains unknown",
+      "passed": true,
+      "detail": "UNKNOWN"
+    }
+  ],
+  "passed": false
+}

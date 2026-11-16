@@ -1,0 +1,47 @@
+{
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "saved_at": "2026-11-13T23:50:57.006Z",
+  "total_agents": 3,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989:top0",
+      "role": "coder",
+      "task": "Author and persist a zero-dependency static task tracker at product/index.html, plus product/styles.css and product/app.js, in this mission workspace (mission r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989). Then use file_list and file_read to confirm the exact tree and contents, and register each product file with save_artifact.\n\nREQUIRED STRUCTURE (exact names):\n- Exactly one heading on the page: <h1>Task tracker</h1>.\n- A <form> containing <label for=\"new-task\">New task</label> and <input id=\"new-task\" type=\"text\" autocomplete=\"off\">, plus <button type=\"submit\">Add task</button>. Using a form submit handler covers both the button click and the Enter key. Call preventDefault in the handler.\n- <label for=\"filter\">Filter tasks</label> and <select id=\"filter\"> with options whose value attributes are exactly all, active and completed. Default is all.\n- <ul aria-label=\"Tasks\"> as the task list. It renders zero <li> elements initially when storage is empty. Do not render placeholder list items.\n- Each task is an <li> containing:\n  - a <span> whose textContent is the exact task text;\n  - <input type=\"checkbox\" aria-label=\"Complete \" + text>, with checked reflecting completion;\n  - <button type=\"button\" aria-label=\"Delete \" + text>Delete</button>.\n\nBEHAVIOR:\n- Trim the input value. If the trimmed value is empty, add nothing and keep the input focused.\n- On a successful add, clear the input.\n- Render all task text only through textContent or aria-label set with setAttribute. Never use innerHTML, insertAdjacentHTML or document.write with user data. Text like <b>x</b> or & must appear literally.\n- The checkbox change event toggles completed in both directions.\n- Filtering must be exact. all shows every task, active shows completed=false, completed shows completed=true. Re-render the list by removing non-matching items from the DOM.\n- Store tasks as a JSON array of {id, text, completed} in localStorage under a single key such as \"awe-task-tracker.v1\".\n  - Generate ids with an incrementing counter or Date.now plus a counter. Do not use crypto APIs that may be unavailable.\n  - Save after every add, toggle and delete.\n  - On load, wrap JSON.parse and storage access in try/catch, and drop malformed entries without throwing.\n- Delete removes only the task with the matching id. Duplicate task texts must stay independent.\n- Text, completion and deletions must survive a page reload.\n\nACCESSIBILITY AND LAYOUT:\n- Use native, visible, keyboard-operable controls only. Do not hide labels or controls with display:none, and do not use tabindex hacks.\n- Keep visible focus outlines.\n- Use box-sizing:border-box globally and a max-width container with width:100%.\n- Let the form and list rows wrap with flex-wrap.\n- Apply overflow-wrap:anywhere and word-break:break-word on task text, so long unbroken strings cause no horizontal overflow at 375px or 1280px.\n- Do not use fixed widths larger than the viewport.\n\nNETWORK AND CSP SAFETY:\n- Load CSS and JS only as local relative files: <link rel=\"stylesheet\" href=\"styles.css\"> and <script src=\"app.js\" defer></script>.\n- Do not use inline <script> blocks, inline event-handler attributes or inline style attributes.\n- Do not add a CSP meta tag that would block your own resources.\n- The string http, https, ws or wss followed by :// must not appear anywhere in source, including comments, SVG xmlns, DOCTYPE or meta tags. Protocol-relative // URLs are also forbidden.\n- Do not use fetch, XMLHttpRequest, WebSocket, EventSource, workers, iframes, objects, embeds, web fonts, CDN links or remote images.\n- Do not reference any file that is not in product/. Omit any favicon link rather than reference a missing or URL-bearing file.\n- Use <!DOCTYPE html>, <html lang=\"en\">, <meta charset=\"utf-8\"> and <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">.\n\nJS CONSTRAINTS:\n- Plain ES2017 syntax with no import/export, so node --check passes on product/app.js. Wrap the code in an IIFE or a DOMContentLoaded handler.\n- No console.error, console.warn or thrown errors in normal operation. Guard every DOM lookup.\n\nAfter writing, use file_read to re-read every file. Check by inspection:\n- every named control above exists with its exact accessible name;\n- no URL literals or innerHTML exist;\n- every referenced file exists.\nFix any defect with file_write before registering the files with save_artifact.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-fable-5-2",
+      "tools_used": [
+        "file_write",
+        "file_list",
+        "file_read",
+        "save_artifact"
+      ],
+      "duration_ms": 194105
+    },
+    {
+      "id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989:top1",
+      "role": "executor",
+      "task": "Fix the following defects identified by QA:\n[MAJOR] No r1-static-task-tracker-v1 verifier PASS exists for the persisted tree. Keyboard, persistence, filtering, literal-rendering and viewport behavior are unverified in a real browser, and node --check was not run.\n[MINOR] index.html declares no icon link. Browsers will request /favicon.ico automatically, and if the server returns 404, the verifier may record a failed resource or console error, which would violate the acceptance contract.\n[MINOR] ",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 220647
+    },
+    {
+      "id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989:top2",
+      "role": "executor",
+      "task": "Fix the following defects identified by QA:\n[CRITICAL] The independent verifier returned FAIL on the persisted tree because the browser requested /favicon.ico, got a 404, and logged an error to the console.\n[MAJOR] The repaired tree was never re-verified. Its hash differs from the verified tree d76dffd9..., and no PASS receipt exists for it.\n[MAJOR] The repair claims product/favicon.svg (artifact 87aaa8a6) was saved, but no favicon.svg contents appear among the artifacts. The updated index.html ",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 83419
+    }
+  ]
+}

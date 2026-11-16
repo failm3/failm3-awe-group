@@ -1,0 +1,27 @@
+{
+  "passed": false,
+  "score": 0,
+  "criteria_results": [],
+  "defects": [
+    {
+      "issue": "QA output was not valid structured JSON",
+      "severity": "critical"
+    },
+    {
+      "issue": "FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    }
+  ],
+  "recommendations": [
+    "Re-run QA with a schema-valid review"
+  ],
+  "verdict": "FAIL: Execution plan contains no delegations"
+}

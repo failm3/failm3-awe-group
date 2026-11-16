@@ -1,0 +1,107 @@
+{
+  "acquisition": {
+    "acquisition_count": 1,
+    "bounded": true,
+    "capability_before": "absent",
+    "capability_required": "observation-digest-v1",
+    "network_used": false,
+    "packages_installed": false,
+    "procedure_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/procedures/observation_digest_v1.py",
+    "procedure_path_is_stable": true,
+    "procedure_path_within_mission_dir": true
+  },
+  "argv": {
+    "fixed_args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48"
+    ],
+    "fixed_args_match_spec": true,
+    "form": [
+      "python3",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/procedures/observation_digest_v1.py",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48"
+    ],
+    "output_dir_is_not_probe_dir": true
+  },
+  "competence": "observation-digest-v1",
+  "evidence_ordering": {
+    "invocation_precedes_receipt": true,
+    "procedure_invoked_epoch": 1794808948,
+    "procedure_invoked_utc": "2026-11-16T06:02:28Z",
+    "qualification_finished_epoch": 1794808928,
+    "qualification_finished_utc": "2026-11-16T06:02:08Z",
+    "qualification_precedes_invocation": true,
+    "receipt_written_epoch": 1794808961,
+    "receipt_written_utc": "2026-11-16T06:02:41Z"
+  },
+  "executable": {
+    "interpreter": "3.14.4",
+    "invoked_with_literal_argv0": "python3",
+    "mode": "0o755",
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/procedures/observation_digest_v1.py",
+    "sha256": "916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db",
+    "size_bytes": 9089
+  },
+  "input": {
+    "fixture_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json",
+    "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "fixture_size_bytes": 474
+  },
+  "invoked_at_utc": "2026-11-16T06:02:28Z",
+  "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+  "outputs": [
+    {
+      "name": "digest.json",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/digest.json",
+      "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+      "size_bytes": 480
+    },
+    {
+      "name": "digest.md",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/digest.md",
+      "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+      "size_bytes": 1596
+    }
+  ],
+  "qualification": {
+    "check_count": 154,
+    "checks_passed": 154,
+    "exit_code": 0,
+    "harness_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualify.py",
+    "harness_sha256": "c721a0104a83aa16a8b80ab46263388acbdbaf9cfaf3b92257804c31a1a33a9d",
+    "log_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualification.log",
+    "log_sha256": "1536281e94e77ebbc278f3fa3e9435a454e002b5fb321d9d155e74e23997101c",
+    "log_size_bytes": 12923,
+    "qualified": true,
+    "stderr_empty": true,
+    "stderr_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualification.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_size_bytes": 0,
+    "stderr_text": ""
+  },
+  "receipt_version": 2,
+  "result": {
+    "exit_code": 0,
+    "reported": {
+      "competence": "observation-digest-v1",
+      "completed": 26,
+      "completion_percent": "86.67",
+      "digest_json_sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+      "digest_md_sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+      "fixture": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json",
+      "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "incidents": 6,
+      "output_dir": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+      "row_count": 3,
+      "scheduled": 30
+    },
+    "stderr_bytes": 0,
+    "stdout_sha256": "771f1a0ed979ee85ddad0fdc089c5d20618c1be4c29075c83887a9157bb8fc8f"
+  },
+  "self_consistency": {
+    "procedure_reported_digest_json_sha256_matches_executable_output": true,
+    "procedure_reported_digest_md_sha256_matches_executable_output": true,
+    "procedure_reported_fixture_sha256_matches_input": true
+  }
+}

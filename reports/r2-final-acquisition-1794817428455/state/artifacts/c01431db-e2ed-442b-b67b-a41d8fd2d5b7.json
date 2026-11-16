@@ -1,0 +1,14 @@
+{
+  "id": "c01431db-e2ed-442b-b67b-a41d8fd2d5b7",
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "type": "text",
+  "name": "probe/qualification-run-1/stderr.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/probe/qualification-run-1/stderr.txt",
+  "created_at": "2026-11-16T08:27:09.546Z",
+  "metadata": {
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reconciled": true,
+    "revision": 1
+  }
+}

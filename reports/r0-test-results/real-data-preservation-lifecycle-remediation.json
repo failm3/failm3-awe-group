@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-13T09:30:58.398444+00:00",
+  "root": ".awe-data",
+  "algorithm": "SHA256(concat(relative_path_utf8 || raw_SHA256(file_bytes))) over root-relative POSIX paths sorted by pathlib.Path string order",
+  "tree_sha256": "85b9030f8bcc8b91a438b8b65fa9bf1f7647887ac631537446e8ffc4ea72ee6b",
+  "previous_tree_sha256": "85b9030f8bcc8b91a438b8b65fa9bf1f7647887ac631537446e8ffc4ea72ee6b",
+  "files": 252,
+  "missions": 23,
+  "statuses": {
+    "completed": 8,
+    "failed": 11,
+    "paused": 4
+  },
+  "checkpoints": 0,
+  "matches_previous": true
+}

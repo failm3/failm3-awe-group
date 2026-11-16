@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "95f69590-5ae5-41c5-aa6b-d724576c29f4",
+  "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+  "role": "evidence-analyst-brook-cove",
+  "model": "claude-sonnet-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T17:06:41.832Z",
+  "finished_at": "2026-11-16T17:07:11.687Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 12061,
+    "output_tokens": 3030,
+    "total_tokens": 15091,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 0
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

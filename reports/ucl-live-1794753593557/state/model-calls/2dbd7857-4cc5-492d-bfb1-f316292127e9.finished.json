@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "2dbd7857-4cc5-492d-bfb1-f316292127e9",
+  "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+  "role": "researcher",
+  "model": "deepseek-v4-flash",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-15T14:40:02.387Z",
+  "finished_at": "2026-11-15T14:40:49.614Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": "UNKNOWN",
+    "output_tokens": "UNKNOWN",
+    "total_tokens": "UNKNOWN",
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 29440
+  },
+  "usage_status": "partial",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

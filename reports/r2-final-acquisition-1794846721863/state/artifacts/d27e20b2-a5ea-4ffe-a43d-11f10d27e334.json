@@ -1,0 +1,14 @@
+{
+  "id": "d27e20b2-a5ea-4ffe-a43d-11f10d27e334",
+  "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+  "type": "file",
+  "name": "invoke-with-receipt.sh",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/invoke-with-receipt.sh",
+  "created_at": "2026-11-16T16:53:58.554Z",
+  "metadata": {
+    "size_bytes": 2335,
+    "sha256": "771860b3e067109b21ca70f1187c084666d4b63bd627d92730ba47a8c81418e3",
+    "reconciled": true,
+    "revision": 1
+  }
+}

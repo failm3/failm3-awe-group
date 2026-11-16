@@ -1,0 +1,14 @@
+{
+  "id": "efa723a2-1979-4526-99e0-1629bee68fd5",
+  "mission_id": "r2-final-transfer-1794798010397-source",
+  "type": "code",
+  "name": "src/ledger.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-source/src/ledger.cjs",
+  "content": "'use strict';\nfunction parseLedgerCsv(text) {\n  if (typeof text !== 'string') throw new Error('INVALID_FORMAT');\n  if (text === '') return [];\n  const rows = []; let row = []; let field = ''; let quoted = false; let after = false;\n  for (let i = 0; i < text.length; i++) {\n    const c = text[i];\n    if (after) {\n      if (c === ',') { row.push(field); field = ''; after = false; }\n      else if (c === '\\n' || c === '\\r') { row.push(field); rows.push(row); row = []; field = ''; after = false; if (c === '\\r' && text[i + 1] === '\\n') i++; }\n      else throw new Error('INVALID_FORMAT');\n    } else if (quoted) {\n      if (c === '\"') { if (text[i + 1] === '\"') { field += '\"'; i++; } else { quoted = false; after = true; } }\n      else field += c;\n    } else if (c === '\"' && field === '') quoted = true;\n    else if (c === '\"') throw new Error('INVALID_FORMAT');\n    else if (c === ',') { row.push(field); field = ''; }\n    else if (c === '\\n' || c === '\\r') { row.push(field); rows.push(row); row = []; field = ''; if (c === '\\r' && text[i + 1] === '\\n') i++; }\n    else field += c;\n  }\n  if (quoted) throw new Error('INVALID_FORMAT');\n  if (after || field !== '' || row.length) { row.push(field); rows.push(row); }\n  return rows;\n}\nmodule.exports = { parseLedgerCsv };\n",
+  "created_at": "2026-11-16T03:00:12.251Z",
+  "metadata": {
+    "size_bytes": 1272,
+    "sha256": "9ed9905fa6a1fc512e84012c034bcd2bff24ef60e9ec65ed790d5bf8fae91b4f",
+    "revision": 1
+  }
+}

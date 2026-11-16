@@ -1,0 +1,13 @@
+{
+  "id": "89020130-5825-421b-86d1-412616c6400b",
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "type": "file",
+  "name": "verify/verify_all.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/verify/verify_all.py",
+  "created_at": "2026-11-16T07:46:42.903Z",
+  "metadata": {
+    "size_bytes": 12551,
+    "sha256": "365bb2973a98185ff74189c8657b49c61da8b9c9435f52dd78b765ed949d1909",
+    "revision": 1
+  }
+}

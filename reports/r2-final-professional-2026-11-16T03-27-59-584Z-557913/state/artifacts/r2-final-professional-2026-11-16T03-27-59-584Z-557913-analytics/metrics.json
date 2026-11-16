@@ -1,0 +1,66 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics",
+  "source": "input/operations.csv",
+  "row_count": 18,
+  "team_count": 3,
+  "weeks_covered": 6,
+  "weeks": ["W01", "W02", "W03", "W04", "W05", "W06"],
+  "totals": {
+    "work_orders": 233,
+    "completed_orders": 217,
+    "defects": 18,
+    "planned_minutes": 14985,
+    "actual_minutes": 15440,
+    "schedule_variance_minutes": 455,
+    "completion_percent": 93.13,
+    "minutes_per_completed_order": 71.15
+  },
+  "teams": {
+    "Atlas": {
+      "work_orders": 95,
+      "completed_orders": 89,
+      "defects": 7,
+      "planned_minutes": 5700,
+      "actual_minutes": 5780,
+      "schedule_variance_minutes": 80,
+      "completion_percent": 93.68,
+      "minutes_per_completed_order": 64.94
+    },
+    "Birch": {
+      "work_orders": 75,
+      "completed_orders": 71,
+      "defects": 3,
+      "planned_minutes": 4875,
+      "actual_minutes": 4910,
+      "schedule_variance_minutes": 35,
+      "completion_percent": 94.67,
+      "minutes_per_completed_order": 69.15
+    },
+    "Cedar": {
+      "work_orders": 63,
+      "completed_orders": 57,
+      "defects": 8,
+      "planned_minutes": 4410,
+      "actual_minutes": 4750,
+      "schedule_variance_minutes": 340,
+      "completion_percent": 90.48,
+      "minutes_per_completed_order": 83.33
+    }
+  },
+  "method": {
+    "row_count": "count of data rows in input/operations.csv, excluding the header row",
+    "completion_percent": "completed_orders / work_orders * 100, computed from integer subtotals then rounded to 2 decimals",
+    "minutes_per_completed_order": "actual_minutes / completed_orders, computed from integer subtotals then rounded to 2 decimals",
+    "schedule_variance_minutes": "actual_minutes - planned_minutes (positive means over the planned minutes)",
+    "derivation_order": "integer sums per team were accumulated from the 18 raw rows; overall totals are the sum of the three team subtotals; both decimal metrics are derived only from integer sums, never from rounded intermediates",
+    "integer_subtotals": {
+      "work_orders": {"Atlas": 95, "Birch": 75, "Cedar": 63, "sum": 233},
+      "completed_orders": {"Atlas": 89, "Birch": 71, "Cedar": 57, "sum": 217},
+      "defects": {"Atlas": 7, "Birch": 3, "Cedar": 8, "sum": 18},
+      "planned_minutes": {"Atlas": 5700, "Birch": 4875, "Cedar": 4410, "sum": 14985},
+      "actual_minutes": {"Atlas": 5780, "Birch": 4910, "Cedar": 4750, "sum": 15440},
+      "schedule_variance_minutes": {"Atlas": 80, "Birch": 35, "Cedar": 340, "sum": 455}
+    },
+    "verification": "Recomputed with a second independent pass over the 18 rows (vertical column sums); both passes agreed on every integer subtotal and both derived decimal metrics."
+  }
+}

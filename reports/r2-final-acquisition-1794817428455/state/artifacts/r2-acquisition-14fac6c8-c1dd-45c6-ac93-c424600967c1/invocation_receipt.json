@@ -1,0 +1,243 @@
+{
+  "receipt_type": "observation-digest-v1 invocation receipt",
+  "receipt_version": 1,
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "capability": "observation-digest-v1",
+  "step": "replan-and-invoke",
+  "role": "durable proof that the qualified procedure was invoked with its exact qualified executable bytes and exact fixed arguments, and that the final deliverables were produced by that invocation",
+  "mission_root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "approved_specification_sha256": "81c8b3b5dbaa14e8cbb444d429ddbf94c507ca2f5174304f16393a6f99276cb3",
+  "procedure": {
+    "absolute_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/procedures/observation_digest_v1.py",
+    "relative_path_from_root": "procedures/observation_digest_v1.py",
+    "sha256_at_invocation": "7881ed13610034bb0a985cdd548a009ac2cdec8ec17f3532ca72453098e2b017",
+    "sha256_after_invocation": "7881ed13610034bb0a985cdd548a009ac2cdec8ec17f3532ca72453098e2b017",
+    "bytes": 16350,
+    "interpreter": "python3",
+    "interpreter_version_string": "Python 3.14.4",
+    "stdlib_only": true
+  },
+  "qualification_gate": {
+    "qualified_source_sha256_per_receipt": "7881ed13610034bb0a985cdd548a009ac2cdec8ec17f3532ca72453098e2b017",
+    "observed_sha256_preflight": "7881ed13610034bb0a985cdd548a009ac2cdec8ec17f3532ca72453098e2b017",
+    "match": true,
+    "verdict": "QUALIFIED_BYTES_CONFIRMED",
+    "gate_enforced_before_execution": true,
+    "gate_behavior_on_mismatch": "abort with exit code 90 before the procedure runs; the output directory is neither created nor retried",
+    "gate_was_triggered": false,
+    "qualification_receipt": "probe/qualification-run-1/qualification_receipt.json",
+    "qualification_receipt_sha256": "48b78e5feb46efb3fef26f52c20675dc9f54310d60514ec2712d58f88d4a2c5c",
+    "preflight_capture": {
+      "path": "invocation/preflight_source.sha256.txt",
+      "sha256": "e0a333bfd9ac07733a6c48db231f242b5b0a8aa2be00ec9b575d591b3bd0ebe8"
+    },
+    "input_fixture_sha256_per_receipt": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "input_fixture_sha256_observed": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "argv_sha256_per_receipt": "142a50d06165bf2ab4a0aa6f728d9da9359e79b9d83f965907eb313b32c3eea1",
+    "argv_sha256_observed": "142a50d06165bf2ab4a0aa6f728d9da9359e79b9d83f965907eb313b32c3eea1",
+    "all_three_gates_match": true
+  },
+  "invocation": {
+    "exact_argv_program": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/procedures/observation_digest_v1.py",
+    "exact_argv": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1"
+    ],
+    "exact_ordered_argv_sha256": "142a50d06165bf2ab4a0aa6f728d9da9359e79b9d83f965907eb313b32c3eea1",
+    "exact_ordered_argv_sha256_method": "sha256 of the compact JSON encoding json.dumps(argv, separators=(',',':'), ensure_ascii=True); reproducible from invocation/argv_compact.txt",
+    "argv_capture_files": {
+      "argv_json": {
+        "path": "invocation/argv.json",
+        "sha256": "f3b8678292561f7f163fd0d43a306f454ecb9ccb781187fec4d2cc39aceca688"
+      },
+      "argv_compact": {
+        "path": "invocation/argv_compact.txt",
+        "sha256": "142a50d06165bf2ab4a0aa6f728d9da9359e79b9d83f965907eb313b32c3eea1"
+      },
+      "argv_sha256_txt": {
+        "path": "invocation/argv.sha256.txt",
+        "sha256": "4bb5b30a8c8421310b4493a62167821e47d5bcb7874996c00bbdbaa4fd18e427"
+      }
+    },
+    "argument_count": 2,
+    "command_as_executed": "python3 /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/procedures/observation_digest_v1.py /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+    "argv_2_is_probe_dir": false,
+    "argv_2_equals_mission_root": true
+  },
+  "timing": {
+    "start_utc": "2026-11-16T08:30:19Z",
+    "end_utc": "2026-11-16T08:30:19Z",
+    "duration_seconds_whole": 0,
+    "duration_note": "wall time under one second, so whole-second timestamps coincide; sub-second precision is captured in output_mtime_subsecond",
+    "start_capture": {
+      "path": "invocation/start_utc.txt",
+      "sha256": "7dbd58ff417ac405626456bdd2248d0b0046afedf379ac1e4df4cc04ff1bc1fb"
+    },
+    "end_capture": {
+      "path": "invocation/end_utc.txt",
+      "sha256": "7dbd58ff417ac405626456bdd2248d0b0046afedf379ac1e4df4cc04ff1bc1fb"
+    },
+    "duration_capture": {
+      "path": "invocation/duration_seconds.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "output_mtime_subsecond": {
+      "digest.json": "2026-11-16 08:30:19.623237210 +0000",
+      "digest.md": "2026-11-16 08:30:19.626106684 +0000"
+    }
+  },
+  "result": {
+    "exit_code": 0,
+    "exit_code_capture": {
+      "path": "invocation/exit_code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "stdout": "observation-digest-v1: ok\n  input:  /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json\n  output: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/digest.json\n  output: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/digest.md\n  totals: row_count=3 scheduled=30 completed=26 incidents=6 completion_percent=86.67\n",
+    "stdout_sha256": "2b1d892d99ff2508257844bb5bc95d3a1625421292ecacc45e7a0b6d3d682276",
+    "stdout_capture": {
+      "path": "invocation/stdout.txt",
+      "sha256": "2b1d892d99ff2508257844bb5bc95d3a1625421292ecacc45e7a0b6d3d682276"
+    },
+    "stderr": "",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_note": "e3b0c442...b855 is the sha256 of the empty string, consistent with empty stderr",
+    "retried": false,
+    "attempts": 1
+  },
+  "deliverables": [
+    {
+      "name": "digest.json",
+      "path": "digest.json",
+      "absolute_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/digest.json",
+      "sha256": "989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7",
+      "bytes": 480,
+      "inode": 414427,
+      "produced_by": "this invocation (exit 0), written atomically by the procedure into argv[2]",
+      "hand_authored_or_patched": false,
+      "copied_from_probe": false
+    },
+    {
+      "name": "digest.md",
+      "path": "digest.md",
+      "absolute_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/digest.md",
+      "sha256": "7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af",
+      "bytes": 1603,
+      "inode": 414428,
+      "produced_by": "this invocation (exit 0), written atomically by the procedure into argv[2]",
+      "hand_authored_or_patched": false,
+      "copied_from_probe": false
+    }
+  ],
+  "outputs_sha256_capture": {
+    "path": "invocation/outputs.sha256.txt",
+    "sha256": "5736ed7d80f29f6c8758f4c10cee630f3a8fc2ea80326102da83785e76cbf91d"
+  },
+  "digest_values": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "completion_percent_rendering": "unquoted JSON number with exactly 2 decimals, half-up rounding",
+    "sites": {
+      "North": {
+        "row_count": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": 81.82
+      },
+      "South": {
+        "row_count": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": 100.0
+      }
+    },
+    "reconciliation": "per-site row_count/scheduled/completed/incidents sum to the global totals"
+  },
+  "independent_verification": {
+    "checker": "invocation/independent_check.py",
+    "checker_sha256": "5e7dfd51ff6e93546c3529b0607047d1b280d723850bef881cf88882dde6f93b",
+    "checker_log": "invocation/independent_check.log",
+    "checker_log_sha256": "25c7c46c7092cc4a6843243fd90db9b2a854259254e0b3e6317c1e03568e86a2",
+    "method": "separate process; re-parsed the read-only fixture and re-derived every value with its own pure-integer arithmetic (divmod half-up centisec percent); it neither imports, execs nor reuses the procedure",
+    "checks_passed": 40,
+    "checks_failed": 0,
+    "checker_exit_code": 0,
+    "verdict": "INDEPENDENT_PARITY_OK",
+    "verified": [
+      "digest.json row_count/scheduled/completed/incidents equal independently derived values and are unquoted JSON integers",
+      "digest.json completion_percent equals independently derived 86.67, rendered with exactly 2 decimals and unquoted",
+      "source and period pass through unchanged from the fixture",
+      "sites object keyed exactly by the observed sites (North, South)",
+      "every per-site total and per-site completion_percent matches independent derivation",
+      "per-site figures reconcile to the global totals in both directions",
+      "digest.md total cells, per-site rows, total row, method section and fixture sha256 all match"
+    ]
+  },
+  "downstream_host_verification": {
+    "verifier": "verification/verify_independent.py",
+    "verifier_role": "independent re-derivation performed by the verification step, not by the producer; re-read the fixture and deliverables from disk and recomputed every value with its own integer arithmetic",
+    "checks_passed": 73,
+    "checks_failed": 0,
+    "verdict": "INDEPENDENT_ARITHMETIC_PARITY_OK",
+    "recomputed": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": "86.67",
+      "sites": {
+        "North": {"row_count": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": "81.82"},
+        "South": {"row_count": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": "100.00"}
+      }
+    },
+    "second_engine": "awk over the raw fixture text (no Python, no JSON library) produced row_count=3 scheduled=30 completed=26 incidents=6 pct=86.67; North 2/22/18/5 81.82; South 1/8/8/1 100.00",
+    "nox_qa": {"checks": 61, "pass": 61, "fail": 0, "verdict": "NOX_QA_PASS"}
+  },
+  "freshness_evidence": {
+    "claim": "the root digests are the product of this invocation, not a copy of the probe run",
+    "inode_separation": {
+      "root_digest_json_inode": 414427,
+      "root_digest_md_inode": 414428,
+      "probe_digest_json_inode": 414389,
+      "probe_digest_md_inode": 414390,
+      "distinct_files": true
+    },
+    "mtime_separation": {
+      "root_utc": "2026-11-16 08:30:19.623237210 +0000",
+      "probe_utc": "2026-11-16 08:27:09.486513876 +0000",
+      "invocation_after_qualification": true
+    },
+    "stdout_evidence": "the procedure's own stdout names both output paths inside the mission root, never the probe directory",
+    "byte_identity_note": "digest.json and digest.md bytes coincide with the qualification-run-1 probe outputs because the procedure is deterministic and both runs used the same fixture and same argv[1]. Byte identity is the expected consequence of determinism, not evidence of copying: the root files are separate inodes written fresh by this invocation, and provenance rests on the receipt fields above (root paths in stdout, fresh mtimes), not on the hash comparison.",
+    "post_registration_note": "The digest.json file was subsequently re-written byte-identically by save_artifact during artifact registration, so its inode and mtime are no longer the invocation-time values recorded above; its sha256 (989cc426...) and byte size (480) are unchanged. Content identity, not inode/mtime, is the binding evidence. This receipt's inode/mtime fields describe the invocation-time state and were accurate at production."
+  },
+  "non_reuse_of_probe_output": {
+    "probe_dir_used_as_final_output": false,
+    "probe_outputs_modified_by_this_step": false,
+    "probe_digest_json_sha256_unchanged": "989cc426c301ee23ddb64db7cb88b2f3ceafba5dda613f6f57d13ea4dc4472a7",
+    "probe_digest_md_sha256_unchanged": "7948f59afadecb3b5d53cf065cafb29dbcfd4198b36dcb99f8ba0b6883fd27af",
+    "probe_numbers_treated_as_substitute_for_this_run": false
+  },
+  "scope_compliance": {
+    "work_confined_to_mission_root": true,
+    "writes_outside_mission_root": false,
+    "input_fixture_modified": false,
+    "input_fixture_sha256_unchanged": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "network_used": false,
+    "packages_installed": false,
+    "publishing_or_deployment": false,
+    "purchases": false,
+    "external_changes": false,
+    "approval_prompts_requested": false
+  },
+  "host": {
+    "kernel": "Linux 6.18.58.1-microsoft-standard-WSL2 x86_64",
+    "hostname": "LAPTOP-V0FEF2BB",
+    "python": "Python 3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]"
+  },
+  "confirmation": "The qualified procedure (sha256 7881ed13...) was executed exactly once with the exact fixed argv [<root>/input/pilot.observations.json, <root>]. It exited 0 with empty stderr and wrote digest.json and digest.md into the mission root as distinct, freshly created files. No probe directory was used as the final output and no retry occurred."
+}

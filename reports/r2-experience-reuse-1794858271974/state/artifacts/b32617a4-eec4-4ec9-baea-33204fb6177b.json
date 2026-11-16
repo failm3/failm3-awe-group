@@ -1,0 +1,15 @@
+{
+  "id": "b32617a4-eec4-4ec9-baea-33204fb6177b",
+  "mission_id": "r2-experience-reuse-1794858271974-t09-on",
+  "type": "file",
+  "name": "lib/input.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t09-on/lib/input.cjs",
+  "created_at": "2026-11-16T20:04:26.432Z",
+  "metadata": {
+    "size_bytes": 5726,
+    "sha256": "726de3c6759b0e758d89ba35972d787295b69897f5cf9c94a2cbbc3c16b9d8d1",
+    "reconciled": true,
+    "previous_artifact_id": "f8b508fc-238b-449c-b7b7-51985f9ffbaf",
+    "revision": 3
+  }
+}

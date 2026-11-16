@@ -1,0 +1,953 @@
+{
+  "schema": 1,
+  "mode": "offline_preflight",
+  "network_calls": 0,
+  "model_calls": 0,
+  "live_targets_executed": 0,
+  "passed": true,
+  "target_references": [
+    {
+      "index": 0,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 16,
+        "semantic-invalid": 13
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 1,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 14,
+        "syntax-invalid": 15,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 2,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 3,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 4,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 16,
+        "semantic-invalid": 13
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 5,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 14,
+        "syntax-invalid": 15,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 6,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 7,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 8,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 16,
+        "semantic-invalid": 13
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 9,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 14,
+        "syntax-invalid": 15,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 10,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 11,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 12,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 16,
+        "semantic-invalid": 13
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 13,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 14,
+        "syntax-invalid": 15,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 14,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 15,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 16,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 16,
+        "semantic-invalid": 13
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 17,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 14,
+        "syntax-invalid": 15,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 18,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    },
+    {
+      "index": 19,
+      "passed": true,
+      "cases": 44,
+      "categories": {
+        "valid": 15,
+        "syntax-invalid": 14,
+        "semantic-invalid": 15
+      },
+      "visiblePassed": true
+    }
+  ],
+  "source": {
+    "passed": true,
+    "cases": 8,
+    "error": null,
+    "artifactSha256": "9ed9905fa6a1fc512e84012c034bcd2bff24ef60e9ec65ed790d5bf8fae91b4f",
+    "visiblePassed": true,
+    "visibleSha256": "220bf9c56f499831a7551ceebef604f5c5ca80a91cbc595c1dcfb441b7018dc5",
+    "failureCase": null
+  },
+  "mutants": [
+    {
+      "name": "split-only",
+      "rejected_targets": 20,
+      "intended_detector": "ordinary"
+    },
+    {
+      "name": "escape",
+      "rejected_targets": 20,
+      "intended_detector": "escaped-quote"
+    },
+    {
+      "name": "duplicate",
+      "rejected_targets": 20,
+      "intended_detector": "duplicate"
+    },
+    {
+      "name": "range",
+      "rejected_targets": 20,
+      "intended_detector": "window-high"
+    }
+  ],
+  "hidden_cases_total": 880,
+  "attestation": {
+    "schema": 1,
+    "protocol_sha256": "4bb4d70ac1647a07360ca179d273d34049292d6a52a472dd36ef27c6f654a7d5",
+    "source_artifact_sha256": "9ed9905fa6a1fc512e84012c034bcd2bff24ef60e9ec65ed790d5bf8fae91b4f",
+    "source_contract_sha256": "39621724ffba7b774fee6f76736eab9d705c37ce2248e18a7138bceb49dd0df9",
+    "source_edge_corpus_sha256": "55be320f7f1b422ec1ba1037aec57bec727bd877f92dc070609a17e4ea946633",
+    "harness_files": [
+      {
+        "file": "scripts/r2-experience-reuse/PROTOCOL.md",
+        "sha256": "4bb4d70ac1647a07360ca179d273d34049292d6a52a472dd36ef27c6f654a7d5"
+      },
+      {
+        "file": "scripts/r2-experience-reuse/fixtures.ts",
+        "sha256": "0ef774010f0c7bb62e0cf8e055ca2ff54e1cd7b974b1760b9e1afc072cbe556c"
+      },
+      {
+        "file": "scripts/r2-experience-reuse/runner.ts",
+        "sha256": "0a02d76c6953447968dc6bbc941837538a2a52d7019ed92c846ec4512171acea"
+      },
+      {
+        "file": "scripts/r2-experience-reuse/verifier.ts",
+        "sha256": "f91d9e469a58d03adf7c6cbace2254dcf41e4079863fb4c6dca0f802db535cf7"
+      },
+      {
+        "file": "scripts/r2-final-transfer/fixtures.ts",
+        "sha256": "ff0e7d8c600b5536d7d099b16dfc63574c44f00756b2c9389ec055fd497ac269"
+      },
+      {
+        "file": "scripts/r2-final-transfer/verifier.ts",
+        "sha256": "02e7e0c668b82dbc898a2bb2c58675b4d30f1bad62049703a59c0ed25efb3b78"
+      }
+    ],
+    "targets": [
+      {
+        "index": 0,
+        "config": {
+          "index": 0,
+          "separator": ";",
+          "trim": "strict",
+          "unknown": "drop",
+          "file": "lib/records.cjs",
+          "exportName": "parseRecords",
+          "windowMin": 1,
+          "windowMax": 20,
+          "rateMax": 10,
+          "limitMax": 25,
+          "variant": "WINDOW_ONLY",
+          "durationMax": 30,
+          "colors": [
+            "red",
+            "blue"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "fast",
+            "safe"
+          ]
+        },
+        "format_sha256": "fe650b0a1ae279cc030e7d3e91b19dc9906e654b6beb59c3f6231fe48173994d",
+        "visible_sha256": "2b795e7c7370749bb6d8a3b50818903eeeb41a945b8862ca148afbff56ff8896",
+        "stub_sha256": "9ba2561959fc64a5a36ecfd66ee2508df9b3d54bc16310e7cb4d9c199d63d039",
+        "reference_sha256": "3c3c5b8b3e40a6fa6dd87b57db7525eaccab6886c9fd960b539c7e84825453b4",
+        "hidden_sha256": "63221ae4fa3121751f04982bb3c9a92ff0295c1b3d8cfaa47a3875b4be6e4e9d",
+        "hidden_cases": 44
+      },
+      {
+        "index": 1,
+        "config": {
+          "index": 1,
+          "separator": "|",
+          "trim": "strict",
+          "unknown": "drop",
+          "file": "lib/records.cjs",
+          "exportName": "parseRecords",
+          "windowMin": 2,
+          "windowMax": 30,
+          "rateMax": 20,
+          "limitMax": 50,
+          "variant": "DURATION",
+          "durationMax": 60,
+          "colors": [
+            "GREEN",
+            "AMBER"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "dry",
+            "live"
+          ]
+        },
+        "format_sha256": "1ecdb05d88b42e82eee4a16c625a2d709717c925eaadece990e7c84a0c37196d",
+        "visible_sha256": "f06df05409267c1951fbf369087fea2067d453555567033b86d7e4f596c8b9b6",
+        "stub_sha256": "f8212c8463195dda0597e559340e48d74d19cedf81c060435d532e4659feb051",
+        "reference_sha256": "67021c3f986e906bd493913bb22a8a582b28b2314edac06fd72aefb89c0f43d2",
+        "hidden_sha256": "abc7c11d9937e7e53ef036b3242c778595991cada4742f121e92b919aab365e1",
+        "hidden_cases": 44
+      },
+      {
+        "index": 2,
+        "config": {
+          "index": 2,
+          "separator": ";",
+          "trim": "trim",
+          "unknown": "drop",
+          "file": "lib/records.cjs",
+          "exportName": "parseRecords",
+          "windowMin": 3,
+          "windowMax": 40,
+          "rateMax": 30,
+          "limitMax": 75,
+          "variant": "COLOR",
+          "durationMax": 90,
+          "colors": [
+            "cyan",
+            "magenta"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "cold",
+            "warm"
+          ]
+        },
+        "format_sha256": "6c9ce838b28eb0c4aaf4b76486e4ddc6784d16dcc4cf79f9c0d047d09fc72481",
+        "visible_sha256": "bad2c892c71630921c4960a2556499308bba28b2c212a9719b7b6a78da40d31f",
+        "stub_sha256": "9ba2561959fc64a5a36ecfd66ee2508df9b3d54bc16310e7cb4d9c199d63d039",
+        "reference_sha256": "0ad998a92c0b86b1aead8ae200edcec064fce994f8ce4294499e3cf8cce4057c",
+        "hidden_sha256": "b339124478287631e33acde12e753cff9e419491630fa9a303551232d25a387c",
+        "hidden_cases": 44
+      },
+      {
+        "index": 3,
+        "config": {
+          "index": 3,
+          "separator": "|",
+          "trim": "trim",
+          "unknown": "drop",
+          "file": "lib/records.cjs",
+          "exportName": "parseRecords",
+          "windowMin": 1,
+          "windowMax": 50,
+          "rateMax": 40,
+          "limitMax": 100,
+          "variant": "FLAGS",
+          "durationMax": 120,
+          "colors": [
+            "WHITE",
+            "BLACK"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "read",
+            "write"
+          ]
+        },
+        "format_sha256": "bbf7d2ab12e355436fe4072e846a5da97d4a91066f7f32cd80cf923df0bd18f5",
+        "visible_sha256": "646b6054e411460f51b6af54a1d12ea3c697dc15957a560e0aa8f6af11493b5b",
+        "stub_sha256": "f8212c8463195dda0597e559340e48d74d19cedf81c060435d532e4659feb051",
+        "reference_sha256": "fec2668f9bedd60d6574d049ffd320af3665c5691dd8a578c0d93d6f0e07e416",
+        "hidden_sha256": "02c91d6acbecbac36f21b27ae4508cb199a5e16186b88640f7284d465c11fc84",
+        "hidden_cases": 44
+      },
+      {
+        "index": 4,
+        "config": {
+          "index": 4,
+          "separator": ";",
+          "trim": "strict",
+          "unknown": "retain",
+          "file": "src/export.cjs",
+          "exportName": "parseExport",
+          "windowMin": 2,
+          "windowMax": 60,
+          "rateMax": 10,
+          "limitMax": 125,
+          "variant": "WINDOW_ONLY",
+          "durationMax": 150,
+          "colors": [
+            "teal",
+            "gold"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "alpha",
+            "beta"
+          ]
+        },
+        "format_sha256": "989c167b48df08244f7e30ac2fc21999f8c8ec896b63d3b37908c5423c7d0b0f",
+        "visible_sha256": "dd183c509feda16f98fd1a387841b5c1f9f8eb7bffe470d494acc8c73d027182",
+        "stub_sha256": "527a375d01ae56886895df83249431ce69251785d361227b57698a311c603152",
+        "reference_sha256": "a3fc27713c02b224e4df496b3a742a838685755ff6b6b40f73baa2a8876dbaef",
+        "hidden_sha256": "b82e827af87f1d558a1c6ff6848f1983858caace22c1c0f8d28f4078ce087f84",
+        "hidden_cases": 44
+      },
+      {
+        "index": 5,
+        "config": {
+          "index": 5,
+          "separator": "|",
+          "trim": "strict",
+          "unknown": "retain",
+          "file": "src/export.cjs",
+          "exportName": "parseExport",
+          "windowMin": 3,
+          "windowMax": 20,
+          "rateMax": 20,
+          "limitMax": 150,
+          "variant": "DURATION",
+          "durationMax": 30,
+          "colors": [
+            "RED",
+            "BLUE"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "fast",
+            "safe"
+          ]
+        },
+        "format_sha256": "59e0aa8a1638a82990c08dcff525d5a96843adae7dd6f4f507c112ae6fc3b747",
+        "visible_sha256": "ed9d626c867581d720dd5133a2defbc23167e73bee74c6abf76c26df3fa1b8b6",
+        "stub_sha256": "687aa260170ab05c0f2e5fc1bbb2d1b25094c7e77580c0a9258b23a869a73ede",
+        "reference_sha256": "dccbbf5ad1c64b8e2355795a478a49b55fd77bdd3aa6e24b3d731b0bc944bec5",
+        "hidden_sha256": "62c67925f86b12bdb93712558379997f7788397162a3528446324406044adc71",
+        "hidden_cases": 44
+      },
+      {
+        "index": 6,
+        "config": {
+          "index": 6,
+          "separator": ";",
+          "trim": "trim",
+          "unknown": "retain",
+          "file": "src/export.cjs",
+          "exportName": "parseExport",
+          "windowMin": 1,
+          "windowMax": 30,
+          "rateMax": 30,
+          "limitMax": 25,
+          "variant": "COLOR",
+          "durationMax": 60,
+          "colors": [
+            "green",
+            "amber"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "dry",
+            "live"
+          ]
+        },
+        "format_sha256": "aa32266d3177f79f5af534e010261903787e89f71422fb88cf1b534994564233",
+        "visible_sha256": "dd269518aa2168531aba37bfb6f615193bdb1d998089386c516d5f39bf61a92e",
+        "stub_sha256": "527a375d01ae56886895df83249431ce69251785d361227b57698a311c603152",
+        "reference_sha256": "e60636ea6b9692215f41d5ff4b641be79ef6d393c837865606f737eca9dfadae",
+        "hidden_sha256": "a6fbb40b6b53f7d03b622fec42bcaf5e0b32c4418aad167e382498363630e4c2",
+        "hidden_cases": 44
+      },
+      {
+        "index": 7,
+        "config": {
+          "index": 7,
+          "separator": "|",
+          "trim": "trim",
+          "unknown": "retain",
+          "file": "src/export.cjs",
+          "exportName": "parseExport",
+          "windowMin": 2,
+          "windowMax": 40,
+          "rateMax": 40,
+          "limitMax": 50,
+          "variant": "FLAGS",
+          "durationMax": 90,
+          "colors": [
+            "CYAN",
+            "MAGENTA"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "cold",
+            "warm"
+          ]
+        },
+        "format_sha256": "5ab820a63955f66d3c094cdec375cc719dc1ad16ef69d0f6f56ce01bc4110387",
+        "visible_sha256": "df487472fe9d5e08a66f3fac17636217361c82e030dc0d9e9ff7b9dd99487d70",
+        "stub_sha256": "687aa260170ab05c0f2e5fc1bbb2d1b25094c7e77580c0a9258b23a869a73ede",
+        "reference_sha256": "698add56160409bf9a5e8c4cf2e20ece69b8458dad46cf38e06c09c62e1a69fd",
+        "hidden_sha256": "10935e62ca919d055d793d868b1fcf14a32334eba21fb6b9cda21097153c7594",
+        "hidden_cases": 44
+      },
+      {
+        "index": 8,
+        "config": {
+          "index": 8,
+          "separator": ";",
+          "trim": "strict",
+          "unknown": "drop",
+          "file": "lib/input.cjs",
+          "exportName": "readInput",
+          "windowMin": 3,
+          "windowMax": 50,
+          "rateMax": 10,
+          "limitMax": 75,
+          "variant": "WINDOW_ONLY",
+          "durationMax": 120,
+          "colors": [
+            "white",
+            "black"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "read",
+            "write"
+          ]
+        },
+        "format_sha256": "ce402fb266a14a571c8919dff7df2675b349557d640d1026f1e60786ae55750b",
+        "visible_sha256": "d2192050acefaa61bcff82832d45c1a1ebe4c485f0843cbdf3151236959f0a3b",
+        "stub_sha256": "da36bd4bf62c11c4ed58e6ceba114b1a53654282afeb499a85d3960687e65731",
+        "reference_sha256": "12e1fa25aa421d57ab8caef32ff3507cba3468ad0d7ad6ab6f538e74ee315373",
+        "hidden_sha256": "7540522606f446b9971c60078c4f99893ea110d916e48db079c59dc46e27771a",
+        "hidden_cases": 44
+      },
+      {
+        "index": 9,
+        "config": {
+          "index": 9,
+          "separator": "|",
+          "trim": "strict",
+          "unknown": "drop",
+          "file": "lib/input.cjs",
+          "exportName": "readInput",
+          "windowMin": 1,
+          "windowMax": 60,
+          "rateMax": 20,
+          "limitMax": 100,
+          "variant": "DURATION",
+          "durationMax": 150,
+          "colors": [
+            "TEAL",
+            "GOLD"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "alpha",
+            "beta"
+          ]
+        },
+        "format_sha256": "6b505cc15e1d565c227d360dfc2704dbeb74fe1d94390399185c515201f47357",
+        "visible_sha256": "58cdb0ec77c3294fd642235c265bb421d0dd8d92081b45e42ff191dde5ffa5c7",
+        "stub_sha256": "66403f0682f1ad6f21321d1e1e32ea34df67a6a6c7b8a9e38086f872c510d9a2",
+        "reference_sha256": "3a7b683d48e8810ff19f35abb5c1d0a4a64fd94e5489aae4547175857fb5134e",
+        "hidden_sha256": "bffe727f6f857e51e01a7fbbacf7dbc299fe6968c740cd2983a22801e15258af",
+        "hidden_cases": 44
+      },
+      {
+        "index": 10,
+        "config": {
+          "index": 10,
+          "separator": ";",
+          "trim": "trim",
+          "unknown": "drop",
+          "file": "lib/input.cjs",
+          "exportName": "readInput",
+          "windowMin": 2,
+          "windowMax": 20,
+          "rateMax": 30,
+          "limitMax": 125,
+          "variant": "COLOR",
+          "durationMax": 30,
+          "colors": [
+            "red",
+            "blue"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "fast",
+            "safe"
+          ]
+        },
+        "format_sha256": "fcf9906edabba0d607897231467083b49105858526d9bb2a1dc3b4e6f74300fe",
+        "visible_sha256": "7253253f152392ce8de26723c13817d6945c08872a613a8a074df9e97e11e0f2",
+        "stub_sha256": "da36bd4bf62c11c4ed58e6ceba114b1a53654282afeb499a85d3960687e65731",
+        "reference_sha256": "e916a1f62aff4bee8ce8a56af2bfcece49b43741b97b1ef324efedf1c50a4bd7",
+        "hidden_sha256": "30d55e749ddf7523ccd171e3cb02ad6c0ea800ce387be0624e7b9020735cc9e8",
+        "hidden_cases": 44
+      },
+      {
+        "index": 11,
+        "config": {
+          "index": 11,
+          "separator": "|",
+          "trim": "trim",
+          "unknown": "drop",
+          "file": "lib/input.cjs",
+          "exportName": "readInput",
+          "windowMin": 3,
+          "windowMax": 30,
+          "rateMax": 40,
+          "limitMax": 150,
+          "variant": "FLAGS",
+          "durationMax": 60,
+          "colors": [
+            "GREEN",
+            "AMBER"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "dry",
+            "live"
+          ]
+        },
+        "format_sha256": "55426127799263662effb70b8bef16e4190e85f497d875e6d6e1478feee00f21",
+        "visible_sha256": "f533aaab20021b44170a6d7b6dd897fbeb305f9ba324b7bbce0cb5bc1517fe91",
+        "stub_sha256": "66403f0682f1ad6f21321d1e1e32ea34df67a6a6c7b8a9e38086f872c510d9a2",
+        "reference_sha256": "9b9e3cd375398cd64fac09691b89d20105637029f50a0e628f00859a1fd556d2",
+        "hidden_sha256": "b29448625b969513e85f254eb11801679602df25877c5bbfa019cbda4d3fa497",
+        "hidden_cases": 44
+      },
+      {
+        "index": 12,
+        "config": {
+          "index": 12,
+          "separator": ";",
+          "trim": "strict",
+          "unknown": "retain",
+          "file": "core/decoder.cjs",
+          "exportName": "decodeSeparated",
+          "windowMin": 1,
+          "windowMax": 40,
+          "rateMax": 10,
+          "limitMax": 25,
+          "variant": "WINDOW_ONLY",
+          "durationMax": 90,
+          "colors": [
+            "cyan",
+            "magenta"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "cold",
+            "warm"
+          ]
+        },
+        "format_sha256": "5adf3bda2073363570c027dbe9d22a680df1bb3051f505c4f676b9ae682ef178",
+        "visible_sha256": "82b739bb54d3462f8be6c016223ea887fc6bb8e0229ccfb5683abf52a85d963e",
+        "stub_sha256": "36a9f2fd4796b437fc49b566a89fe14f403a3634a9d7f5a25915edfc7ad93ee9",
+        "reference_sha256": "f2054602c51fd3e320332b8d30e64beee11494fad2bb2266729959710092ec4c",
+        "hidden_sha256": "0550cd953c3d98ee5889893c1c68d3bc54fd99ed33511ecc7d9ae474dcb40715",
+        "hidden_cases": 44
+      },
+      {
+        "index": 13,
+        "config": {
+          "index": 13,
+          "separator": "|",
+          "trim": "strict",
+          "unknown": "retain",
+          "file": "core/decoder.cjs",
+          "exportName": "decodeSeparated",
+          "windowMin": 2,
+          "windowMax": 50,
+          "rateMax": 20,
+          "limitMax": 50,
+          "variant": "DURATION",
+          "durationMax": 120,
+          "colors": [
+            "WHITE",
+            "BLACK"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "read",
+            "write"
+          ]
+        },
+        "format_sha256": "1f3bedd8821371426ad2c1bf234091f3a0c2a3f7b02e1068717429183e56f17a",
+        "visible_sha256": "963990bfe385e9ff89873b1580f1d2cc6ef1d43d484a7577752a4dafad5b9efd",
+        "stub_sha256": "debd752aa1cdd8a0a9e29632de93f20ca4ab2015fc02f4cdf098fcd920637bff",
+        "reference_sha256": "6619ed72364f5f932211d09af57b1f89a1742c542578c77418c389fa33e66dd8",
+        "hidden_sha256": "710eb108e3b963a48327067bb62ef43a55828245bd9fef06d3a6e7af39f377d3",
+        "hidden_cases": 44
+      },
+      {
+        "index": 14,
+        "config": {
+          "index": 14,
+          "separator": ";",
+          "trim": "trim",
+          "unknown": "retain",
+          "file": "core/decoder.cjs",
+          "exportName": "decodeSeparated",
+          "windowMin": 3,
+          "windowMax": 60,
+          "rateMax": 30,
+          "limitMax": 75,
+          "variant": "COLOR",
+          "durationMax": 150,
+          "colors": [
+            "teal",
+            "gold"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "alpha",
+            "beta"
+          ]
+        },
+        "format_sha256": "37f1ea6a35f980af09f112d41dfcf41621f5b15d5f1fc38cdc198ed334a296e8",
+        "visible_sha256": "ce068e321ab1f24e0f4a2b3fa9f8e6bb0a18aabfc68fc6d89df5e33a97a67a1b",
+        "stub_sha256": "36a9f2fd4796b437fc49b566a89fe14f403a3634a9d7f5a25915edfc7ad93ee9",
+        "reference_sha256": "83d68cf09582c47783c02bb16641c573365f1eee2d66dc83b528c207e38bfd05",
+        "hidden_sha256": "92dfca0c335132655fc1e7e34743d62349ad96e2eb8c26d39e702714be5cab56",
+        "hidden_cases": 44
+      },
+      {
+        "index": 15,
+        "config": {
+          "index": 15,
+          "separator": "|",
+          "trim": "trim",
+          "unknown": "retain",
+          "file": "core/decoder.cjs",
+          "exportName": "decodeSeparated",
+          "windowMin": 1,
+          "windowMax": 20,
+          "rateMax": 40,
+          "limitMax": 100,
+          "variant": "FLAGS",
+          "durationMax": 30,
+          "colors": [
+            "RED",
+            "BLUE"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "fast",
+            "safe"
+          ]
+        },
+        "format_sha256": "a2a22011253790f6934a9db85bfb87a541cd7ac924330c94b2f5e9de8004d15f",
+        "visible_sha256": "ff22208c74880f645ba069f6496a8cddf53dd3f7295d23a7dfb6ad5c72fb0b74",
+        "stub_sha256": "debd752aa1cdd8a0a9e29632de93f20ca4ab2015fc02f4cdf098fcd920637bff",
+        "reference_sha256": "fc913a33d75ff9a7176ce39c40b94435625d94ba5b0fdc404fdb561e13494f74",
+        "hidden_sha256": "cfb5bfdf01270926557c084e0404029f7e0e2e13a42f5b37cd68b7289fadec48",
+        "hidden_cases": 44
+      },
+      {
+        "index": 16,
+        "config": {
+          "index": 16,
+          "separator": ";",
+          "trim": "strict",
+          "unknown": "drop",
+          "file": "adapters/bundle.cjs",
+          "exportName": "parseBundle",
+          "windowMin": 2,
+          "windowMax": 30,
+          "rateMax": 10,
+          "limitMax": 125,
+          "variant": "WINDOW_ONLY",
+          "durationMax": 60,
+          "colors": [
+            "green",
+            "amber"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "dry",
+            "live"
+          ]
+        },
+        "format_sha256": "37fc1be5328ef2d36ca97333b5116f983e9d2c99d2e8f901e8563989ff2a5168",
+        "visible_sha256": "c580fe9ce62d3ffc4b426df16d56093ecd88f861405a27e7d1f89f94c87e013f",
+        "stub_sha256": "6c19bb373da05c3f4bd91eeb2da4ea2add6a5a481ae489f92a4d71ce426a4be8",
+        "reference_sha256": "dba39577a8770a220f9d6243025a10149d271aa7c3bc91fc512b171dbd5a5101",
+        "hidden_sha256": "6963fff1f490b2183d1c110b1d5808027fd7c111ca909716df7d875682980270",
+        "hidden_cases": 44
+      },
+      {
+        "index": 17,
+        "config": {
+          "index": 17,
+          "separator": "|",
+          "trim": "strict",
+          "unknown": "drop",
+          "file": "adapters/bundle.cjs",
+          "exportName": "parseBundle",
+          "windowMin": 3,
+          "windowMax": 40,
+          "rateMax": 20,
+          "limitMax": 150,
+          "variant": "DURATION",
+          "durationMax": 90,
+          "colors": [
+            "CYAN",
+            "MAGENTA"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "cold",
+            "warm"
+          ]
+        },
+        "format_sha256": "611e2e470fc9a3371a9c7751e6d962cef9f837394f9c3bc93620f13dfedbc9a2",
+        "visible_sha256": "cf2444d35953a03c0d0f9ef17dfaba859be0cb16602f0da6efcff8a8199b0ba0",
+        "stub_sha256": "ef225caf137e9e3ba05de70dccaccdb3af9ec22ea632bf8415dbb15c37295a5c",
+        "reference_sha256": "ff44645b1ebd28a4560f081db55a6865cbb9c4e55a21178dbd739a71bcca4d4a",
+        "hidden_sha256": "fc879b611129b669ee31544b79b89daae33ccd6eac809e08aaf28db253c68f0e",
+        "hidden_cases": 44
+      },
+      {
+        "index": 18,
+        "config": {
+          "index": 18,
+          "separator": ";",
+          "trim": "trim",
+          "unknown": "drop",
+          "file": "adapters/bundle.cjs",
+          "exportName": "parseBundle",
+          "windowMin": 1,
+          "windowMax": 50,
+          "rateMax": 30,
+          "limitMax": 25,
+          "variant": "COLOR",
+          "durationMax": 120,
+          "colors": [
+            "white",
+            "black"
+          ],
+          "colorCase": "lower",
+          "flagValues": [
+            "read",
+            "write"
+          ]
+        },
+        "format_sha256": "46dba676263272c4260d19cb7c6f039d342be6d8dbdc39fa606a32631c7eebb6",
+        "visible_sha256": "a9e2d34bfeab554fb51c55c7d90cf18d0a82befc40d8df1e34d3ceff65b9512f",
+        "stub_sha256": "6c19bb373da05c3f4bd91eeb2da4ea2add6a5a481ae489f92a4d71ce426a4be8",
+        "reference_sha256": "7eca444b238904d83471eae55d1d30e3ccb55b756f11ccced2159122da7869a8",
+        "hidden_sha256": "0bb335146b3ea53f58276678349c43442804cae7465e0dbd10c9f4d3efe2d388",
+        "hidden_cases": 44
+      },
+      {
+        "index": 19,
+        "config": {
+          "index": 19,
+          "separator": "|",
+          "trim": "trim",
+          "unknown": "drop",
+          "file": "adapters/bundle.cjs",
+          "exportName": "parseBundle",
+          "windowMin": 2,
+          "windowMax": 60,
+          "rateMax": 40,
+          "limitMax": 50,
+          "variant": "FLAGS",
+          "durationMax": 150,
+          "colors": [
+            "TEAL",
+            "GOLD"
+          ],
+          "colorCase": "upper",
+          "flagValues": [
+            "alpha",
+            "beta"
+          ]
+        },
+        "format_sha256": "8ca19c479201b7510651df553846cdf4b0b623499a6699828b20a130fdbbd702",
+        "visible_sha256": "fa0e3f294fc359bd9a496113870be4041a8d99fc8035798f41b64d41515b0776",
+        "stub_sha256": "ef225caf137e9e3ba05de70dccaccdb3af9ec22ea632bf8415dbb15c37295a5c",
+        "reference_sha256": "d8e5c79557a2042dbf95c67eda2cd85e42a10db261b366dfed84ad505949a03f",
+        "hidden_sha256": "f9c44fd16c402116598fa93c2e2a9787ed9fb2efc40dbd0d6643856dba9a8d42",
+        "hidden_cases": 44
+      }
+    ],
+    "controls": {
+      "model": "claude-fable-5-2",
+      "role": "coder",
+      "tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "shell",
+        "save_artifact"
+      ],
+      "maxSteps": 8,
+      "maxRetries": 0,
+      "wallCapMs": 900000,
+      "concurrency": 4
+    }
+  },
+  "duration_ms": 1266
+}

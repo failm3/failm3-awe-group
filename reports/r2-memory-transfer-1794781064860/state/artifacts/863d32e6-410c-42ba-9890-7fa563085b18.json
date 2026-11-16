@@ -1,0 +1,14 @@
+{
+  "id": "863d32e6-410c-42ba-9890-7fa563085b18",
+  "mission_id": "r2-memory-transfer-1794781064860-source",
+  "type": "file",
+  "name": "src/ledger.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-source/src/ledger.cjs",
+  "created_at": "2026-11-15T22:17:47.292Z",
+  "metadata": {
+    "size_bytes": 137,
+    "sha256": "fb3c18a8631361dc015b848ac580fd65cdbdc515571f182ff555ada4a8b2065e",
+    "reconciled": true,
+    "revision": 1
+  }
+}

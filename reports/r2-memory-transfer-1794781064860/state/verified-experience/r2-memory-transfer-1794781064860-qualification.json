@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "scope": "delimited-text-recovery",
+  "solverId": "coder",
+  "sourceMissionId": "r2-memory-transfer-1794781064860-source",
+  "sourceSpecHash": "7aa73a077263e8a6801ff4605e028992c5d585dce5d67c2c2d2f18c1b73b5c8d",
+  "capabilityHash": "98914a1ac8365b1cedfa31aad9b1705936e57566b9cb5e4ce09ad7b9ae4110cb",
+  "profileHash": "b1c8d071c46d3704a282149f619746900c2b5c1169a252461272519715248c69",
+  "sourceArtifactId": "f7466f33-3a19-48ba-b48b-c2d38427f290",
+  "sourceSha256": "2593ad97d4531cfd65ea2e2cd955871303aeacfc34b78ad520ec25cfb529fd6d",
+  "verificationArtifactId": "a2219908-4e5d-4a80-a189-603c6485a058",
+  "verificationSha256": "37f77ac8008a534dd3b99dc071649d7c8eb3fa649533aa08797517076ae10513",
+  "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+  "qualificationGeneration": 1,
+  "receiptId": "r2-memory-transfer-1794781064860-receipt",
+  "createdAt": "2026-11-15T22:19:14.956Z"
+}

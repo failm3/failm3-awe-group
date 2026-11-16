@@ -1,0 +1,517 @@
+{
+  "root": "awe-group",
+  "files": 8305,
+  "text_files_scanned": 8303,
+  "binary_files": [
+    "data/db/ucl.sqlite",
+    "reports/ucl-source/delivery/data/db/ucl.sqlite"
+  ],
+  "signature_findings": [
+    {
+      "path": "research/external/awe-group-runtime/tests/execution_security/isolation.test.mjs",
+      "kind": "private_key",
+      "line": 36
+    }
+  ],
+  "assignment_findings": [
+    {
+      "path": "README.md",
+      "line": 94,
+      "length": 27,
+      "placeholder": true
+    },
+    {
+      "path": "reports/research-publication-security/sqlite-inventory.json",
+      "line": 50,
+      "length": 29,
+      "placeholder": false
+    },
+    {
+      "path": "reports/research-publication-security/sqlite-inventory.json",
+      "line": 127,
+      "length": 29,
+      "placeholder": false
+    },
+    {
+      "path": "research/external/awe-group-runtime/E1/qa/lifecycle-adversarial.test.mjs",
+      "line": 27,
+      "length": 27,
+      "placeholder": true
+    },
+    {
+      "path": "research/external/awe-group-runtime/E1/qa/vault-adversarial.test.mjs",
+      "line": 40,
+      "length": 9,
+      "placeholder": true
+    },
+    {
+      "path": "research/external/awe-group-runtime/E1/tests/infra/vault.test.mjs",
+      "line": 39,
+      "length": 20,
+      "placeholder": true
+    },
+    {
+      "path": "research/external/awe-group-runtime/INTEGRATION-01/tests/http.test.mjs",
+      "line": 16,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "research/external/awe-group-runtime/awe/model_gateway/model-broker.mjs",
+      "line": 80,
+      "length": 26,
+      "placeholder": true
+    },
+    {
+      "path": "research/external/awe-group-runtime/llm02/broker.mjs",
+      "line": 79,
+      "length": 41,
+      "placeholder": false
+    },
+    {
+      "path": "research/external/awe-group-runtime/llm02/tests/transport.test.mjs",
+      "line": 53,
+      "length": 14,
+      "placeholder": true
+    },
+    {
+      "path": "research/external/awe-group-runtime/tests/execution_security/execution.test.mjs",
+      "line": 23,
+      "length": 14,
+      "placeholder": false
+    },
+    {
+      "path": "research/external/awe-group-runtime/tests/hermes_runtime/rt02/executors.test.mjs",
+      "line": 23,
+      "length": 21,
+      "placeholder": true
+    },
+    {
+      "path": "research/external/awe-group-runtime/tests/model_gateway/model-broker.test.mjs",
+      "line": 79,
+      "length": 19,
+      "placeholder": true
+    },
+    {
+      "path": "scripts/r2-memory-transfer.ts",
+      "line": 199,
+      "length": 11,
+      "placeholder": false
+    },
+    {
+      "path": "scripts/run-offline-tests.mjs",
+      "line": 47,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "scripts/run-offline-tests.mjs",
+      "line": 48,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/candidate-binding.test.ts",
+      "line": 9,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/capability-loop.test.ts",
+      "line": 12,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/head-plan-parse.test.ts",
+      "line": 10,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/helpers/r0-final-manager-util.ts",
+      "line": 24,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/helpers/r0-harness.ts",
+      "line": 19,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/helpers/r0-reqa-manager-util.ts",
+      "line": 24,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/helpers/r0-runtime-util.ts",
+      "line": 30,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/qa-batch-review.test.ts",
+      "line": 11,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-adapters.test.ts",
+      "line": 597,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-core.test.ts",
+      "line": 19,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-core.test.ts",
+      "line": 20,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-interfaces.test.ts",
+      "line": 132,
+      "length": 24,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-interfaces.test.ts",
+      "line": 205,
+      "length": 22,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-interfaces.test.ts",
+      "line": 206,
+      "length": 22,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-interfaces.test.ts",
+      "line": 210,
+      "length": 48,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-closure-interfaces.test.ts",
+      "line": 313,
+      "length": 25,
+      "placeholder": false
+    },
+    {
+      "path": "src/tests/r0-closure-interfaces.test.ts",
+      "line": 313,
+      "length": 22,
+      "placeholder": false
+    },
+    {
+      "path": "src/tests/r0-final-manager.test.ts",
+      "line": 22,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-final-recursion.test.ts",
+      "line": 34,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-final-tools.test.ts",
+      "line": 249,
+      "length": 12,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-final-tools.test.ts",
+      "line": 261,
+      "length": 12,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-final-tools.test.ts",
+      "line": 301,
+      "length": 12,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-qa-evidence.test.ts",
+      "line": 8,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-reqa-manager.test.ts",
+      "line": 24,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-runtime-manager.test.ts",
+      "line": 16,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r0-runtime-storage-lease.test.ts",
+      "line": 239,
+      "length": 29,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r1-model-ledger.test.ts",
+      "line": 10,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r1-p1-model-routing.test.ts",
+      "line": 5,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r1-resource-limits.test.ts",
+      "line": 27,
+      "length": 18,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r1-spec-binding.test.ts",
+      "line": 156,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r1-spec-binding.test.ts",
+      "line": 157,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r1-spec-binding.test.ts",
+      "line": 329,
+      "length": 23,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r2-qualified-acquisition.test.ts",
+      "line": 17,
+      "length": 17,
+      "placeholder": true
+    },
+    {
+      "path": "src/tests/r2-qualified-local-capability.test.ts",
+      "line": 16,
+      "length": 17,
+      "placeholder": true
+    }
+  ],
+  "gmail_occurrences_by_path": {
+    "research/r1-kortix/primary/composio_mastra.json": 4,
+    "research/r1-kortix/primary/mastra_core.json": 5,
+    "research/r1-kortix/primary/mastra_libsql.json": 5,
+    "research/r1-kortix/primary/mastra_mcp.json": 5,
+    "research/r1-kortix/primary/mastra_memory.json": 5,
+    "research/r1-kortix/primary/playwright_mcp.json": 2
+  },
+  "personal_marker_paths": [
+    "AWE-RESEARCH-REPOSITORY-ASSEMBLY-REPORT.md",
+    "README.md",
+    "data/source/all-records-classified.json",
+    "data/tool-catalog/catalog-all-4504.csv",
+    "data/tool-catalog/issues.csv",
+    "opencode.json",
+    "package-lock.json",
+    "package.json",
+    "reports/E1-FINAL-REPORT.md",
+    "reports/R1-WEB-PRODUCT-PREPARATION.md",
+    "reports/r0-final-independent-reqa.md",
+    "reports/r0-independent-adapter-reqa.md",
+    "reports/r1-generalization-1794714138208/qa-review.json",
+    "reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/render-verification.txt",
+    "reports/r1-generalization-1794714138208/state/candidate-evidence/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/4eecd5ac-91f7-44f1-a1bc-dd3de5e5f631.json",
+    "reports/r1-generalization-1794714138208/state/candidate-evidence/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/c784ea86-25f4-42ae-8c48-2ef7293b7439.json",
+    "reports/r1-generalization-1794714138208/state/delegation-trees/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f.json",
+    "reports/r1-generalization-1794714138208/state/missions/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f.json",
+    "reports/r1-local-web-1794615675176-cad6b269/state/artifacts/06f0c120-16f0-4faa-bf29-2c8027cc30a8.json",
+    "reports/r1-local-web-1794615675176-cad6b269/state/artifacts/258bf739-06bb-488d-a4c5-3fc5aa2fd142.json",
+    "reports/r1-local-web-1794615675176-cad6b269/state/artifacts/4bc3a3a6-2335-456e-a5a3-6cf26ab3c4fc.json",
+    "reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/product/styles.css",
+    "reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/styles.css",
+    "reports/r1-local-web-1794615675176-cad6b269/state/checkpoints/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a.json",
+    "reports/r1-local-web-1794615675176-cad6b269/state/delegation-trees/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a.json",
+    "reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t00-off/lib/records.cjs",
+    "reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t03-off/lib/records.cjs",
+    "reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t08-on/lib/input.cjs",
+    "reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t01-off/lib/records.cjs",
+    "reports/research-publication-security/personal-data-scan.json",
+    "reports/stage2-analysis.md",
+    "reports/stage2-results.md",
+    "reports/ucl-source/delivery/COMPATIBILITY-REPORT.md",
+    "reports/ucl-source/delivery/INDEPENDENT-QA-R2.md",
+    "reports/ucl-source/delivery/data/source/all-records-classified.json",
+    "research/external/awe-group-runtime/INTEGRATION-01/scripts/compose-ui.mjs",
+    "research/external/awe-group-runtime/INTEGRATION-01/ui/styles.css",
+    "research/external/awe-group-runtime/awe/integration_v3/002-native-binding-cr01-up.proposed.sql",
+    "research/external/awe-group-runtime/awe/integration_v3/003-durable-authority-g102-up.proposed.sql",
+    "research/external/awe-group-runtime/awe/integration_v3/004-delegation-operands-g102c-up.proposed.sql",
+    "research/external/awe-group-runtime/baseline/package-boundaries.mjs",
+    "research/external/awe-group-runtime/tests/model_gateway/additional.test.mjs",
+    "research/external/awe-group-runtime/tests/tool_registry/registry.test.mjs",
+    "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/CHAT-TRANSFER-NOX-R2-CORTEX-2026-11-14/01-CHAT-HANDOFF-FULL.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/DECISIONS/OPENCODE-AUTO-PERMISSIONS-2026-11-12.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/HANDOFF/2026-11-14-OWNER-TRANSITION/AWE-NOX-MASTER-HANDOFF.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/HANDOFFS/MANUS-CODEX-TOOLING-BONUS-2026-11-12.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/PRODUCT/NOX-OWNER-COMPANION-EXPERIENCE-2026-11-13.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/R1-CAPABILITY-PROGRAM/01-TOOL-GATEWAY/SPEC.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/R1-CAPABILITY-PROGRAM/CHECKPOINT-CURRENT-TRUTH-2026-11-13.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/R1-CAPABILITY-PROGRAM/RESEARCH/MARKET-REUSE-AUDIT-2026-11-13.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/R1-CAPABILITY-PROGRAM/RESEARCH/NOX-IMPLEMENTED-CAPABILITIES-SOURCE-AUDIT-2026-11-13.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/REPORTS/OPENCODE-CLEANROOM-FORENSIC-CODE-AUDIT-2026-11-12.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/REPORTS/OPENCODE-CLEANROOM-PRELIMINARY-ACTION-AUDIT-2026-11-12.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/REPORTS/OPENCODE-R1-INDEPENDENT-ENGINEERING-AUDIT-2026-11-13.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/REPORTS/VIDEO-REVIEW-2026-11-12-HH-AUTO-AGENT.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/CORTEX-NOX-CAPABILITY-KNOWLEDGE-MARKET-AUDIT-SCOPE-2026-11-13.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/B-NOX-AS-IS-SOURCE-AUDIT.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/D-TOOLS-CONNECTORS-LIBRARIAN.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/E-KNOWLEDGE-INGESTION.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/F-SKILL-LIFECYCLE.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/G-CAPABILITY-PACKS.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/K-OPENCODE-READY-IMPLEMENTATION-PACK.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/L-OWNER-DECISIONS-AND-UNKNOWN.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/M-SOURCES-AND-EVIDENCE-APPENDIX.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-opencode-backlog.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/spec.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/02-NOX-LATEST-RUNTIME-FORENSIC-AUDIT.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/04-EXPANDED-TOOLS-AND-SKILLS-REGISTRY.jsonl",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/05-READY-MADE-INTEGRATION-ATLAS.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/13-BUILD-BUY-REUSE-MATRIX.csv",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/15-OPENCODE-EXECUTION-PACK/OC-06.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/15-OPENCODE-EXECUTION-PACK/README.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/16-FASTEST-SAFE-PATH-TO-R2.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/CRITICAL-QUESTIONS.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/NOX-R2-RESEARCH-REPORT.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/OPENCODE-HANDOFF-READYNESS.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/RANKED-ACTIONABLE-SHORTLIST.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/enterprise-evidence.csv",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/enterprise-practices.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/evals-report.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/FINAL-INDEPENDENT-DELIVERY-VALIDATION.json",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/FINAL-PUBLISHED-INDEPENDENT-VALIDATION.json",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/INDEPENDENT-DELIVERY-VALIDATION.json",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/PUBLISHED-INDEPENDENT-VALIDATION.json",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/knowledge-report.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/opencode-tickets.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/requirements.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/solutions-catalog.csv",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/solutions-evidence.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/solutions-shortlist.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/validation-checkpoint.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/validation-program.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-OPENCODE-REVIEW-2026-11-14/03-OPENCODE-ENGINEERING-REVIEW.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-OPENCODE-REVIEW-2026-11-14/04-CORTEX-R2-BRIEF-REVISED-BY-OPENCODE.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-OPENCODE-REVIEW-2026-11-14/05-REVIEW-EVIDENCE-MANIFEST.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-OPENCODE-REVIEW-2026-11-14/06-CORTEX-R2-FINAL-OWNER-PROMPT-2026-11-14.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-OPENCODE-REVIEW-2026-11-14/07-CORTEX-ACCOUNT-TRANSFER-FAILURES-2026-11-14.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-INDEPENDENT-AUDIT-2026-11-14/00-EXECUTIVE-VERDICT.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-INDEPENDENT-AUDIT-2026-11-14/01-FINDINGS-AND-EVIDENCE.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-INDEPENDENT-AUDIT-2026-11-14/02-CORTEX-ASSESSMENT.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-INDEPENDENT-AUDIT-2026-11-14/README.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-UNIVERSALITY-STRATEGY-2026-11-14/README.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-UNIVERSALITY-STRATEGY-2026-11-14/UNIVERSALITY-STRATEGY.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/TESTS/OPENCODE-CLEANROOM-START-PORT-CONFLICT-2026-11-12.md",
+    "research/external/nivict-ai-academy/AWE-GROUP/TESTS/OPENCODE-DEPENDENCY-CHECK-PERMISSION-2026-11-12.md",
+    "research/r1-kortix/EVIDENCE-LEDGER.md",
+    "research/r1-kortix/FINAL-REPORT-A-L.md",
+    "research/r1-kortix/RECONCILIATION.md",
+    "research/r1-kortix/SOURCE-INDEX.json",
+    "research/r1-kortix/VERIFICATION.json",
+    "research/r1-kortix/annex/BC.md",
+    "research/r1-kortix/annex/DE.md",
+    "research/r1-kortix/annex/F.md",
+    "research/r1-kortix/annex/G.md",
+    "research/r1-kortix/annex/M.md",
+    "research/r1-kortix/authenticated/AUTHENTICATED-DELTA.md",
+    "research/r1-kortix/evidence/opencode-audit.md",
+    "research/r1-kortix/evidence/previous/B-NOX-AS-IS-SOURCE-AUDIT.md",
+    "research/r1-kortix/evidence/previous/D-TOOLS-CONNECTORS-LIBRARIAN.md",
+    "research/r1-kortix/evidence/previous/E-KNOWLEDGE-INGESTION.md",
+    "research/r1-kortix/evidence/previous/F-SKILL-LIFECYCLE.md",
+    "research/r1-kortix/evidence/previous/G-CAPABILITY-PACKS.md",
+    "research/r1-kortix/evidence/previous/K-OPENCODE-READY-IMPLEMENTATION-PACK.md",
+    "research/r1-kortix/evidence/previous/L-OWNER-DECISIONS-AND-UNKNOWN.md",
+    "research/r1-kortix/evidence/previous/M-SOURCES-AND-EVIDENCE-APPENDIX.md",
+    "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+    "research/r1-kortix/evidence/previous/awe-nox-opencode-backlog.md",
+    "research/r1-kortix/evidence/previous/spec.md",
+    "research/r1-kortix/index.md",
+    "research/r1-kortix/primary/checks.json",
+    "research/r1-kortix/primary/composio_mastra.json",
+    "research/r1-kortix/primary/mastra_core.json",
+    "research/r1-kortix/primary/mastra_libsql.json",
+    "research/r1-kortix/primary/mastra_mcp.json",
+    "research/r1-kortix/primary/mastra_memory.json",
+    "research/r1-kortix/primary/playwright_mcp.json",
+    "research/r1-kortix/review/INDEPENDENT-REVIEW.md",
+    "src/agents/head-agent.ts",
+    "src/agents/prompt-master.ts",
+    "src/agents/qa-agent.ts",
+    "src/agents/specialists.ts",
+    "src/capabilities/web-product.ts",
+    "src/config/mcp.ts",
+    "src/memory/index.ts",
+    "src/tests/head-plan-parse.test.ts",
+    "src/tests/probe-usage.ts",
+    "src/tests/qa-batch-review.test.ts",
+    "src/tests/r0-closure-adapters.test.ts",
+    "src/tests/r0-final-production-intent.test.ts",
+    "src/tests/r0-final-recursion.test.ts",
+    "src/tests/r0-final-tools.test.ts",
+    "src/tests/r0-reqa-adapters.test.ts",
+    "src/tests/r2-verified-experience.test.ts",
+    "src/tools/browser.ts",
+    "src/tools/csv-analytics.ts",
+    "src/tools/index.ts",
+    "src/tools/manus-search.ts",
+    "src/tools/ti-search.ts",
+    "src/tools/ucl-search.ts",
+    "src/ucl-mcp/main.ts",
+    "ti-service/README.md",
+    "ti-service/awe_ti/adapters.py",
+    "ti-service/awe_ti/api.py",
+    "ti-service/awe_ti/collectors/README.md",
+    "ti-service/awe_ti/collectors/public.py",
+    "ti-service/awe_ti/collectors/runner.py",
+    "ti-service/awe_ti/collectors/telegram_api.py",
+    "ti-service/awe_ti/config.py",
+    "ti-service/awe_ti/db.py",
+    "ti-service/awe_ti/ingest.py",
+    "ti-service/awe_ti/intelligence.py",
+    "ti-service/awe_ti/models.py",
+    "ti-service/awe_ti/network.py",
+    "ti-service/awe_ti/source_evaluation.py",
+    "ti-service/awe_ti/sources.py",
+    "ti-service/compose.yaml",
+    "ti-service/exports/sources.json",
+    "ti-service/research/GitHubRadar_research.json",
+    "ti-service/research/GitHubRadar_research.md",
+    "ti-service/research/additional_sources.json",
+    "ti-service/research/additional_sources.md",
+    "ti-service/research/iirepresent_research.json",
+    "ti-service/research/iirepresent_research.md",
+    "ti-service/research/sachkov_blog_research.json",
+    "ti-service/research/sachkov_blog_research.md",
+    "ti-service/scripts/intelligence_tick.py"
+  ],
+  "note": "No matched credential values or addresses are included. Findings require contextual review; fixtures are not live credentials."
+}

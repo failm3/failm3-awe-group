@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: D7 production standalone executeSpecialist delegate carries call AND session cancellation
+ok 1 - D7 production standalone executeSpecialist delegate carries call AND session cancellation
+  ---
+  duration_ms: 26.854053
+  type: 'test'
+  ...
+# Subtest: D9 omitted tools inherit; explicit [] denies all in legacy, children and request defaults
+ok 2 - D9 omitted tools inherit; explicit [] denies all in legacy, children and request defaults
+  ---
+  duration_ms: 17.307953
+  type: 'test'
+  ...
+# Subtest: D9 production child with explicit [] cannot invoke an ambient write
+ok 3 - D9 production child with explicit [] cannot invoke an ambient write
+  ---
+  duration_ms: 13.718251
+  type: 'test'
+  ...
+# Subtest: trusted node-aware model choice reaches a real recursive child and its ledger/model admission target
+ok 4 - trusted node-aware model choice reaches a real recursive child and its ledger/model admission target
+  ---
+  duration_ms: 19.704153
+  type: 'test'
+  ...
+# Subtest: top-level cap is charged exactly once and reset/resume never replenishes it
+ok 5 - top-level cap is charged exactly once and reset/resume never replenishes it
+  ---
+  duration_ms: 277.377972
+  type: 'test'
+  ...
+# Subtest: concurrent nested and top-level work share atomic cap without double counting
+ok 6 - concurrent nested and top-level work share atomic cap without double counting
+  ---
+  duration_ms: 4.696394
+  type: 'test'
+  ...
+# Subtest: cross-process top-level reservations cannot jointly exceed mission budget
+ok 7 - cross-process top-level reservations cannot jointly exceed mission budget
+  ---
+  duration_ms: 583.855385
+  type: 'test'
+  ...
+# Subtest: real manager Head plan refuses top-level effect 13 before executing it
+ok 8 - real manager Head plan refuses top-level effect 13 before executing it
+  ---
+  duration_ms: 62.177917
+  type: 'test'
+  ...
+# Subtest: second real manager attempt after timeout cannot replenish reserved slots
+ok 9 - second real manager attempt after timeout cannot replenish reserved slots
+  ---
+  duration_ms: 1217.650159
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2228.8722

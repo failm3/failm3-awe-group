@@ -1,0 +1,10 @@
+{
+  "expected_body_bytes": 452,
+  "actual_file_bytes": 1290,
+  "body_prefix_matches": true,
+  "expected_body": "# Observation Digest\n\n- Source: Lumen Harbor field pilot\n- Period: 2026-W45\n- Input rows: 3\n\n## Totals\n\n| Metric | Value |\n| --- | ---: |\n| row_count | 3 |\n| scheduled | 30 |\n| completed | 26 |\n| incidents | 6 |\n| completion_percent | 86.67 |\n\n## Per-site totals\n\n| Site | rows | scheduled | completed | incidents | completion_percent |\n| --- | ---: | ---: | ---: | ---: | ---: |\n| North | 2 | 22 | 18 | 5 | 81.82 |\n| South | 1 | 8 | 8 | 1 | 100.00 |\n\n",
+  "actual_body": "# Observation Digest\n\n- Source: Lumen Harbor field pilot\n- Period: 2026-W45\n- Input rows: 3\n\n## Totals\n\n| Metric | Value |\n| --- | ---: |\n| row_count | 3 |\n| scheduled | 30 |\n| completed | 26 |\n| incidents | 6 |\n| completion_percent | 86.67 |\n\n## Per-site totals\n\n| Site | rows | scheduled | completed | incidents | completion_percent |\n| --- | ---: | ---: | ---: | ---: | ---: |\n| North | 2 | 22 | 18 | 5 | 81.82 |\n| South | 1 | 8 | 8 | 1 | 100.00 |\n\n",
+  "method_section_present": true,
+  "method_steps_documented": true,
+  "reproduce_command_documented": true
+}

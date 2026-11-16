@@ -1,0 +1,85 @@
+{
+  "id": "r2-final-transfer-1794798010397-t33-on",
+  "title": "Separated record parser 33 ON",
+  "description": "Controlled fresh parser repair",
+  "objective": "Repair core/decoder.cjs so decodeSeparated implements the complete local FORMAT.md specification.",
+  "acceptance_criteria": [
+    "The assigned CommonJS module exports its required function",
+    "The implementation satisfies all of FORMAT.md, not just visible examples",
+    "The unmodified visible test executes successfully"
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-16T06:47:02.494Z",
+  "updated_at": "2026-11-16T06:50:05.445Z",
+  "artifacts": [],
+  "metadata": {
+    "specification": {
+      "title": "Separated record parser 33 ON",
+      "objective": "Repair core/decoder.cjs so decodeSeparated implements the complete local FORMAT.md specification.",
+      "scope": "Work only in this fresh mission workspace. Read FORMAT.md and visible.test.cjs. Repair the assigned module and run the visible test. No packages, network, external files, delegation, or test modifications.",
+      "acceptance_criteria": [
+        "The assigned CommonJS module exports its required function",
+        "The implementation satisfies all of FORMAT.md, not just visible examples",
+        "The unmodified visible test executes successfully"
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "shell",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "coder"
+      ],
+      "estimated_complexity": "simple",
+      "risks": [
+        "Visible tests are intentionally tiny; the complete documented grammar and semantics are required"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-16T06:47:02.497Z",
+      "spec_hash": "bb813a7956d2899c309fce58de3d4107f0b017724647db4215edb54f21c3ca63",
+      "snapshot": {
+        "mission_id": "r2-final-transfer-1794798010397-t33-on",
+        "title": "Separated record parser 33 ON",
+        "description": "Controlled fresh parser repair",
+        "objective": "Repair core/decoder.cjs so decodeSeparated implements the complete local FORMAT.md specification.",
+        "acceptance_criteria": [
+          "The assigned CommonJS module exports its required function",
+          "The implementation satisfies all of FORMAT.md, not just visible examples",
+          "The unmodified visible test executes successfully"
+        ],
+        "specification": {
+          "title": "Separated record parser 33 ON",
+          "objective": "Repair core/decoder.cjs so decodeSeparated implements the complete local FORMAT.md specification.",
+          "scope": "Work only in this fresh mission workspace. Read FORMAT.md and visible.test.cjs. Repair the assigned module and run the visible test. No packages, network, external files, delegation, or test modifications.",
+          "acceptance_criteria": [
+            "The assigned CommonJS module exports its required function",
+            "The implementation satisfies all of FORMAT.md, not just visible examples",
+            "The unmodified visible test executes successfully"
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_list",
+            "file_write",
+            "shell",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "coder"
+          ],
+          "estimated_complexity": "simple",
+          "risks": [
+            "Visible tests are intentionally tiny; the complete documented grammar and semantics are required"
+          ]
+        }
+      }
+    },
+    "visible_test_sha256": "2d1c14183802950a6be2b71fc0d8c1d651a9a474dba386a0e2b19b470aadf761"
+  },
+  "_rev": 4
+}

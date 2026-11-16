@@ -1,0 +1,27 @@
+{
+  "source": "Lumen Harbor field pilot",
+  "period": "2026-W45",
+  "observations": [
+    {
+      "site": "North",
+      "cohort": "Harbor",
+      "scheduled": 12,
+      "completed": 11,
+      "incidents": 2
+    },
+    {
+      "site": "South",
+      "cohort": "Harbor",
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1
+    },
+    {
+      "site": "North",
+      "cohort": "Ridge",
+      "scheduled": 10,
+      "completed": 7,
+      "incidents": 3
+    }
+  ]
+}

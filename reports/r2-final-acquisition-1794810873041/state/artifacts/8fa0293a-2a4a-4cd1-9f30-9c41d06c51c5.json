@@ -1,0 +1,13 @@
+{
+  "id": "8fa0293a-2a4a-4cd1-9f30-9c41d06c51c5",
+  "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "type": "file",
+  "name": "qa/nox-qa-verify.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/qa/nox-qa-verify.py",
+  "created_at": "2026-11-16T06:53:18.621Z",
+  "metadata": {
+    "size_bytes": 13364,
+    "sha256": "408380ed3af81dde847bef3f3c3811102331c8419f691e37645cf0e54fbd3804",
+    "revision": 1
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "saved_at": "2026-11-14T00:31:17.465Z",
+  "total_agents": 3,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a:top0",
+      "role": "coder",
+      "task": "Author and persist the static task tracker source tree in the mission workspace under product/. Create exactly these four files: product/index.html, product/styles.css, product/app.js and product/favicon.svg. Do not create any other file. Read each file back and list the product/ tree to confirm the contents. Then register each of the four files with save_artifact.\n\nREQUIRED MARKUP (index.html):\n- UTF-8 HTML5 document with <html lang=\"en\">, <meta charset=\"utf-8\">, <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> and <title>Task tracker</title>.\n- <link rel=\"icon\" href=\"favicon.svg\" type=\"image/svg+xml\">, <link rel=\"stylesheet\" href=\"styles.css\"> and <script src=\"app.js\" defer></script>. Use relative paths only.\n- Exactly one heading: <h1>Task tracker</h1>. Use no other heading elements anywhere.\n- A <form> containing <label for=\"new-task\">New task</label>, <input id=\"new-task\" type=\"text\" autocomplete=\"off\"> and <button type=\"submit\">Add task</button>. The form submit event gives both button-click and Enter submission.\n- <label for=\"filter\">Filter tasks</label> followed by a <select id=\"filter\"> with options value=\"all\" (text All, selected by default), value=\"active\" (text Active) and value=\"completed\" (text Completed).\n- <ul id=\"tasks\" aria-label=\"Tasks\"></ul>, present and empty at initial load.\n- No inline <script> or <style>, no style= attributes, no on* handler attributes and no <base> tag. The page must not trigger CSP violations under a strict self-only policy.\n\nREQUIRED BEHAVIOR (app.js, a plain classic script with no imports):\n- State is an array of {id, text, completed}. Persist it to localStorage under a single fixed key as JSON. Load it on start. If the stored value is missing or invalid JSON, or localStorage throws, fall back to an empty array without logging console errors.\n- On submit: call preventDefault, trim the input value, and if the result is empty or whitespace-only do nothing except keep focus. Otherwise append a new task with completed=false and a unique id (incrementing counter or Date.now plus counter; never use the text as the identity, because duplicate texts must be supported). Save, clear the input, re-render, and return focus to the input.\n- Rendering: clear the list, then for each task visible under the current filter, create <li> containing:\n  (a) <input type=\"checkbox\"> with aria-label set to 'Complete ' + text and checked bound to completed. A change event toggles completed in both directions, then saves and re-renders.\n  (b) a <span> whose textContent is the exact trimmed task text.\n  (c) <button type=\"button\"> with visible text 'Delete' and aria-label set to 'Delete ' + text. A click removes only the task with that id, then saves and re-renders.\n  Build every node with createElement and set text with textContent or setAttribute only. Never use innerHTML, insertAdjacentHTML, document.write or eval, so text like <b>x</b> & \"q\" renders literally.\n- Filter: all shows every task, active shows only completed=false, completed shows only completed=true. A change event on the select re-renders. The filter value does not need to persist, and on reload it starts as 'all'.\n- Text, completion state and deletions must all survive a page reload.\n- No fetch, XMLHttpRequest, WebSocket, EventSource, Worker, SharedWorker, ServiceWorker, iframe, object, embed, import() or sendBeacon. No console.error or console.warn calls. No uncaught exceptions. The file must pass node --check.\n\nREQUIRED STYLES (styles.css):\n- *, *::before, *::after { box-sizing: border-box }. Body margin 0 with padding, plus a centered main container with max-width around 40rem and width 100%.\n- Form and filter rows use flex with flex-wrap: wrap. The input uses flex: 1 1 12rem with min-width: 0.\n- List items use display flex, align-items center, gap and flex-wrap. The text span uses flex: 1 1 auto, min-width: 0 and overflow-wrap: anywhere so long unbroken text cannot overflow.\n- Completed items may use line-through on the span only.\n- Visible :focus-visible outlines. Controls must stay visible, with no display:none or visibility:hidden on them. No fixed widths larger than 375px, and no horizontal overflow at either 375px or 1280px viewport width.\n- No @import, no url(), and no web fonts. Use system font stacks only.\n\nREQUIRED ICON (favicon.svg):\n- Small, valid, UTF-8 local SVG, for example <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\"><rect width=\"16\" height=\"16\" rx=\"3\" fill=\"#2b6cb0\"/></svg>. Keep it minimal.\n- Do NOT include an xmlns attribute or any other http/https URL string. The contract forbids external URL literals anywhere in source, and the namespace URI string would match that rule.\n\nNETWORK/LITERAL RULE FOR ALL FILES:\n- No occurrence of 'http:', 'https:', 'ws:', 'wss:' or a protocol-relative '//' URL in any file. This applies to comments, the doctype, SVG namespaces and JS strings. Use the plain <!DOCTYPE html> doctype.\n- No data: or blob: URLs. Every resource reference must be a relative path to a file inside product/.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-fable-5-2",
+      "tools_used": [
+        "file_write",
+        "file_read",
+        "file_list",
+        "save_artifact"
+      ],
+      "duration_ms": 102494
+    },
+    {
+      "id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a:top1",
+      "role": "executor",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MAJOR] No r1-static-task-tracker-v1 verifier result is present. Criterion 2 requires an actual PASS for the exact persisted tree. The solver correctly made no PASS claim.\n[MINOR] Toggling a checkbox or clicking Delete calls render(), which rebuilds every list item. Keyboard focus therefore drops to the document body after each toggle or delete. This may break a bounded keyboard scenario that continues from the focus",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 192867
+    },
+    {
+      "id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a:top2",
+      "role": "executor",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[CRITICAL] The verifier receipt does not match the current persisted tree. The recorded app.js size (5328 bytes) and tree hash predate the repair-1 rewrite of app.js, so PASS cannot be credited to the exact persisted product tree.\n[MAJOR] A duplicate root-level app.js artifact (Artifact 6) was registered outside product/. This violates the scope exclusion against duplicate root-level files and unrelated artifacts.\n[M",
+      "depth": 0,
+      "parent_id": null,
+      "status": "failed",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 210977,
+      "note": "aborted"
+    }
+  ]
+}

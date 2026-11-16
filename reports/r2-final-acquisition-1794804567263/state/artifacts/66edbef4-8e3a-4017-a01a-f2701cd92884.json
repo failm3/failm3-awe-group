@@ -1,0 +1,14 @@
+{
+  "id": "66edbef4-8e3a-4017-a01a-f2701cd92884",
+  "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+  "type": "text",
+  "name": "probe_digest.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe_digest.md",
+  "content": "# Observation digest — Lumen Harbor field pilot (2026-W45)\n\n## Totals\n\n| Metric | Value |\n| --- | --- |\n| Rows | 3 |\n| Scheduled | 30 |\n| Completed | 26 |\n| Incidents | 6 |\n| Completion % | 86.67 |\n\n## By site\n\n| Site | Rows | Scheduled | Completed | Incidents | Completion % |\n| --- | --- | --- | --- | --- | --- |\n| North | 2 | 22 | 18 | 5 | 81.82 |\n| South | 1 | 8 | 8 | 1 | 100.00 |\n\n## Method\n\nReproducible and arithmetic-checkable:\n\n1. Read every element of `observations` in the source fixture, in file order.\n2. `row_count` is the length of that array.\n3. `scheduled`, `completed` and `incidents` are plain sums of the like-named integer field over all rows.\n4. `completion_percent = round(completed * 10000 / scheduled) / 100`, i.e. completed/scheduled as a percentage rounded to exactly two decimals using integer arithmetic (no floating-point drift, ties rounded away from zero). A site with zero scheduled rows reports 0.00.\n5. The `sites` object groups rows by the `site` field, sorted by site name; each site carries its own `rows`, `scheduled`, `completed`, `incidents` and two-decimal `completion_percent` computed by the same rule. Site totals are independent sums, not apportioned from the grand total.\n6. Percentages are rendered with `toFixed(2)` in this document; in `digest.json` they are JSON numbers rounded to two decimals.\n\nCross-check: the sum of per-site `scheduled`/`completed`/`incidents` equals the grand totals, because both are sums over the same rows.\n",
+  "created_at": "2026-11-16T04:53:40.362Z",
+  "metadata": {
+    "size_bytes": 1488,
+    "sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+    "revision": 1
+  }
+}

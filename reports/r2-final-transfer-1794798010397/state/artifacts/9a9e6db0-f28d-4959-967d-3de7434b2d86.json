@@ -1,0 +1,14 @@
+{
+  "id": "9a9e6db0-f28d-4959-967d-3de7434b2d86",
+  "mission_id": "r2-final-transfer-1794798010397-t29-on",
+  "type": "file",
+  "name": "visible.test.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t29-on/visible.test.cjs",
+  "created_at": "2026-11-16T06:20:28.631Z",
+  "metadata": {
+    "size_bytes": 333,
+    "sha256": "deb76399f5c4a7f624a82d1ff5e647e3a25e9d7471216f8d76270532d91d26f7",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "f295f143-3a64-42d9-9a5b-bf1e34c433b4",
+  "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-analytics",
+  "role": "writer",
+  "model": "claude-sonnet-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T04:00:47.051Z",
+  "finished_at": null,
+  "status": "started",
+  "outcome": "UNKNOWN",
+  "usage": {
+    "input_tokens": "UNKNOWN",
+    "output_tokens": "UNKNOWN",
+    "total_tokens": "UNKNOWN",
+    "reasoning_tokens": "UNKNOWN",
+    "cached_input_tokens": "UNKNOWN"
+  },
+  "usage_status": "UNKNOWN",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

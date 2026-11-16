@@ -1,0 +1,135 @@
+{
+  "harness": "verify/conformance.py",
+  "procedure_under_test": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs",
+    "sha256": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+    "declared_sha256": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db"
+  },
+  "purpose": "Independent behavioural qualification of the pinned procedure against a separate Python reference, covering half-up rounding ties, the scheduled=0 site, code-point site ordering, multi-row aggregation and malformed-input rejection. This replaces self-attested qualification with reproducible third-party test evidence.",
+  "checks": [
+    {
+      "check": "precondition: procedure sha256 equals the declared qualified hash",
+      "pass": true,
+      "detail": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db"
+    },
+    {
+      "check": "every numeric case matches the independent Python reference exactly",
+      "pass": true,
+      "detail": "5/5 cases matched"
+    },
+    {
+      "check": "digest.md renders global completion_percent at 2dp in every numeric case",
+      "pass": true,
+      "detail": "tie_1_of_32=True; thirds=True; zero_scheduled_site=True; codepoint_order=True; multirow_aggregation=True"
+    },
+    {
+      "check": "digest.md per-site rows match the reference at 2dp in every numeric case",
+      "pass": true,
+      "detail": "tie_1_of_32=True; thirds=True; zero_scheduled_site=True; codepoint_order=True; multirow_aggregation=True"
+    },
+    {
+      "check": "malformed fixtures are rejected with exit code 2",
+      "pass": true,
+      "detail": "reject_completed_gt_scheduled=exit 2; reject_negative=exit 2; reject_empty_observations=exit 2; reject_string_count=exit 2; reject_missing_site=exit 2"
+    },
+    {
+      "check": "scratch directory removed; no probe output directories left behind",
+      "pass": true,
+      "detail": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/.conformance-scratch"
+    }
+  ],
+  "cases": [
+    {
+      "case": "tie_1_of_32",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "exit_code_matches": true,
+      "stderr_excerpt": "",
+      "diffs": {},
+      "matches_reference": true,
+      "md_global_2dp_present": true,
+      "md_site_rows_present": true
+    },
+    {
+      "case": "thirds",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "exit_code_matches": true,
+      "stderr_excerpt": "",
+      "diffs": {},
+      "matches_reference": true,
+      "md_global_2dp_present": true,
+      "md_site_rows_present": true
+    },
+    {
+      "case": "zero_scheduled_site",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "exit_code_matches": true,
+      "stderr_excerpt": "",
+      "diffs": {},
+      "matches_reference": true,
+      "md_global_2dp_present": true,
+      "md_site_rows_present": true
+    },
+    {
+      "case": "codepoint_order",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "exit_code_matches": true,
+      "stderr_excerpt": "",
+      "diffs": {},
+      "matches_reference": true,
+      "md_global_2dp_present": true,
+      "md_site_rows_present": true
+    },
+    {
+      "case": "multirow_aggregation",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "exit_code_matches": true,
+      "stderr_excerpt": "",
+      "diffs": {},
+      "matches_reference": true,
+      "md_global_2dp_present": true,
+      "md_site_rows_present": true
+    },
+    {
+      "case": "reject_completed_gt_scheduled",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "exit_code_matches": true,
+      "stderr_excerpt": "observation-digest-v1: observations[0]: completed (2) exceeds scheduled (1)\nusage: node observation_digest_v1.mjs <observations.json> <output-dir>"
+    },
+    {
+      "case": "reject_negative",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "exit_code_matches": true,
+      "stderr_excerpt": "observation-digest-v1: observations[0].completed must be a non-negative integer, received -1\nusage: node observation_digest_v1.mjs <observations.json> <output-dir>"
+    },
+    {
+      "case": "reject_empty_observations",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "exit_code_matches": true,
+      "stderr_excerpt": "observation-digest-v1: fixture must contain a non-empty \"observations\" array\nusage: node observation_digest_v1.mjs <observations.json> <output-dir>"
+    },
+    {
+      "case": "reject_string_count",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "exit_code_matches": true,
+      "stderr_excerpt": "observation-digest-v1: observations[0].scheduled must be a non-negative integer, received \"5\"\nusage: node observation_digest_v1.mjs <observations.json> <output-dir>"
+    },
+    {
+      "case": "reject_missing_site",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "exit_code_matches": true,
+      "stderr_excerpt": "observation-digest-v1: observations[0].site must be a non-empty string\nusage: node observation_digest_v1.mjs <observations.json> <output-dir>"
+    }
+  ],
+  "all_passed": true,
+  "failures": []
+}

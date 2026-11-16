@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "score": 9,
+  "criteria_results": [
+    {
+      "criterion": "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+      "passed": true,
+      "notes": "metrics.json contains exactly the required top-level keys with numeric values: row_count 6, scheduled_hours 59, completed_hours 53, incidents 9, completion_percent 89.83, and districts as an object keyed North/South/West. I re-derived the arithmetic from the 6-row CSV: scheduled 12+8+10+14+6+9=59, completed 11+8+7+13+5+9=53, incidents 2+1+3+0+2+1=9, 53/59*100=89.8305->89.83; North 22/18/5->81.82, South 14/13/3->92.86, West 23/22/1->95.65 — all correct, all reconcile to global totals. No metric is a quoted string; the only string occurrences are descriptive text inside columns/method/notes documentation, which is appropriate. method block records input path, input sha256, parsing rule, per-formula derivations, district grouping rule, ROUND_HALF_UP rounding and a three-way cross-check (python csv, awk, coreutils) — a genuinely reproducible method. dashboard.html renders every percentage at two decimals (89.83%, 81.82%, 92.86%, 95.65%) and the legend range descriptor that previously read 0-100% was reworded during the design pass."
+    },
+    {
+      "criterion": "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+      "passed": true,
+      "notes": "dashboard.html (11123 bytes, revision 4) is a single file with inline CSS only: no http(s) reference, no <script>, no <link rel=stylesheet>, no src=, no @import and no url() — gradients are pure CSS colour stops. All five top-level metrics appear (row_count 6, 59 h, 53 h, 9 incidents, 89.83% with a proportional track) plus a district table showing shifts, scheduled, completed, incidents and completion % per district with bars, and a totals row that reconciles 2+2+2=6, 14+23+22=59, 13+22+18=53, 3+1+5=9. Layout is fixed at a 1280x720 canvas with a layered header/KPI/panel/footer structure, so it is polished rather than a raw data dump."
+    },
+    {
+      "criterion": "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page.",
+      "passed": true,
+      "notes": "The approved procedure /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs (sha256 efc3bcb5…, matching the recorded acquisition) was invoked with verbatim absolute paths and no substitution; the capability-observation.json documents a probe-verified run rather than documentation-only claims. Geometry was verified from IHDR bytes (struct.unpack -> 1280 x 720, bit depth 8, colour type 2, IEND present, IDAT inflate = 720*3841 exactly) and independently by file(1). Content was verified by full PNG filter reversal: 6038 distinct colours, mean luma 34.42, 28911 bright pixels (3.137%) spread across 11 structured bands, 9773 accent-green pixels, zero bright pixels in the 8px edge strips (no clipping) — a rendered dark dashboard, not a uniform Chromium error screen; stdout title is the dashboard's own with no error markers. After the repair stamp correction the file was re-rendered to dashboard.png sha256 34375951… (134004 bytes), and the repair pass reports the re-render as byte-identical across two attempts at the same 1280x720 geometry."
+    }
+  ],
+  "defects": [
+    {
+      "issue": "render-verification.txt (12414 bytes) documents the pre-repair dashboard.png sha256 ad132c2c…/133960 bytes, but the delivered dashboard.png after repair is sha256 34375951…/134004 bytes. The verification report was not regenerated after the one-character stamp fix, so a reader comparing the report to the artifact sees a hash mismatch.",
+      "severity": "minor"
+    },
+    {
+      "issue": "Scratch files remain in the artifact set: .tmp-old.html and .tmp-old.png (the latter a byte-identical duplicate of the superseded render), plus .probe-rerender.png duplicating capability-probe.png. The specification asked to keep the artifact set concise and avoid unnecessary scratch outside bounded capability-probe evidence; the repair note said these would be deleted.",
+      "severity": "minor"
+    }
+  ],
+  "recommendations": [
+    "Re-run the byte-level verification against the final dashboard.png (34375951…) and overwrite render-verification.txt so the recorded hash, size and determinism claims match the delivered artifact.",
+    "Remove .tmp-old.html, .tmp-old.png and .probe-rerender.png now that the determinism and diff checks are complete, leaving metrics.json, dashboard.html, dashboard.png, the CSV input and the bounded capability-probe evidence.",
+    "For a follow-up pass, keep the rendered sha256 of dashboard.html's own badge in sync automatically (derive the stamp from the metrics.json hash at generation time) so any later edit cannot leave a stale hash on screen."
+  ],
+  "verdict": "PASS: PASS: All three acceptance criteria are met on the evidence in the artifacts. metrics.json contains the exact required keys with correctly computed numeric values that I re-derived independently from the six-row CSV (59/53/9/89.83, districts 81.82/92.86/95.65, all reconciling), together with a fully specified reproducible method. dashboard.html is self-contained with no external asset references and visibly presents every metric with two-decimal percentages. dashboard.png was produced by the approved Chromium render procedure and verified from raw bytes at exactly 1280x720 with banded, unclipped, legible content and no error-page signature. The only findings are minor housekeeping issues — a stale hash in render-verification.txt after the repair stamp fix, and leftover scratch/diff files — neither of which affects a criterion, so they do not block the mission."
+}

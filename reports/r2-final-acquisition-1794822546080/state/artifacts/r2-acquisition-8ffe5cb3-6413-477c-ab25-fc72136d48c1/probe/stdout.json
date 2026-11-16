@@ -1,0 +1,13 @@
+{
+  "capability": "observation-digest-v1",
+  "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+  "digest_json": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/probe/out/digest.json",
+  "digest_json_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+  "digest_md": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/probe/out/digest.md",
+  "digest_md_sha256": "ff5397227d319b9ecca40ee5acb508f8637ec79ff3e17a8e16870f03425afe91",
+  "row_count": 3,
+  "scheduled": 30,
+  "completed": 26,
+  "incidents": 6,
+  "completion_percent": 86.67
+}

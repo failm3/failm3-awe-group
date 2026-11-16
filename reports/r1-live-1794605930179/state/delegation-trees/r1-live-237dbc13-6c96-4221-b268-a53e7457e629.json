@@ -1,0 +1,23 @@
+{
+  "mission_id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+  "saved_at": "2026-11-13T21:39:25.268Z",
+  "total_agents": 1,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629:top0",
+      "role": "analyst",
+      "task": "1. Use file_read to read /home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv and inspect its structure. 2. Run csv_analytics on that exact path with expected sha256 dc8688503d27d1b45303147b8e2fe2cf8ef98f2e1d807e38112a1cfe8e9bd645, maxBytes 100000 and maxRows 1000, saving the output as csv-analytics.json in the mission artifact directory. 3. The artifact must contain: the input path and verified sha256; row counts; the exact USD total and the exact EUR total, reported separately as decimal strings computed without floating point; the duplicate count, with the event IDs involved; the pending count; and the counting rules applied, so that any reader can independently reproduce every figure from the raw CSV. 4. If the hash does not match, a limit is exceeded, the input is malformed, or any event ID appears with conflicting field values, do not compute or report totals. In that case, csv_analytics must save csv-analytics.json with status 'blocked', the specific reason, and the offending rows or IDs.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "deepseek-v4-flash",
+      "tools_used": [
+        "file_read",
+        "csv_analytics"
+      ],
+      "duration_ms": 13875
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "receipt_version": "1",
+  "kind": "invocation_receipt",
+  "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "attempt_id": "c38a40ad-d8b7-4de2-b4f6-57d4155f4e14",
+  "capability": "observation-digest-v1",
+  "invoked": true,
+  "invocation_count": 1,
+  "gate_mediated": true,
+  "executable": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/bin/observation-digest-v1.js",
+    "sha256": "8daae21f0617c3ac4e1e178344ff8e1f10be46331bd10d245a302ad1574e6017",
+    "sha256_verification": "performed by the host gate immediately before release; not re-hashed by the executor per gate contract",
+    "modified_by_executor": false
+  },
+  "runtime": {
+    "name": "node",
+    "version": "v22.23.3",
+    "binary_reported_by_procedure": "v22.23.3"
+  },
+  "argv": [
+    "node",
+    "--",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/bin/observation-digest-v1.js",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21"
+  ],
+  "procedure_args_positional_order": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21"
+  ],
+  "argv_notes": "Arg 1 is the input fixture and arg 2 is the workspace root, which the specification designates as the final output directory. No flags, no wrappers, no redirection, no additional commands. The '--' separator is part of the exact fixed command the host gate itself specified and enforced; it terminates node option parsing and is not passed to the procedure.",
+  "working_directory": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "exit_code": 0,
+  "stderr": "",
+  "timing": {
+    "recorded_at_utc_derived": "2026-11-16T11:35:29Z",
+    "basis": "Epoch encoded in the mission report directory name r2-final-acquisition-1794828929614 (1794828929614 ms = 2026-11-16T11:35:29Z), which is a lower bound for this delegation.",
+    "source_note": "Wall-clock time was not directly readable in this session: the shell was gated to the single fixed node command and rejected every other command, and /proc is outside the readable workspace. No attempt was made to obtain the clock by other means, since that would have required a non-gated command."
+  },
+  "outputs": {
+    "digest_json": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/digest.json",
+      "location_role": "mission_workspace_root",
+      "bytes": 477,
+      "sha256": "571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599",
+      "sha256_source": "reported by the qualified procedure at run time from the bytes it had just written"
+    },
+    "digest_md": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/digest.md",
+      "location_role": "mission_workspace_root",
+      "bytes": 1514,
+      "sha256": "cfbdcf29070d8c958529740c803d2ce91d0bf4f9b4d8a770d9192dfdd60599e8",
+      "sha256_source": "reported by the qualified procedure at run time from the bytes it had just written"
+    }
+  },
+  "produced_values": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "sites": {
+      "North": {"row_count": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": 81.82},
+      "South": {"row_count": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": 100}
+    }
+  },
+  "conformance": {
+    "matches_pre_run_expectations": true,
+    "expectation_source": "independent recomputation at acquisition time; used only as an expectation to confirm, never as a value written by hand",
+    "digest_bytes_authored_by_executor": false,
+    "digest_files_edited_or_patched_after_invocation": false,
+    "probe_output_dir_used_as_final_output": false,
+    "fixture_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "fixture_modified": false,
+    "network_used": false,
+    "packages_installed": false,
+    "writes_outside_workspace": false
+  },
+  "procedure_self_checks_reported": [
+    "input_validation",
+    "site_totals_reconcile",
+    "files_reread_and_reverified"
+  ],
+  "prior_attempt_rejected": {
+    "command_form": "node <exe> <input> <workspace>  (no '--' separator)",
+    "exit_code": 2,
+    "stderr": "qualified executable is immutable; only its exact gated command may name it",
+    "outcome": "gate decision, no digest files written",
+    "interpretation": "The gate required the exact fixed form node -- '<exe>' '<input>' '<workspace>'; the one accepted invocation above uses exactly that form."
+  },
+  "evidence_artifacts": [
+    {
+      "artifact_id": "199893ec-5515-4719-b4de-c3220a23742d",
+      "role": "acquisition probe evidence only; not a deliverable"
+    }
+  ]
+}

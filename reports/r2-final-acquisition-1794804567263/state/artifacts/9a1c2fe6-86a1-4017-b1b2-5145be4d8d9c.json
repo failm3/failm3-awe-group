@@ -1,0 +1,14 @@
+{
+  "id": "9a1c2fe6-86a1-4017-b1b2-5145be4d8d9c",
+  "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+  "type": "file",
+  "name": "qa/independent_verify.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/qa/independent_verify.py",
+  "created_at": "2026-11-16T04:59:21.817Z",
+  "metadata": {
+    "size_bytes": 20639,
+    "sha256": "23df1cc870933bccf7b2f20692c6895b6a97a206dfe56691e430a576b3036bd8",
+    "reconciled": true,
+    "revision": 1
+  }
+}

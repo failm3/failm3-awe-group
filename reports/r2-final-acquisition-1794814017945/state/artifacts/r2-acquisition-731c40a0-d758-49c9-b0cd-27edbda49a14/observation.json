@@ -1,0 +1,25 @@
+{
+  "capability": "observation-digest-v1",
+  "status": "available",
+  "detail": "No registered tool provides this capability, and no network or package acquisition was used. A stdlib-only Node procedure was authored locally at the path in acquired. It was probed once against input/pilot.observations.json with a separate probe output directory, not the final args. The probe gave row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67, North 22/18/5 (81.82) and South 8/8/1 (100). I rechecked these totals with a separate Node reduction, and a second run produced byte-identical output. The procedure was authored by this acquisition step and is not a vetted third-party tool. The probe artifacts are evidence only. Final deliverables must come from a fresh invocation with the fixed args.",
+  "acquired": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs",
+  "local_target": {
+    "runtime": "node",
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs",
+    "executable_sha256": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+    "args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14"
+    ],
+    "probe_artifacts": [
+      {
+        "artifact_id": "8aedd026-8171-4151-9de4-3bc4a05404a4",
+        "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+      },
+      {
+        "artifact_id": "606549d2-0543-446a-bb0b-a3b9abded374",
+        "sha256": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2"
+      }
+    ]
+  }
+}

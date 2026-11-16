@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: CSV verifier independently accepts hand-calculated exact amounts and binds all receipt hashes
+ok 1 - CSV verifier independently accepts hand-calculated exact amounts and binds all receipt hashes
+  ---
+  duration_ms: 6.948181
+  type: 'test'
+  ...
+# Subtest: CSV verifier normalizes object order only, retaining exact scalar types and monetary spelling
+ok 2 - CSV verifier normalizes object order only, retaining exact scalar types and monetary spelling
+  ---
+  duration_ms: 3.595001
+  type: 'test'
+  ...
+# Subtest: CSV verifier catches seeded arithmetic, pending, counting, flags and cached-answer defects
+ok 3 - CSV verifier catches seeded arithmetic, pending, counting, flags and cached-answer defects
+  ---
+  duration_ms: 3.22107
+  type: 'test'
+  ...
+# Subtest: CSV verifier checks BLOCKED diagnostics and absence of totals, not unconditional PASS
+ok 4 - CSV verifier checks BLOCKED diagnostics and absence of totals, not unconditional PASS
+  ---
+  duration_ms: 3.052256
+  type: 'test'
+  ...
+# Subtest: CSV verifier independently agrees across quoting, boundaries and invalid-input classes
+ok 5 - CSV verifier independently agrees across quoting, boundaries and invalid-input classes
+  ---
+  duration_ms: 9.777119
+  type: 'test'
+  ...
+# Subtest: CSV verifier fails malformed result envelopes and excessive result JSON closed
+ok 6 - CSV verifier fails malformed result envelopes and excessive result JSON closed
+  ---
+  duration_ms: 5.885093
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 44.166697

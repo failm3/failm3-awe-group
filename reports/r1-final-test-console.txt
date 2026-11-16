@@ -1,0 +1,2046 @@
+
+=== artifact-reconciliation ===
+  ✓ root file is registered
+  ✓ nested HTML is registered with its relative path
+  ✓ nested CSS is registered
+  ✓ nested verification tool is registered
+  ✓ nested screenshot is registered
+  ✓ screenshot type is image
+  ✓ temporary files are ignored
+  ✓ all five real files were found
+  ✓ second reconciliation is idempotent
+  ✓ artifact registry contains no duplicates
+
+passed: 10, failed: 0
+Nested artifact reconciliation regression test passed.
+=== artifact-reconciliation: PASS ===
+
+=== lifecycle-recovery ===
+AWE GROUP — E1-RECOVERY-HOTFIX-01 regression tests
+
+T1 — SIGTERM during a delegation persists progress and pauses the mission
+  ✓ child exited with signal exit code 143
+  ✓ checkpoint written
+  ✓ checkpoint reason is process_exit
+  ✓ checkpoint belongs to the mission
+  ✓ mission paused
+  ✓ log records the signal
+
+T2 — run() writes a checkpoint before any delegation starts
+  ✓ early checkpoint observed before any delegation ran
+  ✓ checkpoint exists
+  ✓ early checkpoint has zero completed delegations
+  ✓ early checkpoint retains the explicitly approved specification hash
+  ✓ child was killed by SIGKILL with no chance to clean up
+
+T3 — mission deadline fires even when it is the only pending handle
+  ✓ process did not exit before the deadline
+  ✓ deadline fired
+
+────────────────────────────────────────────────────────────
+passed: 13, failed: 0
+All recovery regression tests passed.
+=== lifecycle-recovery: PASS ===
+
+=== qa-gate ===
+
+── T1 — regression: production false positive MUST be blocked ──
+  ✓ T1.1 gate blocks the false-positive PASS
+  ✓ T1.2 a placeholder blocker is reported
+  ✓ T1.3 LLM verdict is preserved as advisory
+  ✓ T1.4 blockers are non-empty and human-readable
+
+── T2 — negative: a genuinely complete mission MUST pass ──
+  ✓ T2.1 gate passes a complete mission
+  ✓ T2.2 no blockers reported
+
+── T3 — negative: an unevaluated criterion MUST block ──
+  ✓ T3.1 gate blocks when a criterion is unevaluated
+  ✓ T3.2 blocker names the unevaluated criterion
+  ✓ T3.3 criterion_checks records the failure
+
+── T4 — negative: a failed criterion MUST block even with a high score ──
+  ✓ T4.1 gate blocks a failed criterion at score 10
+  ✓ T4.2 blocker identifies the failed criterion
+
+── T5 — negative: major/critical defects MUST block ──
+  ✓ T5.1 gate blocks on a major defect
+  ✓ T5.2 blocker quotes the defect
+
+── T6 — negative: a low score MUST block ──
+  ✓ T6.1 gate blocks a score below the threshold
+  ✓ T6.2 blocker mentions the threshold
+
+── T7 — negative: a FAIL verdict MUST never be upgraded ──
+  ✓ T7.1 gate keeps a FAIL as FAIL
+  ✓ T7.2 blocker records the LLM FAIL
+
+── T8 — placeholder detection ──
+  ✓ T8.1 detects 'Pending transcription'
+  ✓ T8.2 detects 'placeholder'
+  ✓ T8.3 detects 'TODO'
+  ✓ T8.4 does not flag clean text
+  ✓ T8.5 no false positive on the word 'todos' inside another word
+  ✓ T8.6 marker list is non-empty
+
+── T9 — criterion matching robustness ──
+  ✓ T9.1 all three criteria matched
+  ✓ T9.2 matching survives paraphrasing
+  ✓ T9.3 similarity is bounded and monotone
+
+── T10 — deliverable presence checks ──
+  ✓ T10.1 image deliverable detected
+  ✓ T10.2 url deliverable detected
+  ✓ T10.3 missing image deliverable is reported
+  ✓ T10.4 missing url deliverable is reported
+
+============================================================
+QA GATE REGRESSION TESTS: 30 passed, 0 failed
+============================================================
+=== qa-gate: PASS ===
+
+=== r0-closure-adapters ===
+TAP version 13
+# Subtest: MCP: transient availability is retryable, while positive availability caches
+ok 1 - MCP: transient availability is retryable, while positive availability caches
+  ---
+  duration_ms: 2.154794
+  type: 'test'
+  ...
+# Subtest: MCP: sole abort awaits late discovery AND deferred disconnect, then remains retryable
+ok 2 - MCP: sole abort awaits late discovery AND deferred disconnect, then remains retryable
+  ---
+  duration_ms: 23.217137
+  type: 'test'
+  ...
+# Subtest: MCP: non-cooperative discovery stays unsettled after disconnect, and rejected/empty discovery retries
+ok 3 - MCP: non-cooperative discovery stays unsettled after disconnect, and rejected/empty discovery retries
+  ---
+  duration_ms: 36.3684
+  type: 'test'
+  ...
+# Subtest: browser: shared discovery has independent caller cancellation and no cross-caller rejection
+ok 4 - browser: shared discovery has independent caller cancellation and no cross-caller rejection
+  ---
+  duration_ms: 33.530109
+  type: 'test'
+  ...
+# Subtest: browser: last-abort/noncooperative behavior is honest; rejected/empty results retry; positive map caches
+ok 5 - browser: last-abort/noncooperative behavior is honest; rejected/empty results retry; positive map caches
+  ---
+  duration_ms: 32.072213
+  type: 'test'
+  ...
+# Subtest: web_fetch: abort destroys transport, late response-end is inert, and no request/fallback follows
+ok 6 - web_fetch: abort destroys transport, late response-end is inert, and no request/fallback follows
+  ---
+  duration_ms: 22.977037
+  type: 'test'
+  ...
+# Subtest: web_fetch: success callback followed by abort before continuation cannot return delayed success
+ok 7 - web_fetch: success callback followed by abort before continuation cannot return delayed success
+  ---
+  duration_ms: 6.143483
+  type: 'test'
+  ...
+# Subtest: web_extract: abort destroys transport, late response-end is inert, and no request/fallback follows
+ok 8 - web_extract: abort destroys transport, late response-end is inert, and no request/fallback follows
+  ---
+  duration_ms: 17.646852
+  type: 'test'
+  ...
+# Subtest: web_extract: success callback followed by abort before continuation cannot return delayed success
+ok 9 - web_extract: success callback followed by abort before continuation cannot return delayed success
+  ---
+  duration_ms: 5.822084
+  type: 'test'
+  ...
+# Subtest: HTTP: abort during noncooperative DNS settles without connecting after late answers
+ok 10 - HTTP: abort during noncooperative DNS settles without connecting after late answers
+  ---
+  duration_ms: 22.581439
+  type: 'test'
+  ...
+# Subtest: SSRF: public names resolving to private/reserved IPv4 and IPv6 never construct transport
+ok 11 - SSRF: public names resolving to private/reserved IPv4 and IPv6 never construct transport
+  ---
+  duration_ms: 3.93929
+  type: 'test'
+  ...
+# Subtest: SSRF: redirect targets are resolved/rejected before a second connection
+ok 12 - SSRF: redirect targets are resolved/rejected before a second connection
+  ---
+  duration_ms: 6.709282
+  type: 'test'
+  ...
+# Subtest: SSRF: allowed mocked public path pins the validated address and preserves header/body behavior
+ok 13 - SSRF: allowed mocked public path pins the validated address and preserves header/body behavior
+  ---
+  duration_ms: 7.001481
+  type: 'test'
+  ...
+# Subtest: stale ownership after asynchronous DNS prevents fetch/extract transport creation
+ok 14 - stale ownership after asynchronous DNS prevents fetch/extract transport creation
+  ---
+  duration_ms: 42.355384
+  type: 'test'
+  ...
+# Subtest: stale ownership after failed primary search prevents fallback transport
+ok 15 - stale ownership after failed primary search prevents fallback transport
+  ---
+  duration_ms: 2.226894
+  type: 'test'
+  ...
+# Subtest: recursive file_list has no helper process and inherits fence/abort controls
+ok 16 - recursive file_list has no helper process and inherits fence/abort controls
+  ---
+  duration_ms: 3.167091
+  type: 'test'
+  ...
+# Subtest: shell exports the resolved AWE_DATA_DIR from any child cwd
+ok 17 - shell exports the resolved AWE_DATA_DIR from any child cwd
+  ---
+  duration_ms: 198.766657
+  type: 'test'
+  ...
+# Subtest: stale ownership before shell durable launch and executable release performs no work
+ok 18 - stale ownership before shell durable launch and executable release performs no work
+  ---
+  duration_ms: 132.649338
+  type: 'test'
+  ...
+# Subtest: escaped setsid descendants cannot perform an effect after shell settlement
+ok 19 - escaped setsid descendants cannot perform an effect after shell settlement
+  ---
+  duration_ms: 1535.062121
+  type: 'test'
+  ...
+# Subtest: process: abort SIGKILL-escalates resistant group, awaits close/quiescence, and no late file is possible
+ok 20 - process: abort SIGKILL-escalates resistant group, awaits close/quiescence, and no late file is possible
+  ---
+  duration_ms: 1174.318509
+  type: 'test'
+  ...
+# Subtest: process: cooperative current-owner helper is itself safe for process-exit wiring
+ok 21 - process: cooperative current-owner helper is itself safe for process-exit wiring
+  ---
+  duration_ms: 1154.823361
+  type: 'test'
+  ...
+# Subtest: process: confirmed SIGKILL owner recovery kills surviving resistant group before returning
+ok 22 - process: confirmed SIGKILL owner recovery kills surviving resistant group before returning
+  ---
+  duration_ms: 2510.020679
+  type: 'test'
+  ...
+# Subtest: process: malformed records fail closed without signalling or deleting evidence
+ok 23 - process: malformed records fail closed without signalling or deleting evidence
+  ---
+  duration_ms: 0.679398
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7392.833692
+[mcp] Failed to discover Playwright MCP tools: Error: ordinary temporary discovery failure
+    at Object.mcpDouble.list (/home/nox/awe-group-cleanroom-20261112/src/tests/r0-closure-adapters.test.ts:309:40)
+    at MCPClient.listTools (r0-closure:mcp:3:95)
+    at Module.getPlaywrightTools (/home/nox/awe-group-cleanroom-20261112/src/config/mcp.ts:255:47)
+    at async TestContext.<anonymous> (/home/nox/awe-group-cleanroom-20261112/src/tests/r0-closure-adapters.test.ts:310:20)
+    at async Test.run (node:internal/test_runner/test:1054:7)
+    at async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+=== r0-closure-adapters: PASS ===
+
+=== r0-closure-core ===
+TAP version 13
+# Subtest: effect-bearing failed repairs pause durably; accept verifies attempt evidence and retry alone repeats
+ok 1 - effect-bearing failed repairs pause durably; accept verifies attempt evidence and retry alone repeats
+  ---
+  duration_ms: 122.675267
+  type: 'test'
+  ...
+# Subtest: pre-effect failed repairs remain bounded, preserve original bytes, and seal terminal failure
+ok 2 - pre-effect failed repairs remain bounded, preserve original bytes, and seal terminal failure
+  ---
+  duration_ms: 36.470201
+  type: 'test'
+  ...
+# Subtest: success then QA timeout resumes the stored plan under paraphrase, concurrent rivals, and repeated terminal attempts
+ok 3 - success then QA timeout resumes the stored plan under paraphrase, concurrent rivals, and repeated terminal attempts
+  ---
+  duration_ms: 133.968136
+  type: 'test'
+  ...
+# Subtest: operator-accepted delegation survives a paraphrased resume with stable identity and no repeated effect
+ok 4 - operator-accepted delegation survives a paraphrased resume with stable identity and no repeated effect
+  ---
+  duration_ms: 24.134235
+  type: 'test'
+  ...
+# Subtest: malformed, unreadable, and wrong-mission checkpoints block before planning/effects and preserve damage
+ok 5 - malformed, unreadable, and wrong-mission checkpoints block before planning/effects and preserve damage
+  ---
+  duration_ms: 383.983156
+  type: 'test'
+  ...
+# Subtest: invalid stored plan hash fails closed before Head or specialist without replacing evidence
+ok 6 - invalid stored plan hash fails closed before Head or specialist without replacing evidence
+  ---
+  duration_ms: 127.191454
+  type: 'test'
+  ...
+# Subtest: absent checkpoint remains a legitimate fresh run
+ok 7 - absent checkpoint remains a legitimate fresh run
+  ---
+  duration_ms: 12.334966
+  type: 'test'
+  ...
+# Subtest: schemas and the real deterministic gate reject missing or blank acceptance evidence
+ok 8 - schemas and the real deterministic gate reject missing or blank acceptance evidence
+  ---
+  duration_ms: 3.83749
+  type: 'test'
+  ...
+# Subtest: manager bypassing schemas cannot start with zero criteria or produce any execution effects
+ok 9 - manager bypassing schemas cannot start with zero criteria or produce any execution effects
+  ---
+  duration_ms: 1.175297
+  type: 'test'
+  ...
+# Subtest: real endpoint ids do not authenticate manufactured same-name or A(index) to B/C(notes) lineage
+ok 10 - real endpoint ids do not authenticate manufactured same-name or A(index) to B/C(notes) lineage
+  ---
+  duration_ms: 101.056025
+  type: 'test'
+  ...
+# Subtest: genuine repair provenance is required and old/new hash-size-byte substitutions fail without replaying original work
+ok 11 - genuine repair provenance is required and old/new hash-size-byte substitutions fail without replaying original work
+  ---
+  duration_ms: 711.502867
+  type: 'test'
+  ...
+# Subtest: completed, failed, and cancelled missions reject late metadata, bytes, writes, and reconciliation
+ok 12 - completed, failed, and cancelled missions reject late metadata, bytes, writes, and reconciliation
+  ---
+  duration_ms: 29.063921
+  type: 'test'
+  ...
+# Subtest: approved-before-running orphan is paused without work, live owners are protected, then resume executes once
+ok 13 - approved-before-running orphan is paused without work, live owners are protected, then resume executes once
+  ---
+  duration_ms: 43.665782
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1746.047155
+=== r0-closure-core: PASS ===
+
+=== r0-closure-interfaces ===
+
+━━━ one-shot explicit approval and durable pending recovery ━━━
+
+━━━ .env precedence includes data roots and provider credentials ━━━
+
+━━━ API listener, authentication and CORS defaults ━━━
+AWE GROUP API server running on http://127.0.0.1:45359
+AWE GROUP API server running on http://127.0.0.1:35801
+
+━━━ API strict recovery resolver, accept evidence and explicit retry ━━━
+AWE GROUP API server running on http://127.0.0.1:43079
+
+━━━ deferred stale API failure cannot overwrite a replacement owner ━━━
+AWE GROUP API server running on http://127.0.0.1:43567
+
+━━━ synchronous runner rejection stays nonterminal and retains ownership evidence ━━━
+AWE GROUP API server running on http://127.0.0.1:44045
+
+r0-closure-interfaces: 94 checks passed
+Offline interface regressions only; no production certification or R0 closure claim.
+=== r0-closure-interfaces: PASS ===
+
+=== r0-closure-process-lifecycle ===
+TAP version 13
+# Subtest: SIGTERM: real manager waits for a resistant registered group before paused state and lease release
+ok 1 - SIGTERM: real manager waits for a resistant registered group before paused state and lease release
+  ---
+  duration_ms: 2701.955071
+  type: 'test'
+  ...
+# Subtest: orphan recovery: malformed process evidence remains preserved and blocks resumable state
+ok 2 - orphan recovery: malformed process evidence remains preserved and blocks resumable state
+  ---
+  duration_ms: 70.264902
+  type: 'test'
+  ...
+# Subtest: direct cancellation after SIGKILL reaps the orphan before cancelled state
+ok 3 - direct cancellation after SIGKILL reaps the orphan before cancelled state
+  ---
+  duration_ms: 2879.50717
+  type: 'test'
+  ...
+# Subtest: SIGKILL: real orphan reconciliation reaps the dead owner's resistant group before publishing paused
+ok 4 - SIGKILL: real orphan reconciliation reaps the dead owner's resistant group before publishing paused
+  ---
+  duration_ms: 3094.524493
+  type: 'test'
+  ...
+# Subtest: terminal-plus-live evidence reopens under retained cancellation ownership
+ok 5 - terminal-plus-live evidence reopens under retained cancellation ownership
+  ---
+  duration_ms: 1273.149301
+  type: 'test'
+  ...
+# Subtest: fatal failure retains ownership and automatically retries transient process settlement
+ok 6 - fatal failure retains ownership and automatically retries transient process settlement
+  ---
+  duration_ms: 3863.319974
+  type: 'test'
+  ...
+# Subtest: checkpoint integrity retains damaged bytes and automatically retries transient process settlement
+ok 7 - checkpoint integrity retains damaged bytes and automatically retries transient process settlement
+  ---
+  duration_ms: 4041.276527
+  type: 'test'
+  ...
+# Subtest: explicit cancellation after checkpoint damage preserves exact bytes through quiescence
+ok 8 - explicit cancellation after checkpoint damage preserves exact bytes through quiescence
+  ---
+  duration_ms: 3422.205082
+  type: 'test'
+  ...
+# Subtest: repeated SIGTERM retries transient failed quiescence without uninstalling handlers
+ok 9 - repeated SIGTERM retries transient failed quiescence without uninstalling handlers
+  ---
+  duration_ms: 1866.379318
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 32566.306176
+=== r0-closure-process-lifecycle: PASS ===
+
+=== r0-final-manager ===
+
+D3.1 — original evidence: only path + sha256 + size + matching bytes completes
+  ✓ control: complete saveArtifactFile evidence completes
+  ✓ inline-only record (no path, no metadata) fails closed into original-delegation recovery
+  ✓ inline-only retained failure names the recovery path
+  ✓ inline content with self-consistent metadata but no backing file is not trusted
+  ✓ path-backed record with metadata {} fails into original-delegation recovery
+  ✓ sha256 without size_bytes fails into original-delegation recovery
+  ✓ size_bytes without sha256 fails into original-delegation recovery
+  ✓ malformed sha256 fails into original-delegation recovery
+  ✓ same-size byte replacement is caught by the hash
+  ✓ size change is caught
+  ✓ inline content that differs from the verified file fails into original-delegation recovery
+  ✓ replacement by a same-bytes symlink fails closed; its refused repair write has no effect
+  ✓ a new ID in prose cannot pass
+
+D3.2 — repair evidence uses the same complete predicate
+  ✓ control: complete repair evidence completes after QA re-review
+  ✓ repair artifact with metadata {} fails with no verified new artifact
+  ✓ repair metadata-less blocker is explicit and critical
+  ✓ repair artifact with only sha256 fails
+  ✓ repair artifact with only size_bytes fails
+  ✓ inline-only repair evidence fails closed
+  ✓ same-size replacement of repair evidence after repair is caught before completion
+  ✓ a new repair ID in prose cannot pass
+
+D3.3 — resumed (checkpointed) evidence is re-verified before completion
+  ✓ control: intact checkpointed evidence completes without re-running
+  ✓ same-size tamper between crash and resume fails (hash)
+  ✓ legacy inline-only record in a checkpoint fails closed
+  ✓ checkpointed path-backed record with stripped metadata fails closed
+  ✓ checkpointed record with sha256 only fails
+  ✓ checkpointed record with size_bytes only fails
+  ✓ checkpoint naming an unregistered artifact id cannot pass
+
+D3.4 — reconciled (unregistered file) evidence is verified too
+  ✓ control: reconciled file is registered with sha256+size and completes
+  ✓ same-size replacement of a reconciled file fails
+  ✓ reconciled record stripped of integrity metadata fails
+  ✓ reconciled record downgraded to inline-only fails
+
+D8.1 — SIGKILL in the effect -> success-checkpoint gap blocks re-execution and completion
+  ✓ owner died by SIGKILL inside the gap
+  ✓ exactly one receipt was appended before the crash
+  ✓ a real artifact was saved before the crash
+  ✓ no success checkpoint exists for the delegation
+  ✓ durable intent was written before execution
+  ✓ orphan reconciliation pauses the dead owner's mission
+  ✓ fresh manager did NOT report completed
+  ✓ fresh receipt sink stayed empty (delegation not executed again)
+  ✓ original receipt count remains exactly one
+  ✓ QA never ran on an unresolved mission
+  ✓ durable ambiguous / recovery-blocked state is surfaced
+  ✓ blocked entry explains the evidence
+  ✓ ambiguity is persisted in the checkpoint
+  ✓ lease released while blocked
+  ✓ a second fresh restart is still blocked and still executes nothing
+  ✓ in-process fresh manager also executes nothing and does not complete
+  ✓ resolution without operator/note is refused
+  ✓ accept without artifact evidence is refused
+  ✓ accept naming an invented artifact id is refused
+  ✓ unknown intent id is refused
+  ✓ refused resolutions leave the mission blocked
+  ✓ explicit accept resolves the last ambiguity
+  ✓ resolution is audited in the mission record
+  ✓ after explicit accept the mission completes without any new execution
+  ✓ completed mission has verified artifacts and no checkpoint
+
+D8.2 — explicit retry is the only way to repeat the effect
+  ✓ setup: crash in gap
+  ✓ blocked before resolution
+  ✓ after explicit retry the delegation runs again exactly once
+
+D8.3 — explicit evidence policy permits only the controlled pre-effect retry
+  ✓ setup: killed before any effect
+  ✓ intent was already durable
+  ✓ explicit evidence policy executes the known pre-effect delegation and completes
+
+D8.4 — cooperative beginEffect marker covers effects that leave no artifact
+  ✓ setup: receipt written, no artifact, SIGKILL
+  ✓ marked effect blocks re-execution
+
+D8.5 — default strict policy blocks unmarked external effects with no local footprint
+  ✓ setup: unmarked receipt with no artifact, SIGKILL
+  ✓ default resume is blocked and executes nothing
+
+D8.5b — default strict policy never equates missing evidence with pre-effect safety
+  ✓ setup: no receipt, artifact or marker
+  ✓ default resume blocks instead of blindly retrying
+
+D8.6 — parallel batch: A's durable success is kept, only B is ambiguous
+  ✓ setup: both effects once, B died in the gap
+  ✓ A has a durable success checkpoint, B does not
+  ✓ resume is blocked, A is not repeated and B is not re-executed
+  ✓ only B is reported ambiguous
+  ✓ after resolving B the mission completes with zero new executions
+
+D8.7 — repair gap: SIGKILL after a repair effect blocks a second repair
+  ✓ setup: original and repair effects once each, repair died in the gap
+  ✓ repair intent is durable
+  ✓ resume is blocked, nothing executes, not completed
+  ✓ accepted repair is recorded as performed
+  ✓ resume re-reviews and completes without repeating any effect
+
+────────────────────────────────────────────────────────────
+r0-final-manager: passed 79, failed 0
+=== r0-final-manager: PASS ===
+
+=== r0-final-production-intent ===
+TAP version 13
+# Subtest: production specialist durably marks model and actual tool boundaries in order
+ok 1 - production specialist durably marks model and actual tool boundaries in order
+  ---
+  duration_ms: 13.031162
+  type: 'test'
+  ...
+# Subtest: failed durable model marker prevents Agent.generate completely
+ok 2 - failed durable model marker prevents Agent.generate completely
+  ---
+  duration_ms: 2.928792
+  type: 'test'
+  ...
+# Subtest: failed durable tool marker prevents raw artifact bytes and metadata
+ok 3 - failed durable tool marker prevents raw artifact bytes and metadata
+  ---
+  duration_ms: 3.145091
+  type: 'test'
+  ...
+# Subtest: real manager + production specialist + artifact tool persist intent before model execution
+ok 4 - real manager + production specialist + artifact tool persist intent before model execution
+  ---
+  duration_ms: 22.689032
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 47.11386
+=== r0-final-production-intent: PASS ===
+
+=== r0-final-recursion ===
+TAP version 13
+# Subtest: D7 production standalone executeSpecialist delegate carries call AND session cancellation
+ok 1 - D7 production standalone executeSpecialist delegate carries call AND session cancellation
+  ---
+  duration_ms: 31.500006
+  type: 'test'
+  ...
+# Subtest: D9 omitted tools inherit; explicit [] denies all in legacy, children and request defaults
+ok 2 - D9 omitted tools inherit; explicit [] denies all in legacy, children and request defaults
+  ---
+  duration_ms: 24.223428
+  type: 'test'
+  ...
+# Subtest: D9 production child with explicit [] cannot invoke an ambient write
+ok 3 - D9 production child with explicit [] cannot invoke an ambient write
+  ---
+  duration_ms: 16.004952
+  type: 'test'
+  ...
+# Subtest: top-level cap is charged exactly once and reset/resume never replenishes it
+ok 4 - top-level cap is charged exactly once and reset/resume never replenishes it
+  ---
+  duration_ms: 299.21621
+  type: 'test'
+  ...
+# Subtest: concurrent nested and top-level work share atomic cap without double counting
+ok 5 - concurrent nested and top-level work share atomic cap without double counting
+  ---
+  duration_ms: 4.664186
+  type: 'test'
+  ...
+# Subtest: cross-process top-level reservations cannot jointly exceed mission budget
+ok 6 - cross-process top-level reservations cannot jointly exceed mission budget
+  ---
+  duration_ms: 676.483389
+  type: 'test'
+  ...
+# Subtest: real manager Head plan refuses top-level effect 13 before executing it
+ok 7 - real manager Head plan refuses top-level effect 13 before executing it
+  ---
+  duration_ms: 66.380102
+  type: 'test'
+  ...
+# Subtest: second real manager attempt after timeout cannot replenish reserved slots
+ok 8 - second real manager attempt after timeout cannot replenish reserved slots
+  ---
+  duration_ms: 1216.675684
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2340.618743
+=== r0-final-recursion: PASS ===
+
+=== r0-final-tools ===
+TAP version 13
+# Subtest: D1: second fence check is under the mission lock, before raw mkdir/write, with or without mission_id
+ok 1 - D1: second fence check is under the mission lock, before raw mkdir/write, with or without mission_id
+  ---
+  duration_ms: 8.822374
+  type: 'test'
+  ...
+# Subtest: D1: stale write cannot overwrite existing bytes; normal writes retain opt-in artifact semantics
+ok 2 - D1: stale write cannot overwrite existing bytes; normal writes retain opt-in artifact semantics
+  ---
+  duration_ms: 14.066959
+  type: 'test'
+  ...
+# Subtest: D1: locked boundary also refuses abort/seal before raw file creation
+ok 3 - D1: locked boundary also refuses abort/seal before raw file creation
+  ---
+  duration_ms: 6.995879
+  type: 'test'
+  ...
+# Subtest: D2/D6: actual browser wrappers recheck cold-discovery fence and propagate abortSignal to held MCP operation
+ok 4 - D2/D6: actual browser wrappers recheck cold-discovery fence and propagate abortSignal to held MCP operation
+  ---
+  duration_ms: 9.753972
+  type: 'test'
+  ...
+# Subtest: D5: tavily in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+ok 5 - D5: tavily in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+  ---
+  duration_ms: 3.905388
+  type: 'test'
+  ...
+# Subtest: D5: ddg in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+ok 6 - D5: ddg in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+  ---
+  duration_ms: 1.419496
+  type: 'test'
+  ...
+# Subtest: D5: failed Tavily arriving after abort never starts DDG
+ok 7 - D5: failed Tavily arriving after abort never starts DDG
+  ---
+  duration_ms: 1.965894
+  type: 'test'
+  ...
+# Subtest: D5: cancellation also destroys an in-flight DDG fallback after a normal Tavily failure
+ok 8 - D5: cancellation also destroys an in-flight DDG fallback after a normal Tavily failure
+  ---
+  duration_ms: 2.926092
+  type: 'test'
+  ...
+# Subtest: D5: abort after response end but before awaited continuation refuses success and fallback
+ok 9 - D5: abort after response end but before awaited continuation refuses success and fallback
+  ---
+  duration_ms: 1.412996
+  type: 'test'
+  ...
+# Subtest: D5: already aborted search constructs no HTTPS request
+ok 10 - D5: already aborted search constructs no HTTPS request
+  ---
+  duration_ms: 0.746898
+  type: 'test'
+  ...
+# Subtest: D5: ordinary Tavily success and DDG fallback remain functional
+ok 11 - D5: ordinary Tavily success and DDG fallback remain functional
+  ---
+  duration_ms: 3.572489
+  type: 'test'
+  ...
+# Subtest: D4: targeted-repair source follows AWE_DATA_DIR and defaults; importing never starts repair
+ok 12 - D4: targeted-repair source follows AWE_DATA_DIR and defaults; importing never starts repair
+  ---
+  duration_ms: 323.109158
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 437.344125
+=== r0-final-tools: PASS ===
+
+=== r0-independent-contracts ===
+TAP version 13
+# Subtest: R0 storage-roundtrip: storage preserves successful artifact bytes and unrelated mission data
+ok 1 - R0 storage-roundtrip: storage preserves successful artifact bytes and unrelated mission data
+  ---
+  duration_ms: 471.451825
+  type: 'test'
+  ...
+# Subtest: R0 cancelled-artifact: cancelled mission rejects late artifact and creates no file or metadata
+ok 2 - R0 cancelled-artifact: cancelled mission rejects late artifact and creates no file or metadata
+  ---
+  duration_ms: 545.454909
+  type: 'test'
+  ...
+# Subtest: R0 cancelled-update: cancelled mission cannot be resurrected to completed by late update
+ok 3 - R0 cancelled-update: cancelled mission cannot be resurrected to completed by late update
+  ---
+  duration_ms: 501.342038
+  type: 'test'
+  ...
+# Subtest: R0 cancelled-running: cancelled mission cannot be resurrected to running by late update
+ok 4 - R0 cancelled-running: cancelled mission cannot be resurrected to running by late update
+  ---
+  duration_ms: 466.30594
+  type: 'test'
+  ...
+# Subtest: R0 cross-process: concurrent processes preserve disjoint mission patches without write collisions
+ok 5 - R0 cross-process: concurrent processes preserve disjoint mission patches without write collisions
+  ---
+  duration_ms: 4471.087361
+  type: 'test'
+  ...
+# Subtest: R0 parallel-missions: concurrent independent missions do not overwrite each other
+ok 6 - R0 parallel-missions: concurrent independent missions do not overwrite each other
+  ---
+  duration_ms: 2600.924741
+  type: 'test'
+  ...
+# Subtest: R0 empty-tools: empty specialist tool request grants no ambient shell or allTools
+ok 7 - R0 empty-tools: empty specialist tool request grants no ambient shell or allTools
+  ---
+  duration_ms: 2515.0546
+  type: 'test'
+  ...
+# Subtest: R0 unknown-tools: unknown specialist tool request grants no ambient shell or allTools
+ok 8 - R0 unknown-tools: unknown specialist tool request grants no ambient shell or allTools
+  ---
+  duration_ms: 2472.895622
+  type: 'test'
+  ...
+# Subtest: R0 mixed-tools: mixed known/unknown request grants only the requested known tool
+ok 9 - R0 mixed-tools: mixed known/unknown request grants only the requested known tool
+  ---
+  duration_ms: 2240.758716
+  type: 'test'
+  ...
+# Subtest: R0 allowed-tools: allowedTools intersects requested tools and denies requested shell
+ok 10 - R0 allowed-tools: allowedTools intersects requested tools and denies requested shell
+  ---
+  duration_ms: 2602.965788
+  type: 'test'
+  ...
+# Subtest: R0 empty-allowlist: explicit empty allowedTools denies every requested tool
+ok 11 - R0 empty-allowlist: explicit empty allowedTools denies every requested tool
+  ---
+  duration_ms: 2714.709465
+  type: 'test'
+  ...
+# Subtest: R0 shell-success: shell returns actual stdout, stderr and exit code
+ok 12 - R0 shell-success: shell returns actual stdout, stderr and exit code
+  ---
+  duration_ms: 1194.667452
+  type: 'test'
+  ...
+# Subtest: R0 shell-failure: shell nonzero exit is not success
+ok 13 - R0 shell-failure: shell nonzero exit is not success
+  ---
+  duration_ms: 1064.874725
+  type: 'test'
+  ...
+# Subtest: R0 shell-cwd: shell denies outside cwd before any side effect
+ok 14 - R0 shell-cwd: shell denies outside cwd before any side effect
+  ---
+  duration_ms: 1029.366427
+  type: 'test'
+  ...
+# Subtest: R0 shell-abort: AbortSignal stops running shell process tree before late marker
+ok 15 - R0 shell-abort: AbortSignal stops running shell process tree before late marker
+  ---
+  duration_ms: 2536.099375
+  type: 'test'
+  ...
+# Subtest: R0 shell-preabort: pre-aborted shell performs no side effect
+ok 16 - R0 shell-preabort: pre-aborted shell performs no side effect
+  ---
+  duration_ms: 1097.38483
+  type: 'test'
+  ...
+# Subtest: R0 recursion-depth: recursion depth refusal creates zero children and explicit issue
+ok 17 - R0 recursion-depth: recursion depth refusal creates zero children and explicit issue
+  ---
+  duration_ms: 500.304555
+  type: 'test'
+  ...
+# Subtest: R0 recursion-budget: recursion exhausted budget creates zero children and explicit issue
+ok 18 - R0 recursion-budget: recursion exhausted budget creates zero children and explicit issue
+  ---
+  duration_ms: 535.624753
+  type: 'test'
+  ...
+# Subtest: R0 recursion-isolation: independent mission delegation sessions remain isolated
+ok 19 - R0 recursion-isolation: independent mission delegation sessions remain isolated
+  ---
+  duration_ms: 576.822334
+  type: 'test'
+  ...
+# Subtest: R0 timeout-success: timeout wrapper propagates the exact successful result
+ok 20 - R0 timeout-success: timeout wrapper propagates the exact successful result
+  ---
+  duration_ms: 619.64531
+  type: 'test'
+  ...
+# Subtest: R0 timeout-failure: timeout wrapper preserves underlying failure without timeout callback
+ok 21 - R0 timeout-failure: timeout wrapper preserves underlying failure without timeout callback
+  ---
+  duration_ms: 524.687786
+  type: 'test'
+  ...
+# Subtest: R0 timeout-expiry: timeout has explicit error identity and invokes checkpoint callback once
+ok 22 - R0 timeout-expiry: timeout has explicit error identity and invokes checkpoint callback once
+  ---
+  duration_ms: 2481.762355
+  type: 'test'
+  ...
+# Subtest: R0 reconcile-exclusion: orphan reconciliation preserves explicitly active missions
+ok 23 - R0 reconcile-exclusion: orphan reconciliation preserves explicitly active missions
+  ---
+  duration_ms: 504.201848
+  type: 'test'
+  ...
+# Subtest: R0 crash-recovery: SIGKILL preserves durable success checkpoint and artifact through orphan recovery
+ok 24 - R0 crash-recovery: SIGKILL preserves durable success checkpoint and artifact through orphan recovery
+  ---
+  duration_ms: 835.221695
+  type: 'test'
+  ...
+# Subtest: R0 qa-empty-criterion: blank QA criterion cannot certify a real acceptance criterion
+ok 25 - R0 qa-empty-criterion: blank QA criterion cannot certify a real acceptance criterion
+  ---
+  duration_ms: 476.07403
+  type: 'test'
+  ...
+# Subtest: R0 qa-unique-criteria: one QA result cannot certify multiple mission criteria
+ok 26 - R0 qa-unique-criteria: one QA result cannot certify multiple mission criteria
+  ---
+  duration_ms: 457.371084
+  type: 'test'
+  ...
+# Subtest: R0 provider: offline provider outcome evaluator preserves failures and actual new artifact IDs
+ok 27 - R0 provider: offline provider outcome evaluator preserves failures and actual new artifact IDs
+  ---
+  duration_ms: 2287.614814
+  type: 'test'
+  ...
+# Subtest: R0 children: pure children plan resolver executes distinct tasks without cloning
+ok 28 - R0 children: pure children plan resolver executes distinct tasks without cloning
+  ---
+  duration_ms: 487.803196
+  type: 'test'
+  ...
+# Subtest: R0 lease: cross-process acquire/release lease and live-owner reconciliation API
+ok 29 - R0 lease: cross-process acquire/release lease and live-owner reconciliation API
+  ---
+  duration_ms: 826.329308
+  type: 'test'
+  ...
+# Subtest: R0 manager: offline manager success, false-success refusal, approved grants and model cancellation
+ok 30 - R0 manager: offline manager success, false-success refusal, approved grants and model cancellation
+  ---
+  duration_ms: 680.321223
+  type: 'test'
+  ...
+# Subtest: R0 manager-tool-cancel: manager cancellation aborts a real shell tool and prevents late side effects
+ok 31 - R0 manager-tool-cancel: manager cancellation aborts a real shell tool and prevents late side effects
+  ---
+  duration_ms: 2556.57747
+  type: 'test'
+  ...
+# Subtest: R0 manager-double-run: second manager cannot run alongside a live owner in another process
+ok 32 - R0 manager-double-run: second manager cannot run alongside a live owner in another process
+  ---
+  duration_ms: 1852.984814
+  type: 'test'
+  ...
+# Subtest: R0 manager-crash-resume: SIGKILL after a durable effect resumes without repeating that effect
+ok 33 - R0 manager-crash-resume: SIGKILL after a durable effect resumes without repeating that effect
+  ---
+  duration_ms: 927.568504
+  type: 'test'
+  ...
+# Subtest: R0 resume: side-effect-free resume policy import matches task identity
+ok 34 - R0 resume: side-effect-free resume policy import matches task identity
+  ---
+  duration_ms: 461.942758
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 46127.293121
+=== r0-independent-contracts: PASS ===
+
+=== r0-qa-evidence ===
+QA evidence + memory isolation: PASS — omitted evidence is critical and memory.db follows AWE_DATA_DIR
+=== r0-qa-evidence: PASS ===
+
+=== r0-reqa-adapters ===
+TAP version 13
+# Subtest: D6: real MCP availability/discovery starts no post-abort probe, client, or listTools transition
+ok 1 - D6: real MCP availability/discovery starts no post-abort probe, client, or listTools transition
+  ---
+  duration_ms: 15.000557
+  type: 'test'
+  ...
+# Subtest: D6: production browser wrapper blocks cold availability/discovery transitions after abort and recovers later
+ok 2 - D6: production browser wrapper blocks cold availability/discovery transitions after abort and recovers later
+  ---
+  duration_ms: 4.922086
+  type: 'test'
+  ...
+# Subtest: D4: shell gets absolute state identity without authority to shared memory
+ok 3 - D4: shell gets absolute state identity without authority to shared memory
+  ---
+  duration_ms: 2542.273379
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2911.711415
+=== r0-reqa-adapters: PASS ===
+
+=== r0-reqa-manager ===
+
+D8.A — returned success:false after a local effect, SIGKILL before terminalization
+  ✓ owner died by SIGKILL after the failed checkpoint
+  ✓ exactly one receipt was sent
+  ✓ failed outcome is checkpointed
+  ✓ effect-marked failed attempt keeps its durable intent
+  ✓ retained intent records the failed outcome
+  ✓ fresh manager does not execute again and is paused
+  ✓ mission is paused with recovery_blocked
+  ✓ blocked reason names the recorded failure
+  ✓ QA never ran on the unresolved mission
+  ✓ accept with an invented artifact is refused
+  ✓ explicit accept preserves the verified result: completes, nothing re-executed
+  ✓ completed mission carries the accepted artifact
+
+D8.B — explicit retry is the only repeat
+  ✓ setup: failed attempt, one receipt
+  ✓ blocked before resolution, no repeat
+  ✓ after explicit retry the effect repeats exactly once and the mission completes
+
+D8.C — returned failure with an effect marker but no artifact
+  ✓ setup: killed after the failed checkpoint, one receipt
+  ✓ marker-only failed attempt keeps its intent
+  ✓ no repeat; paused with recovery_blocked
+  ✓ accept without evidence stays refused
+  ✓ retry repeats once
+
+D8.D — thrown non-abort provider error after a local effect, SIGKILL before terminalization
+  ✓ setup: killed, one receipt
+  ✓ thrown effect-marked attempt keeps its intent
+  ✓ fresh manager makes no repeat; paused with recovery_blocked
+
+D8.E — non-effect definite failure keeps the old behaviour
+  ✓ setup: killed in QA
+  ✓ no intent retained for a failure with no footprint
+  ✓ fresh manager is not blocked and re-runs the delegation
+
+D8.F — in-process failed checkpoints gate before QA even without a crash
+  ✓ returned: ordinary failed outcome pauses before QA
+  ✓ returned: failed intent survived the timeout checkpoint
+  ✓ returned: fresh manager repeats nothing and pauses recovery_blocked
+  ✓ thrown: ordinary failed outcome pauses before QA
+  ✓ thrown: failed intent survived the timeout checkpoint
+  ✓ thrown: fresh manager repeats nothing and pauses recovery_blocked
+
+D8.G — ordinary returned/thrown effect failures pause before QA and terminalization
+  ✓ returned: live ordinary failure pauses without QA and retains its intent
+  ✓ returned: explicit accept completes without repeating the effect
+  ✓ thrown: live ordinary failure pauses without QA and retains its intent
+  ✓ thrown: explicit accept completes without repeating the effect
+
+D8.H — failed effect-bearing repair keeps its intent
+  ✓ returned: repair ran once and the failed repair intent is still durable
+  ✓ returned failure is recorded on the retained intent
+  ✓ returned: fresh manager executes nothing; paused, recovery_blocked for the repair
+  ✓ thrown: repair ran once and the failed repair intent is still durable
+  ✓ thrown: fresh manager executes nothing; paused, recovery_blocked for the repair
+
+D8.I — failed repairs quiesce real descendants before paused state
+  ✓ returned: repair pause follows child death, process-record cleanup and lease release
+  ✓ returned: quiesced repair recovery retains its failed outcome and QA blockers
+  ✓ thrown: repair pause follows child death, process-record cleanup and lease release
+  ✓ thrown: quiesced repair recovery retains its failed outcome and QA blockers
+
+B.1 — 12 originals + failed initial QA: repair 13 is refused before any effect
+  ✓ exactly 12 specialists executed
+  ✓ mission fails and names the refused repair
+  ✓ no repair artifact or intent was created
+  ✓ durable ledger and tree agree on 12
+  ✓ repair iteration count was not consumed by the refusal
+
+B.2 — under-cap repair registers and finalizes in the tree
+  ✓ repaired mission completes
+  ✓ ledger and tree both count original + repair
+  ✓ both nodes are depth 0, finalized as success
+
+B.3 — failed repair node is finalized failed, slot stays consumed
+  ✓ mission fails on the failed repair
+  ✓ repair node exists and is failed; ledger counts 2
+
+D3.A — same-name repair, QA fail then pass, completes with current B
+  ✓ mission completes (no false 'not registered' rejection)
+  ✓ attached artifact is the current B only
+  ✓ auditable supersession mapping A -> B is preserved
+  ✓ mapping keeps A's recorded sha256 and size
+  ✓ B passes the immutable check on disk
+
+D3.B — supersession never waives integrity or accepts invented ids
+  ✓ tampered B is still rejected despite the mapping
+  ✓ unreported replacement records no supersession and pauses for explicit recovery
+  ✓ deleted original record without a repair is still 'not registered'
+  ✓ forged mapping for an invented id is ignored
+  ✓ genuine repair provenance resolves a real hidden predecessor to integrity-valid B
+  ✓ mapping cannot launder a tampered B
+
+D3.C — different-name repair control stays green
+  ✓ completes with no supersession recorded
+  ✓ both artifacts attached
+
+D3.D — crash during a same-name repair: explicit accept applies equivalent supersession
+  ✓ setup: original and repair effect once each; repair died
+  ✓ resume blocked on the repair, nothing executed
+  ✓ setup: listArtifacts shows B, original record A is hidden
+  ✓ checkpoint now references B, no stale A
+  ✓ supersession mapping recorded with operator_accept source
+  ✓ resume completes without repeating any effect
+  ✓ terminal record holds only B
+
+D3.E — accept of a different-name repair records no supersession
+  ✓ setup
+  ✓ a new artifact of a different name supersedes nothing
+
+D3.F — explicit same-name repair retry executes once and preserves A→B→C
+  ✓ setup pauses after exactly one effect-marked failed repair
+  ✓ retry retains checkpoint-backed original A to ambiguous B lineage without accepting quality
+  ✓ one explicit retry causes exactly one additional repair and completes
+  ✓ A→B retry lineage and B→C repair lineage are both durable
+  ✓ terminal mission contains only current C
+
+D3.G — crash after repair provenance commit restores A→B metadata on resume
+  ✓ real child died at the committed-checkpoint fault schedule
+  ✓ setup has committed A→B provenance but no repair intent or metadata index
+  ✓ resume restores the checkpoint-authenticated metadata and performs no new effects
+  ✓ terminal mission contains committed B only
+
+D3.H — two committed same-name repairs survive two post-checkpoint crashes
+  ✓ first real crash commits A→B before its metadata write
+  ✓ first committed-chain owner is reconciled without new work
+  ✓ second real crash preserves A→B→C with no repair intent in flight
+  ✓ only the first metadata link existed before final recovery
+  ✓ B and C share a path but retain distinct authenticated hashes; current C is intact
+  ✓ second committed-chain owner is reconciled
+  ✓ final recovery restores both proofs and performs no new plan or effects
+  ✓ two-link recovery delivers only intact current C
+  ✓ same-name fixture ids are distinct
+
+────────────────────────────────────────────────────────────
+r0-reqa-manager: passed 95, failed 0
+=== r0-reqa-manager: PASS ===
+
+=== r0-runtime-manager ===
+
+M1 — normal run completes, signal is passed to every phase, lease released
+  ✓ completed
+  ✓ planMission got a signal
+  ✓ reviewMissionDetailed got a signal
+  ✓ executeSpecialist got maxSteps + signal
+  ✓ registered artifact is in the final record
+  ✓ lease released
+  ✓ checkpoint cleared on terminal
+  ✓ manager unregistered
+
+M2 — LLM text is not auto-saved as a deliverable
+  ✓ no artifact was created from the text
+  ✓ delegation without tools/artifacts is failed, not success
+  ✓ mission cannot complete without a deliverable
+
+M3 — a failed delegation is not reported as success
+  ✓ status failed
+  ✓ tree node failed
+
+M4 — in-process double run is rejected
+  ✓ second run rejected with MissionLeaseError
+  ✓ first run unaffected
+  ✓ rejected run wrote nothing over the first
+
+M5 — cancel mid-delegation: abort, quiesce, cancelled, no late writes
+  ✓ cancel resolved cancelled
+  ✓ waited for the specialist to settle (quiesced)
+  ✓ specialist observed the abort
+  ✓ run() reports cancelled, not failed
+  ✓ QA never ran
+  ✓ straggler artifact refused
+  ✓ no late artifact listed
+  ✓ cancellation recorded
+  ✓ old run cannot overwrite terminal state
+  ✓ lease released
+
+M6 — non-cooperative work keeps ownership until it really settles
+  ✓ non-quiesced cancellation is not confirmed terminal
+  ✓ quiesced=false and pending reported
+  ✓ record says it was not quiesced
+  ✓ owner lease is retained while work is pending
+  ✓ late settlement completes cancellation
+  ✓ lease released only after actual quiescence
+
+M7 — timeout aborts the underlying work and pauses (not failed)
+  ✓ underlying specialist was aborted
+  ✓ mission paused, not failed
+  ✓ checkpoint reason timeout
+  ✓ lease released
+
+M7b — non-cooperative timeout cannot overlap a resumed run
+  ✓ non-quiesced timeout remains running, not resumable paused
+  ✓ timeout metadata exposes pending work
+  ✓ rival cannot resume over pending old work
+  ✓ actual settlement makes timeout resumable
+  ✓ deferred timeout releases lease
+
+M8 — resume reuses only fingerprint-confirmed successes
+  ✓ analyst (confirmed success) not re-run
+  ✓ coder with a changed task re-runs
+  ✓ in-flight writer re-runs
+  ✓ completed
+  ✓ matchCompletedDelegations is fingerprint-exact
+  ✓ fingerprint ignores whitespace differences
+  ✓ fingerprint distinguishes tasks
+
+M9 — terminal/pending missions cannot be started; late run cannot flip state
+  ✓ cancel without a runner marks cancelled
+  ✓ run() on a cancelled mission rejected
+  ✓ status still cancelled
+  ✓ pending_approval cannot run
+  ✓ failed claim released the lease
+
+M10 — withMissionTimeout stays backward compatible and aborts fn
+  ✓ fn received the abort
+  ✓ onTimeout ran and MissionTimeoutError thrown
+  ✓ zero-arg fn still resolves
+
+M11 — cross-process: double-run rejected, cancel forwarded to the owner
+  ✓ owner process holds a live lease
+  ✓ run from another process rejected
+  ✓ rival did not change the status
+  ✓ cancel confirmed by the owner
+  ✓ owner's specialist was really aborted
+  ✓ owner exited cleanly with cancelled result
+  ✓ lease gone
+  ✓ fast confirmation (heartbeat poll)
+
+M12 — cross-process race: two processes run the same mission, one wins
+  ✓ exactly one run completed, the other rejected
+  ✓ final status completed
+
+M13 — duplicate Head plans and missing artifact bytes fail closed
+  ✓ duplicate top-level plan is refused
+  ✓ refused duplicate plan has zero effects
+  ✓ deleted required artifact blocks completion despite passing QA
+  ✓ artifact integrity blocker is recorded
+
+M14 — repair and reconciled evidence are integrity-fenced through completion
+  ✓ deleted repair artifact blocks completion despite later passing QA
+  ✓ repair artifact integrity blocker is recorded
+  ✓ deleted reconciled artifact blocks completion despite passing QA
+  ✓ reconciled artifact integrity blocker is recorded
+  ✓ repair prose and reused artifact IDs cannot produce success
+  ✓ empty repair blocker is recorded
+
+────────────────────────────────────────────────────────────
+r0-runtime manager: passed 76, failed 0
+=== r0-runtime-manager: PASS ===
+
+=== r0-runtime-recursion ===
+
+R1 — a legacy single request runs exactly once, even with parallel=true
+  ✓ exactly one child executed
+  ✓ success
+  ✓ parallel=true reported as ignored
+  ✓ spawn budget charged once
+  ✓ sequential legacy call also once
+
+R2 — distinct children each run once, in parallel
+  ✓ three distinct children ran
+  ✓ they overlapped
+  ✓ each node id is unique
+  ✓ depth passed to children
+  ✓ maxSteps passed
+  ✓ success only when all succeeded
+
+R3 — sequential children keep order
+  ✓ order preserved
+
+R4 — duplicates and malformed requests are refused, nothing runs
+  ✓ duplicate children refused
+  ✓ over-limit refused, not truncated
+  ✓ no role/task/children refused
+  ✓ blank task refused
+  ✓ nothing executed
+  ✓ no budget consumed
+  ✓ resolveChildRequests throws for duplicates
+
+R5 — depth limit
+  ✓ refused beyond max depth
+
+R6 — spawn budget is atomic under concurrent delegate calls
+  ✓ never more agents than the cap
+  ✓ spawned counter equals executed
+  ✓ budget fully used by whole calls
+  ✓ the rest were refused explicitly
+
+R7 — abort stops children and passes the signal down
+  ✓ child got a signal even though the caller passed none
+  ✓ sequential: second child never started
+  ✓ outcome is not success
+  ✓ children report cancelled, not failed
+  ✓ new delegation refused once aborted
+
+R8 — failure of one child makes the delegation unsuccessful
+  ✓ overall success=false
+  ✓ per-child statuses
+  ✓ a throwing child is a failed outcome, not an exception
+
+R9 — nested tree is recorded and persisted
+  ✓ three nodes
+  ✓ parent links
+  ✓ depths
+  ✓ tree persisted to disk
+  ✓ persisted tree has all nodes
+
+────────────────────────────────────────────────────────────
+r0-runtime recursion: passed 37, failed 0
+=== r0-runtime-recursion: PASS ===
+
+=== r0-runtime-storage-lease ===
+
+S1 — concurrent processes never lose an update
+  ✓ all writers exited 0
+  ✓ every increment is present
+  ✓ total equals sum
+  ✓ unrelated metadata preserved
+  ✓ revision advanced once per write
+  ✓ no leftover tmp files
+
+S2 — compare-and-set revision
+  ✓ CAS with current revision applies
+  ✓ CAS with stale revision conflicts
+  ✓ stale write did not land
+  ✓ fence rejects the write
+  ✓ updateMission(id, patch) still returns the mission
+  ✓ updateMission on missing id returns null
+
+S3 — legacy record without a revision keeps working
+  ✓ loads
+  ✓ legacy revision is 0
+  ✓ CAS from revision 0
+
+S4 — terminal status is fenced
+  ✓ late completed over cancelled refused
+  ✓ status stays cancelled
+  ✓ explicit terminal transition allowed
+
+S5 — sealed/cancelled missions refuse artifacts
+  ✓ artifact accepted while running
+  ✓ artifact refused after cancel
+  ✓ refused artifact not listed
+  ✓ reconcile registers nothing when sealed
+  ✓ stale owner cannot register artifact bytes
+  ✓ refused stale write leaves no content file
+  ✓ stale owner cannot register artifact metadata
+  ✓ stale owner cannot reconcile new evidence
+
+S5b — artifact writes reject final-component and ancestor symlinks
+  ✓ final-component symlink is refused without changing its outside target
+  ✓ refused final symlink creates no artifact metadata
+  ✓ ancestor symlink is refused without creating an outside file
+  ✓ refused ancestor symlink creates no artifact metadata
+  ✓ ordinary nested creation and same-name regular-file replacement still work
+
+S5c — a symlinked mission root cannot escape through save or reconciliation
+  ✓ mission-root symlink write is refused without changing the outside target
+  ✓ mission-root symlink reconciliation adopts no outside files
+  ✓ refused reconciliation preserves outside bytes and does not replace the root link
+  ✓ ordinary real mission-root reconciliation remains available
+
+S5d — pre-import artifact-root links/non-directories cannot reach QA or completion
+  ✓ symlink artifact root is rejected at pre-import storage initialization without changing root/outside bytes
+  ✓ symlink artifact root permits no escaped registration, QA call or completed mission
+  ✓ file artifact root is rejected at pre-import storage initialization without changing root/outside bytes
+  ✓ file artifact root permits no escaped registration, QA call or completed mission
+
+S6 — lock held by a dead process is broken
+  ✓ holder died by SIGKILL
+  ✓ update proceeds after holder crash
+  ✓ did not wait for the 60s stale timeout
+
+L0 — malformed and wrong-mission lease evidence fails closed
+  ✓ malformed lease blocks every acquisition purpose and preserves exact evidence
+  ✓ wrong-mission lease blocks every acquisition purpose and preserves exact evidence
+
+L1 — exactly one of N processes acquires the lease
+  ✓ exactly one winner
+  ✓ lease is live
+  ✓ mission record names the owner
+  ✓ lease released when the owner exits cleanly
+
+L2 — a live lease is not an orphan; a dead owner's mission is paused
+  ✓ running mission with live lease left alone
+  ✓ report counts it as skipped_live
+  ✓ second acquirer denied while owner lives
+  ✓ dead pid => lease not live
+  ✓ orphan paused once the owner is dead
+  ✓ lease can be taken over after owner death
+
+L3 — heartbeat extends a lease; expiry alone never permits live-owner takeover
+  ✓ acquired
+  ✓ heartbeat kept it live past the original ttl
+  ✓ expired lease is not live
+  ✓ expired lease with a live owner process still denies takeover
+  ✓ expired live owner is not falsely paused
+  ✓ cancel cannot falsely confirm an expired live owner stopped
+  ✓ confirmed owner death enables orphan pause
+  ✓ confirmed owner death enables generation-fenced takeover
+
+L3.R — confirmed-dead recovery owner no longer permanently blocks reconciliation
+  ✓ expired but live recovery owner remains a hard acquisition barrier
+  ✓ fixture owner really died
+  ✓ reconciliation replaces only the confirmed-dead recovery owner and pauses the orphan
+  ✓ confirmed-dead recovery lease permits a new run owner
+  ✓ confirmed-dead recovery lease permits a new resume owner
+  ✓ confirmed-dead recovery lease permits a new cancel owner
+  ✓ confirmed-dead recovery lease permits a new recovery owner
+
+L4 — a stale owner cannot release the replacement lease
+  ✓ live old process blocks takeover even after expiry
+  ✓ stale owner's release does not drop the new lease
+  ✓ replacement generation is newer
+  ✓ owner release frees it
+
+L5 — cancel request file round trip
+  ✓ request readable
+  ✓ request cleared
+
+────────────────────────────────────────────────────────────
+r0-runtime storage+lease: passed 75, failed 0
+=== r0-runtime-storage-lease: PASS ===
+
+=== r0-security-tools ===
+TAP version 13
+# Subtest: tool context denies no grant and unknown tool grants do not expand permissions
+ok 1 - tool context denies no grant and unknown tool grants do not expand permissions
+  ---
+  duration_ms: 3.884189
+  type: 'test'
+  ...
+# Subtest: workspace path rejects traversal and symlink escape
+ok 2 - workspace path rejects traversal and symlink escape
+  ---
+  duration_ms: 1.309496
+  type: 'test'
+  ...
+# Subtest: shell abort kills local child and reports failure
+ok 3 - shell abort kills local child and reports failure
+  ---
+  duration_ms: 268.830224
+  type: 'test'
+  ...
+# Subtest: stale owner is fenced again at artifact registration
+ok 4 - stale owner is fenced again at artifact registration
+  ---
+  duration_ms: 3.697789
+  type: 'test'
+  ...
+# Subtest: web fetch validates protocol, credentials, and private destinations
+ok 5 - web fetch validates protocol, credentials, and private destinations
+  ---
+  duration_ms: 2.548392
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 285.800075
+=== r0-security-tools: PASS ===
+
+=== r0-test-harness ===
+offline test harness: PASS — model endpoint is local and credential is synthetic
+=== r0-test-harness: PASS ===
+
+=== r1-analytics-mission ===
+TAP version 13
+# Subtest: R1 offline production analytics: bound spec, independent QA, fresh-process lesson reuse and revocation fence
+ok 1 - R1 offline production analytics: bound spec, independent QA, fresh-process lesson reuse and revocation fence
+  ---
+  duration_ms: 2724.150532
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2730.262514
+=== r1-analytics-mission: PASS ===
+
+=== r1-csv-analytics ===
+TAP version 13
+# Subtest: R1 CSV: contract digest pins exact document bytes; input hash pins original bytes
+ok 1 - R1 CSV: contract digest pins exact document bytes; input hash pins original bytes
+  ---
+  duration_ms: 2.457393
+  type: 'test'
+  ...
+# Subtest: R1 CSV: public control has exact full metrics and separate pending totals
+ok 2 - R1 CSV: public control has exact full metrics and separate pending totals
+  ---
+  duration_ms: 1.767695
+  type: 'test'
+  ...
+# Subtest: R1 CSV: header-only, pending-only and zero-valued settled events have distinct emptiness
+ok 3 - R1 CSV: header-only, pending-only and zero-valued settled events have distinct emptiness
+  ---
+  duration_ms: 0.933997
+  type: 'test'
+  ...
+# Subtest: R1 CSV: exact signed integer sums can exceed the per-event safe-integer bound
+ok 4 - R1 CSV: exact signed integer sums can exceed the per-event safe-integer bound
+  ---
+  duration_ms: 0.567398
+  type: 'test'
+  ...
+# Subtest: R1 CSV: header order, record order, quoting and line endings do not alter metrics
+ok 5 - R1 CSV: header order, record order, quoting and line endings do not alter metrics
+  ---
+  duration_ms: 0.549599
+  type: 'test'
+  ...
+# Subtest: R1 CSV: every conflicting non-ID field blocks both record orders without totals
+ok 6 - R1 CSV: every conflicting non-ID field blocks both record orders without totals
+  ---
+  duration_ms: 1.721895
+  type: 'test'
+  ...
+# Subtest: R1 CSV: validation precedes deduplication and conflict checking across the entire input
+ok 7 - R1 CSV: validation precedes deduplication and conflict checking across the entire input
+  ---
+  duration_ms: 0.301399
+  type: 'test'
+  ...
+# Subtest: R1 CSV: IDs and enums remain exact, mandatory, ASCII and case-sensitive
+ok 8 - R1 CSV: IDs and enums remain exact, mandatory, ASCII and case-sensitive
+  ---
+  duration_ms: 2.745692
+  type: 'test'
+  ...
+# Subtest: R1 CSV: amount grammar and range are enforced equally for settled and pending
+ok 9 - R1 CSV: amount grammar and range are enforced equally for settled and pending
+  ---
+  duration_ms: 2.963392
+  type: 'test'
+  ...
+# Subtest: R1 CSV: missing, repeated, unknown and extra columns block the entire dataset
+ok 10 - R1 CSV: missing, repeated, unknown and extra columns block the entire dataset
+  ---
+  duration_ms: 1.044797
+  type: 'test'
+  ...
+# Subtest: R1 CSV: strict RFC quoting supports escaped content but never repairs malformed CSV
+ok 11 - R1 CSV: strict RFC quoting supports escaped content but never repairs malformed CSV
+  ---
+  duration_ms: 0.642998
+  type: 'test'
+  ...
+# Subtest: R1 CSV: strict UTF-8 rejects BOM, malformed and overlong encodings
+ok 12 - R1 CSV: strict UTF-8 rejects BOM, malformed and overlong encodings
+  ---
+  duration_ms: 0.500299
+  type: 'test'
+  ...
+# Subtest: R1 CSV: explicit raw-byte and raw-record limits include duplicate records
+ok 13 - R1 CSV: explicit raw-byte and raw-record limits include duplicate records
+  ---
+  duration_ms: 0.810397
+  type: 'test'
+  ...
+# Subtest: R1 CSV: deterministic varied fixture preserves exact aggregates under permutation and duplication
+ok 14 - R1 CSV: deterministic varied fixture preserves exact aggregates under permutation and duplication
+  ---
+  duration_ms: 10.861969
+  type: 'test'
+  ...
+# Subtest: R1 CSV: human report declares exact units, exclusions and claim boundaries
+ok 15 - R1 CSV: human report declares exact units, exclusions and claim boundaries
+  ---
+  duration_ms: 0.534198
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 44.169572
+=== r1-csv-analytics: PASS ===
+
+=== r1-csv-tool ===
+TAP version 13
+# Subtest: CSV tool performs real file read, independent check and saved hash-bound evidence artifact
+ok 1 - CSV tool performs real file read, independent check and saved hash-bound evidence artifact
+  ---
+  duration_ms: 15.955854
+  type: 'test'
+  ...
+# Subtest: CSV tool saves correctly verified BLOCKED input without partial totals or success report
+ok 2 - CSV tool saves correctly verified BLOCKED input without partial totals or success report
+  ---
+  duration_ms: 6.243682
+  type: 'test'
+  ...
+# Subtest: CSV factory creates a Mastra tool and executes with the same guards
+ok 3 - CSV factory creates a Mastra tool and executes with the same guards
+  ---
+  duration_ms: 4.282687
+  type: 'test'
+  ...
+# Subtest: CSV tool fails before reading or saving without grant, approved limits, or safe path
+ok 4 - CSV tool fails before reading or saving without grant, approved limits, or safe path
+  ---
+  duration_ms: 4.495887
+  type: 'test'
+  ...
+# Subtest: CSV tool enforces byte limits before allocation and row limits before totals
+ok 5 - CSV tool enforces byte limits before allocation and row limits before totals
+  ---
+  duration_ms: 5.082985
+  type: 'test'
+  ...
+# Subtest: CSV tool rejects nonregular files and symlink escapes
+ok 6 - CSV tool rejects nonregular files and symlink escapes
+  ---
+  duration_ms: 4.730086
+  type: 'test'
+  ...
+# Subtest: CSV tool honors cancellation and loss of owner before read and before save
+ok 7 - CSV tool honors cancellation and loss of owner before read and before save
+  ---
+  duration_ms: 2.752292
+  type: 'test'
+  ...
+# Subtest: CSV tool does not report success or register an artifact when saving fails
+ok 8 - CSV tool does not report success or register an artifact when saving fails
+  ---
+  duration_ms: 3.28459
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 53.034147
+=== r1-csv-tool: PASS ===
+
+=== r1-csv-verifier ===
+TAP version 13
+# Subtest: CSV verifier independently accepts hand-calculated exact amounts and binds all receipt hashes
+ok 1 - CSV verifier independently accepts hand-calculated exact amounts and binds all receipt hashes
+  ---
+  duration_ms: 4.478487
+  type: 'test'
+  ...
+# Subtest: CSV verifier normalizes object order only, retaining exact scalar types and monetary spelling
+ok 2 - CSV verifier normalizes object order only, retaining exact scalar types and monetary spelling
+  ---
+  duration_ms: 2.551892
+  type: 'test'
+  ...
+# Subtest: CSV verifier catches seeded arithmetic, pending, counting, flags and cached-answer defects
+ok 3 - CSV verifier catches seeded arithmetic, pending, counting, flags and cached-answer defects
+  ---
+  duration_ms: 1.995094
+  type: 'test'
+  ...
+# Subtest: CSV verifier checks BLOCKED diagnostics and absence of totals, not unconditional PASS
+ok 4 - CSV verifier checks BLOCKED diagnostics and absence of totals, not unconditional PASS
+  ---
+  duration_ms: 1.367296
+  type: 'test'
+  ...
+# Subtest: CSV verifier independently agrees across quoting, boundaries and invalid-input classes
+ok 5 - CSV verifier independently agrees across quoting, boundaries and invalid-input classes
+  ---
+  duration_ms: 8.746675
+  type: 'test'
+  ...
+# Subtest: CSV verifier fails malformed result envelopes and excessive result JSON closed
+ok 6 - CSV verifier fails malformed result envelopes and excessive result JSON closed
+  ---
+  duration_ms: 5.540384
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 34.816399
+=== r1-csv-verifier: PASS ===
+
+=== r1-model-ledger ===
+TAP version 13
+# Subtest: start is durable before invocation; aggregate counts retained without invented dollars
+ok 1 - start is durable before invocation; aggregate counts retained without invented dollars
+  ---
+  duration_ms: 4.133288
+  type: 'test'
+  ...
+# Subtest: missing/partial/invalid usage stays unknown, while explicit zero is retained
+ok 2 - missing/partial/invalid usage stays unknown, while explicit zero is retained
+  ---
+  duration_ms: 1.362196
+  type: 'test'
+  ...
+# Subtest: throws, resolved errors and abort outcomes persist without secret error text
+ok 3 - throws, resolved errors and abort outcomes persist without secret error text
+  ---
+  duration_ms: 2.923492
+  type: 'test'
+  ...
+# Subtest: parallel calls retain unique attribution with no lost records
+ok 4 - parallel calls retain unique attribution with no lost records
+  ---
+  duration_ms: 13.495361
+  type: 'test'
+  ...
+# Subtest: process death preserves started UNKNOWN record visible to a restarted reader
+ok 5 - process death preserves started UNKNOWN record visible to a restarted reader
+  ---
+  duration_ms: 578.873428
+  type: 'test'
+  ...
+# Subtest: ledger start failure prevents provider invocation
+ok 6 - ledger start failure prevents provider invocation
+  ---
+  duration_ms: 0.510898
+  type: 'test'
+  ...
+# Subtest: terminal write failure propagates with durable start still UNKNOWN
+ok 7 - terminal write failure propagates with durable start still UNKNOWN
+  ---
+  duration_ms: 1.893595
+  type: 'test'
+  ...
+# Subtest: Prompt Master and QA actual call sites record usage before parsing, with mission binding
+ok 8 - Prompt Master and QA actual call sites record usage before parsing, with mission binding
+  ---
+  duration_ms: 2192.389366
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2811.755276
+=== r1-model-ledger: PASS ===
+
+=== r1-qualification ===
+TAP version 13
+# Subtest: host-issued receipt admits exact provenance; local dispatch and acceptance persist
+ok 1 - host-issued receipt admits exact provenance; local dispatch and acceptance persist
+  ---
+  duration_ms: 18.287747
+  type: 'test'
+  ...
+# Subtest: claimed issuer, solver self-issue, wrong scope, missing evidence and absent receipt deny
+ok 2 - claimed issuer, solver self-issue, wrong scope, missing evidence and absent receipt deny
+  ---
+  duration_ms: 2.219893
+  type: 'test'
+  ...
+# Subtest: every binding and live host policy gate admission/dispatch/acceptance
+ok 3 - every binding and live host policy gate admission/dispatch/acceptance
+  ---
+  duration_ms: 11.265368
+  type: 'test'
+  ...
+# Subtest: revoke increments generation; restart and requalification never resurrect old admission
+ok 4 - revoke increments generation; restart and requalification never resurrect old admission
+  ---
+  duration_ms: 20.129341
+  type: 'test'
+  ...
+# Subtest: expiry and withdrawn issuer policy deny after restart without effects
+ok 5 - expiry and withdrawn issuer policy deny after restart without effects
+  ---
+  duration_ms: 8.320376
+  type: 'test'
+  ...
+# Subtest: corrupt state fails closed and remains intact; binding cannot change under same id
+ok 6 - corrupt state fails closed and remains intact; binding cannot change under same id
+  ---
+  duration_ms: 6.616681
+  type: 'test'
+  ...
+# Subtest: fence rejects reentrant revoke and async callbacks before async effect starts
+ok 7 - fence rejects reentrant revoke and async callbacks before async effect starts
+  ---
+  duration_ms: 5.812483
+  type: 'test'
+  ...
+# Subtest: real concurrent writers CAS exactly once; fresh process denies stale admission
+ok 8 - real concurrent writers CAS exactly once; fresh process denies stale admission
+  ---
+  duration_ms: 716.758129
+  type: 'test'
+  ...
+# Subtest: dispatch and revoke serialize across processes; final acceptance rechecks generation
+ok 9 - dispatch and revoke serialize across processes; final acceptance rechecks generation
+  ---
+  duration_ms: 757.605211
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1556.122604
+=== r1-qualification: PASS ===
+
+=== r1-shell-isolation ===
+TAP version 13
+# Subtest: real sandbox excludes synthetic sibling, shared state, credentials, sockets and egress
+ok 1 - real sandbox excludes synthetic sibling, shared state, credentials, sockets and egress
+  ---
+  duration_ms: 49.045558
+  type: 'test'
+  ...
+# Subtest: production shell grant writes its own artifact and denies another mission
+ok 2 - production shell grant writes its own artifact and denies another mission
+  ---
+  duration_ms: 942.227967
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 997.623306
+=== r1-shell-isolation: PASS ===
+
+=== r1-spec-binding ===
+PASS canonical digest is stable across object order and JSON/Mission schema round trips
+PASS snapshot is detached and deeply frozen; exact whitespace and array order matter
+PASS post-approval mission identity mutation is rejected
+PASS post-approval title mutation is rejected
+PASS post-approval description mutation is rejected
+PASS post-approval objective mutation is rejected
+PASS post-approval scope/exclusions mutation is rejected
+PASS post-approval risk mutation is rejected
+PASS post-approval criterion mutation is rejected
+PASS post-approval tool grant mutation is rejected
+PASS post-approval specialist suggestion mutation is rejected
+PASS post-approval complexity mutation is rejected
+PASS missing, malformed, partial, inconsistent or unknown specifications fail closed
+PASS storage guard rejects binding deletion, replacement and timestamp rewrite
+PASS draft edits and execution metadata/status updates remain supported
+PASS storage approval atomically persists a binding and rejects all approved field drift
+PASS storage rejects in-place mutator and fence changes against the original stored binding
+PASS save, compatibility update and CAS cannot remove or rehash an existing binding
+PASS storage permits execution updates and preserves provisioned mission workspaces
+PASS legacy unbound states stay loadable/writable without inferred approval
+PASS new malformed supplied bindings and existing corrupted bindings cannot be overwritten
+Description: Original request: evaluate the launch; keep it an unpublished draft.
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+Noninteractive approval absent; use --approve to explicitly approve and start.
+
+⏸ Mission r1-cli-explicit-approval is pending_approval; no execution was started.
+Approve interactively: npx tsx src/index.ts approve r1-cli-explicit-approval
+Approve noninteractively: npx tsx src/index.ts approve r1-cli-explicit-approval --approve
+PASS CLI absent approval leaves an unbound pending mission
+Description: Original request: evaluate the launch; keep it an unpublished draft.
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+
+🚀 Starting mission r1-cli-explicit-approval...
+
+
+══════════════════════════════════════════════════
+❌ APPROVED — QA score: 0/10
+══════════════════════════════════════════════════
+
+PASS CLI explicit approve binds before constructing the manager
+
+⚡ Prompt Master is analyzing your request...
+
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+
+Mission created: 9b50e52d-a886-44eb-95aa-b3b2ac19df7b
+
+🚀 Starting mission...
+
+
+══════════════════════════════════════════════════
+❌ APPROVED — QA score: 0/10
+══════════════════════════════════════════════════
+
+PASS CLI one-shot explicit run binds before constructing the manager
+Description: Original request: evaluate the launch; keep it an unpublished draft.
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+PASS CLI does not approve a specification changed while the user was confirming
+AWE GROUP API server running on http://127.0.0.1:37453
+PASS API approval binds the complete task before manager invocation
+PASS API returns conflict for incomplete legacy approval and starts no execution
+PASS actual Head prompt includes full approved description, scope/exclusions, risks and acceptance
+PASS Head fallback retains the entire approval and never expands grants
+PASS Head rejects missing/drifted approval and pending status before model calls
+PASS Head refuses an in-flight specification mutation instead of returning fallback
+
+31 spec-binding checks passed (offline, isolated data).
+[storage] Corrupt mission r1-storage-binding-13: [
+  {
+    "origin": "array",
+    "code": "too_small",
+    "minimum": 1,
+    "inclusive": true,
+    "path": [
+      "acceptance_criteria"
+    ],
+    "message": "At least one non-blank acceptance criterion is required"
+  }
+]
+Mission r1-cli-display-race: approved specification changed while awaiting approval; reload and approve again
+=== r1-spec-binding: PASS ===
+
+=== resume-policy ===
+AWE GROUP — resume policy regression tests
+
+T1 — the real 25be2dad checkpoint retries failed coder only
+  ✓ successful designer is skipped
+  ✓ failed original coder is retried
+  ✓ successful devops is skipped
+  ✓ successful analyst is skipped
+  ✓ new corrective coder still runs
+  ✓ new writer still runs
+
+T2 — reordered fresh plan does not repeat successful work
+  ✓ designer matched at its new index
+  ✓ analyst matched at its new index
+  ✓ devops matched at its new index
+  ✓ coder is not accidentally skipped at checkpoint index 0
+
+T3 — repeated roles match by occurrence and only success is reusable
+  ✓ first successful coder occurrence is skipped
+  ✓ failed second coder occurrence is retried
+  ✓ partial result is not treated as verified success
+  ✓ missing checkpoint runs everything
+
+T4 — scoped coder fallback does not change the general coding route
+  ✓ top-level coder uses the controlled Fable fallback
+  ✓ general coding remains on Kimi
+
+passed: 16, failed: 0
+All resume policy regression tests passed.
+=== resume-policy: PASS ===
+
+=== stage1-integration ===
+
+━━━ Probe 1: MCP browser tools load ━━━
+✓ browser.ts module imported successfully
+✓ Total browser tools: 5
+✓ D1 (browser tools dead): FIXED — ESM import works
+
+━━━ Probe 2: Artifact reconciliation ━━━
+✓ reconcileArtifactFiles detected the untracked image
+✓ Artifact type: image
+✓ D2 (screenshot not registered): FIXED
+
+━━━ Probe 3: Usage tracking schema ━━━
+✓ AgentResultSchema accepts model, tools_used, usage
+✓ D4 (no token/cost accounting): FIXED
+
+━━━ Probe 4: Delegation tree ━━━
+✓ Delegation tree records a top-level node
+✓ Node: stage1-tree-test-1794606344383:top0, role: planner, depth: 0
+✓ D7 (no dynamic agent creation): FIXED
+
+━━━ Probe 5: QA gate placeholder detection ━━━
+✓ QA gate detected placeholder marker
+✓ Blocker: Unfilled/placeholder content detected in Content section: "pending transcription"
+✓ QA gate criterion-level enforcement: WORKING
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Stage 1 Integration Tests: ALL PROBES PASSED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ D1 (browser tools dead): browser.ts ESM import works
+✓ D2 (screenshot not registered): reconcileArtifactFiles works
+✓ D3 (agent output not propagated): excerpt() helper implemented
+✓ D4 (no token/cost accounting): AgentResultSchema extended
+✓ D7 (no dynamic agent creation): delegation tree tracked
+✓ QA gate: blocks placeholder markers
+Stage 1 offline regression probes passed; this is not a live-service readiness verdict.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+=== stage1-integration: PASS ===
+
+Offline suites: 30 passed, 0 failed

@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: SIGTERM: real manager waits for a resistant registered group before paused state and lease release
+ok 1 - SIGTERM: real manager waits for a resistant registered group before paused state and lease release
+  ---
+  duration_ms: 2593.681641
+  type: 'test'
+  ...
+# Subtest: orphan recovery: malformed process evidence remains preserved and blocks resumable state
+ok 2 - orphan recovery: malformed process evidence remains preserved and blocks resumable state
+  ---
+  duration_ms: 50.420631
+  type: 'test'
+  ...
+# Subtest: direct cancellation after SIGKILL reaps the orphan before cancelled state
+ok 3 - direct cancellation after SIGKILL reaps the orphan before cancelled state
+  ---
+  duration_ms: 2731.94137
+  type: 'test'
+  ...
+# Subtest: SIGKILL: real orphan reconciliation reaps the dead owner's resistant group before publishing paused
+ok 4 - SIGKILL: real orphan reconciliation reaps the dead owner's resistant group before publishing paused
+  ---
+  duration_ms: 2915.110042
+  type: 'test'
+  ...
+# Subtest: terminal-plus-live evidence reopens under retained cancellation ownership
+ok 5 - terminal-plus-live evidence reopens under retained cancellation ownership
+  ---
+  duration_ms: 950.549572
+  type: 'test'
+  ...
+# Subtest: fatal failure retains ownership and automatically retries transient process settlement
+ok 6 - fatal failure retains ownership and automatically retries transient process settlement
+  ---
+  duration_ms: 3594.647375
+  type: 'test'
+  ...
+# Subtest: checkpoint integrity retains damaged bytes and automatically retries transient process settlement
+ok 7 - checkpoint integrity retains damaged bytes and automatically retries transient process settlement
+  ---
+  duration_ms: 3664.909405
+  type: 'test'
+  ...
+# Subtest: explicit cancellation after checkpoint damage preserves exact bytes through quiescence
+ok 8 - explicit cancellation after checkpoint damage preserves exact bytes through quiescence
+  ---
+  duration_ms: 3342.917824
+  type: 'test'
+  ...
+# Subtest: repeated SIGTERM retries transient failed quiescence without uninstalling handlers
+ok 9 - repeated SIGTERM retries transient failed quiescence without uninstalling handlers
+  ---
+  duration_ms: 1901.111559
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 31106.088086

@@ -1,0 +1,72 @@
+{
+  "passed": false,
+  "score": 4,
+  "criteria_results": [
+    {
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "passed": false,
+      "notes": "The missing capability observation-digest-v1 was identified, and one bounded local acquisition is documented in acquisition-report.md and capability-observation.json. No Head replan is evidenced, and the procedure is not qualified. Section 6 of the acquisition report states that this is 'an acquisition observation, not a qualification result' and that qualification remains for the replanned phase."
+    },
+    {
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "passed": false,
+      "notes": "The candidate contains no invocation receipt artifact. Only probe runs into probe/ and probe2/ are reported, and they were explicitly not executed as the proposed target. Because the bytes were never qualified, no qualified invocation could have occurred. The report says the receipt 'remain[s] for the replanned phase'."
+    },
+    {
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and sites totals; digest.md presents the same values with a reproducible method.",
+      "passed": false,
+      "notes": "The probe outputs are arithmetically correct, verified independently: row_count 3, scheduled 30 (12+8+10), completed 26 (11+8+7), incidents 6 (2+1+3), completion_percent 86.67 (26/30*100=86.666... rounded half-up), North 2/22/18/5, South 1/8/8/1. The probe digest.md matches these values and gives a reproducible method. However, the mission deliverables digest.json and digest.md were deliberately not written. Only probe/ and probe2/ copies exist, produced by an unqualified procedure, and the spec's risk notes that a model-authored observation is not qualification."
+    },
+    {
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "passed": false,
+      "notes": "The required deliverables (final digest.json, final digest.md, invocation receipt) do not exist, so they cannot be registered or verified. The candidate contains no evidence of host verification of the executable or output bytes. The report lists host verification and Nox QA as outstanding."
+    }
+  ],
+  "defects": [
+    {
+      "issue": "The mission deliverables digest.json and digest.md were not produced at the canonical mission output location. Only probe/ and probe2/ outputs from an unqualified acquisition run exist.",
+      "severity": "critical"
+    },
+    {
+      "issue": "No durable invocation receipt binding the executable sha256 8fd9b2db...282b, the fixed args, and the output hashes is present.",
+      "severity": "critical"
+    },
+    {
+      "issue": "No Head replan or qualification step for the acquired procedure is evidenced. The candidate is an acquisition-phase snapshot submitted as a completed mission.",
+      "severity": "critical"
+    },
+    {
+      "issue": "No evidence of independent host verification of the artifact bytes.",
+      "severity": "major"
+    },
+    {
+      "issue": "The header comment in bin/observation-digest-v1.js says a validation failure exits 1, but fail() exits 2.",
+      "severity": "minor"
+    },
+    {
+      "issue": "The self-check 'completion_percent rounded to 2 decimals via exact integer arithmetic' is hardcoded ok: true and verifies nothing.",
+      "severity": "minor"
+    },
+    {
+      "issue": "FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    }
+  ],
+  "recommendations": [
+    "Have the Head replan using the acquired procedure and qualify it through host verification of executable sha256 8fd9b2dbe037130b7ab995d0146d1cf8db66ea7595d2b5644a298fb8c43b282b plus an independent arithmetic check.",
+    "Invoke the qualified bytes with fixed args (input/pilot.observations.json and the canonical mission output directory) and persist a durable invocation receipt recording the executable hash, args, exit code, stdout, and output hashes.",
+    "Register the final digest.json, digest.md, and receipt as artifacts and submit them for host verification and Nox QA.",
+    "Fix the exit-code comment mismatch, and either remove the hardcoded rounding self-check or replace it with a real recomputation.",
+    "Mark probe/ and probe2/ outputs as non-deliverable evidence so they are not confused with mission outputs."
+  ],
+  "verdict": "FAIL: Execution plan contains no delegations"
+}

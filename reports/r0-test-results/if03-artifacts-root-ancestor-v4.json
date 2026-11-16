@@ -1,0 +1,65 @@
+{
+  "probe": "probes/if03-artifacts-root-ancestor.mjs",
+  "command": "commands/if03-artifacts-root-ancestor.txt",
+  "expected": "reject ancestor-linked artifacts root; no outside adoption, QA, or completion",
+  "exit_code": 1,
+  "observed": {
+    "runError": "none",
+    "returnedStatus": "completed",
+    "finalStatus": "completed",
+    "qaCalls": 1,
+    "qaArtifacts": [
+      {
+        "name": "primary.txt",
+        "path": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/data/artifacts/eeeeeeee-1111-4111-8111-000000000001/primary.txt",
+        "realPath": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/outside-artifacts-root/eeeeeeee-1111-4111-8111-000000000001/primary.txt"
+      },
+      {
+        "name": "nested/unregistered.txt",
+        "path": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/data/artifacts/eeeeeeee-1111-4111-8111-000000000001/nested/unregistered.txt",
+        "realPath": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/outside-artifacts-root/eeeeeeee-1111-4111-8111-000000000001/nested/unregistered.txt"
+      },
+      {
+        "name": "target.txt",
+        "path": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/data/artifacts/eeeeeeee-1111-4111-8111-000000000001/target.txt",
+        "realPath": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/outside-artifacts-root/eeeeeeee-1111-4111-8111-000000000001/target.txt"
+      }
+    ],
+    "adoptedOutside": [
+      {
+        "name": "nested/unregistered.txt",
+        "path": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/data/artifacts/eeeeeeee-1111-4111-8111-000000000001/nested/unregistered.txt",
+        "realPath": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/outside-artifacts-root/eeeeeeee-1111-4111-8111-000000000001/nested/unregistered.txt",
+        "metadata": {
+          "size_bytes": 20,
+          "sha256": "50b6296ffd9080d890aacd846117fa22b54022d3e588bc611311bca7980a27d5",
+          "reconciled": true
+        }
+      },
+      {
+        "name": "target.txt",
+        "path": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/data/artifacts/eeeeeeee-1111-4111-8111-000000000001/target.txt",
+        "realPath": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/outside-artifacts-root/eeeeeeee-1111-4111-8111-000000000001/target.txt",
+        "metadata": {
+          "size_bytes": 14,
+          "sha256": "d2618a0327794763053fe297b9502f2c04ea6e36853d3b623185c50521fa2750",
+          "reconciled": true
+        }
+      }
+    ],
+    "finalArtifactNames": [
+      null,
+      null,
+      null
+    ],
+    "artifactsRootLink": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/outside-artifacts-root",
+    "targetBytes": "outside-target",
+    "unregisteredBytes": "outside-unregistered",
+    "realDataDir": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v4-20261113/integrated/state/if03-artifacts-root-ancestor/data"
+  },
+  "assertions": [
+    "FAIL\tartifacts-root ancestor symlink is rejected without adopting outside files",
+    "FAIL\tmanager cannot send escaped evidence to QA or complete with it",
+    "SUMMARY\tpassed=0\tfailed=2"
+  ]
+}

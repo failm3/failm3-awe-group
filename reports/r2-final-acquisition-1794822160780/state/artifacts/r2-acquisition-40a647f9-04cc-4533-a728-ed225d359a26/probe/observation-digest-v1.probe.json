@@ -1,0 +1,48 @@
+{
+  "probe": "observation-digest-v1 pre-qualification probe (target main path not executed)",
+  "probe_method": "independent Python integer/Decimal recomputation of the fixture plus static source checks",
+  "input": {
+    "file": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822160780/state/artifacts/r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26/input/pilot.observations.json",
+    "bytes": 474,
+    "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+  },
+  "independently_computed_expected": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "sites": {
+      "North": {
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5
+      },
+      "South": {
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1
+      }
+    }
+  },
+  "checks": {
+    "row_count_matches_fixture_length": true,
+    "site_totals_reconcile_to_overall": true,
+    "completion_percent_has_two_decimals": true,
+    "source_syntax_ok": true,
+    "source_sha256_matches_file": true,
+    "rounding_formula_matches_decimal_half_up": true,
+    "rounding_cases_tested": 14,
+    "rounding_mismatches": [],
+    "two_arg_arity_enforced": true,
+    "writes_digest_json": true,
+    "writes_digest_md": true,
+    "no_network_or_package_imports": true,
+    "target_main_path_executed": false
+  },
+  "proposed_source": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822160780/state/artifacts/r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26/bin/observation-digest-v1.mjs",
+    "bytes": 7811,
+    "sha256": "25ecc9dc494232499b94677c75cb89da8550439582d59524a1e891d8a5c4fcd1"
+  }
+}

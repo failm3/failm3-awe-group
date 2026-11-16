@@ -1,0 +1,34 @@
+snapshot=after
+utc=2026-11-16T10:36:39Z
+exe_sha256_pre_invocation=49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3
+exe_sha256_post_invocation=49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3
+qualified_sha256=49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3
+node_version=v22.23.3
+invocation_exit_code=0
+stderr_bytes=0
+listing_vs_before=identical
+format=sha256  size  path (all mission-root files except .tmp_* and .oc-isolated)
+4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81  470  ./digest.json
+ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef  1301  ./digest.md
+412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766  474  ./input/pilot.observations.json
+4095eda633765ad3fc456164c885569382758e008b7a9d19d005234bc3805f4b  4055  ./invocation-receipt.json
+b9da2c57ad5d1b9333422140268242c927d5d83b92801ae35ce6fe3b651e7e94  2833  ./observation.json
+4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81  470  ./probe-digest.json
+33514eb9f80d45894427d295841f497ea360d2648cb5096294c62d2448f7feb3  77  ./probe/edge/bad.json
+db6c4f5389287888595052670dc7a1e0d3c83a8c7366bb402066b975412c8482  201  ./probe/edge/edge.json
+fb06a622f89afce02c243c266bf07280966215ce4b833a98ae9221fc72cca79e  440  ./probe/edge/out/digest.json
+25b097ce18ba9113d699b2150779891aaf640a19d948375c5de41bdb00146447  1271  ./probe/edge/out/digest.md
+4698211e437e3836b258585166d1bfa49d465ac867615e3672e62247cc1d50c1  290  ./probe/edge/outzero/digest.json
+ce787721ee6572d8fb4b7109e12317e905764b81c31c8604dd0b910932ebf17e  1226  ./probe/edge/outzero/digest.md
+53087868eeb8f945a00b32961213b744529b9d63722579005f356de7c310df07  100  ./probe/edge/zero.json
+4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81  470  ./probe/out/digest.json
+ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef  1301  ./probe/out/digest.md
+4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81  470  ./probe/sandbox/digest.json
+ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef  1301  ./probe/sandbox/digest.md
+49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3  9417  ./procedures/observation-digest-v1.js
+822b2371fd69aa1f2f8e908c5c7281292df52192a2efcd50ecbb74810d2289ed  12236  ./qa-report.json
+d90c10d4e609f887b7546fb51fa19427b403fab5ebfac8c37ba2d1ab32dde363  14045  ./verification-report.json
+df86bec0124a46b1392d5b4ae2d30591d5b2193faec19809ffc078ffae8123c1  4678  ./verification.md
+11b316465f05b137b534b7b0a44e20c8353c1f15192cff91412f69b35470ce1d  5056  ./verify/recompute-evidence.json
+30907ce5f93cc8e70b5ca6bc09dba660eebbeac20556ceb5c14376c90198b6e9  11236  ./verify/recompute.py
+9f88e617a2b10b9641905ffc4cb48b654a8b1ee0aae729715aa09a0c898c791c  1274  ./verify/write-scope-evidence.json

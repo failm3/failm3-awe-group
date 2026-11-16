@@ -1,0 +1,116 @@
+
+M1 — normal run completes, signal is passed to every phase, lease released
+  ✓ completed
+  ✓ planMission got a signal
+  ✓ reviewMissionDetailed got a signal
+  ✓ executeSpecialist got maxSteps + signal
+  ✓ registered artifact is in the final record
+  ✓ lease released
+  ✓ checkpoint cleared on terminal
+  ✓ manager unregistered
+
+M2 — LLM text is not auto-saved as a deliverable
+  ✓ no artifact was created from the text
+  ✓ delegation without tools/artifacts is failed, not success
+  ✓ mission cannot complete without a deliverable
+
+M3 — a failed delegation is not reported as success
+  ✓ status failed
+  ✓ tree node failed
+
+M4 — in-process double run is rejected
+  ✓ second run rejected with MissionLeaseError
+  ✓ first run unaffected
+  ✓ rejected run wrote nothing over the first
+
+M5 — cancel mid-delegation: abort, quiesce, cancelled, no late writes
+  ✓ cancel resolved cancelled
+  ✓ waited for the specialist to settle (quiesced)
+  ✓ specialist observed the abort
+  ✓ run() reports cancelled, not failed
+  ✓ QA never ran
+  ✓ straggler artifact refused
+  ✓ no late artifact listed
+  ✓ cancellation recorded
+  ✓ old run cannot overwrite terminal state
+  ✓ lease released
+
+M6 — non-cooperative work keeps ownership until it really settles
+  ✓ non-quiesced cancellation is not confirmed terminal
+  ✓ quiesced=false and pending reported
+  ✓ record says it was not quiesced
+  ✓ owner lease is retained while work is pending
+  ✓ late settlement completes cancellation
+  ✓ lease released only after actual quiescence
+
+M7 — timeout aborts the underlying work and pauses (not failed)
+  ✓ underlying specialist was aborted
+  ✓ mission paused, not failed
+  ✓ checkpoint reason timeout
+  ✓ lease released
+
+M7b — non-cooperative timeout cannot overlap a resumed run
+  ✓ non-quiesced timeout remains running, not resumable paused
+  ✓ timeout metadata exposes pending work
+  ✓ rival cannot resume over pending old work
+  ✓ actual settlement makes timeout resumable
+  ✓ deferred timeout releases lease
+
+M7c — an exhausted resumed budget starts no new provider or tool effect
+  ✓ exhausted resume remains paused rather than re-running work
+  ✓ Head, specialist, QA and routing are all skipped
+  ✓ durable elapsed time still exhausts the original budget
+  ✓ timeout recovery records elapsed and configured budget
+  ✓ exhausted owner releases its lease after quiescence
+
+M8 — resume reuses only fingerprint-confirmed successes
+  ✓ analyst (confirmed success) not re-run
+  ✓ coder with a changed task re-runs
+  ✓ in-flight writer re-runs
+  ✓ completed
+  ✓ matchCompletedDelegations is fingerprint-exact
+  ✓ fingerprint ignores whitespace differences
+  ✓ fingerprint distinguishes tasks
+
+M9 — terminal/pending missions cannot be started; late run cannot flip state
+  ✓ cancel without a runner marks cancelled
+  ✓ run() on a cancelled mission rejected
+  ✓ status still cancelled
+  ✓ pending_approval cannot run
+  ✓ failed claim released the lease
+
+M10 — withMissionTimeout stays backward compatible and aborts fn
+  ✓ fn received the abort
+  ✓ onTimeout ran and MissionTimeoutError thrown
+  ✓ zero-arg fn still resolves
+
+M11 — cross-process: double-run rejected, cancel forwarded to the owner
+  ✓ owner process holds a live lease
+  ✓ run from another process rejected
+  ✓ rival did not change the status
+  ✓ cancel confirmed by the owner
+  ✓ owner's specialist was really aborted
+  ✓ owner exited cleanly with cancelled result
+  ✓ lease gone
+  ✓ fast confirmation (heartbeat poll)
+
+M12 — cross-process race: two processes run the same mission, one wins
+  ✓ exactly one run completed, the other rejected
+  ✓ final status completed
+
+M13 — duplicate Head plans and missing artifact bytes fail closed
+  ✓ duplicate top-level plan is refused
+  ✓ refused duplicate plan has zero effects
+  ✓ deleted required artifact blocks completion despite passing QA
+  ✓ artifact integrity blocker is recorded
+
+M14 — repair and reconciled evidence are integrity-fenced through completion
+  ✓ deleted repair artifact blocks completion despite later passing QA
+  ✓ repair artifact integrity blocker is recorded
+  ✓ deleted reconciled artifact blocks completion despite passing QA
+  ✓ reconciled artifact integrity blocker is recorded
+  ✓ repair prose and reused artifact IDs cannot produce success
+  ✓ empty repair blocker is recorded
+
+────────────────────────────────────────────────────────────
+r0-runtime manager: passed 81, failed 0

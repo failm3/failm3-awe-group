@@ -1,0 +1,236 @@
+[
+  {
+    "schema_version": 1,
+    "call_id": "56df0f6c-cd29-47f2-a75b-ec95d9a4ed7b",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "role": "head-agent",
+    "model": "claude-opus-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:21:32.536Z",
+    "finished_at": "2026-11-16T20:22:00.753Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 3394,
+      "output_tokens": 2324,
+      "total_tokens": 5718,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "ccd1502a-38e7-40bc-8488-66743b769a86",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "role": "research-coordinator",
+    "model": "claude-sonnet-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:22:00.815Z",
+    "finished_at": "2026-11-16T20:25:50.737Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": "UNKNOWN",
+      "output_tokens": "UNKNOWN",
+      "total_tokens": "UNKNOWN",
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 116448
+    },
+    "usage_status": "partial",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "ffecaa68-c770-402e-af60-f33d61306fb8",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "role": "researcher",
+    "model": "claude-sonnet-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:23:16.690Z",
+    "finished_at": "2026-11-16T20:24:40.688Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 52761,
+      "output_tokens": 9978,
+      "total_tokens": 62739,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 31655
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "46c70347-418d-4e7d-9703-0b2d7ff86a43",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "role": "researcher",
+    "model": "claude-sonnet-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:23:16.711Z",
+    "finished_at": "2026-11-16T20:24:09.221Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 40092,
+      "output_tokens": 6756,
+      "total_tokens": 46848,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 15464
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "c9c96ae7-767c-401d-baf5-66bf595636d1",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "role": "qa-agent",
+    "model": "claude-opus-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:25:50.773Z",
+    "finished_at": "2026-11-16T20:26:21.370Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 14171,
+      "output_tokens": 2321,
+      "total_tokens": 16492,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "a9355799-ebf0-4c1e-a98b-7e8458e1f9ef",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+    "role": "head-agent",
+    "model": "claude-opus-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:21:32.550Z",
+    "finished_at": "2026-11-16T20:22:09.187Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 3723,
+      "output_tokens": 4262,
+      "total_tokens": 7985,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "6c7d57c4-de2d-48cd-be00-9bb1db72d90a",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+    "role": "analyst",
+    "model": "claude-sonnet-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:22:09.235Z",
+    "finished_at": "2026-11-16T20:22:51.946Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 47935,
+      "output_tokens": 2889,
+      "total_tokens": 50824,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 17690
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "03c73804-0db8-491d-9741-8ec68833c150",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+    "role": "writer",
+    "model": "claude-sonnet-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:22:51.987Z",
+    "finished_at": "2026-11-16T20:24:59.844Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 102235,
+      "output_tokens": 10905,
+      "total_tokens": 113140,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 69531
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "schema_version": 1,
+    "call_id": "4486a100-0b57-4d81-9440-017c5db77849",
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+    "role": "qa-agent",
+    "model": "claude-opus-5-5",
+    "provider": "routercheap",
+    "operation": "generate",
+    "started_at": "2026-11-16T20:24:59.875Z",
+    "finished_at": "2026-11-16T20:25:22.027Z",
+    "status": "completed",
+    "outcome": "completed",
+    "usage": {
+      "input_tokens": 9134,
+      "output_tokens": 1782,
+      "total_tokens": 10916,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+    },
+    "usage_status": "reported",
+    "cost": {
+      "status": "UNKNOWN",
+      "amount": null,
+      "currency": "USD"
+    }
+  }
+]

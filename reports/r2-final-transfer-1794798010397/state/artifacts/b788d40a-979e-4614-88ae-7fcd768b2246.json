@@ -1,0 +1,14 @@
+{
+  "id": "b788d40a-979e-4614-88ae-7fcd768b2246",
+  "mission_id": "r2-final-transfer-1794798010397-t34-on",
+  "type": "text",
+  "name": "test-run.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t34-on/test-run.md",
+  "content": "# Test run: core/decoder.cjs\n\nCommand: `node visible.test.cjs` (test file unmodified)\nOutput: `visible PASS`, exit code 0\n\nAdditional ad-hoc checks against FORMAT.md (all matched expected behavior):\n- Empty string returns []. LF, CRLF and CR records parse; a final record ending does not create an extra record.\n- Whole-field quoting works: `\"\"` decodes to `\"`, and quoted fields can contain `;`, `=`, CR and LF. Text after a closing quote, unterminated quotes, quotes inside unquoted fields, a second `=` in an unquoted field, bad keys, empty fields and duplicate decoded keys (including one quoted and one unquoted copy) all throw INVALID_FORMAT.\n- VALUE trimming applies, including inside quoted fields.\n- Values that are non-canonical (e.g. leading zero), out of range, missing, or a COLOR outside the case-sensitive set teal/gold throw INVALID_VALUE.\n- A syntax error takes precedence over a semantic error in the same record.\n- Unknown keys are dropped. Prototype-looking keys never change the result's prototype.\n- Output key order follows the schema (WINDOW, RATE, LIMIT, COLOR), whatever the input order.\n\nSpec note: FORMAT.md says \"FLAGS becomes an array\", but it documents no FLAGS field and says only the documented optional field (COLOR) is recognized. FLAGS is therefore treated as an unknown key and dropped.\n",
+  "created_at": "2026-11-16T06:53:04.460Z",
+  "metadata": {
+    "size_bytes": 1324,
+    "sha256": "d91c04b1047b8260f1bbba5d023afb0034622207ac36eaece465b9e73730ce22",
+    "revision": 1
+  }
+}

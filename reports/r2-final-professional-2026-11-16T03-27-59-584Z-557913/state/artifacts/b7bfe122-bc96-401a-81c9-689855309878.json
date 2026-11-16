@@ -1,0 +1,14 @@
+{
+  "id": "b7bfe122-bc96-401a-81c9-689855309878",
+  "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research",
+  "type": "file",
+  "name": "sources/weekly-observations.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T03-27-59-584Z-557913/state/artifacts/r2-final-professional-2026-11-16T03-27-59-584Z-557913-research/sources/weekly-observations.txt",
+  "content": "SOURCE: Service Operations pilot observation log, revision 2026-02-02\nALDER: 4 site-weeks, 480 requests, 31 delayed acknowledgements, 2 supervisor escalations.\nBROOK: 4 site-weeks, 480 requests, 43 delayed acknowledgements, 4 supervisor escalations.\nCOVE: 4 site-weeks, 480 requests, 37 delayed acknowledgements, 3 supervisor escalations.\nDELAY: elapsed acknowledgement time greater than 15 minutes, measured after routing.\nCONTROL: one independent reviewer sampled 60 acknowledgement records per site.\nDATA_QUALITY: no missing weekday records; the log does not identify individual customers.\n",
+  "created_at": "2026-11-16T03:27:59.761Z",
+  "metadata": {
+    "size_bytes": 593,
+    "sha256": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+    "revision": 1
+  }
+}

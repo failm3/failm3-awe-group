@@ -1,0 +1,24 @@
+.oc-isolated/
+.env
+.env.*
+node_modules/
+dist/
+*.log
+# Research evidence logs are intentional release content.
+!reports/**/*.log
+.awe-data/
+haiku.txt
+primes.py
+primes-output.txt
+node-status.md
+# Browser test screenshots (binary artifacts)
+data/*.png
+data/*.jpg
+# Chromium local deps (extracted .deb)
+.chromium-deps/usr/
+.chromium-deps/*.deb
+.r0-work/
+.r0-closure-adapters-test-*/
+.r0-process-lifecycle-test-*/
+.r1-tool-isolation-*/
+src/tests/helpers/r0-temp-*/

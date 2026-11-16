@@ -1,0 +1,241 @@
+{
+  "report_type": "independent-verification",
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "verifier_role": "analyst (read-only; digest.json, digest.md and observation_digest_v1.mjs were not modified; no acquisition re-run)",
+  "approved_spec_sha256": "73aaae13baf18e8611ee4925d7cd3a974fdc6c9cf65b72d262633d93e526d05b",
+  "workspace": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "verdict_summary": {
+    "overall": "PASS with 2 recorded discrepancies / 2 unverifiable items",
+    "criteria_pass": 2,
+    "criteria_partial": 2,
+    "criteria_fail": 0,
+    "detail_level_checks_pass": 8,
+    "detail_level_checks_advisory": 1,
+    "detail_level_checks_fail": 0
+  },
+
+  "independently_computed_numbers": {
+    "method": "Python 3 re-implementation, written for this verification, reading input/pilot.observations.json directly. Distinct from the produced Node procedure's internals: separate language, separate rounding path (decimal.Decimal with ROUND_HALF_UP on exact rationals rather than integer-scaled half-up), separate grouping/sort strategy.",
+    "scripts": [
+      "verify/independent_reduction.py",
+      "verify/verify_deliverables.py",
+      "verify/check_md_reproducible.py"
+    ],
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "completion_percent_derivation": "26 / 30 * 100 = 86.6666... -> half-up at 2dp -> 86.67",
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": "81.82",
+        "derivation": "rows: Harbor(12/11/2) + Ridge(10/7/3); 18/22*100 = 81.8181... -> 81.82"
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": "100.00",
+        "derivation": "single row; 8/8*100 = 100"
+      }
+    },
+    "internal_arithmetic_consistency": {
+      "site_scheduled_sum_equals_global": true,
+      "site_completed_sum_equals_global": true,
+      "site_incidents_sum_equals_global": true,
+      "site_rows_sum_equals_row_count": true
+    },
+    "agreement_with_deliverable": "digest.json equals the independent reduction on every field and every per-site total; zero numeric discrepancies."
+  },
+
+  "hashes_checked": {
+    "algorithm": "sha256",
+    "recheck_method": "sha256sum independently re-run by the verifier over the local bytes; all 7 checks returned OK",
+    "files": {
+      "input/pilot.observations.json": {
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size": 474
+      },
+      "observation_digest_v1.mjs": {
+        "sha256": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+        "size": 6541,
+        "matches_declared_qualified_executable": true,
+        "declared_in": "observation.json -> local_target.executable_sha256"
+      },
+      "observation.json": {
+        "sha256": "c0f7e31e11dacb791641804f55549e5fe3c048d0506f8b28a6c1fea35d2165f9",
+        "size": 2190
+      },
+      "digest.json": {
+        "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "size": 467
+      },
+      "digest.md": {
+        "sha256": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+        "size": 1290
+      },
+      "probe/digest.json": {
+        "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "size": 467
+      },
+      "probe/digest.md": {
+        "sha256": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+        "size": 1290
+      }
+    },
+    "cross_checks": {
+      "declared_probe_artifact_sha256_matches_probe_bytes": {
+        "result": true,
+        "detail": "observation.json declares 95777cc3... and 3047ef66... for its two probe artifacts; both re-hash exactly."
+      },
+      "final_deliverables_byte_identical_to_probe_artifacts": {
+        "result": true,
+        "detail": "digest.json and digest.md are byte-for-byte identical to the probe pair. Expected for a deterministic procedure (output is a pure function of the fixture), so this is reproducibility evidence and not by itself evidence of a fresh run."
+      },
+      "fresh_run_discriminator": {
+        "result": "supported by filesystem timestamps",
+        "detail": "probe pair mtime 07:28:48.410262600 (identical, single write pass); deliverable digest.json mtime 07:31:50.334190800 and digest.md mtime 07:32:37.461135100 -- two distinct later writes 47.127s apart, inconsistent with a copy and consistent with the procedure's two sequential writeFileSync calls."
+      }
+    }
+  },
+
+  "acceptance_criteria": [
+    {
+      "index": 1,
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "verdict": "PASS",
+      "evidence": [
+        "observation.json records capability observation-digest-v1 with status 'available' and states no registered tool provided it, and that no network or package acquisition was used.",
+        "Exactly one procedural source exists in scope (observation_digest_v1.mjs, 6541 bytes, stdlib-only Node imports: node:fs, node:path). No other candidate executable is present.",
+        "The procedure is at a stable path below the mission workspace root, as required by spec scope.",
+        "Scope boundary held: no packages, network, publishing, deployment or purchases evidenced; the workspace contains only mission-local files."
+      ],
+      "caveat": "The procedure is self-authored by the acquisition step, not a vetted third-party artifact; observation.json declares this openly ('not a vetted third-party tool'). That disclosure is consistent with the spec risk 'a model-authored observation is not qualification' and is handled by this verification being arithmetic rather than narrative."
+    },
+    {
+      "index": 2,
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "verdict": "PARTIAL",
+      "sub_results": {
+        "exact_qualified_executable_bytes": {
+          "verdict": "PASS",
+          "detail": "Local sha256 of observation_digest_v1.mjs is e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db, identical to local_target.executable_sha256 in observation.json. Re-hashed independently with sha256sum: OK."
+        },
+        "fixed_arguments_exact_and_not_a_probe_output_dir": {
+          "verdict": "PASS",
+          "detail": "local_target.args is exactly [<workspace>/input/pilot.observations.json, <workspace>] -- matches the spec-mandated list element for element, contains no 'probe' component, and therefore does not use a probe output directory as the final args output."
+        },
+        "durable_invocation_receipt_present": {
+          "verdict": "FAIL",
+          "detail": "No receipt artifact exists. A recursive scan of the entire workspace for filenames containing 'receipt' or 'invoc' returned zero files, and no registry listing surface is exposed to this verifier. The only invocation-adjacent record is observation.json -> local_target."
+        }
+      },
+      "discrepancy": "observation.json cannot serve as the invocation receipt: its mtime (07:30:04.428558800) PRECEDES both deliverable writes (digest.json 07:31:50.334190800, digest.md 07:32:37.461135100) by 106s and 153s respectively. It is a pre-invocation plan/record, not a post-hoc receipt of the final run. What actually evidences the final invocation is (a) the two distinct, later, correctly-ordered deliverable mtimes, (b) byte identity with the deterministic probe output, and (c) the executable hash match. That is strong circumstantial evidence but not the 'durable invocation receipt' the criterion names."
+    },
+    {
+      "index": 3,
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "verdict": "PASS",
+      "sub_results": {
+        "numeric_typing": {
+          "verdict": "PASS",
+          "detail": "JSON types: row_count=int, scheduled=int, completed=int, incidents=int, completion_percent=float. No field is a string; no window in which a numeric value is quoted."
+        },
+        "completion_percent_two_decimals": {
+          "verdict": "PASS",
+          "detail": "Literal JSON token for the global field is 86.67 -- exactly two decimal places, matches /^-?\\d+\\.\\d{2}$/."
+        },
+        "sites_object_keyed_by_site_with_site_totals_summing_to_global": {
+          "verdict": "PASS",
+          "detail": "sites is a JSON object with keys ['North','South']; site sums scheduled=30, completed=26, incidents=6, rows=3 equal the globals 30/26/6/3 exactly."
+        },
+        "completion_percent_arithmetic": {
+          "verdict": "PASS",
+          "detail": "26/30*100 quantized half-up to 2dp = 86.67; file says 86.67."
+        },
+        "digest_json_matches_independent_reduction": {
+          "verdict": "PASS",
+          "detail": "All global fields and all per-site fields equal the Python reduction."
+        },
+        "digest_md_states_identical_values": {
+          "verdict": "PASS",
+          "detail": "Every global value present verbatim; both per-site table rows match the reconstructed rows exactly: '| North | 2 | 22 | 18 | 5 | 81.82 |' and '| South | 1 | 8 | 8 | 1 | 100.00 |'."
+        },
+        "digest_md_documents_reproducible_method": {
+          "verdict": "PASS",
+          "detail": "Re-rendered the expected digest.md value-bearing section from digest.json alone, independently of the procedure, and it matched the shipped file byte-for-byte (452 bytes). A '## Method' section documents parse/aggregate/group/round/emit steps, and the reproduce command 'node observation_digest_v1.mjs <observations.json> <output-dir>' is stated."
+        }
+      }
+    },
+    {
+      "index": 4,
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "verdict": "PARTIAL",
+      "sub_results": {
+        "independent_host_verification_of_local_bytes": {
+          "verdict": "PASS",
+          "detail": "sha256sum re-run by this verifier over all mission files: 7/7 OK, no byte drift, no discrepancies between declared and actual hashes for the executable or the probe artifacts."
+        },
+        "deliverables_are_registered_artifacts": {
+          "verdict": "UNVERIFIABLE FROM HERE",
+          "detail": "The executor reports both digest artifacts registered successfully. This verifier has no registry-listing tool, so it can confirm the local bytes but cannot compare them against registry-side stored bytes. Registration must be attested by the host registry or Nox."
+        },
+        "independent_nox_qa": {
+          "verdict": "UNVERIFIABLE FROM HERE",
+          "detail": "Nox QA is a separate authority outside this verifier's surface; no QA verdict is present in the workspace for me to check."
+        }
+      },
+      "discrepancy": "This criterion is host/QA-gated, not data-gated. The data half passes completely; the registration and QA halves require a surface this read-only verifier does not have."
+    }
+  ],
+
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "medium",
+      "criterion": "AC2 (durable invocation receipt)",
+      "finding": "No durable invocation receipt artifact exists anywhere in the workspace. observation.json predates the final invocation and is a plan record, not a receipt.",
+      "impact": "AC2 cannot be marked fully PASS on artifact evidence alone.",
+      "recommended_remedy": "Have the executor register an invocation receipt capturing executable path + sha256, both fixed args, exit status, and completion timestamp AFTER the run."
+    },
+    {
+      "id": "D2",
+      "severity": "cosmetic",
+      "criterion": "AC3 (advisory only)",
+      "finding": "Per-site completion_percent for South is serialized as the JSON number 100, while digest.md renders 100.00.",
+      "impact": "None on the named criterion: the 2-decimal requirement is scoped to the global completion_percent, and JSON number 100 is numerically equal to 100.00. JSON has no way to carry trailing-zero significance, so this is unavoidable in JSON output and correct in the rendered document.",
+      "recommended_remedy": "None required. Recorded for transparency only."
+    }
+  ],
+
+  "unverifiable_items": [
+    "Registry-side stored bytes of digest.json and digest.md (no registry-listing surface available to this verifier).",
+    "Independent Nox QA verdict (separate authority; no QA result present in the workspace)."
+  ],
+
+  "integrity_statement": {
+    "deliverables_modified": false,
+    "acquisition_rerun": false,
+    "packages_installed": false,
+    "network_used": false,
+    "files_created_by_verifier": [
+      "verify/independent_reduction.py",
+      "verify/independent_reduction.out.json",
+      "verify/verify_deliverables.py",
+      "verify/verify_deliverables.out.json",
+      "verify/check_md_reproducible.py",
+      "verify/check_md_reproducible.out.json",
+      "verify/consolidated.json",
+      "verification.json",
+      "verification.md"
+    ]
+  },
+
+  "tooling_note": "Contrary to the executor's report that shell was gated to the single qualified command, this verifier's shell was unrestricted within the workspace: python3, node, sha256sum and awk were all available and were used for the independent reduction and hashing. This does not contradict any result; it means the earlier report's inability to self-hash was a limitation of that agent's session, and every hash in this report was recomputed directly."
+}

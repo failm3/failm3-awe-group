@@ -1,0 +1,170 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "6900c987-7071-4121-a17f-3de42f9fa447",
+    "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research",
+    "repair_iteration": 0,
+    "spec_hash": "f1a0fecba02d7367f0e475ce57a2601355411867ee8e8dbc4d385c1d5a02b525",
+    "plan_hash": "f012ca58686cd334bf6de2ec1284bc94831d606e56380926629fc03f512320d2",
+    "artifacts": [
+      {
+        "artifact_id": "3cc21c9c-a230-4ef9-97d6-f49833bad80f",
+        "name": "evidence-alder.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/evidence-alder.md",
+        "sha256": "e85ec53113c3213a6be50def21e16e7ac83086b595e00fda2d2210a16dcd5f58",
+        "size_bytes": 3673
+      },
+      {
+        "artifact_id": "9c93f280-f420-4685-95f7-c5af57cb7688",
+        "name": "evidence-brook-cove.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/evidence-brook-cove.md",
+        "sha256": "a57c6bdefc275d81f05a3a037e62af773eeca7883d3e38f396c9963baeee8b5e",
+        "size_bytes": 4824
+      },
+      {
+        "artifact_id": "a3a77b4c-cc83-42b7-adde-38de23a45b84",
+        "name": "research-brief.md",
+        "revision": 3,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/research-brief.md",
+        "sha256": "e90965253e730187c59f1185e528c78b86a9b43dd229d6cad2f40087699f245b",
+        "size_bytes": 8667
+      },
+      {
+        "artifact_id": "ae5b7f1b-72e4-4b17-9bb0-4971379a77ed",
+        "name": "sources/pilot-charter.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/sources/pilot-charter.txt",
+        "sha256": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+        "size_bytes": 523
+      },
+      {
+        "artifact_id": "833f6bbf-300b-4630-b6d0-cf7443994d3a",
+        "name": "sources/reviewer-note.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/sources/reviewer-note.txt",
+        "sha256": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3",
+        "size_bytes": 421
+      },
+      {
+        "artifact_id": "19c980bb-37c7-4f68-a388-430e7153365b",
+        "name": "sources/weekly-observations.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/sources/weekly-observations.txt",
+        "sha256": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+        "size_bytes": 593
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "cb7296e8de6c7c9ab69965c95aff3488e3810a3ce5097737e5c41a372db8fefb",
+    "created_at": "2026-11-16T20:08:00.774Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research",
+    "epoch_id": "6900c987-7071-4121-a17f-3de42f9fa447",
+    "candidate_sha256": "cb7296e8de6c7c9ab69965c95aff3488e3810a3ce5097737e5c41a372db8fefb",
+    "execution_output_sha256": "2a4c725248eb3e3f5022d29d23c18149372aac6c02252e2e77cc74bf45eb4fb6",
+    "evidence_sha256": "8ff337ec1c4acb7320956820430b40081dc82f89ccde433c59bbb214bb12818d",
+    "review": {
+      "passed": false,
+      "score": 7,
+      "criteria_results": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "notes": "research-brief.md (8667 bytes, rev 3) contains Section 1 Executive Recommendation, Section 2 Factual Findings, Section 3 Limitations, all carrying inline [S1]/[S2]/[S3] tags; no other citation form appears. Both child evidence notes are retained as artifacts with explicit attribution headers: evidence-alder.md ('Prepared by: analyst Alder (source-analysis child)') and evidence-brook-cove.md ('Prepared for analysts: Brook and Cove')."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources. Put an inline citation on every factual bullet and every factual Markdown table row, including the site-totals rows.",
+          "passed": true,
+          "notes": "Section 4 maps [S1]→sources/pilot-charter.txt, [S2]→sources/weekly-observations.txt, [S3]→sources/reviewer-note.txt, and explicitly states no sources beyond S1–S3 were used. Every bullet in 2.1–2.5 carries a tag; the summary table's site-totals row ('Site total — requests observed | 480 | 480 | 480 | [S2]') and all other rows carry inline citations. The 180-sample reconciliation is correctly attributed to [S3] and the 60-per-site sample to [S2]."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "notes": "Section 2.2 gives 480 requests for Alder, Brook and Cove [S2]; 2.3 gives 31, 43 and 37 for Alder, Brook and Cove respectively [S2]; 2.4 states the 18-minute manual baseline to 11-minute routed median change [S1] with both source lines echoed separately. All three figures also appear in the cited summary table."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "notes": "Scope line at top binds to weekday Alder/Brook/Cove. Section 3 excludes weekend performance [S1][S3], excludes Depot [S1][S3], and states no completed wider rollout is claimed, citing the reviewer's repeat-measurement gate [S3]. The executive recommendation authorises only a gated two-week extension, not a rollout."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": false,
+          "notes": "The execution transcript records that the top-level delegate call 'collapsed into a single nested coordinator child (parallel=true ignored: a single request spawns exactly one child)' and that 'that nested child wrote an earlier draft brief and did not itself spawn the two required parallel children'. The two distinct children were then launched by the top-level researcher agent itself in a second top-level delegate call. Production tree therefore does not show one top-level delegation to a coordinator that itself fans out two parallel children: the fan-out sits at top level, one nesting level above where the spec requires it, and there are effectively two top-level delegate calls. The spec's own risk statement requires parallel recursion to be observed in the production tree, not inferred from prose, and the coordinator's synthesis therefore occurred without the two children's evidence as its inputs."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "Structural recursion requirement not met in the production tree: the coordinator child did not itself invoke delegate for the two required parallel analysts; the top-level agent launched them, producing an extra nesting level and a second top-level delegation, contrary to 'exactly one top-level research-coordinator delegation and no other top-level delegation'.",
+          "severity": "major"
+        },
+        {
+          "issue": "The persisted research-brief.md (rev 3) was authored by the top-level researcher after the fan-out rather than by the coordinator synthesising its own children's outputs, so the coordinator's earlier draft was superseded and the required coordinator-level synthesis chain is not demonstrable from the artifacts.",
+          "severity": "major"
+        },
+        {
+          "issue": "Minor citation drift: the bullet 'All three sites therefore sit at the same 480-request total ... which is what makes the delayed-acknowledgement counts directly comparable [S2]' presents an analytical comparability inference under a [S2] tag that contains only raw counts, not that inference.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The 18-minute and 11-minute medians are repeated into each site column of the summary table although the charter states them once at program level; this is disclosed in a footnote immediately below the table, but a reader skimming the table could read them as per-site values.",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Re-run the mission so the single top-level delegation is to research-coordinator and that coordinator itself issues one parallel delegate call with exactly two distinct children, then performs the synthesis from their persisted outputs — no additional top-level delegate call.",
+        "Fix or work around the delegate runtime behaviour that ignored parallel=true and collapsed the coordinator's fan-out into a single nested child; until it is fixed, verify the production tree shows the coordinator→two-children edge before accepting.",
+        "Have the coordinator remain the sole author of research-brief.md so that the persisted final artifact traces directly to its own children's evidence notes.",
+        "Restate the three-site comparability statement as an explicit analytical observation with no source tag, or tag it to [S3] alongside the reviewer's comparative finding, rather than attributing the inference to [S2].",
+        "Either move the program-level 18/11 medians out of the per-site table into a separate program-level row, or keep the existing inline disclosure but promote it to a table caption so it is read before the figures."
+      ],
+      "verdict": "FAIL: LLM reviewer verdict is FAIL | Criterion failed: \"Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.\" | Unresolved major defect: Structural recursion requirement not met in the production tree: the coordinator child did not itself invoke delegate for the two required parallel analysts; the top-level agent launched them, producing an extra nesting level and a second top-level delegation, contrary to 'exactly one top-level research-coordinator delegation and no other top-level delegation'. | Unresolved major defect: The persisted research-brief.md (rev 3) was authored by the top-level researcher after the fan-out rather than by the coordinator synthesising its own children's outputs, so the coordinator's earlier draft was superseded and the required coordinator-level synthesis chain is not demonstrable from the artifacts."
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "Criterion failed: \"Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.\"",
+        "Unresolved major defect: Structural recursion requirement not met in the production tree: the coordinator child did not itself invoke delegate for the two required parallel analysts; the top-level agent launched them, producing an extra nesting level and a second top-level delegation, contrary to 'exactly one top-level research-coordinator delegation and no other top-level delegation'.",
+        "Unresolved major defect: The persisted research-brief.md (rev 3) was authored by the top-level researcher after the fan-out rather than by the coordinator synthesising its own children's outputs, so the coordinator's earlier draft was superseded and the required coordinator-level synthesis chain is not demonstrable from the artifacts."
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "reason": "research-brief.md (8667 bytes, rev 3) contains Section 1 Executive Recommendation, Section 2 Factual Findings, Section 3 Limitations, all carrying inline [S1]/[S2]/[S3] tags; no other citation form appears. Both child evidence notes are retained as artifacts with explicit attribution headers: evidence-alder.md ('Prepared by: analyst Alder (source-analysis child)') and evidence-brook-cove.md ('Prepared for analysts: Brook and Cove')."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources. Put an inline citation on every factual bullet and every factual Markdown table row, including the site-totals rows.",
+          "passed": true,
+          "reason": "Section 4 maps [S1]→sources/pilot-charter.txt, [S2]→sources/weekly-observations.txt, [S3]→sources/reviewer-note.txt, and explicitly states no sources beyond S1–S3 were used. Every bullet in 2.1–2.5 carries a tag; the summary table's site-totals row ('Site total — requests observed | 480 | 480 | 480 | [S2]') and all other rows carry inline citations. The 180-sample reconciliation is correctly attributed to [S3] and the 60-per-site sample to [S2]."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "reason": "Section 2.2 gives 480 requests for Alder, Brook and Cove [S2]; 2.3 gives 31, 43 and 37 for Alder, Brook and Cove respectively [S2]; 2.4 states the 18-minute manual baseline to 11-minute routed median change [S1] with both source lines echoed separately. All three figures also appear in the cited summary table."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "reason": "Scope line at top binds to weekday Alder/Brook/Cove. Section 3 excludes weekend performance [S1][S3], excludes Depot [S1][S3], and states no completed wider rollout is claimed, citing the reviewer's repeat-measurement gate [S3]. The executive recommendation authorises only a gated two-week extension, not a rollout."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": false,
+          "reason": "The execution transcript records that the top-level delegate call 'collapsed into a single nested coordinator child (parallel=true ignored: a single request spawns exactly one child)' and that 'that nested child wrote an earlier draft brief and did not itself spawn the two required parallel children'. The two distinct children were then launched by the top-level researcher agent itself in a second top-level delegate call. Production tree therefore does not show one top-level delegation to a coordinator that itself fans out two parallel children: the fan-out sits at top level, one nesting level above where the spec requires it, and there are effectively two top-level delegate calls. The spec's own risk statement requires parallel recursion to be observed in the production tree, not inferred from prose, and the coordinator's synthesis therefore occurred without the two children's evidence as its inputs."
+        }
+      ],
+      "llm_score": 7,
+      "llm_passed": false
+    },
+    "receipt_sha256": "5b14659ab795bb55e58fb3b07996f7beeeae19649c7d2f294278545ecfe8301e",
+    "created_at": "2026-11-16T20:08:52.687Z"
+  }
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "path": ".research-assembly/upstream/awe-group-runtime-d5e9d857dbdeb8f31f9a798b10b5af4af639dbda.tar.gz",
+    "sha256": "d02c0ec77f8d122fba3d071576ff992238555d03685cd358eb1c6d463f7c285a",
+    "members": 466,
+    "scanned_text_members": 466,
+    "signature_matches": {
+      "private_key": 1
+    },
+    "email_domains": {
+      "qa.awe-e1.invalid": 2,
+      "e0.invalid": 1,
+      "api.example.test": 1,
+      "example.org": 1
+    },
+    "unsafe_members": []
+  },
+  {
+    "path": ".research-assembly/upstream/nivict-ai-academy-9b9122366a0be96303153930b9e9f8bbd10ed76c.tar.gz",
+    "sha256": "80e48ff8548f1a2d86e6cca7e0c2c25f978b65aad358c9cf52b4c0b1d497cde5",
+    "members": 5122,
+    "scanned_text_members": 5113,
+    "signature_matches": {},
+    "email_domains": {
+      "example.invalid": 1,
+      "1000.service": 1,
+      "..tq": 14,
+      "gmail.com": 302,
+      "taheer.me": 10,
+      "zurich.ibm.com": 126,
+      "crawl4ai.com": 52,
+      "deque.com": 38,
+      "2x.png": 38,
+      "futurescale.com": 10,
+      "sageby.com": 10,
+      "modelcontextprotocol.io": 20,
+      "microsoft.com": 30,
+      "pow.rs": 10,
+      "barrell.com": 22,
+      "anthropic.com": 20,
+      "langfuse.com": 64,
+      "typemade.mx": 10,
+      "ianww.com": 14,
+      "qq.com": 20,
+      "scis.smu.edu.sg": 10,
+      "jspahrsummers.com": 10,
+      "composio.dev": 20,
+      "latinotype.com": 10,
+      "benbachem.de": 10,
+      "michaelsiek.com": 10,
+      "github.com": 62,
+      "proton.me": 10,
+      "163.com": 10,
+      "mastra.ai": 10,
+      "meridianlabs.ai": 10,
+      "promptfoo.dev": 20,
+      "codekarate.com": 18,
+      "clickhouse.com": 10,
+      "kidocode.com": 18,
+      "coding-tech.com": 18
+    },
+    "unsafe_members": []
+  },
+  {
+    "path": ".research-assembly/upstream/nivict-ai-academy/03 - \u041f\u0440\u0430\u043a\u0442\u0438\u043a\u0430/05 - AWE GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/UPLOADS/AWE_AUDIT_FINAL_v4.zip",
+    "sha256": "543a6be3e5207547c76808aa0b09a7a140c34b3636fac3f2d2bd6df1357be0f3",
+    "members": 1160,
+    "scanned_text_members": 1158,
+    "signature_matches": {},
+    "email_domains": {
+      "example.invalid": 18,
+      "example.org": 1
+    },
+    "unsafe_members": []
+  }
+]

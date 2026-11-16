@@ -1,0 +1,39 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-13T23:18:34.415Z",
+  "finished_at": "2026-11-13T23:20:08.970Z",
+  "suites": [
+    {
+      "suite": "src/tests/r0-runtime-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 16027
+    },
+    {
+      "suite": "src/tests/r0-final-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 30927
+    },
+    {
+      "suite": "src/tests/r0-reqa-manager.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 46465
+    },
+    {
+      "suite": "src/tests/r0-test-harness.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 1135
+    }
+  ],
+  "passed": 4,
+  "failed": 0
+}

@@ -1,0 +1,243 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "c784ea86-25f4-42ae-8c48-2ef7293b7439",
+    "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+    "repair_iteration": 1,
+    "spec_hash": "4d5eeada6843877f46350cc0c6d14c984a74ac5beda2e7494cf006605d4dfd11",
+    "plan_hash": "6e8d1688f01a99003ac27eaca10db7708508953d95a9771b20a959f437a31e63",
+    "artifacts": [
+      {
+        "artifact_id": "3c8b4763-fbd8-4602-ae64-904cc87d6539",
+        "name": ".probe-rerender.png",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/.probe-rerender.png",
+        "sha256": "35dc21b97ba26c865187d3f00064e0455854c93c836bf431a57606b77d25958a",
+        "size_bytes": 40505
+      },
+      {
+        "artifact_id": "00d4c404-99d8-4c5d-960d-900aa9ce7b23",
+        "name": ".tmp-old.html",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/.tmp-old.html",
+        "sha256": "b23edc73ae2022c5130398f8f551efcc4ca174004a2984b962f4c002dbb85a8e",
+        "size_bytes": 11123
+      },
+      {
+        "artifact_id": "67641caa-b86f-4ee5-858e-bad38c797cf5",
+        "name": ".tmp-old.png",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/.tmp-old.png",
+        "sha256": "ad132c2cee5e689a69ce9ced935c7087a1096e929b4254560d54d1d760d3016c",
+        "size_bytes": 133960
+      },
+      {
+        "artifact_id": "cc41fd7f-59bc-49f2-bc9b-8668544a21f8",
+        "name": "capability-observation.json",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/capability-observation.json",
+        "sha256": "7d6488433bda7145779f6b23d3ba4ab32d943f479b92193a201d02501735a691",
+        "size_bytes": 3247
+      },
+      {
+        "artifact_id": "4e34d2df-d51a-4c30-a31e-13ac76333993",
+        "name": "capability-probe.html",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/capability-probe.html",
+        "sha256": "ebe8b01816dc32cc4005e963b734a356acad79a69058f1117a8cbceda2540b3b",
+        "size_bytes": 1479
+      },
+      {
+        "artifact_id": "4d78a02a-2233-46eb-95f1-acac6eb5ef89",
+        "name": "capability-probe.png",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/capability-probe.png",
+        "sha256": "35dc21b97ba26c865187d3f00064e0455854c93c836bf431a57606b77d25958a",
+        "size_bytes": 40505
+      },
+      {
+        "artifact_id": "ee2b8b96-76d6-446e-8cae-0b22c8aba165",
+        "name": "dashboard.html",
+        "revision": 4,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.html",
+        "sha256": "9b0c20106442b2d05479dd943422c7b8f20c39750c758921068f83682e78ad5d",
+        "size_bytes": 11123
+      },
+      {
+        "artifact_id": "2002a253-7dbf-4909-89a8-61d1e5ed367a",
+        "name": "dashboard.png",
+        "revision": 2,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.png",
+        "sha256": "34375951b6f345c59bd136dbe79c4bb91b59a02b29cd58c87eb14dfc475a30d9",
+        "size_bytes": 134004
+      },
+      {
+        "artifact_id": "72fc40d4-cab2-41a6-aa9e-07e5d350c0a3",
+        "name": "input/rescue-shifts.csv",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/input/rescue-shifts.csv",
+        "sha256": "502022dd7e1166df8d709461c3ca81dfe5c8c59e79ea4e23e37aac69966e5181",
+        "size_bytes": 209
+      },
+      {
+        "artifact_id": "4ecffe14-8ff5-49fc-b1d8-4121c6c3df6a",
+        "name": "metrics.json",
+        "revision": 2,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/metrics.json",
+        "sha256": "c86780ccc3bd239feb4a5bb2c33412153da9bab3272235c0cb48445788a79a62",
+        "size_bytes": 4780
+      },
+      {
+        "artifact_id": "c23ec7b0-5ca2-42ce-b249-fce794034c3c",
+        "name": "render-verification.txt",
+        "revision": 1,
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/render-verification.txt",
+        "sha256": "a69319495795b75b5f25036fb720e451175e8d74c82d1f7d120ab16723bb433b",
+        "size_bytes": 12414
+      }
+    ],
+    "repair_supersessions": [
+      {
+        "superseded_id": "124489e4-18f3-4493-b9b7-01c1c0560492",
+        "superseded_by": "ee2b8b96-76d6-446e-8cae-0b22c8aba165",
+        "name": "dashboard.html",
+        "superseded_sha256": "b23edc73ae2022c5130398f8f551efcc4ca174004a2984b962f4c002dbb85a8e",
+        "superseded_size_bytes": 11123,
+        "replacement_sha256": "9b0c20106442b2d05479dd943422c7b8f20c39750c758921068f83682e78ad5d",
+        "replacement_size_bytes": 11123,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-15T04:01:59.608Z",
+        "source": "repair",
+        "intent_id": "bc3ac3b7-de7a-4ad5-8f7d-806bd0c2854f",
+        "provenance_id": "1faf4502-9fdc-40d9-80ef-4a53bc718a7f"
+      },
+      {
+        "superseded_id": "d37f8c98-a0e2-4c26-864b-ac54df2e0725",
+        "superseded_by": "2002a253-7dbf-4909-89a8-61d1e5ed367a",
+        "name": "dashboard.png",
+        "superseded_sha256": "ad132c2cee5e689a69ce9ced935c7087a1096e929b4254560d54d1d760d3016c",
+        "superseded_size_bytes": 133960,
+        "replacement_sha256": "34375951b6f345c59bd136dbe79c4bb91b59a02b29cd58c87eb14dfc475a30d9",
+        "replacement_size_bytes": 134004,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-15T04:01:59.609Z",
+        "source": "repair",
+        "intent_id": "bc3ac3b7-de7a-4ad5-8f7d-806bd0c2854f",
+        "provenance_id": "1faf4502-9fdc-40d9-80ef-4a53bc718a7f"
+      }
+    ],
+    "repair_provenance": [
+      {
+        "provenance_id": "1faf4502-9fdc-40d9-80ef-4a53bc718a7f",
+        "intent_id": "bc3ac3b7-de7a-4ad5-8f7d-806bd0c2854f",
+        "repair_iteration": 1,
+        "source": "repair",
+        "outcome": "completed",
+        "recorded_at": "2026-11-15T04:01:59.610Z",
+        "supersessions": [
+          {
+            "superseded_id": "124489e4-18f3-4493-b9b7-01c1c0560492",
+            "superseded_by": "ee2b8b96-76d6-446e-8cae-0b22c8aba165",
+            "name": "dashboard.html",
+            "superseded_sha256": "b23edc73ae2022c5130398f8f551efcc4ca174004a2984b962f4c002dbb85a8e",
+            "superseded_size_bytes": 11123,
+            "replacement_sha256": "9b0c20106442b2d05479dd943422c7b8f20c39750c758921068f83682e78ad5d",
+            "replacement_size_bytes": 11123,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-15T04:01:59.608Z",
+            "source": "repair",
+            "intent_id": "bc3ac3b7-de7a-4ad5-8f7d-806bd0c2854f",
+            "provenance_id": "1faf4502-9fdc-40d9-80ef-4a53bc718a7f"
+          },
+          {
+            "superseded_id": "d37f8c98-a0e2-4c26-864b-ac54df2e0725",
+            "superseded_by": "2002a253-7dbf-4909-89a8-61d1e5ed367a",
+            "name": "dashboard.png",
+            "superseded_sha256": "ad132c2cee5e689a69ce9ced935c7087a1096e929b4254560d54d1d760d3016c",
+            "superseded_size_bytes": 133960,
+            "replacement_sha256": "34375951b6f345c59bd136dbe79c4bb91b59a02b29cd58c87eb14dfc475a30d9",
+            "replacement_size_bytes": 134004,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-15T04:01:59.609Z",
+            "source": "repair",
+            "intent_id": "bc3ac3b7-de7a-4ad5-8f7d-806bd0c2854f",
+            "provenance_id": "1faf4502-9fdc-40d9-80ef-4a53bc718a7f"
+          }
+        ]
+      }
+    ],
+    "recovery_resolutions": [],
+    "candidate_sha256": "28cd19facfcaca0dec42e9ef2d10b2006634b3fa5ae6858ec487859802b6afae",
+    "created_at": "2026-11-15T04:01:59.656Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+    "epoch_id": "c784ea86-25f4-42ae-8c48-2ef7293b7439",
+    "candidate_sha256": "28cd19facfcaca0dec42e9ef2d10b2006634b3fa5ae6858ec487859802b6afae",
+    "execution_output_sha256": "b4aeaca5ea9b5334e9104cf99d18bb9c1985483df62c90548bbdaffe657dc370",
+    "evidence_sha256": "d5f14f0815919c3621c1828d777f32f81468bc44c74dd2d6208156eeb02cd61b",
+    "review": {
+      "passed": true,
+      "score": 9,
+      "criteria_results": [
+        {
+          "criterion": "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+          "passed": true,
+          "notes": "metrics.json contains exactly the required top-level keys with numeric values: row_count 6, scheduled_hours 59, completed_hours 53, incidents 9, completion_percent 89.83, and districts as an object keyed North/South/West. I re-derived the arithmetic from the 6-row CSV: scheduled 12+8+10+14+6+9=59, completed 11+8+7+13+5+9=53, incidents 2+1+3+0+2+1=9, 53/59*100=89.8305->89.83; North 22/18/5->81.82, South 14/13/3->92.86, West 23/22/1->95.65 — all correct, all reconcile to global totals. No metric is a quoted string; the only string occurrences are descriptive text inside columns/method/notes documentation, which is appropriate. method block records input path, input sha256, parsing rule, per-formula derivations, district grouping rule, ROUND_HALF_UP rounding and a three-way cross-check (python csv, awk, coreutils) — a genuinely reproducible method. dashboard.html renders every percentage at two decimals (89.83%, 81.82%, 92.86%, 95.65%) and the legend range descriptor that previously read 0-100% was reworded during the design pass."
+        },
+        {
+          "criterion": "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+          "passed": true,
+          "notes": "dashboard.html (11123 bytes, revision 4) is a single file with inline CSS only: no http(s) reference, no <script>, no <link rel=stylesheet>, no src=, no @import and no url() — gradients are pure CSS colour stops. All five top-level metrics appear (row_count 6, 59 h, 53 h, 9 incidents, 89.83% with a proportional track) plus a district table showing shifts, scheduled, completed, incidents and completion % per district with bars, and a totals row that reconciles 2+2+2=6, 14+23+22=59, 13+22+18=53, 3+1+5=9. Layout is fixed at a 1280x720 canvas with a layered header/KPI/panel/footer structure, so it is polished rather than a raw data dump."
+        },
+        {
+          "criterion": "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page.",
+          "passed": true,
+          "notes": "The approved procedure /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs (sha256 efc3bcb5…, matching the recorded acquisition) was invoked with verbatim absolute paths and no substitution; the capability-observation.json documents a probe-verified run rather than documentation-only claims. Geometry was verified from IHDR bytes (struct.unpack -> 1280 x 720, bit depth 8, colour type 2, IEND present, IDAT inflate = 720*3841 exactly) and independently by file(1). Content was verified by full PNG filter reversal: 6038 distinct colours, mean luma 34.42, 28911 bright pixels (3.137%) spread across 11 structured bands, 9773 accent-green pixels, zero bright pixels in the 8px edge strips (no clipping) — a rendered dark dashboard, not a uniform Chromium error screen; stdout title is the dashboard's own with no error markers. After the repair stamp correction the file was re-rendered to dashboard.png sha256 34375951… (134004 bytes), and the repair pass reports the re-render as byte-identical across two attempts at the same 1280x720 geometry."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "render-verification.txt (12414 bytes) documents the pre-repair dashboard.png sha256 ad132c2c…/133960 bytes, but the delivered dashboard.png after repair is sha256 34375951…/134004 bytes. The verification report was not regenerated after the one-character stamp fix, so a reader comparing the report to the artifact sees a hash mismatch.",
+          "severity": "minor"
+        },
+        {
+          "issue": "Scratch files remain in the artifact set: .tmp-old.html and .tmp-old.png (the latter a byte-identical duplicate of the superseded render), plus .probe-rerender.png duplicating capability-probe.png. The specification asked to keep the artifact set concise and avoid unnecessary scratch outside bounded capability-probe evidence; the repair note said these would be deleted.",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Re-run the byte-level verification against the final dashboard.png (34375951…) and overwrite render-verification.txt so the recorded hash, size and determinism claims match the delivered artifact.",
+        "Remove .tmp-old.html, .tmp-old.png and .probe-rerender.png now that the determinism and diff checks are complete, leaving metrics.json, dashboard.html, dashboard.png, the CSV input and the bounded capability-probe evidence.",
+        "For a follow-up pass, keep the rendered sha256 of dashboard.html's own badge in sync automatically (derive the stamp from the metrics.json hash at generation time) so any later edit cannot leave a stale hash on screen."
+      ],
+      "verdict": "PASS: PASS: All three acceptance criteria are met on the evidence in the artifacts. metrics.json contains the exact required keys with correctly computed numeric values that I re-derived independently from the six-row CSV (59/53/9/89.83, districts 81.82/92.86/95.65, all reconciling), together with a fully specified reproducible method. dashboard.html is self-contained with no external asset references and visibly presents every metric with two-decimal percentages. dashboard.png was produced by the approved Chromium render procedure and verified from raw bytes at exactly 1280x720 with banded, unclipped, legible content and no error-page signature. The only findings are minor housekeeping issues — a stale hash in render-verification.txt after the repair stamp fix, and leftover scratch/diff files — neither of which affects a criterion, so they do not block the mission."
+    },
+    "gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+          "passed": true,
+          "reason": "metrics.json contains exactly the required top-level keys with numeric values: row_count 6, scheduled_hours 59, completed_hours 53, incidents 9, completion_percent 89.83, and districts as an object keyed North/South/West. I re-derived the arithmetic from the 6-row CSV: scheduled 12+8+10+14+6+9=59, completed 11+8+7+13+5+9=53, incidents 2+1+3+0+2+1=9, 53/59*100=89.8305->89.83; North 22/18/5->81.82, South 14/13/3->92.86, West 23/22/1->95.65 — all correct, all reconcile to global totals. No metric is a quoted string; the only string occurrences are descriptive text inside columns/method/notes documentation, which is appropriate. method block records input path, input sha256, parsing rule, per-formula derivations, district grouping rule, ROUND_HALF_UP rounding and a three-way cross-check (python csv, awk, coreutils) — a genuinely reproducible method. dashboard.html renders every percentage at two decimals (89.83%, 81.82%, 92.86%, 95.65%) and the legend range descriptor that previously read 0-100% was reworded during the design pass."
+        },
+        {
+          "criterion": "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+          "passed": true,
+          "reason": "dashboard.html (11123 bytes, revision 4) is a single file with inline CSS only: no http(s) reference, no <script>, no <link rel=stylesheet>, no src=, no @import and no url() — gradients are pure CSS colour stops. All five top-level metrics appear (row_count 6, 59 h, 53 h, 9 incidents, 89.83% with a proportional track) plus a district table showing shifts, scheduled, completed, incidents and completion % per district with bars, and a totals row that reconciles 2+2+2=6, 14+23+22=59, 13+22+18=53, 3+1+5=9. Layout is fixed at a 1280x720 canvas with a layered header/KPI/panel/footer structure, so it is polished rather than a raw data dump."
+        },
+        {
+          "criterion": "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page.",
+          "passed": true,
+          "reason": "The approved procedure /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs (sha256 efc3bcb5…, matching the recorded acquisition) was invoked with verbatim absolute paths and no substitution; the capability-observation.json documents a probe-verified run rather than documentation-only claims. Geometry was verified from IHDR bytes (struct.unpack -> 1280 x 720, bit depth 8, colour type 2, IEND present, IDAT inflate = 720*3841 exactly) and independently by file(1). Content was verified by full PNG filter reversal: 6038 distinct colours, mean luma 34.42, 28911 bright pixels (3.137%) spread across 11 structured bands, 9773 accent-green pixels, zero bright pixels in the 8px edge strips (no clipping) — a rendered dark dashboard, not a uniform Chromium error screen; stdout title is the dashboard's own with no error markers. After the repair stamp correction the file was re-rendered to dashboard.png sha256 34375951… (134004 bytes), and the repair pass reports the re-render as byte-identical across two attempts at the same 1280x720 geometry."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": true
+    },
+    "receipt_sha256": "07a654eb30b2de008101f9af1bb72cfefd4f748c190d07825b9559c118a01718",
+    "created_at": "2026-11-15T04:02:38.411Z"
+  }
+}

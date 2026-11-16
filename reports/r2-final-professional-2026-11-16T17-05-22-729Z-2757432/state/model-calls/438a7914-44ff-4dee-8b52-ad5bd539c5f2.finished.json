@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "438a7914-44ff-4dee-8b52-ad5bd539c5f2",
+  "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+  "role": "evidence-analyst-alder",
+  "model": "claude-sonnet-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T17:06:41.815Z",
+  "finished_at": "2026-11-16T17:07:10.825Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 11797,
+    "output_tokens": 3035,
+    "total_tokens": 14832,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 0
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

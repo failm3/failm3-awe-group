@@ -1,0 +1,85 @@
+{
+  "id": "r2-memory-transfer-1794781064860-target-off",
+  "title": "Fresh roster export parser repair",
+  "description": "Fresh isolated software repair experiment",
+  "objective": "Repair lib/roster.cjs so its exported parser implements FORMAT.md for \";\"-delimited input.",
+  "acceptance_criteria": [
+    "The existing module exports the required function",
+    "The implementation satisfies the complete documented format, not only the visible example",
+    "The visible test executes successfully"
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-15T22:19:14.993Z",
+  "updated_at": "2026-11-15T22:21:07.036Z",
+  "artifacts": [],
+  "metadata": {
+    "specification": {
+      "title": "Fresh roster export parser repair",
+      "objective": "Repair lib/roster.cjs so its exported parser implements FORMAT.md for \";\"-delimited input.",
+      "scope": "Work only in the current mission workspace. Read FORMAT.md and visible.test.cjs. Repair the existing exported function and run the visible test. No packages, network, external files, or changes to tests.",
+      "acceptance_criteria": [
+        "The existing module exports the required function",
+        "The implementation satisfies the complete documented format, not only the visible example",
+        "The visible test executes successfully"
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "shell",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "coder"
+      ],
+      "estimated_complexity": "simple",
+      "risks": [
+        "Visible tests are intentionally incomplete; independent verification covers the documented edge cases"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-15T22:19:14.996Z",
+      "spec_hash": "317d68487a88632dd106dcaa7e34cf7b9c4478c1a389282c4133814e5dab4b8b",
+      "snapshot": {
+        "mission_id": "r2-memory-transfer-1794781064860-target-off",
+        "title": "Fresh roster export parser repair",
+        "description": "Fresh isolated software repair experiment",
+        "objective": "Repair lib/roster.cjs so its exported parser implements FORMAT.md for \";\"-delimited input.",
+        "acceptance_criteria": [
+          "The existing module exports the required function",
+          "The implementation satisfies the complete documented format, not only the visible example",
+          "The visible test executes successfully"
+        ],
+        "specification": {
+          "title": "Fresh roster export parser repair",
+          "objective": "Repair lib/roster.cjs so its exported parser implements FORMAT.md for \";\"-delimited input.",
+          "scope": "Work only in the current mission workspace. Read FORMAT.md and visible.test.cjs. Repair the existing exported function and run the visible test. No packages, network, external files, or changes to tests.",
+          "acceptance_criteria": [
+            "The existing module exports the required function",
+            "The implementation satisfies the complete documented format, not only the visible example",
+            "The visible test executes successfully"
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_list",
+            "file_write",
+            "shell",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "coder"
+          ],
+          "estimated_complexity": "simple",
+          "risks": [
+            "Visible tests are intentionally incomplete; independent verification covers the documented edge cases"
+          ]
+        }
+      }
+    },
+    "visible_test_sha256": "9c23464c26d1eb4d6d12f55712636f2ca2cdcfe0cea10b1ed73c2b68e4d4ce0b"
+  },
+  "_rev": 4
+}

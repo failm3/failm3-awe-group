@@ -1,0 +1,216 @@
+{
+  "report": "independent_verification",
+  "report_version": "1.0",
+  "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "verifier_role": "independent data-analyst verification (acquisition skill NOT invoked)",
+  "verdict": "PASS",
+  "verdict_scope_note": "PASS on all numeric values, JSON numeric typing, 2-decimal rendering of the grand total, site-to-grand-total reconciliation, and digest.md/digest.json agreement. One METHOD-dOCUMENTATION element (fixture path inside digest.md) is PARTIAL; see deficiencies D1 and D2. No FAIL-level defect found in any value.",
+  "method": {
+    "route": "hand-worked exact integer/rational arithmetic, derived from the fixture bytes read directly with file_read",
+    "distinct_from_procedure": true,
+    "procedure_reexecuted": false,
+    "node_output_trusted": false,
+    "shell_tool_available": false,
+    "shell_tool_note": "No shell tool was exposed in this session, so the hand-worked route (explicitly permitted as an alternative by the task) was used. No file under test was modified.",
+    "rounding_rule_applied": "round_half_up on the exact remainder: q = floor(numerator*10000/denominator); if 2*remainder >= denominator then q += 1; result = q/100 rendered to 2 decimals",
+    "hash_note": "sha256 values quoted by upstream (fixture 412c65c3..., digest.json 571d8fd2..., digest.md cfbdcf29...) could NOT be recomputed: no hashing facility or shell was available. They are recorded as unverified-by-me. Byte sizes WERE observed directly and are used as corroboration."
+  },
+  "independent_computation": {
+    "fixture_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/input/pilot.observations.json",
+    "fixture_bytes_observed": 474,
+    "fixture_root_keys": ["source", "period", "observations"],
+    "fixture_source": "Lumen Harbor field pilot",
+    "fixture_period": "2026-W45",
+    "rows": [
+      {"index": 0, "site": "North", "cohort": "Harbor", "scheduled": 12, "completed": 11, "incidents": 2},
+      {"index": 1, "site": "South", "cohort": "Harbor", "scheduled": 8, "completed": 8, "incidents": 1},
+      {"index": 2, "site": "North", "cohort": "Ridge", "scheduled": 10, "completed": 7, "incidents": 3}
+    ],
+    "grand_totals": {
+      "row_count": {"value": 3, "derivation": "three observation rows present"},
+      "scheduled": {"value": 30, "derivation": "12 + 8 + 10"},
+      "completed": {"value": 26, "derivation": "11 + 8 + 7"},
+      "incidents": {"value": 6, "derivation": "2 + 1 + 3"},
+      "completion_percent": {
+        "hundredths": 8667,
+        "value": 86.67,
+        "rendered": "86.67",
+        "exact_fraction": "2600/30 = 260/3 = 86.666...",
+        "rounding_work": "26*10000 = 260000; 260000 = 30*8666 + 20 (remainder 20); 2*20 = 40 >= 30 -> increment; 8667/100 = 86.67",
+        "discriminates_truncation": true,
+        "truncation_alternative": 86.66
+      }
+    },
+    "per_site": {
+      "North": {
+        "row_count": {"value": 2, "derivation": "rows 0 and 2"},
+        "scheduled": {"value": 22, "derivation": "12 + 10"},
+        "completed": {"value": 18, "derivation": "11 + 7"},
+        "incidents": {"value": 5, "derivation": "2 + 3"},
+        "completion_percent": {
+          "hundredths": 8182,
+          "value": 81.82,
+          "rendered": "81.82",
+          "exact_fraction": "1800/22 = 900/11 = 81.8181...",
+          "rounding_work": "18*10000 = 180000; 180000 = 22*8181 + 18 (remainder 18); 2*18 = 36 >= 22 -> increment; 8182/100 = 81.82",
+          "discriminates_truncation": true,
+          "truncation_alternative": 81.81
+        }
+      },
+      "South": {
+        "row_count": {"value": 1, "derivation": "row 1"},
+        "scheduled": {"value": 8, "derivation": "8"},
+        "completed": {"value": 8, "derivation": "8"},
+        "incidents": {"value": 1, "derivation": "1"},
+        "completion_percent": {
+          "hundredths": 10000,
+          "value": 100.0,
+          "rendered": "100.00",
+          "exact_fraction": "8/8 = 1 exactly",
+          "rounding_work": "8*10000 = 80000; 80000 = 8*10000 + 0 (remainder 0); 2*0 = 0 < 8 -> no increment; 10000/100 = 100.00",
+          "discriminates_truncation": false,
+          "note": "exact integer percent; no rounding decision involved"
+        }
+      }
+    },
+    "methodological_discriminator": {
+      "check": "pooled_integer_ratio_vs_unweighted_mean_of_site_percentages",
+      "pooled": "26/30*100 = 86.67 (correct: totals are summed as integers, then one ratio is taken)",
+      "unweighted_site_mean": "(81.82 + 100.00)/2 = 90.91",
+      "digest_reports": 86.67,
+      "conclusion": "digest uses the pooled form, not an average of per-site percentages"
+    }
+  },
+  "comparisons_against_digest_json": [
+    {"field": "source", "expected": "Lumen Harbor field pilot", "actual": "Lumen Harbor field pilot", "match": true},
+    {"field": "period", "expected": "2026-W45", "actual": "2026-W45", "match": true},
+    {"field": "row_count", "expected": 3, "actual": 3, "match": true, "type": "number"},
+    {"field": "scheduled", "expected": 30, "actual": 30, "match": true, "type": "number"},
+    {"field": "completed", "expected": 26, "actual": 26, "match": true, "type": "number"},
+    {"field": "incidents", "expected": 6, "actual": 6, "match": true, "type": "number"},
+    {"field": "completion_percent", "expected": 86.67, "actual": 86.67, "match": true, "type": "number", "lexically_2dp": true},
+    {"field": "sites.North.row_count", "expected": 2, "actual": 2, "match": true, "type": "number"},
+    {"field": "sites.North.scheduled", "expected": 22, "actual": 22, "match": true, "type": "number"},
+    {"field": "sites.North.completed", "expected": 18, "actual": 18, "match": true, "type": "number"},
+    {"field": "sites.North.incidents", "expected": 5, "actual": 5, "match": true, "type": "number"},
+    {"field": "sites.North.completion_percent", "expected": 81.82, "actual": 81.82, "match": true, "type": "number", "lexically_2dp": true},
+    {"field": "sites.South.row_count", "expected": 1, "actual": 1, "match": true, "type": "number"},
+    {"field": "sites.South.scheduled", "expected": 8, "actual": 8, "match": true, "type": "number"},
+    {"field": "sites.South.completed", "expected": 8, "actual": 8, "match": true, "type": "number"},
+    {"field": "sites.South.incidents", "expected": 1, "actual": 1, "match": true, "type": "number"},
+    {"field": "sites.South.completion_percent", "expected": 100.0, "actual": 100, "match": true, "type": "number", "lexically_2dp": false, "note": "value identical to 100.00; JSON number literal drops trailing zeros - see D2"}
+  ],
+  "comparisons_against_digest_md": [
+    {"field": "source", "json": "Lumen Harbor field pilot", "md": "Lumen Harbor field pilot", "match": true},
+    {"field": "period", "json": "2026-W45", "md": "2026-W45", "match": true},
+    {"field": "row_count", "json": 3, "md": "3", "match": true},
+    {"field": "scheduled", "json": 30, "md": "30", "match": true},
+    {"field": "completed", "json": 26, "md": "26", "match": true},
+    {"field": "incidents", "json": 6, "md": "6", "match": true},
+    {"field": "completion_percent", "json": 86.67, "md": "86.67", "match": true},
+    {"field": "sites.North.row_count", "json": 2, "md": "2", "match": true},
+    {"field": "sites.North.scheduled", "json": 22, "md": "22", "match": true},
+    {"field": "sites.North.completed", "json": 18, "md": "18", "match": true},
+    {"field": "sites.North.incidents", "json": 5, "md": "5", "match": true},
+    {"field": "sites.North.completion_percent", "json": 81.82, "md": "81.82", "match": true},
+    {"field": "sites.South.row_count", "json": 1, "md": "1", "match": true},
+    {"field": "sites.South.scheduled", "json": 8, "md": "8", "match": true},
+    {"field": "sites.South.completed", "json": 8, "md": "8", "match": true},
+    {"field": "sites.South.incidents", "json": 1, "md": "1", "match": true},
+    {"field": "sites.South.completion_percent", "json": 100, "md": "100.00", "match": true, "numeric_equal": true, "lexical_equal": false, "note": "same value, different lexical scale - see D2"},
+    {"field": "md_crosscheck_line_sums", "md": "30 / 26 / 6 / 3", "independent": "30 / 26 / 6 / 3", "match": true}
+  ],
+  "site_reconciliation": {
+    "row_count": {"site_sum": 3, "grand_total": 3, "match": true, "work": "2 + 1"},
+    "scheduled": {"site_sum": 30, "grand_total": 30, "match": true, "work": "22 + 8"},
+    "completed": {"site_sum": 26, "grand_total": 26, "match": true, "work": "18 + 8"},
+    "incidents": {"site_sum": 6, "grand_total": 6, "match": true, "work": "5 + 1"},
+    "all_sites_sum_to_totals": true,
+    "site_key_set_exact": true,
+    "site_keys_in_fixture": ["North", "South"],
+    "site_keys_in_digest_json": ["North", "South"],
+    "no_missing_or_extra_sites": true,
+    "ordering": "ascending key order (North before South) as documented"
+  },
+  "typing_checks": {
+    "row_count_is_number": true,
+    "scheduled_is_number": true,
+    "completed_is_number": true,
+    "incidents_is_number": true,
+    "completion_percent_is_number": true,
+    "no_string_encoded_numerics": true,
+    "sites_is_object_not_array": true,
+    "probe_artifact_typing": "note: probe/stdout.json does not carry the numeric totals; probe digests behave identically to the final digest",
+    "all_site_totals_numeric": true
+  },
+  "formatting_checks": {
+    "grand_completion_percent_has_exactly_2dp": true,
+    "grand_completion_percent_literal": "86.67",
+    "not_86_7": true,
+    "not_86_666666": true,
+    "north_completion_percent_has_exactly_2dp": true,
+    "south_completion_percent_json_literal": "100",
+    "south_completion_percent_md_literal": "100.00",
+    "south_json_lexically_2dp": false,
+    "rounding_is_half_up_not_truncation": true,
+    "evidence_for_rounding": "86.67 != trunc(86.666..)=86.66 and 81.82 != trunc(81.818..)=81.81, so a truncating implementation is excluded"
+  },
+  "md_reproducibility_audit": {
+    "fixture_path_stated": false,
+    "input_shape_stated": true,
+    "formula_stated": true,
+    "rounding_rule_stated": true,
+    "zero_denominator_rule_stated": true,
+    "cross_check_documented": true,
+    "elements_present": 4,
+    "elements_required_by_task": 5,
+    "quotable_formula": "completion_percent = completed / scheduled * 100, evaluated as round_half_up(completed*10000/scheduled)/100, rendered with exactly 2 decimals",
+    "third_party_reproducible_without_path": "yes in practice (single .json input, uniquely named pilot.observations.json, procedure takes exactly two fixed positional args) but the document itself does not name the locator"
+  },
+  "byte_and_size_corroboration": {
+    "fixture_size_observed": 474,
+    "digest_json_size_observed": 477,
+    "digest_json_size_claimed_in_receipt": 477,
+    "digest_md_size_observed": 1514,
+    "digest_md_size_claimed_in_receipt": 1514,
+    "sizes_consistent": true,
+    "sha256_recomputed_by_me": false
+  },
+  "deficiencies": [
+    {
+      "id": "D1",
+      "severity": "documentation (partial on one element)",
+      "item": "digest.md does not state the fixture path",
+      "detail": "The Method section says 'Read the fixture JSON' without naming input/pilot.observations.json. Input shape, formula, rounding rule, zero-denominator rule and cross-checks are all documented.",
+      "impact_on_values": "none",
+      "recommended_fix": "add one line: 'Fixture: <absolute path to input/pilot.observations.json>'"
+    },
+    {
+      "id": "D2",
+      "severity": "cosmetic / representational",
+      "item": "sites.South.completion_percent serialized as 100 in digest.json while digest.md renders 100.00",
+      "detail": "JSON number literals cannot carry a fixed decimal scale; 100 == 100.00 numerically. Forcing '100.00' would require a string, which would violate the separate requirement that completion_percent be numeric.",
+      "impact_on_values": "none",
+      "recommended_fix": "none strictly required; if uniform 2dp lexemes are demanded in JSON, it can only be met by changing the field to a string, which trades one criterion for another"
+    }
+  ],
+  "criterion_verdicts": [
+    {"criterion": "row_count, scheduled, completed, incidents are numeric and exactly equal the independently computed values", "verdict": "PASS"},
+    {"criterion": "completion_percent is numeric, equals 86.67, rendered with exactly 2 decimals", "verdict": "PASS"},
+    {"criterion": "completion_percent is half-up rounded, not truncated or float-drifting", "verdict": "PASS"},
+    {"criterion": "sites is an object keyed by site name with numeric totals", "verdict": "PASS"},
+    {"criterion": "every site's contribution sums to the grand totals", "verdict": "PASS"},
+    {"criterion": "digest.md states the same values as digest.json with no divergence", "verdict": "PASS"},
+    {"criterion": "digest.md documents a reproducible method (fixture path, input shape, formula, rounding rule)", "verdict": "PARTIAL"},
+    {"criterion": "no deliverable bytes modified by this verifier", "verdict": "PASS"}
+  ],
+  "overall": {
+    "numeric_accuracy": "PASS",
+    "typing": "PASS",
+    "formatting": "PASS (grand total and North lexically 2dp; South is an exact integer percent)",
+    "reconciliation": "PASS",
+    "md_json_agreement": "PASS",
+    "reproducible_method_documentation": "PARTIAL (D1)",
+    "verdict": "PASS with 2 documented deficiencies (D1 partial documentation, D2 representational), neither of which changes any number"
+  }
+}

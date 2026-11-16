@@ -1,0 +1,18 @@
+{
+  "source": null,
+  "period": null,
+  "row_count": 1,
+  "scheduled": 0,
+  "completed": 0,
+  "incidents": 0,
+  "completion_percent": 0,
+  "sites": {
+    "A": {
+      "row_count": 1,
+      "scheduled": 0,
+      "completed": 0,
+      "incidents": 0,
+      "completion_percent": 0
+    }
+  }
+}

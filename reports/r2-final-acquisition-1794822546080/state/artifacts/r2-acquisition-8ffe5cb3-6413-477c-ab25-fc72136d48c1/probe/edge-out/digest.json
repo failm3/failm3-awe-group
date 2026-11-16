@@ -1,0 +1,25 @@
+{
+  "source": "x",
+  "period": "p",
+  "row_count": 3,
+  "scheduled": 13,
+  "completed": 6,
+  "incidents": 1,
+  "completion_percent": 46.15,
+  "sites": {
+    "A": {
+      "rows": 2,
+      "scheduled": 10,
+      "completed": 5,
+      "incidents": 1,
+      "completion_percent": 50
+    },
+    "Zürich \"A\"": {
+      "rows": 1,
+      "scheduled": 3,
+      "completed": 1,
+      "incidents": 0,
+      "completion_percent": 33.33
+    }
+  }
+}

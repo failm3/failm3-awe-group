@@ -1,0 +1,41 @@
+{
+  "schema": "awe.research-release-final-scan.v1",
+  "files": 8310,
+  "bytes": 81161874,
+  "json_files_valid": 2928,
+  "intentional_invalid_json_negative_controls": [
+    {
+      "path": "reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.not_json.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "path": "reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/probe/neg/bad.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "path": "reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad3.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "path": "reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/probe/neg/notjson.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "json_invalid": [],
+  "secret_signature_findings": [
+    {
+      "path": "research/external/awe-group-runtime/tests/execution_security/isolation.test.mjs",
+      "kind": "private_key",
+      "line": 36
+    }
+  ],
+  "secret_disposition": "Only one private-key signature: a synthetic negative-control fixture in external runtime tests. No live credential identified. Context review of assignment findings found synthetic test values and non-secret booleans.",
+  "gmail_occurrences_after_redaction": 26,
+  "binary_files": [
+    "data/db/ucl.sqlite",
+    "reports/ucl-source/delivery/data/db/ucl.sqlite"
+  ],
+  "forbidden_paths": [],
+  "archives_in_release": 0,
+  "limitations": "Pattern and content review is not a proof against every unknown secret format or steganographic payload."
+}

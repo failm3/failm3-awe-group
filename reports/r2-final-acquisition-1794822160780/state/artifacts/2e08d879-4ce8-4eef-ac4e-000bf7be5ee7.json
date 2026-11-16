@@ -1,0 +1,14 @@
+{
+  "id": "2e08d879-4ce8-4eef-ac4e-000bf7be5ee7",
+  "mission_id": "r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26",
+  "type": "file",
+  "name": "probe/observation-digest-v1.probe.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822160780/state/artifacts/r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26/probe/observation-digest-v1.probe.json",
+  "content": "{\n  \"probe\": \"observation-digest-v1 pre-qualification probe (target main path not executed)\",\n  \"probe_method\": \"independent Python integer/Decimal recomputation of the fixture plus static source checks\",\n  \"input\": {\n    \"file\": \"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822160780/state/artifacts/r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26/input/pilot.observations.json\",\n    \"bytes\": 474,\n    \"sha256\": \"412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766\"\n  },\n  \"independently_computed_expected\": {\n    \"row_count\": 3,\n    \"scheduled\": 30,\n    \"completed\": 26,\n    \"incidents\": 6,\n    \"completion_percent\": \"86.67\",\n    \"sites\": {\n      \"North\": {\n        \"scheduled\": 22,\n        \"completed\": 18,\n        \"incidents\": 5\n      },\n      \"South\": {\n        \"scheduled\": 8,\n        \"completed\": 8,\n        \"incidents\": 1\n      }\n    }\n  },\n  \"checks\": {\n    \"row_count_matches_fixture_length\": true,\n    \"site_totals_reconcile_to_overall\": true,\n    \"completion_percent_has_two_decimals\": true,\n    \"source_syntax_ok\": true,\n    \"source_sha256_matches_file\": true,\n    \"rounding_formula_matches_decimal_half_up\": true,\n    \"rounding_cases_tested\": 14,\n    \"rounding_mismatches\": [],\n    \"two_arg_arity_enforced\": true,\n    \"writes_digest_json\": true,\n    \"writes_digest_md\": true,\n    \"no_network_or_package_imports\": true,\n    \"target_main_path_executed\": false\n  },\n  \"proposed_source\": {\n    \"path\": \"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822160780/state/artifacts/r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26/bin/observation-digest-v1.mjs\",\n    \"bytes\": 7811,\n    \"sha256\": \"25ecc9dc494232499b94677c75cb89da8550439582d59524a1e891d8a5c4fcd1\"\n  }\n}\n",
+  "created_at": "2026-11-16T09:46:09.335Z",
+  "metadata": {
+    "size_bytes": 1800,
+    "sha256": "3ded341dbeea98b2ef71a8a3cf4f3f00997784e980ac81de9eec13811733d4a9",
+    "revision": 1
+  }
+}

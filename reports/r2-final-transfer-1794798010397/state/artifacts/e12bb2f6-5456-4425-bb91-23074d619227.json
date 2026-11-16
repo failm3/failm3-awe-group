@@ -1,0 +1,14 @@
+{
+  "id": "e12bb2f6-5456-4425-bb91-23074d619227",
+  "mission_id": "r2-final-transfer-1794798010397-t32-off",
+  "type": "text",
+  "name": "test-run.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t32-off/test-run.md",
+  "content": "# Test run: core/decoder.cjs\n\nCommand: `node visible.test.cjs` (unmodified visible test)\nOutput: `visible PASS` (exit 0)\n\nAdditional ad-hoc spec checks (temporary script in /tmp, removed afterward; not saved into workspace): `extra PASS`.\nCovered: empty input, LF/CRLF/CR record endings, single trailing record ending, quoted fields with `\"\"`, `;`, `=`, LF inside quotes,\ntext after closing quote, unterminated quote, quote inside unquoted field, bad keys, multiple `=` in unquoted fields,\nduplicate keys (including duplicates of dropped unknown keys), untrimmed values, empty fields/records,\nunknown-key dropping, normal Object prototype, schema key order (WINDOW, RATE, LIMIT),\nrange and canonical-integer checks for WINDOW 3..40, RATE 0..10, LIMIT 1..75, missing required fields,\nand format errors taking precedence over value errors within a record.\n\nSpec ambiguity: FORMAT.md says \"No additional semantic field is defined\" and also mentions an unnamed\n\"documented optional field\" plus COLOR/FLAGS. No optional field is actually defined, so COLOR and FLAGS\nare treated as unknown keys and dropped.\n",
+  "created_at": "2026-11-16T06:43:47.972Z",
+  "metadata": {
+    "size_bytes": 1102,
+    "sha256": "cc08d555551da6757145fb7ab5a3b91e301eeca106356de443fbc9cae7d8d057",
+    "revision": 1
+  }
+}

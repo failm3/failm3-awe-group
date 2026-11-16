@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "c4fea4c4-dc22-478e-9d0a-9feef08b932d",
+  "mission_id": "r2-final-professional-2026-11-16T18-47-03-020Z-3010790-research",
+  "role": "qa-agent",
+  "model": "claude-opus-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T18:53:01.468Z",
+  "finished_at": "2026-11-16T18:53:40.241Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 20184,
+    "output_tokens": 3488,
+    "total_tokens": 23672,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 864
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

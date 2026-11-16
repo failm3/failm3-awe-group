@@ -1,0 +1,14 @@
+{
+  "id": "6d34c134-1b8b-4f50-9195-c2b05e7594de",
+  "mission_id": "r2-final-transfer-1794798010397-t36-on",
+  "type": "text",
+  "name": "verification.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t36-on/verification.md",
+  "content": "# parseBundle verification\n\nCommand: `node visible.test.cjs` (test file unmodified) -> `visible PASS`, exit 0.\n\nExtra edge cases checked against FORMAT.md:\n- \"\" -> []; LF, CRLF, CR record endings; trailing record ending allowed\n- Quoted whole fields with `;`, `=`, `\"\"`, LF inside; quoted required field (`\"WINDOW=2\"`) accepted\n- Known fields output first (WINDOW, RATE, LIMIT), then unknown fields as strings in source order\n- INVALID_FORMAT: value whitespace, two `=` in unquoted field, duplicate key, text after closing quote,\n  quote inside unquoted field, unterminated quote, lowercase key, empty field (trailing `;`), blank line\n- INVALID_VALUE: missing required, leading zero, `+2`, out-of-range values\n- Format errors win over semantic errors within a record (`WINDOW=99;...;WINDOW=1` -> INVALID_FORMAT)\n- Result objects have Object.prototype; keys set with defineProperty\n",
+  "created_at": "2026-11-16T07:03:33.756Z",
+  "metadata": {
+    "size_bytes": 881,
+    "sha256": "70a148736753bfe4ca89a40cbdd62bc08ecd08c3ae5788c4b0bf6fb7988cb183",
+    "revision": 1
+  }
+}

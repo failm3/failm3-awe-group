@@ -1,0 +1,23 @@
+Mission: r2-experience-reuse-1794858271974-t18-off
+Module: adapters/bundle.cjs (parseBundle, CommonJS)
+
+Command: node visible.test.cjs
+Result:  visible PASS
+
+Additional self-checks (temporary, not saved as tests) all passed:
+- empty input -> []
+- LF / CRLF / CR record separators, trailing terminator
+- quoted whole fields with embedded ';', '=', CR, LF, doubled quotes
+- VALUE whitespace trimming only (keys untrimmed, keys must match ^[A-Z][A-Z0-9_]*$)
+- duplicate decoded keys (quoted vs unquoted mix) -> INVALID_FORMAT
+- unterminated quote, chars after closing quote, quote in unquoted field,
+  bad key, more than one '=' in unquoted field, empty field/trailing ';',
+  unknown key with bad syntax -> INVALID_FORMAT (syntax precedence)
+- ranges/canonical integers: WINDOW 1..50, RATE 0..30, LIMIT 1..25,
+  leading zeros / signs / empty -> INVALID_VALUE
+- COLOR enum case-sensitive -> INVALID_VALUE when wrong
+- missing required field -> INVALID_VALUE
+- prototype-looking keys (PROTO, CONSTRUCTOR) dropped, normalize doesn't
+  pollute; output objects keep Object.prototype, own-key insertion order
+  WINDOW, RATE, LIMIT, COLOR
+- every thrown Error message is exactly "INVALID_FORMAT" / "INVALID_VALUE"

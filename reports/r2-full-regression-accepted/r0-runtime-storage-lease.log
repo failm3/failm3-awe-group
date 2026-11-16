@@ -1,0 +1,110 @@
+
+S1 — concurrent processes never lose an update
+  ✓ all writers exited 0
+  ✓ every increment is present
+  ✓ total equals sum
+  ✓ unrelated metadata preserved
+  ✓ revision advanced once per write
+  ✓ no leftover tmp files
+
+S2 — compare-and-set revision
+  ✓ CAS with current revision applies
+  ✓ CAS with stale revision conflicts
+  ✓ stale write did not land
+  ✓ fence rejects the write
+  ✓ updateMission(id, patch) still returns the mission
+  ✓ updateMission on missing id returns null
+
+S3 — legacy record without a revision keeps working
+  ✓ loads
+  ✓ legacy revision is 0
+  ✓ CAS from revision 0
+
+S4 — terminal status is fenced
+  ✓ late completed over cancelled refused
+  ✓ status stays cancelled
+  ✓ explicit terminal transition allowed
+
+S5 — sealed/cancelled missions refuse artifacts
+  ✓ artifact accepted while running
+  ✓ artifact refused after cancel
+  ✓ refused artifact not listed
+  ✓ reconcile registers nothing when sealed
+  ✓ stale owner cannot register artifact bytes
+  ✓ refused stale write leaves no content file
+  ✓ stale owner cannot register artifact metadata
+  ✓ stale owner cannot reconcile new evidence
+
+S5b — artifact writes reject final-component and ancestor symlinks
+  ✓ final-component symlink is refused without changing its outside target
+  ✓ refused final symlink creates no artifact metadata
+  ✓ ancestor symlink is refused without creating an outside file
+  ✓ refused ancestor symlink creates no artifact metadata
+  ✓ ordinary nested creation and same-name regular-file replacement still work
+
+S5c — a symlinked mission root cannot escape through save or reconciliation
+  ✓ mission-root symlink write is refused without changing the outside target
+  ✓ mission-root symlink reconciliation adopts no outside files
+  ✓ refused reconciliation preserves outside bytes and does not replace the root link
+  ✓ ordinary real mission-root reconciliation remains available
+
+S5d — pre-import artifact-root links/non-directories cannot reach QA or completion
+  ✓ symlink artifact root is rejected at pre-import storage initialization without changing root/outside bytes
+  ✓ symlink artifact root permits no escaped registration, QA call or completed mission
+  ✓ file artifact root is rejected at pre-import storage initialization without changing root/outside bytes
+  ✓ file artifact root permits no escaped registration, QA call or completed mission
+
+S6 — lock held by a dead process is broken
+  ✓ holder died by SIGKILL
+  ✓ update proceeds after holder crash
+  ✓ did not wait for the 60s stale timeout
+
+L0 — malformed and wrong-mission lease evidence fails closed
+  ✓ malformed lease blocks every acquisition purpose and preserves exact evidence
+  ✓ wrong-mission lease blocks every acquisition purpose and preserves exact evidence
+
+L1 — exactly one of N processes acquires the lease
+  ✓ exactly one winner
+  ✓ lease is live
+  ✓ mission record names the owner
+  ✓ lease released when the owner exits cleanly
+
+L2 — a live lease is not an orphan; a dead owner's mission is paused
+  ✓ running mission with live lease left alone
+  ✓ report counts it as skipped_live
+  ✓ second acquirer denied while owner lives
+  ✓ dead pid => lease not live
+  ✓ orphan paused once the owner is dead
+  ✓ lease can be taken over after owner death
+
+L3 — heartbeat extends a lease; expiry alone never permits live-owner takeover
+  ✓ acquired
+  ✓ heartbeat kept it live past the original ttl
+  ✓ expired lease is not live
+  ✓ expired lease with a live owner process still denies takeover
+  ✓ expired live owner is not falsely paused
+  ✓ cancel cannot falsely confirm an expired live owner stopped
+  ✓ confirmed owner death enables orphan pause
+  ✓ confirmed owner death enables generation-fenced takeover
+
+L3.R — confirmed-dead recovery owner no longer permanently blocks reconciliation
+  ✓ expired but live recovery owner remains a hard acquisition barrier
+  ✓ fixture owner really died
+  ✓ reconciliation replaces only the confirmed-dead recovery owner and pauses the orphan
+  ✓ confirmed-dead recovery lease permits a new run owner
+  ✓ confirmed-dead recovery lease permits a new resume owner
+  ✓ confirmed-dead recovery lease permits a new cancel owner
+  ✓ confirmed-dead recovery lease permits a new recovery owner
+
+L4 — a stale owner cannot release the replacement lease
+  ✓ live old process blocks takeover even after expiry
+  ✓ stale owner's release does not drop the new lease
+  ✓ replacement generation is newer
+  ✓ owner release frees it
+
+L5 — cancel request file round trip
+  ✓ request readable
+  ✓ request cleared
+
+────────────────────────────────────────────────────────────
+r0-runtime storage+lease: passed 75, failed 0

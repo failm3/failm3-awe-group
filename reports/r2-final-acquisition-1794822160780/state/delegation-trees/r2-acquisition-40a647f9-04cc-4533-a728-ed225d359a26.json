@@ -1,0 +1,32 @@
+{
+  "mission_id": "r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26",
+  "saved_at": "2026-11-16T09:47:01.591Z",
+  "total_agents": 1,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-40a647f9-04cc-4533-a728-ed225d359a26:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T09:43:01.918Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: No registered capability implements observation-digest-v1 (registered set: browser_click, browser_get_text, browser_navigate, browser_screenshot, browser_type, capability_library, csv_analytics, file_list, file_read, file_write, manus_search, save_artifact, shell, ti_search, web_extract, web_fetch, web_search). The named competence must therefore be diagnosed/acquired in ONE bounded delegation before any digest work, because the acceptance criteria require a qualified local procedure whose exact executable bytes and fixed args are invoked with a durable receipt. Scope is strictly the artifact directory input/pilot.observations.json plus that same directory as output root; no packages, network, publishing, deployment, purchases or external changes. A model-authored observation is not qualification, and visible examples do not replace independent arithmetic verification.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. status available is only valid when you name what exists: either acquired (one short string) or local_target. An available observation with neither is rejected as unresolvable; use missing or failed when nothing usable was verified. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_write"
+      ],
+      "artifacts": [
+        "8e90e6cb-85dc-4c56-8fd6-e73bf1dea5ee",
+        "585c635e-ce0f-45ea-9b32-fad894345ea6",
+        "a7d0af10-e34b-4183-8642-bb46726d08a7",
+        "2e08d879-4ce8-4eef-ac4e-000bf7be5ee7",
+        "a2862a22-6abd-43b7-8456-8f10f66f6f31"
+      ],
+      "duration_ms": 239679,
+      "finished_at": "2026-11-16T09:47:01.591Z"
+    }
+  ]
+}

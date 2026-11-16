@@ -1,0 +1,6 @@
+event_id,order_id,currency,kind,amount_cents,status
+s1,o1,USD,sale,10500,settled
+s1,o1,USD,sale,10500,settled
+r1,o1,USD,refund,1500,settled
+s2,o2,EUR,sale,7200,settled
+p1,o3,USD,sale,9900,pending

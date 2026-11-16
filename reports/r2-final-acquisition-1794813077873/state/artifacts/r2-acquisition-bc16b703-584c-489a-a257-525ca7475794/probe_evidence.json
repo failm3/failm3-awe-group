@@ -1,0 +1,69 @@
+{
+  "procedure_id": "observation-digest-v1",
+  "invocation": {
+    "runtime": "node",
+    "runtime_version": "v22.23.3",
+    "runtime_path": "/usr/bin/node",
+    "runtime_sha256": "fde6a4bf8d0562f7751d1a2d6cb9b417c4cfe107bbcb0aa3e9a24e125e348f48",
+    "argv": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/probe-out"
+    ]
+  },
+  "procedure": {
+    "source_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/observation_digest_v1.js",
+    "source_sha256": "7dadf4b36d82566be70a08ee97f1625dcd364e7b10b61c679a47c88f662ccbde",
+    "syntax_check": "node --check: OK",
+    "dependencies": "node core modules only (node:fs, node:path, node:crypto); no third-party packages, no network access",
+    "writes_confined_to": "the second argv path (output directory) passed by the caller"
+  },
+  "fixture": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794813077873/state/artifacts/r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/input/pilot.observations.json",
+    "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "row_count": 3
+  },
+  "probe_run": {
+    "output_directory": "probe-out (throwaway probe path; deliberately NOT the final args output directory)",
+    "exit_code": 0,
+    "stdout": "observation-digest-v1: row_count=3 scheduled=30 completed=26 incidents=6 completion_percent=86.67 sites=2",
+    "computed": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": 86.67,
+      "sites": {
+        "North": { "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": 81.82 },
+        "South": { "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": 100.00 }
+      }
+    },
+    "emitted_files": [
+      { "name": "digest.json", "sha256": "a00d0e4893ce6ea40f554c1ebc6175bda7e714c5b6048c563d91411fe6eb23b4" },
+      { "name": "digest.md", "sha256": "0389a496fcedee6d08e766a5651ce524addb9305c0904208dec7c5949b979f63" }
+    ]
+  },
+  "independent_arithmetic_verification": {
+    "method": "separate Python check using decimal.Decimal ROUND_HALF_UP, re-deriving every figure from the raw fixture with no reuse of the Node source",
+    "all_fields_match": true,
+    "checked_fields": [
+      "row_count", "scheduled", "completed", "incidents", "completion_percent",
+      "North.scheduled", "North.completed", "North.incidents", "North.completion_percent",
+      "South.scheduled", "South.completed", "South.incidents", "South.completion_percent",
+      "input_sha256 embedded in digest.json"
+    ]
+  },
+  "fail_closed_checks": {
+    "invalid_json": { "exit_code": 2, "files_written": 0 },
+    "empty_observations": { "exit_code": 2, "files_written": 0 },
+    "non_integer_counter": { "exit_code": 2, "files_written": 0 },
+    "completed_exceeds_scheduled": { "exit_code": 2, "files_written": 0 },
+    "empty_site_name": { "exit_code": 2, "files_written": 0 },
+    "wrong_argument_count": { "exit_code": 2, "files_written": 0 }
+  },
+  "determinism": {
+    "repeated_runs_compared": 2,
+    "digest_json_byte_identical": true,
+    "digest_md_byte_identical": true
+  },
+  "verification_result": "pass"
+}

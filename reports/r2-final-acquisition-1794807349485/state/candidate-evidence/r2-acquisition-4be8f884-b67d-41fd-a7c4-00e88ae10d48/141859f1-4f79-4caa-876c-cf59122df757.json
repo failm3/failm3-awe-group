@@ -1,0 +1,563 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "141859f1-4f79-4caa-876c-cf59122df757",
+    "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+    "repair_iteration": 1,
+    "spec_hash": "411cb25d6ce50fb967b9a6f59073baadf9c5ec20eba27d4cba1a688e070efbfc",
+    "plan_hash": "6521e39ecc2bcd1a0107c2e7eb39ae3d9c17104a622f97c9f1aab0942792ba45",
+    "artifacts": [
+      {
+        "artifact_id": "fe1dddad-06d3-48da-8628-afb8701958d6",
+        "name": "digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "b85bc15f-027f-4eb3-9241-b55bf5e684d5",
+        "name": "digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "e382f56a-23c6-402b-a998-8f3de9e37e75",
+        "name": "evidence/artifact_manifest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/artifact_manifest.json",
+        "sha256": "214f950cdb119915bc50d23665b8c3a3f86768ff7222d4585b60eaadaab41de9",
+        "size_bytes": 5382
+      },
+      {
+        "artifact_id": "d7d843fb-451b-4be0-a0e8-91123c5670b4",
+        "name": "evidence/build_receipt.py",
+        "revision": 4,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/build_receipt.py",
+        "sha256": "892370849d6b93c0342a3386b5280ef553fa7584c4f8311eb163a5a189c62a9f",
+        "size_bytes": 3980
+      },
+      {
+        "artifact_id": "a3ba889a-59d3-4021-976a-a42914dc735d",
+        "name": "evidence/independent_verify.log",
+        "revision": 4,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/independent_verify.log",
+        "sha256": "11894c0f29d00867f03bcae7183f941e1bd7b861b7db4f6cc80398fbdd7333b2",
+        "size_bytes": 11540
+      },
+      {
+        "artifact_id": "a2788f48-c698-41ae-8e65-1a340c3d2c50",
+        "name": "evidence/independent_verify.py",
+        "revision": 3,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/independent_verify.py",
+        "sha256": "19a673c406596a5a0fce397bc41617a7fd8d9c087a0ade98237a151695339df7",
+        "size_bytes": 12908
+      },
+      {
+        "artifact_id": "f43cdbd5-8a2a-4a07-9f22-e60e087530ee",
+        "name": "evidence/independent_verify.stderr",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/independent_verify.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "artifact_id": "cb08fe5a-13d9-4ad6-9dbe-2fbaa0908b1f",
+        "name": "evidence/invocation_receipt.json",
+        "revision": 3,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/invocation_receipt.json",
+        "sha256": "d1442f438073a890f7144376357c589078ecc570f0f786e65abb24d79e03d7eb",
+        "size_bytes": 5423
+      },
+      {
+        "artifact_id": "7d89d6dd-3ec1-4179-b264-5194fd553d38",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "d44e9ac1-1bb3-4822-980b-635e1253273a",
+        "name": "procedures/observation_digest_v1.py",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/procedures/observation_digest_v1.py",
+        "sha256": "916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db",
+        "size_bytes": 9089
+      },
+      {
+        "artifact_id": "955beafc-5258-485a-91dc-d67ecba10356",
+        "name": "work/final_invocation.exit_code",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/final_invocation.exit_code",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "size_bytes": 2
+      },
+      {
+        "artifact_id": "863c5d26-9c5d-407d-91f5-2c5e9a40eee8",
+        "name": "work/final_invocation.stderr",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/final_invocation.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "artifact_id": "8889d28b-ce1e-4614-82a0-da8177940c1c",
+        "name": "work/final_invocation.stdout",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/final_invocation.stdout",
+        "sha256": "771f1a0ed979ee85ddad0fdc089c5d20618c1be4c29075c83887a9157bb8fc8f",
+        "size_bytes": 816
+      },
+      {
+        "artifact_id": "366148d5-ce6c-4e0d-9add-b1b1eb080b73",
+        "name": "work/invocation_timestamp.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/invocation_timestamp.txt",
+        "sha256": "7ae11990ebfae39bcfeb3908e4de6ddf4cd9a1d94eaff41e1c3710a4aa267390",
+        "size_bytes": 21
+      },
+      {
+        "artifact_id": "7cb5b87b-8ff4-40a6-8e2f-ee76388dc10b",
+        "name": "work/qual/fixtures/bad.completed_gt_scheduled.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.completed_gt_scheduled.json",
+        "sha256": "f1c6f2934ef79b35706a8affede0df17faf27e03a38fb23579b172f366af1f5c",
+        "size_bytes": 74
+      },
+      {
+        "artifact_id": "830be3db-ed95-45f4-8f3d-5b8ebf42f5e1",
+        "name": "work/qual/fixtures/bad.empty_rows.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.empty_rows.json",
+        "sha256": "04c680c2b49c43176a3403c60c4bfb6ce2d6ba34abd010d780ccb3e8a66183b4",
+        "size_bytes": 20
+      },
+      {
+        "artifact_id": "2aafdb26-3f90-4eb6-8d46-6e1d808f008a",
+        "name": "work/qual/fixtures/bad.float_field.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.float_field.json",
+        "sha256": "a28e9ec27a5d0121d72da49315c3a3acc3aac605ca1cba2f82ef09c1320e888a",
+        "size_bytes": 76
+      },
+      {
+        "artifact_id": "b879234d-c838-46ca-a895-414719b4ead8",
+        "name": "work/qual/fixtures/bad.not_json.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.not_json.json",
+        "sha256": "3ab6125109202d26ac7aa4704fd0380032a1c42c112bfd135a5f07bb578856b2",
+        "size_bytes": 16
+      },
+      {
+        "artifact_id": "9f415290-753f-4aa3-a09d-51b1b6ad9504",
+        "name": "work/qual/fixtures/bad.zero_scheduled.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/bad.zero_scheduled.json",
+        "sha256": "00fcd975a7075b065c4b1b5d71b8e3d0bf0b69837b5e825074153eaa35417315",
+        "size_bytes": 74
+      },
+      {
+        "artifact_id": "1c741fe0-40af-45fc-aaf4-cac82d1ca76f",
+        "name": "work/qual/fixtures/mutated.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/mutated.json",
+        "sha256": "3078f24c2afd153f22f2e96c48795a937df9b7cdacb823816347103bd33a8f0e",
+        "size_bytes": 472
+      },
+      {
+        "artifact_id": "85c41a52-14f4-4fca-afff-a665a56437b7",
+        "name": "work/qual/fixtures/qual.synthetic.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/fixtures/qual.synthetic.json",
+        "sha256": "c4a37eb3ce59269f1732be58dc7524bdf4cca630bd7d5d5cc429b048ad401fe8",
+        "size_bytes": 530
+      },
+      {
+        "artifact_id": "d5eca9d8-b194-4b67-b9ae-6c717f4a6b68",
+        "name": "work/qual/out/det-a/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-a/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "57437523-ec29-4382-83b8-8b7888fb4b1a",
+        "name": "work/qual/out/det-a/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-a/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "e3243017-3398-4f55-be01-c1a1e8e92679",
+        "name": "work/qual/out/det-b/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-b/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "79a29a08-6af4-4c50-bde0-2dcc91663e78",
+        "name": "work/qual/out/det-b/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/det-b/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "d52f3387-3f4d-445c-ba64-2a9d3234c7f5",
+        "name": "work/qual/out/mutated/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/mutated/digest.json",
+        "sha256": "8f1f5e8a601b5f7e4dbc3a650c108d016660caf065dc8f7726a8e1e526adaac7",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "4f70f66c-ea7e-46c7-8089-bf178db1883d",
+        "name": "work/qual/out/mutated/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/mutated/digest.md",
+        "sha256": "df234e6b58c391791470d09c9ac30e7f97b35a801744f073d7dc9869e81d3af9",
+        "size_bytes": 1574
+      },
+      {
+        "artifact_id": "eb94f00f-4011-4586-a11f-e6d6d556cc73",
+        "name": "work/qual/out/primary/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/primary/digest.json",
+        "sha256": "b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857",
+        "size_bytes": 480
+      },
+      {
+        "artifact_id": "c9bf2a84-1e75-4e74-96d8-01de39bfccbc",
+        "name": "work/qual/out/primary/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/primary/digest.md",
+        "sha256": "c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534",
+        "size_bytes": 1596
+      },
+      {
+        "artifact_id": "d5a960f1-5467-46b1-b945-427c2780cdb3",
+        "name": "work/qual/out/synthetic/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/synthetic/digest.json",
+        "sha256": "241a03df0df467b0ada2f7d430e361e3442d6c8249c1290e9d591d4889353d85",
+        "size_bytes": 760
+      },
+      {
+        "artifact_id": "4e53f198-e269-4f57-b7aa-a5eec04b6e36",
+        "name": "work/qual/out/synthetic/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/synthetic/digest.md",
+        "sha256": "cc59c257dceff013409146125ee1d0bf4c2fe1bf78bb7659f96c2a8442034521",
+        "size_bytes": 1648
+      },
+      {
+        "artifact_id": "df472938-ea17-4391-9854-3111aa81b171",
+        "name": "work/qual/qualification.log",
+        "revision": 4,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualification.log",
+        "sha256": "1536281e94e77ebbc278f3fa3e9435a454e002b5fb321d9d155e74e23997101c",
+        "size_bytes": 12923
+      },
+      {
+        "artifact_id": "c572c293-3ca0-4005-8b81-76cdbab9166c",
+        "name": "work/qual/qualification.stderr",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualification.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "artifact_id": "ebc141c1-0db2-4882-b321-171dcee71d5f",
+        "name": "work/qual/qualify.py",
+        "revision": 4,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualify.py",
+        "sha256": "c721a0104a83aa16a8b80ab46263388acbdbaf9cfaf3b92257804c31a1a33a9d",
+        "size_bytes": 13298
+      }
+    ],
+    "repair_supersessions": [
+      {
+        "superseded_id": "a9d34d54-ec25-4bb7-bf63-1d15b5d9ae7b",
+        "superseded_by": "df472938-ea17-4391-9854-3111aa81b171",
+        "name": "work/qual/qualification.log",
+        "superseded_sha256": "00f566f3943d196210ade97eaf95ab181423670908b3a404e16852bd28a53d92",
+        "superseded_size_bytes": 190,
+        "replacement_sha256": "1536281e94e77ebbc278f3fa3e9435a454e002b5fb321d9d155e74e23997101c",
+        "replacement_size_bytes": 12923,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:52:24.221Z",
+        "source": "repair",
+        "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+        "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+      },
+      {
+        "superseded_id": "0521b066-78d5-4100-ad6f-a4c328aae5a6",
+        "superseded_by": "ebc141c1-0db2-4882-b321-171dcee71d5f",
+        "name": "work/qual/qualify.py",
+        "superseded_sha256": "e18db762f4255601fe0ee087f54e86fb33de09e68e8f968d085ae04109836358",
+        "superseded_size_bytes": 8925,
+        "replacement_sha256": "c721a0104a83aa16a8b80ab46263388acbdbaf9cfaf3b92257804c31a1a33a9d",
+        "replacement_size_bytes": 13298,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:52:24.221Z",
+        "source": "repair",
+        "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+        "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+      },
+      {
+        "superseded_id": "fb6d603d-7ba7-4920-b327-efb9fbacd1b9",
+        "superseded_by": "d7d843fb-451b-4be0-a0e8-91123c5670b4",
+        "name": "evidence/build_receipt.py",
+        "superseded_sha256": "99a50f621832866a7c69b46ec839fda03e003b2661f950d332266835666de4c1",
+        "superseded_size_bytes": 3635,
+        "replacement_sha256": "892370849d6b93c0342a3386b5280ef553fa7584c4f8311eb163a5a189c62a9f",
+        "replacement_size_bytes": 3980,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:52:24.221Z",
+        "source": "repair",
+        "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+        "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+      },
+      {
+        "superseded_id": "6334762c-37c0-4c76-bf51-7248bca64ce8",
+        "superseded_by": "cb08fe5a-13d9-4ad6-9dbe-2fbaa0908b1f",
+        "name": "evidence/invocation_receipt.json",
+        "superseded_sha256": "bad45dc424053b5bfd361128e1cf5dcc04d246643040074e4bfe6bc36be2107d",
+        "superseded_size_bytes": 5423,
+        "replacement_sha256": "d1442f438073a890f7144376357c589078ecc570f0f786e65abb24d79e03d7eb",
+        "replacement_size_bytes": 5423,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:52:24.221Z",
+        "source": "repair",
+        "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+        "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+      },
+      {
+        "superseded_id": "bfd3f781-af8f-446c-ad13-a910e1ec19bb",
+        "superseded_by": "a3ba889a-59d3-4021-976a-a42914dc735d",
+        "name": "evidence/independent_verify.log",
+        "superseded_sha256": "2eea42d0d61d793a341a0cdef0df316c4638e968729495232a50497a170b0857",
+        "superseded_size_bytes": 25,
+        "replacement_sha256": "11894c0f29d00867f03bcae7183f941e1bd7b861b7db4f6cc80398fbdd7333b2",
+        "replacement_size_bytes": 11540,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:52:24.221Z",
+        "source": "repair",
+        "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+        "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+      },
+      {
+        "superseded_id": "235714ac-a3d6-4dd8-81f1-46a6fb1a59e1",
+        "superseded_by": "a2788f48-c698-41ae-8e65-1a340c3d2c50",
+        "name": "evidence/independent_verify.py",
+        "superseded_sha256": "9898d133e1af1284a9401071c1c5f3c239ba4347e7c90d056e84250628a076ad",
+        "superseded_size_bytes": 2693,
+        "replacement_sha256": "19a673c406596a5a0fce397bc41617a7fd8d9c087a0ade98237a151695339df7",
+        "replacement_size_bytes": 12908,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:52:24.221Z",
+        "source": "repair",
+        "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+        "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+      }
+    ],
+    "repair_provenance": [
+      {
+        "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c",
+        "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+        "repair_iteration": 1,
+        "source": "repair",
+        "outcome": "completed",
+        "recorded_at": "2026-11-16T05:52:24.221Z",
+        "supersessions": [
+          {
+            "superseded_id": "a9d34d54-ec25-4bb7-bf63-1d15b5d9ae7b",
+            "superseded_by": "df472938-ea17-4391-9854-3111aa81b171",
+            "name": "work/qual/qualification.log",
+            "superseded_sha256": "00f566f3943d196210ade97eaf95ab181423670908b3a404e16852bd28a53d92",
+            "superseded_size_bytes": 190,
+            "replacement_sha256": "1536281e94e77ebbc278f3fa3e9435a454e002b5fb321d9d155e74e23997101c",
+            "replacement_size_bytes": 12923,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:52:24.221Z",
+            "source": "repair",
+            "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+            "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+          },
+          {
+            "superseded_id": "0521b066-78d5-4100-ad6f-a4c328aae5a6",
+            "superseded_by": "ebc141c1-0db2-4882-b321-171dcee71d5f",
+            "name": "work/qual/qualify.py",
+            "superseded_sha256": "e18db762f4255601fe0ee087f54e86fb33de09e68e8f968d085ae04109836358",
+            "superseded_size_bytes": 8925,
+            "replacement_sha256": "c721a0104a83aa16a8b80ab46263388acbdbaf9cfaf3b92257804c31a1a33a9d",
+            "replacement_size_bytes": 13298,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:52:24.221Z",
+            "source": "repair",
+            "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+            "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+          },
+          {
+            "superseded_id": "fb6d603d-7ba7-4920-b327-efb9fbacd1b9",
+            "superseded_by": "d7d843fb-451b-4be0-a0e8-91123c5670b4",
+            "name": "evidence/build_receipt.py",
+            "superseded_sha256": "99a50f621832866a7c69b46ec839fda03e003b2661f950d332266835666de4c1",
+            "superseded_size_bytes": 3635,
+            "replacement_sha256": "892370849d6b93c0342a3386b5280ef553fa7584c4f8311eb163a5a189c62a9f",
+            "replacement_size_bytes": 3980,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:52:24.221Z",
+            "source": "repair",
+            "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+            "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+          },
+          {
+            "superseded_id": "6334762c-37c0-4c76-bf51-7248bca64ce8",
+            "superseded_by": "cb08fe5a-13d9-4ad6-9dbe-2fbaa0908b1f",
+            "name": "evidence/invocation_receipt.json",
+            "superseded_sha256": "bad45dc424053b5bfd361128e1cf5dcc04d246643040074e4bfe6bc36be2107d",
+            "superseded_size_bytes": 5423,
+            "replacement_sha256": "d1442f438073a890f7144376357c589078ecc570f0f786e65abb24d79e03d7eb",
+            "replacement_size_bytes": 5423,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:52:24.221Z",
+            "source": "repair",
+            "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+            "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+          },
+          {
+            "superseded_id": "bfd3f781-af8f-446c-ad13-a910e1ec19bb",
+            "superseded_by": "a3ba889a-59d3-4021-976a-a42914dc735d",
+            "name": "evidence/independent_verify.log",
+            "superseded_sha256": "2eea42d0d61d793a341a0cdef0df316c4638e968729495232a50497a170b0857",
+            "superseded_size_bytes": 25,
+            "replacement_sha256": "11894c0f29d00867f03bcae7183f941e1bd7b861b7db4f6cc80398fbdd7333b2",
+            "replacement_size_bytes": 11540,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:52:24.221Z",
+            "source": "repair",
+            "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+            "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+          },
+          {
+            "superseded_id": "235714ac-a3d6-4dd8-81f1-46a6fb1a59e1",
+            "superseded_by": "a2788f48-c698-41ae-8e65-1a340c3d2c50",
+            "name": "evidence/independent_verify.py",
+            "superseded_sha256": "9898d133e1af1284a9401071c1c5f3c239ba4347e7c90d056e84250628a076ad",
+            "superseded_size_bytes": 2693,
+            "replacement_sha256": "19a673c406596a5a0fce397bc41617a7fd8d9c087a0ade98237a151695339df7",
+            "replacement_size_bytes": 12908,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:52:24.221Z",
+            "source": "repair",
+            "intent_id": "fa2dce09-9c03-457a-8b33-d3bb8da9320b",
+            "provenance_id": "59a8d36c-446a-4351-a8d5-3ce945beae2c"
+          }
+        ]
+      }
+    ],
+    "recovery_resolutions": [],
+    "candidate_sha256": "37026b0c4f736f8b8db4b3992d3186a4df7861938edfab4d1828a308382e8b3a",
+    "created_at": "2026-11-16T05:52:24.237Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+    "epoch_id": "141859f1-4f79-4caa-876c-cf59122df757",
+    "candidate_sha256": "37026b0c4f736f8b8db4b3992d3186a4df7861938edfab4d1828a308382e8b3a",
+    "execution_output_sha256": "1b5ac887ef87a110117723bab57d54bb223b97e6795f4bd1a8a45080210f7f67",
+    "evidence_sha256": "04acc5cc74c70a38c866df80c9952c5c8b9794f833522760f826ab5c26afff97",
+    "review": {
+      "passed": false,
+      "score": 6,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "notes": "The execution log identifies observation-digest-v1 as absent. The receipt records acquisition_count 1 with no network or packages. The procedure sits at the stable in-scope path procedures/observation_digest_v1.py (sha256 916628d6..., rev 1, unchanged through repair). I checked the qualification outputs by hand. The synthetic fixture gives 10.42 overall and per-site 6.25, 100.00, 3.13 and 0.00, which confirms half-up rounding on 3.125 to 3.13. The mutated fixture gives 60.00 overall and North 45.45, showing the output changes with the input. Determinism holds because det-a, det-b and primary are byte-identical. The qualification log and procedure source were not supplied, so the 154/154 count is self-reported. The verified output artifacts are enough to accept qualification."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "notes": "evidence/invocation_receipt.json is registered. Its fixed_args match the specified fixture path and mission directory character for character. The output directory is the mission directory, not a probe directory. Executable sha256 916628d6... matches the registered procedure artifact. The exit code, empty stderr and stdout (sha 771f1a0e...) are registered. The output hashes in the receipt match the registered digest.json and digest.md."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": false,
+          "notes": "digest.json is correct by independent arithmetic: row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67 (26/30). It has sites North (2 rows, 22/18/5, 81.82) and South (1 row, 8/8/1, 100.00). All values are numeric literals with 2 decimals. The contents of digest.md were not provided to QA; only its hash (c597cca9...) and size are available. QA therefore cannot confirm that digest.md presents the same values or describes a reproducible method. Because this criterion is only partially verifiable, it is marked failed."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "notes": "All deliverables are registered. Hashes agree across the candidate, the manifest and the receipt. The digest.json bytes pass Nox QA. The digest.md bytes were not supplied, so they cannot pass independent Nox QA. The independent_verify.log (11540 bytes) and procedure source were also not supplied, so the host verification result is asserted but cannot be inspected."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "digest.md content is not included in the QA bundle. Only its hash and size are present, so its values and reproducible-method section cannot be verified.",
+          "severity": "major"
+        },
+        {
+          "issue": "Procedure source, qualification.log and independent_verify.log contents are not supplied. The 154/154 qualification and host-verification pass claims are model-authored assertions that QA cannot inspect, which is the spec risk 'A model-authored observation is not qualification'.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The receipt was regenerated during repair at 05:52Z and references qualify.py rev 4 and qualification.log rev 4. Both postdate the final invocation at 05:42:03Z. The procedure bytes are unchanged, so the qualification still applies, but the cited qualification evidence is later than the invocation it qualifies.",
+          "severity": "minor"
+        },
+        {
+          "issue": "QA evidence incomplete: 18 artifact(s) were not included in this review",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Include the full text of digest.md in the QA bundle so the values and the reproducible-method section can be checked against digest.json.",
+        "Include procedures/observation_digest_v1.py, work/qual/qualification.log and evidence/independent_verify.log contents so the qualification and host-verification claims can be checked independently.",
+        "Record in the receipt both the pre-invocation qualification run (147/147) and the post-repair re-qualification (154/154), so the order of qualification and invocation is explicit."
+      ],
+      "verdict": "FAIL: LLM reviewer verdict is FAIL | Criterion failed: \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\" | Criterion failed: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\" | Unresolved major defect: digest.md content is not included in the QA bundle. Only its hash and size are present, so its values and reproducible-method section cannot be verified. | Unresolved critical defect: QA evidence incomplete: 18 artifact(s) were not included in this review"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "Criterion failed: \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\"",
+        "Criterion failed: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"",
+        "Unresolved major defect: digest.md content is not included in the QA bundle. Only its hash and size are present, so its values and reproducible-method section cannot be verified.",
+        "Unresolved critical defect: QA evidence incomplete: 18 artifact(s) were not included in this review"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "reason": "The execution log identifies observation-digest-v1 as absent. The receipt records acquisition_count 1 with no network or packages. The procedure sits at the stable in-scope path procedures/observation_digest_v1.py (sha256 916628d6..., rev 1, unchanged through repair). I checked the qualification outputs by hand. The synthetic fixture gives 10.42 overall and per-site 6.25, 100.00, 3.13 and 0.00, which confirms half-up rounding on 3.125 to 3.13. The mutated fixture gives 60.00 overall and North 45.45, showing the output changes with the input. Determinism holds because det-a, det-b and primary are byte-identical. The qualification log and procedure source were not supplied, so the 154/154 count is self-reported. The verified output artifacts are enough to accept qualification."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "reason": "evidence/invocation_receipt.json is registered. Its fixed_args match the specified fixture path and mission directory character for character. The output directory is the mission directory, not a probe directory. Executable sha256 916628d6... matches the registered procedure artifact. The exit code, empty stderr and stdout (sha 771f1a0e...) are registered. The output hashes in the receipt match the registered digest.json and digest.md."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": false,
+          "reason": "digest.json is correct by independent arithmetic: row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67 (26/30). It has sites North (2 rows, 22/18/5, 81.82) and South (1 row, 8/8/1, 100.00). All values are numeric literals with 2 decimals. The contents of digest.md were not provided to QA; only its hash (c597cca9...) and size are available. QA therefore cannot confirm that digest.md presents the same values or describes a reproducible method. Because this criterion is only partially verifiable, it is marked failed."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "reason": "All deliverables are registered. Hashes agree across the candidate, the manifest and the receipt. The digest.json bytes pass Nox QA. The digest.md bytes were not supplied, so they cannot pass independent Nox QA. The independent_verify.log (11540 bytes) and procedure source were also not supplied, so the host verification result is asserted but cannot be inspected."
+        }
+      ],
+      "llm_score": 6,
+      "llm_passed": false
+    },
+    "receipt_sha256": "c72d998eb4aa058d3786cbd9537e6a494e7aabced10b7ad8f6713ce2c6584592",
+    "created_at": "2026-11-16T05:53:08.032Z"
+  }
+}

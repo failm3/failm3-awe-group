@@ -1,0 +1,53 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-16T03:24:11.832Z",
+  "finished_at": "2026-11-16T03:24:33.683Z",
+  "suites": [
+    {
+      "suite": "src/tests/r2-qualified-acquisition.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2924
+    },
+    {
+      "suite": "src/tests/r2-qualified-local-capability.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3249
+    },
+    {
+      "suite": "src/tests/capability-loop.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 2400
+    },
+    {
+      "suite": "src/tests/r0-final-recursion.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 6091
+    },
+    {
+      "suite": "src/tests/r1-shell-isolation.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3241
+    },
+    {
+      "suite": "src/tests/r1-mission-admission.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3946
+    }
+  ],
+  "passed": 6,
+  "failed": 0
+}

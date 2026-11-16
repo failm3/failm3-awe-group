@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-11-13T15:27:20.207628+00:00",
+  "verdict": "PASS — R0 OFFLINE SCOPE VERIFIED / CLOSED",
+  "scope": "Offline R0 engineering and independent QA evidence; no live-service, deployment or production-readiness certification",
+  "git": {
+    "baseline_head": "446adaea833b0ebade1a21fbda3f71118d19b0d6",
+    "branch": "hotfix/e1-recovery-hotfix-01",
+    "new_r0_commit": false,
+    "push": false,
+    "merge": false,
+    "deployment": false,
+    "diff_check_clean": true
+  },
+  "environment": {
+    "node": "v22.23.3",
+    "npm": "10.9.9",
+    "opencode": "opencode v2.2.6"
+  },
+  "source_manifest": {
+    "path": "reports/r0-test-results/final-source.sha256",
+    "files": 73,
+    "verified": 73,
+    "sha256": "d2562ef0a50a7d25e4da83dc01fe632720708192a756a4adf7ded77bce3680a7"
+  },
+  "offline_tests": {
+    "command": "npm test",
+    "passed_suites": 22,
+    "failed_suites": 0,
+    "started_at": "2026-11-13T14:55:34.466Z",
+    "finished_at": "2026-11-13T15:04:37.777Z",
+    "duration_ms": 543310,
+    "per_suite_timeout_ms": 300000,
+    "suite_evidence": "reports/r0-test-results/final-gate-suite-evidence.json",
+    "console": "reports/r0-test-results/full-regression-console.log"
+  },
+  "typecheck": "PASS",
+  "build": "PASS",
+  "independent_core_v5": {
+    "verdict": "PASS",
+    "report": "reports/r0-final-closure-core-reqa-v5.md",
+    "report_sha256": "155fc35e448a8479a2262c001915dadd566a64dda67ef185b4c6d8ecfaa17a5c",
+    "session": "ses_e2a8efa83ffe4MlW15LNX3UAa5",
+    "P0": 0,
+    "P1": 0,
+    "checks": {
+      "passed": 241,
+      "failed": 0
+    },
+    "real_post_provenance_sigkills": 2,
+    "resumed_plans": 0,
+    "resumed_executions": 0,
+    "delivered": "intact C only",
+    "residual_node_processes": 0
+  },
+  "independent_integrated_v5": {
+    "verdict": "PASS",
+    "report": "reports/r0-final-closure-integrated-reqa-v5.md",
+    "report_sha256": "20a426c8966feb1865a635b7d9cdd0fbb44d210c16f20005a8a7682f310ee326",
+    "session": "ses_e2a8efa82ffe4uYTomk5QPxIt0",
+    "fresh_product_checks": {
+      "focused": 302,
+      "integrated_probes": 50,
+      "original_regressions": 27,
+      "total": 379,
+      "note": "This total excludes the separate existing 22-suite gate and the 8 evidence-consistency checks, avoiding double counting."
+    },
+    "focused_suites": {
+      "passed": 6,
+      "failed": 0,
+      "checks": 302
+    },
+    "integrated_adversarial_checks": 50,
+    "main_gate_consistency_checks": 8,
+    "if03_ancestor_01_closed": true,
+    "residual_audit_processes": 0
+  },
+  "original_decisive_probes": {
+    "passed": 27,
+    "failed": 0,
+    "source_version": "frozen v5 physical copy for all probes",
+    "summary": "reports/r0-test-results/original-decisive-probes-summary.json"
+  },
+  "real_data_preservation": {
+    "checked_at": "2026-11-13T15:26:52.018358+00:00",
+    "root": ".awe-data",
+    "algorithm": "SHA256(concat(relative_path_utf8 || raw_SHA256(file_bytes))) over root-relative POSIX paths sorted by pathlib.Path string order",
+    "tree_sha256": "85b9030f8bcc8b91a438b8b65fa9bf1f7647887ac631537446e8ffc4ea72ee6b",
+    "previous_tree_sha256": "85b9030f8bcc8b91a438b8b65fa9bf1f7647887ac631537446e8ffc4ea72ee6b",
+    "files": 252,
+    "missions": 23,
+    "statuses": {
+      "completed": 8,
+      "failed": 11,
+      "paused": 4
+    },
+    "checkpoints": 0,
+    "historical_statuses": {
+      "25be2dad-039c-4cb2-8667-d4184df47363": "failed",
+      "e3bf9e21-15c4-4147-9275-c2064d2b475c": "failed"
+    },
+    "matches_previous": true
+  },
+  "final_report": {
+    "path": "NOX-R0-FINAL-ENGINEERING-REPORT.md",
+    "sha256": "d4bb7e34304cf5dd6a9b13b2204d4e2813c1a0c19b63deade08c5d71ca714baf"
+  },
+  "external_context": {
+    "markdown_files": 56,
+    "manifest": "reports/r0-test-results/external-context.sha256",
+    "published": false
+  },
+  "usage": {
+    "project_stats": "reports/r0-test-results/opencode-usage-final.json",
+    "r0_subagents": "reports/r0-test-results/r0-subagent-usage.json",
+    "provider_spend": "UNKNOWN: OpenCode cost=0 is not an invoice or proof of zero provider spend"
+  },
+  "limitations": [
+    "Live provider/model cancellation unproven",
+    "Real browser/MCP/PostgreSQL/external APIs unproven",
+    "No production deployment or readiness claim",
+    "No universal external-effect exactly-once guarantee",
+    "Application controls are not an OS/container sandbox",
+    "No paid live/stress testing"
+  ],
+  "evidence_manifest": "reports/r0-test-results/evidence.sha256",
+  "stop_boundary": "R1, deployment, publication, paid live/stress testing and Git mutations not started"
+}

@@ -1,0 +1,120 @@
+{
+  "reviewer_session": "8b27d2d9-f236-479c-8fba-366e5a013631",
+  "reviewed_session": "ca44c6ed-7df6-44c8-94ee-5f8c56ae165d",
+  "date": "2026-11-13",
+  "verdict": "CHANGES_REQUIRED",
+  "major": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "minor": [
+    "m1",
+    "m2"
+  ],
+  "application_tests_run": false,
+  "direct_current_AWE_source_access": false,
+  "draft_checks": "A-L complete; main-document links valid; SHA256SUMS OK; 728 OpenCode lines; 23 previous MD incl handoff",
+  "primary_captures": [
+    {
+      "path": "primary/checks.json",
+      "bytes": 3492,
+      "sha256": "7d21ca1cddd594a1d7fedf286923246647c85de5088ada0b18f68bf3411871bd"
+    },
+    {
+      "path": "primary/composio_mastra.json",
+      "bytes": 2686,
+      "sha256": "05cfe3a115e9e7729c8beb9af90c6e435dc60c83b2bb18ce49c8a8e61c2a65a6"
+    },
+    {
+      "path": "primary/mastra_core/package__dist__evals__base.d.ts",
+      "bytes": 26694,
+      "sha256": "ed2ed68c7981b876f4a2b922d16bc555f26defb9afd864a3b833ddfd982c62bc"
+    },
+    {
+      "path": "primary/mastra_core/package__dist__evals__run__index.d.ts",
+      "bytes": 10882,
+      "sha256": "ecc08fe05152066d443a25850458110cc7e4e0faf00b60421ec367e5a47886f6"
+    },
+    {
+      "path": "primary/mastra_core/src__agent__run-ownership.ts",
+      "bytes": 1603,
+      "sha256": "428b6c57b4362e52c9fd5b5f8d981232ce3ff240ebd701a161db30b6d42dff6a"
+    },
+    {
+      "path": "primary/mastra_core/src__evals__base.ts",
+      "bytes": 84757,
+      "sha256": "88e3a76c5a5a9a3d9f8bf8016e8fcaf7fa73ed1224e4d84656a93df2fdcb3be0"
+    },
+    {
+      "path": "primary/mastra_core/src__evals__run__index.ts",
+      "bytes": 62472,
+      "sha256": "5180011245ae459d460b7f8135d36ad9e20ea4cdf6c5691efdc9f15b65529d69"
+    },
+    {
+      "path": "primary/mastra_core/src__storage__run-fencing.ts",
+      "bytes": 8215,
+      "sha256": "bb27e35c046e89f07e4b10d79502e9aa750d6f8130ffb86f5f0c68a540440f6c"
+    },
+    {
+      "path": "primary/mastra_core/src__workflows__run-ownership.ts",
+      "bytes": 2494,
+      "sha256": "76eae0a9783e2015cae5b954c23d3c583d87d316a0db18e917e06e78ccc0a683"
+    },
+    {
+      "path": "primary/mastra_core.json",
+      "bytes": 23572,
+      "sha256": "c5b27c03fceff03fc6e09b39b03bf1bafcb38aac256bae777c5db4158399f4fb"
+    },
+    {
+      "path": "primary/mastra_libsql/src__storage__db__run-fencing.ts",
+      "bytes": 3596,
+      "sha256": "573a2c0ffb6fde10ad11be1b58bea05b367519a7c769ef1eb72a3f77110b8eea"
+    },
+    {
+      "path": "primary/mastra_libsql/src__storage__domains__workflows__index.ts",
+      "bytes": 26188,
+      "sha256": "17715f9c8e838c7397fea79385f39295ab0c090e7786456c940b262d4caa229d"
+    },
+    {
+      "path": "primary/mastra_libsql.json",
+      "bytes": 3046,
+      "sha256": "d1b3d2e5f2bad0cfa5e3693f9130e555f255f7f4f6d316da297d6396403e6415"
+    },
+    {
+      "path": "primary/mastra_mcp.json",
+      "bytes": 3966,
+      "sha256": "8773e020ba79dbe784dbf065ddfbf9cecb8d4857eb7867a271e8273e1c583e35"
+    },
+    {
+      "path": "primary/mastra_memory.json",
+      "bytes": 3943,
+      "sha256": "2471c6cd05988f71621dfdf8865853e065ff786b5c1cbb80b2ae57e4814138ce"
+    },
+    {
+      "path": "primary/mcp-cancellation.html",
+      "bytes": 163240,
+      "sha256": "dfb448f58c981c95e3cb0c88914fa12bd743b873ccb05323f8ae4275d2ca1100"
+    },
+    {
+      "path": "primary/mcp-cancellation.txt",
+      "bytes": 4711,
+      "sha256": "281dc329da4e51988cce3047b3c03fd401fe1664656e987dce78b01c3a83cde8"
+    },
+    {
+      "path": "primary/memory-index.ts",
+      "bytes": 167238,
+      "sha256": "ef3b2aaffbda36ee925e498b6bfdefce7d22ef668a6ff798a9d7a861b162f5b3"
+    },
+    {
+      "path": "primary/playwright_mcp.json",
+      "bytes": 2958,
+      "sha256": "0286d4fb2da963d03ec162683114217cdd564c46857631c7d2562d6b969363f8"
+    },
+    {
+      "path": "primary/semantic-recall.mdx",
+      "bytes": 19275,
+      "sha256": "3ef75c9d9782a30a661bb0bb646d5e7a5e4f62f0f817242b40060c7570d85db5"
+    }
+  ]
+}

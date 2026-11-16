@@ -1,0 +1,277 @@
+{
+  "schema": "r2-final-professional-validation-v1",
+  "mode": "validate-only",
+  "network_calls": 0,
+  "model_calls": 0,
+  "missions_executed": 0,
+  "references": {
+    "research_passed": true,
+    "analytics_passed": false,
+    "delegation_passed": true,
+    "passed": false
+  },
+  "negative_controls": [
+    {
+      "name": "research missing citation rejected",
+      "rejected": true,
+      "detail": "exact site request and delay observations are bound to S2; every substantive factual paragraph carries a source citation"
+    },
+    {
+      "name": "research uncited site observations rejected",
+      "rejected": true,
+      "detail": "exact site request and delay observations are bound to S2; every substantive factual paragraph carries a source citation"
+    },
+    {
+      "name": "research unsupported Depot rollout rejected",
+      "rejected": true,
+      "detail": "no completed wider-rollout claim"
+    },
+    {
+      "name": "analytics arithmetic mutant rejected",
+      "rejected": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "name": "analytics document metric mismatch rejected",
+      "rejected": true,
+      "detail": "brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings; brief contains only independently supported numeric facts"
+    },
+    {
+      "name": "analytics unexpected root field rejected",
+      "rejected": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "name": "analytics derived-number serialization rejected",
+      "rejected": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; metrics schema includes exact groups and two-decimal derived JSON numbers; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "name": "recursive extra top-level delegation rejected",
+      "rejected": true,
+      "detail": "exactly one top-level coordinator recursively launched exactly two real children"
+    },
+    {
+      "name": "recursive sequential children rejected",
+      "rejected": true,
+      "detail": "recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "name": "recursive duplicate child identities rejected",
+      "rejected": true,
+      "detail": "recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "name": "recursive missing parallel reservation rejected",
+      "rejected": true,
+      "detail": "recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "name": "recursive third child outside common overlap rejected",
+      "rejected": true,
+      "detail": "exactly one top-level coordinator recursively launched exactly two real children; recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "name": "research wrong-source site observation rejected",
+      "rejected": true,
+      "detail": "exact site request and delay observations are bound to S2"
+    },
+    {
+      "name": "research heading-line citation bypass rejected",
+      "rejected": true,
+      "detail": "every substantive factual paragraph carries a source citation"
+    },
+    {
+      "name": "analytics exponential derived metric rejected",
+      "rejected": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; metrics schema includes exact groups and two-decimal derived JSON numbers; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "name": "analytics missing multiplication formula rejected",
+      "rejected": true,
+      "detail": "brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings; brief documents input and exact formulas"
+    },
+    {
+      "name": "analytics Markdown signed-variance mismatch rejected",
+      "rejected": true,
+      "detail": "brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings; brief contains only independently supported numeric facts"
+    },
+    {
+      "name": "duplicate whole-mission concurrency interval rejected",
+      "rejected": true,
+      "detail": "duplicate missions incorrectly accepted"
+    },
+    {
+      "name": "superseded artifact revision uses terminal projection",
+      "rejected": false,
+      "detail": "accepted exact terminal projection"
+    },
+    {
+      "name": "terminal producer projection mismatch rejected",
+      "rejected": false,
+      "detail": "no check rejected invalid fixture"
+    },
+    {
+      "name": "CSV duplicate identity rejected",
+      "rejected": true,
+      "detail": "duplicate row parse"
+    }
+  ],
+  "checks": [
+    {
+      "check": "valid reference fixtures independently pass",
+      "passed": false,
+      "detail": "{\"research_passed\":true,\"analytics_passed\":false,\"delegation_passed\":true,\"passed\":false}"
+    },
+    {
+      "check": "negative control: research missing citation rejected",
+      "passed": true,
+      "detail": "exact site request and delay observations are bound to S2; every substantive factual paragraph carries a source citation"
+    },
+    {
+      "check": "negative control: research uncited site observations rejected",
+      "passed": true,
+      "detail": "exact site request and delay observations are bound to S2; every substantive factual paragraph carries a source citation"
+    },
+    {
+      "check": "negative control: research unsupported Depot rollout rejected",
+      "passed": true,
+      "detail": "no completed wider-rollout claim"
+    },
+    {
+      "check": "negative control: analytics arithmetic mutant rejected",
+      "passed": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "check": "negative control: analytics document metric mismatch rejected",
+      "passed": true,
+      "detail": "brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings; brief contains only independently supported numeric facts"
+    },
+    {
+      "check": "negative control: analytics unexpected root field rejected",
+      "passed": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "check": "negative control: analytics derived-number serialization rejected",
+      "passed": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; metrics schema includes exact groups and two-decimal derived JSON numbers; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "check": "negative control: recursive extra top-level delegation rejected",
+      "passed": true,
+      "detail": "exactly one top-level coordinator recursively launched exactly two real children"
+    },
+    {
+      "check": "negative control: recursive sequential children rejected",
+      "passed": true,
+      "detail": "recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "check": "negative control: recursive duplicate child identities rejected",
+      "passed": true,
+      "detail": "recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "check": "negative control: recursive missing parallel reservation rejected",
+      "passed": true,
+      "detail": "recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "check": "negative control: recursive third child outside common overlap rejected",
+      "passed": true,
+      "detail": "exactly one top-level coordinator recursively launched exactly two real children; recursive children are distinct and actually overlapped in time"
+    },
+    {
+      "check": "negative control: research wrong-source site observation rejected",
+      "passed": true,
+      "detail": "exact site request and delay observations are bound to S2"
+    },
+    {
+      "check": "negative control: research heading-line citation bypass rejected",
+      "passed": true,
+      "detail": "every substantive factual paragraph carries a source citation"
+    },
+    {
+      "check": "negative control: analytics exponential derived metric rejected",
+      "passed": true,
+      "detail": "metrics exactly match independent raw-CSV recomputation and numeric serialization; metrics schema includes exact groups and two-decimal derived JSON numbers; brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings"
+    },
+    {
+      "check": "negative control: analytics missing multiplication formula rejected",
+      "passed": true,
+      "detail": "brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings; brief documents input and exact formulas"
+    },
+    {
+      "check": "negative control: analytics Markdown signed-variance mismatch rejected",
+      "passed": true,
+      "detail": "brief has exact Atlas operational findings; brief has exact Birch operational findings; brief has exact Cedar operational findings; brief has exact overall operational findings; brief contains only independently supported numeric facts"
+    },
+    {
+      "check": "negative control: duplicate whole-mission concurrency interval rejected",
+      "passed": true,
+      "detail": "duplicate missions incorrectly accepted"
+    },
+    {
+      "check": "negative control: superseded artifact revision uses terminal projection",
+      "passed": false,
+      "detail": "accepted exact terminal projection"
+    },
+    {
+      "check": "negative control: terminal producer projection mismatch rejected",
+      "passed": false,
+      "detail": "no check rejected invalid fixture"
+    },
+    {
+      "check": "negative control: CSV duplicate identity rejected",
+      "passed": true,
+      "detail": "duplicate row parse"
+    },
+    {
+      "check": "positive real interval intersection proves concurrency",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sequential execution is not represented as concurrent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "missing intervals do not prove concurrency",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "attestation": {
+    "schema": "r2-final-professional-attestation-v1",
+    "harness_files": [
+      {
+        "file": "scripts/r2-final-professional/README.md",
+        "sha256": "7f30552303eaa7a6c7f8122a020e7b98c4e747be86fcfae2ef124620299bbc7d"
+      },
+      {
+        "file": "scripts/r2-final-professional/fixtures.ts",
+        "sha256": "e094cc557f406cd1aed7ac24947bbd3a3f98238d9d8945e2087e75835fbb34dd"
+      },
+      {
+        "file": "scripts/r2-final-professional/runner.ts",
+        "sha256": "29bbd9ad84aa1c52e3c62aa80514ed836e8cc63f4321010bda87c89b67489e0e"
+      },
+      {
+        "file": "scripts/r2-final-professional/verifier.ts",
+        "sha256": "790858ffbc0fd89e0cf416724d3cc90f8cf54e37246d70b4b5b7947b2cb2b288"
+      }
+    ],
+    "source_inputs": {
+      "sources/pilot-charter.txt": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+      "sources/weekly-observations.txt": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+      "sources/reviewer-note.txt": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+    },
+    "analytics_input_sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+    "analytics_schema_sha256": "3b6e8bea7261801c519a7cac29f538d3affb5a438ebcfa4b5b6e055b7dc7560e"
+  },
+  "provider_cost": "UNKNOWN",
+  "passed": false
+}

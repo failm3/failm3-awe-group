@@ -1,0 +1,15 @@
+{
+  "id": "4867ac67-685d-4f14-bfb9-4e17cb533938",
+  "mission_id": "r2-final-transfer-1794798010397-t10-on",
+  "type": "file",
+  "name": "extra.checks.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t10-on/extra.checks.cjs",
+  "created_at": "2026-11-16T04:13:52.799Z",
+  "metadata": {
+    "size_bytes": 5410,
+    "sha256": "03a41720a714a64f82fc2f002de72f160ff4756cc4699c7332dc68a0bf851a98",
+    "reconciled": true,
+    "previous_artifact_id": "2b824201-118a-44f8-985b-a5dbb5063f2f",
+    "revision": 2
+  }
+}

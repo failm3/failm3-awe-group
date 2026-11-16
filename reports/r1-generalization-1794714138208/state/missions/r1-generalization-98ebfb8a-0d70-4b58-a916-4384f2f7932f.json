@@ -1,0 +1,357 @@
+{
+  "id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+  "title": "Unseen rescue-shift analytics dashboard",
+  "description": "A previously unseen local data, document and visual-production mission; no task-specific application workflow is supplied.",
+  "objective": "Turn the supplied rescue-shift CSV into independently reproducible analytics and a rendered visual dashboard.",
+  "acceptance_criteria": [
+    "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+    "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+    "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page."
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-15T03:42:20.262Z",
+  "updated_at": "2026-11-15T04:02:38.439Z",
+  "artifacts": [
+    "72fc40d4-cab2-41a6-aa9e-07e5d350c0a3",
+    "4e34d2df-d51a-4c30-a31e-13ac76333993",
+    "4d78a02a-2233-46eb-95f1-acac6eb5ef89",
+    "3c8b4763-fbd8-4602-ae64-904cc87d6539",
+    "cc41fd7f-59bc-49f2-bc9b-8668544a21f8",
+    "4ecffe14-8ff5-49fc-b1d8-4121c6c3df6a",
+    "ee2b8b96-76d6-446e-8cae-0b22c8aba165",
+    "2002a253-7dbf-4909-89a8-61d1e5ed367a",
+    "c23ec7b0-5ca2-42ce-b249-fce794034c3c",
+    "00d4c404-99d8-4c5d-960d-900aa9ce7b23",
+    "67641caa-b86f-4ee5-858e-bad38c797cf5"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "Unseen rescue-shift analytics dashboard",
+      "objective": "Turn the supplied rescue-shift CSV into independently reproducible analytics and a rendered visual dashboard.",
+      "scope": "Read only /home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/input/rescue-shifts.csv as mission input. Work only inside /home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f. Use ordinary local runtimes and existing tools. Deliver metrics.json, dashboard.html and dashboard.png. Keep the artifact set concise: apart from bounded capability-probe evidence, avoid unnecessary scratch reports, logs and duplicate scripts; put the reproducible calculation method in metrics.json. No package installation, network access, publishing, deployment, purchases or external changes.",
+      "acceptance_criteria": [
+        "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+        "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+        "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page."
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_write",
+        "file_list",
+        "shell",
+        "save_artifact",
+        "render_dashboard"
+      ],
+      "suggested_agents": [
+        "analyst",
+        "coder",
+        "designer",
+        "executor"
+      ],
+      "estimated_complexity": "moderate",
+      "risks": [
+        "Exact arithmetic and browser rendering must be verified from bytes, not model claims"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-15T03:42:20.278Z",
+      "spec_hash": "4d5eeada6843877f46350cc0c6d14c984a74ac5beda2e7494cf006605d4dfd11",
+      "snapshot": {
+        "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+        "title": "Unseen rescue-shift analytics dashboard",
+        "description": "A previously unseen local data, document and visual-production mission; no task-specific application workflow is supplied.",
+        "objective": "Turn the supplied rescue-shift CSV into independently reproducible analytics and a rendered visual dashboard.",
+        "acceptance_criteria": [
+          "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+          "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+          "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page."
+        ],
+        "specification": {
+          "title": "Unseen rescue-shift analytics dashboard",
+          "objective": "Turn the supplied rescue-shift CSV into independently reproducible analytics and a rendered visual dashboard.",
+          "scope": "Read only /home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/input/rescue-shifts.csv as mission input. Work only inside /home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f. Use ordinary local runtimes and existing tools. Deliver metrics.json, dashboard.html and dashboard.png. Keep the artifact set concise: apart from bounded capability-probe evidence, avoid unnecessary scratch reports, logs and duplicate scripts; put the reproducible calculation method in metrics.json. No package installation, network access, publishing, deployment, purchases or external changes.",
+          "acceptance_criteria": [
+            "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+            "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+            "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page."
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_write",
+            "file_list",
+            "shell",
+            "save_artifact",
+            "render_dashboard"
+          ],
+          "suggested_agents": [
+            "analyst",
+            "coder",
+            "designer",
+            "executor"
+          ],
+          "estimated_complexity": "moderate",
+          "risks": [
+            "Exact arithmetic and browser rendering must be verified from bytes, not model claims"
+          ]
+        }
+      }
+    },
+    "execution_owner": {
+      "owner_id": "39c413eb-8382-44ca-9e59-8fe8d411a186",
+      "pid": 75176,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-15T03:42:20.333Z",
+      "released_at": "2026-11-15T04:02:38.439Z"
+    },
+    "mission_admission": {
+      "version": 1,
+      "mode": "engineering-practice",
+      "missionId": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+      "specHash": "4d5eeada6843877f46350cc0c6d14c984a74ac5beda2e7494cf006605d4dfd11"
+    },
+    "capability_plane": {
+      "outcome": "observed",
+      "attempts": [
+        {
+          "attempt_id": "a1702be9-7081-4262-873f-e75c8bb26236",
+          "capability": "render_dashboard",
+          "observation": {
+            "capability": "render_dashboard",
+            "status": "available",
+            "detail": "render_dashboard is absent from the registered capability list, but the approved capability maps onto the pre-existing local shell procedure /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs (sha256 efc3bcb598eee4bc233bbca95c3a2a4a79b21dcbe207b6bf933a46eafa787291, 3143 bytes, Playwright 1.49.1, headless Chromium, fixed viewport 1280x720, fullPage:false, animations:disabled). The script resolves Chromium from the project-local cache and launches it with --no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu. NOTE: playwright's chromium.executablePath() returns a stale hint (/tmp/home/.cache/ms-playwright/chromium-1148/chrome-linux/chrome) that does NOT exist; the script's own fallback scan of <projectRoot>/.oc-isolated/cache/ms-playwright/chromium-*/{chrome-linux64,chrome-linux}/chrome finds the real binary at /home/nox/awe-group-cleanroom-20261112/.oc-isolated/cache/ms-playwright/chromium-1148/chrome-linux/chrome. Do not substitute browser_screenshot or a bare shell command; invoke this exact procedure so the approved capability is what actually renders. VERIFIED BY PROBE (not documentation): wrote capability-probe.html (sha256 ebe8b01816dc32cc4005e963b734a356acad79a69058f1117a8cbceda2540b3b) in the mission workspace and ran 'node /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs file://<mission>/capability-probe.html <mission>/capability-probe.png'. Exit status 0; stdout JSON reported success:true, title 'render_dashboard capability probe', size_bytes 40505. BYTE-LEVEL PNG VERIFICATION: file size 40505 bytes, sha256 35dc21b97ba26c865187d3f00064e0455854c93c836bf431a57606b77d25958a, magic bytes 89504e470d0a1a0a (valid PNG signature), first chunk IHDR len 13, IHDR width 1280 height 720 => exact 1280x720 true, bit_depth 8, color_type 2 (8-bit RGB, non-interlaced, independently confirmed by file(1): 'PNG image data, 1280 x 720, 8-bit/color RGB, non-interlaced'), IEND present. CONTENT VERIFICATION (zlib inflate + PNG filter reconstruction of all scanlines): 499 distinct colours in a 4px sample grid, mean luma 28.18, 43424 bright pixels (4.712% of frame) confirming rendered text, 13262 green accent pixels confirming the styled cards/bar drew as designed => not a blank page and not a Chromium error page. DETERMINISM: an immediate second render of the same HTML produced a byte-identical PNG (same sha256 35dc21b9...), so output is reproducible for byte-level acceptance checking. Scope respected: no package install, no network, no host configuration change, no publish; probe confined to the mission artifact directory. Caveat for the follow-up plan: the procedure waits on the 'load' event with a 15s timeout, so dashboard.html must be fully self-contained with no external assets (already an acceptance requirement) or the render may capture pre-font/pre-asset state. Probe files capability-probe.html and capability-probe.png are the bounded capability-probe evidence permitted by the specification's 'apart from bounded capability-probe evidence, avoid unnecessary scratch' clause.",
+            "acquired": "/home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs"
+          },
+          "artifact_id": "cc41fd7f-59bc-49f2-bc9b-8668544a21f8",
+          "artifact_sha256": "7d6488433bda7145779f6b23d3ba4ab32d943f479b92193a201d02501735a691",
+          "created_at": "2026-11-15T03:45:44.335Z"
+        }
+      ],
+      "plan_hash": "6e8d1688f01a99003ac27eaca10db7708508953d95a9771b20a959f437a31e63"
+    },
+    "artifact_supersessions": [
+      {
+        "superseded_id": "124489e4-18f3-4493-b9b7-01c1c0560492",
+        "superseded_by": "ee2b8b96-76d6-446e-8cae-0b22c8aba165",
+        "name": "dashboard.html",
+        "superseded_sha256": "b23edc73ae2022c5130398f8f551efcc4ca174004a2984b962f4c002dbb85a8e",
+        "superseded_size_bytes": 11123,
+        "replacement_sha256": "9b0c20106442b2d05479dd943422c7b8f20c39750c758921068f83682e78ad5d",
+        "replacement_size_bytes": 11123,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-15T04:01:59.608Z",
+        "source": "repair",
+        "intent_id": "bc3ac3b7-de7a-4ad5-8f7d-806bd0c2854f",
+        "provenance_id": "1faf4502-9fdc-40d9-80ef-4a53bc718a7f"
+      },
+      {
+        "superseded_id": "d37f8c98-a0e2-4c26-864b-ac54df2e0725",
+        "superseded_by": "2002a253-7dbf-4909-89a8-61d1e5ed367a",
+        "name": "dashboard.png",
+        "superseded_sha256": "ad132c2cee5e689a69ce9ced935c7087a1096e929b4254560d54d1d760d3016c",
+        "superseded_size_bytes": 133960,
+        "replacement_sha256": "34375951b6f345c59bd136dbe79c4bb91b59a02b29cd58c87eb14dfc475a30d9",
+        "replacement_size_bytes": 134004,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-15T04:01:59.609Z",
+        "source": "repair",
+        "intent_id": "bc3ac3b7-de7a-4ad5-8f7d-806bd0c2854f",
+        "provenance_id": "1faf4502-9fdc-40d9-80ef-4a53bc718a7f"
+      }
+    ],
+    "execution": {
+      "delegations": [
+        {
+          "agent_role": "analyst",
+          "status": "success",
+          "model": "deepseek-v4-flash",
+          "tools_used": [
+            "shell",
+            "save_artifact"
+          ],
+          "usage": {
+            "input_tokens": 73026,
+            "output_tokens": 5140,
+            "total_tokens": 78166,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 61184
+          },
+          "duration_ms": 42272
+        },
+        {
+          "agent_role": "designer",
+          "status": "success",
+          "model": "claude-opus-5-5",
+          "tools_used": [
+            "shell",
+            "file_write",
+            "file_read",
+            "save_artifact"
+          ],
+          "usage": {
+            "input_tokens": 354729,
+            "output_tokens": 25293,
+            "total_tokens": 380022,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 269700
+          },
+          "duration_ms": 274655
+        },
+        {
+          "agent_role": "devops",
+          "status": "success",
+          "model": "claude-opus-5-5",
+          "tools_used": [
+            "shell",
+            "save_artifact"
+          ],
+          "usage": {
+            "input_tokens": 283842,
+            "output_tokens": 17509,
+            "total_tokens": 301351,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 246722
+          },
+          "duration_ms": 228655
+        }
+      ],
+      "models_used": [
+        "claude-opus-5-5",
+        "deepseek-v4-flash"
+      ],
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "shell",
+        "save_artifact",
+        "file_write"
+      ],
+      "totals": {
+        "input_tokens": 911967,
+        "output_tokens": 60830,
+        "total_tokens": 972797,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 757310
+      },
+      "qa_score": 9,
+      "qa_passed": true,
+      "repair_iterations": 1
+    },
+    "execution_adaptations": 0,
+    "candidate": {
+      "epoch_id": "c784ea86-25f4-42ae-8c48-2ef7293b7439",
+      "candidate_sha256": "28cd19facfcaca0dec42e9ef2d10b2006634b3fa5ae6858ec487859802b6afae",
+      "repair_iteration": 1,
+      "evidence_path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/candidate-evidence/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/c784ea86-25f4-42ae-8c48-2ef7293b7439.json"
+    },
+    "delegation_tree": {
+      "total_agents": 5,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f:top0",
+          "role": "executor",
+          "task": "Investigate and acquire a reusable way to provide the missing capability 'render_dashboard'. Reason: render_dashboard is listed in specification.suggested_tools and is required by acceptance criterion 3, but it is absent from the registered capability list (browser_click, browser_get_text, browser_navigate, browser_screenshot, browser_type, csv_analytics, file_list, file_read, file_write, manus_search, save_artifact, shell, ti_search, web_extract, web_fetch, web_search). It must be diagnosed before any executable plan. Note for the acquisition step: a local shell procedure exists at /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs (Playwright Chromium, 1280x720), but substituting browser_screenshot/shell for the explicitly approved render_dashboard capability is not permitted without an acquisition decision. Suggested bounded acquisition: one research delegation using only registered tools (ti_search, web_search, file_read, file_list) to determine whether render_dashboard maps onto the existing local render procedure, returning evidence that the 1280x720 PNG is produced and byte-verified. All other elements of the mission (CSV-only input read, work confined to the mission artifact directory, metrics.json keys row_count/scheduled_hours/completed_hours/incidents/completion_percent with districts keyed by district name as JSON numbers, self-contained dashboard.html, no network/install/publish, and byte-level verification of arithmetic and rendering rather than model claims) remain unchanged and will be carried into the follow-up executable plan.. Discover existing local or mature open-source options, evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object; keep commands, hashes and probe evidence in detail. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. For a local renderer, a tiny HTML/PNG probe in the mission workspace is sufficient verification when its exit status, PNG signature and dimensions are checked. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-opus-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "shell",
+            "save_artifact"
+          ],
+          "duration_ms": 182422
+        },
+        {
+          "id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f:top1",
+          "role": "analyst",
+          "task": "Read the mission input CSV /home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/input/rescue-shifts.csv (read-only), inspect its actual header and rows, and compute the exact aggregates. Persist metrics.json in the mission workspace root with exactly these top-level keys: row_count, scheduled_hours, completed_hours, incidents, completion_percent, districts. districts must be a JSON object keyed by district name, each value carrying that district's row count, scheduled_hours, completed_hours, incidents and completion_percent. Every count, hour total and percentage must be emitted as a JSON number (never a string, never quoted digits); completion_percent must be rounded/quantized to 2 decimal places as a number (e.g. 87.34). Include in the same metrics.json a 'method' field (string or object) that states the reproducible calculation recipe: the input path, the parsing rule, row_count = number of data rows, scheduled_hours = sum of the scheduled-hours column, completed_hours = sum of the completed-hours column, incidents = sum of the incidents column, completion_percent = completed_hours / scheduled_hours * 100 rounded to 2 dp, and the district grouping rule; add a 'columns' field mapping which CSV column fed each metric and a 'notes' field for any header normalisation or skipped/malformed rows, naming them explicitly. Cross-check the totals twice with two independent computations (one via python3 csv/json arithmetic, one via awk or sort/uniq aggregation) and confirm both agree to the last decimal before writing. Do not create any additional scripts or report files in the workspace; run the cross-check inline (python3 -c / awk one-liners) so the artifact set stays at metrics.json. Do not modify the CSV. No package installation, no network, no publishing.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "deepseek-v4-flash",
+          "tools_used": [
+            "shell",
+            "save_artifact"
+          ],
+          "duration_ms": 42266
+        },
+        {
+          "id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f:top2",
+          "role": "designer",
+          "task": "Using the actual numbers read back from metrics.json (never re-derive or invent them), author a single self-contained dashboard.html in the mission workspace that visibly presents every metric: row_count, scheduled_hours, completed_hours, incidents, completion_percent, and a per-district comparison covering every district in the districts object with its row count, hour totals, incidents and completion percentage. Requirements: (a) zero external assets — no CDN, no <link> to remote CSS, no remote fonts, no external scripts, no remote images; all CSS inline in a <style> block and any iconography drawn with CSS/SVG/inline unicode data; use only locally-resolved font stacks (system-ui, sans-serif, monospace) so the 'load' event is immediate; (b) layout designed for a 1280x720 headless capture — a fixed-width ~1280px page with a compact header, a KPI card row for the five top-level metrics, and a district comparison table or bar visualisation that fits legibly in one viewport without clipping or scroll-dependent content, base font size >= 14px, sufficient contrast; (c) all percentages formatted to exactly 2 decimal places (e.g. 87.34%) and all hour totals formatted for readability while remaining faithful to the underlying numbers; (d) polished visual treatment — clear hierarchy, consistent spacing, restrained palette, visible labels and units. Then confirm self-containment mechanically: grep the file for 'http://', 'https://', 'src=', '@import' and report that no external reference remains, and validate the HTML parses (e.g. python3 -c with html.parser) so the render cannot land on a Chromium error page. Do not create duplicate or scratch scripts/reports; dashboard.html is the only new file.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-opus-5-5",
+          "tools_used": [
+            "shell",
+            "file_write",
+            "file_read",
+            "save_artifact"
+          ],
+          "duration_ms": 274652
+        },
+        {
+          "id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f:top3",
+          "role": "devops",
+          "task": "Render the finished dashboard.html using the approved render_dashboard capability, realized by the pre-existing approved local procedure — invoke exactly: node /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs \"file:///home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.html\" \"/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.png\". Use that absolute script path verbatim; do not substitute browser_screenshot, a bare chromium call, or any alternate renderer, and do not attempt to install anything. Capture the stdout JSON and exit status. Then verify from bytes, not from the tool's claims: (1) exit status 0 and stdout success:true with the expected outputPath; (2) file exists and size_bytes matches the on-disk size; (3) PNG magic bytes 89504e470d0a1a0a, first-chunk IHDR width 1280 and height 720 exactly (confirm independently with file(1) and/or python3 struct unpack of the IHDR), IEND chunk present; (4) content is real, not a blank or Chromium error page — inflate the IDAT stream, reconstruct scanlines, and report distinct-colour count, mean luma, bright-pixel fraction and accent-colour pixel count, and additionally confirm the rendered title/content is not a Chromium error page (inspect the stdout 'title' field and, if useful, grep the HTML for absence of failure markers); (5) record the PNG sha256 and re-run the identical render once to confirm byte-identical reproducibility. Report all measurements explicitly. If the capture is blank, clipped, illegible or an error page, do not retry blindly: report the concrete byte-level symptom with a specific diagnosis for replanning.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-opus-5-5",
+          "tools_used": [
+            "shell",
+            "save_artifact"
+          ],
+          "duration_ms": 228651
+        },
+        {
+          "id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f:top4",
+          "role": "executor",
+          "task": "Fix the following defects identified by QA without changing the approved scope:\n[MINOR] .probe-rerender.png is byte-identical to capability-probe.png (same sha256 35dc21b9…, same 40505 bytes) and is a duplicate scratch file, slightly against the specification's instruction to keep the artifact set concise apart from bounded capability-probe evidence.\n[MINOR] In dashboard.html the header stamp reads 'metrics.json · sha256 502022dd…', but 502022dd… is the sha256 of input/rescue-shifts.csv; metrics",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-opus-5-5",
+          "duration_ms": 352373
+        }
+      ]
+    },
+    "qa_gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist metrics.json with exact totals, district comparisons, and the reproducible calculation method for the supplied CSV. Use the exact keys row_count, scheduled_hours, completed_hours, incidents, completion_percent (2 decimal places), and districts. districts must be a JSON object keyed by district name. Every count, hour total and percentage in metrics.json must be a JSON number, never a string; format percentages to two decimal places in dashboard.html.",
+          "passed": true,
+          "reason": "metrics.json contains exactly the required top-level keys with numeric values: row_count 6, scheduled_hours 59, completed_hours 53, incidents 9, completion_percent 89.83, and districts as an object keyed North/South/West. I re-derived the arithmetic from the 6-row CSV: scheduled 12+8+10+14+6+9=59, completed 11+8+7+13+5+9=53, incidents 2+1+3+0+2+1=9, 53/59*100=89.8305->89.83; North 22/18/5->81.82, South 14/13/3->92.86, West 23/22/1->95.65 — all correct, all reconcile to global totals. No metric is a quoted string; the only string occurrences are descriptive text inside columns/method/notes documentation, which is appropriate. method block records input path, input sha256, parsing rule, per-formula derivations, district grouping rule, ROUND_HALF_UP rounding and a three-way cross-check (python csv, awk, coreutils) — a genuinely reproducible method. dashboard.html renders every percentage at two decimals (89.83%, 81.82%, 92.86%, 95.65%) and the legend range descriptor that previously read 0-100% was reworded during the design pass."
+        },
+        {
+          "criterion": "Create a polished, self-contained dashboard.html that visibly presents every metric and requires no external assets.",
+          "passed": true,
+          "reason": "dashboard.html (11123 bytes, revision 4) is a single file with inline CSS only: no http(s) reference, no <script>, no <link rel=stylesheet>, no src=, no @import and no url() — gradients are pure CSS colour stops. All five top-level metrics appear (row_count 6, 59 h, 53 h, 9 incidents, 89.83% with a proportional track) plus a district table showing shifts, scheduled, completed, incidents and completion % per district with bars, and a totals row that reconciles 2+2+2=6, 14+23+22=59, 13+22+18=53, 3+1+5=9. Layout is fixed at a 1280x720 canvas with a layered header/KPI/panel/footer structure, so it is polished rather than a raw data dump."
+        },
+        {
+          "criterion": "Use the approved render_dashboard capability to render dashboard.html in Chromium and save dashboard.png at exactly 1280x720, with legible content and no browser error page.",
+          "passed": true,
+          "reason": "The approved procedure /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs (sha256 efc3bcb5…, matching the recorded acquisition) was invoked with verbatim absolute paths and no substitution; the capability-observation.json documents a probe-verified run rather than documentation-only claims. Geometry was verified from IHDR bytes (struct.unpack -> 1280 x 720, bit depth 8, colour type 2, IEND present, IDAT inflate = 720*3841 exactly) and independently by file(1). Content was verified by full PNG filter reversal: 6038 distinct colours, mean luma 34.42, 28911 bright pixels (3.137%) spread across 11 structured bands, 9773 accent-green pixels, zero bright pixels in the 8px edge strips (no clipping) — a rendered dark dashboard, not a uniform Chromium error screen; stdout title is the dashboard's own with no error markers. After the repair stamp correction the file was re-rendered to dashboard.png sha256 34375951… (134004 bytes), and the repair pass reports the re-render as byte-identical across two attempts at the same 1280x720 geometry."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": true
+    }
+  },
+  "_rev": 9
+}

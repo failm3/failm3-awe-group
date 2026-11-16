@@ -1,0 +1,8 @@
+PROGRAM: Northstar service reliability pilot
+WINDOW: 2026-01-05 through 2026-01-30 (four operating weeks)
+SITES: Alder, Brook, Cove; the Depot trial is explicitly excluded.
+OWNER: Service Operations
+BASELINE: 120 requests per site-week; manual acknowledgement median 18 minutes.
+PILOT: routed acknowledgement median 11 minutes; acknowledgement uses receipt timestamps.
+CHANGE: routing runbook version 2 replaced version 1 on 2026-01-12.
+LIMIT: observations cover weekdays only; no weekend or Depot conclusion is supported.

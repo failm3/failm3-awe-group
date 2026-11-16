@@ -1,0 +1,27 @@
+ .gitignore                                |    1 +
+ README.md                                 |   43 +-
+ package.json                              |    3 +-
+ src/agents/head-agent.ts                  |   36 +-
+ src/agents/lifecycle.ts                   |  855 ++++++++-
+ src/agents/mission-manager.ts             | 2926 +++++++++++++++++++++++++----
+ src/agents/qa-agent.ts                    |   76 +-
+ src/agents/qa-gate.ts                     |   16 +
+ src/agents/recursion.ts                   |  435 ++++-
+ src/agents/specialists.ts                 |  134 +-
+ src/api/server.ts                         |  438 ++++-
+ src/cli/index.ts                          |   51 +-
+ src/config/mcp.ts                         |  130 +-
+ src/config/models.ts                      |    5 +-
+ src/index.ts                              |  686 ++++---
+ src/memory/index.ts                       |   11 +-
+ src/run-targeted-repair.ts                |  117 +-
+ src/tests/artifact-reconciliation.test.ts |    1 +
+ src/tests/lifecycle-recovery.test.ts      |    2 +-
+ src/tests/stage1-integration.test.ts      |   18 +-
+ src/tools/browser.ts                      |  209 ++-
+ src/tools/index.ts                        |  797 +++++---
+ src/tools/manus-search.ts                 |    4 +-
+ src/tools/ti-search.ts                    |    4 +-
+ src/types/index.ts                        |   17 +-
+ src/utils/storage.ts                      |  441 ++++-
+ 26 files changed, 6170 insertions(+), 1286 deletions(-)

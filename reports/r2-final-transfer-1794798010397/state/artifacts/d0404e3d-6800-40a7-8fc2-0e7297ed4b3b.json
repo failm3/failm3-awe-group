@@ -1,0 +1,14 @@
+{
+  "id": "d0404e3d-6800-40a7-8fc2-0e7297ed4b3b",
+  "mission_id": "r2-final-transfer-1794798010397-t01-on",
+  "type": "file",
+  "name": "visible-test-run.log",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t01-on/visible-test-run.log",
+  "created_at": "2026-11-16T03:13:37.840Z",
+  "metadata": {
+    "size_bytes": 20,
+    "sha256": "12ede1b2f9a12ac1c8b36ee64ba40f69727ec3a997a9705fe74061ccc253ea01",
+    "reconciled": true,
+    "revision": 1
+  }
+}

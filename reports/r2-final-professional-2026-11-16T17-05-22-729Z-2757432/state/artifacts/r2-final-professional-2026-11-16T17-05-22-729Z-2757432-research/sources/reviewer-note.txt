@@ -1,0 +1,6 @@
+INDEPENDENT REVIEW NOTE: Operations Quality, 2026-02-03
+The 180 sampled records reconcile to the weekly observation totals.
+Alder has the smallest delayed-acknowledgement count and the fewest escalations.
+Recommendation: extend Alder routing practices to Brook and Cove for two weeks.
+Decision gate: repeat measurement before any wider rollout.
+Caution: this pilot cannot establish weekend performance or Depot outcomes.

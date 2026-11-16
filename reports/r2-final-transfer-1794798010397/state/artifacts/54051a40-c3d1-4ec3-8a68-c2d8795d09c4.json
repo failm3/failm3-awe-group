@@ -1,0 +1,14 @@
+{
+  "id": "54051a40-c3d1-4ec3-8a68-c2d8795d09c4",
+  "mission_id": "r2-final-transfer-1794798010397-source",
+  "type": "data",
+  "name": "independent-verification.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-source/independent-verification.json",
+  "content": "{\"independent\":true,\"passed\":true,\"cases\":8,\"evidence\":[\"independent-host-tests-v1\"],\"source_artifact_id\":\"efa723a2-1979-4526-99e0-1629bee68fd5\",\"source_artifact_sha256\":\"9ed9905fa6a1fc512e84012c034bcd2bff24ef60e9ec65ed790d5bf8fae91b4f\",\"verifier_sha256\":\"02e7e0c668b82dbc898a2bb2c58675b4d30f1bad62049703a59c0ed25efb3b78\"}",
+  "created_at": "2026-11-16T03:00:12.258Z",
+  "metadata": {
+    "size_bytes": 322,
+    "sha256": "c445e5570c6b1beae81a9aa84bacc387c59aca5de6d4182809e25b655eae669b",
+    "revision": 1
+  }
+}

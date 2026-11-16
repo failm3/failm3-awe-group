@@ -1,0 +1,51 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics",
+  "saved_at": "2026-11-16T17:08:16.270Z",
+  "total_agents": 2,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics:top0",
+      "role": "analyst",
+      "started_at": "2026-11-16T17:05:58.354Z",
+      "task": "List and read input/operations.csv (18 data rows, three teams: Atlas, Birch, Cedar) using file_read/file_list only, then compute the operations metrics twice through two independent calculation passes (once by summing per-row columns, once by summing per-team subtotals and checking the team subtotals add to the overall totals). Persist the result as metrics.json with save_artifact/file_write.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "a59827ca-052e-43a2-b9ac-af23f0a7f579",
+        "c42b6bbc-2a14-4f4a-aedc-dc47b89cae9e"
+      ],
+      "duration_ms": 61671,
+      "finished_at": "2026-11-16T17:07:00.021Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics:top1",
+      "role": "writer",
+      "started_at": "2026-11-16T17:07:00.034Z",
+      "task": "Read the persisted metrics.json and input/operations.csv with file_read, then author operations-brief.md and persist it with file_write/save_artifact. Include a concise executive recommendation first, then overall findings and per-team findings for completion percent, defects and schedule variance, then a Method section.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_write",
+        "file_list"
+      ],
+      "artifacts": [
+        "4ec8eec0-73b4-40fe-b509-d20e6a838910"
+      ],
+      "duration_ms": 76239,
+      "finished_at": "2026-11-16T17:08:16.270Z"
+    }
+  ]
+}

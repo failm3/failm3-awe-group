@@ -1,0 +1,61 @@
+{
+  "row_count": 6,
+  "scheduled_hours": 59,
+  "completed_hours": 53,
+  "incidents": 9,
+  "completion_percent": 89.83,
+  "districts": {
+    "North": {
+      "row_count": 2,
+      "scheduled_hours": 22,
+      "completed_hours": 18,
+      "incidents": 5,
+      "completion_percent": 81.82
+    },
+    "South": {
+      "row_count": 2,
+      "scheduled_hours": 14,
+      "completed_hours": 13,
+      "incidents": 3,
+      "completion_percent": 92.86
+    },
+    "West": {
+      "row_count": 2,
+      "scheduled_hours": 23,
+      "completed_hours": 22,
+      "incidents": 1,
+      "completion_percent": 95.65
+    }
+  },
+  "columns": {
+    "row_count": "count of data rows (one per shift_id), i.e. every CSV line after the header",
+    "scheduled_hours": "scheduled_hours (column 4, integer hours)",
+    "completed_hours": "completed_hours (column 5, integer hours)",
+    "incidents": "incidents (column 6, integer count)",
+    "completion_percent": "derived: completed_hours / scheduled_hours * 100",
+    "districts": "district (column 2) used as the grouping key"
+  },
+  "method": {
+    "input_path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/input/rescue-shifts.csv",
+    "input_sha256": "502022dd7e1166df8d709461c3ca81dfe5c8c59e79ea4e23e37aac69966e5181",
+    "input_bytes": 209,
+    "encoding": "ASCII, UTF-8 compatible, LF line endings, comma delimiter, no quoted fields, no BOM",
+    "header": "shift_id,district,team,scheduled_hours,completed_hours,incidents",
+    "parsing_rule": "Parse as RFC4180 CSV with a comma delimiter. Line 1 is the header and is discarded. Each subsequent non-empty line is one data row; fields are taken positionally (1=shift_id, 2=district, 3=team, 4=scheduled_hours, 5=completed_hours, 6=incidents). Numeric fields are parsed as integers; district and team as trimmed strings.",
+    "row_count": "Number of data rows (total lines minus the 1 header line) = 6.",
+    "scheduled_hours": "Arithmetic sum of the scheduled_hours column over all data rows = 12+8+10+14+6+9 = 59.",
+    "completed_hours": "Arithmetic sum of the completed_hours column over all data rows = 11+8+7+13+5+9 = 53.",
+    "incidents": "Arithmetic sum of the incidents column over all data rows = 2+1+3+0+2+1 = 9.",
+    "completion_percent": "completed_hours / scheduled_hours * 100 = 53 / 59 * 100 = 89.83050847457627..., rounded half-up to 2 decimal places = 89.83.",
+    "district_grouping_rule": "Group data rows by exact value of the district column (case-sensitive string). For each district emit row_count (number of rows in that group), scheduled_hours, completed_hours and incidents as ordinary sums within the group, and completion_percent = group completed_hours / group scheduled_hours * 100 rounded half-up to 2 decimal places. Districts are serialised as a JSON object keyed by district name; group totals sum exactly to the global totals (rows 2+2+2=6, scheduled 22+14+23=59, completed 18+13+22=53, incidents 5+3+1=9).",
+    "rounding": "Percentages rounded half-up (ROUND_HALF_UP via Python decimal.Decimal.quantize('0.01')) and emitted as JSON numbers with at most 2 decimal places; counts and hours are integers.",
+    "cross_check": "Computed three independent ways and compared to the last decimal, all in agreement: (A) python3 csv.DictReader + integer sums + decimal quantize; (B) awk -F, single-pass accumulation with associative arrays per district; (C) coreutils sort/uniq -c for district row counts plus cut|paste|bc column sums. A=(6,59,53,9,89.83), B=(6,59,53,9,89.83), C=(6 rows, 59, 53, 9) with district counts North 2 / South 2 / West 2."
+  },
+  "notes": [
+    "Header normalisation: none required. The header line 'shift_id,district,team,scheduled_hours,completed_hours,incidents' matched the expected column names exactly, with no BOM, no surrounding whitespace, no quoting and no case variation. Columns were mapped by name, with positional indices recorded above.",
+    "Trailing newline: the file ends with a single LF after the last data row; the resulting empty final element was ignored and is not counted as a data row (otherwise row_count would be 7).",
+    "Skipped malformed rows: none. Zero rows were skipped and zero rows were malformed; every one of the 6 data rows had exactly 6 fields with integer-valued scheduled_hours, completed_hours and incidents, so no row was excluded and no value was imputed or coerced.",
+    "No other cleaning, filtering, de-duplication or outlier removal was applied. Team (column 3) is present in the source but carries no required metric and is not aggregated.",
+    "The input CSV was opened read-only and was not modified; its sha256 is recorded in method.input_sha256 for reproduction."
+  ]
+}

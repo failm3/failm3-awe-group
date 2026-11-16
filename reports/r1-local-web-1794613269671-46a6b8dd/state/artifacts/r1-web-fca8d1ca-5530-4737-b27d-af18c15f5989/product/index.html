@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task tracker</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main class="container">
+  <h1>Task tracker</h1>
+
+  <form id="task-form" class="task-form" novalidate>
+    <label for="new-task">New task</label>
+    <input id="new-task" type="text" autocomplete="off">
+    <button type="submit">Add task</button>
+  </form>
+
+  <div class="filter-row">
+    <label for="filter">Filter tasks</label>
+    <select id="filter">
+      <option value="all">all</option>
+      <option value="active">active</option>
+      <option value="completed">completed</option>
+    </select>
+  </div>
+
+  <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+</main>
+</body>
+</html>

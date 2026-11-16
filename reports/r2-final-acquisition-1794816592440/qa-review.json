@@ -1,0 +1,68 @@
+{
+  "passed": false,
+  "score": 6,
+  "criteria_results": [
+    {
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "passed": true,
+      "notes": "observation.json names observation-digest-v1 as the missing capability, records exactly one bounded acquisition (a single stdlib-only source at procedures/observation_digest_v1.py, sha256 8d0636f7...3b275, size 10798) and documents a replan onto that local procedure. Qualification is real rather than model-asserted: the procedure was executed into probes/probe-run-1 and probes/probe-run-2, producing byte-identical outputs (both digest.json sha256 8ac8593f...4e824, both digest.md sha256 c0157cb3...83b1), and the figures were cross-checked by an independent awk pass over the raw fixture. I reproduced the arithmetic from the fixture myself and the claimed qualification values are correct."
+    },
+    {
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "passed": false,
+      "notes": "Only partly met. The executable bytes are pinned (sha256 in observation.json matches the registered procedure artifact) and the input-side fixed argument is exact, but the specification requires the second fixed argument to be exactly the artifact root as output directory and forbids using a probe output directory as the final args output. Every recorded invocation used probes/probe-run-1 or probes/probe-run-2 as argv[2], and observation.json itself states 'Nothing was executed against the final output directory during acquisition' with no later root-level invocation evidenced. So the procedure was never run with the mandated fixed argument pair. There is also no standalone durable invocation receipt artifact (command line, argv, binary hash, exit code, stdout/stderr, output hashes); the invocation is only narrated as prose inside observation.json, which is a model-authored observation of a run, not a receipt of that run."
+    },
+    {
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "passed": true,
+      "notes": "Verified independently against input/pilot.observations.json: 3 rows, scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30=86.666...=86.67. North: 2 rows, 22 scheduled, 18 completed, 5 incidents, 18/22=81.818...=81.82. South: 1 row, 8/8/1, 100.00. digest.json carries these as numeric values with a sites object keyed by site and per-site totals, and the per-site sums reconcile to the grand totals. digest.md reproduces every figure and states the reproducible method (exact Decimal summation of Decimal(str(value)), ROUND_HALF_UP to two decimals, 0.0 when scheduled is 0, sorted site keys, deterministic rewrite). The procedure source implements exactly that, so the method is genuinely reproducible. Caveat: South's completion_percent serialises as 100.0 in JSON while the markdown shows 100.00 - numerically identical and within two-decimal precision, so not failing, but noted below."
+    },
+    {
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "passed": false,
+      "notes": "The required final deliverables are missing from the candidate artifact set. digest.json and digest.md exist only under probes/probe-run-1 and probes/probe-run-2; there is no digest.json or digest.md at the fixed-args output directory (the artifact root) and no such artifact is registered. The probe copies are correctly registered with matching sha256s and I re-verified their content byte-for-byte against my own computation, but a probe directory is explicitly disallowed as the final args output, so the mission's operative deliverables were never produced or registered. registration plus host byte verification therefore cannot be established for the deliverables the specification asks for."
+    }
+  ],
+  "defects": [
+    {
+      "issue": "The final digest was never produced at the specification-mandated output directory: no root-level digest.json or digest.md exists or is registered. All outputs live in probes/probe-run-1 and probes/probe-run-2, which the specification explicitly forbids as the final args output.",
+      "severity": "critical"
+    },
+    {
+      "issue": "The procedure was never invoked with the exact fixed argument pair [input/pilot.observations.json, <artifact root>]; every recorded run substituted a probe directory as argv[2], so the fixed-args invocation required by criterion 2 did not occur.",
+      "severity": "major"
+    },
+    {
+      "issue": "No durable invocation receipt artifact. The invocation is only described in prose inside observation.json; there is no machine-checkable record binding the executable hash, exact argv, exit status, captured stderr totals line and output hashes to a specific run.",
+      "severity": "major"
+    },
+    {
+      "issue": "South's completion_percent serialises as 100.0 rather than 100.00 in digest.json, weakening the literal two-decimal presentation (the markdown does render 100.00).",
+      "severity": "minor"
+    },
+    {
+      "issue": "digest.md's reproducible command line shows a literal '<outdir>' placeholder instead of the concrete fixed second argument, so the documented method is not directly replayable as written.",
+      "severity": "minor"
+    },
+    {
+      "issue": "FAIL: Delegation references a missing/unqualified capability attempt or omits shell: 9550605c-b361-4a19-8a5a-f95c1b9a4f5a",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    }
+  ],
+  "recommendations": [
+    "Re-run the qualified procedure with the exact fixed arguments, i.e. python3 procedures/observation_digest_v1.py <...>/input/pilot.observations.json <...>/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae, writing digest.json and digest.md at the artifact root, and register both as artifacts.",
+    "Emit a dedicated invocation receipt artifact (JSON) capturing the procedure sha256, exact argv list, working directory, exit code, the stderr totals line, and the sha256 of each produced file; keep the probe runs only as subordinate qualification evidence.",
+    "Normalize completion_percent to a fixed two-decimal rendering in digest.json (or document that numeric JSON values are exact to two decimals) so 100.0 vs 100.00 is not ambiguous.",
+    "In digest.md, substitute the concrete output directory into the reproduction command instead of '<outdir>'.",
+    "Keep the existing exactness work and negative-case tests (exit 4 on malformed JSON and missing field, exit 2 on wrong arity) - those are solid and worth preserving."
+  ],
+  "verdict": "FAIL: Execution plan contains no delegations"
+}

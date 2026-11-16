@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "46c70347-418d-4e7d-9703-0b2d7ff86a43",
+  "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+  "role": "researcher",
+  "model": "claude-sonnet-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T20:23:16.711Z",
+  "finished_at": "2026-11-16T20:24:09.221Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 40092,
+    "output_tokens": 6756,
+    "total_tokens": 46848,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 15464
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

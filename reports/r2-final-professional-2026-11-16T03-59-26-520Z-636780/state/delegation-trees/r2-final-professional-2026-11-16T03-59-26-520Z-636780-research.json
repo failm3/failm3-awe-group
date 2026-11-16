@@ -1,0 +1,135 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+  "saved_at": "2026-11-16T04:04:13.303Z",
+  "total_agents": 6,
+  "max_depth": 1,
+  "nodes": [
+    {
+      "id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T04:00:13.854Z",
+      "task": "Act as the single top-level research-coordinator for mission r2-final-professional-2026-11-16T03-59-26-520Z-636780-research. Step 1: list and read ONLY sources/pilot-charter.txt [S1], sources/weekly-observations.txt [S2] and sources/reviewer-note.txt [S3] inside the workspace, and record their exact byte-level read-only status (do not modify, rewrite, normalize or delete them). Step 2: in ONE delegate call with two entries marked parallel, launch exactly two distinct children: (a) 'alder-source-analysis' owning the Alder site evidence, (b) 'brook-cove-source-analysis' owning the Brook and Cove site evidence. Do not launch a third child and do not serialize them. Step 3: after both children return, read their persisted artifacts evidence-alder.md and evidence-brook-cove.md from the workspace and synthesize research-brief.md yourself: executive recommendation first, then separate 'Factual findings' and 'Limitations' sections, then a 'Sources' section mapping S1->sources/pilot-charter.txt, S2->sources/weekly-observations.txt, S3->sources/reviewer-note.txt. Every substantive factual or numerical claim must carry an inline citation in the exact form [S1], [S2] or [S3] - no other citation style, no invented sources, no uncited figures. Required numeric anchors, each cited: three site totals of 480 requests each; delayed acknowledgements 31 (Alder), 43 (Brook), 37 (Cove); acknowledgement median improving from 18 to 11 minutes. Bound every conclusion explicitly to weekday pilot sites Alder, Brook and Cove; exclude weekend and Depot generalization; do not assert or imply a completed wider rollout. Attribute the two child evidence notes as retained artifacts in the brief. Step 4: persist research-brief.md with save_artifact. Scope and exclusions binding on you and on every child you launch: work only under /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T03-59-26-520Z-636780/state/artifacts/r2-final-professional-2026-11-16T03-59-26-520Z-636780-research; reads limited to the three named source files; writes limited to evidence-alder.md, evidence-brook-cove.md and research-brief.md; no web, network, browser, packages, installs, external actions, publication, deployment, credentials, other files or paths outside the workspace; use no experience records. Risks to control: citation drift and unsupported extrapolation are automatic failures, and the two-child parallel recursion must genuinely occur in the delegation tree rather than being described in prose.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [
+        "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:d1n1",
+        "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:d1n2"
+      ],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_list",
+        "delegate",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "eea67f9b-c4a2-4de0-b9dd-051df7241714"
+      ],
+      "duration_ms": 115673,
+      "finished_at": "2026-11-16T04:02:09.519Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:d1n1",
+      "role": "alder-source-analysis",
+      "task": "Own the Alder site evidence only. Read sources/pilot-charter.txt [S1], sources/weekly-observations.txt [S2] and sources/reviewer-note.txt [S3] from the workspace (read-only), then write a bounded evidence note to the workspace file evidence-alder.md.\n\nScope of your note: Alder (480 requests, 31 delayed acknowledgements, 2 supervisor escalations [S2]) plus the programme-level context from [S1] needed to read Alder correctly (four operating weeks 2026-01-05 to 2026-01-30, 120 requests per site-week, manual acknowledgement median 18 minutes vs routed 11 minutes, runbook v2 replacing v1 on 2026-01-12, weekday-only limit, Depot excluded [S1]). Cover the independent review facts that bear on Alder: the 180 sampled records reconcile to the weekly observation totals, and Alder has the smallest delayed-acknowledgement count and the fewest escalations [S3]; the 60-records-per-site sampling and the >15-minute delay definition [S2]; the reviewer's recommendation to extend Alder routing practices to Brook and Cove for two weeks and the repeat-measurement decision gate [S3].\n\nDo NOT analyse Brook or Cove per-site figures beyond what is required to justify Alder being the lowest; those belong to the other child.\n\nWrite evidence-alder.md with: a one-line scope statement naming it as a bounded child evidence note for Alder; a 'Site facts' section; a 'Programme context' section; a 'Review signals' section; and a short 'Bounds' section stating that nothing here supports weekend or Depot conclusions [S1][S3] and that no wider rollout is established [S3]. Inline [S1]/[S2]/[S3] citation on every substantive claim. Save it with save_artifact or file_write using mission_id=\"r2-final-professional-2026-11-16T03-59-26-520Z-636780-research\".",
+      "depth": 1,
+      "parent_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top0",
+      "status": "success",
+      "started_at": "2026-11-16T04:00:54.992Z",
+      "parallel_group_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:pg1-2",
+      "children": [],
+      "model": "deepseek-v4-flash",
+      "tools_used": [
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "de86ebfe-eed9-40d7-9d44-53a389a5d291"
+      ],
+      "finished_at": "2026-11-16T04:01:13.342Z",
+      "duration_ms": 18340
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:d1n2",
+      "role": "brook-cove-source-analysis",
+      "task": "Own the Brook and Cove site evidence only. Read sources/pilot-charter.txt [S1], sources/weekly-observations.txt [S2] and sources/reviewer-note.txt [S3] from the workspace (read-only), then write a bounded evidence note to the workspace file evidence-brook-cove.md.\n\nScope of your note: Brook (480 requests, 43 delayed acknowledgements, 4 supervisor escalations [S2]) and Cove (480 requests, 37 delayed acknowledgements, 3 supervisor escalations [S2]), plus the programme-level context from [S1] needed to read them correctly (four operating weeks 2026-01-05 to 2026-01-30, 120 requests per site-week, manual acknowledgement median 18 minutes vs routed 11 minutes, runbook v2 replacing v1 on 2026-01-12, weekday-only limit, Depot excluded [S1]). Include the shared measurement definitions: delay means elapsed acknowledgement time greater than 15 minutes measured after routing [S2]; one independent reviewer sampled 60 acknowledgement records per site [S2]; the 180 sampled records reconcile to the weekly observation totals [S3]. Include the reviewer's recommendation to extend Alder routing practices to Brook and Cove for two weeks and the repeat-measurement decision gate before any wider rollout [S3].\n\nCompare Brook and Cove against each other by delayed-acknowledgement count and escalation count using only the cited figures. Do NOT re-derive Alder as a per-site owner; you may reference Alder once as the comparison point the reviewer names [S3].\n\nIf you compute anything (for example the Brook-minus-Cove difference, or a per-site-week request rate), label it explicitly as a derived computation from the cited inputs and cite those inputs. Do not present derived arithmetic as a sourced figure.\n\nWrite evidence-brook-cove.md with: a one-line scope statement naming it as a bounded child evidence note for Brook and Cove; a 'Site facts' section covering both sites; a 'Measurement definitions' section; a 'Review signals' section; and a short 'Bounds' section stating that nothing here supports weekend or Depot conclusions [S1][S3] and that no wider rollout is established [S3]. Inline [S1]/[S2]/[S3] citation on every substantive claim. Save it with save_artifact or file_write using mission_id=\"r2-final-professional-2026-11-16T03-59-26-520Z-636780-research\".",
+      "depth": 1,
+      "parent_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top0",
+      "status": "success",
+      "started_at": "2026-11-16T04:00:54.992Z",
+      "parallel_group_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:pg1-2",
+      "children": [],
+      "model": "deepseek-v4-flash",
+      "tools_used": [
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "82d2bfb0-bd73-4575-888b-fd15d661c691"
+      ],
+      "finished_at": "2026-11-16T04:01:11.682Z",
+      "duration_ms": 16678
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top3",
+      "role": "researcher",
+      "started_at": "2026-11-16T04:02:09.537Z",
+      "task": "Child 'alder-source-analysis'. Read only sources/pilot-charter.txt [S1] and sources/weekly-observations.txt [S2] in the mission workspace. Extract the Alder-specific evidence: the 480-request site total, the 31 delayed acknowledgements, any acknowledgement-latency or median observations attributable to Alder, the pilot's declared site and weekday scoping, and the reviewer-facing caveats that constrain interpretation. Produce a bounded evidence note containing only sourced statements, each tagged with [S1] or [S2] in that exact form, with clearly separated 'Facts' and 'Limitations/Do-not-infer' sections. Persist it exactly as evidence-alder.md with save_artifact. Do not read sources/reviewer-note.txt as your own input and do not draft or write research-brief.md; that synthesis belongs to the coordinator. Exclusions: no web, network, browser, packages, shell installs, external actions, publication, deployment, credentials, experience records, or any path outside the mission workspace; the source files must stay byte-identical. Never state or imply weekend-site, Depot or completed-wider-rollout conclusions.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "save_artifact",
+        "file_list"
+      ],
+      "artifacts": [
+        "8f000638-f100-4e7b-bd4d-c6545e9011f1"
+      ],
+      "duration_ms": 51199,
+      "finished_at": "2026-11-16T04:03:00.729Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top4",
+      "role": "researcher",
+      "started_at": "2026-11-16T04:02:09.551Z",
+      "task": "Child 'brook-cove-source-analysis'. Read only sources/weekly-observations.txt [S2] and sources/reviewer-note.txt [S3] in the mission workspace. Extract the Brook and Cove evidence: their 480-request site totals, the 43 (Brook) and 37 (Cove) delayed acknowledgements, acknowledgement-latency observations including the median change from 18 to 11 minutes, and the reviewer note's methodological constraints and caveats. Produce a bounded evidence note containing only sourced statements, each tagged [S2] or [S3] in that exact form, with clearly separated 'Facts' and 'Limitations/Do-not-infer' sections. Persist it exactly as evidence-brook-cove.md with save_artifact. Do not read sources/pilot-charter.txt as your own input and do not draft or write research-brief.md; that synthesis belongs to the coordinator. Exclusions: no web, network, browser, packages, shell installs, external actions, publication, deployment, credentials, experience records, or any path outside the mission workspace; the source files must stay byte-identical. Never state or imply weekend-site, Depot or completed-wider-rollout conclusions.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "1962d5ca-9566-462a-a9d2-5524794e44ad"
+      ],
+      "duration_ms": 55302,
+      "finished_at": "2026-11-16T04:03:04.847Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research:top5",
+      "role": "analyst",
+      "started_at": "2026-11-16T04:03:04.863Z",
+      "task": "Read-only conformance check of the persisted artifacts in the mission workspace: research-brief.md, evidence-alder.md and evidence-brook-cove.md. Verify and report, item by item: (1) every inline citation uses exactly the bracketed form [S1], [S2] or [S3] with no other citation styles and no source outside the three mapped files; (2) the Sources section maps S1->sources/pilot-charter.txt, S2->sources/weekly-observations.txt, S3->sources/reviewer-note.txt; (3) the brief states the three 480-request site totals, the 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change, each with a supporting citation; (4) the brief separates an executive recommendation, factual findings and limitations; (5) the brief bounds conclusions to weekday pilot sites Alder, Brook and Cove and excludes weekend and Depot generalization without claiming a completed wider rollout; (6) the two child evidence notes exist and are attributed in the brief. Report each finding as PASS or DEFECT with the exact offending sentence or missing element, and state whether the source files appear unmodified in size and content. Do not edit, rewrite or create any file, and do not add citations or content of your own; the coordinator's brief stands as written. Exclusions: no web, network, browser, packages, shell installs, external actions, publication, deployment, credentials, experience records, or any path outside the mission workspace.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "failed",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read"
+      ],
+      "artifacts": [],
+      "duration_ms": 68444,
+      "finished_at": "2026-11-16T04:04:13.303Z",
+      "note": "Delegation produced no newly registered artifact"
+    }
+  ]
+}

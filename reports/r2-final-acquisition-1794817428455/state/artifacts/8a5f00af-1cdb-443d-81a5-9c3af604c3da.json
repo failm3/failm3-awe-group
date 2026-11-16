@@ -1,0 +1,14 @@
+{
+  "id": "8a5f00af-1cdb-443d-81a5-9c3af604c3da",
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "type": "json",
+  "name": "input/pilot.observations.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/input/pilot.observations.json",
+  "created_at": "2026-11-16T08:24:47.465Z",
+  "metadata": {
+    "size_bytes": 474,
+    "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,6 @@
+f42423324a119a5844fa881414f7ebedbaa799a80ac4968b67cc7088d4076f41  src/memory/experience.ts
+4009e5611bafe0cbd0fa55bdf0406f67b7644356234954dcf53f4083ef288e76  src/agents/specialists.ts
+ab83a4b73dfed3e0b1ad1b487a62d0d3c7a505bc50a2b3b12164f6703dfe4e87  src/agents/mission-manager.ts
+1fe8fb3a637f660bd041dec20e84a7ac6f9f36d0dcbf349c6ccf9abcef0a6c5e  src/agents/r0-runtime-compat.ts
+bb5fef5c6b1b654c1bafd02465bb416ac42a6c636e5d7274667f87e6e76741e5  src/tests/r2-verified-experience.test.ts
+3ad72e9601c8d637d7f0336e8824d0610cbe66c1cf87ea11e0bccf749c0e8109  scripts/r2-memory-transfer.ts

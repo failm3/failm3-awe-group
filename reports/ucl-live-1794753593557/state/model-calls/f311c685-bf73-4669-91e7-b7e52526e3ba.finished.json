@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "f311c685-bf73-4669-91e7-b7e52526e3ba",
+  "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+  "role": "qa-agent",
+  "model": "claude-opus-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-15T14:40:49.771Z",
+  "finished_at": "2026-11-15T14:41:10.859Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 7535,
+    "output_tokens": 2385,
+    "total_tokens": 9920,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 713
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "title": "Unknown observation-digest mission",
+  "description": "Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.",
+  "objective": "Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.",
+  "acceptance_criteria": [
+    "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+    "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+    "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+    "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA."
+  ],
+  "status": "paused",
+  "priority": "normal",
+  "created_at": "2026-11-16T06:34:33.176Z",
+  "updated_at": "2026-11-16T07:04:33.244Z",
+  "artifacts": [],
+  "metadata": {
+    "specification": {
+      "title": "Unknown observation-digest mission",
+      "objective": "Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.",
+      "scope": "Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d. Read /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json. The required new capability is observation-digest-v1: it must independently read the JSON observation fixture, compute exact row/site totals and completion percentage, and persist digest.json and digest.md. A proposed local procedure source must have a stable path below /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d; its fixed args must be exactly [/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json, /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d]. Do not use a probe output directory as the final args output. No packages, network, publishing, deployment, purchases or external changes.",
+      "acceptance_criteria": [
+        "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+        "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+        "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+        "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA."
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_write",
+        "file_list",
+        "shell",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "researcher",
+        "executor",
+        "analyst",
+        "coder"
+      ],
+      "estimated_complexity": "moderate",
+      "risks": [
+        "A model-authored observation is not qualification",
+        "Visible examples do not replace independent arithmetic verification"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-16T06:34:33.181Z",
+      "spec_hash": "38749657649bc8c09508bca77cab6f8cfee2a41c9880bc0ad08a3e19d0efbeef",
+      "snapshot": {
+        "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+        "title": "Unknown observation-digest mission",
+        "description": "Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.",
+        "objective": "Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.",
+        "acceptance_criteria": [
+          "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA."
+        ],
+        "specification": {
+          "title": "Unknown observation-digest mission",
+          "objective": "Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.",
+          "scope": "Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d. Read /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json. The required new capability is observation-digest-v1: it must independently read the JSON observation fixture, compute exact row/site totals and completion percentage, and persist digest.json and digest.md. A proposed local procedure source must have a stable path below /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d; its fixed args must be exactly [/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json, /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d]. Do not use a probe output directory as the final args output. No packages, network, publishing, deployment, purchases or external changes.",
+          "acceptance_criteria": [
+            "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+            "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+            "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+            "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA."
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_write",
+            "file_list",
+            "shell",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "researcher",
+            "executor",
+            "analyst",
+            "coder"
+          ],
+          "estimated_complexity": "moderate",
+          "risks": [
+            "A model-authored observation is not qualification",
+            "Visible examples do not replace independent arithmetic verification"
+          ]
+        }
+      }
+    },
+    "execution_owner": {
+      "owner_id": "67a4960c-7f2d-4ef4-9149-d81d575ff997",
+      "pid": 1072063,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-16T06:34:33.195Z",
+      "released_at": "2026-11-16T07:04:33.244Z"
+    },
+    "mission_admission": {
+      "version": 1,
+      "mode": "engineering-practice",
+      "missionId": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "specHash": "38749657649bc8c09508bca77cab6f8cfee2a41c9880bc0ad08a3e19d0efbeef"
+    },
+    "capability_plane": {
+      "outcome": "observed",
+      "attempts": [
+        {
+          "attempt_id": "ef05d5a7-86bd-4978-b834-152c37b98f88",
+          "capability": "observation-digest-v1",
+          "observation": {
+            "capability": "observation-digest-v1",
+            "status": "available",
+            "detail": "No registered tool or existing local procedure provides observation-digest-v1, and no network or package source was used. A dependency-free Node stdlib procedure (8837 bytes) was derived at the stable path below. It reads the observations JSON, validates non-negative integer fields, sums rows and sites, computes completion_percent with exact integer half-up rounding to 2 decimals, and writes digest.json and digest.md into the output root. Probe execution of this source (outside the final output root, into probe-capability-check/) exited 0 and printed a receipt (input sha256 412c65c3...3766). It gave row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67, North 22/18/5 at 81.82, South 8/8/1 at 100. These match independent hand arithmetic (26/30 = 86.667, 18/22 = 81.818). A second run into a throwaway directory produced byte-identical digest files. Caveat: the source was executed during acquisition as a probe, which the task asked to avoid; the final deliverables have not been produced and still need the gated host-verified run against the fixed args.",
+            "acquired": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/bin/observation-digest-v1.js",
+            "local_target": {
+              "runtime": "node",
+              "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/bin/observation-digest-v1.js",
+              "executable_sha256": "a2fee381effeb02550470b381804b096c59237f84df69e3f8601cd39c4d871e0",
+              "args": [
+                "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json",
+                "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d"
+              ],
+              "probe_artifacts": [
+                {
+                  "artifact_id": "e2a8b042-31b8-4bb6-a913-bd2a7f353d3a",
+                  "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+                },
+                {
+                  "artifact_id": "2c0c1d65-52c7-4a8c-b7fc-cd3a0e24d21c",
+                  "sha256": "d9a8a7d9da08e57ee355b2b043608b32235246c8043c88cd13864df55d93a384"
+                },
+                {
+                  "artifact_id": "c494cb87-7d8e-4ffe-9e1d-795d2a176e88",
+                  "sha256": "70a55a910647f1499d6823162b6af303ebc4e9341704b92caaf90fbd2f74e721"
+                }
+              ]
+            }
+          },
+          "artifact_id": "0622f291-3765-4f76-a102-e037ccd1edf1",
+          "artifact_sha256": "346fed194a30b5f64b7b4647dbad789c8b34e2f81d636a633a7013945dc40d15",
+          "created_at": "2026-11-16T06:38:52.175Z",
+          "qualified_target": {
+            "runtime": "node",
+            "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/bin/observation-digest-v1.js",
+            "executable_sha256": "a2fee381effeb02550470b381804b096c59237f84df69e3f8601cd39c4d871e0",
+            "args": [
+              "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json",
+              "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d"
+            ],
+            "probe_artifacts": [
+              {
+                "artifact_id": "e2a8b042-31b8-4bb6-a913-bd2a7f353d3a",
+                "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+              },
+              {
+                "artifact_id": "2c0c1d65-52c7-4a8c-b7fc-cd3a0e24d21c",
+                "sha256": "d9a8a7d9da08e57ee355b2b043608b32235246c8043c88cd13864df55d93a384"
+              },
+              {
+                "artifact_id": "c494cb87-7d8e-4ffe-9e1d-795d2a176e88",
+                "sha256": "70a55a910647f1499d6823162b6af303ebc4e9341704b92caaf90fbd2f74e721"
+              }
+            ],
+            "qualification_id": "q-r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+            "generation": 1,
+            "admission": {
+              "solverId": "local-capability",
+              "scope": "local-acquisition",
+              "specHash": "38749657649bc8c09508bca77cab6f8cfee2a41c9880bc0ad08a3e19d0efbeef",
+              "capabilityHash": "8ed9a877267fdcb30226f91f472c91d6588e74e9a55a41afdb2bc85441a3ec95",
+              "profileHash": "3d6bdf2f8dd874204c2e5ae3d38bd5b845352c8936351aee9d6afe975d6e3aca",
+              "qualificationId": "q-r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+              "admissionId": "2a66b6a5-a4db-4dc8-b3b2-ef837c4f122b",
+              "receiptId": "r-d99ecf95-f1a7-4da4-b719-c89462d3a5b5",
+              "generation": 1,
+              "admittedAt": 1794811132182,
+              "expiresAt": 1794818332176
+            },
+            "command_sha256": "0d9e7ef9f08ae166ba2ad3b6d6c3c194e8b379acf6c1c734754df32409ec271e"
+          }
+        }
+      ]
+    },
+    "artifact_supersessions": [
+      {
+        "superseded_id": "e8113a32-c368-4694-a822-05715ace8689",
+        "superseded_by": "0055da15-de04-4482-a554-1e68f61fbd4f",
+        "name": "receipt.json",
+        "superseded_sha256": "fddc92f8ebc917601250e0c0094e46f423d041e33d21da4913b7bf3f9e2acbd4",
+        "superseded_size_bytes": 6331,
+        "replacement_sha256": "c3a653d3c849cc253664b77805167961c11a06bf760999b853acc6fa7be10ada",
+        "replacement_size_bytes": 8086,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T06:53:42.091Z",
+        "source": "repair",
+        "intent_id": "c4f8806b-345c-4667-807b-df53b395d94e",
+        "provenance_id": "35e5d61b-3b2d-497e-b384-08e515ee1238"
+      }
+    ],
+    "timeout_recovery": {
+      "quiesced": true,
+      "pending_operations": 0,
+      "elapsed_ms": 1800038,
+      "budget_ms": 1800000,
+      "confirmed_at": "2026-11-16T07:04:33.239Z"
+    }
+  },
+  "_rev": 9
+}

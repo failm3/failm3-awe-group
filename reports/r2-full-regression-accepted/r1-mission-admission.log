@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: production missing host policy and missing/unknown receipts fail before Head, even with injected agents
+ok 1 - production missing host policy and missing/unknown receipts fail before Head, even with injected agents
+  ---
+  duration_ms: 95.159464
+  type: 'test'
+  ...
+# Subtest: qualified manager produces real artifact and immutable generation-bound provenance
+ok 2 - qualified manager produces real artifact and immutable generation-bound provenance
+  ---
+  duration_ms: 140.846589
+  type: 'test'
+  ...
+# Subtest: unreported first-delegation usage remains UNKNOWN
+ok 3 - unreported first-delegation usage remains UNKNOWN
+  ---
+  duration_ms: 144.091561
+  type: 'test'
+  ...
+# Subtest: model metadata cannot select engineering practice; host practice is bound and cannot become product on restart
+ok 4 - model metadata cannot select engineering practice; host practice is bound and cannot become product on restart
+  ---
+  duration_ms: 102.041441
+  type: 'test'
+  ...
+# Subtest: bounded repair receives the immutable scope, original task location and accepted deliverables
+ok 5 - bounded repair receives the immutable scope, original task location and accepted deliverables
+  ---
+  duration_ms: 145.564083
+  type: 'test'
+  ...
+# Subtest: revocation during Head prevents initial delegation and preserves checkpoint
+ok 6 - revocation during Head prevents initial delegation and preserves checkpoint
+  ---
+  duration_ms: 46.395784
+  type: 'test'
+  ...
+# Subtest: revocation blocks repeated beginEffect and recursive/local effect callbacks while runtime is active
+ok 7 - revocation blocks repeated beginEffect and recursive/local effect callbacks while runtime is active
+  ---
+  duration_ms: 80.377828
+  type: 'test'
+  ...
+# Subtest: revocation monitor aborts idle active runtime and retains ownership until pending effects settle
+ok 8 - revocation monitor aborts idle active runtime and retains ownership until pending effects settle
+  ---
+  duration_ms: 249.395474
+  type: 'test'
+  ...
+# Subtest: revocation during independent QA blocks final acceptance and repair
+ok 9 - revocation during independent QA blocks final acceptance and repair
+  ---
+  duration_ms: 226.717376
+  type: 'test'
+  ...
+# Subtest: host scope policy separately rejects unknown roles, repair, and final acceptance
+ok 10 - host scope policy separately rejects unknown roles, repair, and final acceptance
+  ---
+  duration_ms: 263.740875
+  type: 'test'
+  ...
+# Subtest: restart in a separate process rejects revoked and requalified old admissions without replacing evidence
+ok 11 - restart in a separate process rejects revoked and requalified old admissions without replacing evidence
+  ---
+  duration_ms: 1010.539182
+  type: 'test'
+  ...
+# Subtest: legacy checkpoint remains inspectable and byte-preserved, never retroactively qualified
+ok 12 - legacy checkpoint remains inspectable and byte-preserved, never retroactively qualified
+  ---
+  duration_ms: 30.624464
+  type: 'test'
+  ...
+# Subtest: async effect callbacks are refused before execution and explicit full offline fixtures remain available
+ok 13 - async effect callbacks are refused before execution and explicit full offline fixtures remain available
+  ---
+  duration_ms: 100.024272
+  type: 'test'
+  ...
+# Subtest: actual production file and artifact tools enforce the propagated admission fence
+ok 14 - actual production file and artifact tools enforce the propagated admission fence
+  ---
+  duration_ms: 859.74516
+  type: 'test'
+  ...
+# Subtest: real recursive adapter authorizes every child role/tool across durable reservation
+ok 15 - real recursive adapter authorizes every child role/tool across durable reservation
+  ---
+  duration_ms: 30.073017
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3539.921389

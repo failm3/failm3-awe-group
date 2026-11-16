@@ -1,0 +1,127 @@
+INDEPENDENT VERIFY observation-digest-v1 (revision 2, itemised)
+mission dir : /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48
+python      : 3.14.4
+
+## 1. inputs and parsing
+[001] PASS  fixture exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json
+[002] PASS  fixture has observations array  :: rows=3
+[003] PASS  digest.json exists
+[004] PASS  digest.md exists
+[005] PASS  digest.json parses as a JSON object  :: dict
+
+## 2. totals vs independent integer oracle
+[006] PASS  row_count  :: got 3 want 3
+[007] PASS  scheduled  :: got 30 want 30
+[008] PASS  completed  :: got 26 want 26
+[009] PASS  incidents  :: got 6 want 6
+[010] PASS  row_count is a JSON integer (not float/bool)  :: 3
+[011] PASS  scheduled is a JSON integer (not float/bool)  :: 30
+[012] PASS  completed is a JSON integer (not float/bool)  :: 26
+[013] PASS  incidents is a JSON integer (not float/bool)  :: 6
+
+## 3. hand-derived literals (cross-check the oracle itself)
+[014] PASS  literal hand values  :: got (3, 30, 26, 6) want (3, 30, 26, 6)
+[015] PASS  hand rows: North 12+10 sched / 11+7 done / 2+3 inc  :: 22/18/5
+[016] PASS  hand rows: South 8 / 8 / 1  :: 8/8/1
+[017] PASS  oracle total hundredths matches hand value  :: got 8666 want 8666
+
+## 4. completion_percent: exact 2dp, ROUND_HALF_UP, never float-coerced
+[018] PASS  total pct oracle equals hand value 86.67  :: 86.67
+[019] PASS  total pct literal is the oracle text  :: 86.67 vs 86.67
+[020] PASS  total pct preserves exactly 2 decimals  :: 86.67
+[021] PASS  total pct is a Decimal literal, not a binary float  :: Decimal
+
+## 5. per-site totals
+[022] PASS  site keys  :: got ['North', 'South'] want ['North', 'South']
+[023] PASS  North  :: got {'completed': 18, 'incidents': 5, 'row_count': 2, 'scheduled': 22} want {'row_count': 2, 'scheduled': 22, 'completed': 18, 'incidents': 5}
+[024] PASS  North pct  :: got '81.82' want '81.82'
+[025] PASS  South  :: got {'completed': 8, 'incidents': 1, 'row_count': 1, 'scheduled': 8} want {'row_count': 1, 'scheduled': 8, 'completed': 8, 'incidents': 1}
+[026] PASS  South pct (trailing zeros preserved)  :: got '100.00' want '100.00'
+[027] PASS  sites reconcile with total for row_count  :: got 3 want 3
+[028] PASS  sites reconcile with total for scheduled  :: got 30 want 30
+[029] PASS  sites reconcile with total for completed  :: got 26 want 26
+[030] PASS  sites reconcile with total for incidents  :: got 6 want 6
+
+## 6. every completion_percent literal in digest.json is 2-decimal
+[031] PASS  one literal per total plus per site  :: ['86.67', '81.82', '100.00']
+[032] PASS  literal 0 is 2dp: 86.67  :: 86.67
+[033] PASS  literal 1 is 2dp: 81.82  :: 81.82
+[034] PASS  literal 2 is 2dp: 100.00  :: 100.00
+
+## 7. digest.md repeats the same values
+[035] PASS  digest.md contains '| row_count | 3 |'
+[036] PASS  digest.md contains '| scheduled | 30 |'
+[037] PASS  digest.md contains '| completed | 26 |'
+[038] PASS  digest.md contains '| incidents | 6 |'
+[039] PASS  digest.md contains '| completion_percent | 86.67 |'
+[040] PASS  digest.md contains '| North | 2 | 22 | 18 | 5 | 81.82 |'
+[041] PASS  digest.md contains '| South | 1 | 8 | 8 | 1 | 100.00 |'
+[042] PASS  digest.md contains 'Method (reproducible)'
+[043] PASS  digest.md method states the formula
+[044] PASS  digest.md states ROUND_HALF_UP
+[045] PASS  digest.md records the fixture sha256  :: 412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766
+[046] PASS  digest.md and digest.json agree on every integer
+
+## 8. durable invocation receipt integrity
+[047] PASS  receipt exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/invocation_receipt.json
+[048] PASS  receipt version  :: got 1 want 1
+[049] PASS  receipt mission_id  :: got 'r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48' want 'r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48'
+[050] PASS  receipt competence  :: got 'observation-digest-v1' want 'observation-digest-v1'
+[051] PASS  receipt exe sha256  :: got '916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db' want '916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db'
+[052] PASS  receipt exe size  :: got 9089 want 9089
+[053] PASS  receipt digest.json sha256  :: got 'b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857' want 'b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857'
+[054] PASS  receipt digest.md sha256  :: got 'c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534' want 'c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534'
+[055] PASS  receipt digest.json size  :: got 480 want 480
+[056] PASS  receipt digest.md size  :: got 1596 want 1596
+[057] PASS  receipt exit code  :: got 0 want 0
+[058] PASS  receipt stderr empty  :: got 0 want 0
+[059] PASS  receipt fixed_args  :: got ['/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json', '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48'] want ['/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json', '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48']
+[060] PASS  receipt fixed_args match the approved specification  :: ['/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/input/pilot.observations.json', '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48']
+[061] PASS  receipt output dir is the mission dir, not a probe dir  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48
+[062] PASS  receipt fixture sha256  :: got '412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766' want '412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766'
+[063] PASS  receipt self_consistency procedure-reported json sha  :: got 'b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857' want 'b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857'
+[064] PASS  receipt self_consistency procedure-reported md sha  :: got 'c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534' want 'c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534'
+[065] PASS  receipt self_consistency procedure-reported fixture sha  :: got '412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766' want '412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766'
+[066] PASS  receipt self_consistency flags all true  :: {'procedure_reported_digest_json_sha256_matches_executable_output': True, 'procedure_reported_digest_md_sha256_matches_executable_output': True, 'procedure_reported_fixture_sha256_matches_input': True}
+[067] PASS  receipt procedure path is inside the mission directory  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/procedures/observation_digest_v1.py
+[068] PASS  receipt acquisition bounded  :: got True want True
+[069] PASS  receipt acquisition count  :: got 1 want 1
+[070] PASS  receipt capability was absent before acquisition  :: got 'absent' want 'absent'
+[071] PASS  receipt no network used  :: got False want False
+[072] PASS  receipt no packages installed  :: got False want False
+
+## 9. qualification evidence integrity
+[073] PASS  qualification log exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualification.log
+[074] PASS  qualification log sha256 matches receipt  :: got '1536281e94e77ebbc278f3fa3e9435a454e002b5fb321d9d155e74e23997101c' want '1536281e94e77ebbc278f3fa3e9435a454e002b5fb321d9d155e74e23997101c'
+[075] PASS  qualification harness exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualify.py
+[076] PASS  qualification harness sha256 matches receipt  :: got 'c721a0104a83aa16a8b80ab46263388acbdbaf9cfaf3b92257804c31a1a33a9d' want 'c721a0104a83aa16a8b80ab46263388acbdbaf9cfaf3b92257804c31a1a33a9d'
+[077] PASS  qualification log itemises the declared check count  :: got 154 want 154
+[078] PASS  qualification log itemised PASS count  :: got 154 want 154
+[079] PASS  qualification log has no FAIL lines
+[080] PASS  qualification log numbering is contiguous  :: 154
+[081] PASS  qualification log qualified flag  :: got True want True
+[082] PASS  qualification log records the procedure sha256 it ran
+[083] PASS  qualification log records float-coercion regression guards
+
+## 10. reproduce the digest independently (no harness, no procedure)
+[084] PASS  independent reducer row_count  :: got 3 want 3
+[085] PASS  independent reducer scheduled  :: got 30 want 30
+[086] PASS  independent reducer completed  :: got 26 want 26
+[087] PASS  independent reducer incidents  :: got 6 want 6
+[088] PASS  independent reducer site North counts  :: got {'row_count': 2, 'scheduled': 22, 'completed': 18, 'incidents': 5} want {'row_count': 2, 'scheduled': 22, 'completed': 18, 'incidents': 5}
+[089] PASS  independent reducer site South counts  :: got {'row_count': 1, 'scheduled': 8, 'completed': 8, 'incidents': 1} want {'row_count': 1, 'scheduled': 8, 'completed': 8, 'incidents': 1}
+[090] PASS  procedure re-run exit code  :: got 0 want 0
+[091] PASS  procedure re-run reproduces digest.json bytes (sha256)  :: got 'b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857' want 'b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857'
+[092] PASS  procedure re-run reproduces digest.md bytes (sha256)  :: got 'c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534' want 'c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534'
+[093] PASS  procedure stdout is machine-readable JSON  :: {"competence": "observation-digest-v1", "completed": 26, "completion_percent": "
+
+## summary
+check_count : 93
+passed      : 93
+failed      : 0
+verdict     : PASS
+digest.json sha256 : b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857
+digest.md   sha256 : c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534
+procedure   sha256 : 916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db
+verifier    sha256 : 19a673c406596a5a0fce397bc41617a7fd8d9c087a0ade98237a151695339df7
+INDEPENDENT VERIFY: PASS

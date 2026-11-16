@@ -1,0 +1,15 @@
+{
+  "id": "efdcf8f1-ecb9-41d6-afc3-1ea2df77eb37",
+  "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "type": "json",
+  "name": "qa/repair2-run-result.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/qa/repair2-run-result.json",
+  "created_at": "2026-11-16T07:02:32.135Z",
+  "metadata": {
+    "size_bytes": 10131,
+    "sha256": "b16b8748482098e3b1f17f129a9f703358ba22223c87420368840829877c87df",
+    "reconciled": true,
+    "previous_artifact_id": "09f7032b-d316-4c29-86ed-7557be560adc",
+    "revision": 2
+  }
+}

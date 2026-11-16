@@ -1,0 +1,46 @@
+{
+  "capability": "observation-digest-v1",
+  "invocation": {
+    "count": 1,
+    "command_argv": [
+      "node",
+      "--",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/procedures/observation-digest-v1.js",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604"
+    ],
+    "command_string": "node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/procedures/observation-digest-v1.js' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604'",
+    "cwd": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "{\"wrote\":[\"digest.json\",\"digest.md\"],\"output_dir\":\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604\",\"row_count\":3,\"scheduled\":30,\"completed\":26,\"incidents\":6,\"completion_percent\":\"86.67\"}"
+  },
+  "host_qualified_attempt": "dcaff6ab-0a59-4552-8e4a-c28f3e88613f",
+  "executable": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/procedures/observation-digest-v1.js",
+    "sha256": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3",
+    "hash_source": "qualified observation.json local_target.executable_sha256; rehash left to the host gate per delegation, not re-run here"
+  },
+  "outputs": [
+    {
+      "name": "digest.json",
+      "artifact_id": "3fa38b51-dac1-4a66-94e7-8afc56afe07e",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/digest.json",
+      "bytes_read_back": 470
+    },
+    {
+      "name": "digest.md",
+      "artifact_id": "2ca6a64b-8660-4d30-8028-bc27c44af705",
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/digest.md",
+      "bytes_read_back": 1301
+    }
+  ],
+  "output_dir_written": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "output_dir_is_probe_dir": false,
+  "notes": [
+    "Executed exactly once, exactly the fixed argv, no flags, no redirection, no environment changes.",
+    "No hash checks, listings or probes were run in this delegation; executable rehash and probe re-verification are performed by the host gate.",
+    "Output directory argument is the mission artifact root itself, not probe/out, probe/sandbox or any other probe directory.",
+    "digest.json and digest.md bytes were read back with file_read and registered with save_artifact; numeric correctness is left to independent host verification and Nox QA rather than asserted here."
+  ]
+}

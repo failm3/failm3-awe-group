@@ -1,0 +1,14 @@
+{
+  "id": "ae5b7f1b-72e4-4b17-9bb0-4971379a77ed",
+  "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research",
+  "type": "file",
+  "name": "sources/pilot-charter.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/sources/pilot-charter.txt",
+  "content": "PROGRAM: Northstar service reliability pilot\nWINDOW: 2026-01-05 through 2026-01-30 (four operating weeks)\nSITES: Alder, Brook, Cove; the Depot trial is explicitly excluded.\nOWNER: Service Operations\nBASELINE: 120 requests per site-week; manual acknowledgement median 18 minutes.\nPILOT: routed acknowledgement median 11 minutes; acknowledgement uses receipt timestamps.\nCHANGE: routing runbook version 2 replaced version 1 on 2026-01-12.\nLIMIT: observations cover weekdays only; no weekend or Depot conclusion is supported.\n",
+  "created_at": "2026-11-16T20:01:22.812Z",
+  "metadata": {
+    "size_bytes": 523,
+    "sha256": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+    "revision": 1
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "base_commit": "bd3859a550a046c16454f44ddc2648c81318f14e",
+  "baseline": {
+    "passed": 38,
+    "failed": 5,
+    "failures": [
+      "src/tests/r0-closure-adapters.test.ts",
+      "src/tests/r0-reqa-adapters.test.ts",
+      "src/tests/r1-shell-isolation.test.ts",
+      "src/tests/r1-web-product.test.ts",
+      "src/tests/r1-web-qa.test.ts"
+    ],
+    "evidence": "clean-worktree baseline recorded before integration; original temporary summary no longer present"
+  },
+  "integrated": {
+    "started_at": "2026-11-15T14:37:29.596Z",
+    "finished_at": "2026-11-15T14:43:23.523Z",
+    "passed": 39,
+    "failed": 5,
+    "total": 44,
+    "failures": [
+      "src/tests/r0-closure-adapters.test.ts",
+      "src/tests/r0-reqa-adapters.test.ts",
+      "src/tests/r1-shell-isolation.test.ts",
+      "src/tests/r1-web-product.test.ts",
+      "src/tests/r1-web-qa.test.ts"
+    ],
+    "evidence": "/tmp/opencode/ucl-post-qa-regression/summary.json"
+  },
+  "comparison": {
+    "new_passes": [
+      "src/tests/ucl-bridge.test.ts"
+    ],
+    "new_failures": [],
+    "fixed_baseline_failures": [],
+    "failure_set_unchanged": true,
+    "integration_regressions": 0
+  },
+  "limitations": [
+    "Five failures are baseline-only linked-worktree/environment limitations, not passes.",
+    "Linked worktrees represent .git as a file; bwrap cannot mkdir over it in affected isolation suites.",
+    "The untracked .oc-isolated/cache/ms-playwright browser cache is absent in the clean worktree.",
+    "Full suite completion does not establish all original R2/R3 readiness criteria."
+  ]
+}

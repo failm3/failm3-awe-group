@@ -1,0 +1,68 @@
+{
+  "passed": false,
+  "score": 5,
+  "criteria_results": [
+    {
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "passed": true,
+      "notes": "The missing capability is named (observation-digest-v1) and a single bounded acquisition is evidenced: a stable-path local procedure observation_digest_v1.js (rev 3, sha256 7dadf4b3...), a node --check syntax pass, a probe run with exit_code 0, determinism (2 byte-identical repeat runs) and fail-closed cases (invalid JSON, empty rows, non-integer counter, completed>scheduled, empty site, wrong argc -> exit 2, 0 files). That is real qualification evidence, not model-authored assertion. Weak spot: no preserved head narrative or replan document is among the artifacts, so the identification/replan step is only inferable from probe_evidence.json and the host-held plan_hash."
+    },
+    {
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "passed": false,
+      "notes": "The procedure bytes are pinned correctly (receipt procedure_sha256 7dadf4b3... matches artifact observation_digest_v1.js, fixture_sha256 412c65c3... matches the registered fixture), but the fixed arguments are wrong. The specification mandates args exactly [<artifact-root>/input/pilot.observations.json, <artifact-root>] and explicitly states 'Do not use a probe output directory as the final args output.' The only invocation on record uses output_dir = .../r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/probe-out (receipt argv.output_dir matches that), so the mandated second argument was never used. The durable receipt present is the probe receipt, not a final-invocation receipt at the specified output location."
+    },
+    {
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "passed": true,
+      "notes": "Independently recomputed from input/pilot.observations.json (12/11/2 North-Harbor, 8/8/1 South-Harbor, 10/7/3 North-Ridge): row_count 3, scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, completion_percent 26/30=86.666..% -> 86.67. North: 22/18/5, 18/22=81.818..% -> 81.82; South: 8/8/1, 100.00. All match probe-out/digest.json exactly; row_count/scheduled/completed/incidents are plain JSON numbers and percentages are serialized as numbers fixed to two decimals (86.67, 81.82, 100.00). probe-out/digest.md repeats every value with site row counts, the fixture SHA-256, and a 6-step reproducible method including the round_half_up(completed*10000/scheduled)/100 rule. Caveat: these values live only under probe-out/, not at the mandated output location — a location defect charged to criteria 2 and 4, not to the arithmetic."
+    },
+    {
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "passed": false,
+      "notes": "The six listed artifacts are registered and internally consistent (registered digest.json sha256 a00d0e48... and digest.md sha256 0389a496... equal the hashes the procedure wrote into its own receipt), and this independent QA confirms the numeric content of the emitted digest. But the mission's actual deliverables at the specified final output directory are absent: no digest.json, digest.md or invocation receipt exists at .../r2-acquisition-bc16b703-584c-489a-a257-525ca7475794/ itself, only the throwaway probe-out/ copies. So the final artifact set the host is supposed to verify was never produced, and the probe_evidence.json 'independent_arithmetic_verification' (Python Decimal ROUND_HALF_UP) is asserted but no script or transcript of it was saved as an artifact."
+    }
+  ],
+  "defects": [
+    {
+      "issue": "Fixed-argument violation: the specification requires the procedure's fixed args to be exactly [<artifact-root>/input/pilot.observations.json, <artifact-root>] and forbids a probe output directory as the final args output, yet the only recorded invocation used output_dir = <artifact-root>/probe-out. The mandated final invocation was never performed.",
+      "severity": "critical"
+    },
+    {
+      "issue": "No final deliverables at the specified output location: digest.json, digest.md and the durable invocation receipt exist only under probe-out/, so the digest that was supposed to land in the artifact root is missing.",
+      "severity": "critical"
+    },
+    {
+      "issue": "The preserved receipt.json is a probe-run receipt whose argv.output_dir is probe-out; it cannot serve as the durable receipt for the required fixed-argument invocation.",
+      "severity": "major"
+    },
+    {
+      "issue": "The claimed 'independent_arithmetic_verification' (separate Python Decimal check, all_fields_match true) is only asserted in probe_evidence.json; no verification script or its output is preserved as an artifact, so the claim is not independently reproducible from the registered bytes.",
+      "severity": "minor"
+    },
+    {
+      "issue": "No head transcript, plan or replan artifact documents the capability-gap identification and the switch to the qualified local procedure; this is only inferable from probe_evidence.json and the host-side plan_hash.",
+      "severity": "minor"
+    },
+    {
+      "issue": "FAIL: Acquisition for 'observation-digest-v1' produced 0 matching observations; exactly one is required",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    }
+  ],
+  "recommendations": [
+    "Re-invoke the already-qualified procedure with the exact mandated args: node <artifact-root>/observation_digest_v1.js <artifact-root>/input/pilot.observations.json <artifact-root> — so digest.json, digest.md and receipt.json land at the artifact root, not in probe-out/.",
+    "Register the newly emitted root-level digest.json, digest.md and receipt.json as artifacts (a new epoch/revision) and retire the probe-out copies as evidence only.",
+    "Confirm the final receipt's argv.output_dir equals the artifact root and that its outputs[].sha256 match the registered root-level artifact hashes.",
+    "Persist the independent verification as a real artifact (e.g. verify_digest.py plus its stdout showing all checked fields matched) rather than describing it in prose.",
+    "Keep probe_evidence.json as supporting qualification evidence, and add a short acquisition/replan note recording the identified gap, the single bounded acquisition, and the qualification result so criterion 1 is documented in-band."
+  ],
+  "verdict": "FAIL: Execution plan contains no delegations"
+}

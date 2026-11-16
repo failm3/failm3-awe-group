@@ -1,0 +1,14 @@
+{
+  "id": "fafffea1-05eb-4aee-96fc-4a0c33dded1a",
+  "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+  "type": "json",
+  "name": "probe/fixture.03.bad.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/fixture.03.bad.json",
+  "created_at": "2026-11-16T04:52:54.266Z",
+  "metadata": {
+    "size_bytes": 77,
+    "sha256": "46e9bd9c8de4773e241609c0a2bccb1e010e28e9fefa765fab152a2c51883a30",
+    "reconciled": true,
+    "revision": 1
+  }
+}

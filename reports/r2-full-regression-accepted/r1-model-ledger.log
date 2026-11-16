@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: start is durable before invocation; aggregate counts retained without invented dollars
+ok 1 - start is durable before invocation; aggregate counts retained without invented dollars
+  ---
+  duration_ms: 4.223354
+  type: 'test'
+  ...
+# Subtest: missing/partial/invalid usage stays unknown, while explicit zero is retained
+ok 2 - missing/partial/invalid usage stays unknown, while explicit zero is retained
+  ---
+  duration_ms: 2.012468
+  type: 'test'
+  ...
+# Subtest: throws, resolved errors and abort outcomes persist without secret error text
+ok 3 - throws, resolved errors and abort outcomes persist without secret error text
+  ---
+  duration_ms: 3.818719
+  type: 'test'
+  ...
+# Subtest: parallel calls retain unique attribution with no lost records
+ok 4 - parallel calls retain unique attribution with no lost records
+  ---
+  duration_ms: 13.793555
+  type: 'test'
+  ...
+# Subtest: process death preserves started UNKNOWN record visible to a restarted reader
+ok 5 - process death preserves started UNKNOWN record visible to a restarted reader
+  ---
+  duration_ms: 705.97709
+  type: 'test'
+  ...
+# Subtest: ledger start failure prevents provider invocation
+ok 6 - ledger start failure prevents provider invocation
+  ---
+  duration_ms: 0.534844
+  type: 'test'
+  ...
+# Subtest: terminal write failure propagates with durable start still UNKNOWN
+ok 7 - terminal write failure propagates with durable start still UNKNOWN
+  ---
+  duration_ms: 4.118444
+  type: 'test'
+  ...
+# Subtest: Prompt Master and QA actual call sites record usage before parsing, with mission binding
+ok 8 - Prompt Master and QA actual call sites record usage before parsing, with mission binding
+  ---
+  duration_ms: 2294.368058
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3037.447254

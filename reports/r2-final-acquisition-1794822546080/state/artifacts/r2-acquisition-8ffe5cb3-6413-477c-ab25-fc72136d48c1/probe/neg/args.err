@@ -1,0 +1,1 @@
+observation-digest-v1: expected exactly 2 arguments (fixture, output dir); usage: node -- observation-digest.js <observations.json> <output-dir>

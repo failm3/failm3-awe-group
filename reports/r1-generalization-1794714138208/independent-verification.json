@@ -1,0 +1,103 @@
+{
+  "schema": "nox-independent-r2-verification-v1",
+  "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+  "source_summary": "summary.json",
+  "checks": [
+    {
+      "check": "fresh summary passed and completed",
+      "passed": true
+    },
+    {
+      "check": "all host checks independently true",
+      "passed": true
+    },
+    {
+      "check": "spec binding authentic",
+      "passed": true
+    },
+    {
+      "check": "artifact summary exact",
+      "passed": true
+    },
+    {
+      "check": "bytes input/rescue-shifts.csv",
+      "passed": true
+    },
+    {
+      "check": "bytes capability-probe.html",
+      "passed": true
+    },
+    {
+      "check": "bytes capability-probe.png",
+      "passed": true
+    },
+    {
+      "check": "bytes .probe-rerender.png",
+      "passed": true
+    },
+    {
+      "check": "bytes capability-observation.json",
+      "passed": true
+    },
+    {
+      "check": "bytes metrics.json",
+      "passed": true
+    },
+    {
+      "check": "bytes dashboard.html",
+      "passed": true
+    },
+    {
+      "check": "bytes dashboard.png",
+      "passed": true
+    },
+    {
+      "check": "bytes render-verification.txt",
+      "passed": true
+    },
+    {
+      "check": "bytes .tmp-old.html",
+      "passed": true
+    },
+    {
+      "check": "bytes .tmp-old.png",
+      "passed": true
+    },
+    {
+      "check": "candidate hash authentic",
+      "passed": true
+    },
+    {
+      "check": "receipt hash authentic",
+      "passed": true
+    },
+    {
+      "check": "receipt binds terminal candidate and passed review",
+      "passed": true
+    },
+    {
+      "check": "candidate exact current epoch",
+      "passed": true
+    },
+    {
+      "check": "acquisition original id+sha to current lineage",
+      "passed": true,
+      "detail": "{\"hops\":0,\"current\":\"cc41fd7f-59bc-49f2-bc9b-8668544a21f8\"}"
+    },
+    {
+      "check": "real head and QA completed",
+      "passed": true
+    },
+    {
+      "check": "provider cost unknown",
+      "passed": true
+    },
+    {
+      "check": "six autonomy host criteria grouped green",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "provider_cost": "UNKNOWN",
+  "verified_at": "2026-11-15T04:03:51.402Z"
+}

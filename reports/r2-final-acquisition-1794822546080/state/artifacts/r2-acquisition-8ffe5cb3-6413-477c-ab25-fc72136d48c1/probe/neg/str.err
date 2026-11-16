@@ -1,0 +1,1 @@
+observation-digest-v1: observations[0].scheduled must be a non-negative integer, got "7"

@@ -1,0 +1,13 @@
+{
+  "id": "ed3bb849-ca38-4e0d-9179-85696bca5069",
+  "mission_id": "r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "type": "data",
+  "name": "qa-report.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/qa-report.json",
+  "created_at": "2026-11-16T10:29:50.406Z",
+  "metadata": {
+    "size_bytes": 12236,
+    "sha256": "822b2371fd69aa1f2f8e908c5c7281292df52192a2efcd50ecbb74810d2289ed",
+    "revision": 1
+  }
+}

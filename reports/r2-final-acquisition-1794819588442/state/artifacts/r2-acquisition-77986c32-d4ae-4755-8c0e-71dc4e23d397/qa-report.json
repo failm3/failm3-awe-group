@@ -1,0 +1,355 @@
+{
+  "report_type": "independent-nox-qa",
+  "capability": "observation-digest-v1",
+  "mission_id": "r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+  "qa_role": "independent Nox QA on finished deliverables; read-only over all pre-existing files; author of qa-report.json only; did not re-run the acquisition and did not modify digest.json, digest.md, observation.json or either verification report",
+  "generated_at_utc": "2026-11-16T09:16:03Z",
+  "generated_at_unix": 1794820563,
+  "approved_spec_sha256": "fbaccc1042e87b9e1130c15a15b29b50fcfb06dd0596fc4abdd7f89842b42a3a",
+  "mission_dir": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+
+  "overall_verdict": "FAIL",
+  "verdict_rationale": "Three of the four named deliverables do not exist. digest.json, digest.md and invocation-receipt.json are absent from the mission directory, so they can be neither registered artifacts nor hash-verified, and no receipt exists whose command string could be compared against the fixed command or against command_sha256 a99b1b60700d0a1d979857907f8732640fc59b49b2b38c508a8050a87aca24c9. The verification report and all fourteen on-disk files are internally sound: every present hash recomputes exactly, and the arithmetic in the verification report agrees with the input fixture to the last digit on an independent code path. Correctness and qualification pass; delivery and invocation evidence fail. This confirms rather than overturns the verifier's FAIL.",
+
+  "deliverable_registration_and_hash_verification": {
+    "method": "Enumerated the mission tree with find, hashed every file with sha256sum and independently re-hashed the same bytes with python3 hashlib; both paths agree on all fourteen files. Registration was assessed against the only registration evidence available in this environment: the artifact_ids recorded in observation.json.",
+    "registry_access_limitation": "No artifact registry database, manifest or API is reachable from this session; .oc-isolated is empty and no registry file exists in the tree. Registration status is therefore inferred from observation.json's recorded artifact_ids mapped to on-disk content, not read from an authoritative registry. This limitation is itself a residual risk and is not counted against the mission, since the files it would have to cover are missing anyway.",
+    "required_deliverables": [
+      {
+        "deliverable": "digest.json",
+        "path": "digest.json",
+        "exists_on_disk": false,
+        "sha256": null,
+        "size_bytes": null,
+        "hash_recomputes": null,
+        "registered": false,
+        "evidence": "find . -name 'digest.json' | grep -v '^./probe/' returned no results (exit 1). Mission root listing is: input, procedures, probe, observation.json, verification-report.json, verification-report.md. No root digest.json exists.",
+        "verdict": "FAIL"
+      },
+      {
+        "deliverable": "digest.md",
+        "path": "digest.md",
+        "exists_on_disk": false,
+        "sha256": null,
+        "size_bytes": null,
+        "hash_recomputes": null,
+        "registered": false,
+        "evidence": "Same enumeration; no digest.md outside probe/ anywhere in the tree.",
+        "verdict": "FAIL"
+      },
+      {
+        "deliverable": "invocation-receipt.json",
+        "path": "invocation-receipt.json",
+        "exists_on_disk": false,
+        "sha256": null,
+        "size_bytes": null,
+        "hash_recomputes": null,
+        "registered": false,
+        "evidence": "find . -iname '*receipt*' returns exactly one file, probe/qualification-receipt.json. That document has receipt_type 'qualification', not 'invocation', and records qualification probes, not the fixed-args invocation. No invocation receipt exists.",
+        "verdict": "FAIL"
+      },
+      {
+        "deliverable": "verification report (json + md)",
+        "path": "verification-report.json",
+        "exists_on_disk": true,
+        "sha256": "4e7e7128a9faccea344d4af8688f5f5c32aa75e21d4297bb41cd9d568a1af0b3",
+        "size_bytes": 22629,
+        "hash_recomputes": true,
+        "registered": false,
+        "co_deliverable": {
+          "path": "verification-report.md",
+          "sha256": "055d92c031aeeca72438b723a2f5a37b6813ed1fa97eb4989cc8b5f7a0ebe8bf",
+          "size_bytes": 14897,
+          "hash_recomputes": true
+        },
+        "evidence": "Both files exist and hash deterministically on both toolchains. Neither carries an artifact_id anywhere in the tree, so registration is not evidenced. Hash integrity PASS; registration NOT EVIDENCED.",
+        "verdict": "FAIL (registration not evidenced; bytes intact)"
+      }
+    ],
+    "present_file_inventory_all_hashes_recomputed": [
+      { "path": "input/pilot.observations.json", "size_bytes": 474, "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766" },
+      { "path": "observation.json", "size_bytes": 3203, "sha256": "7510fe8142c36a8db9df07ddcd8f09f39035be157f5994f3f8620515ac08855d" },
+      { "path": "procedures/observation-digest-v1.js", "size_bytes": 4753, "sha256": "3b85b93000db6393956b9fa7e428dce431965d8d729432c478819c0f706455d5" },
+      { "path": "probe/qualification-receipt.json", "size_bytes": 4797, "sha256": "67a49b65328adcd989fc0d389f558e731d4ac3714814c2b7a32ed1d1802725fb" },
+      { "path": "probe/qualified-probe-digest.json", "size_bytes": 338, "sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382" },
+      { "path": "probe/scratch-run-1/digest.json", "size_bytes": 338, "sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382" },
+      { "path": "probe/scratch-run-1/digest.md", "size_bytes": 837, "sha256": "aeb19a11ddbcb4fdd4005f0978d09a42bbb00d9765a7c554e646bdd1dff541b8" },
+      { "path": "probe/scratch-run-2/digest.json", "size_bytes": 338, "sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382" },
+      { "path": "probe/scratch-run-2/digest.md", "size_bytes": 837, "sha256": "aeb19a11ddbcb4fdd4005f0978d09a42bbb00d9765a7c554e646bdd1dff541b8" },
+      { "path": "probe/perturb/perturbed.json", "size_bytes": 598, "sha256": "7b78e7e51cbfe9c4154d862b77dd3d5842b95dd6deeec169994f5a9cb25f87c0" },
+      { "path": "probe/perturb/out/digest.json", "size_bytes": 442, "sha256": "8e77294ef17d79012c9bfc20383d304d49e44ad71068e99db53879c82045e01a" },
+      { "path": "probe/perturb/out/digest.md", "size_bytes": 861, "sha256": "7792ba96df01f97a66dce3507da95c7a9af422c73d28f3c9eb73ea14db517257" },
+      { "path": "verification-report.json", "size_bytes": 22629, "sha256": "4e7e7128a9faccea344d4af8688f5f5c32aa75e21d4297bb41cd9d568a1af0b3" },
+      { "path": "verification-report.md", "size_bytes": 14897, "sha256": "055d92c031aeeca72438b723a2f5a37b6813ed1fa97eb4989cc8b5f7a0ebe8bf" }
+    ],
+    "inventory_totals": { "files_found": 14, "files_hashed": 14, "hash_mismatches": 0, "files_missing_that_deliverables_require": 3 },
+    "observation_json_artifact_id_resolution": {
+      "artifact_ids_declared": 2,
+      "a051cf91-8bc8-4636-a836-8f228c366eab": {
+        "declared_sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382",
+        "resolves_to_on_disk": [
+          "probe/qualified-probe-digest.json",
+          "probe/scratch-run-1/digest.json",
+          "probe/scratch-run-2/digest.json"
+        ],
+        "finding": "Hash resolves, but to three distinct files sharing one content hash, so the artifact_id cannot be pinned to a unique path. The declared entry names a probe digest, not a final deliverable."
+      },
+      "8f29f4da-43b4-43f2-a6dc-2525f8885409": {
+        "declared_sha256": "67a49b65328adcd989fc0d389f558e731d4ac3714814c2b7a32ed1d1802725fb",
+        "resolves_to_on_disk": ["probe/qualification-receipt.json"],
+        "finding": "Hash resolves, but the target is the qualification receipt, not a digest. Listed as a probe artifact of a digest capability, which is a mislabel rather than a hash error. No digest.md is registered at all."
+      },
+      "conclusion": "Both declared artifact_ids hash to real bytes, but neither covers a final deliverable, and no digest.md registration exists. The registration requirement is unmet."
+    }
+  },
+
+  "receipt_to_command_check": {
+    "required_fixed_command_sha256": "a99b1b60700d0a1d979857907f8732640fc59b49b2b38c508a8050a87aca24c9",
+    "required_fixed_command_definition": "node -- <procedure path> <abs input/pilot.observations.json> <abs mission dir>",
+    "invocation_receipt_present": false,
+    "receipt_command_string": null,
+    "receipt_command_sha256": null,
+    "exact_match": false,
+    "verdict": "FAIL",
+    "evidence": [
+      "grep -rn 'a99b1b60700d0a1d979857907f8732640fc59b49b2b38c508a8050a87aca24c9' over the whole mission tree returned nothing (exit 1): the required command_sha256 appears in no artifact.",
+      "grep for command_sha256, \"command\", fixed_command or host_runtime_command across the tree returns one hit only: probe/qualification-receipt.json line 24, \"host_runtime_command\": \"node --\". That is a runtime prefix, not a full command string, and it carries no command_sha256 field.",
+      "No file named invocation-receipt.json exists, so there is no receipt whose command string could be compared. The comparison is not a near-miss; there is no comparandum.",
+      "I additionally tried to reconstruct the command and hash it myself to see whether the required digest corresponded to a plausible formulation: 12 candidate forms (with and without '--', with and without a trailing newline or space, quoted and unquoted argument variants) were hashed. None produced a99b1b60...24c9. The required value is therefore not recoverable from the fixed-args formulation by any trivially adjacent spelling, and no record on disk claims to be it."
+    ],
+    "adjacent_evidence_that_does_exist_and_was_confirmed": {
+      "note": "The fixed arguments themselves are recorded and correct in two places; only the invocation and its receipt are missing.",
+      "observation_json_args_equal_qualification_receipt_fixed_args": true,
+      "fixed_args_recorded": [
+        "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397/input/pilot.observations.json",
+        "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397"
+      ],
+      "args_1_is_mission_root": true,
+      "args_0_is_the_specified_input_fixture": true,
+      "qualified_executable_sha256_matches_disk": "3b85b93000db6393956b9fa7e428dce431965d8d729432c478819c0f706455d5",
+      "qualified_executable_size_matches_disk": { "declared": 4753, "actual": 4753, "match": true }
+    }
+  },
+
+  "arithmetic_verification_against_input_fixture": {
+    "verdict": "PASS",
+    "method": "Recomputed every aggregate from input/pilot.observations.json bytes with python3 3.14.4 standard library (json, hashlib, collections, fractions.Fraction, decimal.Decimal, ROUND_HALF_UP) on a code path independent of the procedure and of both upstream reports. The procedure was not executed by QA.",
+    "input_rehashed_from_disk": {
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "size_bytes": 474,
+      "matches_qualification_receipt": true,
+      "matches_verification_report": true,
+      "unmodified": true
+    },
+    "independent_totals": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": 86.67,
+      "completion_percent_fraction": "13/15",
+      "completion_percent_decimal_half_up_2dp": "86.67"
+    },
+    "independent_site_totals": {
+      "North": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": "81.82", "fraction": "9/11" },
+      "South": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": "100.00", "fraction": "1" }
+    },
+    "aggregation_consistency": {
+      "site_rows_sum_to_row_count": true,
+      "site_scheduled_sum_to_total": true,
+      "site_completed_sum_to_total": true,
+      "site_incidents_sum_to_total": true
+    },
+    "agreement_with_verification_report": {
+      "independent_recompute_block_matches_my_recompute": true,
+      "mismatched_fields": [],
+      "note": "The verification report's independent_recompute values are 3 / 30 / 26 / 6 / 86.67 with North 2/22/18/5 (81.82) and South 1/8/8/1 (100.00). My separate recompute agrees on every field, so the report's arithmetic is confirmed against the fixture rather than merely restated."
+    },
+    "rounding_rule_reaudited": {
+      "documented_rule": "completed / scheduled * 100 rounded half-up to 2 decimals, integer arithmetic",
+      "procedure_formula": "cents = floor((completed*20000 + scheduled) / (2*scheduled))",
+      "sweep_cases_executed_by_qa": 80600,
+      "sweep_domain": "scheduled 1..400, completed 0..scheduled",
+      "sweep_mismatches_vs_decimal_ROUND_HALF_UP": 0,
+      "tie_cases_confirmed_half_up_not_half_even": [
+        { "completed": 1, "scheduled": 32, "exact": "3.125", "half_up": "3.13", "half_even": "3.12", "formula": "3.13" },
+        { "completed": 1, "scheduled": 160, "exact": "0.625", "half_up": "0.63", "half_even": "0.62", "formula": "0.63" }
+      ],
+      "verdict": "The verifier's sweep claim (80600 cases, 0 mismatches) reproduces exactly, and the implemented rule is genuinely half-up rather than banker's rounding. No real fixture value sits on a tie, so the distinction does not move any accepted number."
+    },
+    "field_type_and_precision_checks": {
+      "top_level_numeric_types": {
+        "row_count": "int",
+        "scheduled": "int",
+        "completed": "int",
+        "incidents": "int",
+        "completion_percent": "float, raw token '86.67' with exactly 2 decimals on the bytes"
+      },
+      "all_completion_percent_raw_tokens_2dp": true,
+      "tokens_observed": {
+        "probe/scratch-run-1/digest.json": ["86.67", "81.82", "100.00"],
+        "probe/scratch-run-2/digest.json": ["86.67", "81.82", "100.00"],
+        "probe/qualified-probe-digest.json": ["86.67", "81.82", "100.00"],
+        "probe/perturb/out/digest.json": ["79.41", "25.00", "81.82", "100.00"]
+      },
+      "sites_is_object_keyed_by_site_with_totals": true,
+      "caveat": "100.00 is preserved only on the serialized bytes; parsed as a number it is 100.0 in both JavaScript and Python. The 2-decimal requirement is satisfiable only at the byte level for a JSON number, and the procedure hand-builds its JSON to guarantee it. This is a legitimate implementation choice, not a defect."
+    },
+    "json_md_side_by_side_agreement": {
+      "compared_pair": "probe/scratch-run-1/digest.json vs probe/scratch-run-1/digest.md",
+      "divergent_values": 0,
+      "rows_confirmed_present_in_md": [
+        "| row_count | 3 |",
+        "| scheduled | 30 |",
+        "| completed | 26 |",
+        "| incidents | 6 |",
+        "| completion_percent | 86.67 |",
+        "| North | 2 | 22 | 18 | 5 | 81.82 |",
+        "| South | 1 | 8 | 8 | 1 | 100.00 |"
+      ],
+      "method_section_present": true,
+      "method_reproducible": true,
+      "note": "No divergence anywhere. The content criterion is met by the probe bytes; the failure is purely that those bytes are not the commissioned deliverable."
+    },
+    "negative_control_reverified": {
+      "fixture": "probe/perturb/perturbed.json",
+      "fixture_sha256": "7b78e7e51cbfe9c4154d862b77dd3d5842b95dd6deeec169994f5a9cb25f87c0",
+      "my_recompute": { "row_count": 4, "scheduled": 34, "completed": 27, "incidents": 6, "sites": ["East", "North", "South"] },
+      "procedure_output_matches": true,
+      "completion_percent": "79.41 = 27/34 exactly, half-up correct",
+      "conclusion": "The procedure tracks input bytes rather than emitting embedded constants, so the baseline byte match corroborates the arithmetic instead of restating it."
+    }
+  },
+
+  "scope_and_exclusion_compliance": {
+    "verdict": "PASS",
+    "every_touched_path_under_mission_dir": {
+      "result": true,
+      "evidence": "All fourteen files found by find lie below the mission dir. No file exists outside it. The only QA scratch files were /tmp/qa_recompute.py, /tmp/qa_bytes.py, /tmp/qa_xcheck.py, /tmp/qa_cmd.py and /tmp/qa_div.py; all were removed immediately after use and confirmed gone (ls /tmp/qa_*.py: No such file or directory). QA's sole durable write is qa-report.json in the mission dir.",
+      "writes_by_qa_outside_mission_dir_remaining": 0
+    },
+    "no_probe_output_directory_used_as_final_args_output": {
+      "result": true,
+      "evidence": "The fixed second argument is the mission root, and the mission root contains no digest.json and no digest.md. Every digest in the tree is under probe/ (scratch-run-1, scratch-run-2, perturb/out). Nothing was promoted from probe/ to the final output location.",
+      "interpretation": "This exclusion is honoured in the narrow sense: no probe directory was substituted as the final output. It is honoured vacuously, because there is no final output at all. The compliant absence of a forbidden file is not a substitute for the required file, so this PASS does not rescue criteria 2 or 3."
+    },
+    "no_packages_installed": {
+      "result": true,
+      "evidence": "No package.json, package-lock.json, node_modules, requirements.txt, vendor directory or equivalent exists in the tree. The procedure requires only the two Node built-ins node:fs and node:path (grep for require(/import/child_process/exec/fetch/http/https/net./dns/process.env returns exactly those two require lines). QA used Python standard library only."
+    },
+    "no_network_calls": {
+      "result": true,
+      "evidence": "The procedure source contains no http, https, net, dns, fetch or child_process reference. No download or fetch step is recorded in any receipt or report. The qualification receipt declares network_access false with an empty dependency list, and that declaration is consistent with the inspected source."
+    },
+    "no_publishing_deployment_or_purchases": {
+      "result": true,
+      "evidence": "No publish, push, deploy, upload or purchase step appears in observation.json, the qualification receipt or either verification report; the only declared trust action is install: false, trusted: false."
+    },
+    "no_external_changes": {
+      "result": true,
+      "evidence": "Nothing in the tree references host configuration, system paths outside the mission dir, or a service endpoint. The qualification receipt records installed false, trusted false and explicitly states no host configuration was changed."
+    },
+    "inputs_read_only": {
+      "result": true,
+      "evidence": "input/pilot.observations.json still hashes to 412c65c3...3766 and retains the earliest mtime in the tree (2026-11-16 08:59:48 UTC), predating every derived file. QA did not re-run the acquisition and did not modify any deliverable."
+    }
+  },
+
+  "acceptance_criteria_verdicts": [
+    {
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "verdict": "PASS",
+      "evidence": "observation.json names observation-digest-v1 as absent and records one bounded acquisition to procedures/observation-digest-v1.js. probe/qualification-receipt.json records verdict 'qualified'. QA independently confirmed the on-disk procedure hashes to 3b85b93000db6393956b9fa7e428dce431965d8d729432c478819c0f706455d5 at 4753 bytes, exactly the hash and size the receipt claims, so the qualified bytes are the bytes present. The procedure lives at a stable path below the mission dir, as the scope requires.",
+      "note": "This criterion governs acquisition and qualification and does not require the final invocation, which is scored separately below."
+    },
+    {
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "verdict": "FAIL",
+      "evidence": "No invocation-receipt.json exists. The single *receipt* file is probe/qualification-receipt.json, whose receipt_type is 'qualification'. No root digest.json or digest.md exists, and the mission root is the second fixed argument, so the fixed-args invocation demonstrably never ran. The executor's own report states it stopped before running the procedure and wrote nothing; the file mtimes corroborate this, with the last probe output at 09:02:20, the receipt at 09:03:13 and no later data file at all. The probe runs used the exact qualified bytes but wrote to scratch directories, and a qualification probe is not the fixed-args invocation.",
+      "missing_artifacts": ["invocation-receipt.json", "digest.json", "digest.md"]
+    },
+    {
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "verdict": "FAIL",
+      "evidence": "The files do not exist at the mission root, so the criterion cannot be satisfied as delivered. The content requirement is fully met by the probe bytes that do exist: all five values are exact JSON numbers, every completion_percent token carries two decimals including 100.00, sites is an object keyed by site with full totals, and digest.md repeats each value with a four-step reproducible method. Content PASS, deliverable-location FAIL, gate FAIL.",
+      "conditional": "Running the same qualified bytes once against the fixed args would yield digest.json sha256 9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382, a hash already produced deterministically three times."
+    },
+    {
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "verdict": "FAIL",
+      "evidence": "Three of the four deliverables are absent, so they cannot be registered or host-verified. The verification report's bytes are intact and hash-verified by QA (4e7e7128...f0b3 and 055d92c0...e8bf) but carry no artifact_id evidencing registration. The two artifact_ids in observation.json resolve only to probe files (a probe digest and the qualification receipt), never to a final deliverable, and no digest.md is registered at all."
+    }
+  ],
+
+  "evidence_chain": [
+    { "step": 1, "action": "Enumerate mission tree", "command": "find . -type f | sort", "result": "14 files; no digest.json, digest.md or invocation-receipt.json at the mission root" },
+    { "step": 2, "action": "Hash every on-disk file", "command": "find . -type f -exec sha256sum {} \\;", "result": "14 hashes recorded; all later re-hashed with python3 hashlib and agreed" },
+    { "step": 3, "action": "Exclude probe digests from final-deliverable status", "command": "find . -name 'digest.json' -o -name 'digest.md' | grep -v '^./probe/'", "result": "no output, exit 1: every digest lives under probe/" },
+    { "step": 4, "action": "Search for any receipt", "command": "find . -iname '*receipt*'", "result": "only probe/qualification-receipt.json; no invocation receipt" },
+    { "step": 5, "action": "Search for the mandated command hash", "command": "grep -rn 'a99b1b60...24c9' .", "result": "no output, exit 1: the required command_sha256 is in no artifact" },
+    { "step": 6, "action": "Recompute arithmetic independently", "command": "python3 with json, fractions.Fraction, decimal.ROUND_HALF_UP", "result": "3 / 30 / 26 / 6 / 86.67 and North 2/22/18/5 (81.82), South 1/8/8/1 (100.00); identical to the verification report" },
+    { "step": 7, "action": "Re-audit the rounding rule", "command": "sweep scheduled 1..400 x completed 0..scheduled vs Decimal ROUND_HALF_UP", "result": "80600 cases, 0 mismatches; ties 1/32 and 1/160 confirm half-up over half-even" },
+    { "step": 8, "action": "Verify byte-level 2-decimal precision", "command": "regex over raw digest.json text", "result": "86.67, 81.82, 100.00 all carry exactly two decimals; sites is an object with totals per site" },
+    { "step": 9, "action": "Cross-check digest.md against digest.json", "command": "substring test for each rendered row", "result": "all seven rows present, zero divergence, ## Method present and reproducible" },
+    { "step": 10, "action": "Re-run the negative control", "command": "python3 recompute over probe/perturb/perturbed.json", "result": "4 / 34 / 27 / 6, 79.41, East key created; matches procedure output, proving derivation from input bytes" },
+    { "step": 11, "action": "Resolve declared artifact_ids", "command": "walk tree hashing each file, match declared sha256", "result": "a051cf91 -> three probe digests (ambiguous path); 8f29f4da -> the qualification receipt, not a digest" },
+    { "step": 12, "action": "Confirm fixed args and qualified bytes", "command": "python3 json compare of observation.json vs qualification receipt", "result": "args identical, args[1] is mission root, executable hash and size both match disk" },
+    { "step": 13, "action": "Attempt command reconstruction", "command": "hash 12 candidate command spellings", "result": "none equal a99b1b60...24c9; the mandated hash is unrecoverable and unclaimed" },
+    { "step": 14, "action": "Establish chronology from mtimes", "command": "find . -type f -printf '%T+ %p'", "result": "last probe output 09:02:20, receipt 09:03:13, observation.json 09:03:45, verification 09:09-09:10; no data file after 09:03, so the final invocation never occurred" },
+    { "step": 15, "action": "Check exclusions", "command": "grep for require/import/http/net/fetch; look for manifests", "result": "only node:fs and node:path; no package manifests, no network modules, no deploy or purchase records" }
+  ],
+
+  "residual_risks": [
+    {
+      "risk": "Acquisition provenance is self-attested and the author was also the qualifier.",
+      "detail": "observation-digest-v1.js was authored and qualified within the same bounded acquisition, so the qualification is not an external endorsement. The part that survives independent scrutiny is byte-level: hash 3b85b930...55d5 at 4753 bytes matches across observation.json, the qualification receipt and disk, and the behaviour is confirmed by a negative control on a perturbed fixture and by a 80600-case rounding sweep. What cannot be independently established from this tree is who authored the source or whether a pre-existing library candidate was genuinely absent before the acquisition began; that rests on the acquisition narrative alone.",
+      "severity": "medium",
+      "status": "mitigated but not eliminated"
+    },
+    {
+      "risk": "Arithmetic independence is strong but not absolute.",
+      "detail": "QA's recompute uses a genuinely separate code path (python3 Fraction and Decimal) from the procedure's JavaScript integer math, and the values agree, so no embedded constant explains the match. However both derivations consume the same 474-byte fixture, and both adopt the same half-up convention, which is documented by the procedure itself rather than fixed by the specification. The specification requires 2 decimals but does not mandate a rounding mode; half-up is a defensible convention and no real fixture value lands on a tie, so no accepted number depends on that choice. A claim of absolute independence would overstate what was tested.",
+      "severity": "low",
+      "status": "disclosed; does not affect any accepted value"
+    },
+    {
+      "risk": "Registration status cannot be authoritatively confirmed from this environment.",
+      "detail": "No artifact registry manifest, database or API is reachable here, and .oc-isolated is empty, so registration was inferred from the artifact_ids embedded in observation.json. A deliverable could in principle be registered elsewhere without a local trace; but since three of the four required files do not exist on disk at all, no registry entry could make them verifiable, so the FAIL verdict is robust to this gap.",
+      "severity": "low",
+      "status": "does not change the verdict"
+    },
+    {
+      "risk": "The required command_sha256 is unreproducible and unexplained.",
+      "detail": "a99b1b60700d0a1d979857907f8732640fc59b49b2b38c508a8050a87aca24c9 appears nowhere in the tree and is not produced by any of twelve plausible command spellings derived from the recorded fixed args. Since no invocation receipt exists, there is nothing to compare it to. If the mission is re-run, the receipt must record its command string in the exact canonical form whose sha256 is this value, or the requirement will still fail even after the deliverables appear.",
+      "severity": "high",
+      "status": "open; a blocking dependency for any re-run"
+    },
+    {
+      "risk": "2-decimal completion_percent is a byte-level property only.",
+      "detail": "100.00 parses to 100.0 in any JSON consumer, so a downstream check that re-parses rather than matching raw bytes could report a spurious precision failure. The bytes are correct; the risk is in how acceptance is measured.",
+      "severity": "low",
+      "status": "noted for the accepting gate"
+    }
+  ],
+
+  "what_would_change_the_verdict": [
+    "Run the hash-verified procedure exactly once with the recorded fixed args (input fixture, mission root) so digest.json and digest.md appear at the mission root.",
+    "Write invocation-receipt.json recording the executable sha256 3b85b930...55d5, the exact fixed args, exit code 0, resulting digest.json sha256 9cd7f88d...4382, and a command_sha256 equal to a99b1b60...24c9, with the command string in whatever canonical form produces that hash.",
+    "Register digest.json, digest.md and the invocation receipt as artifacts, with artifact_ids that resolve to those exact paths and hashes.",
+    "Then re-run host verification and this QA against the registered root bytes."
+  ],
+
+  "qa_actions_taken": {
+    "acquisition_rerun": false,
+    "deliverables_modified": false,
+    "procedure_executed": false,
+    "procedure_execution_avoided_because": "QA is read-only over the deliverables; running the procedure would write into the mission root and manufacture the very artifacts under audit, which would invalidate the verdict.",
+    "files_written_by_qa": ["qa-report.json"],
+    "tools_used": ["shell (find, sha256sum, grep, stat, date, rm on /tmp scratch)", "python3 standard library", "file_read", "save_artifact"],
+    "scratch_files_created_and_removed": ["/tmp/qa_recompute.py", "/tmp/qa_bytes.py", "/tmp/qa_xcheck.py", "/tmp/qa_cmd.py", "/tmp/qa_div.py"]
+  },
+
+  "self_hash_note": "The sha256 of qa-report.json is computed after writing and reported in the mission summary rather than embedded here, to avoid a self-reference that no single serializer can satisfy.",
+
+  "conclusion": "FAIL. The observation-digest-v1 work is correct and its qualification is byte-verified: the procedure on disk is the qualified 3b85b930...55d5 at 4753 bytes, and its arithmetic reproduces the fixture exactly under an independent recompute, an 80600-case rounding sweep and a perturbed-fixture negative control. The mission nevertheless fails because the deliverables were never produced: digest.json, digest.md and invocation-receipt.json do not exist, so none of them can be a registered artifact whose sha256 recomputes from disk, and no receipt exists whose command string or command_sha256 could be matched against a99b1b60...24c9. Scope and exclusions are clean throughout: every path is under the mission dir, no probe output was passed off as the final output, and there were no packages, network calls, deployments or external changes. The gap is execution and registration, not correctness; it closes only with one fixed-args run plus a receipt carrying the mandated command hash."
+}

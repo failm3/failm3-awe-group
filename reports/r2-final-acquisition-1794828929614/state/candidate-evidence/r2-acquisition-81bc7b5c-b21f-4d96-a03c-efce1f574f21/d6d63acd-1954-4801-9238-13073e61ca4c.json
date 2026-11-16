@@ -1,0 +1,328 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "d6d63acd-1954-4801-9238-13073e61ca4c",
+    "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+    "repair_iteration": 0,
+    "spec_hash": "311538e43ce1f9983eac0794b44e11bcb65e1a7e5b6955203a159a9c63468fb6",
+    "plan_hash": "870cf765994a415d0efd53f9e6f79a0fff9be6c307a4bc5c814e8d0cc5e0afc2",
+    "artifacts": [
+      {
+        "artifact_id": "a8f19996-e250-44fa-8f48-c47e35aee40a",
+        "name": "artifact-registration.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/artifact-registration.json",
+        "sha256": "45754c51a17e8a5609a2b4b614ddfdbe7ce79135b21d232af18bd6d12938cfe9",
+        "size_bytes": 8300
+      },
+      {
+        "artifact_id": "9190e326-92fb-4f19-b316-35c4a8135b2c",
+        "name": "bin/observation-digest-v1.js",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/bin/observation-digest-v1.js",
+        "sha256": "8daae21f0617c3ac4e1e178344ff8e1f10be46331bd10d245a302ad1574e6017",
+        "size_bytes": 11287
+      },
+      {
+        "artifact_id": "07dbba0c-e33e-4d4e-ad0d-c86b3d4c3cbd",
+        "name": "digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/digest.json",
+        "sha256": "571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599",
+        "size_bytes": 477
+      },
+      {
+        "artifact_id": "8802926a-175f-4f9d-8563-2145ec8ba6d1",
+        "name": "digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/digest.md",
+        "sha256": "cfbdcf29070d8c958529740c803d2ce91d0bf4f9b4d8a770d9192dfdd60599e8",
+        "size_bytes": 1516
+      },
+      {
+        "artifact_id": "ab79075f-7f0a-4365-9ea9-715fa82ec61e",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "54b2eedb-9eb9-410a-97e5-6e719a93dff8",
+        "name": "invocation-receipt.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/invocation-receipt.json",
+        "sha256": "9867178166f3a2d82c6710ca62091913b768ed2690bf7731e5ed1be7a4af586f",
+        "size_bytes": 5920
+      },
+      {
+        "artifact_id": "cb787dc0-0e5b-4912-9749-15caaa241119",
+        "name": "observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/observation.json",
+        "sha256": "de1ff635cba1c9a38ef4bec84b189270fd2b6054a2f305e9d15bf09e74af5824",
+        "size_bytes": 3451
+      },
+      {
+        "artifact_id": "584dbc26-2c94-40a3-875c-f2730310e5cd",
+        "name": "probe/neg/bad1.err",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad1.err",
+        "sha256": "e3021a5eadb9aa0680dc551659d31790fc2aceb198b924d9d22df1987295f678",
+        "size_bytes": 118
+      },
+      {
+        "artifact_id": "44b939a0-85f2-4916-ab65-97a0b47f4bc3",
+        "name": "probe/neg/bad1.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad1.json",
+        "sha256": "98e89957bf48445d8cb299078fa17295a2f2babba853f4bb18ab69ed7068e6e1",
+        "size_bytes": 75
+      },
+      {
+        "artifact_id": "e7a4145e-78fb-485e-b425-fdd63b145063",
+        "name": "probe/neg/bad2.err",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad2.err",
+        "sha256": "f82b17d0f32e3fd711ee0505ab0dde05a70827e374334adde8160b0ff523e0eb",
+        "size_bytes": 99
+      },
+      {
+        "artifact_id": "526a77f3-b4bc-496f-bbec-26a28c820e5e",
+        "name": "probe/neg/bad2.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad2.json",
+        "sha256": "225e762caa8cb172d84527d9dafc91d35fa66926b5536689e683325e81945c89",
+        "size_bytes": 19
+      },
+      {
+        "artifact_id": "7ebc69f2-133d-4bc3-84a5-d82fb910d28e",
+        "name": "probe/neg/bad3.err",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad3.err",
+        "sha256": "82d8ce59fac4fef7682afcbbb83c23f5c46dd69bf09e93b2a1232617bbb189e2",
+        "size_bytes": 130
+      },
+      {
+        "artifact_id": "b04acdbf-46e7-48b0-9524-c8b8880c5788",
+        "name": "probe/neg/bad3.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/bad3.json",
+        "sha256": "7ccfa1fbf3940e6f0c0375d87c0f9235a50514e14cb427bdfaf5077987b26ccf",
+        "size_bytes": 8
+      },
+      {
+        "artifact_id": "70d526bb-3191-4787-b15e-e0251e76ee15",
+        "name": "probe/neg/out_zero/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/out_zero/digest.json",
+        "sha256": "461eaa3d2ec0a1a237906f20e0826666698b26dec5bf72855a15f9f7e999c8b8",
+        "size_bytes": 291
+      },
+      {
+        "artifact_id": "f71ec3ac-80c4-4e46-8aa6-5770a988b017",
+        "name": "probe/neg/out_zero/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/out_zero/digest.md",
+        "sha256": "843be6eabaf90ecd83a9cd50d20dc47da7532f70ae28d48ed75e66d386ed39a9",
+        "size_bytes": 1463
+      },
+      {
+        "artifact_id": "34956b16-3404-40cd-8b4e-6d339e34e5ad",
+        "name": "probe/neg/zero.err",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/zero.err",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "artifact_id": "196ee7f7-41cc-482b-b657-7eda2cf57ed9",
+        "name": "probe/neg/zero.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/neg/zero.json",
+        "sha256": "2f4526aa8b5211806d44e7aab35acbfc5c6788c700f024ccbd7f243c737964ef",
+        "size_bytes": 73
+      },
+      {
+        "artifact_id": "dec8f4e5-7763-43c9-811b-6145de3f893a",
+        "name": "probe/out/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/out/digest.json",
+        "sha256": "571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599",
+        "size_bytes": 477
+      },
+      {
+        "artifact_id": "b7c337c4-b511-4c3a-94de-e032fd92ff33",
+        "name": "probe/out/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/out/digest.md",
+        "sha256": "cfbdcf29070d8c958529740c803d2ce91d0bf4f9b4d8a770d9192dfdd60599e8",
+        "size_bytes": 1516
+      },
+      {
+        "artifact_id": "449387d7-998c-4890-a13e-49aacb2504a2",
+        "name": "probe/out2/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/out2/digest.json",
+        "sha256": "571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599",
+        "size_bytes": 477
+      },
+      {
+        "artifact_id": "7618f780-039e-4193-b340-b825d8c1fb09",
+        "name": "probe/out2/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/out2/digest.md",
+        "sha256": "cfbdcf29070d8c958529740c803d2ce91d0bf4f9b4d8a770d9192dfdd60599e8",
+        "size_bytes": 1516
+      },
+      {
+        "artifact_id": "199893ec-5515-4719-b4de-c3220a23742d",
+        "name": "probe/probe-evidence.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/probe-evidence.json",
+        "sha256": "59f911031b71901eb30614fd7dc09e701d912a7277fb3610f50e7a2abe0de128",
+        "size_bytes": 2858
+      },
+      {
+        "artifact_id": "d41b5b16-76f7-46a5-9294-30816fcd92ac",
+        "name": "probe/stdout.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/stdout.json",
+        "sha256": "890b0b74858de86b5b21ac7812d4fd77284b89a5b188764f9206527e2449d9ea",
+        "size_bytes": 1424
+      },
+      {
+        "artifact_id": "59ba9f6d-ee8f-4c6d-b3c8-4defcf313bd0",
+        "name": "qa-summary.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/qa-summary.md",
+        "sha256": "37812f0e20de3bcb71689b2c50e79d21ad6d9de87c970758723e44ec8adb7ae4",
+        "size_bytes": 14105
+      },
+      {
+        "artifact_id": "8b07b548-4591-4407-9756-5c840fdf4c9f",
+        "name": "verification/independent-verification.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/verification/independent-verification.json",
+        "sha256": "5a345a73549476ee3250328bf87a1211c7245412f6dd64aace3669fe93e3bbec",
+        "size_bytes": 13535
+      },
+      {
+        "artifact_id": "e1fc6aec-e3b7-44ba-8830-e6136c220840",
+        "name": "verification/independent-verification.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/verification/independent-verification.md",
+        "sha256": "16c154ddb8ac11f46666cfe46c02aa3234fee2727fe27c5680c673ae6e5cfa20",
+        "size_bytes": 10412
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "4b1d8f7dbac0860e395ce8b0efdfda6ca1906c06fb54091733c7175dbc751fa6",
+    "created_at": "2026-11-16T11:51:51.067Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+    "epoch_id": "d6d63acd-1954-4801-9238-13073e61ca4c",
+    "candidate_sha256": "4b1d8f7dbac0860e395ce8b0efdfda6ca1906c06fb54091733c7175dbc751fa6",
+    "execution_output_sha256": "3af90321ffa672402684f27507f96b55bb38b5d7ba3529654a451b7886ee13c4",
+    "evidence_sha256": "af3b5cf233f69516e3a22e6f424c02d24a4fd8f2df08ee43adac6d7073802f89",
+    "review": {
+      "passed": true,
+      "score": 8,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "notes": "Both parts agree. observation.json names observation-digest-v1 as the missing capability and records one bounded acquisition of a stdlib-only Node procedure at a stable in-workspace path (bin/observation-digest-v1.js, sha256 8daae21f...), matching the host manifest. The host gate released only the exact qualified command and refused other forms, showing host-side qualification and a replan onto that procedure. Part 2 corroborates real behaviour with three distinct input-rejection cases (non-integer value, empty observations array, malformed JSON) and a scheduled=0 edge case producing a coherent zero-total digest. Caveat noted by both parts: qualification is producer-run, mitigated by independent hand arithmetic in verification/."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "notes": "Both parts pass. invocation-receipt.json is registered and present (5920 B, sha256 98671781...586f per host registry), recording attempt ID, executable path and sha256 (8daae21f..., gate-verified and matching the host manifest), exit 0, empty stderr, invocation_count 1, and the two positional args in the spec's exact order. The output directory is the workspace root, not a probe directory. The `--` token in argv is a Node option terminator forced by the host gate, never reaches the procedure, and the two positional arguments remain exact. Indirect byte evidence is strong: final digest.json and digest.md hashes equal the hashes of outputs produced by the procedure in probe/out and probe/out2, so registered bytes are the procedure's own output rather than hand-written."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "notes": "Both parts independently recomputed from the fixture rows (North/Harbor 12,11,2; South/Harbor 8,8,1; North/Ridge 10,7,3): row_count 3; scheduled 30; completed 26; incidents 6; 26/30 = 86.666... -> 86.67 (half-up, not truncation); North 2 rows, 22/18/5, 18/22 = 81.818... -> 81.82; South 1 row, 8/8/1, 100.00. digest.json matches on every field, all values are JSON numbers, sites is an object keyed North and South with totals, and site sums reconcile (2+1=3, 22+8=30, 18+8=26, 5+1=6). digest.md renders the same values with a documented 7-step method covering input shape, pooled formula, half-up rounding, zero-denominator rule and cross-checks; the pooled formula is used rather than an unweighted mean of site percentages. Its hash cfbdcf29...99e8 matches the host manifest and the probe copies."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "notes": "Both parts pass. The host candidate registry lists every deliverable with a host-computed sha256 and size: digest.json 571d8fd2...1099 (477 B, rev 2), digest.md cfbdcf29...99e8 (1516 B, rev 2), invocation-receipt.json 98671781...586f, both verification reports (rev 2) and the probe evidence. The two digest hashes equal the hashes of independently-run probe outputs, giving meaningful byte-level corroboration that the final artifacts are the procedure's output and were not edited afterwards. Independent Nox QA is this review. Remaining blemishes are non-blocking: producer reports leave three hashes null (the host supplies them), and stated sizes for digest.md read 1514 B against the host's 1516 B."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "Several byte sizes appear to be character counts rather than UTF-8 byte lengths: the receipt, analyst and registration records and qa-summary state digest.md as 1514 bytes while the host manifest and probe copies record 1516 for the same sha256 (em dash encodes as 3 bytes), and the registration record gives verification/independent-verification.md as 10241 against a host value of 10412. The 'bytes_unchanged' / 'byte-identical' evidence therefore rests on inaccurate counts, though no content difference is implied since hashes agree.",
+          "severity": "minor"
+        },
+        {
+          "issue": "digest.md's method section says 'Read the fixture JSON' without naming input/pilot.observations.json, so a reader holding only digest.md must infer the input locator. All other method elements (input shape, pooled formula, half-up rounding, zero-denominator rule, cross-checks) are present and correct, and the procedure's fixed positional arguments make the numbers reproducible.",
+          "severity": "minor"
+        },
+        {
+          "issue": "No role in the run recomputed any hash: the qa-summary records sha256 as null for invocation-receipt.json and both verification reports and labels only the two digest hashes as procedure-reported. The host registry does carry hashes for all of them, but the producers' own evidence on its face is incomplete for criterion 4.",
+          "severity": "minor"
+        },
+        {
+          "issue": "sites.South.completion_percent is serialized as the JSON literal 100 while digest.md renders 100.00. The value is numerically correct, the 2-decimal requirement applies to the top-level field (86.67), and JSON numbers cannot carry fixed scale without breaking the numeric-typing requirement. Representational only, correctly flagged rather than hidden.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The invocation receipt's timestamp (2026-11-16T11:35:29Z) is derived from the epoch embedded in the mission report directory name rather than read from a clock, because the shell was gated to the single node command and refused `date`. Disclosed and labelled a lower bound, but it is not an observed invocation time.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The analyst quoted verification-report sha256 prefixes 73aab63e... / 04100c3a..., while the final manifest shows revision 2 with 5a345a73... / 16c154dd..., suggesting the report bytes changed when re-registered. Consistent with the revision bump; no downstream artifact depends on these hashes.",
+          "severity": "minor"
+        },
+        {
+          "issue": "Negative-test claims for 'relative input path' and 'missing arguments' have no corresponding artifacts, and the bad*.err contents were not shown in part 1 (part 2 did confirm bad1/bad2/bad3 error cases).",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Record byte sizes as UTF-8 byte lengths, not character counts, in receipts, registration records and close-out summaries, and reconcile the 1514 vs 1516 digest.md figure.",
+        "Add the fixture path (input/pilot.observations.json) to the digest.md method section so the document is self-contained, ideally by parameterizing the procedure rather than hand-editing generated output.",
+        "Have the host or a verifier with shell access recompute sha256 for every registered artifact and populate the receipt and reports instead of leaving nulls.",
+        "Explain in the close-out why the verification-report sha256 changed between the analyst's save and revision 2, so the content-identical claim is corroborated.",
+        "Capture the real invocation timestamp from host-side instrumentation keyed to gate release instead of deriving it from the directory-name epoch.",
+        "Store a machine-readable expected-values source derived independently of the procedure (or the analyst's hand-arithmetic transcript) alongside the probe evidence, so qualification is not validated solely by the producer's own expected numbers."
+      ],
+      "verdict": "PASS: PASS: Both parts independently recomputed the digest values from the fixture bytes and confirmed row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67 (half-up), and per-site totals (North 81.82, South 100.00) matching digest.json and digest.md; the acquired observation-digest-v1 procedure sits at a stable in-workspace path with bytes matching the host manifest, was invoked with the exact fixed positional arguments under a reproducible receipt, and all deliverables are host-registered artifacts whose hashes equal the procedure's own probe-run outputs. Remaining defects are documentation and bookkeeping minors (byte-size counts, unnamed fixture path in the method text, null self-reported hashes, derived timestamp) that do not affect the numeric results or artifact integrity."
+    },
+    "gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "reason": "Both parts agree. observation.json names observation-digest-v1 as the missing capability and records one bounded acquisition of a stdlib-only Node procedure at a stable in-workspace path (bin/observation-digest-v1.js, sha256 8daae21f...), matching the host manifest. The host gate released only the exact qualified command and refused other forms, showing host-side qualification and a replan onto that procedure. Part 2 corroborates real behaviour with three distinct input-rejection cases (non-integer value, empty observations array, malformed JSON) and a scheduled=0 edge case producing a coherent zero-total digest. Caveat noted by both parts: qualification is producer-run, mitigated by independent hand arithmetic in verification/."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "reason": "Both parts pass. invocation-receipt.json is registered and present (5920 B, sha256 98671781...586f per host registry), recording attempt ID, executable path and sha256 (8daae21f..., gate-verified and matching the host manifest), exit 0, empty stderr, invocation_count 1, and the two positional args in the spec's exact order. The output directory is the workspace root, not a probe directory. The `--` token in argv is a Node option terminator forced by the host gate, never reaches the procedure, and the two positional arguments remain exact. Indirect byte evidence is strong: final digest.json and digest.md hashes equal the hashes of outputs produced by the procedure in probe/out and probe/out2, so registered bytes are the procedure's own output rather than hand-written."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "reason": "Both parts independently recomputed from the fixture rows (North/Harbor 12,11,2; South/Harbor 8,8,1; North/Ridge 10,7,3): row_count 3; scheduled 30; completed 26; incidents 6; 26/30 = 86.666... -> 86.67 (half-up, not truncation); North 2 rows, 22/18/5, 18/22 = 81.818... -> 81.82; South 1 row, 8/8/1, 100.00. digest.json matches on every field, all values are JSON numbers, sites is an object keyed North and South with totals, and site sums reconcile (2+1=3, 22+8=30, 18+8=26, 5+1=6). digest.md renders the same values with a documented 7-step method covering input shape, pooled formula, half-up rounding, zero-denominator rule and cross-checks; the pooled formula is used rather than an unweighted mean of site percentages. Its hash cfbdcf29...99e8 matches the host manifest and the probe copies."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "reason": "Both parts pass. The host candidate registry lists every deliverable with a host-computed sha256 and size: digest.json 571d8fd2...1099 (477 B, rev 2), digest.md cfbdcf29...99e8 (1516 B, rev 2), invocation-receipt.json 98671781...586f, both verification reports (rev 2) and the probe evidence. The two digest hashes equal the hashes of independently-run probe outputs, giving meaningful byte-level corroboration that the final artifacts are the procedure's output and were not edited afterwards. Independent Nox QA is this review. Remaining blemishes are non-blocking: producer reports leave three hashes null (the host supplies them), and stated sizes for digest.md read 1514 B against the host's 1516 B."
+        }
+      ],
+      "llm_score": 8,
+      "llm_passed": true
+    },
+    "receipt_sha256": "b249adb780dbf4a1f3f766055caab79f845958dd92f71f1f9ea7715d42a11f20",
+    "created_at": "2026-11-16T11:54:19.533Z"
+  }
+}

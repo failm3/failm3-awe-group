@@ -1,0 +1,204 @@
+{
+  "capability": "observation-digest-v1",
+  "independent_recomputation": {
+    "method": "python3 decimal.Decimal ROUND_HALF_UP quantize to 0.01, cross-checked against an independently derived integer formula floor((200*c+s)/(2*s)); fixture parsed with json and summed with Python ints",
+    "python_version": "3.14.4",
+    "fixture": "input/pilot.observations.json",
+    "recomputed": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": "86.67",
+      "sites": {
+        "North": {
+          "rows": 2,
+          "scheduled": 22,
+          "completed": 18,
+          "incidents": 5,
+          "completion_percent": "81.82"
+        },
+        "South": {
+          "rows": 1,
+          "scheduled": 8,
+          "completed": 8,
+          "incidents": 1,
+          "completion_percent": "100.00"
+        }
+      }
+    },
+    "percentage_routes": {
+      "total": [
+        "86.67",
+        "86.67"
+      ],
+      "North": [
+        "81.82",
+        "81.82"
+      ],
+      "South": [
+        "100.00",
+        "100.00"
+      ]
+    },
+    "percentage_routes_agree": true,
+    "site_sums_roll_up_to_totals": true
+  },
+  "rounding_boundary_cases": [
+    {
+      "completed": 1,
+      "scheduled": 32,
+      "exact": "3.125",
+      "half_up": "3.13",
+      "half_even_bankers": "3.12",
+      "int_formula": "3.13",
+      "expected_half_up": "3.13",
+      "pass": true,
+      "differs_from_half_even": true
+    },
+    {
+      "completed": 3,
+      "scheduled": 32,
+      "exact": "9.375",
+      "half_up": "9.38",
+      "half_even_bankers": "9.38",
+      "int_formula": "9.38",
+      "expected_half_up": "9.38",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 5,
+      "scheduled": 32,
+      "exact": "15.625",
+      "half_up": "15.63",
+      "half_even_bankers": "15.62",
+      "int_formula": "15.63",
+      "expected_half_up": "15.63",
+      "pass": true,
+      "differs_from_half_even": true
+    },
+    {
+      "completed": 1,
+      "scheduled": 800,
+      "exact": "0.125",
+      "half_up": "0.13",
+      "half_even_bankers": "0.12",
+      "int_formula": "0.13",
+      "expected_half_up": "0.13",
+      "pass": true,
+      "differs_from_half_even": true
+    },
+    {
+      "completed": 7,
+      "scheduled": 1600,
+      "exact": "0.4375",
+      "half_up": "0.44",
+      "half_even_bankers": "0.44",
+      "int_formula": "0.44",
+      "expected_half_up": "0.44",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 1,
+      "scheduled": 8,
+      "exact": "12.5",
+      "half_up": "12.50",
+      "half_even_bankers": "12.50",
+      "int_formula": "12.50",
+      "expected_half_up": "12.50",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 1,
+      "scheduled": 3,
+      "exact": "33.33333333333333333333333333",
+      "half_up": "33.33",
+      "half_even_bankers": "33.33",
+      "int_formula": "33.33",
+      "expected_half_up": "33.33",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 2,
+      "scheduled": 3,
+      "exact": "66.66666666666666666666666667",
+      "half_up": "66.67",
+      "half_even_bankers": "66.67",
+      "int_formula": "66.67",
+      "expected_half_up": "66.67",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 0,
+      "scheduled": 0,
+      "exact": "0",
+      "half_up": "0.00",
+      "half_even_bankers": "0.00",
+      "int_formula": "0.00",
+      "expected_half_up": "0.00",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 0,
+      "scheduled": 7,
+      "exact": "0",
+      "half_up": "0.00",
+      "half_even_bankers": "0.00",
+      "int_formula": "0.00",
+      "expected_half_up": "0.00",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 7,
+      "scheduled": 7,
+      "exact": "100",
+      "half_up": "100.00",
+      "half_even_bankers": "100.00",
+      "int_formula": "100.00",
+      "expected_half_up": "100.00",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 81,
+      "scheduled": 100,
+      "exact": "81",
+      "half_up": "81.00",
+      "half_even_bankers": "81.00",
+      "int_formula": "81.00",
+      "expected_half_up": "81.00",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 26,
+      "scheduled": 30,
+      "exact": "86.66666666666666666666666667",
+      "half_up": "86.67",
+      "half_even_bankers": "86.67",
+      "int_formula": "86.67",
+      "expected_half_up": "86.67",
+      "pass": true,
+      "differs_from_half_even": false
+    },
+    {
+      "completed": 18,
+      "scheduled": 22,
+      "exact": "81.81818181818181818181818182",
+      "half_up": "81.82",
+      "half_even_bankers": "81.82",
+      "int_formula": "81.82",
+      "expected_half_up": "81.82",
+      "pass": true,
+      "differs_from_half_even": false
+    }
+  ],
+  "rounding_boundary_all_pass": true
+}

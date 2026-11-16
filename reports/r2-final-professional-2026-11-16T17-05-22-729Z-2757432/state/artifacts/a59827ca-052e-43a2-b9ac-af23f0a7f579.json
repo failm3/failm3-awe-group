@@ -1,0 +1,14 @@
+{
+  "id": "a59827ca-052e-43a2-b9ac-af23f0a7f579",
+  "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics",
+  "type": "file",
+  "name": "metrics.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics/metrics.json",
+  "content": "{\n  \"row_count\": 18,\n  \"totals\": {\n    \"work_orders\": 233,\n    \"completed_orders\": 217,\n    \"defects\": 18,\n    \"planned_minutes\": 14985,\n    \"actual_minutes\": 15440,\n    \"completion_percent\": 93.13,\n    \"minutes_per_completed_order\": 71.15,\n    \"schedule_variance_minutes\": 455\n  },\n  \"teams\": {\n    \"Atlas\": {\n      \"work_orders\": 95,\n      \"completed_orders\": 89,\n      \"defects\": 7,\n      \"planned_minutes\": 5700,\n      \"actual_minutes\": 5780,\n      \"completion_percent\": 93.68,\n      \"minutes_per_completed_order\": 64.94,\n      \"schedule_variance_minutes\": 80\n    },\n    \"Birch\": {\n      \"work_orders\": 75,\n      \"completed_orders\": 71,\n      \"defects\": 3,\n      \"planned_minutes\": 4875,\n      \"actual_minutes\": 4910,\n      \"completion_percent\": 94.67,\n      \"minutes_per_completed_order\": 69.15,\n      \"schedule_variance_minutes\": 35\n    },\n    \"Cedar\": {\n      \"work_orders\": 63,\n      \"completed_orders\": 57,\n      \"defects\": 8,\n      \"planned_minutes\": 4410,\n      \"actual_minutes\": 4750,\n      \"completion_percent\": 90.48,\n      \"minutes_per_completed_order\": 83.33,\n      \"schedule_variance_minutes\": 340\n    }\n  }\n}\n",
+  "created_at": "2026-11-16T17:06:27.342Z",
+  "metadata": {
+    "size_bytes": 1127,
+    "sha256": "07eacb6c6e3ab2e1f96b0f726076fd34b26a41612d2ea7de5355db175e75db02",
+    "revision": 1
+  }
+}

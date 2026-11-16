@@ -1,0 +1,147 @@
+{
+  "mission_id": "r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "capability": "observation-digest-v1",
+  "role": "final Nox QA closure (read-only; no deliverable modified)",
+  "approved_specification_sha256": "e6f55a6b7f80e0f22eddd43741715250f95bac2441238f0615b3d2ce3589db0c",
+  "verdict": "PASS with residual gaps (see residual_gaps)",
+  "method": "Fresh sha256 of every file under the mission artifact root via sha256sum; receipt and observation.json parsed with python3 and compared field by field against the approved path, hash and args; a new QA arithmetic recomputation (Decimal ROUND_HALF_UP, 27 checks) written separately from verify/recompute.py and from the procedure; digest.md cells matched against the recomputed values. No packages, no network, no writes to deliverables.",
+  "receipt_checks": {
+    "receipt_artifact": "invocation-receipt.json",
+    "receipt_artifact_id": "06f5b6db-2db5-4c0f-97f7-46dbb232cd08",
+    "receipt_present_on_disk": true,
+    "receipt_sha256": "4095eda633765ad3fc456164c885569382758e008b7a9d19d005234bc3805f4b",
+    "receipt_bytes": 4055,
+    "invocation_count": 1,
+    "exit_code": 0,
+    "stderr_empty": true,
+    "cwd_is_mission_root": true,
+    "output_dir_written_is_mission_root": true,
+    "output_dir_is_probe_dir": false,
+    "host_qualified_attempt": "dcaff6ab-0a59-4552-8e4a-c28f3e88613f",
+    "executable_path_in_receipt_matches_qualified_target": true,
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/procedures/observation-digest-v1.js",
+    "executable_sha256_in_receipt": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3",
+    "executable_sha256_fresh_recomputation": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3",
+    "executable_sha256_matches_qualified_target": true,
+    "fixed_args_exact": true,
+    "fixed_args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604"
+    ],
+    "argv_in_receipt_equals_node_dashdash_exe_plus_fixed_args": true,
+    "observation_json_local_target_args_equal_fixed_args": true
+  },
+  "acceptance_criteria": [
+    {
+      "id": 1,
+      "text": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "result": "pass",
+      "evidence": [
+        "observation.json (sha256 b9da2c57ad5d1b9333422140268242c927d5d83b92801ae35ce6fe3b651e7e94) names capability observation-digest-v1, status available, acquired procedures/observation-digest-v1.js, and records one bounded authoring step",
+        "local_target.executable_path and executable_sha256 equal the approved qualified target; fresh sha256 of procedures/observation-digest-v1.js is 49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3",
+        "receipt cites host_qualified_attempt dcaff6ab-0a59-4552-8e4a-c28f3e88613f",
+        "qualification does not rest on the model-authored observation alone: the analyst's independent recomputation and this QA's recomputation both agree with the procedure output"
+      ],
+      "residual_gap": "QA cannot read the host's qualification record or the head's planning transcript. The head's acquire-then-replan sequence and the host attempt id are accepted from observation.json and the receipt, not independently inspected."
+    },
+    {
+      "id": 2,
+      "text": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "result": "pass",
+      "evidence": [
+        "receipt invocation-receipt.json (artifact 06f5b6db-2db5-4c0f-97f7-46dbb232cd08) present on disk, sha256 4095eda633765ad3fc456164c885569382758e008b7a9d19d005234bc3805f4b, 4055 bytes",
+        "executable path and sha256 in receipt equal the qualified target; fresh sha256 matches",
+        "fixed args are exactly [fixture path, mission artifact root]; receipt argv is node, --, executable, fixture, root; count 1; exit 0; stderr empty; output dir is the mission root, not a probe dir",
+        "executable bytes unchanged since the run: write-scope rerun by the analyst produced byte-identical digests, and the fresh hash equals the qualified hash"
+      ],
+      "residual_gap": "The receipt's executable.hash_source says the hash was copied from observation.json and not recomputed at invocation time. The match to the qualified hash is therefore established now (fresh hash) and by byte-identical reproduction, not by a hash taken at the moment of the run."
+    },
+    {
+      "id": 3,
+      "text": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "result": "pass",
+      "evidence": {
+        "qa_recompute_checks": "27 of 27 pass, 0 failures",
+        "totals": {"row_count": 3, "scheduled": 30, "completed": 26, "incidents": 6, "completion_percent": "86.67"},
+        "sites": {
+          "North": {"rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": "81.82"},
+          "South": {"rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": "100.00"}
+        },
+        "completion_percent_raw_json_literals": ["86.67", "81.82", "100.00"],
+        "site_sums_roll_up_to_totals": true,
+        "digest_md_matches_values": "every Totals and Sites table cell matches the recomputed value",
+        "digest_md_method": "## Method section with 5 steps (row list, integer sums, half-up 2-decimal rule, per-site grouping, roll-up property) and a Reproduce line",
+        "corroboration": "analyst verification-report.json: 37 of 37 comparisons pass, half-up boundary cases 1/32, 5/32, 1/800 distinguish half-up from banker's rounding and the procedure uses half-up"
+      },
+      "residual_gap": "none"
+    },
+    {
+      "id": 4,
+      "text": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "result": "pass",
+      "evidence": [
+        "Nox QA: fresh sha256 of digest.json, digest.md and each verification artifact computed from disk; sizes and hashes equal those recorded by the analyst and the receipt (see per_file_sha256)",
+        "digest.json (470 B) and digest.md (1301 B) match the byte counts the executor read back and registered",
+        "artifact ids for all deliverables and verification artifacts are listed in registered_artifact_inventory"
+      ],
+      "residual_gap": "QA has no tool to read registry-stored bytes or the host gate's verification result. It confirms the on-disk bytes match fresh hashes; that the registered copies are byte-identical to disk, and the host gate's own verification outcome, are accepted from the executor and analyst reports."
+    }
+  ],
+  "per_file_sha256": {
+    "digest.json": {"sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81", "bytes": 470, "matches_prior_record": true},
+    "digest.md": {"sha256": "ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef", "bytes": 1301, "matches_prior_record": true},
+    "invocation-receipt.json": {"sha256": "4095eda633765ad3fc456164c885569382758e008b7a9d19d005234bc3805f4b", "bytes": 4055, "matches_prior_record": true},
+    "procedures/observation-digest-v1.js": {"sha256": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3", "bytes": 9417, "matches_prior_record": true},
+    "input/pilot.observations.json": {"sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766", "bytes": 474, "matches_prior_record": true},
+    "observation.json": {"sha256": "b9da2c57ad5d1b9333422140268242c927d5d83b92801ae35ce6fe3b651e7e94", "bytes": 2833, "matches_prior_record": true},
+    "verification-report.json": {"sha256": "d90c10d4e609f887b7546fb51fa19427b403fab5ebfac8c37ba2d1ab32dde363", "bytes": 14045, "matches_prior_record": "size matches; hash not recorded upstream (a file cannot list its own hash)"},
+    "verification.md": {"sha256": "df86bec0124a46b1392d5b4ae2d30591d5b2193faec19809ffc078ffae8123c1", "bytes": 4678, "matches_prior_record": "hash not recorded upstream"},
+    "verify/recompute.py": {"sha256": "30907ce5f93cc8e70b5ca6bc09dba660eebbeac20556ceb5c14376c90198b6e9", "bytes": 11236, "matches_prior_record": "hash not recorded upstream"},
+    "verify/recompute-evidence.json": {"sha256": "11b316465f05b137b534b7b0a44e20c8353c1f15192cff91412f69b35470ce1d", "bytes": 5056, "matches_prior_record": "hash not recorded upstream"},
+    "verify/write-scope-evidence.json": {"sha256": "9f88e617a2b10b9641905ffc4cb48b654a8b1ee0aae729715aa09a0c898c791c", "bytes": 1274, "matches_prior_record": "hash not recorded upstream"}
+  },
+  "probe_corroboration": {
+    "probe-digest.json, probe/out/digest.json, probe/sandbox/digest.json": "sha256 4cf59af0... identical to final digest.json",
+    "probe/out/digest.md, probe/sandbox/digest.md": "sha256 ee224a46... identical to final digest.md",
+    "note": "probe files are evidence only and are not deliverables; the final run wrote to the mission root, not a probe directory"
+  },
+  "registered_artifact_inventory": {
+    "source_of_ids": "artifact ids as reported by the executor and analyst when registering; QA has no registry listing tool, so ids are not re-queried",
+    "deliverables": [
+      {"name": "digest.json", "artifact_id": "3fa38b51-dac1-4a66-94e7-8afc56afe07e"},
+      {"name": "digest.md", "artifact_id": "2ca6a64b-8660-4d30-8028-bc27c44af705"}
+    ],
+    "receipt": [
+      {"name": "invocation-receipt.json", "artifact_id": "06f5b6db-2db5-4c0f-97f7-46dbb232cd08"}
+    ],
+    "verification_artifacts": [
+      {"name": "verification-report.json", "artifact_id": "82f85f5c-5605-4189-b1bf-d528918beb8e"},
+      {"name": "verification.md", "artifact_id": "cb587e2f-02e3-4ea7-8228-7ee4f53718dc"},
+      {"name": "verify/recompute.py", "artifact_id": "4f4a032b-378b-43f4-b27a-eb7b97f9ddfa"},
+      {"name": "verify/recompute-evidence.json", "artifact_id": "e732964e-46d5-47f1-b6b6-1dd3ec5e8e5a"},
+      {"name": "verify/write-scope-evidence.json", "artifact_id": "cbc9959c-d01d-49a6-8b65-6829e73637ac"}
+    ],
+    "qa": [
+      {"name": "qa-report.json", "artifact_id": "assigned on registration by this save; its own hash cannot be listed inside itself"}
+    ],
+    "on_disk_without_artifact_id_in_upstream_reports": [
+      "procedures/observation-digest-v1.js",
+      "input/pilot.observations.json",
+      "observation.json",
+      "probe-digest.json",
+      "probe/** (edge, out, sandbox)"
+    ]
+  },
+  "residual_gaps": [
+    "Registry-stored bytes and the host gate's verification result cannot be read by QA; both are accepted from upstream reports. Fresh on-disk hashes match every recorded value.",
+    "The receipt's executable hash was copied from observation.json at invocation time. The match to the qualified hash is established by fresh hashing and byte-identical reruns.",
+    "The head's acquire-then-replan sequence and the host qualification attempt (dcaff6ab-0a59-4552-8e4a-c28f3e88613f) are accepted from observation.json and the receipt.",
+    "The procedure and fixture have no artifact ids in the upstream reports; if the host gate requires them registered, that registration is not confirmed here.",
+    "The upstream file list shows verify/.tmp_*.txt scratch files. They are absent on disk now and are not part of the deliverable set."
+  ],
+  "risks_carried_forward": [
+    "A model-authored observation is not qualification",
+    "Visible examples do not replace independent arithmetic verification"
+  ],
+  "constraints_honored": "read-only on deliverables; no packages, network, publishing, deployment, purchases or external changes; scope limited to the mission artifact root"
+}

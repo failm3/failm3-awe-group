@@ -1,0 +1,275 @@
+{
+  "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+  "title": "Source-grounded service pilot decision brief",
+  "description": "Bounded local professional-mission harness; engineering practice only.",
+  "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+  "acceptance_criteria": [
+    "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+    "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+    "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+    "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+    "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief."
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-16T17:05:22.898Z",
+  "updated_at": "2026-11-16T17:09:39.306Z",
+  "artifacts": [
+    "4f1dc7b7-5827-4e64-8ec6-6b48dec3c957",
+    "496b3397-2e8f-4313-b5e4-ac0c02046928",
+    "f422b5d7-922a-4a96-ad37-1e42a844fb92",
+    "cb088c37-e178-40be-b652-cb664a5fdb86",
+    "01c9fe51-c825-4110-b139-6910488b45a6",
+    "4ad00bcd-7e80-4461-ab4e-d712e3f1ff83"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "Source-grounded service pilot decision brief",
+      "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+      "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research. Read only sources/pilot-charter.txt, sources/weekly-observations.txt and sources/reviewer-note.txt as factual mission inputs; these input files must remain byte-identical. Deliver research-brief.md as the substantive final artifact plus bounded child evidence notes required by recursive execution. Use exactly one top-level research-coordinator delegation. It must perform all source inventory, recursion and final synthesis itself: recursively delegate exactly two distinct source-analysis children in one parallel delegate call, save their substantive outputs exactly as evidence-alder.md and evidence-brook-cove.md, then synthesize their persisted contributions into research-brief.md. Do not add separate top-level analysts, reviewers or writers; production independent QA runs only after the coordinator returns. Children and coordinator may read/write only within this workspace. No web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+      "acceptance_criteria": [
+        "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+        "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+        "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+        "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+        "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief."
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "save_artifact",
+        "delegate"
+      ],
+      "suggested_agents": [
+        "research-coordinator",
+        "researcher",
+        "writer"
+      ],
+      "estimated_complexity": "complex",
+      "risks": [
+        "Citation drift or unsupported extrapolation must fail",
+        "Parallel recursion must be observed in the production tree, not inferred from prose"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-16T17:05:22.903Z",
+      "spec_hash": "e862979d30d3ce2612785be46731d8f273613bdaae4e48cb061172905571f76c",
+      "snapshot": {
+        "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+        "title": "Source-grounded service pilot decision brief",
+        "description": "Bounded local professional-mission harness; engineering practice only.",
+        "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+        "acceptance_criteria": [
+          "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+          "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief."
+        ],
+        "specification": {
+          "title": "Source-grounded service pilot decision brief",
+          "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+          "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research. Read only sources/pilot-charter.txt, sources/weekly-observations.txt and sources/reviewer-note.txt as factual mission inputs; these input files must remain byte-identical. Deliver research-brief.md as the substantive final artifact plus bounded child evidence notes required by recursive execution. Use exactly one top-level research-coordinator delegation. It must perform all source inventory, recursion and final synthesis itself: recursively delegate exactly two distinct source-analysis children in one parallel delegate call, save their substantive outputs exactly as evidence-alder.md and evidence-brook-cove.md, then synthesize their persisted contributions into research-brief.md. Do not add separate top-level analysts, reviewers or writers; production independent QA runs only after the coordinator returns. Children and coordinator may read/write only within this workspace. No web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+          "acceptance_criteria": [
+            "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+            "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+            "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+            "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+            "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief."
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_list",
+            "file_write",
+            "save_artifact",
+            "delegate"
+          ],
+          "suggested_agents": [
+            "research-coordinator",
+            "researcher",
+            "writer"
+          ],
+          "estimated_complexity": "complex",
+          "risks": [
+            "Citation drift or unsupported extrapolation must fail",
+            "Parallel recursion must be observed in the production tree, not inferred from prose"
+          ]
+        }
+      }
+    },
+    "execution_owner": {
+      "owner_id": "ea09a765-18e8-49a5-9f64-56619221ca2f",
+      "pid": 2757432,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-16T17:05:22.937Z",
+      "released_at": "2026-11-16T17:09:39.306Z"
+    },
+    "mission_admission": {
+      "version": 1,
+      "mode": "engineering-practice",
+      "missionId": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+      "specHash": "e862979d30d3ce2612785be46731d8f273613bdaae4e48cb061172905571f76c"
+    },
+    "execution": {
+      "delegations": [
+        {
+          "agent_role": "executor",
+          "status": "success",
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "delegate",
+            "file_write"
+          ],
+          "artifacts": [
+            "cb088c37-e178-40be-b652-cb664a5fdb86",
+            "01c9fe51-c825-4110-b139-6910488b45a6",
+            "4ad00bcd-7e80-4461-ab4e-d712e3f1ff83"
+          ],
+          "qualified_attempt_ids": [],
+          "usage": {
+            "input_tokens": 110414,
+            "output_tokens": 12939,
+            "total_tokens": 123353,
+            "reasoning_tokens": 0,
+            "cached_input_tokens": 75315
+          },
+          "duration_ms": 199457
+        }
+      ],
+      "models_used": [
+        "claude-sonnet-5-5"
+      ],
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "delegate",
+        "file_write"
+      ],
+      "totals": {
+        "input_tokens": 110414,
+        "output_tokens": 12939,
+        "total_tokens": 123353,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 75315
+      },
+      "qa_score": 9,
+      "qa_passed": true,
+      "repair_iterations": 0
+    },
+    "execution_adaptations": 0,
+    "candidate": {
+      "epoch_id": "5f812012-545f-4b1a-9364-f6679d4504ae",
+      "candidate_sha256": "61cdabae587e9381ddf239abb58f937d71ef0e0c174b4834a4a554e874e8ce0d",
+      "repair_iteration": 0,
+      "evidence_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/candidate-evidence/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/5f812012-545f-4b1a-9364-f6679d4504ae.json"
+    },
+    "delegation_tree": {
+      "total_agents": 3,
+      "max_depth": 1,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:top0",
+          "role": "executor",
+          "started_at": "2026-11-16T17:05:47.837Z",
+          "task": "Act as the ONE top-level research-coordinator for mission r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research. Sequence, all inside the mission workspace /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research: (1) inventory the workspace with file_list and read all three immutable inputs — sources/pilot-charter.txt, sources/weekly-observations.txt, sources/reviewer-note.txt — mapping them to S1, S2, S3 respectively and confirming byte-identical inputs (no edits to them). (2) Issue exactly ONE delegate call containing exactly TWO distinct child tasks marked parallel: child A = source analysis of Alder evidence, child B = source analysis of Brook and Cove evidence, each child told to output a bounded evidence note with per-claim [S1]/[S2]/[S3] citations and no extrapolation. (3) Persist the children's substantive outputs verbatim as evidence-alder.md and evidence-brook-cove.md, attributed to the producing child. (4) Synthesize research-brief.md from the persisted notes: executive recommendation; separate Factual Findings and Limitations sections; Sources section mapping S1->sources/pilot-charter.txt, S2->sources/weekly-observations.txt, S3->sources/reviewer-note.txt; must state the three 480-request site totals, the 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change, each with an [S#] citation; explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove, exclude weekend and Depot generalization, and make no claim of a completed wider rollout. (5) Confirm all three artifacts exist via save_artifact/file_list and report the persisted paths plus the observed parallel child launches.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [
+            "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n1",
+            "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n2"
+          ],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "delegate",
+            "file_write"
+          ],
+          "artifacts": [
+            "cb088c37-e178-40be-b652-cb664a5fdb86",
+            "01c9fe51-c825-4110-b139-6910488b45a6",
+            "4ad00bcd-7e80-4461-ab4e-d712e3f1ff83"
+          ],
+          "duration_ms": 199454,
+          "finished_at": "2026-11-16T17:09:07.286Z"
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n1",
+          "role": "evidence-analyst-alder",
+          "task": "Produce a bounded source-analysis evidence note covering the Alder site only, from the three immutable local pilot sources in the workspace (sources/pilot-charter.txt = S1, sources/weekly-observations.txt = S2, sources/reviewer-note.txt = S3). Read the three files at those paths in the mission workspace before writing. Extract every source statement that bears on Alder: the Alder measurement row (site-weeks, request total, delayed acknowledgements, supervisor escalations) [S2]; the program window, site list including Alder, baseline requests per site-week and manual acknowledgement median, routed acknowledgement median and receipt-timestamp method, and the runbook v1->v2 change date [S1]; the Alder comparison claim and the recommendation naming Alder routing practices [S3]; the independent sampling control and reconciliation covering Alder's sampled records [S2][S3]. State each claim with an inline [S1]/[S2]/[S3] citation. Do NOT extrapolate, do NOT compute rates or percentages, do NOT generalise beyond Alder, do NOT recommend anything yourself - if a source carries a recommendation, attribute it as the reviewer's recommendation with its citation. Explicitly list what the sources do NOT support about Alder (weekend behaviour, customer-level detail, causal attribution of the median change to the runbook change). Return the finished note as your output text for the coordinator to persist verbatim as evidence-alder.md. Do not write any files.",
+          "depth": 1,
+          "parent_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:top0",
+          "status": "failed",
+          "started_at": "2026-11-16T17:06:41.798Z",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read"
+          ],
+          "artifacts": [],
+          "finished_at": "2026-11-16T17:07:10.834Z",
+          "duration_ms": 29024
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n2",
+          "role": "evidence-analyst-brook-cove",
+          "task": "Produce a bounded source-analysis evidence note covering the Brook and Cove sites only, from the three immutable local pilot sources in the workspace (sources/pilot-charter.txt = S1, sources/weekly-observations.txt = S2, sources/reviewer-note.txt = S3). Read the three files at those paths in the mission workspace before writing. Extract every source statement that bears on Brook and Cove: their measurement rows (site-weeks, request totals, delayed acknowledgements, supervisor escalations) [S2]; the shared program window, site list including Brook and Cove, baseline requests per site-week, manual and routed acknowledgement medians and receipt-timestamp method, and the runbook v1->v2 change date, all as program-level statements that apply to Brook and Cove as pilot sites [S1]; the reviewer's relative ranking claim that Alder has the smallest delayed-acknowledgement count and fewest escalations (state it as a comparison in which Brook and Cove rank above Alder) [S3]; the recommendation to extend Alder routing practices to Brook and Cove for two weeks and the decision gate before any wider rollout [S3]; the 180-record sample reconciliation and the weekday-only data-quality note [S2][S3]. State each claim with an inline [S1]/[S2]/[S3] citation. Do NOT extrapolate, do NOT compute rates or percentages, do NOT generalise to weekend, Depot or sites beyond Brook and Cove, and do NOT add your own recommendation - quote the reviewer's and cite it. Explicitly list what the sources do NOT support (weekend/Depot performance, causal attribution, customer-level detail, evidence that the extension has happened). Return the finished note as your output text for the coordinator to persist verbatim as evidence-brook-cove.md. Do not write any files.",
+          "depth": 1,
+          "parent_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:top0",
+          "status": "failed",
+          "started_at": "2026-11-16T17:06:41.807Z",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read"
+          ],
+          "artifacts": [],
+          "finished_at": "2026-11-16T17:07:11.697Z",
+          "duration_ms": 29886
+        }
+      ]
+    },
+    "qa_gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "reason": "research-brief.md (7204 bytes, sha256 f6016213…) contains a distinct 'Executive Recommendation', 'Factual Findings' (6 numbered subsections) and 'Limitations' (8 items), with inline citations strictly in [S1]/[S2]/[S3] form — no other citation syntax appears. Both child evidence notes are persisted as separate artifacts (evidence-alder.md 2977 bytes, evidence-brook-cove.md 3435 bytes) and each carries a header attributing it to the specific producing child (evidence-analyst-alder / evidence-analyst-brook-cove), plus a 'Persisted by' provenance line."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+          "passed": true,
+          "reason": "Sources table maps S1→sources/pilot-charter.txt, S2→sources/weekly-observations.txt, S3→sources/reviewer-note.txt with per-source descriptions. Every factual/numerical statement in the brief and both evidence notes carries a bracketed citation (window, owner, sites, 120 requests/site-week, 18/11 medians, runbook date, all per-site rows, delay definition, 60-per-site sampling, 180 reconciliation, reviewer recommendation and gate). No source ID outside S1–S3 is referenced and no content appears that is absent from the three input files; the artifact set contains exactly the three declared inputs plus the three deliverables."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "reason": "Section 'Per-site request totals' states Alder 480 [S2], Brook 480 [S2], Cove 480 [S2] and reiterates all three carry 480. Section 'Delayed acknowledgements and escalations' gives Alder 31, Brook 43, Cove 37, each cited [S2]. Section 'Acknowledgement median change' states 18 minutes manual baseline → 11 minutes routed, cited [S1], and the executive summary repeats it [S1]. All three required numeric sets are present and correctly cited."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "reason": "Limitations 1, 2, 3 and 8 explicitly state weekday-only coverage [S1][S3], Depot exclusion [S1][S3], that no source reports a completed wider rollout, and that every finding is bounded to weekday sites Alder/Brook/Cove with generalization to weekends, Depot or any other population unsupported. The two-week extension is framed as the reviewer's prospective, gate-bound recommendation, not as something executed or measured — the brief explicitly notes no source records that the extension occurred. The 'Proceed to a bounded, time-boxed extension' recommendation is attributed to the reviewer and conditioned on repeat measurement, so it does not amount to a wider-rollout claim."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": true,
+          "reason": "Executor trace shows one coordinator run with exactly one top-level `delegate` call issued with parallel:true carrying exactly two distinct children (evidence-analyst-alder for Alder-only analysis; evidence-analyst-brook-cove for Brook and Cove), issued before any synthesis, with no other top-level delegation and no extra analysts/reviewers/writers. Independent corroboration in the bytes: the two evidence artifacts are substantively distinct and non-generic (site-scoped rows, different non-support lists, Brook/Cove ranking analysis vs Alder-only analysis), each attributed to its own child, and the brief's synthesis demonstrably draws on both plus the source inventory. The children's success:false status reflects a read-only tool grant, not a failure to launch; their full analytical output was captured and persisted by the coordinator as the spec assigns."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": true
+    }
+  },
+  "_rev": 7
+}

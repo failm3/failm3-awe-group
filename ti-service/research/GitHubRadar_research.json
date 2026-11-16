@@ -1,0 +1,257 @@
+{
+  "id": "GitHubRadar",
+  "research_status": "completed_public_web_first_pass",
+  "checked_at": "2026-11-12T05:52:42Z",
+  "author": "Manus AI",
+  "channel": {
+    "handle": "GitHubRadar",
+    "source_url": "https://t.me/GitHubRadar",
+    "title": "GitHub Radar",
+    "preview_url": "https://t.me/s/GitHubRadar",
+    "accessibility": "public_web_preview_accessible_without_login",
+    "description_observed": "Реклама (впн не берем): @duft88. Размещение в канале платное. Ссылка на Telega.in и РКН.",
+    "thematic_relevance": "high",
+    "relevance_reason": "В просмотренном фрагменте есть агентные платформы, автоматизация, MCP, обработка документов, память агентов, мониторинг и self-hosted инструменты с прямыми ссылками на GitHub. Это источник обнаружения, а не доказательство работоспособности.",
+    "history_method": "Публичная веб-лента /s/GitHubRadar содержит ссылку пагинации ?before=3559. Для выбранных публикаций отдельно прочитаны официальные Telegram widgets с ?embed=1. Полный исторический обход не выполнялся: его ведёт отдельный collector.",
+    "history_pagination_observed_url": "https://t.me/s/GitHubRadar?before=3559",
+    "history_boundary_reached": false,
+    "history_complete": false,
+    "completeness": "public_web_only",
+    "sample_message_ids": ["3559", "3560", "3561", "3562", "3563", "3564", "3565", "3566", "3568", "3569", "3571", "3572", "3573", "3575", "3576", "3577", "3578", "3579", "3580", "3581"],
+    "subscriber_count": null,
+    "subscriber_count_observations": [
+      {"evidence_url": "https://t.me/GitHubRadar", "displayed_value": "30 493 subscribers"},
+      {"evidence_url": "https://t.me/s/GitHubRadar", "displayed_value": "29.7K subscribers"}
+    ],
+    "limitations": [
+      "ID 3581 — верхний ID в прочитанном фрагменте, не доказательство текущего последнего сообщения.",
+      "Публичные страницы дают неодинаковые счётчики; число подписчиков не нормализовано.",
+      "Пропуски ID не интерпретируются как удалённые сообщения без дополнительных доказательств.",
+      "Полнота Telegram API, вложения и недоступные публикации не исследованы этим агентом.",
+      "Рекламная публикация 3579 видна в preview, но её отдельный widget вернул Post not found. Связанный источник сохранён только как нестабильное наблюдение."
+    ],
+    "evidence_urls": ["https://t.me/GitHubRadar", "https://t.me/s/GitHubRadar"]
+  },
+  "prioritization": {
+    "scope": "Три сильнейших для AWE кандидата из просмотренного фрагмента, а не рейтинг всей истории канала.",
+    "criteria": ["Прямое доказательство упоминания в публикации", "Официальная документация и явная лицензия", "Документированный программный способ подключения", "Применимость к агентам, автоматизации или обработке доказательств"],
+    "selected": [
+      {"name": "Agno", "reason": "Агентный runtime с REST/MCP и Python-инструментами; кандидат на агентный слой."},
+      {"name": "Activepieces", "reason": "Автоматизация и расширяемые коннекторы; кандидат на связку внешних сервисов с контролем полномочий."},
+      {"name": "Unstructured", "reason": "Python-обработка документов и chunking; кандидат на подготовку текстовых доказательств и RAG."}
+    ]
+  },
+  "resources": [
+    {
+      "name": "Agno",
+      "official_url": "https://www.agno.com/",
+      "repository_url": "https://github.com/agno-agi/agno",
+      "resource_type": "agent_framework_and_runtime",
+      "description": "Python-платформа для агентов, команд и workflows. AgentOS предоставляет долговременные сервисы через REST API и MCP, а также хранение сессий, трассировку и согласование действий человеком.",
+      "capabilities": ["Создание агентов, команд и workflows", "Долговременные агентные сервисы с сохранением сессий", "REST API и MCP", "Память и поиск по базе знаний", "Согласование чувствительных инструментальных действий человеком", "Трассировка и планирование задач"],
+      "integrations": ["Python functions и toolkits", "Внешние MCP-серверы через MCPTools", "REST API AgentOS: GET /agents и POST /agents/{agent_id}/runs", "PostgreSQL для сессий и pgvector для knowledge storage", "Slack через Agno Interfaces"],
+      "verification_status": "documented",
+      "claims": [
+        {"field": "name", "value": "Agno", "evidence_url": "https://github.com/agno-agi/agno", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "official_url", "value": "https://www.agno.com/", "evidence_url": "https://www.agno.com/pricing", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "repository_url", "value": "https://github.com/agno-agi/agno", "evidence_url": "https://t.me/GitHubRadar/3561?embed=1", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "resource_type", "value": "agent_framework_and_runtime", "evidence_url": "https://github.com/agno-agi/agno", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Создание агентов, команд и workflows", "REST API и MCP", "Память и поиск по базе знаний", "Трассировка и планирование задач"], "evidence_url": "https://github.com/agno-agi/agno", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Долговременные агентные сервисы с сохранением сессий"], "evidence_url": "https://docs.agno.com/tutorials/agents-as-api", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Согласование чувствительных инструментальных действий человеком"], "evidence_url": "https://docs.agno.com/tools/overview", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["Python functions и toolkits", "Внешние MCP-серверы через MCPTools"], "evidence_url": "https://docs.agno.com/tools/overview", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["REST API AgentOS: GET /agents и POST /agents/{agent_id}/runs", "PostgreSQL для сессий и pgvector для knowledge storage"], "evidence_url": "https://docs.agno.com/tutorials/agents-as-api", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["Slack через Agno Interfaces"], "evidence_url": "https://github.com/agno-agi/agno", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "license.spdx", "value": "Apache-2.0", "evidence_url": "https://github.com/agno-agi/agno/blob/main/LICENSE", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "pricing.category", "value": "open_source_free_runtime_plus_paid_control_plane", "evidence_url": "https://www.agno.com/pricing", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "pricing.details", "value": "SDK и AgentOS бесплатны и open source. Free: $0/month, control plane для local AgentOS. Pro: $150/month, 1 live connection и 3 team seats. Enterprise: custom. Это плата за control plane, не за runtime.", "evidence_url": "https://www.agno.com/pricing", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "limitations", "value": ["В README описана telemetry per agent; отключение AGNO_TELEMETRY=false."], "evidence_url": "https://github.com/agno-agi/agno", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "provenance", "value": {"source_url": "https://t.me/GitHubRadar", "post_url": "https://t.me/GitHubRadar/3561", "message_id": "3561"}, "evidence_url": "https://t.me/GitHubRadar/3561?embed=1", "checked_at": "2026-11-12T05:52:42Z"}
+      ],
+      "pricing": {
+        "category": "open_source_free_runtime_plus_paid_control_plane",
+        "details": "SDK и AgentOS бесплатны и open source. Free: $0/month, control plane для local AgentOS. Pro: $150/month, 1 live connection и 3 team seats. Enterprise: custom. Это плата за control plane, не за runtime. Расходы на собственную инфраструктуру и выбранных провайдеров моделей не проверялись.",
+        "evidence_url": "https://www.agno.com/pricing",
+        "checked_at": "2026-11-12T05:52:42Z"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "details": "Лицензия репозитория Agno — Apache License 2.0. Условия коммерческого control plane не следует подменять лицензией SDK/runtime.",
+        "evidence_url": "https://github.com/agno-agi/agno/blob/main/LICENSE"
+      },
+      "provenance": [{"source_url": "https://t.me/GitHubRadar", "post_url": "https://t.me/GitHubRadar/3561", "message_id": "3561"}],
+      "decision": "candidate",
+      "limitations": [
+        "Проверены официальные описания; установка, вызовы API/MCP и live tests не выполнялись.",
+        "Подключение к AWE не реализовано и не одобрено. Для использования требуется отдельное согласование и recorded live test.",
+        "В README описана telemetry per agent; отключение AGNO_TELEMETRY=false.",
+        "Бесплатный runtime не означает бесплатный hosted control plane для live deployment и не определяет стоимость модели/инфраструктуры."
+      ]
+    },
+    {
+      "name": "Activepieces",
+      "official_url": "https://www.activepieces.com/",
+      "repository_url": "https://github.com/activepieces/activepieces",
+      "resource_type": "workflow_automation_platform",
+      "description": "Расширяемая платформа автоматизации с визуальными flows, ветвлениями, циклами и повторными попытками. Интеграции pieces создаются на TypeScript; документирован единый MCP-сервер для обнаружения инструментов, построения flows и анализа запусков.",
+      "capabilities": ["Визуальные workflows", "Циклы, ветвления и повторные попытки", "HTTP и Code steps с NPM", "Self-hosting Community Edition", "Обнаружение MCP-действий и схем параметров", "Чтение результатов запусков и управление flows через MCP"],
+      "integrations": ["Google Sheets", "OpenAI", "Discord", "RSS", "TypeScript pieces как собственные коннекторы", "Единый MCP-сервер для Claude, Cursor, Codex и других клиентов", "MCP tools ap_research_pieces, ap_get_piece_props, ap_list_runs, ap_get_run", "REST API с Bearer API key; доступность platform API требует уточнения редакции"],
+      "verification_status": "documented",
+      "claims": [
+        {"field": "name", "value": "Activepieces", "evidence_url": "https://github.com/activepieces/activepieces", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "official_url", "value": "https://www.activepieces.com/", "evidence_url": "https://github.com/activepieces/activepieces", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "repository_url", "value": "https://github.com/activepieces/activepieces", "evidence_url": "https://t.me/GitHubRadar/3564?embed=1", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "resource_type", "value": "workflow_automation_platform", "evidence_url": "https://github.com/activepieces/activepieces", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Визуальные workflows", "Циклы, ветвления и повторные попытки", "HTTP и Code steps с NPM", "Self-hosting Community Edition"], "evidence_url": "https://github.com/activepieces/activepieces", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Обнаружение MCP-действий и схем параметров", "Чтение результатов запусков и управление flows через MCP"], "evidence_url": "https://www.activepieces.com/docs/mcp/tools", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["Google Sheets", "OpenAI", "Discord", "RSS"], "evidence_url": "https://github.com/activepieces/activepieces", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["TypeScript pieces как собственные коннекторы"], "evidence_url": "https://www.activepieces.com/docs/build-pieces/building-pieces/overview", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["Единый MCP-сервер для Claude, Cursor, Codex и других клиентов"], "evidence_url": "https://www.activepieces.com/mcp", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["MCP tools ap_research_pieces, ap_get_piece_props, ap_list_runs, ap_get_run"], "evidence_url": "https://www.activepieces.com/docs/mcp/tools", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["REST API с Bearer API key; доступность platform API требует уточнения редакции"], "evidence_url": "https://www.activepieces.com/docs/endpoints/overview", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "license.spdx", "value": "MIT", "evidence_url": "https://github.com/activepieces/activepieces/blob/main/LICENSE", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "license.details", "value": "MIT относится к коду вне enterprise directories и сторонних компонентов; enterprise-код регулируется отдельной коммерческой лицензией.", "evidence_url": "https://github.com/activepieces/activepieces/blob/main/LICENSE", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "license.details", "value": "Для production использования enterprise-кода нужна действующая Enterprise license и соблюдение договорных условий; development/testing допускаются без subscription.", "evidence_url": "https://github.com/activepieces/activepieces/blob/main/packages/ee/LICENSE", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "pricing.category", "value": "free_self_hosted_community_and_freemium_commercial_plans", "evidence_url": "https://www.activepieces.com/pricing", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "pricing.details", "value": "Self-host Community Edition бесплатна. Тарифная страница: Free $0, Plus $20/month, Team $200/month при monthly billing; Ultimate и Enterprise control — custom; Embed от $36k/year. Free рекламирует MCPs и API access.", "evidence_url": "https://www.activepieces.com/pricing", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "provenance", "value": {"source_url": "https://t.me/GitHubRadar", "post_url": "https://t.me/GitHubRadar/3564", "message_id": "3564"}, "evidence_url": "https://t.me/GitHubRadar/3564?embed=1", "checked_at": "2026-11-12T05:52:42Z"}
+      ],
+      "pricing": {
+        "category": "free_self_hosted_community_and_freemium_commercial_plans",
+        "details": "Self-host Community Edition бесплатна. Тарифная страница: Free $0, Plus $20/month, Team $200/month при monthly billing; Ultimate и Enterprise control — custom; Embed от $36k/year. Бесплатная карточка указывает 1,000 credits/month и MCPs/API access. Гарантия доступности конкретного platform API в Community/Free не установлена из-за расхождения с API docs.",
+        "evidence_url": "https://www.activepieces.com/pricing",
+        "checked_at": "2026-11-12T05:52:42Z"
+      },
+      "license": {
+        "spdx": "MIT",
+        "details": "MIT только для Community/core-кода вне packages/ee/ и packages/server/api/src/app/ee; сторонние компоненты сохраняют собственные лицензии. Enterprise directories — отдельная коммерческая Enterprise license: https://github.com/activepieces/activepieces/blob/main/packages/ee/LICENSE . Не весь монорепозиторий MIT.",
+        "evidence_url": "https://github.com/activepieces/activepieces/blob/main/LICENSE"
+      },
+      "provenance": [{"source_url": "https://t.me/GitHubRadar", "post_url": "https://t.me/GitHubRadar/3564", "message_id": "3564"}],
+      "decision": "candidate",
+      "limitations": [
+        "Проверены официальные описания; установка, подключение аккаунтов и вызовы MCP/API не выполнялись.",
+        "Подключение к AWE не реализовано и не одобрено; для исполнительного реестра требуется отдельное согласование и recorded live test.",
+        "Текущая pricing page рекламирует API access в Free, но API overview ограничивает выдачу platform API keys редакциями Platform/Enterprise. Не обещать бесплатный доступ к управлению несколькими проектами без уточнения.",
+        "На pricing page есть расхождение: Free credit reset в сравнении назван Daily, FAQ говорит о месячном восстановлении. Фактическое поведение квот не проверено.",
+        "Количество интеграций меняется; старые 280+ из публикации/README не используются как текущая инвентаризация.",
+        "Лицензия MIT не покрывает enterprise-код. Права внешних сервисов и стоимость их использования проверяются отдельно."
+      ]
+    },
+    {
+      "name": "Unstructured",
+      "official_url": "https://unstructured.io/",
+      "repository_url": "https://github.com/Unstructured-IO/unstructured",
+      "resource_type": "document_processing_library",
+      "description": "Открытая Python-библиотека извлечения структурированных элементов из PDF, HTML, Word и других документов. Поддерживает последующее объединение элементов в chunks для RAG; отдельные коммерческие Transform и Pipelines предоставляют API и иные возможности.",
+      "capabilities": ["Partitioning PDF, HTML, DOCX и других форматов", "Выделение элементов Title, NarrativeText, ListItem и Table", "OCR и извлечение таблиц при подходящих стратегиях и зависимостях", "Chunking basic и by_title", "Сохранение исходных элементов и их метаданных в metadata.orig_elements", "Локальное использование Python-библиотеки и Docker"],
+      "integrations": ["Python: unstructured.partition.auto.partition", "Python: partition_html с filename, file, text или url", "Python: chunk_elements и chunk_by_title", "REST clients и Unstructured Python SDK для коммерческого API", "Коммерческие Transform и отдельно приобретаемые Pipelines"],
+      "verification_status": "documented",
+      "claims": [
+        {"field": "name", "value": "Unstructured", "evidence_url": "https://github.com/Unstructured-IO/unstructured", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "official_url", "value": "https://unstructured.io/", "evidence_url": "https://github.com/Unstructured-IO/unstructured", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "repository_url", "value": "https://github.com/Unstructured-IO/unstructured", "evidence_url": "https://t.me/GitHubRadar/3578?embed=1", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "resource_type", "value": "document_processing_library", "evidence_url": "https://github.com/Unstructured-IO/unstructured", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Partitioning PDF, HTML, DOCX и других форматов", "Выделение элементов Title, NarrativeText, ListItem и Table", "OCR и извлечение таблиц при подходящих стратегиях и зависимостях"], "evidence_url": "https://docs.unstructured.io/open-source/core-functionality/partitioning", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Chunking basic и by_title", "Сохранение исходных элементов и их метаданных в metadata.orig_elements"], "evidence_url": "https://docs.unstructured.io/open-source/core-functionality/chunking", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "capabilities", "value": ["Локальное использование Python-библиотеки и Docker"], "evidence_url": "https://github.com/Unstructured-IO/unstructured", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["Python: unstructured.partition.auto.partition", "Python: partition_html с filename, file, text или url"], "evidence_url": "https://docs.unstructured.io/open-source/core-functionality/partitioning", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["Python: chunk_elements и chunk_by_title"], "evidence_url": "https://docs.unstructured.io/open-source/core-functionality/chunking", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "integrations", "value": ["REST clients и Unstructured Python SDK для коммерческого API", "Коммерческие Transform и отдельно приобретаемые Pipelines"], "evidence_url": "https://docs.unstructured.io/overview-developer-guide", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "license.spdx", "value": "Apache-2.0", "evidence_url": "https://github.com/Unstructured-IO/unstructured/blob/main/LICENSE.md", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "pricing.category", "value": "free_open_source_library_plus_paid_api", "evidence_url": "https://github.com/Unstructured-IO/unstructured", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "pricing.details", "value": "OSS library free. Commercial pricing page: 10,000 free pages at account start, then $0.015/page, Business custom. Это не ежемесячная бесплатная квота.", "evidence_url": "https://unstructured.io/pricing", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "limitations", "value": ["Pipelines продаётся отдельно от Transform; его точная цена неизвестна."], "evidence_url": "https://docs.unstructured.io/overview-developer-guide", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "limitations", "value": ["OCR и разбор некоторых форматов требуют extras и системных зависимостей; library telemetry отключается DO_NOT_TRACK или SCARF_NO_ANALYTICS."], "evidence_url": "https://github.com/Unstructured-IO/unstructured", "checked_at": "2026-11-12T05:52:42Z"},
+        {"field": "provenance", "value": {"source_url": "https://t.me/GitHubRadar", "post_url": "https://t.me/GitHubRadar/3578", "message_id": "3578"}, "evidence_url": "https://t.me/GitHubRadar/3578?embed=1", "checked_at": "2026-11-12T05:52:42Z"}
+      ],
+      "pricing": {
+        "category": "free_open_source_library_plus_paid_api",
+        "details": "README явно говорит, что OSS library бесплатна. Коммерческая pricing page: 10,000 free pages при старте аккаунта, затем $0.015/page; Business custom. Бесплатные страницы не обозначены как ежемесячная квота. Pipelines продаётся отдельно от Transform; переносить этот тариф на Pipelines нельзя. Стоимость собственной инфраструктуры не проверена.",
+        "evidence_url": "https://unstructured.io/pricing",
+        "checked_at": "2026-11-12T05:52:42Z"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "details": "Лицензия открытой библиотеки — Apache License 2.0; она не определяет условия коммерческих Transform/Pipelines API и лицензии сторонних зависимостей/моделей.",
+        "evidence_url": "https://github.com/Unstructured-IO/unstructured/blob/main/LICENSE.md"
+      },
+      "provenance": [{"source_url": "https://t.me/GitHubRadar", "post_url": "https://t.me/GitHubRadar/3578", "message_id": "3578"}],
+      "decision": "candidate",
+      "limitations": [
+        "Проверены официальные описания; ни документы, ни OCR, ни API функционально не тестировались.",
+        "Подключение к AWE не реализовано и не одобрено; для исполнительного реестра требуется отдельное согласование и recorded live test.",
+        "Для OCR/PDF/Office могут требоваться extras, Tesseract, Poppler, libmagic и LibreOffice. Универсальная работа без установки зависимостей не заявляется.",
+        "В chunking документация предупреждает о потере части метаданных при объединении; metadata.orig_elements позволяет сохранить исходные элементы.",
+        "Локальное выполнение не гарантирует отсутствие сетевых событий: README описывает telemetry; для отключения DO_NOT_TRACK или SCARF_NO_ANALYTICS задаются до import.",
+        "Качество на русскоязычных документах и рекламные сравнительные метрики не проверены.",
+        "Pipelines продаётся отдельно от Transform; его точная цена неизвестна."
+      ]
+    }
+  ],
+  "discovered_mentions_not_selected": [
+    {"name": "one-api", "post_url": "https://t.me/GitHubRadar/3559", "repository_url": "https://github.com/songquanpeng/one-api"},
+    {"name": "Midday", "post_url": "https://t.me/GitHubRadar/3560", "repository_url": "https://github.com/midday-ai/midday"},
+    {"name": "palmier-pro", "post_url": "https://t.me/GitHubRadar/3563", "repository_url": "https://github.com/palmier-io/palmier-pro"},
+    {"name": "stable-diffusion-webui", "post_url": "https://t.me/GitHubRadar/3565", "repository_url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui"},
+    {"name": "yn", "post_url": "https://t.me/GitHubRadar/3566", "repository_url": "https://github.com/purocean/yn"},
+    {"name": "Cognee", "post_url": "https://t.me/GitHubRadar/3568", "repository_url": "https://github.com/topoteretes/cognee"},
+    {"name": "oh-my-openagent", "post_url": "https://t.me/GitHubRadar/3569", "repository_url": "https://github.com/code-yeongyu/oh-my-openagent"},
+    {"name": "CodeEdit", "post_url": "https://t.me/GitHubRadar/3571", "repository_url": "https://github.com/CodeEditApp/CodeEdit"},
+    {"name": "VoiceStudio", "post_url": "https://t.me/GitHubRadar/3572", "repository_url": "https://github.com/debpalash/VoiceStudio"},
+    {"name": "Netdata", "post_url": "https://t.me/GitHubRadar/3573", "repository_url": "https://github.com/netdata/netdata"},
+    {"name": "CUA", "post_url": "https://t.me/GitHubRadar/3575", "repository_url": "https://github.com/trycua/cua"},
+    {"name": "Bytebase", "post_url": "https://t.me/GitHubRadar/3576", "repository_url": "https://github.com/bytebase/bytebase"},
+    {"name": "PhotoPrism", "post_url": "https://t.me/GitHubRadar/3577", "repository_url": "https://github.com/photoprism/photoprism"},
+    {"name": "ai-engineering-hub", "post_url": "https://t.me/GitHubRadar/3580", "repository_url": "https://github.com/patchy631/ai-engineering-hub"},
+    {"name": "Kensaku", "post_url": "https://t.me/GitHubRadar/3581", "repository_url": "https://github.com/yjid/kensaku"}
+  ],
+  "related_sources": [
+    {
+      "name": "Вайб-кодинг",
+      "handle_mentioned": "vibecoding_tg",
+      "source_url": "https://t.me/+cSOdsdq7bLsyMTMy",
+      "canonical_public_url": null,
+      "relationship": "promotional_link_observed_in_preview_not_repost",
+      "evidence_url": "https://t.me/s/GitHubRadar",
+      "post_url": "https://t.me/GitHubRadar/3579",
+      "message_id": "3579",
+      "evidence_excerpt": "Начать с нуля поможет канал Вайб-кодинг ... Подписывайтесь, нас уже 69 тысяч: @vibecoding_tg",
+      "accessibility": null,
+      "verification_status": "preview_only_exact_post_unavailable",
+      "recommendation": "weak_discovery_lead_only",
+      "limitations": ["Preview содержит рекламный текст и invite link, но https://t.me/GitHubRadar/3579?embed=1 возвращает Post not found.", "Название, охват и мониторинг 320 источников — рекламные утверждения, не независимая проверка.", "В просмотренном фрагменте подтверждённые репосты другого редакционного канала не обнаружены; рекламная ссылка не является endorsement."]
+    }
+  ],
+  "assertion_evidence": [
+    {"url": "https://t.me/GitHubRadar/3561?embed=1", "excerpt": "agno-agi/agno. Агенты работают как постоянные сервисы со встроенным API...", "supports": ["Agno: точное упоминание и provenance 3561"]},
+    {"url": "https://t.me/GitHubRadar/3564?embed=1", "excerpt": "activepieces/activepieces. Инструмент соединяет сервисы между собой...", "supports": ["Activepieces: точное упоминание и provenance 3564"]},
+    {"url": "https://t.me/GitHubRadar/3578?embed=1", "excerpt": "Unstructured-IO/unstructured. Инструмент извлекает текст и данные из документов...", "supports": ["Unstructured: точное упоминание и provenance 3578"]},
+    {"url": "https://docs.agno.com/tools/overview", "excerpt": "Add a Python function or toolkit to tools ... MCPTools ... requires_confirmation=True", "supports": ["Agno: Python tools, MCP, согласование действий"]},
+    {"url": "https://www.agno.com/pricing", "excerpt": "The runtime is free and open source ... Pro $150/month ... 1 live AgentOS connection ... 3 team seats", "supports": ["Agno: бесплатный runtime и платный control plane"]},
+    {"url": "https://github.com/activepieces/activepieces/blob/main/LICENSE", "excerpt": "Content outside of the above mentioned directories or restrictions above is available under the MIT Expat license", "supports": ["Activepieces: область действия MIT, исключения enterprise и third party"]},
+    {"url": "https://www.activepieces.com/docs/endpoints/overview", "excerpt": "API keys ... only available in the Platform and Enterprise editions", "supports": ["Activepieces: оговорка об API entitlements"]},
+    {"url": "https://www.activepieces.com/pricing", "excerpt": "Free ... MCPs and API access ... Plus $20 ... Team $200", "supports": ["Activepieces: pricing и расхождение API access с документацией"]},
+    {"url": "https://www.activepieces.com/docs/mcp/tools", "excerpt": "ap_research_pieces ... ap_get_piece_props ... ap_list_runs ... ap_get_run", "supports": ["Activepieces: документированные имена MCP tools, без вызова"]},
+    {"url": "https://github.com/Unstructured-IO/unstructured", "excerpt": "The open-source library is, and will stay, completely free", "supports": ["Unstructured: бесплатная открытая библиотека"]},
+    {"url": "https://docs.unstructured.io/open-source/core-functionality/chunking", "excerpt": "There are currently two chunking strategies, basic and by_title ... metadata.orig_elements", "supports": ["Unstructured: OSS chunking и исходные метаданные"]},
+    {"url": "https://unstructured.io/pricing", "excerpt": "10,000 free pages when your account starts. Charge $0.015 per page after the first 10,000 pages", "supports": ["Unstructured: начальная квота, не monthly, и цена страницы"]},
+    {"url": "https://docs.unstructured.io/overview-developer-guide", "excerpt": "Pipelines is sold separately from Transform", "supports": ["Unstructured: нельзя переносить тариф Transform на Pipelines"]}
+  ],
+  "verification": {
+    "meaning_of_documented": "Упоминание подтверждено текстом Telegram widget, а возможности, лицензия и тарифные категории проверены по официальным документам. Это не функциональная проверка.",
+    "live_tests_performed": false,
+    "approval_granted": false,
+    "awe_integrations_implemented": false,
+    "functional_test_results": null,
+    "http_success_is_functional_verification": false,
+    "unknowns": {"historical_total_posts": null, "channel_created_at": null, "selected_post_published_at_utc": null, "unstructured_pipelines_exact_price": null, "activepieces_free_platform_api_entitlements": null}
+  },
+  "blockers": [],
+  "caveats": [
+    "Нет блокирующего препятствия для проверки трёх выбранных проектов. Историческая полнота передана collector, не утверждается.",
+    "Отдельная связанная рекламная публикация недоступна через widget; это не препятствует трём подтверждённым resource records.",
+    "Неизвестные время публикации в ISO UTC, точные enterprise/Pipelines цены и entitlements API оставлены null либо явно неизвестными.",
+    "Для детерминированного ingest-resources JSONL следует экспортировать только элементы массива resources; остальные разделы — контекст исследования."
+  ]
+}

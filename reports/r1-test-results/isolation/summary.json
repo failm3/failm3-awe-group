@@ -1,0 +1,25 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-13T21:27:04.117Z",
+  "finished_at": "2026-11-13T21:27:16.752Z",
+  "suites": [
+    {
+      "suite": "src/tests/r1-shell-isolation.test.ts",
+      "passed": false,
+      "exit_code": 1,
+      "signal": null,
+      "duration_ms": 1515
+    },
+    {
+      "suite": "src/tests/r0-reqa-adapters.test.ts",
+      "passed": false,
+      "exit_code": 1,
+      "signal": null,
+      "duration_ms": 11120
+    }
+  ],
+  "passed": 0,
+  "failed": 2
+}

@@ -1,0 +1,88 @@
+{
+  "id": "r2-memory-transfer-1794781064860-source",
+  "title": "Source ledger parser repair",
+  "description": "Fresh isolated software repair experiment",
+  "objective": "Repair src/ledger.cjs so its exported parser implements FORMAT.md for \",\"-delimited input.",
+  "acceptance_criteria": [
+    "The existing module exports the required function",
+    "The implementation satisfies the complete documented format, not only the visible example",
+    "The visible test executes successfully"
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-15T22:17:47.253Z",
+  "updated_at": "2026-11-15T22:19:14.963Z",
+  "artifacts": [
+    "f7466f33-3a19-48ba-b48b-c2d38427f290",
+    "a2219908-4e5d-4a80-a189-603c6485a058"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "Source ledger parser repair",
+      "objective": "Repair src/ledger.cjs so its exported parser implements FORMAT.md for \",\"-delimited input.",
+      "scope": "Work only in the current mission workspace. Read FORMAT.md and visible.test.cjs. Repair the existing exported function and run the visible test. No packages, network, external files, or changes to tests.",
+      "acceptance_criteria": [
+        "The existing module exports the required function",
+        "The implementation satisfies the complete documented format, not only the visible example",
+        "The visible test executes successfully"
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "shell",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "coder"
+      ],
+      "estimated_complexity": "simple",
+      "risks": [
+        "Visible tests are intentionally incomplete; independent verification covers the documented edge cases"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-15T22:17:47.257Z",
+      "spec_hash": "7aa73a077263e8a6801ff4605e028992c5d585dce5d67c2c2d2f18c1b73b5c8d",
+      "snapshot": {
+        "mission_id": "r2-memory-transfer-1794781064860-source",
+        "title": "Source ledger parser repair",
+        "description": "Fresh isolated software repair experiment",
+        "objective": "Repair src/ledger.cjs so its exported parser implements FORMAT.md for \",\"-delimited input.",
+        "acceptance_criteria": [
+          "The existing module exports the required function",
+          "The implementation satisfies the complete documented format, not only the visible example",
+          "The visible test executes successfully"
+        ],
+        "specification": {
+          "title": "Source ledger parser repair",
+          "objective": "Repair src/ledger.cjs so its exported parser implements FORMAT.md for \",\"-delimited input.",
+          "scope": "Work only in the current mission workspace. Read FORMAT.md and visible.test.cjs. Repair the existing exported function and run the visible test. No packages, network, external files, or changes to tests.",
+          "acceptance_criteria": [
+            "The existing module exports the required function",
+            "The implementation satisfies the complete documented format, not only the visible example",
+            "The visible test executes successfully"
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_list",
+            "file_write",
+            "shell",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "coder"
+          ],
+          "estimated_complexity": "simple",
+          "risks": [
+            "Visible tests are intentionally incomplete; independent verification covers the documented edge cases"
+          ]
+        }
+      }
+    },
+    "visible_test_sha256": "78c4895ec9405b92cc36da09e75e3d20db29c67aca65288569b48d169b3e8ac6"
+  },
+  "_rev": 4
+}

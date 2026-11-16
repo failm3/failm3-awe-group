@@ -1,0 +1,14 @@
+{
+  "id": "b8c3f9b1-b1ed-4091-b6e6-a960a821d931",
+  "mission_id": "r2-memory-transfer-1794781064860-source",
+  "type": "file",
+  "name": "REPAIR_NOTES.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-source/REPAIR_NOTES.md",
+  "content": "# Mission r2-memory-transfer-1794781064860-source — Source ledger parser repair\n\n## Change\n`src/ledger.cjs` — replaced the naive `trim().split(/\\r?\\n/).map(l => l.split(','))`\nimplementation with a character-level state machine implementing all of FORMAT.md.\n\nPrevious defects: it split on every newline (breaking quoted newlines), had no quote\nhandling at all (no delimiters/quotes inside quoted fields, no `\"\"` unescaping), used\n`trim()` which destroyed empty leading/trailing fields, and never raised\n`Error('INVALID_FORMAT')` for malformed input.\n\n## Parser states\n- `FIELD_START` — start of a field; `\"` opens a quoted field, `,` emits an empty\n  unquoted field, a newline terminates the record with an empty field.\n- `UNQUOTED` — bare field; `,` / newline end it, a `\"` throws INVALID_FORMAT.\n- `QUOTED` — everything literal, including `,`, CR and LF.\n- `QUOTE_CLOSED` — after a closing `\"`; `\"` re-enters QUOTED as an escaped quote,\n  `,`/newline end the field, any other character throws INVALID_FORMAT.\n\n`\\r\\n` is consumed as one separator; lone `\\r` and lone `\\n` also separate records.\nA single trailing record separator does not create a spurious empty row; input\nending mid-quote throws INVALID_FORMAT.\n\n## Verification\nVisible test: `node visible.test.cjs` -> `visible PASS` (exit 0).\nAdditional edge checks (all passed): empty input -> `[]`; no trailing newline;\nCRLF; trailing/empty unquoted fields; quoted delimiter, quoted `\"\"` escape and\nquoted empty field; embedded CRLF inside a quoted field; and four malformed cases\n(`\"abc`, `\"a\"b`, `a\"b`, `\"a\"\"`) each throwing `Error('INVALID_FORMAT')`.\n\nNo tests were modified, no packages installed, no network or external files used.\n",
+  "created_at": "2026-11-15T22:19:03.593Z",
+  "metadata": {
+    "size_bytes": 1707,
+    "sha256": "26f9e45c7468af8f468c392df8691c4b3df20eeebd9fed562cb712c60ef9dbc7",
+    "revision": 1
+  }
+}

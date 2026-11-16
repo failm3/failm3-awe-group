@@ -1,0 +1,189 @@
+RENDER VERIFICATION REPORT — dashboard.png
+mission_id: r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f
+delegation: executor — render finished dashboard.html via approved render_dashboard capability
+verdict: PASS — all five checks satisfied from bytes, no retry needed, no replanning required
+
+================================================================
+0. INVOCATION (exactly as mandated, script path verbatim)
+================================================================
+node /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs \
+  "file:///home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.html" \
+  "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.png"
+
+No substitution: no browser_screenshot, no bare chromium call, no alternate renderer.
+No package installation attempted. No script edit. No path hand-patching.
+Script integrity confirmed before use:
+  /home/nox/awe-group-cleanroom-20261112/scripts/browser-screenshot.cjs
+  sha256 efc3bcb598eee4bc233bbca95c3a2a4a79b21dcbe207b6bf933a46eafa787291  (matches approved acquisition record)
+
+================================================================
+CHECK 1 — EXIT STATUS + STDOUT CONTRACT
+================================================================
+exit status                              : 0
+stdout parses as JSON                    : yes
+success                                  : true            PASS
+outputPath == expected path              : true            PASS
+title                                    : "Rescue-Shift Analytics — Shift Completion & Incidents"
+title is the dashboard's own <title>     : yes (starts "Rescue-Shift Analytics")   PASS
+error markers in title                   : NONE
+  (scanned for: ERR_FILE_NOT_FOUND, ERR_, chrome-error, "This site can",
+   "Refused to", "Not allowed to load", about:blank)
+stdout size_bytes                        : 133960
+on-disk size                             : 133960          PASS (match)
+resolved chromium executable             : /home/nox/awe-group-cleanroom-20261112/.oc-isolated/cache/ms-playwright/chromium-1148/chrome-linux/chrome
+resolved binary exists on disk           : true
+stderr                                   : empty
+
+Note on the known pitfall: playwright's chromium.executablePath() stale /tmp hint was
+NOT hit — the script's own fallback scan resolved the real binary under .oc-isolated as
+expected. Nothing was hand-patched or edited.
+
+Verbatim stdout JSON (first render):
+{"success":true,"url":"file:///home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.html","outputPath":"/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/dashboard.png","title":"Rescue-Shift Analytics — Shift Completion & Incidents","size_bytes":133960,"executable":"/home/nox/awe-group-cleanroom-20261112/.oc-isolated/cache/ms-playwright/chromium-1148/chrome-linux/chrome","timestamp":"2026-11-15T03:52:10.577Z"}
+
+================================================================
+CHECK 2 — FILE EXISTS + SIZE AGREEMENT
+================================================================
+file exists                              : yes
+os.stat size_bytes                       : 133960
+stdout-reported size_bytes               : 133960          PASS (exact match)
+bytes read from disk                     : 133960          PASS (readlength == stat size)
+mode                                     : -rw-r--r--
+mtime                                    : 2026-11-15 03:52:10 UTC (written by this delegation)
+
+================================================================
+CHECK 3 — PNG STRUCTURE (parsed from raw bytes, not from tool claims)
+================================================================
+magic bytes                              : 89504e470d0a1a0a                  PASS
+valid PNG signature                      : true
+first chunk type                         : IHDR   (chunk index 0)            PASS
+IHDR length                              : 13 bytes
+IHDR struct.unpack(">IIBBBBB"):
+  width                                  : 1280                              PASS (exact)
+  height                                 : 720                               PASS (exact)
+  bit_depth                              : 8
+  color_type                             : 2  (8-bit RGB, non-interlaced)
+  compression / filter / interlace       : 0 / 0 / 0
+  EXACT 1280x720 (both dims, not just ratio) : TRUE
+all chunk CRCs valid                     : TRUE (every chunk verified)
+chunk sequence                           : IHDR, sRGB, IDAT x18, IEND
+IEND chunk present                       : TRUE (length 0, valid CRC)         PASS
+inflated IDAT bytes                      : 2765520
+expected  h*(stride+1) = 720*(3840+1)    : 2765520                           PASS (exact)
+filter-type histogram                    : type0=0, type1=86, type2=469, type3=8, type4=157
+                                           (sums to 720 rows — all scanlines decoded)
+independent cross-check                  : file(1) reports "PNG image data, 1280 x 720,
+                                           8-bit/color RGB, non-interlaced"; the 720 rows
+                                           of IHDR-derived geometry agree with the
+                                           struct.unpack result above.
+
+================================================================
+CHECK 4 — CONTENT IS REAL (zlib inflate + full scanline reconstruction)
+================================================================
+Method: all scanlines reconstructed with correct PNG filter reversal for filter types
+0-4, producing the true 1280x720 RGB pixel buffer. Every measurement below is computed
+from that buffer, not from the encoder or the screenshot tool.
+
+distinct colours, exact, full frame      : 6038
+distinct colours, 4-bit-per-channel bins : 246
+mean luma (Rec.709)                      : 34.42   (dark navy theme, as designed)
+bright pixels (luma >= 140)              : 28911   = 3.137 % of frame
+near-black pixels (luma < 12)            : 0       = 0.000 %  -> no dead/blank region
+accent-green pixels (g>=110, g-r>=25, g-b>=10) : 9773 = 1.060 % of frame
+  -> the mint/teal accent family (#4fd1a5, #6ff0bd, #2f9e76, #9ff0d1) used by the
+     "Verified metrics" pill, the completion-rate track and the district bars did draw.
+
+Top exact colours (share of frame) — a layered, non-uniform layout:
+  #121c2d  424951 px  46.11 %   district panel background
+  #0d1626  142324 px  15.44 %   page background
+  #172031   47039 px   5.10 %   card/gradient stop
+  #162135   12012 px   1.30 %   card/gradient stop
+  #141e31   11151 px   1.21 %   gradient stop
+  A uniform blank capture would show one colour at ~100 %; the dominant colour here is
+  only 46.11 %, so the frame genuinely contains cards, a table and text.
+
+Rendered-text evidence:
+  rows containing bright pixels          : 228 distinct rows, span y=28..677
+  columns containing bright pixels        : 1156 distinct columns, span x=31..1246
+  bright pixels per 60px horizontal band  :
+    [2386, 3670, 3226, 5818, 251, 2712, 3964, 2924, 2870, 0, 822, 268]
+    -> banded, not flat: header band, KPI-card band, table-header band, three
+       district-row bands and a footer band. This is the dashboard's actual structure.
+
+Clipping check (nothing cut off at the canvas edges):
+  bright px in bottom rows  712-719 (8 rows) : 0
+  bright px in right cols  1272-1279 (8 cols): 0
+  bright px in top rows       0-7  (8 rows) : 0
+  bright px in left cols      0-7  (8 cols) : 0
+  -> zero bright text pixels touch any edge; the content sits inside the 1280x720 frame
+     with padding (y 28..677 leaves 43 px bottom margin, x 31..1246 leaves 33 px right
+     margin). No clipping and no overflow scrollbar.
+
+Not-a-Chromium-error-page evidence:
+  (a) stdout title field is the dashboard's own <title>, with zero error markers (Check 1).
+  (b) dashboard.html grepped for ERR_FILE_NOT_FOUND | chrome-error | "This site can" |
+      net::ERR  -> no hits.
+  (c) dashboard.html is fully self-contained: no http(s):// reference, no <script> tag, no
+      <link rel=stylesheet>, no src= attribute, no @import, and no url() at all
+      (the gradients are pure CSS colour stops). Nothing could fail to load, so the
+      15s 'load' timeout could not have fired on a missing external asset.
+  (d) a Chromium error page would render near-uniform light-grey with a small error block
+      (low distinct-colour count, high mean luma). Observed: 6038 distinct colours,
+      mean luma 34.42, 3.137 % bright pixels across 11 structured bands, 0 % near-black.
+      That profile is a rendered dark-themed dashboard, not an error page.
+
+All required metric strings are present in the rendered source, percentages at 2 dp:
+  89.83%  x3  (KPI completion rate, table total, total bar width)
+  81.82%  x2  (North value + bar width)
+  92.86%  x2  (South value + bar width)
+  95.65%  x2  (West value + bar width)
+  plus "Scheduled hours", "Completed hours", "Incidents", "Completion rate",
+  "District comparison" present.
+
+================================================================
+CHECK 5 — DETERMINISM / REPRODUCIBILITY
+================================================================
+sha256 of dashboard.png                  : ad132c2cee5e689a69ce9ced935c7087a1096e929b4254560d54d1d760d3016c
+
+Second render — identical command, identical absolute paths:
+  exit status                            : 0
+  stdout success                         : true
+  size_bytes                             : 133960
+  sha256                                 : ad132c2cee5e689a69ce9ced935c7087a1096e929b4254560d54d1d760d3016c
+
+Third render (confirming on-disk hash before/after):
+  hash before                            : ad132c2c…d3016c
+  hash after                             : ad132c2c…d3016c
+  BYTE-IDENTICAL ACROSS RENDERS          : TRUE                              PASS
+
+Additional observation: the pre-existing dashboard.png in the workspace (mtime 03:49,
+written by the designer's own verification render) carried the same sha256
+ad132c2c…d3016c. So the file is reproducible across three independent renders, two of
+them performed in a separate session. Reproducibility is genuine, not session-local.
+
+================================================================
+INPUT INTEGRITY / SCOPE
+================================================================
+dashboard.html   sha256 b23edc73ae2022c5130398f8f551efcc4ca174004a2984b962f4c002dbb85a8e
+                 (11123 bytes; unchanged by the render — the procedure is read-only on input)
+metrics.json     sha256 c86780ccc3bd239feb4a5bb2c33412153da9bab3272235c0cb48445788a79a62
+input/rescue-shifts.csv sha256 502022dd7e1166df8d709461c3ca81dfe5c8c59e79ea4e23e37aac69966e5181
+                 (matches method.input_sha256 recorded in metrics.json; read-only, untouched)
+
+New files created by this delegation : dashboard.png only
+capability-probe.html / .png / capability-observation.json : not overwritten, not
+  duplicated, not extended (mtime still 03:43 / 03:45)
+No package installation. No network access. No host configuration change. No publishing.
+All writes confined to the mission artifact directory. No scratch reports or duplicate
+scripts left behind; intermediate verification output went to /tmp and this report.
+
+================================================================
+FINAL RESULT
+================================================================
+PASS — dashboard.png is present at exactly 1280x720 (verified independently from IHDR
+bytes and via file(1)), is a valid PNG with magic 89504e470d0a1a0a and a terminating IEND,
+weighs 133960 bytes matching the tool's reported size, contains real legibly-rendered
+dashboard content (6038 distinct colours, mean luma 34.42, 3.137 % bright pixels in 11
+structured bands, 1.060 % accent-green pixels, zero edge clipping), is not a Chromium
+error page, and is byte-identically reproducible (sha256 ad132c2c…d3016c across three
+renders). No symptom requiring diagnosis or replanning was found.

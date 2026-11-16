@@ -1,0 +1,14 @@
+{
+  "id": "f5ca71a4-aff3-49a0-951b-975e250a6d66",
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "type": "text",
+  "name": "invocation/duration_seconds.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/invocation/duration_seconds.txt",
+  "created_at": "2026-11-16T08:30:19.675Z",
+  "metadata": {
+    "size_bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "reconciled": true,
+    "revision": 1
+  }
+}

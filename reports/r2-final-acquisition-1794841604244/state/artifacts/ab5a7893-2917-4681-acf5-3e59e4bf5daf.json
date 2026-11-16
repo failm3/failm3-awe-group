@@ -1,0 +1,14 @@
+{
+  "id": "ab5a7893-2917-4681-acf5-3e59e4bf5daf",
+  "mission_id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4",
+  "type": "json",
+  "name": "probe/neg/bad-root.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/probe/neg/bad-root.json",
+  "created_at": "2026-11-16T15:09:20.729Z",
+  "metadata": {
+    "size_bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "reconciled": true,
+    "revision": 1
+  }
+}

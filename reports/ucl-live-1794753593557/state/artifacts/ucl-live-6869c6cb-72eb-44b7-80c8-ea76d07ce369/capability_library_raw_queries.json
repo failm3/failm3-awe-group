@@ -1,0 +1,55 @@
+{
+  "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+  "spec_sha256": "24efcb19dffa5cfb860e1604789dbda900111024a1ab7aa79ed4acf386308f22",
+  "note": "Verbatim catalog responses. approved=false and execution_authority=false on both queries. UNVETTED metadata is research evidence only and must not be read as a tool grant.",
+  "queries": [
+    {
+      "order": 1,
+      "arguments": {
+        "capabilities": ["browser.screenshot"],
+        "need": "render an HTML page and produce a PNG screenshot using a local headless browser",
+        "limit": 10
+      },
+      "response": {
+        "approved": false,
+        "execution_authority": false,
+        "examined": 43,
+        "status": "OK",
+        "note": "10 candidate(s) from 43 examined. UNVETTED research metadata: not approved, not installed, not executed.",
+        "candidates": [
+          {"candidate_id": "cap_48c31e1ffa04c91de3657e08fe85e980a6c892db", "title": "puppeteer/puppeteer", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 70, "capabilities": ["browser.automation", "browser.screenshot"], "url": "https://github.com/puppeteer/puppeteer"},
+          {"candidate_id": "cap_aaf27143872fdfa660bc5ae0d3ba6baecd43fd0e", "title": "sensepost/gowitness", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 70, "capabilities": ["browser.screenshot"], "url": "https://github.com/sensepost/gowitness"},
+          {"candidate_id": "cap_f631cd8b61103bf3014815b0ceb8968bccdbc496", "title": "opennookorg/screenshot-studio", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 69.87, "capabilities": ["browser.screenshot", "media.image"], "url": "https://github.com/opennookorg/screenshot-studio"},
+          {"candidate_id": "cap_ba31bde2dfc28f63582ffedfebd302c295c4fa85", "title": "microsoft/playwright-mcp", "kind": "mcp_server", "trust_state": "UNVETTED", "hazards": [], "score": 61.71, "capabilities": ["browser.automation", "browser.screenshot", "mcp.server"], "url": "https://github.com/microsoft/playwright-mcp"},
+          {"candidate_id": "cap_3fbb0d0462685f17c7ee5a52ebbeb07b49bd094f", "title": "lightpanda-io/browser", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 61.3, "capabilities": ["browser.automation", "browser.screenshot"], "evidence_extra": "2 catalog rows share this address", "url": "https://github.com/lightpanda-io/browser"},
+          {"candidate_id": "cap_ef17663e884139a89dcba45fb1db55e3d4854b3f", "title": "abi/screenshot-to-code", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 61.21, "capabilities": ["browser.screenshot", "media.audio", "media.image"], "url": "https://github.com/abi/screenshot-to-code"},
+          {"candidate_id": "cap_1b8e35a5a0147eea7e7cb9549664954ac3521cb6", "title": "browser-use/jev-ultrafast", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 61.05, "capabilities": ["browser.screenshot"], "url": "https://github.com/browser-use/jev-ultrafast"},
+          {"candidate_id": "cap_5eddf4f2de33e97d93b4d57a3f663e6bd524cda0", "title": "CJackHwang/AIstudioProxyAPI", "kind": "api", "trust_state": "UNVETTED", "hazards": [], "score": 59.67, "capabilities": ["browser.automation", "browser.screenshot"], "url": "https://github.com/CJackHwang/AIstudioProxyAPI"},
+          {"candidate_id": "cap_df77d7d30024cf6f0d98d60cc1efeb51e9cd9386", "title": "Usagi-org/ai-goofish-monitor", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 59.54, "capabilities": ["browser.automation", "browser.screenshot", "infra.observe"], "url": "https://github.com/Usagi-org/ai-goofish-monitor"},
+          {"candidate_id": "cap_5f1572a7669adcb566d54001eb4fdbd8ebe8d66d", "title": "lackeyjb/playwright-skill", "kind": "unknown", "trust_state": "UNVETTED", "hazards": [], "score": 59.28, "capabilities": ["browser.automation", "browser.screenshot"], "url": "https://github.com/lackeyjb/playwright-skill"}
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "arguments": {
+        "capabilities": ["browser.automation", "browser.screenshot"],
+        "kinds": ["mcp_server", "agent_skill"],
+        "need": "headless chromium or playwright already installed locally on the host for HTML to PNG rendering",
+        "limit": 8
+      },
+      "response": {
+        "approved": false,
+        "execution_authority": false,
+        "examined": 5,
+        "status": "OK",
+        "note": "3 candidate(s) from 5 examined. UNVETTED research metadata: not approved, not installed, not executed.",
+        "candidates": [
+          {"candidate_id": "cap_ba31bde2dfc28f63582ffedfebd302c295c4fa85", "title": "microsoft/playwright-mcp", "kind": "mcp_server", "trust_state": "UNVETTED", "hazards": [], "score": 111.88, "capabilities": ["browser.automation", "browser.screenshot", "mcp.server"], "url": "https://github.com/microsoft/playwright-mcp"},
+          {"candidate_id": "cap_11bc87decd601d4696186d82735e24dadf64f4f1", "title": "yjid/kensaku", "kind": "mcp_server", "trust_state": "UNVETTED", "hazards": [], "score": 50, "capabilities": ["browser.screenshot", "mcp.server"], "url": "https://github.com/yjid/kensaku"},
+          {"candidate_id": "cap_544deb9f8f48d8b2e59d4ccb7274eecb16d49ddf", "title": "steipete/Peekaboo", "kind": "mcp_server", "trust_state": "UNVETTED", "hazards": [], "score": 50, "capabilities": ["browser.screenshot", "mcp.server"], "url": "https://github.com/steipete/Peekaboo"}
+        ]
+      }
+    }
+  ]
+}

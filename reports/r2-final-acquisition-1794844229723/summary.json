@@ -1,0 +1,185 @@
+{
+  "schema": "r2-final-acquisition-live-v1",
+  "id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d",
+  "runRoot": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723",
+  "status": "paused",
+  "failure": null,
+  "approved_spec_hash": "62aec4523abb9c0a16964351ac7f15f4fe05ec504d0604cd5314a8eedc6209f9",
+  "planning": [
+    {
+      "kind": "acquire",
+      "capability": "observation-digest-v1"
+    }
+  ],
+  "attempts": [],
+  "qualification_publications": 0,
+  "acquisition_policy_calls": 1,
+  "invocation_receipts": [],
+  "artifacts": [
+    {
+      "id": "384968e5-d419-4a67-80ee-594bca13f101",
+      "name": "input/pilot.observations.json",
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+    },
+    {
+      "id": "ebdd0756-91b8-4ff1-9059-e3babcc643fb",
+      "name": "bin/observation-digest-v1.js",
+      "sha256": "504a591a7bab893395bcfc92f10a795c820ca8c962a8b1edbcfaddd51dfdc0e1"
+    },
+    {
+      "id": "a62a4903-a9e6-4215-8d8c-1644a510d05b",
+      "name": "probe/digest.json",
+      "sha256": "25d658bf097b156404e4c4f76f169845ee1a2ce092fa451b3324f8d5e3ff3518"
+    },
+    {
+      "id": "81d4bc52-bb88-48bb-8433-f51484cccb6b",
+      "name": "probe/digest.md",
+      "sha256": "6047831055ea85e56c216d04c2a37c39aba92fa79c14d0caa6f70984f3db70cd"
+    },
+    {
+      "id": "58d5fdaa-1373-4dda-8e5c-94b24e722d2e",
+      "name": "observation-digest-v1.json",
+      "sha256": "9446d470cec7601eee01833be846b92937cf87cf2d45b086ba4d66135f381e54"
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "88c3e0af-a05a-4450-ac39-9be2693eb09a",
+      "mission_id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T15:50:32.731Z",
+      "finished_at": "2026-11-16T15:50:56.798Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 2991,
+        "output_tokens": 2455,
+        "total_tokens": 5446,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "8b8c0df6-62ab-44ab-9c3d-0620bfc444e9",
+      "mission_id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T15:50:56.850Z",
+      "finished_at": "2026-11-16T15:58:56.143Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": "UNKNOWN",
+        "output_tokens": "UNKNOWN",
+        "total_tokens": "UNKNOWN",
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 165080
+      },
+      "usage_status": "partial",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "ff9a2455-b755-488b-80af-bd58bcb8cab5",
+      "mission_id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T15:58:56.182Z",
+      "finished_at": "2026-11-16T15:59:30.235Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 48370,
+        "output_tokens": 3127,
+        "total_tokens": 51497,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "provider_cost": "UNKNOWN",
+  "checks": [
+    {
+      "check": "mission completed through independent Nox QA",
+      "passed": false,
+      "detail": "paused"
+    },
+    {
+      "check": "real Head and independent QA calls recorded",
+      "passed": false
+    },
+    {
+      "check": "unknown capability caused acquisition then replan",
+      "passed": false,
+      "detail": "[{\"kind\":\"acquire\",\"capability\":\"observation-digest-v1\"}]"
+    },
+    {
+      "check": "exactly one structured qualified acquisition",
+      "passed": false
+    },
+    {
+      "check": "host published and reused one qualification across replan policy checks",
+      "passed": false
+    },
+    {
+      "check": "actual invocation receipt bound to mission, attempt, executable and command",
+      "passed": false
+    },
+    {
+      "check": "specialist result attributes actual qualified invocation",
+      "passed": false,
+      "detail": "attributed=[] status=paused"
+    },
+    {
+      "check": "exact independently recomputed digest totals",
+      "passed": false
+    },
+    {
+      "check": "exact independently recomputed site totals",
+      "passed": false
+    },
+    {
+      "check": "human digest is present and consistent",
+      "passed": false
+    },
+    {
+      "check": "fixture unchanged",
+      "passed": true
+    },
+    {
+      "check": "all final artifact hashes match bytes",
+      "passed": true
+    },
+    {
+      "check": "provider monetary cost remains unknown",
+      "passed": true,
+      "detail": "UNKNOWN"
+    }
+  ],
+  "passed": false
+}

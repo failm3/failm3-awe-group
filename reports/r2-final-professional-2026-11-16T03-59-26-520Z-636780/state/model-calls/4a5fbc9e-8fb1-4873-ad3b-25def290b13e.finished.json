@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "4a5fbc9e-8fb1-4873-ad3b-25def290b13e",
+  "mission_id": "r2-final-professional-2026-11-16T03-59-26-520Z-636780-research",
+  "role": "brook-cove-source-analysis",
+  "model": "deepseek-v4-flash",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T04:00:55.030Z",
+  "finished_at": "2026-11-16T04:01:11.674Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 14584,
+    "output_tokens": 2246,
+    "total_tokens": 16830,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 8704
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

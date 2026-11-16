@@ -1,0 +1,126 @@
+{
+  "mission_id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1",
+  "saved_at": "2026-11-16T10:02:40.363Z",
+  "total_agents": 4,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T09:49:39.291Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: observation-digest-v1 is the exact named competence required by the objective and it is absent from the registered capability list (browser_*, capability_library, csv_analytics, file_*, manus_search, save_artifact, shell, ti_search, web_*, web_fetch, web_search). No registered capability reads the pilot.observations.json fixture, computes exact row/site totals and completion percent, and persists both digest.json and digest.md. Per policy this is diagnosed as status=acquire rather than silently substituted with an ad-hoc shell script; the bounded acquisition below only uses already-registered tools, installs nothing, touches no network or packages, and its output must be qualified by real execution before any digest run is planned.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. status available is only valid when you name what exists: either acquired (one short string) or local_target. When you propose a local_target, also set acquired to one short string naming that procedure: a host policy may require acquired on every available observation, and without it a correct proposal is still refused. An available observation with neither is rejected as unresolvable; use missing or failed when nothing usable was verified. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "a7a5f2af-6447-4862-a781-90d1b17caa16",
+        "ff4b9f87-5c18-4572-ba67-ca70b3a31185",
+        "5c7f683b-bd16-4e1a-82ee-256ef44aed9a",
+        "7829d89a-89f2-4f41-880d-d929ad9639f7",
+        "f25c3288-37b3-4c10-bbda-9d3d2bfc546a",
+        "c1db8a34-19ca-4549-8450-b07657234393",
+        "73043409-5b3c-4663-aecb-2472df0f34d4",
+        "0eda8a43-6b8c-4926-89b8-2918291cced7",
+        "7cbdf0a1-3f45-4ee5-8121-cbd52ed34053",
+        "f3198e00-4f01-4e19-aa3f-582966cdc2ab",
+        "c0feb598-597f-47f7-8504-efe4999be5e3",
+        "ca82da19-fdf3-4337-bf3b-8c45d42a7bb9",
+        "9c215496-d43e-49c5-89ae-f6e297ab46a6",
+        "69a78c23-58a7-4ed8-8ed2-637c5f70b81b",
+        "9b42e03f-25cd-4e54-8f56-687bfe825481",
+        "445709a8-ac5e-4ddc-b776-6149e1ccbc9a",
+        "2fd3fbee-4481-4e74-9eda-849f51038017",
+        "81b99313-d8c4-45d5-8431-b3c849db3f2b",
+        "07395c8b-6e5f-41b1-b7b0-6aa47d8c08e5",
+        "8fb8e836-6855-4c64-be6f-2ab8a59a7769",
+        "9c81c041-5863-4679-b710-a79c43f5320f",
+        "a7bd1942-5536-4da8-af1d-7d35c43f0f7b",
+        "08c5a4bb-6a41-4e48-b9ac-78683d23137f",
+        "362c67f2-58cf-4e58-bcdc-3caaf7c30984",
+        "f6a2a052-2b95-41fe-8f59-c5c6f0160f9a"
+      ],
+      "duration_ms": 283641,
+      "finished_at": "2026-11-16T09:54:22.923Z"
+    },
+    {
+      "id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1:top1",
+      "role": "executor",
+      "started_at": "2026-11-16T09:54:55.371Z",
+      "task": "Invoke the host-qualified observation-digest-v1 procedure exactly once against the supplied fixture. In this delegation the shell is host-gated to the single fixed command below, so run it verbatim with no additions, no pipes, no redirection, no extra flags and no pre-run hash/list check: node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/bin/observation-digest.js' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1'. The host itself rehashes the executable and re-verifies its probes immediately before release; a gate refusal is a gate decision, not a missing capability, and must be reported verbatim rather than worked around. After the run, use file_list on the artifact root to confirm digest.json and digest.md were created directly in that root (not in the probe output directory, which must never be the final args output). Record the stdout/stderr, exit code, elapsed time, the exact command string and the executable sha256 as an invocation receipt body. Constraints: work only inside /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1; do not modify, re-author or re-probe the script; do not create a second copy of the procedure; no packages, network, publishing, deployment, purchases or external changes. Risk to respect: a model-authored observation is not qualification — report only what the real execution actually emitted.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "37732fbc-9384-4dba-aebc-20273206704b",
+        "5dac4441-7db4-41d9-9542-f67b1e57184a",
+        "c29b5722-a022-4507-a1cb-fcbbcfc87960",
+        "a8c29175-12fb-4fa0-b8a2-9e4c2ee7d066",
+        "155a8951-744b-4115-9b05-1df111348741",
+        "60db3a94-be3c-4d5b-b37e-20fd7cb57eae"
+      ],
+      "duration_ms": 120576,
+      "finished_at": "2026-11-16T09:56:55.942Z"
+    },
+    {
+      "id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1:top2",
+      "role": "analyst",
+      "started_at": "2026-11-16T09:56:55.957Z",
+      "task": "Independently verify the produced digest without trusting the acquisition narrative. Read input/pilot.observations.json, digest.json and digest.md from the artifact root with file_read; recompute from the fixture alone the row count, per-site scheduled/completed/incident totals, the global scheduled/completed/incidents totals and the completion percentage rounded to 2 decimals half-up (expected reference: row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67, North rows=2 with 22 scheduled / 18 completed / 5 incidents / 81.82 percent, South rows=1 with 8/8/1/100.00). Check that digest.json carries exact numeric types (not strings) for row_count, scheduled, completed, incidents and completion_percent, that completion_percent is rendered to exactly two decimals, and that sites is an object keyed by site name with per-site totals. Check digest.md states the same values and documents a reproducible method. Where arithmetic disagrees with the artifacts, report the exact field and both values rather than editing the deliverables. Constraints: read-only analysis inside the artifact root; no re-execution of the procedure, no shell, no packages or network; treat visible examples and prior model assertions as non-authoritative — only independent arithmetic counts.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "failed",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_write",
+        "file_list"
+      ],
+      "artifacts": [],
+      "duration_ms": 164904,
+      "finished_at": "2026-11-16T09:59:40.856Z",
+      "note": "Delegation produced no newly registered artifact"
+    },
+    {
+      "id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1:top3",
+      "role": "devops",
+      "started_at": "2026-11-16T09:59:40.873Z",
+      "task": "Register the deliverables as artifacts and persist the durable receipt. With save_artifact, register digest.json and digest.md from the artifact root and the invocation receipt produced by the executor, capturing their sha256 values as returned by the artifact service. Read the executor receipt and verification report first and refuse to register if the executor delegation did not actually run the fixed command or if the analyst reported any arithmetic mismatch. Write the final receipt document into the artifact root with file_write, naming the capability observation-digest-v1, the qualified attempt ID 970749d1-2824-45bf-8062-ee3d9f07c59e, the qualification ID q-r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1, the executable path and its sha256 731ab85916cc270a6518e1068556f3b947b0b4a84b400b7e96201e936b40d6ee, the exact fixed arguments, the measured result values, artifact IDs and sha256 of each registered deliverable, and the host-verification and Nox QA status. Constraints: stay inside /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1; no packages, network, publishing, deployment, purchases or external changes; do not alter the digest bytes produced by the qualified procedure.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "save_artifact",
+        "file_write"
+      ],
+      "artifacts": [
+        "bd4d5694-38a0-4220-82d4-1bfebb085567",
+        "9140e8ac-2791-41c9-a4b9-8696dcf17307",
+        "bd9f1a14-35be-4e2e-b81c-582d1a97c7f6",
+        "125cc31f-6335-44fb-a659-c0c3b3589ffa",
+        "39db6e07-4d49-4cab-965e-0d3a33007c45"
+      ],
+      "duration_ms": 179497,
+      "finished_at": "2026-11-16T10:02:40.363Z"
+    }
+  ]
+}

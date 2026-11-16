@@ -1,0 +1,192 @@
+{
+  "verifier_version": "r1-static-task-tracker-v1",
+  "contract_digest": "4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8",
+  "mode": "independent-local-verification",
+  "tree_sha256": "a71660c6e6562f9542ed16013f4e24dedd3dcc179106ebc1bb9d72efe31ababe",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 9058,
+      "sha256": "ab7f2ebd7beca9906503e1902e4279dfe578455ba4ee5b10c12665b70225d19d"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 232,
+      "sha256": "3c31b9291d91989fad7ac65d70b2b4fa5257a50e169cb4600411de319c9a718e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 930,
+      "sha256": "7ab4096b237c0ea62bd8a747209a48fe67728bf0647c45dbea834a6cbc61d6ff"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 2501,
+      "sha256": "78ad22edf3eaee5bfb075286c11e36da8ec8f0761bc4ba92c97361db351a0a70"
+    }
+  ],
+  "checks": [
+    {
+      "id": "bounded-artifact-snapshot",
+      "passed": true
+    },
+    {
+      "id": "source-url-contract",
+      "passed": true
+    },
+    {
+      "id": "sandboxed-js-syntax",
+      "passed": true
+    },
+    {
+      "id": "load-local-product",
+      "passed": true
+    },
+    {
+      "id": "accessible-empty-state",
+      "passed": true
+    },
+    {
+      "id": "reject-blank-input",
+      "passed": true
+    },
+    {
+      "id": "add-trim-and-keyboard",
+      "passed": true
+    },
+    {
+      "id": "toggle-and-filter",
+      "passed": true
+    },
+    {
+      "id": "persist-task-and-completion",
+      "passed": true
+    },
+    {
+      "id": "reverse-toggle-and-delete",
+      "passed": true
+    },
+    {
+      "id": "responsive-layout",
+      "passed": true
+    },
+    {
+      "id": "dom-url-contract",
+      "passed": true
+    },
+    {
+      "id": "runtime-errors-and-resource-policy",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/systemd-run",
+        "--user",
+        "--scope",
+        "--quiet",
+        "--collect",
+        "--expand-environment=no",
+        "--unit=awe-exec-a76a06c8-291d-4ce2-b5f7-fd841bdc8189.scope",
+        "--property=MemoryMax=1073741824",
+        "--property=MemorySwapMax=0",
+        "--property=OOMPolicy=kill",
+        "--property=TasksMax=64",
+        "--property=CPUQuota=100%",
+        "--property=RuntimeMaxSec=5000ms",
+        "--property=TimeoutStopSec=500ms",
+        "--property=SendSIGKILL=yes",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-c",
+        "\nimport json, os, pathlib, sys\ntry:\n    policy = json.loads(sys.argv[1])\n    entries = pathlib.Path('/proc/self/cgroup').read_text().splitlines()\n    group = next(line[3:] for line in entries if line.startswith('0::'))\n    if not group.startswith('/') or '..' in group.split('/') or group.split('/')[-1] != policy['unit']:\n        raise RuntimeError('execution did not enter its unique cgroup')\n    root = pathlib.Path('/sys/fs/cgroup' + group)\n    def read(name):\n        return (root / name).read_text().strip()\n    for name, maximum in [('memory.max', policy['memoryBytes']), ('memory.swap.max', 0), ('pids.max', policy['tasks'])]:\n        raw = read(name)\n        if raw == 'max' or int(raw) > maximum:\n            raise RuntimeError(name + ' is not bounded by policy')\n    if read('memory.oom.group') != '1':\n        raise RuntimeError('whole-execution OOM termination unavailable')\n    quota, period = read('cpu.max').split()\n    if quota == 'max' or int(quota) * 100 > policy['cpuPercent'] * int(period):\n        raise RuntimeError('CPU bandwidth cap unavailable')\n    os.execv(sys.argv[2], sys.argv[2:])\nexcept Exception as error:\n    print('Resource isolation unavailable: ' + str(error), file=sys.stderr)\n    sys.exit(125)\n",
+        "{\"memoryBytes\":1073741824,\"tasks\":64,\"cpuPercent\":100,\"cpuSeconds\":30,\"fileBytes\":67108864,\"openFiles\":256,\"wallMs\":5000,\"unit\":\"awe-exec-a76a06c8-291d-4ce2-b5f7-fd841bdc8189.scope\"}",
+        "/usr/bin/prlimit",
+        "--cpu=30:30",
+        "--fsize=67108864:67108864",
+        "--nofile=256:256",
+        "--core=0:0",
+        "--memlock=0:0",
+        "--",
+        "/usr/bin/env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "/usr/bin/bwrap",
+        "--unshare-pid",
+        "--die-with-parent",
+        "--unshare-net",
+        "--unshare-ipc",
+        "--unshare-uts",
+        "--cap-drop",
+        "ALL",
+        "--ro-bind",
+        "/usr",
+        "/usr",
+        "--ro-bind",
+        "/bin",
+        "/bin",
+        "--ro-bind",
+        "/sbin",
+        "/sbin",
+        "--ro-bind",
+        "/lib",
+        "/lib",
+        "--ro-bind",
+        "/lib64",
+        "/lib64",
+        "--dir",
+        "/etc",
+        "--ro-bind",
+        "/etc/ld.so.cache",
+        "/etc/ld.so.cache",
+        "--ro-bind",
+        "/etc/alternatives",
+        "/etc/alternatives",
+        "--ro-bind",
+        "/etc/ssl/certs",
+        "/etc/ssl/certs",
+        "--tmpfs",
+        "/tmp",
+        "--dir",
+        "/tmp/home",
+        "--setenv",
+        "HOME",
+        "/tmp/home",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--setenv",
+        "PATH",
+        "/usr/bin:/bin",
+        "--unsetenv",
+        "LD_LIBRARY_PATH",
+        "--ro-bind",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/web-qa-FoBiuo",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/web-qa-FoBiuo",
+        "--bind",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/web-qa-FoBiuo",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/web-qa-FoBiuo",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--chdir",
+        "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/web-qa-FoBiuo",
+        "--",
+        "/usr/bin/node",
+        "--input-type=module",
+        "--check"
+      ],
+      "file": "app.js",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "issues": [],
+  "outcome": "PASS",
+  "qualification": "NOT_ASSESSED",
+  "browser_version": "158.0.8127.18",
+  "receipt_sha256": "5f0140392d0520ce2db9a69681c490b4faded87bf7e2519fb53b38b1755950a4"
+}

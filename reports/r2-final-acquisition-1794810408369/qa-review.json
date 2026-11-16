@@ -1,0 +1,63 @@
+{
+  "passed": false,
+  "score": 0,
+  "criteria_results": [
+    {
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "passed": false,
+      "notes": "No head/orchestrator output is present at all. Nothing identifies observation-digest-v1 as the missing capability, no bounded acquisition is recorded, and no replan referencing a qualified local procedure exists. The only artifact is the pre-supplied input fixture."
+    },
+    {
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "passed": false,
+      "notes": "No procedure source, no executable bytes or hash, no invocation record, and no durable receipt appear in the candidate. There is no evidence any procedure was ever run."
+    },
+    {
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "passed": false,
+      "notes": "Neither digest.json nor digest.md was produced. Only input/pilot.observations.json exists. For reference, correct independent arithmetic from the fixture is row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67, with sites North {scheduled:22, completed:18, incidents:5} and South {scheduled:8, completed:8, incidents:1}; none of this is delivered."
+    },
+    {
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "passed": false,
+      "notes": "The artifact registry lists exactly one entry, the input fixture (412c65c3...). The required deliverables (digest.json, digest.md, procedure source, receipt) are absent, so there is nothing to verify and no independent Nox QA record exists."
+    }
+  ],
+  "defects": [
+    {
+      "issue": "Mission produced no deliverables. The candidate epoch contains only the provided input fixture; digest.json and digest.md were never created.",
+      "severity": "critical"
+    },
+    {
+      "issue": "No acquisition event: the observation-digest-v1 capability was never identified as missing, never acquired, and no qualified local procedure was established.",
+      "severity": "critical"
+    },
+    {
+      "issue": "No invocation receipt or execution evidence of any kind; the digest computation was never performed or recorded.",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution output section is empty, so there is no reasoning trace, plan revision, or agent work to review.",
+      "severity": "major"
+    },
+    {
+      "issue": "FAIL: Capability decision rejected: acquire requires a named capability",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    },
+    {
+      "issue": "Execution plan contains no delegations",
+      "severity": "critical"
+    }
+  ],
+  "recommendations": [
+    "Implement the observation-digest-v1 procedure as a stable-path local executable under the mission artifact directory, then record its sha256 as the qualified executable bytes before any use.",
+    "Invoke the procedure exactly once with fixed args [<mission>/input/pilot.observations.json, <mission>] — not a probe output directory — and persist a durable invocation receipt containing command, args, hash, exit status, and timestamp.",
+    "Emit digest.json with row_count, scheduled, completed, incidents, completion_percent (86.67), and a sites object keyed by site, then mirror every value in digest.md with the aggregation method stated so it can be reproduced.",
+    "Register digest.json, digest.md, the procedure source, and the receipt as artifacts and run independent host byte verification plus independent Nox QA against them before resubmitting."
+  ],
+  "verdict": "FAIL: Execution plan contains no delegations"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "05a49e91-613e-4232-ba1c-08718e061348",
+  "mission_id": "r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "type": "json",
+  "name": "probe/edge/edge.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/probe/edge/edge.json",
+  "created_at": "2026-11-16T10:18:24.399Z",
+  "metadata": {
+    "size_bytes": 201,
+    "sha256": "db6c4f5389287888595052670dc7a1e0d3c83a8c7366bb402066b975412c8482",
+    "reconciled": true,
+    "revision": 1
+  }
+}

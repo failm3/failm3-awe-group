@@ -1,0 +1,196 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "31872deb-bbda-4618-9f50-464d2ad2b8f3",
+    "mission_id": "r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+    "repair_iteration": 0,
+    "spec_hash": "f0b77e998946cea75d32a43e7ca402e62c6407e10374fd1bfddb75c6d7a3bf67",
+    "plan_hash": "89376a99138036cf88f3b62e956b62682008e3a215d056a1c97472d1f03b4a1a",
+    "artifacts": [
+      {
+        "artifact_id": "8991edc0-fd66-45cc-be15-8c9d38508917",
+        "name": ".escape-probe.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/.escape-probe.txt",
+        "sha256": "1ac8111920c372bae40544f9ff56589bc8d7f682d63a7c165e820b43b622cc88",
+        "size_bytes": 41
+      },
+      {
+        "artifact_id": "f0ba7dbd-ca38-4d39-bc58-660ef2151dd5",
+        "name": "digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.json",
+        "sha256": "3f3d1e13591a57d7fb9c12e50b7bf6f4396bc70080335859cfde0cf6f63aec4f",
+        "size_bytes": 301
+      },
+      {
+        "artifact_id": "a4d39c47-6ff1-411b-9bdd-83c99cdc64a5",
+        "name": "digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.md",
+        "sha256": "e03394a3ecb9c9f31f9b32b2c8c31aa74e073ed5932d4e99db0318b9257b8c58",
+        "size_bytes": 3296
+      },
+      {
+        "artifact_id": "c9f47ffc-3af6-4da2-a282-fb5000fd0520",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "fdc46d93-9883-4007-862c-5a946f0e6a5b",
+        "name": "invocation-receipt.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/invocation-receipt.json",
+        "sha256": "bf598ead6ebdd7ae004106697ea225b3504b7a77ebe25fc743f076e1733f6233",
+        "size_bytes": 12643
+      },
+      {
+        "artifact_id": "54a2cabb-fa4a-4504-9490-95f3a2eaf133",
+        "name": "observation-digest-v1.mjs",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs",
+        "sha256": "1e6ee2f392fdb7656e567e37f571e39471feefb62562a8512391d470faddf7c9",
+        "size_bytes": 7809
+      },
+      {
+        "artifact_id": "cba0e0d2-6d1a-456a-82f1-91489d295c20",
+        "name": "observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation.json",
+        "sha256": "9f67eb601c01872737c4bcc6eeb2fe537de78eebb1fa23dc70431b0ebe60ec9c",
+        "size_bytes": 2543
+      },
+      {
+        "artifact_id": "a9ddf8d0-1dfc-4037-b2d5-5c56e7e3c4e7",
+        "name": "probe-invocation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/probe-invocation.json",
+        "sha256": "3b5d95392124d65298a84ce319d0cc7322c593d6b311c5064c4d3811bc8bd688",
+        "size_bytes": 2895
+      },
+      {
+        "artifact_id": "40ecd27d-014d-4205-b4f3-a222e13d2321",
+        "name": "qa/independent_recompute.py",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/qa/independent_recompute.py",
+        "sha256": "47ac0008dcc6c82d3ff73bdada22ab65d761a4a5458817f101b31fcaa3ca71f0",
+        "size_bytes": 18365
+      },
+      {
+        "artifact_id": "36a11cd8-f1f8-4dd7-bea4-0aed0910004f",
+        "name": "qa/independent-recompute.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/qa/independent-recompute.json",
+        "sha256": "e3638367321b00e2fe2e50af64ca3a43fa64e2ed64f558ad7bbcd86db05d1ed1",
+        "size_bytes": 31504
+      },
+      {
+        "artifact_id": "9facd5f7-c940-436c-9758-aff796f2bb3d",
+        "name": "qa/verify.py",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/qa/verify.py",
+        "sha256": "8e1e02981e687f9562e19484f548bd131167cdc0444ba5e251fdbd2b8a99f62f",
+        "size_bytes": 11376
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "a1855ccbe68d81592343930d2504705b9415032f04175686f7000b35a78aac4c",
+    "created_at": "2026-11-16T11:16:27.777Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+    "epoch_id": "31872deb-bbda-4618-9f50-464d2ad2b8f3",
+    "candidate_sha256": "a1855ccbe68d81592343930d2504705b9415032f04175686f7000b35a78aac4c",
+    "execution_output_sha256": "9bac25e46ec656c1129ee24004409bea85ea90b9409cd92b4f4b458d355b1948",
+    "evidence_sha256": "625ae0ee7420c88f5bfe87dcd189abc9c4b17ee4a71c4d273e0586665dc39c34",
+    "review": {
+      "passed": false,
+      "score": 9,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "notes": "observation.json names observation-digest-v1 as the missing capability, records a single bounded acquisition (one dependency-free Node ESM procedure authored at a stable path below ROOT, sha256 1e6ee2f3…) and a replan onto that local procedure. No package/network/published substitute (e.g. csv_analytics) was used, and the procedure validates its inputs and self-checks per-site sums against aggregates before writing. Minor ambiguity: probe-invocation.json is also labeled a 'real-invocation' of the same procedure, which sits uneasily with the 'exactly one invocation' claim, but the final procedure is genuinely locally authored and qualified by a real run."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "notes": "invocation-receipt.json (registered artifact fdc46d93…, 12643 bytes, durable at ROOT) records executable_path=ROOT/observation-digest-v1.mjs with executable_sha256 1e6ee2f392fdb7656e567e37f571e39471feefb62562a8512391d470faddf7c9, which matches the registered .mjs artifact hash exactly, and fixed_args exactly [ROOT/input/pilot.observations.json, ROOT] per the spec. exit_code 0, stderr empty, stdout and the two written files embedded. Output root is ROOT, not a probe directory. Caveat: the receipt records digest.md as 3294 bytes while the registered artifact is 3296 bytes (receipt used character count, not UTF-8 bytes); sha256 e03394a3… still matches the on-disk bytes."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "notes": "Independently recomputed from input/pilot.observations.json: rows North 12/11/2, South 8/8/1, North 10/7/3 → row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 26*10000/30=8666.67→86.67; North 22/18/5, South 8/8/1. digest.json matches all fields as JSON integers plus a numeric 86.67, sites object keyed North/South with all three totals, per-site sums reconstruct aggregates. digest.md restates the identical totals, per-site table, an 'all sites' row, a numbered reproducible method (round(completed*10000/scheduled)/100, half-up, code-unit site ordering, pre-write consistency check) and the exact reproduction command."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "notes": "digest.json (revision 2, sha 3f3d1e13…, 301 bytes), digest.md (revision 2, sha e03394a3…, 3296 bytes), invocation-receipt.json (revision 2, sha bf598ead…), observation-digest-v1.mjs (sha 1e6ee2f3…) and the QA scripts/report are all in the registered artifact list with sizes and digests. Independent verification of the substance is confirmed by my own arithmetic from the fixture, by the QA python recomputation (26/26 checks, verdict pass) and by devops' byte-level re-checks; no deliverable is a placeholder and no value required hand-editing."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "invocation-receipt.json records observed_output_files['digest.md'].bytes = 3294, but the registered digest.md artifact is 3296 bytes; the receipt used the character count because of the U+2014 em dash. The sha256 is correct, so this is a receipt metadata error, not a content error.",
+          "severity": "minor"
+        },
+        {
+          "issue": "probe-invocation.json is labeled receipt_kind 'real-invocation' and records argv[0] as /usr/bin/node while the final receipt records 'node --'; two overlapping invocation records create ambiguity about whether the procedure ran more than once despite 'invocation_count: 1' / 'retried: false'.",
+          "severity": "minor"
+        },
+        {
+          "issue": "invocation-receipt.json's timing fields are all null. This is honestly disclosed (the shell gate surfaced no timestamps), but it leaves the receipt without a temporal anchor beyond the recorded step ordering.",
+          "severity": "minor"
+        },
+        {
+          "issue": "QA evidence incomplete: 1 artifact(s) exceeded the 24000-character per-artifact review window",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Correct invocation-receipt.json digest.md bytes to 3296 (the UTF-8 byte length) so recorded sizes match registered artifact sizes.",
+        "Consolidate probe-invocation.json and invocation-receipt.json into one unambiguous invocation record, or relabel the probe file so it cannot be read as a second execution of the qualified procedure.",
+        "Capture a host-provided timestamp or monotonic counter for the invocation so the receipt carries a verifiable time anchor rather than null timings."
+      ],
+      "verdict": "FAIL: LLM reviewer verdict is FAIL | Unresolved critical defect: QA evidence incomplete: 1 artifact(s) exceeded the 24000-character per-artifact review window"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "Unresolved critical defect: QA evidence incomplete: 1 artifact(s) exceeded the 24000-character per-artifact review window"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "reason": "observation.json names observation-digest-v1 as the missing capability, records a single bounded acquisition (one dependency-free Node ESM procedure authored at a stable path below ROOT, sha256 1e6ee2f3…) and a replan onto that local procedure. No package/network/published substitute (e.g. csv_analytics) was used, and the procedure validates its inputs and self-checks per-site sums against aggregates before writing. Minor ambiguity: probe-invocation.json is also labeled a 'real-invocation' of the same procedure, which sits uneasily with the 'exactly one invocation' claim, but the final procedure is genuinely locally authored and qualified by a real run."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": true,
+          "reason": "invocation-receipt.json (registered artifact fdc46d93…, 12643 bytes, durable at ROOT) records executable_path=ROOT/observation-digest-v1.mjs with executable_sha256 1e6ee2f392fdb7656e567e37f571e39471feefb62562a8512391d470faddf7c9, which matches the registered .mjs artifact hash exactly, and fixed_args exactly [ROOT/input/pilot.observations.json, ROOT] per the spec. exit_code 0, stderr empty, stdout and the two written files embedded. Output root is ROOT, not a probe directory. Caveat: the receipt records digest.md as 3294 bytes while the registered artifact is 3296 bytes (receipt used character count, not UTF-8 bytes); sha256 e03394a3… still matches the on-disk bytes."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "reason": "Independently recomputed from input/pilot.observations.json: rows North 12/11/2, South 8/8/1, North 10/7/3 → row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 26*10000/30=8666.67→86.67; North 22/18/5, South 8/8/1. digest.json matches all fields as JSON integers plus a numeric 86.67, sites object keyed North/South with all three totals, per-site sums reconstruct aggregates. digest.md restates the identical totals, per-site table, an 'all sites' row, a numbered reproducible method (round(completed*10000/scheduled)/100, half-up, code-unit site ordering, pre-write consistency check) and the exact reproduction command."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "reason": "digest.json (revision 2, sha 3f3d1e13…, 301 bytes), digest.md (revision 2, sha e03394a3…, 3296 bytes), invocation-receipt.json (revision 2, sha bf598ead…), observation-digest-v1.mjs (sha 1e6ee2f3…) and the QA scripts/report are all in the registered artifact list with sizes and digests. Independent verification of the substance is confirmed by my own arithmetic from the fixture, by the QA python recomputation (26/26 checks, verdict pass) and by devops' byte-level re-checks; no deliverable is a placeholder and no value required hand-editing."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": false
+    },
+    "receipt_sha256": "e203b67c1a9b8bb73199f19772724a128b1a57a0cea2d558360ce13f0e97cccc",
+    "created_at": "2026-11-16T11:17:16.292Z"
+  }
+}

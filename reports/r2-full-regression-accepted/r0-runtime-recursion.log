@@ -1,0 +1,58 @@
+
+R1 — a legacy single request runs exactly once, even with parallel=true
+  ✓ exactly one child executed
+  ✓ success
+  ✓ parallel=true reported as ignored
+  ✓ spawn budget charged once
+  ✓ sequential legacy call also once
+
+R2 — distinct children each run once, in parallel
+  ✓ three distinct children ran
+  ✓ they overlapped
+  ✓ each node id is unique
+  ✓ depth passed to children
+  ✓ maxSteps passed
+  ✓ success only when all succeeded
+
+R3 — sequential children keep order
+  ✓ order preserved
+
+R4 — duplicates and malformed requests are refused, nothing runs
+  ✓ duplicate children refused
+  ✓ over-limit refused, not truncated
+  ✓ no role/task/children refused
+  ✓ blank task refused
+  ✓ nothing executed
+  ✓ no budget consumed
+  ✓ resolveChildRequests throws for duplicates
+
+R5 — depth limit
+  ✓ refused beyond max depth
+
+R6 — spawn budget is atomic under concurrent delegate calls
+  ✓ never more agents than the cap
+  ✓ spawned counter equals executed
+  ✓ budget fully used by whole calls
+  ✓ the rest were refused explicitly
+
+R7 — abort stops children and passes the signal down
+  ✓ child got a signal even though the caller passed none
+  ✓ sequential: second child never started
+  ✓ outcome is not success
+  ✓ children report cancelled, not failed
+  ✓ new delegation refused once aborted
+
+R8 — failure of one child makes the delegation unsuccessful
+  ✓ overall success=false
+  ✓ per-child statuses
+  ✓ a throwing child is a failed outcome, not an exception
+
+R9 — nested tree is recorded and persisted
+  ✓ three nodes
+  ✓ parent links
+  ✓ depths
+  ✓ tree persisted to disk
+  ✓ persisted tree has all nodes
+
+────────────────────────────────────────────────────────────
+r0-runtime recursion: passed 37, failed 0

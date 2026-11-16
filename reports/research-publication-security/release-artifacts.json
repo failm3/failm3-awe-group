@@ -1,0 +1,44 @@
+{
+  "schema": "awe.research-release-artifacts.v1",
+  "date": "2026-11-17",
+  "archive": {
+    "path": ".research-assembly/awe-group-research-2026-11-17.tar.gz",
+    "sha256": "101a47744136138f74a3b96fc586a0cb7dc9db77aad76a444c401db3acdeb4d9",
+    "bytes": 16374686,
+    "members": 13217,
+    "unsafe_members": 0,
+    "restored_manifest_passed": true,
+    "restored_files": 8309,
+    "npm_ci_ignore_scripts": "PASS",
+    "typecheck": "PASS",
+    "professional_validate_only": "PASS",
+    "network_calls": 0,
+    "model_calls": 0
+  },
+  "git": {
+    "audit_descendant": {
+      "commit": "a2f6aa195878ab351d7f942a07a545c05dca2227",
+      "tree": "7faa3d176ffec24c0dda88ced6f5459b3f7fe1af",
+      "commit_object_sha256": "a9fbcc611a2e5b4f25e5967984cbec468f167a2dd9c17ebbf780481c310667bc",
+      "tree_files_verified": 8309,
+      "release_hashes_match": true,
+      "commit_parent_count": 1
+    },
+    "public_root": {
+      "commit": "9d6850ba58bf70717e5fbfdf193f006920471f02",
+      "tree": "7faa3d176ffec24c0dda88ced6f5459b3f7fe1af",
+      "commit_object_sha256": "f1c14f3be9b2ed891a01dc096050e9c3efde0798a3d098fb281560059e37a025",
+      "tree_files_verified": 8309,
+      "release_hashes_match": true,
+      "commit_parent_count": 0
+    }
+  },
+  "publication": {
+    "published": false,
+    "push_performed": false,
+    "remote_readback_performed": false,
+    "reason": "Target repository API 404 and no authorized Git/GitHub mechanism."
+  },
+  "note": "These are first-pass verification IDs, not final release IDs. Final archive and commit hashes are in .research-assembly/FINAL-RELEASE-IDS.json outside the self-hashed snapshot. Only a zero-parent, one-commit root is intended for future public push.",
+  "status": "superseded_intermediate_verification_ids"
+}

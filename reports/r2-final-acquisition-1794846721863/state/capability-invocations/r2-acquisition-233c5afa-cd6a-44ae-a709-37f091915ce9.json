@@ -1,0 +1,15 @@
+[
+  {
+    "version": 1,
+    "receipt_id": "b0eb14bd-a990-4806-83a7-a688bbac6369",
+    "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+    "delegation_id": "af3f022f-413b-4852-837b-9aeec2e6d699",
+    "attempt_id": "7dd43f3f-7dda-4201-87ca-74ff0d5eda72",
+    "qualification_id": "q-r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+    "generation": 1,
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/procedures/observation-digest-v1.js",
+    "executable_sha256": "7d340bab553ba2e89be7a07f6c91a1094ed67751976ffdfa801a62d0dec20445",
+    "command_sha256": "b78d6c60bd27d12679364d77630da41d9c2751b3600ef6f4bd6ddc90a443cab9",
+    "created_at": "2026-11-16T16:36:22.398Z"
+  }
+]

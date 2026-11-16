@@ -1,0 +1,14 @@
+{
+  "id": "36a11cd8-f1f8-4dd7-bea4-0aed0910004f",
+  "mission_id": "r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b",
+  "type": "json",
+  "name": "qa/independent-recompute.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/qa/independent-recompute.json",
+  "created_at": "2026-11-16T11:07:19.821Z",
+  "metadata": {
+    "size_bytes": 31504,
+    "sha256": "e3638367321b00e2fe2e50af64ca3a43fa64e2ed64f558ad7bbcd86db05d1ed1",
+    "reconciled": true,
+    "revision": 1
+  }
+}

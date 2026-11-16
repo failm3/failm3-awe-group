@@ -1,0 +1,303 @@
+{
+  "mission_id": "r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "capability": "observation-digest-v1",
+  "role": "independent verification (independent host-verification style recomputation; not Nox QA)",
+  "verdict": "PASS",
+  "acceptance_criterion_3": {
+    "text": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+    "pass": true,
+    "sub_items": [
+      {
+        "sub_item": "3a digest.json row_count exact numeric",
+        "expected": 3,
+        "actual": 3,
+        "pass": true
+      },
+      {
+        "sub_item": "3b digest.json scheduled exact numeric",
+        "expected": 30,
+        "actual": 30,
+        "pass": true
+      },
+      {
+        "sub_item": "3c digest.json completed exact numeric",
+        "expected": 26,
+        "actual": 26,
+        "pass": true
+      },
+      {
+        "sub_item": "3d digest.json incidents exact numeric",
+        "expected": 6,
+        "actual": 6,
+        "pass": true
+      },
+      {
+        "sub_item": "3e digest.json completion_percent = completed/scheduled*100, half-up, exactly 2 decimals, serialised as a JSON number",
+        "expected": "86.67",
+        "actual": {
+          "value": 86.67,
+          "raw_literal": "86.67",
+          "decimal_places": 2,
+          "json_type": "number"
+        },
+        "pass": true
+      },
+      {
+        "sub_item": "3f digest.json sites object keyed by site with per-site totals (rows/scheduled/completed/incidents/completion_percent)",
+        "expected": {
+          "North": {
+            "rows": 2,
+            "scheduled": 22,
+            "completed": 18,
+            "incidents": 5,
+            "completion_percent": "81.82"
+          },
+          "South": {
+            "rows": 1,
+            "scheduled": 8,
+            "completed": 8,
+            "incidents": 1,
+            "completion_percent": "100.00"
+          }
+        },
+        "actual": {
+          "North": {
+            "rows": 2,
+            "scheduled": 22,
+            "completed": 18,
+            "incidents": 5,
+            "completion_percent": 81.82
+          },
+          "South": {
+            "rows": 1,
+            "scheduled": 8,
+            "completed": 8,
+            "incidents": 1,
+            "completion_percent": 100.0
+          }
+        },
+        "pass": true
+      },
+      {
+        "sub_item": "3g digest.md presents the same totals values as digest.json and as the independent recomputation",
+        "expected": "row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67",
+        "actual": "row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67 (parsed from the Totals table)",
+        "pass": true
+      },
+      {
+        "sub_item": "3h digest.md per-site rows match digest.json exactly",
+        "expected": {
+          "North": "2/22/18/5/81.82",
+          "South": "1/8/8/1/100.00"
+        },
+        "actual": {
+          "North": "2/22/18/5/81.82",
+          "South": "1/8/8/1/100.00"
+        },
+        "pass": true
+      },
+      {
+        "sub_item": "3i digest.md documents a reproducible method (rows, integer sums, half-up 2dp rule, per-site grouping, reproduction command)",
+        "expected": "'## Method' with the half-up 2-decimal rule and a Reproduce command",
+        "actual": "'## Method' present, 5 numbered steps including the exact half-up rounding rule and 'Reproduce: node -- observation-digest-v1.js <input.json> <output-dir>'",
+        "pass": true
+      }
+    ]
+  },
+  "comparison_summary": {
+    "checks_executed": 37,
+    "checks_failed": 0,
+    "scope": "every numeric value in digest.json, every numeric cell in digest.md, md-to-json agreement, md method documentation, JSON literal formatting",
+    "exact_numeric_equality_required_and_met": true,
+    "mismatches": [],
+    "note": "Any mismatch would have been reported as expected-vs-actual and marked fail; none occurred, so no deliverable was adjusted (and none was modified either way)."
+  },
+  "independent_recomputation": {
+    "input_read_directly": "input/pilot.observations.json",
+    "input_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "trusted_procedure_stdout": false,
+    "trusted_prior_probe_output": false,
+    "method": "python3 decimal.Decimal ROUND_HALF_UP quantize to 0.01, cross-checked against an independently derived integer formula floor((200*c+s)/(2*s)); fixture parsed with json and summed with Python ints",
+    "tooling": {
+      "python": "3.14.4",
+      "packages_installed": "none",
+      "network": "none"
+    },
+    "totals": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": "86.67"
+    },
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": "81.82"
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": "100.00"
+      }
+    },
+    "percentage_routes_agree": true,
+    "percentage_routes": {
+      "total": ["86.67", "86.67"],
+      "North": ["81.82", "81.82"],
+      "South": ["100.00", "100.00"]
+    },
+    "site_sums_roll_up_to_totals": true,
+    "script": "verify/recompute.py"
+  },
+  "hashes": {
+    "digest.json": {
+      "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+      "bytes": 470
+    },
+    "digest.md": {
+      "sha256": "ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef",
+      "bytes": 1301
+    },
+    "input/pilot.observations.json": {
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "bytes": 474
+    },
+    "procedures/observation-digest-v1.js": {
+      "sha256": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3",
+      "bytes": 9417
+    },
+    "invocation-receipt.json": {
+      "sha256": "4095eda633765ad3fc456164c885569382758e008b7a9d19d005234bc3805f4b",
+      "bytes": 4055
+    },
+    "observation.json": {
+      "sha256": "b9da2c57ad5d1b9333422140268242c927d5d83b92801ae35ce6fe3b651e7e94",
+      "bytes": 2833
+    }
+  },
+  "integrity": {
+    "procedures/observation-digest-v1.js": {
+      "sha256": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3",
+      "matches_qualified_executable_sha256": true,
+      "qualified_value": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3"
+    },
+    "digest.json": {
+      "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+      "matches_observation_json_probe_hash": true,
+      "corroboration": "identical to probe output, probe-digest.json and probe/out, i.e. the final run at the fixed output dir reproduced the probe result byte-for-byte"
+    },
+    "digest.md": {
+      "sha256": "ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef"
+    },
+    "fixture_unmodified": "input/pilot.observations.json sha256 412c65c3... unchanged during verification",
+    "deliverables_modified_by_this_delegation": false
+  },
+  "rounding_boundary": {
+    "all_pass": true,
+    "tie_cases_that_distinguish_half_up_from_bankers_rounding": [
+      {
+        "completed": 1,
+        "scheduled": 32,
+        "exact": "3.125",
+        "half_up": "3.13",
+        "half_even_bankers": "3.12",
+        "int_formula": "3.13",
+        "expected_half_up": "3.13",
+        "pass": true,
+        "differs_from_half_even": true
+      },
+      {
+        "completed": 5,
+        "scheduled": 32,
+        "exact": "15.625",
+        "half_up": "15.63",
+        "half_even_bankers": "15.62",
+        "int_formula": "15.63",
+        "expected_half_up": "15.63",
+        "pass": true,
+        "differs_from_half_even": true
+      },
+      {
+        "completed": 1,
+        "scheduled": 800,
+        "exact": "0.125",
+        "half_up": "0.13",
+        "half_even_bankers": "0.12",
+        "int_formula": "0.13",
+        "expected_half_up": "0.13",
+        "pass": true,
+        "differs_from_half_even": true
+      }
+    ],
+    "cases": [
+      {"completed": 1, "scheduled": 32, "exact": "3.125", "half_up": "3.13", "half_even_bankers": "3.12", "int_formula": "3.13", "expected_half_up": "3.13", "pass": true, "differs_from_half_even": true},
+      {"completed": 3, "scheduled": 32, "exact": "9.375", "half_up": "9.38", "half_even_bankers": "9.38", "int_formula": "9.38", "expected_half_up": "9.38", "pass": true, "differs_from_half_even": false},
+      {"completed": 5, "scheduled": 32, "exact": "15.625", "half_up": "15.63", "half_even_bankers": "15.62", "int_formula": "15.63", "expected_half_up": "15.63", "pass": true, "differs_from_half_even": true},
+      {"completed": 1, "scheduled": 800, "exact": "0.125", "half_up": "0.13", "half_even_bankers": "0.12", "int_formula": "0.13", "expected_half_up": "0.13", "pass": true, "differs_from_half_even": true},
+      {"completed": 7, "scheduled": 1600, "exact": "0.4375", "half_up": "0.44", "half_even_bankers": "0.44", "int_formula": "0.44", "expected_half_up": "0.44", "pass": true, "differs_from_half_even": false},
+      {"completed": 1, "scheduled": 8, "exact": "12.5", "half_up": "12.50", "half_even_bankers": "12.50", "int_formula": "12.50", "expected_half_up": "12.50", "pass": true, "differs_from_half_even": false},
+      {"completed": 1, "scheduled": 3, "exact": "33.33333333333333333333333333", "half_up": "33.33", "half_even_bankers": "33.33", "int_formula": "33.33", "expected_half_up": "33.33", "pass": true, "differs_from_half_even": false},
+      {"completed": 2, "scheduled": 3, "exact": "66.66666666666666666666666667", "half_up": "66.67", "half_even_bankers": "66.67", "int_formula": "66.67", "expected_half_up": "66.67", "pass": true, "differs_from_half_even": false},
+      {"completed": 0, "scheduled": 0, "exact": "0", "half_up": "0.00", "half_even_bankers": "0.00", "int_formula": "0.00", "expected_half_up": "0.00", "pass": true, "differs_from_half_even": false},
+      {"completed": 0, "scheduled": 7, "exact": "0", "half_up": "0.00", "half_even_bankers": "0.00", "int_formula": "0.00", "expected_half_up": "0.00", "pass": true, "differs_from_half_even": false},
+      {"completed": 7, "scheduled": 7, "exact": "100", "half_up": "100.00", "half_even_bankers": "100.00", "int_formula": "100.00", "expected_half_up": "100.00", "pass": true, "differs_from_half_even": false},
+      {"completed": 81, "scheduled": 100, "exact": "81", "half_up": "81.00", "half_even_bankers": "81.00", "int_formula": "81.00", "expected_half_up": "81.00", "pass": true, "differs_from_half_even": false},
+      {"completed": 26, "scheduled": 30, "exact": "86.66666666666666666666666667", "half_up": "86.67", "half_even_bankers": "86.67", "int_formula": "86.67", "expected_half_up": "86.67", "pass": true, "differs_from_half_even": false},
+      {"completed": 18, "scheduled": 22, "exact": "81.81818181818181818181818182", "half_up": "81.82", "half_even_bankers": "81.82", "int_formula": "81.82", "expected_half_up": "81.82", "pass": true, "differs_from_half_even": false}
+    ],
+    "conclusion": "1/32 = 3.125 exactly gives 3.13 under half-up and 3.12 under half-even (banker's); the procedure and my independent integer formula both yield 3.13, confirming round-half-away-from-zero. Also verified: 100.00 and 0.00 render with two decimals, exact one-decimal results render as x.x0, repeating decimals round rather than truncate, and zero-scheduled yields 0.00 with no division by zero.",
+    "evidence": "verify/recompute-evidence.json"
+  },
+  "write_scope": {
+    "pass": true,
+    "test": "write-scope and determinism",
+    "files_written_to_cwd": [],
+    "files_written_to_output_dir": ["digest.json", "digest.md"],
+    "files_written_outside_output_dir": [],
+    "mission_artifact_root_unchanged_by_rerun": true,
+    "determinism": {
+      "digest.json": {
+        "rerun_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "delivered_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "byte_identical": true
+      },
+      "digest.md": {
+        "rerun_sha256": "ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef",
+        "delivered_sha256": "ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef",
+        "byte_identical": true
+      }
+    },
+    "static_audit": "grep of procedures/observation-digest-v1.js found writes only via fs.writeFileSync/fs.mkdirSync under the resolved output-dir argument; no child_process, no network modules, no writes to the input path or the script directory; failure path exits 2 after writing nothing.",
+    "evidence": "verify/write-scope-evidence.json"
+  },
+  "risks_carried_forward": [
+    "A model-authored observation is not qualification",
+    "Visible examples do not replace independent arithmetic verification"
+  ],
+  "limits_of_this_verification": [
+    "This is an independent recomputation and comparison of numbers and text. It does not constitute Nox QA, and it does not re-run the host gate's own byte verification.",
+    "Correctness of the fixed invocation is taken from invocation-receipt.json and matched against the executable hash above; the receipt's stdout was deliberately not used as a source of truth for any number.",
+    "The probe artifacts under probe/ and probe-digest.json were read only as corroboration after my own numbers were computed; they were never an input to the recomputation."
+  ],
+  "evidence_artifacts": [
+    "verify/recompute.py",
+    "verify/recompute-evidence.json",
+    "verify/write-scope-evidence.json",
+    "verification-report.json",
+    "verification.md"
+  ],
+  "tooling_constraints_honored": [
+    "no packages installed",
+    "no network",
+    "no external changes",
+    "inputs read-only",
+    "digest.json/digest.md and the qualified procedure unmodified",
+    "no reference to any capability attempt in this delegation"
+  ]
+}

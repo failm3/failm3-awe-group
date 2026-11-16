@@ -1,0 +1,14 @@
+{
+  "id": "94add600-7759-4e6a-b191-ee4bf9bf2fad",
+  "mission_id": "r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24",
+  "type": "file",
+  "name": "probe_digest.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/probe_digest.md",
+  "content": "# Observation Digest\n\n- Source: Lumen Harbor field pilot\n- Period: 2026-W45\n- Capability: observation-digest-v1\n\n## Totals\n\n| Metric | Value |\n| --- | --- |\n| row_count | 3 |\n| scheduled | 30 |\n| completed | 26 |\n| incidents | 6 |\n| completion_percent | 86.67 |\n\n## Per-site totals\n\n| Site | Rows | Scheduled | Completed | Incidents | Completion % |\n| --- | --- | --- | --- | --- | --- |\n| North | 2 | 22 | 18 | 5 | 81.82 |\n| South | 1 | 8 | 8 | 1 | 100.00 |\n| **All sites** | 3 | 30 | 26 | 6 | 86.67 |\n\n## Method (reproducible)\n\n1. Parse the JSON fixture and take the `observations` array.\n2. Validate each row: `site` non-empty string; `scheduled`, `completed`, `incidents` integers >= 0; `completed` <= `scheduled`.\n3. `row_count` = number of rows.\n4. Global `scheduled`, `completed`, `incidents` = column sums over all rows.\n5. Per-site totals = column sums grouped by `site`; `rows` counts contributing rows. Sites are listed alphabetically.\n6. `completion_percent` = `completed / scheduled * 100`, rounded half-up to 2 decimals using integer arithmetic `floor((completed*10000*2 + scheduled) / (2*scheduled)) / 100`, rendered with exactly 2 decimal places. Same formula is applied per site.\n7. Site totals are summed again and must equal the global totals; the digest records this reconciliation.\n\n## Reconciliation\n\n- Sum of per-site scheduled: 30 (global 30)\n- Sum of per-site completed: 26 (global 26)\n- Sum of per-site incidents: 6 (global 6)\n- Matches global: yes\n\n## Input fingerprint\n\n- Fixture: `/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/input/pilot.observations.json`\n- SHA-256: `412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766`\n- Bytes: 474\n",
+  "created_at": "2026-11-16T03:29:06.675Z",
+  "metadata": {
+    "size_bytes": 1809,
+    "sha256": "8f9bd4645e00b5e476303b4971e2194993717d05357c15ebe3d787e37513cc5a",
+    "revision": 1
+  }
+}

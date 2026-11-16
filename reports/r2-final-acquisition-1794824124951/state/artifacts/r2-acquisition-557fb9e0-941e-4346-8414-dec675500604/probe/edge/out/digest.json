@@ -1,0 +1,25 @@
+{
+  "source": "edge",
+  "period": "test",
+  "row_count": 2,
+  "scheduled": 64,
+  "completed": 2,
+  "incidents": 0,
+  "completion_percent": 3.13,
+  "sites": {
+    "Alpha": {
+      "rows": 1,
+      "scheduled": 32,
+      "completed": 1,
+      "incidents": 0,
+      "completion_percent": 3.13
+    },
+    "Zeta": {
+      "rows": 1,
+      "scheduled": 32,
+      "completed": 1,
+      "incidents": 0,
+      "completion_percent": 3.13
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "6d192dcc-0813-4e07-aa9c-9a0eecd2c54d",
+  "mission_id": "r2-memory-transfer-1794781064860-source",
+  "type": "text",
+  "name": "FORMAT.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-source/FORMAT.md",
+  "created_at": "2026-11-15T22:17:47.289Z",
+  "metadata": {
+    "size_bytes": 597,
+    "sha256": "39621724ffba7b774fee6f76736eab9d705c37ce2248e18a7138bceb49dd0df9",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "696c13f2-ae5f-4c75-a0f8-4f9e5fe46b92",
+  "mission_id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics",
+  "type": "file",
+  "name": "input/operations.csv",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T19-44-16-972Z-3162655/state/artifacts/r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics/input/operations.csv",
+  "content": "week,team,work_orders,completed_orders,defects,planned_minutes,actual_minutes\nW01,Atlas,14,13,1,840,805\nW02,Atlas,16,15,2,960,1010\nW03,Atlas,12,12,0,720,690\nW04,Atlas,18,16,2,1080,1140\nW05,Atlas,15,15,1,900,875\nW06,Atlas,20,18,1,1200,1260\nW01,Birch,10,10,0,650,630\nW02,Birch,11,10,1,715,760\nW03,Birch,13,12,1,845,820\nW04,Birch,12,12,0,780,750\nW05,Birch,14,13,1,910,945\nW06,Birch,15,14,0,975,1005\nW01,Cedar,9,8,2,630,700\nW02,Cedar,10,9,1,700,735\nW03,Cedar,11,11,1,770,805\nW04,Cedar,8,7,1,560,610\nW05,Cedar,12,10,2,840,920\nW06,Cedar,13,12,1,910,980\n",
+  "created_at": "2026-11-16T19:44:17.168Z",
+  "metadata": {
+    "size_bytes": 547,
+    "sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+    "revision": 1
+  }
+}

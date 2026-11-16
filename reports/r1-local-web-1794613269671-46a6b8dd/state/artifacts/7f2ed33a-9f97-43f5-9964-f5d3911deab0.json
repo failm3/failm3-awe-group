@@ -1,0 +1,13 @@
+{
+  "id": "7f2ed33a-9f97-43f5-9964-f5d3911deab0",
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "type": "file",
+  "name": "index.html",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/index.html",
+  "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Task tracker</title>\n<link rel=\"icon\" type=\"image/svg+xml\" href=\"favicon.svg\">\n<link rel=\"stylesheet\" href=\"styles.css\">\n<script src=\"app.js\" defer></script>\n</head>\n<body>\n<main class=\"container\">\n  <h1>Task tracker</h1>\n\n  <form id=\"task-form\" class=\"task-form\" novalidate>\n    <label for=\"new-task\">New task</label>\n    <input id=\"new-task\" type=\"text\" autocomplete=\"off\">\n    <button type=\"submit\">Add task</button>\n  </form>\n\n  <div class=\"filter-row\">\n    <label for=\"filter\">Filter tasks</label>\n    <select id=\"filter\">\n      <option value=\"all\">all</option>\n      <option value=\"active\">active</option>\n      <option value=\"completed\">completed</option>\n    </select>\n  </div>\n\n  <ul id=\"task-list\" class=\"task-list\" aria-label=\"Tasks\"></ul>\n</main>\n</body>\n</html>\n",
+  "created_at": "2026-11-13T23:47:19.664Z",
+  "metadata": {
+    "size_bytes": 914,
+    "sha256": "f3b10faea1aa852151bdc26cfe6edc3aab7a803d08e2df13665f53fb701061b9"
+  }
+}

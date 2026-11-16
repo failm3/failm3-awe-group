@@ -1,0 +1,14 @@
+{
+  "navigation_files": [
+    "README.md",
+    "PROJECT-INDEX.md",
+    "AWE-RESEARCH-REPOSITORY-ASSEMBLY-REPORT.md",
+    "docs/ARCHITECTURE-AS-IS.md",
+    "reports/RESEARCH-EVIDENCE-INDEX.md",
+    "research/external/PROVENANCE.md",
+    "AGENTS.md"
+  ],
+  "local_links_checked": 10,
+  "missing": [],
+  "historical_unresolved_targets": "See reports/RESEARCH-LINK-GAPS.json; imported evidence is not silently rewritten."
+}

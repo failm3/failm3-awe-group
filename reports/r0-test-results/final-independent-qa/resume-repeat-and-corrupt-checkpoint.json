@@ -1,0 +1,32 @@
+{
+  "probe": "real manager/storage/checkpoint resume; injected offline plan/executor/QA; no provider, network, browser or MCP",
+  "isolated_data_dir": "/home/nox/awe-group-cleanroom-20261112/reports/r0-test-results/final-independent-qa/probe-state-nZLUbi/data",
+  "old_fingerprint": "e1fc927003a12f8a9a50366afa381992d948de4d2d51859fb535ba30320739f1",
+  "changed_expected_output_fingerprint": "c4a513e028fd06a46eec5e53b8fdb61d33256cfa250139abb46393840a56244c",
+  "results": {
+    "successful_work_then_qa_timeout_then_semantic_replan": {
+      "first_status": "paused",
+      "resumed_status": "completed",
+      "resumed_expected_output": "submission receipt",
+      "specialist_calls_total": 2,
+      "measured_side_effects_total": 2,
+      "explicit_operator_retry": false,
+      "expected": "confirmed success is reused; no second effect without explicit retry"
+    },
+    "malformed_checkpoint_on_resume": {
+      "resumed_status": "completed",
+      "checkpoint_seen_by_head": {
+        "completed": 0,
+        "in_flight": 0
+      },
+      "specialist_calls_after_resume": 1,
+      "measured_side_effects_before_resume": 1,
+      "measured_side_effects_after_resume": 2,
+      "receipt_lines": [
+        "corrupt:1",
+        "corrupt:2"
+      ],
+      "expected": "fail closed, preserve malformed evidence, make zero Head/specialist calls and zero new effects"
+    }
+  }
+}

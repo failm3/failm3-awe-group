@@ -1,0 +1,14 @@
+{
+  "id": "72fc40d4-cab2-41a6-aa9e-07e5d350c0a3",
+  "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+  "type": "text",
+  "name": "input/rescue-shifts.csv",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/input/rescue-shifts.csv",
+  "created_at": "2026-11-15T03:42:41.940Z",
+  "metadata": {
+    "size_bytes": 209,
+    "sha256": "502022dd7e1166df8d709461c3ca81dfe5c8c59e79ea4e23e37aac69966e5181",
+    "reconciled": true,
+    "revision": 1
+  }
+}

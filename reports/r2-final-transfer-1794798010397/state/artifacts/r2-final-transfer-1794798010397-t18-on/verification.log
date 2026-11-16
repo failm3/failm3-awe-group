@@ -1,0 +1,68 @@
+=== node v22.23.3 ===
+=== visible.test.cjs (unmodified) ===
+visible PASS
+visible exit: 0
+
+=== edge-case probes ===
+empty => []
+single => [{"WINDOW":2,"RATE":1,"LIMIT":2,"COLOR":"white"}]
+lf => [{"WINDOW":2,"RATE":1,"LIMIT":2},{"WINDOW":3,"RATE":0,"LIMIT":1}]
+crlf => [{"WINDOW":2,"RATE":1,"LIMIT":2},{"WINDOW":3,"RATE":0,"LIMIT":1}]
+cr => [{"WINDOW":2,"RATE":1,"LIMIT":2},{"WINDOW":3,"RATE":0,"LIMIT":1}]
+no-final-eol => [{"WINDOW":2,"RATE":1,"LIMIT":2},{"WINDOW":3,"RATE":1,"LIMIT":2}]
+trailing-eol => [{"WINDOW":2,"RATE":1,"LIMIT":2}]
+trailing-crlf => [{"WINDOW":2,"RATE":1,"LIMIT":2}]
+blank-record-lf => THROW INVALID_FORMAT
+blank-record-trail => THROW INVALID_FORMAT
+non-string => THROW INVALID_FORMAT
+quoted-whole-field => [{"WINDOW":2,"RATE":1,"LIMIT":2}]
+quoted-field-space-only => [{"WINDOW":7,"RATE":1,"LIMIT":2,"COLOR":"black"}]
+quoted-escaped-quote => THROW INVALID_VALUE
+quoted-sep-inside => THROW INVALID_VALUE
+quoted-crlf-inside => [{"WINDOW":2,"RATE":1,"LIMIT":2,"COLOR":"white"}]
+quoted-crlf-between-records => [{"WINDOW":2,"RATE":1,"LIMIT":2},{"WINDOW":5,"RATE":3,"LIMIT":4}]
+quoted-eq-inside => THROW INVALID_VALUE
+quoted-empty-value => THROW INVALID_FORMAT
+unterminated => THROW INVALID_FORMAT
+after-close-quote => THROW INVALID_FORMAT
+quote-in-unquoted => THROW INVALID_FORMAT
+quote-mid-field => THROW INVALID_FORMAT
+two-equals => THROW INVALID_FORMAT
+no-equals => THROW INVALID_FORMAT
+empty-field-mid => THROW INVALID_FORMAT
+dangling-semicolon => THROW INVALID_FORMAT
+bad-key-lower => THROW INVALID_FORMAT
+bad-key-digit-first => THROW INVALID_FORMAT
+bad-key-hyphen => THROW INVALID_FORMAT
+bad-key-space => THROW INVALID_FORMAT
+value-trim => [{"WINDOW":2,"RATE":1,"LIMIT":2}]
+key-not-trimmed => THROW INVALID_FORMAT
+value-inner-space => THROW INVALID_VALUE
+dup-known => THROW INVALID_FORMAT
+dup-after-trim => THROW INVALID_FORMAT
+dup-unknown => THROW INVALID_FORMAT
+unknown-dropped => [{"WINDOW":2,"RATE":1,"LIMIT":2,"COLOR":"black"}]
+proto-key => [[{"WINDOW":2,"RATE":1,"LIMIT":2}],true,["WINDOW","RATE","LIMIT"]]
+proto-key-invalid-value-still-dropped => [{"WINDOW":2,"RATE":1,"LIMIT":2}]
+bounds-ok => [{"WINDOW":1,"RATE":30,"LIMIT":25}]
+bounds-ok-upper-window => [{"WINDOW":50,"RATE":0,"LIMIT":1}]
+window-too-big => THROW INVALID_VALUE
+window-zero => THROW INVALID_VALUE
+rate-too-big => THROW INVALID_VALUE
+limit-zero => THROW INVALID_VALUE
+limit-too-big => THROW INVALID_VALUE
+leading-zero => THROW INVALID_VALUE
+negative => THROW INVALID_VALUE
+plus-sign => THROW INVALID_VALUE
+hex => THROW INVALID_VALUE
+empty-value => THROW INVALID_VALUE
+space-only-value => THROW INVALID_VALUE
+color-black => [{"WINDOW":2,"RATE":1,"LIMIT":2,"COLOR":"black"}]
+color-case-sensitive => THROW INVALID_VALUE
+color-numeric => THROW INVALID_VALUE
+color-empty => THROW INVALID_VALUE
+missing-limit => THROW INVALID_VALUE
+missing-all => THROW INVALID_VALUE
+format-before-semantic => THROW INVALID_VALUE
+syntax-beats-semantic => THROW INVALID_FORMAT
+semantic-order-window-first => THROW INVALID_VALUE

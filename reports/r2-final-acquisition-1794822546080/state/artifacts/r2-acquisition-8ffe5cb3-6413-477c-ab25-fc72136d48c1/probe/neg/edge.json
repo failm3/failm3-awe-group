@@ -1,0 +1,4 @@
+{"source":"x","period":"p","observations":[
+ {"site":"Zürich \"A\"","scheduled":3,"completed":1,"incidents":0},
+ {"site":"A","scheduled":7,"completed":2,"incidents":1},
+ {"site":"A","scheduled":3,"completed":3,"incidents":0}]}

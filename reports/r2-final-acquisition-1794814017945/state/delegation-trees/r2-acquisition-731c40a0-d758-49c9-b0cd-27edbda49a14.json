@@ -1,0 +1,115 @@
+{
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "saved_at": "2026-11-16T07:56:00.531Z",
+  "total_agents": 5,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T07:27:17.430Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: The mission requires the named competence observation-digest-v1 (independently read input/pilot.observations.json, compute exact row/site totals and completion percentage to 2 decimals, persist digest.json and digest.md), but no registered capability provides it: the registered set contains only generic file/shell/web tools, so a shell-authored script would be an unqualified silent substitution. One bounded acquisition is needed before any execution plan can be issued.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_write",
+        "file_list"
+      ],
+      "artifacts": [
+        "e12a4467-6519-4c6d-a453-e51123e998cd",
+        "f62dda85-2e9d-4570-8068-bb0fff384365",
+        "a975e092-0d54-4c33-88df-bb939ad33ecb",
+        "15dcf43f-dfea-4fb2-addb-ad43caf9d537",
+        "ff9641e6-5034-450f-aadd-8917e6054bca",
+        "2750cd4d-8c56-401b-b28e-28ef41f59dbe",
+        "f819ca7b-69ce-486e-8c69-ad442f61793a",
+        "8aedd026-8171-4151-9de4-3bc4a05404a4",
+        "606549d2-0543-446a-bb0b-a3b9abded374",
+        "9336d05e-b6f7-40f7-b306-4965b6c42351"
+      ],
+      "duration_ms": 197173,
+      "finished_at": "2026-11-16T07:30:34.596Z"
+    },
+    {
+      "id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14:top1",
+      "role": "executor",
+      "started_at": "2026-11-16T07:31:01.839Z",
+      "task": "Invoke the already-qualified local procedure exactly once with its fixed arguments and harvest the real deliverables. Run exactly and only this command, character for character, from the mission root, with no added flags, no environment tweaks and no redirect into a probe directory: node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14'. Before invoking, confirm the executable still hashes to e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db (sha256sum) and that input/pilot.observations.json is present; if the hash differs, stop and report instead of running. After invoking, capture the full command line, exit code, stdout and stderr, the sha256 of the executable and of both produced files, and persist that as a durable invocation receipt artifact (e.g. invocation_receipt.json in the mission root) written with file_write and registered with save_artifact. Then register digest.json and digest.md as artifacts. Do not author or edit digest.json/digest.md by hand, do not re-run into a probe output directory, and do not copy probe artifacts as deliverables.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "save_artifact",
+        "file_list"
+      ],
+      "artifacts": [
+        "53044ee4-10cf-44c6-a21b-352a00204592",
+        "4b658702-ba31-4919-b226-79849fd3b307"
+      ],
+      "duration_ms": 168740,
+      "finished_at": "2026-11-16T07:33:50.576Z"
+    },
+    {
+      "id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14:top2",
+      "role": "analyst",
+      "started_at": "2026-11-16T07:33:50.589Z",
+      "task": "Independently verify the deliverables byte-for-byte and number-for-number, without trusting the executor's report. Read input/pilot.observations.json yourself and re-derive row_count, scheduled, completed, incidents, completion_percent and the per-site totals using your own reduction (a separate shell/Node or jq reduction, distinct from the produced procedure's internals). Then read the registered digest.json and digest.md and confirm: row_count, scheduled, completed and incidents are JSON numbers (not strings); completion_percent is a number with exactly two decimals; sites is an object keyed by site name with per-site totals that sum to the global totals; completion_percent equals completed/scheduled rounded to two decimals; and digest.md states the identical values and documents a reproducible method. Also re-hash the registered artifacts and confirm each uploaded artifact sha256 matches the local file bytes. Produce a verification report artifact (verification.json or verification.md) that lists each acceptance criterion with pass/fail, the independently computed numbers, the hashes checked, and any discrepancy; register it with save_artifact. Do not modify digest.json, digest.md or the acquired procedure, and do not re-run the acquisition.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "e2371759-f1c4-48e0-942e-e55dd6aa80e1",
+        "b4ccd733-f68c-4e35-950f-5d3a9a138255",
+        "366b7ac8-a0ed-47b5-bad4-135957d3e102",
+        "8ca66a0c-77de-4e66-a916-10f4aa6789e2",
+        "768db042-65ea-4a9a-9e97-6fcc3c3d8b93",
+        "e02659bf-eca6-41f7-a201-e5bd0f540b7b",
+        "e11f515a-a083-4299-9044-e74f2b5c1312"
+      ],
+      "duration_ms": 281468,
+      "finished_at": "2026-11-16T07:38:32.053Z"
+    },
+    {
+      "id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14:top3",
+      "role": "executor",
+      "started_at": "2026-11-16T07:40:33.986Z",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MAJOR] No durable invocation receipt exists anywhere in the 22-artifact candidate. A recursive scan for 'receipt'/'invoc' filenames returned zero files, no manifest entry is a receipt, and observation.json (mtime 07:30:04) predates both deliverables (07:31:50, 07:32:37), making it a pre-invocation plan record. Executable path, sha256, exact argv, exit status and completion time were never persisted after the run, le",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 368930,
+      "finished_at": "2026-11-16T07:46:42.919Z"
+    },
+    {
+      "id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14:top4",
+      "role": "executor",
+      "started_at": "2026-11-16T07:49:08.568Z",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MAJOR] The registered verification.md (artifact 24) is the pre-repair report: it states AC2 is PARTIAL because 'no durable invocation receipt exists' (D1) and calls AC4 unverifiable, which contradicts the delivered and registered invocation_receipt.json. candidate.repair_supersessions is empty, so the stale report is not marked superseded and the shipped verification narrative misdescribes the final state.\n[MINOR] F",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 411961,
+      "finished_at": "2026-11-16T07:56:00.531Z"
+    }
+  ]
+}

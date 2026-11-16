@@ -1,0 +1,13 @@
+{
+  "id": "44a3cd65-08b1-4217-aaea-bc88c0e9ca83",
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "type": "code",
+  "name": "product/index.html",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/product/index.html",
+  "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Task tracker</title>\n<link rel=\"stylesheet\" href=\"styles.css\">\n<script src=\"app.js\" defer></script>\n</head>\n<body>\n<main class=\"container\">\n  <h1>Task tracker</h1>\n\n  <form id=\"task-form\" class=\"task-form\" novalidate>\n    <label for=\"new-task\">New task</label>\n    <input id=\"new-task\" type=\"text\" autocomplete=\"off\">\n    <button type=\"submit\">Add task</button>\n  </form>\n\n  <div class=\"filter-row\">\n    <label for=\"filter\">Filter tasks</label>\n    <select id=\"filter\">\n      <option value=\"all\">all</option>\n      <option value=\"active\">active</option>\n      <option value=\"completed\">completed</option>\n    </select>\n  </div>\n\n  <ul id=\"task-list\" aria-label=\"Tasks\"></ul>\n</main>\n</body>\n</html>\n",
+  "created_at": "2026-11-13T23:44:55.923Z",
+  "metadata": {
+    "size_bytes": 838,
+    "sha256": "544b24beb18e0e6da09c0755bfd9f7b452a941678c9a255da1f3a5ec0870d4ad"
+  }
+}

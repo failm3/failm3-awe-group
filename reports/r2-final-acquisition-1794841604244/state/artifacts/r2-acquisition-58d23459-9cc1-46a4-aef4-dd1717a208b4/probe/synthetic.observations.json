@@ -1,0 +1,9 @@
+{
+  "source": "probe synthetic",
+  "period": "2026-W00",
+  "observations": [
+    {"site": "Alpha", "cohort": "X", "scheduled": 3, "completed": 1, "incidents": 0},
+    {"site": "Zeta",  "cohort": "Y", "scheduled": 0, "completed": 0, "incidents": 2},
+    {"site": "Alpha", "cohort": "Z", "scheduled": 7, "completed": 7, "incidents": 1}
+  ]
+}

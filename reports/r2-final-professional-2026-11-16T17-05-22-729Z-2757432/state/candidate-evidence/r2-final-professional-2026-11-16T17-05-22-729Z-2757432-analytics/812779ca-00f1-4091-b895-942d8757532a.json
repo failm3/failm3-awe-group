@@ -1,0 +1,126 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "812779ca-00f1-4091-b895-942d8757532a",
+    "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics",
+    "repair_iteration": 0,
+    "spec_hash": "3054541996602ce6ddc9f5a4b7d2378aa219816916c581a8ba951ec2f7a8453c",
+    "plan_hash": "c682852ca4573e34a47dd85315cea0e232bf91b870c4eaea3a1ec0b7957846aa",
+    "artifacts": [
+      {
+        "artifact_id": "07397043-7b74-473e-a4f5-db5655965933",
+        "name": "input/operations.csv",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics/input/operations.csv",
+        "sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+        "size_bytes": 547
+      },
+      {
+        "artifact_id": "a59827ca-052e-43a2-b9ac-af23f0a7f579",
+        "name": "metrics.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics/metrics.json",
+        "sha256": "07eacb6c6e3ab2e1f96b0f726076fd34b26a41612d2ea7de5355db175e75db02",
+        "size_bytes": 1127
+      },
+      {
+        "artifact_id": "4ec8eec0-73b4-40fe-b509-d20e6a838910",
+        "name": "operations-brief.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics/operations-brief.md",
+        "sha256": "c9889c9f5c2df83a9484b905e93732456be8f6c01bed41da0876455a53328349",
+        "size_bytes": 5062
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "ae921c48e1c1d66fa05b06aa3fffb0f27916c2c0857e4c56c09a51bad75add8d",
+    "created_at": "2026-11-16T17:08:16.284Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics",
+    "epoch_id": "812779ca-00f1-4091-b895-942d8757532a",
+    "candidate_sha256": "ae921c48e1c1d66fa05b06aa3fffb0f27916c2c0857e4c56c09a51bad75add8d",
+    "execution_output_sha256": "073ac2a8c198f9278bb9628de1de25953cfc1396f48cffea2a4fc48ee4c10af2",
+    "evidence_sha256": "d384f8e5d12e6493bc7c3199ce985b083c272750c778f86b067cd20bae3cf210",
+    "review": {
+      "passed": true,
+      "score": 10,
+      "criteria_results": [
+        {
+          "criterion": "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+          "passed": true,
+          "notes": "Verified by independent recomputation from the 18 CSV rows. Atlas 95/89/7/5700/5780 (variance 80), Birch 75/71/3/4875/4910 (35), Cedar 63/57/8/4410/4750 (340), totals 233/217/18/14985/15440 (455). Ratios: 89/95=93.6842->93.68, 5780/89=64.9438->64.94; 71/75=94.6667->94.67, 4910/71=69.1549->69.15; 57/63=90.4762->90.48, 4750/57=83.3333->83.33; 217/233=93.1330->93.13, 15440/217=71.1521->71.15. All match exactly. Root key order row_count, totals, teams is correct; all eight fields appear in the required order in totals and in each team object; team order is Atlas, Birch, Cedar; integers are JSON numbers without quotes; ratios serialize with exactly two decimals."
+        },
+        {
+          "criterion": "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+          "passed": true,
+          "notes": "The brief opens with an 'Executive recommendation' section naming Cedar as worst on completion, defects and variance and recommending Atlas/Birch as the reference pattern. Overall findings table reproduces 93.13%, 18 defects, +455 variance; per-team sections break out completion (93.68/94.67/90.48), defects (7/3/8) and schedule variance (80/35/340). Every figure traces to the CSV sums I recomputed; no external data or extrapolation appears."
+        },
+        {
+          "criterion": "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+          "passed": true,
+          "notes": "Method section explicitly names input/operations.csv, states row count as 18 data rows excluding header, and lists the three formulas as completion_percent = completed_orders / work_orders x 100, minutes_per_completed_order = actual_minutes / completed_orders, schedule_variance_minutes = actual_minutes minus planned_minutes. It also records that ratios are computed from raw integer sums and rounded only at serialization, and that no records were invented and no units converted."
+        },
+        {
+          "criterion": "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+          "passed": true,
+          "notes": "input/operations.csv appears at revision 1 with a single sha256 (3724e240...) and 547 bytes, consistent with read-only handling and no rewrite. The artifact set is exactly the input plus the two required deliverables; both specialist reports state a final file_list confirmed nothing extra was created. All brief conclusions are scoped to the six weeks and three teams, and the recommendation explicitly declines causal claims because the dataset holds no cause data."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted.",
+          "passed": true,
+          "notes": "Two genuinely distinct specialist delegations are evidenced: analyst performed extraction and calculation (two independent summation passes with an additivity cross-check) and writer independently re-read both the CSV and metrics.json, recomputed all values before authoring the brief, then verified the directory listing. The delegations are sequential for a legitimate dependency (the brief depends on exact metrics) and cover non-overlapping work. The Head/MissionManager layer is evidenced by the host candidate record carrying a plan_hash bound to the approved spec_hash; no direct workflow-specific specialist bypass appears."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "The writer's execution report states operations-brief.md as 5048 bytes, while the persisted artifact (revision 2) is 5062 bytes. A self-reported size mismatch only; the delivered content is complete and every figure in it verified correct.",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Have specialists report the artifact sha256 rather than a self-measured byte count, so the reported metadata is unambiguously checkable against the artifact registry.",
+        "Retain the two-pass recomputation and additivity cross-check in the verification section as the standard pattern for future aggregation briefs."
+      ],
+      "verdict": "PASS: PASS: Every acceptance criterion is met on independent verification. I re-summed all 18 CSV rows per team and overall and recomputed all eight ratios from raw integers; metrics.json matches to the digit with the required key order, field order, team order, numeric types and two-decimal serialization. operations-brief.md supplies an executive recommendation, exact overall and per-team completion/defects/variance findings, a Method section naming input/operations.csv with the three required formulas, and stays inside the six-week three-team dataset. The CSV is unchanged at a single revision, the artifact set is exactly the input plus the two deliverables, and two distinct specialist delegations (analyst calculation, writer synthesis) are evidenced under a Head-level plan. Only a cosmetic self-reported byte-count mismatch was found."
+    },
+    "gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Persist metrics.json containing exactly the root keys row_count, totals and teams in that order. Each totals/team object must contain exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order and schedule_variance_minutes in that order. teams must contain exactly Atlas, Birch and Cedar in that order. Values must match independent recomputation; all integer metrics must be JSON numbers and completion_percent/minutes_per_completed_order must have exactly two decimal places when serialized.",
+          "passed": true,
+          "reason": "Verified by independent recomputation from the 18 CSV rows. Atlas 95/89/7/5700/5780 (variance 80), Birch 75/71/3/4875/4910 (35), Cedar 63/57/8/4410/4750 (340), totals 233/217/18/14985/15440 (455). Ratios: 89/95=93.6842->93.68, 5780/89=64.9438->64.94; 71/75=94.6667->94.67, 4910/71=69.1549->69.15; 57/63=90.4762->90.48, 4750/57=83.3333->83.33; 217/233=93.1330->93.13, 15440/217=71.1521->71.15. All match exactly. Root key order row_count, totals, teams is correct; all eight fields appear in the required order in totals and in each team object; team order is Atlas, Birch, Cedar; integers are JSON numbers without quotes; ratios serialize with exactly two decimals."
+        },
+        {
+          "criterion": "Persist operations-brief.md containing a concise executive recommendation and exact overall and per-team completion, defects and schedule-variance findings derived only from input/operations.csv.",
+          "passed": true,
+          "reason": "The brief opens with an 'Executive recommendation' section naming Cedar as worst on completion, defects and variance and recommending Atlas/Birch as the reference pattern. Overall findings table reproduces 93.13%, 18 defects, +455 variance; per-team sections break out completion (93.68/94.67/90.48), defects (7/3/8) and schedule variance (80/35/340). Every figure traces to the CSV sums I recomputed; no external data or extrapolation appears."
+        },
+        {
+          "criterion": "Include a Method section in operations-brief.md naming input/operations.csv and the exact formulas: completed/work orders ×100, actual/completed minutes, and actual minus planned minutes; do not invent records or convert units.",
+          "passed": true,
+          "reason": "Method section explicitly names input/operations.csv, states row count as 18 data rows excluding header, and lists the three formulas as completion_percent = completed_orders / work_orders x 100, minutes_per_completed_order = actual_minutes / completed_orders, schedule_variance_minutes = actual_minutes minus planned_minutes. It also records that ratios are computed from raw integer sums and rounded only at serialization, and that no records were invented and no units converted."
+        },
+        {
+          "criterion": "Keep input/operations.csv immutable and deliver only metrics.json and operations-brief.md as substantive artifacts, with all conclusions limited to the supplied six-week three-team dataset.",
+          "passed": true,
+          "reason": "input/operations.csv appears at revision 1 with a single sha256 (3724e240...) and 547 bytes, consistent with read-only handling and no rewrite. The artifact set is exactly the input plus the two required deliverables; both specialist reports state a final file_list confirmed nothing extra was created. All brief conclusions are scoped to the six weeks and three teams, and the recommendation explicitly declines causal claims because the dataset holds no cause data."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager and at least two distinct specialist delegations for independent extraction/calculation and document synthesis; no workflow-specific direct specialist call is permitted.",
+          "passed": true,
+          "reason": "Two genuinely distinct specialist delegations are evidenced: analyst performed extraction and calculation (two independent summation passes with an additivity cross-check) and writer independently re-read both the CSV and metrics.json, recomputed all values before authoring the brief, then verified the directory listing. The delegations are sequential for a legitimate dependency (the brief depends on exact metrics) and cover non-overlapping work. The Head/MissionManager layer is evidenced by the host candidate record carrying a plan_hash bound to the approved spec_hash; no direct workflow-specific specialist bypass appears."
+        }
+      ],
+      "llm_score": 10,
+      "llm_passed": true
+    },
+    "receipt_sha256": "8c48ddc4ed0694a34a85622f0abe574ebb7ede7cbde298565fb8e9843a2124fa",
+    "created_at": "2026-11-16T17:09:03.653Z"
+  }
+}

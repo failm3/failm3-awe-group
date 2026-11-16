@@ -1,0 +1,13 @@
+{
+  "id": "3754cca1-64e5-48aa-8e2f-227389aa05e7",
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "type": "code",
+  "name": "product/favicon.svg",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/product/favicon.svg",
+  "content": "<!-- Unused placeholder. index.html declares an inline empty icon (data:,), so no icon file is requested. Safe to delete. -->\n",
+  "created_at": "2026-11-13T23:50:43.503Z",
+  "metadata": {
+    "size_bytes": 126,
+    "sha256": "49ebf5e6cb34928cb16315f274fb24c92e6bfc7891e6cdaa0136c289bf273541"
+  }
+}

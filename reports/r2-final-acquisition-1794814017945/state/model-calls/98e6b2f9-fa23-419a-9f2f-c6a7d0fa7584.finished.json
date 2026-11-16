@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "98e6b2f9-fa23-419a-9f2f-c6a7d0fa7584",
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "role": "qa-agent",
+  "model": "claude-opus-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T07:38:32.072Z",
+  "finished_at": "2026-11-16T07:39:22.916Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 24730,
+    "output_tokens": 5908,
+    "total_tokens": 30638,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 0
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "4d78a02a-2233-46eb-95f1-acac6eb5ef89",
+  "mission_id": "r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f",
+  "type": "image",
+  "name": "capability-probe.png",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-generalization-1794714138208/state/artifacts/r1-generalization-98ebfb8a-0d70-4b58-a916-4384f2f7932f/capability-probe.png",
+  "created_at": "2026-11-15T03:43:26.621Z",
+  "metadata": {
+    "size_bytes": 40505,
+    "sha256": "35dc21b97ba26c865187d3f00064e0455854c93c836bf431a57606b77d25958a",
+    "reconciled": true,
+    "revision": 1
+  }
+}

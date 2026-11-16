@@ -1,0 +1,26 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research",
+  "saved_at": "2026-11-16T03:30:17.473Z",
+  "total_agents": 1,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T03:28:42.962Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'delegate'. Reason: Approved capability 'delegate' is not registered; bounded acquisition is required before execution. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}. executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "file_write"
+      ],
+      "duration_ms": 94515,
+      "finished_at": "2026-11-16T03:30:17.473Z"
+    }
+  ]
+}

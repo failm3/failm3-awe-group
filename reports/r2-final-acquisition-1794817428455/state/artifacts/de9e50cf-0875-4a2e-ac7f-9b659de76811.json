@@ -1,0 +1,14 @@
+{
+  "id": "de9e50cf-0875-4a2e-ac7f-9b659de76811",
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "type": "file",
+  "name": "invocation/build_receipt.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/invocation/build_receipt.py",
+  "created_at": "2026-11-16T08:33:24.648Z",
+  "metadata": {
+    "size_bytes": 11473,
+    "sha256": "d75df860737598357e30b3751d88f8c480928c9896f0022646a66a6c65c9a426",
+    "reconciled": true,
+    "revision": 1
+  }
+}

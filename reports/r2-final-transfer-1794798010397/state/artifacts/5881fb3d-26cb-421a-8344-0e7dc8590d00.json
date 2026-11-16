@@ -1,0 +1,14 @@
+{
+  "id": "5881fb3d-26cb-421a-8344-0e7dc8590d00",
+  "mission_id": "r2-final-transfer-1794798010397-t39-on",
+  "type": "text",
+  "name": "FORMAT.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t39-on/FORMAT.md",
+  "created_at": "2026-11-16T07:24:32.658Z",
+  "metadata": {
+    "size_bytes": 1906,
+    "sha256": "f76ecd9068211d627d665e7ca6705e2135e23741b24ffa1b87e24cb967cf63e9",
+    "reconciled": true,
+    "revision": 1
+  }
+}

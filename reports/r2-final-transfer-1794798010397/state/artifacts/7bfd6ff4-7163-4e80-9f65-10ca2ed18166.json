@@ -1,0 +1,14 @@
+{
+  "id": "7bfd6ff4-7163-4e80-9f65-10ca2ed18166",
+  "mission_id": "r2-final-transfer-1794798010397-t12-off",
+  "type": "file",
+  "name": "verify.local.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t12-off/verify.local.cjs",
+  "content": "const assert = require('node:assert/strict');\nconst { decodeSeparated: d } = require(process.cwd() + '/core/decoder.cjs');\nconst F = /^INVALID_FORMAT$/, V = /^INVALID_VALUE$/;\nconst t = (f, re) => assert.throws(f, e => e instanceof Error && re.test(e.message));\n\nassert.deepEqual(d(''), []);\nassert.deepEqual(d('WINDOW=1;RATE=0;LIMIT=1\\r\\nLIMIT=25;RATE=10;WINDOW=40\\rWINDOW=3;RATE=3;LIMIT=3\\n'),\n  [{ WINDOW: 1, RATE: 0, LIMIT: 1 }, { WINDOW: 40, RATE: 10, LIMIT: 25 }, { WINDOW: 3, RATE: 3, LIMIT: 3 }]);\nconst r = d('Z=z;\"LIMIT=2\";\"X=a;b=\\r\\n\"\"q\"\"\";WINDOW=2;RATE=1');\nassert.deepEqual(Object.keys(r[0]), ['WINDOW', 'RATE', 'LIMIT', 'Z', 'X']);\nassert.equal(r[0].X, 'a;b=\\r\\n\"q\"');\nassert.equal(Object.getPrototypeOf(r[0]), Object.prototype);\nassert.deepEqual(Object.keys(d('WINDOW=2;RATE=1;LIMIT=2;CONSTRUCTOR=c')[0]), ['WINDOW', 'RATE', 'LIMIT', 'CONSTRUCTOR']);\n// no undocumented optional field is special-cased\nassert.deepEqual(d('WINDOW=2;RATE=1;LIMIT=2;COLOR=red;FLAGS=a,b'), [{ WINDOW: 2, RATE: 1, LIMIT: 2, COLOR: 'red', FLAGS: 'a,b' }]);\n\nt(() => d('WINDOW=2;RATE=1;LIMIT=2;\"__proto__=x\"'), F); // lowercase key invalid\nt(() => d('\"WINDOW=2;RATE=1;LIMIT=2'), F);              // unterminated quote\nt(() => d('\"WINDOW=2\"x;RATE=1;LIMIT=2'), F);            // junk after closing quote\nt(() => d('WINDOW=2\";RATE=1;LIMIT=2'), F);              // quote inside unquoted field\nt(() => d('WINDOW=2=3;RATE=1;LIMIT=2'), F);             // two equals in unquoted field\nt(() => d('window=2;RATE=1;LIMIT=2'), F);\nt(() => d('WINDOW=2;\"WINDOW=2\";RATE=1;LIMIT=2'), F);    // duplicate decoded key\nt(() => d('WINDOW= 2;RATE=1;LIMIT=2'), F);              // untrimmed value\nt(() => d('WINDOW=2;RATE=1;LIMIT=2;'), F);              // trailing separator\nt(() => d('WINDOW=2;RATE=1;LIMIT=2\\n\\nWINDOW=2;RATE=1;LIMIT=2'), F); // empty record\nt(() => d('WINDOW=0;RATE=1;LIMIT=2;X= y'), F);          // syntax beats semantic error\nt(() => d('WINDOW=0;RATE=1;LIMIT=2'), V);\nt(() => d('WINDOW=41;RATE=1;LIMIT=2'), V);\nt(() => d('WINDOW=02;RATE=1;LIMIT=2'), V);\nt(() => d('WINDOW=2;RATE=11;LIMIT=2'), V);\nt(() => d('WINDOW=2;RATE=1;LIMIT=26'), V);\nt(() => d('WINDOW=2;RATE=1;LIMIT=0'), V);\nt(() => d('WINDOW=2;RATE=1'), V);\nt(() => d('WINDOW=2;RATE=+1;LIMIT=2'), V);\nt(() => d('WINDOW=2;RATE=;LIMIT=2'), V);\nconsole.log('extra PASS');\n",
+  "created_at": "2026-11-16T04:31:51.030Z",
+  "metadata": {
+    "size_bytes": 2317,
+    "sha256": "2e252d93bc49fba9862bb9bd3e6cd96704a98260ca69d4478a41bde3e2ed42cc",
+    "revision": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "3354fca8-d710-4a56-8edd-87a3b23cc178",
+  "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+  "type": "code",
+  "name": "probe_local_renderer.sh",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557/state/artifacts/ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369/probe_local_renderer.sh",
+  "content": "#!/bin/sh\n# Bounded local availability probe for missing-browser-renderer.\n# Read-only: locates renderers already present on the host. Installs nothing,\n# executes no catalogue candidate, performs no network access.\ncd /home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557/state/artifacts/ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369 || exit 9\n\nREPORT=probe_environment.txt\n: > \"$REPORT\"\necho \"== probe time (UTC) ==\" >> \"$REPORT\"\ndate -u >> \"$REPORT\"\necho >> \"$REPORT\"\n\nfor c in google-chrome google-chrome-stable chromium chromium-browser chrome headless_shell \\\n         firefox wkhtmltoimage wkhtmltopdf cutycapt weasyprint rsvg-convert inkscape \\\n         convert magick node npm python3 npx playwright pandoc; do\n  p=$(command -v \"$c\" 2>/dev/null)\n  if [ -n \"$p\" ]; then\n    echo \"FOUND   $c -> $p\" >> \"$REPORT\"\n  else\n    echo \"ABSENT  $c\" >> \"$REPORT\"\n  fi\ndone\n\necho >> \"$REPORT\"\necho \"== versions (already-installed binaries only) ==\" >> \"$REPORT\"\nfor c in google-chrome google-chrome-stable chromium chromium-browser node python3; do\n  if command -v \"$c\" >/dev/null 2>&1; then\n    printf '%s: ' \"$c\" >> \"$REPORT\"\n    \"$c\" --version 2>&1 | head -n 1 >> \"$REPORT\"\n  fi\ndone\n\necho >> \"$REPORT\"\necho \"== python http/server-side render modules (import check only) ==\" >> \"$REPORT\"\nif command -v python3 >/dev/null 2>&1; then\n  python3 - <<'PY' >> \"$REPORT\" 2>&1\nmods = [\"playwright\", \"selenium\", \"pyppeteer\", \"weasyprint\", \"imgkit\", \"PIL\"]\nfor m in mods:\n    try:\n        __import__(m)\n        print(\"IMPORT-OK   \" + m)\n    except Exception as e:\n        print(\"IMPORT-FAIL \" + m + \" (\" + type(e).__name__ + \")\")\nPY\nelse\n  echo \"python3 ABSENT - import check skipped\" >> \"$REPORT\"\nfi\n\necho >> \"$REPORT\"\necho \"== node global headless packages (filesystem listing only) ==\" >> \"$REPORT\"\nif command -v npm >/dev/null 2>&1; then\n  npm root -g 2>/dev/null | while read -r d; do\n    echo \"npm root -g: $d\" >> \"$REPORT\"\n    [ -d \"$d\" ] && ls -1 \"$d\" 2>/dev/null | head -n 40 >> \"$REPORT\"\n  done\nelse\n  echo \"npm ABSENT\" >> \"$REPORT\"\nfi\n\necho \"probe complete\" >> \"$REPORT\"\ncat \"$REPORT\"\n",
+  "created_at": "2026-11-15T14:40:20.467Z",
+  "metadata": {
+    "size_bytes": 2130,
+    "sha256": "3f28b42cb19fab992d3f9a10f2b27ac80173c53eb9877f13c4dbe0b65a1d22c0",
+    "revision": 1
+  }
+}

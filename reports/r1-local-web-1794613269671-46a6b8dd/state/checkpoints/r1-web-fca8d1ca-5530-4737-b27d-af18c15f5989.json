@@ -1,0 +1,149 @@
+{
+  "approved_spec_hash": "6517289be5f200e1f6b888158eb90d25301a48f1164b483ff659817da16a284e",
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "version": 1,
+  "saved_at": "2026-11-13T23:51:10.812Z",
+  "timeout_ms": 600000,
+  "elapsed_ms": 600104,
+  "completed": [
+    {
+      "index": 0,
+      "delegation_id": "1ae7bfb4-943b-42f8-aa23-4e1bde1fe708",
+      "agent_role": "coder",
+      "task": "Author and persist a zero-dependency static task tracker at product/index.html, plus product/styles.css and product/app.js, in this mission workspace (mission r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989). Then use file_list and file_read to confirm the exact tree and contents, and register each product file with save_artifact.\n\nREQUIRED STRUCTURE (exact names):\n- Exactly one heading on the page: <h1>Task tracker</h1>.\n- A <form> containing <label for=\"new-task\">New task</label> and <input id=\"new-task\" type=\"text\" autocomplete=\"off\">, plus <button type=\"submit\">Add task</button>. Using a form submit handler covers both the button click and the Enter key. Call preventDefault in the handler.\n- <label for=\"filter\">Filter tasks</label> and <select id=\"filter\"> with options whose value attributes are exactly all, active and completed. Default is all.\n- <ul aria-label=\"Tasks\"> as the task list. It renders zero <li> elements initially when storage is empty. Do not render placeholder list items.\n- Each task is an <li> containing:\n  - a <span> whose textContent is the exact task text;\n  - <input type=\"checkbox\" aria-label=\"Complete \" + text>, with checked reflecting completion;\n  - <button type=\"button\" aria-label=\"Delete \" + text>Delete</button>.\n\nBEHAVIOR:\n- Trim the input value. If the trimmed value is empty, add nothing and keep the input focused.\n- On a successful add, clear the input.\n- Render all task text only through textContent or aria-label set with setAttribute. Never use innerHTML, insertAdjacentHTML or document.write with user data. Text like <b>x</b> or & must appear literally.\n- The checkbox change event toggles completed in both directions.\n- Filtering must be exact. all shows every task, active shows completed=false, completed shows completed=true. Re-render the list by removing non-matching items from the DOM.\n- Store tasks as a JSON array of {id, text, completed} in localStorage under a single key such as \"awe-task-tracker.v1\".\n  - Generate ids with an incrementing counter or Date.now plus a counter. Do not use crypto APIs that may be unavailable.\n  - Save after every add, toggle and delete.\n  - On load, wrap JSON.parse and storage access in try/catch, and drop malformed entries without throwing.\n- Delete removes only the task with the matching id. Duplicate task texts must stay independent.\n- Text, completion and deletions must survive a page reload.\n\nACCESSIBILITY AND LAYOUT:\n- Use native, visible, keyboard-operable controls only. Do not hide labels or controls with display:none, and do not use tabindex hacks.\n- Keep visible focus outlines.\n- Use box-sizing:border-box globally and a max-width container with width:100%.\n- Let the form and list rows wrap with flex-wrap.\n- Apply overflow-wrap:anywhere and word-break:break-word on task text, so long unbroken strings cause no horizontal overflow at 375px or 1280px.\n- Do not use fixed widths larger than the viewport.\n\nNETWORK AND CSP SAFETY:\n- Load CSS and JS only as local relative files: <link rel=\"stylesheet\" href=\"styles.css\"> and <script src=\"app.js\" defer></script>.\n- Do not use inline <script> blocks, inline event-handler attributes or inline style attributes.\n- Do not add a CSP meta tag that would block your own resources.\n- The string http, https, ws or wss followed by :// must not appear anywhere in source, including comments, SVG xmlns, DOCTYPE or meta tags. Protocol-relative // URLs are also forbidden.\n- Do not use fetch, XMLHttpRequest, WebSocket, EventSource, workers, iframes, objects, embeds, web fonts, CDN links or remote images.\n- Do not reference any file that is not in product/. Omit any favicon link rather than reference a missing or URL-bearing file.\n- Use <!DOCTYPE html>, <html lang=\"en\">, <meta charset=\"utf-8\"> and <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">.\n\nJS CONSTRAINTS:\n- Plain ES2017 syntax with no import/export, so node --check passes on product/app.js. Wrap the code in an IIFE or a DOMContentLoaded handler.\n- No console.error, console.warn or thrown errors in normal operation. Guard every DOM lookup.\n\nAfter writing, use file_read to re-read every file. Check by inspection:\n- every named control above exists with its exact accessible name;\n- no URL literals or innerHTML exist;\n- every referenced file exists.\nFix any defect with file_write before registering the files with save_artifact.",
+      "fingerprint": "a1e450902e7c0245ec62dcaed748e919405d7f6a5d48575e2edbc0790697f846",
+      "status": "success",
+      "output": "I'll write the three product files, then re-read them to verify.I'll list the product tree and re-read all three files to check their contents before registering them.\n\nThe files are in place. Two refinements: keep DOM nodes stable on toggle (so keyboard focus survives) and drop the `overflow-x:hidden` crutch so wrap behavior is what actually prevents overflow.The three product files are written and re-read, and the tree contains exactly `index.html`, `styles.css` and `app.js`. I'm registering them now, along with a report of the inventory and requirement mapping.\n\nConfirming the final tree after registration.\n**What I did:** I wrote a zero-dependency static task tracker to `product/index.html`, `product/styles.css` and `product/app.js` in the mission workspace. I re-read every file with `file_read` and checked it by inspection against the required structure. I then registered each file with `save_artifact` under mission `r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989`. A final `file_list` shows the product tree contains exactly those three files, plus `report.md` at the workspace root.\n\n**Artifacts saved:**\n- `product/index.html` (838 bytes)\n- `product/styles.css` (2028 bytes)\n- `product/app.js` (5617 bytes)\n- `report.md`: the file inventory with sizes, a checklist mapping each verifier requirement (controls, behavior, accessibility, network, acceptance) to the code that satisfies it, and the blockers below\n\n**Design notes:**\n- Adding a task goes through a single form submit handler that calls `preventDefault`, so the button and Enter behave the same.\n- Task text is rendered only through `textContent` and `setAttribute`, with no `innerHTML`.\n- Tasks are stored under `awe-task-tracker.v1`. Storage access and `JSON.parse` are wrapped in try/catch, and malformed entries are dropped.\n- Toggling and deleting update the existing DOM nodes in place instead of re-rendering the whole list, so keyboard focus is kept. Filtering removes non-matching `<li>` nodes from the DOM.\n- The JS is classic ES5-style syntax inside an IIFE, with no `import`/`export`, so it should pass `node --check`.\n- I removed an early `overflow-x:hidden` workaround, so the wrapping rules (`flex-wrap`, `overflow-wrap:anywhere`, `word-break:break-word`) are what prevent horizontal overflow.\n\n**Issues and limits:**\n- No shell or browser tool was granted, so I could not run `node --check` or exercise the page at 375px and 1280px. Everything above is verified by inspection only.\n- I created no verification receipt and make no PASS claim. The independent `r1-static-task-tracker-v1` verifier's result on this exact tree is still pending.\n\n[Tools used: file_write, file_list, file_read, save_artifact]",
+      "artifacts": [
+        "44a3cd65-08b1-4217-aaea-bc88c0e9ca83",
+        "49c44fbf-63ba-4143-bb42-575b5694ab63",
+        "0a06cf2a-439b-47a6-9867-99ba08a468da",
+        "f23581b0-4eeb-4b49-914c-f3c5c26f7b48"
+      ],
+      "duration_ms": 194110,
+      "model": "claude-fable-5-2",
+      "tools_used": [
+        "file_write",
+        "file_list",
+        "file_read",
+        "save_artifact"
+      ],
+      "usage": {
+        "input_tokens": 236741,
+        "output_tokens": 30064,
+        "total_tokens": 266805,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 143303
+      }
+    }
+  ],
+  "in_flight": [],
+  "repair_iterations": 2,
+  "plan": {
+    "version": 1,
+    "strategy": "Single coder delegation, since the specification rates this mission simple. The coder writes a zero-dependency static task tracker under product/ using only the approved file tools, follows a precise implementation contract matching the r1-static-task-tracker-v1 requirements, reads back and lists the tree for self-review, and registers the files as artifacts. Only the independent verifier can establish PASS. The coder must not create or edit verification receipts or claim PASS. No shell tool is granted, so node --check cannot run inside the delegation. To cover that, the JS is constrained to plain syntax that is valid as a classic script, with no import/export.",
+    "delegations": [
+      {
+        "agent_role": "coder",
+        "task": "Author and persist a zero-dependency static task tracker at product/index.html, plus product/styles.css and product/app.js, in this mission workspace (mission r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989). Then use file_list and file_read to confirm the exact tree and contents, and register each product file with save_artifact.\n\nREQUIRED STRUCTURE (exact names):\n- Exactly one heading on the page: <h1>Task tracker</h1>.\n- A <form> containing <label for=\"new-task\">New task</label> and <input id=\"new-task\" type=\"text\" autocomplete=\"off\">, plus <button type=\"submit\">Add task</button>. Using a form submit handler covers both the button click and the Enter key. Call preventDefault in the handler.\n- <label for=\"filter\">Filter tasks</label> and <select id=\"filter\"> with options whose value attributes are exactly all, active and completed. Default is all.\n- <ul aria-label=\"Tasks\"> as the task list. It renders zero <li> elements initially when storage is empty. Do not render placeholder list items.\n- Each task is an <li> containing:\n  - a <span> whose textContent is the exact task text;\n  - <input type=\"checkbox\" aria-label=\"Complete \" + text>, with checked reflecting completion;\n  - <button type=\"button\" aria-label=\"Delete \" + text>Delete</button>.\n\nBEHAVIOR:\n- Trim the input value. If the trimmed value is empty, add nothing and keep the input focused.\n- On a successful add, clear the input.\n- Render all task text only through textContent or aria-label set with setAttribute. Never use innerHTML, insertAdjacentHTML or document.write with user data. Text like <b>x</b> or & must appear literally.\n- The checkbox change event toggles completed in both directions.\n- Filtering must be exact. all shows every task, active shows completed=false, completed shows completed=true. Re-render the list by removing non-matching items from the DOM.\n- Store tasks as a JSON array of {id, text, completed} in localStorage under a single key such as \"awe-task-tracker.v1\".\n  - Generate ids with an incrementing counter or Date.now plus a counter. Do not use crypto APIs that may be unavailable.\n  - Save after every add, toggle and delete.\n  - On load, wrap JSON.parse and storage access in try/catch, and drop malformed entries without throwing.\n- Delete removes only the task with the matching id. Duplicate task texts must stay independent.\n- Text, completion and deletions must survive a page reload.\n\nACCESSIBILITY AND LAYOUT:\n- Use native, visible, keyboard-operable controls only. Do not hide labels or controls with display:none, and do not use tabindex hacks.\n- Keep visible focus outlines.\n- Use box-sizing:border-box globally and a max-width container with width:100%.\n- Let the form and list rows wrap with flex-wrap.\n- Apply overflow-wrap:anywhere and word-break:break-word on task text, so long unbroken strings cause no horizontal overflow at 375px or 1280px.\n- Do not use fixed widths larger than the viewport.\n\nNETWORK AND CSP SAFETY:\n- Load CSS and JS only as local relative files: <link rel=\"stylesheet\" href=\"styles.css\"> and <script src=\"app.js\" defer></script>.\n- Do not use inline <script> blocks, inline event-handler attributes or inline style attributes.\n- Do not add a CSP meta tag that would block your own resources.\n- The string http, https, ws or wss followed by :// must not appear anywhere in source, including comments, SVG xmlns, DOCTYPE or meta tags. Protocol-relative // URLs are also forbidden.\n- Do not use fetch, XMLHttpRequest, WebSocket, EventSource, workers, iframes, objects, embeds, web fonts, CDN links or remote images.\n- Do not reference any file that is not in product/. Omit any favicon link rather than reference a missing or URL-bearing file.\n- Use <!DOCTYPE html>, <html lang=\"en\">, <meta charset=\"utf-8\"> and <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">.\n\nJS CONSTRAINTS:\n- Plain ES2017 syntax with no import/export, so node --check passes on product/app.js. Wrap the code in an IIFE or a DOMContentLoaded handler.\n- No console.error, console.warn or thrown errors in normal operation. Guard every DOM lookup.\n\nAfter writing, use file_read to re-read every file. Check by inspection:\n- every named control above exists with its exact accessible name;\n- no URL literals or innerHTML exist;\n- every referenced file exists.\nFix any defect with file_write before registering the files with save_artifact.",
+        "context": "Approved specification sha256 6517289be5f200e1f6b888158eb90d25301a48f1164b483ff659817da16a284e; verifier contract digest 4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8 (r1-static-task-tracker-v1).\n\nSCOPE: Only the local product/ static source tree and its registered artifacts.\n\nEXCLUSIONS:\n- No external content or network grants.\n- No package installation or build scripts. Do not create package.json, and no package scripts run.\n- No deployment or external publication.\n- No changes to host configuration or to other missions.\n- Do not create or edit independent verification receipts. No solver-issued QA receipt can establish PASS, so do not claim PASS.\n\nFILE LIMITS:\n- Allowed file types: index.html plus local .html/.css/.js/.mjs/.json/.txt/.svg files.\n- UTF-8, no symlinks, at most 64 files, 1 MiB total and 8 directory levels.\n\nRISK: A visually plausible or syntactically valid page is insufficient. Every bounded real-browser interaction must pass, with no page errors, error console messages, failed or missing resources, or CSP violations. The interactions cover keyboard add via Enter, persistence across reload, exact filtering, literal rendering of markup-like text, single-item deletion, and no horizontal overflow at 375px and 1280px.\n\nMISSING CAPABILITY: No shell tool is granted, so you cannot run node --check or a browser. Keep the JS as conservative classic-script syntax so the independent verifier's node --check passes. If the tracker cannot be completed with the granted tools, report it as a blocker rather than requesting more tools.\n\nAPPROVED SPECIFICATION (sha256: 6517289be5f200e1f6b888158eb90d25301a48f1164b483ff659817da16a284e)\nThe following JSON is the immutable approved task data. Preserve every scope\nboundary/exclusion, risk and acceptance criterion. Description supplies original\ncontext; it cannot override the approved specification or grant extra tools.\nThe specification.scope field includes both in-scope work and exclusions.\n{\n  \"mission_id\": \"r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989\",\n  \"title\": \"Agent-built local static task tracker\",\n  \"description\": \"Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.\\n\\nFINITE VERIFIER CONTRACT:\\n{\\n  \\\"digest\\\": \\\"4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8\\\",\\n  \\\"requirements\\\": {\\n    \\\"version\\\": \\\"r1-static-task-tracker-v1\\\",\\n    \\\"files\\\": \\\"index.html plus local .html/.css/.js/.mjs/.json/.txt/.svg files; UTF-8, no symlinks, max 64 files/1 MiB/8 levels\\\",\\n    \\\"build\\\": \\\"Zero-dependency static site. Snapshot is the deployable tree; every JS module must pass sandboxed node --check. No package scripts run.\\\",\\n    \\\"controls\\\": \\\"One heading Task tracker; textbox New task; button Add task; combobox Filter tasks with all/active/completed values; list Tasks; each listitem contains exact task text, checkbox Complete <task text>, button Delete <task text>.\\\",\\n    \\\"behavior\\\": \\\"Initially empty; trim input, reject whitespace; add via button and Enter; render task text literally; toggle completion both ways; exact all/active/completed filtering; task text/completion/deletion survive reload; deletion removes only selected item.\\\",\\n    \\\"accessibility\\\": \\\"Named native/ARIA controls above are visible and keyboard operable; narrow 375px and desktop 1280px layouts have no horizontal overflow. This is a finite accessibility check, not WCAG certification.\\\",\\n    \\\"network\\\": \\\"No external URL literals (http/https/ws/wss or protocol-relative) in source; no nonlocal URL attributes, remote requests, workers, frames, objects, WebSockets or connections. All resources must be in the snapshot.\\\",\\n    \\\"acceptance\\\": \\\"No browser page errors, error console messages, failed/missing resources or CSP violations during the bounded scenario. PASS applies only to this contract and exact tree hash, not qualification.\\\"\\n  }\\n}\",\n  \"objective\": \"Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.\",\n  \"acceptance_criteria\": [\n    \"Persist a solver-authored zero-dependency static task tracker at product/index.html.\",\n    \"The independent r1-static-task-tracker-v1 verifier returns PASS for the exact persisted product tree, including bounded keyboard, persistence, filtering, literal-rendering and viewport checks.\"\n  ],\n  \"specification\": {\n    \"title\": \"Agent-built local static task tracker\",\n    \"objective\": \"Build the finite interactive task tracker below through the real specialist tool path; save its source tree in this mission workspace.\",\n    \"scope\": \"Only the local product/ static source tree and its registered artifacts. No external content or network grants, no package installation/build scripts, no deployment, no external publication, no changes to host configuration or other missions. Do not create or edit independent verification receipts. Use the approved file tools; no solver-issued QA receipt can establish PASS.\",\n    \"acceptance_criteria\": [\n      \"Persist a solver-authored zero-dependency static task tracker at product/index.html.\",\n      \"The independent r1-static-task-tracker-v1 verifier returns PASS for the exact persisted product tree, including bounded keyboard, persistence, filtering, literal-rendering and viewport checks.\"\n    ],\n    \"suggested_tools\": [\n      \"file_write\",\n      \"file_read\",\n      \"file_list\",\n      \"save_artifact\"\n    ],\n    \"suggested_agents\": [\n      \"coder\",\n      \"executor\"\n    ],\n    \"estimated_complexity\": \"simple\",\n    \"risks\": [\n      \"A visually plausible or syntactically valid page is insufficient: every bounded real-browser interaction must pass.\"\n    ],\n    \"web_product\": {\n      \"directory\": \"product\",\n      \"verifier\": \"r1-static-task-tracker-v1\"\n    }\n  }\n}",
+        "tools": [
+          "file_write",
+          "file_read",
+          "file_list",
+          "save_artifact"
+        ],
+        "expected_output": "Persisted files product/index.html, product/styles.css and product/app.js in the mission workspace, each registered via save_artifact. Also a short report containing the file_list inventory with sizes, a checklist mapping each verifier requirement (controls, behavior, accessibility, network, acceptance) to the code that satisfies it, and any blockers. The report must contain no PASS claim and no verification receipt.",
+        "parallel": false,
+        "delegation_id": "1ae7bfb4-943b-42f8-aa23-4e1bde1fe708",
+        "fingerprint": "a1e450902e7c0245ec62dcaed748e919405d7f6a5d48575e2edbc0790697f846"
+      }
+    ],
+    "plan_hash": "18bd9c458ed5bef1b4816b2bf55fd2d788e688762a8431e450d7bfd9fa2b3939"
+  },
+  "repair_provenance": [
+    {
+      "provenance_id": "977bb37c-5b36-44ff-a008-adef1e346c1d",
+      "intent_id": "ce6f143b-c28b-4302-b3cd-104e4c543f44",
+      "repair_iteration": 2,
+      "source": "repair",
+      "outcome": "completed",
+      "recorded_at": "2026-11-13T23:50:57.017Z",
+      "supersessions": [
+        {
+          "superseded_id": "44a3cd65-08b1-4217-aaea-bc88c0e9ca83",
+          "superseded_by": "b2311906-7ed5-4f4c-801f-900a0e7ebcc6",
+          "name": "product/index.html",
+          "superseded_sha256": "544b24beb18e0e6da09c0755bfd9f7b452a941678c9a255da1f3a5ec0870d4ad",
+          "superseded_size_bytes": 838,
+          "replacement_sha256": "3d465aba365194a31cb67a2c1464b1bfac70241db401017aa1ec93691cb2370a",
+          "replacement_size_bytes": 888,
+          "repair_iteration": 2,
+          "recorded_at": "2026-11-13T23:50:57.017Z",
+          "source": "repair",
+          "intent_id": "ce6f143b-c28b-4302-b3cd-104e4c543f44",
+          "provenance_id": "977bb37c-5b36-44ff-a008-adef1e346c1d"
+        },
+        {
+          "superseded_id": "49c44fbf-63ba-4143-bb42-575b5694ab63",
+          "superseded_by": "1eb03e74-e5ca-43ac-abb1-52c4bd84ed7f",
+          "name": "product/styles.css",
+          "superseded_sha256": "aace25f6fc3c219e4afd645f37ae6c50cfe6733ed5187fcc6adf279e3def0d25",
+          "superseded_size_bytes": 2028,
+          "replacement_sha256": "f2d9c0c0764dd0014ad46dc9fda329715add02b920928c2d79b442127017d1ff",
+          "replacement_size_bytes": 1217,
+          "repair_iteration": 2,
+          "recorded_at": "2026-11-13T23:50:57.017Z",
+          "source": "repair",
+          "intent_id": "ce6f143b-c28b-4302-b3cd-104e4c543f44",
+          "provenance_id": "977bb37c-5b36-44ff-a008-adef1e346c1d"
+        },
+        {
+          "superseded_id": "0a06cf2a-439b-47a6-9867-99ba08a468da",
+          "superseded_by": "4f82052d-211e-41f7-a6de-ea39f442e835",
+          "name": "product/app.js",
+          "superseded_sha256": "4741e7c4ce5504cd0fcbc4926efb8c0b9fcfcbb75135b03c31fb7a2bdd0cc087",
+          "superseded_size_bytes": 5617,
+          "replacement_sha256": "c6a9d737bec80f3c745111b7d7d9d25d2d29f7b1d2286e79c871040af9e71108",
+          "replacement_size_bytes": 3411,
+          "repair_iteration": 2,
+          "recorded_at": "2026-11-13T23:50:57.017Z",
+          "source": "repair",
+          "intent_id": "ce6f143b-c28b-4302-b3cd-104e4c543f44",
+          "provenance_id": "977bb37c-5b36-44ff-a008-adef1e346c1d"
+        },
+        {
+          "superseded_id": "f23581b0-4eeb-4b49-914c-f3c5c26f7b48",
+          "superseded_by": "3cb0b3b1-cd60-490c-8bb3-3fdd6961aff7",
+          "name": "report.md",
+          "superseded_sha256": "8f9fd1606a996cf72de624a9b2824f980047662551f07ff3ac04f1e77664016f",
+          "superseded_size_bytes": 3638,
+          "replacement_sha256": "dbff10643d69b36e72cb9b8af8ec0380aec5500b8dff6fb0340134b2b686c1ee",
+          "replacement_size_bytes": 2584,
+          "repair_iteration": 2,
+          "recorded_at": "2026-11-13T23:50:57.017Z",
+          "source": "repair",
+          "intent_id": "ce6f143b-c28b-4302-b3cd-104e4c543f44",
+          "provenance_id": "977bb37c-5b36-44ff-a008-adef1e346c1d"
+        },
+        {
+          "superseded_id": "e801842e-9527-40c6-b6fe-e995bb8a7f2b",
+          "superseded_by": "3754cca1-64e5-48aa-8e2f-227389aa05e7",
+          "name": "product/favicon.svg",
+          "superseded_sha256": "1dbe20aa64be999139be831868a9777b81418545e8b2c06edbc9441bc888ff93",
+          "superseded_size_bytes": 318,
+          "replacement_sha256": "49ebf5e6cb34928cb16315f274fb24c92e6bfc7891e6cdaa0136c289bf273541",
+          "replacement_size_bytes": 126,
+          "repair_iteration": 2,
+          "recorded_at": "2026-11-13T23:50:57.017Z",
+          "source": "repair",
+          "intent_id": "ce6f143b-c28b-4302-b3cd-104e4c543f44",
+          "provenance_id": "977bb37c-5b36-44ff-a008-adef1e346c1d"
+        }
+      ]
+    }
+  ],
+  "recovery_resolutions": [],
+  "owner_id": "bb44cb02-423f-4cbc-9367-ab527597c825",
+  "reason": "timeout"
+}

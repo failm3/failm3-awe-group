@@ -1,0 +1,24 @@
+AWE GROUP — E1-RECOVERY-HOTFIX-01 regression tests
+
+T1 — SIGTERM during a delegation persists progress and pauses the mission
+  ✓ child exited with signal exit code 143
+  ✓ checkpoint written
+  ✓ checkpoint reason is process_exit
+  ✓ checkpoint belongs to the mission
+  ✓ mission paused
+  ✓ log records the signal
+
+T2 — run() writes a checkpoint before any delegation starts
+  ✓ early checkpoint observed before any delegation ran
+  ✓ checkpoint exists
+  ✓ early checkpoint has zero completed delegations
+  ✓ early checkpoint retains the explicitly approved specification hash
+  ✓ child was killed by SIGKILL with no chance to clean up
+
+T3 — mission deadline fires even when it is the only pending handle
+  ✓ process did not exit before the deadline
+  ✓ deadline fired
+
+────────────────────────────────────────────────────────────
+passed: 13, failed: 0
+All recovery regression tests passed.

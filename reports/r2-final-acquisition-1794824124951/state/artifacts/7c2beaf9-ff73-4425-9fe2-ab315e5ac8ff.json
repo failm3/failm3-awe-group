@@ -1,0 +1,15 @@
+{
+  "id": "7c2beaf9-ff73-4425-9fe2-ab315e5ac8ff",
+  "mission_id": "r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "type": "text",
+  "name": "verify/.tmp_dir.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/verify/.tmp_dir.txt",
+  "created_at": "2026-11-16T10:36:39.961Z",
+  "metadata": {
+    "size_bytes": 4744,
+    "sha256": "59248e37769d637492f350aead64ca9873d33b8d9fe71f30307f5cba50d2cf2d",
+    "reconciled": true,
+    "previous_artifact_id": "45a865de-860a-450d-90e5-99eb380cc842",
+    "revision": 3
+  }
+}

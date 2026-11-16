@@ -1,0 +1,14 @@
+{
+  "id": "07dbba0c-e33e-4d4e-ad0d-c86b3d4c3cbd",
+  "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "type": "data",
+  "name": "digest.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/digest.json",
+  "content": "{\n  \"source\": \"Lumen Harbor field pilot\",\n  \"period\": \"2026-W45\",\n  \"row_count\": 3,\n  \"scheduled\": 30,\n  \"completed\": 26,\n  \"incidents\": 6,\n  \"completion_percent\": 86.67,\n  \"sites\": {\n    \"North\": {\n      \"row_count\": 2,\n      \"scheduled\": 22,\n      \"completed\": 18,\n      \"incidents\": 5,\n      \"completion_percent\": 81.82\n    },\n    \"South\": {\n      \"row_count\": 1,\n      \"scheduled\": 8,\n      \"completed\": 8,\n      \"incidents\": 1,\n      \"completion_percent\": 100\n    }\n  }\n}\n",
+  "created_at": "2026-11-16T11:47:04.636Z",
+  "metadata": {
+    "size_bytes": 477,
+    "sha256": "571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599",
+    "revision": 2
+  }
+}

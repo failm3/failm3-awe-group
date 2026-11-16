@@ -1,0 +1,59 @@
+{
+  "procedure": "observation-digest-v1",
+  "procedure_source": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/bin/observation-digest-v1.js",
+  "runtime": "node",
+  "runtime_version": "v22.23.3",
+  "runtime_binary": "/usr/bin/node",
+  "dependencies": ["node:fs", "node:path", "node:crypto"],
+  "network_access": false,
+  "package_install": false,
+  "fixture": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/input/pilot.observations.json",
+    "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "rows": 3
+  },
+  "probe_run": {
+    "output_dir": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/out",
+    "exit_code": 0,
+    "wrote": [
+      {"name": "digest.json", "sha256": "571d8fd2bf32e167a3cec20babd454b9e475d44cc66f28b13c0f1f1d1d510599"},
+      {"name": "digest.md", "sha256": "cfbdcf29070d8c958529740c803d2ce91d0bf4f9b4d8a770d9192dfdd60599e8"}
+    ]
+  },
+  "probe_values": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "sites": {
+      "North": {"row_count": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": 81.82},
+      "South": {"row_count": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": 100.00}
+    }
+  },
+  "independent_verification": {
+    "implementation": "python3 3.14.4, decimal.Decimal with prec=50 and ROUND_HALF_UP quantize to 0.01",
+    "recomputed_from_fixture_bytes": true,
+    "agrees_with_probe_values": true,
+    "hand_arithmetic": "scheduled 12+8+10=30; completed 11+8+7=26; incidents 2+1+3=6; 26/30=0.866666... -> 86.67; North 18/22=0.818181... -> 81.82; South 8/8 -> 100.00"
+  },
+  "self_checks_exercised": [
+    "input_shape_validation",
+    "per_site_sums_reconcile_to_grand_totals",
+    "written_files_reread_and_reverified",
+    "digest_md_contains_every_json_value"
+  ],
+  "negative_tests": [
+    {"case": "non-integer completed (2.5)", "exit_code": 1, "rejected": true},
+    {"case": "empty observations array", "exit_code": 1, "rejected": true},
+    {"case": "malformed JSON", "exit_code": 1, "rejected": true},
+    {"case": "relative input path", "exit_code": 1, "rejected": true},
+    {"case": "missing arguments", "exit_code": 2, "rejected": true},
+    {"case": "scheduled=0 edge case", "exit_code": 0, "completion_percent": "0.00"}
+  ],
+  "determinism": {
+    "runs": 2,
+    "digest_json_sha256_equal": true,
+    "digest_md_sha256_equal": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "scope": "fresh independent offline original decisive probes on the frozen v5 physical copy; not live-service certification",
+  "source_version": "frozen v5 physical copy for all probes",
+  "source_manifest": "reports/r0-test-results/final-source.sha256",
+  "source_manifest_sha256": "d2562ef0a50a7d25e4da83dc01fe632720708192a756a4adf7ded77bce3680a7",
+  "results": [
+    {
+      "probe": "original-tool-security",
+      "passed": 7,
+      "failed": 0,
+      "expected": 7,
+      "exit_code": 0,
+      "ok": true,
+      "log": ".r0-work/final-closure-v5-20261113/integrated/logs/original-tool-security.log",
+      "sha256": "d49d54f580a4e95b128418b63f025563511c7d74f2784c3473c252316c12b737"
+    },
+    {
+      "probe": "original-shell-lifecycle",
+      "passed": 7,
+      "failed": 0,
+      "expected": 7,
+      "exit_code": 0,
+      "ok": true,
+      "log": ".r0-work/final-closure-v5-20261113/integrated/logs/original-shell-lifecycle.log",
+      "sha256": "dbeeee21a8ba0f013f46e09ed13e99370de1e418d08d928ece7d893785ed82bd"
+    },
+    {
+      "probe": "original-adapters",
+      "passed": 8,
+      "failed": 0,
+      "expected": 8,
+      "exit_code": 0,
+      "ok": true,
+      "log": ".r0-work/final-closure-v5-20261113/integrated/logs/original-adapters.log",
+      "sha256": "a51391449923bec9d04041187641e6fa5080a2022d71c2057012cb2785ce5c53"
+    },
+    {
+      "probe": "original-interfaces",
+      "passed": 5,
+      "failed": 0,
+      "expected": 5,
+      "exit_code": 0,
+      "ok": true,
+      "log": ".r0-work/final-closure-v5-20261113/integrated/logs/original-interfaces.log",
+      "sha256": "29db93e4035b7215184683b103bbce4b773b3e4793d7c29e550dfce9a22b3558"
+    }
+  ],
+  "total": 27,
+  "passed": 27,
+  "failed": 0,
+  "audit_report": "reports/r0-final-closure-integrated-reqa-v5.md"
+}

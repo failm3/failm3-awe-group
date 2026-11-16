@@ -1,0 +1,55 @@
+{
+  "schema": "awe.research-release-offline-checks.v1",
+  "date": "2026-11-17",
+  "paid_calls": 0,
+  "live_missions": 0,
+  "generated_code_verifiers_executed": false,
+  "initial_clean_restore_before_artifact_repair": {
+    "release_manifest": "PASS",
+    "npm_ci_ignore_scripts": "PASS",
+    "typecheck": "PASS",
+    "offline_suites": {
+      "passed": 50,
+      "failed": 3,
+      "failed_suites": [
+        "r1-shell-isolation",
+        "r1-web-product",
+        "r1-web-qa"
+      ]
+    },
+    "finding": "Over-broad artifacts/ exclusion omitted state/artifacts; corrected before final release."
+  },
+  "restored_tree_with_local_chromium_prerequisites": {
+    "offline_suites": {
+      "passed": 53,
+      "failed": 0,
+      "failed_suites": []
+    },
+    "result_log_outside_release": ".research-assembly/restored-offline-tests-local-prerequisites.log",
+    "test_results_outside_release": "/tmp/opencode/awe-research-prereq-check",
+    "prerequisites": "Private/local Chromium cache and .chromium-deps copied only into isolated restore; not published."
+  },
+  "professional_validate_only": {
+    "passed": true,
+    "network_calls": 0,
+    "model_calls": 0,
+    "missions_executed": 0,
+    "result_log_outside_release": ".research-assembly/restored-professional-validation.log"
+  },
+  "run5_readback": {
+    "original_absolute_run_root": {
+      "passed": true,
+      "original_summary_passed": false,
+      "original_summary_sha256": "c9278175b2d3e9dd12d0b31293dcbe20ee15b31b946962d8d4999677da24772a",
+      "summary_unchanged": true,
+      "saved_reverification_unchanged": true,
+      "result_log_outside_release": ".research-assembly/original-path-run5-reverify.log"
+    },
+    "relocated_restore": {
+      "passed": false,
+      "expected_portability_failure": true,
+      "reason": "Saved absolute artifact backing paths escape the relocated mission workspace. This does not alter the original FAIL or separate original-path readback PASS."
+    }
+  },
+  "interpretation": "53/53 with prerequisites and clean typecheck do not change R2 REJECT / NOT CONFIRMED. Browser binaries/libraries are intentionally excluded, so a bare restored host can produce 50/53. Final archive verification is recorded separately."
+}

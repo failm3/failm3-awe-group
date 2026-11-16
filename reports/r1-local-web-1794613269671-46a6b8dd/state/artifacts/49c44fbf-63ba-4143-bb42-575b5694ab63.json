@@ -1,0 +1,13 @@
+{
+  "id": "49c44fbf-63ba-4143-bb42-575b5694ab63",
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "type": "code",
+  "name": "product/styles.css",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794613269671-46a6b8dd/state/artifacts/r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989/product/styles.css",
+  "content": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nhtml {\n  -webkit-text-size-adjust: 100%;\n}\n\nbody {\n  margin: 0;\n  padding: 16px;\n  font-family: system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5;\n  color: #1b1b1f;\n  background: #f6f6f8;\n}\n\n.container {\n  width: 100%;\n  max-width: 720px;\n  margin: 0 auto;\n  background: #ffffff;\n  border: 1px solid #d6d6dd;\n  border-radius: 8px;\n  padding: 16px;\n}\n\nh1 {\n  font-size: 1.5rem;\n  margin: 0 0 16px;\n  overflow-wrap: anywhere;\n  word-break: break-word;\n}\n\n.task-form,\n.filter-row {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 8px;\n  margin-bottom: 16px;\n}\n\nlabel {\n  flex: 0 0 auto;\n  max-width: 100%;\n  overflow-wrap: anywhere;\n  word-break: break-word;\n}\n\n#new-task {\n  flex: 1 1 12rem;\n  min-width: 0;\n  max-width: 100%;\n  padding: 8px;\n  font: inherit;\n  color: inherit;\n  border: 1px solid #6b6b76;\n  border-radius: 4px;\n  background: #ffffff;\n}\n\n#filter {\n  flex: 0 1 auto;\n  min-width: 0;\n  max-width: 100%;\n  padding: 8px;\n  font: inherit;\n  color: inherit;\n  border: 1px solid #6b6b76;\n  border-radius: 4px;\n  background: #ffffff;\n}\n\nbutton {\n  flex: 0 1 auto;\n  max-width: 100%;\n  padding: 8px 14px;\n  font: inherit;\n  color: #ffffff;\n  background: #2b4d8f;\n  border: 1px solid #24407a;\n  border-radius: 4px;\n  cursor: pointer;\n  overflow-wrap: anywhere;\n  word-break: break-word;\n}\n\nbutton:hover {\n  background: #24407a;\n}\n\n:focus-visible {\n  outline: 3px solid #b03a1a;\n  outline-offset: 2px;\n}\n\n#task-list {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n#task-list > li {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 0;\n  border-top: 1px solid #e2e2e8;\n}\n\n#task-list > li:first-child {\n  border-top: 0;\n}\n\n.task-text {\n  flex: 1 1 10rem;\n  min-width: 0;\n  max-width: 100%;\n  overflow-wrap: anywhere;\n  word-break: break-word;\n}\n\n.task-complete {\n  flex: 0 0 auto;\n  width: 1.25rem;\n  height: 1.25rem;\n  margin: 0;\n}\n\n.task-delete {\n  flex: 0 0 auto;\n}\n",
+  "created_at": "2026-11-13T23:44:55.951Z",
+  "metadata": {
+    "size_bytes": 2028,
+    "sha256": "aace25f6fc3c219e4afd645f37ae6c50cfe6733ed5187fcc6adf279e3def0d25"
+  }
+}

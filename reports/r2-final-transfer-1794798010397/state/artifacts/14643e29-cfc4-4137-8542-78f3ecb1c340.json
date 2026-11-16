@@ -1,0 +1,14 @@
+{
+  "id": "14643e29-cfc4-4137-8542-78f3ecb1c340",
+  "mission_id": "r2-final-transfer-1794798010397-t27-off",
+  "type": "file",
+  "name": "src/export.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t27-off/src/export.cjs",
+  "content": "'use strict';\n\nfunction parseExport(text) {\n  const Q = '\\u0022';\n  const fail = () => new Error('INVALID_FORMAT');\n  const bad = () => new Error('INVALID_VALUE');\n  const isEnd = (c) => c === '\\r' || c === '\\n';\n  const intOf = (v, lo, hi) => {\n    if (v === undefined || !/^(0|[1-9][0-9]*)$/.test(v)) throw bad();\n    const x = Number(v);\n    if (x < lo || x > hi) throw bad();\n    return x;\n  };\n\n  if (text === '') return [];\n  const n = text.length;\n  let i = 0;\n  const out = [];\n\n  for (;;) {\n    const fields = new Map();\n    for (;;) {\n      let raw;\n      let quoted = false;\n      if (text[i] === Q) {\n        quoted = true;\n        i++;\n        let buf = '';\n        for (;;) {\n          if (i >= n) throw fail();\n          const c = text[i];\n          if (c === Q) {\n            if (text[i + 1] === Q) { buf += Q; i += 2; continue; }\n            i++;\n            break;\n          }\n          buf += c;\n          i++;\n        }\n        if (i < n && text[i] !== '|' && !isEnd(text[i])) throw fail();\n        raw = buf;\n      } else {\n        const s = i;\n        while (i < n && text[i] !== '|' && !isEnd(text[i])) i++;\n        raw = text.slice(s, i);\n        if (raw.includes(Q)) throw fail();\n      }\n\n      const eq = raw.indexOf('=');\n      if (eq < 0) throw fail();\n      const key = raw.slice(0, eq);\n      const value = raw.slice(eq + 1);\n      if (!quoted && value.includes('=')) throw fail();\n      if (!/^[A-Z][A-Z0-9_]*$/.test(key)) throw fail();\n      if (fields.has(key)) throw fail();\n      fields.set(key, value.trim());\n\n      if (i < n && text[i] === '|') { i++; continue; }\n      break;\n    }\n\n    const rec = {};\n    rec.WINDOW = intOf(fields.get('WINDOW'), 1, 40);\n    rec.RATE = intOf(fields.get('RATE'), 0, 40);\n    rec.LIMIT = intOf(fields.get('LIMIT'), 1, 100);\n    if (fields.has('FLAGS')) {\n      const parts = fields.get('FLAGS').split(',');\n      const seen = new Set();\n      for (const p of parts) {\n        if ((p !== 'cold' && p !== 'warm') || seen.has(p)) throw bad();\n        seen.add(p);\n      }\n      rec.FLAGS = parts;\n    }\n    out.push(rec);\n\n    if (i >= n) break;\n    if (text[i] === '\\r') {\n      i++;\n      if (text[i] === '\\n') i++;\n    } else {\n      i++;\n    }\n    if (i >= n) break;\n  }\n  return out;\n}\n\nmodule.exports = { parseExport };\n",
+  "created_at": "2026-11-16T06:06:16.487Z",
+  "metadata": {
+    "size_bytes": 2296,
+    "sha256": "d91d065fd59368735e43c5607911402ceda6e4bfae0f0f3969a580df7ec25eb0",
+    "revision": 2
+  }
+}

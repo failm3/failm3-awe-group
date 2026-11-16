@@ -1,0 +1,161 @@
+[
+  {
+    "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+    "tree": {
+      "total_agents": 3,
+      "max_depth": 1,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:top0",
+          "role": "executor",
+          "started_at": "2026-11-16T17:05:47.837Z",
+          "task": "Act as the ONE top-level research-coordinator for mission r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research. Sequence, all inside the mission workspace /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research/state/artifacts/r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research: (1) inventory the workspace with file_list and read all three immutable inputs — sources/pilot-charter.txt, sources/weekly-observations.txt, sources/reviewer-note.txt — mapping them to S1, S2, S3 respectively and confirming byte-identical inputs (no edits to them). (2) Issue exactly ONE delegate call containing exactly TWO distinct child tasks marked parallel: child A = source analysis of Alder evidence, child B = source analysis of Brook and Cove evidence, each child told to output a bounded evidence note with per-claim [S1]/[S2]/[S3] citations and no extrapolation. (3) Persist the children's substantive outputs verbatim as evidence-alder.md and evidence-brook-cove.md, attributed to the producing child. (4) Synthesize research-brief.md from the persisted notes: executive recommendation; separate Factual Findings and Limitations sections; Sources section mapping S1->sources/pilot-charter.txt, S2->sources/weekly-observations.txt, S3->sources/reviewer-note.txt; must state the three 480-request site totals, the 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change, each with an [S#] citation; explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove, exclude weekend and Depot generalization, and make no claim of a completed wider rollout. (5) Confirm all three artifacts exist via save_artifact/file_list and report the persisted paths plus the observed parallel child launches.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [
+            "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n1",
+            "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n2"
+          ],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "delegate",
+            "file_write"
+          ],
+          "artifacts": [
+            "cb088c37-e178-40be-b652-cb664a5fdb86",
+            "01c9fe51-c825-4110-b139-6910488b45a6",
+            "4ad00bcd-7e80-4461-ab4e-d712e3f1ff83"
+          ],
+          "duration_ms": 199454,
+          "finished_at": "2026-11-16T17:09:07.286Z"
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n1",
+          "role": "evidence-analyst-alder",
+          "task": "Produce a bounded source-analysis evidence note covering the Alder site only, from the three immutable local pilot sources in the workspace (sources/pilot-charter.txt = S1, sources/weekly-observations.txt = S2, sources/reviewer-note.txt = S3). Read the three files at those paths in the mission workspace before writing. Extract every source statement that bears on Alder: the Alder measurement row (site-weeks, request total, delayed acknowledgements, supervisor escalations) [S2]; the program window, site list including Alder, baseline requests per site-week and manual acknowledgement median, routed acknowledgement median and receipt-timestamp method, and the runbook v1->v2 change date [S1]; the Alder comparison claim and the recommendation naming Alder routing practices [S3]; the independent sampling control and reconciliation covering Alder's sampled records [S2][S3]. State each claim with an inline [S1]/[S2]/[S3] citation. Do NOT extrapolate, do NOT compute rates or percentages, do NOT generalise beyond Alder, do NOT recommend anything yourself - if a source carries a recommendation, attribute it as the reviewer's recommendation with its citation. Explicitly list what the sources do NOT support about Alder (weekend behaviour, customer-level detail, causal attribution of the median change to the runbook change). Return the finished note as your output text for the coordinator to persist verbatim as evidence-alder.md. Do not write any files.",
+          "depth": 1,
+          "parent_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:top0",
+          "status": "failed",
+          "started_at": "2026-11-16T17:06:41.798Z",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read"
+          ],
+          "artifacts": [],
+          "finished_at": "2026-11-16T17:07:10.834Z",
+          "duration_ms": 29024
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:d1n2",
+          "role": "evidence-analyst-brook-cove",
+          "task": "Produce a bounded source-analysis evidence note covering the Brook and Cove sites only, from the three immutable local pilot sources in the workspace (sources/pilot-charter.txt = S1, sources/weekly-observations.txt = S2, sources/reviewer-note.txt = S3). Read the three files at those paths in the mission workspace before writing. Extract every source statement that bears on Brook and Cove: their measurement rows (site-weeks, request totals, delayed acknowledgements, supervisor escalations) [S2]; the shared program window, site list including Brook and Cove, baseline requests per site-week, manual and routed acknowledgement medians and receipt-timestamp method, and the runbook v1->v2 change date, all as program-level statements that apply to Brook and Cove as pilot sites [S1]; the reviewer's relative ranking claim that Alder has the smallest delayed-acknowledgement count and fewest escalations (state it as a comparison in which Brook and Cove rank above Alder) [S3]; the recommendation to extend Alder routing practices to Brook and Cove for two weeks and the decision gate before any wider rollout [S3]; the 180-record sample reconciliation and the weekday-only data-quality note [S2][S3]. State each claim with an inline [S1]/[S2]/[S3] citation. Do NOT extrapolate, do NOT compute rates or percentages, do NOT generalise to weekend, Depot or sites beyond Brook and Cove, and do NOT add your own recommendation - quote the reviewer's and cite it. Explicitly list what the sources do NOT support (weekend/Depot performance, causal attribution, customer-level detail, evidence that the extension has happened). Return the finished note as your output text for the coordinator to persist verbatim as evidence-brook-cove.md. Do not write any files.",
+          "depth": 1,
+          "parent_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:top0",
+          "status": "failed",
+          "started_at": "2026-11-16T17:06:41.807Z",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read"
+          ],
+          "artifacts": [],
+          "finished_at": "2026-11-16T17:07:11.697Z",
+          "duration_ms": 29886
+        }
+      ]
+    },
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research:top0",
+        "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-research",
+        "role": "executor",
+        "started_at": "2026-11-16T17:05:47.845Z",
+        "finished_at": "2026-11-16T17:09:07.284Z",
+        "artifact_ids": [
+          "cb088c37-e178-40be-b652-cb664a5fdb86",
+          "01c9fe51-c825-4110-b139-6910488b45a6",
+          "4ad00bcd-7e80-4461-ab4e-d712e3f1ff83"
+        ]
+      }
+    ]
+  },
+  {
+    "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics",
+    "tree": {
+      "total_agents": 2,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics:top0",
+          "role": "analyst",
+          "started_at": "2026-11-16T17:05:58.354Z",
+          "task": "List and read input/operations.csv (18 data rows, three teams: Atlas, Birch, Cedar) using file_read/file_list only, then compute the operations metrics twice through two independent calculation passes (once by summing per-row columns, once by summing per-team subtotals and checking the team subtotals add to the overall totals). Persist the result as metrics.json with save_artifact/file_write.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_list",
+            "file_write"
+          ],
+          "artifacts": [
+            "a59827ca-052e-43a2-b9ac-af23f0a7f579",
+            "c42b6bbc-2a14-4f4a-aedc-dc47b89cae9e"
+          ],
+          "duration_ms": 61671,
+          "finished_at": "2026-11-16T17:07:00.021Z"
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics:top1",
+          "role": "writer",
+          "started_at": "2026-11-16T17:07:00.034Z",
+          "task": "Read the persisted metrics.json and input/operations.csv with file_read, then author operations-brief.md and persist it with file_write/save_artifact. Include a concise executive recommendation first, then overall findings and per-team findings for completion percent, defects and schedule variance, then a Method section.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_write",
+            "file_list"
+          ],
+          "artifacts": [
+            "4ec8eec0-73b4-40fe-b509-d20e6a838910"
+          ],
+          "duration_ms": 76239,
+          "finished_at": "2026-11-16T17:08:16.270Z"
+        }
+      ]
+    },
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics:top0",
+        "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics",
+        "role": "analyst",
+        "started_at": "2026-11-16T17:05:58.362Z",
+        "finished_at": "2026-11-16T17:07:00.018Z",
+        "artifact_ids": [
+          "a59827ca-052e-43a2-b9ac-af23f0a7f579",
+          "c42b6bbc-2a14-4f4a-aedc-dc47b89cae9e"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics:top1",
+        "mission_id": "r2-final-professional-2026-11-16T17-05-22-729Z-2757432-analytics",
+        "role": "writer",
+        "started_at": "2026-11-16T17:07:00.041Z",
+        "finished_at": "2026-11-16T17:08:16.269Z",
+        "artifact_ids": [
+          "4ec8eec0-73b4-40fe-b509-d20e6a838910"
+        ]
+      }
+    ]
+  }
+]

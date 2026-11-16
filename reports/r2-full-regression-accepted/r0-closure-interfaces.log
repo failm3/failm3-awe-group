@@ -1,0 +1,20 @@
+
+━━━ one-shot explicit approval and durable pending recovery ━━━
+
+━━━ .env precedence includes data roots and provider credentials ━━━
+
+━━━ API listener, authentication and CORS defaults ━━━
+AWE GROUP API server running on http://127.0.0.1:44655
+AWE GROUP API server running on http://127.0.0.1:39237
+
+━━━ API strict recovery resolver, accept evidence and explicit retry ━━━
+AWE GROUP API server running on http://127.0.0.1:44475
+
+━━━ deferred stale API failure cannot overwrite a replacement owner ━━━
+AWE GROUP API server running on http://127.0.0.1:38569
+
+━━━ synchronous runner rejection stays nonterminal and retains ownership evidence ━━━
+AWE GROUP API server running on http://127.0.0.1:38679
+
+r0-closure-interfaces: 97 checks passed
+Offline interface regressions only; no production certification or R0 closure claim.

@@ -1,0 +1,189 @@
+QUALIFICATION HARNESS observation-digest-v1 (revision 2, itemised)
+procedure : /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/procedures/observation_digest_v1.py
+harness   : /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/qualify.py
+python    : 3.14.4
+
+## 1. primary fixture (input/pilot.observations.json)
+[001] PASS  [primary] exit 0  :: exit 0 
+[002] PASS  [primary] digest.json exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/primary/digest.json
+[003] PASS  [primary] digest.md exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/primary/digest.md
+[004] PASS  [primary] row_count=3  :: got 3 want 3
+[005] PASS  [primary] scheduled=30  :: got 30 want 30
+[006] PASS  [primary] completed=26  :: got 26 want 26
+[007] PASS  [primary] incidents=6  :: got 6 want 6
+[008] PASS  [primary] row_count is JSON int  :: 3
+[009] PASS  [primary] scheduled is JSON int  :: 30
+[010] PASS  [primary] completed is JSON int  :: 26
+[011] PASS  [primary] incidents is JSON int  :: 6
+[012] PASS  [primary] total completion_percent exact 2dp  :: literal 86.67 vs oracle 86.67
+[013] PASS  [primary] total completion_percent == oracle  :: literal 86.67 vs oracle 86.67
+[014] PASS  [primary] sites keyed exactly  :: got ['North', 'South'] want ['North', 'South']
+[015] PASS  [primary] site North.row_count=2  :: got 2 want 2
+[016] PASS  [primary] site North.scheduled=22  :: got 22 want 22
+[017] PASS  [primary] site North.completed=18  :: got 18 want 18
+[018] PASS  [primary] site North.incidents=5  :: got 5 want 5
+[019] PASS  [primary] site North pct exact 2dp == oracle  :: literal 81.82 vs oracle 81.82
+[020] PASS  [primary] site South.row_count=1  :: got 1 want 1
+[021] PASS  [primary] site South.scheduled=8  :: got 8 want 8
+[022] PASS  [primary] site South.completed=8  :: got 8 want 8
+[023] PASS  [primary] site South.incidents=1  :: got 1 want 1
+[024] PASS  [primary] site South pct exact 2dp == oracle  :: literal 100.00 vs oracle 100.00
+[025] PASS  [primary] 3 pct literals all 2dp  :: ['86.67', '81.82', '100.00']
+[026] PASS  [primary] sites reconcile with total for row_count  :: 3 vs 3
+[027] PASS  [primary] sites reconcile with total for scheduled  :: 30 vs 30
+[028] PASS  [primary] sites reconcile with total for completed  :: 26 vs 26
+[029] PASS  [primary] sites reconcile with total for incidents  :: 6 vs 6
+[030] PASS  [primary] digest.md states row_count=3  :: 3
+[031] PASS  [primary] digest.md states scheduled=30  :: 30
+[032] PASS  [primary] digest.md states completed=26  :: 26
+[033] PASS  [primary] digest.md states incidents=6  :: 6
+[034] PASS  [primary] digest.md states total completion_percent  :: 86.67
+[035] PASS  [primary] digest.md has method section
+[036] PASS  [primary] digest.md states method formula
+[037] PASS  [primary] digest.md site row North  :: | North | 2 | 22 | 18 | 5 | 81.82 |
+[038] PASS  [primary] digest.md site row South  :: | South | 1 | 8 | 8 | 1 | 100.00 |
+
+## 2. synthetic fixture (boundaries, ties, 0.00 / 100.00 / exact fractions)
+[039] PASS  [synthetic] exit 0  :: exit 0 
+[040] PASS  [synthetic] digest.json exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/synthetic/digest.json
+[041] PASS  [synthetic] digest.md exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/synthetic/digest.md
+[042] PASS  [synthetic] row_count=5  :: got 5 want 5
+[043] PASS  [synthetic] scheduled=96  :: got 96 want 96
+[044] PASS  [synthetic] completed=10  :: got 10 want 10
+[045] PASS  [synthetic] incidents=9  :: got 9 want 9
+[046] PASS  [synthetic] row_count is JSON int  :: 5
+[047] PASS  [synthetic] scheduled is JSON int  :: 96
+[048] PASS  [synthetic] completed is JSON int  :: 10
+[049] PASS  [synthetic] incidents is JSON int  :: 9
+[050] PASS  [synthetic] total completion_percent exact 2dp  :: literal 10.42 vs oracle 10.42
+[051] PASS  [synthetic] total completion_percent == oracle  :: literal 10.42 vs oracle 10.42
+[052] PASS  [synthetic] sites keyed exactly  :: got ['Exact', 'Full', 'Tie', 'Zero'] want ['Exact', 'Full', 'Tie', 'Zero']
+[053] PASS  [synthetic] site Exact.row_count=1  :: got 1 want 1
+[054] PASS  [synthetic] site Exact.scheduled=16  :: got 16 want 16
+[055] PASS  [synthetic] site Exact.completed=1  :: got 1 want 1
+[056] PASS  [synthetic] site Exact.incidents=5  :: got 5 want 5
+[057] PASS  [synthetic] site Exact pct exact 2dp == oracle  :: literal 6.25 vs oracle 6.25
+[058] PASS  [synthetic] site Full.row_count=1  :: got 1 want 1
+[059] PASS  [synthetic] site Full.scheduled=7  :: got 7 want 7
+[060] PASS  [synthetic] site Full.completed=7  :: got 7 want 7
+[061] PASS  [synthetic] site Full.incidents=0  :: got 0 want 0
+[062] PASS  [synthetic] site Full pct exact 2dp == oracle  :: literal 100.00 vs oracle 100.00
+[063] PASS  [synthetic] site Tie.row_count=2  :: got 2 want 2
+[064] PASS  [synthetic] site Tie.scheduled=64  :: got 64 want 64
+[065] PASS  [synthetic] site Tie.completed=2  :: got 2 want 2
+[066] PASS  [synthetic] site Tie.incidents=0  :: got 0 want 0
+[067] PASS  [synthetic] site Tie pct exact 2dp == oracle  :: literal 3.13 vs oracle 3.13
+[068] PASS  [synthetic] site Zero.row_count=1  :: got 1 want 1
+[069] PASS  [synthetic] site Zero.scheduled=9  :: got 9 want 9
+[070] PASS  [synthetic] site Zero.completed=0  :: got 0 want 0
+[071] PASS  [synthetic] site Zero.incidents=4  :: got 4 want 4
+[072] PASS  [synthetic] site Zero pct exact 2dp == oracle  :: literal 0.00 vs oracle 0.00
+[073] PASS  [synthetic] 5 pct literals all 2dp  :: ['10.42', '6.25', '100.00', '3.13', '0.00']
+[074] PASS  [synthetic] sites reconcile with total for row_count  :: 5 vs 5
+[075] PASS  [synthetic] sites reconcile with total for scheduled  :: 96 vs 96
+[076] PASS  [synthetic] sites reconcile with total for completed  :: 10 vs 10
+[077] PASS  [synthetic] sites reconcile with total for incidents  :: 9 vs 9
+[078] PASS  [synthetic] digest.md states row_count=5  :: 5
+[079] PASS  [synthetic] digest.md states scheduled=96  :: 96
+[080] PASS  [synthetic] digest.md states completed=10  :: 10
+[081] PASS  [synthetic] digest.md states incidents=9  :: 9
+[082] PASS  [synthetic] digest.md states total completion_percent  :: 10.42
+[083] PASS  [synthetic] digest.md has method section
+[084] PASS  [synthetic] digest.md states method formula
+[085] PASS  [synthetic] digest.md site row Exact  :: | Exact | 1 | 16 | 1 | 5 | 6.25 |
+[086] PASS  [synthetic] digest.md site row Full  :: | Full | 1 | 7 | 7 | 0 | 100.00 |
+[087] PASS  [synthetic] digest.md site row Tie  :: | Tie | 2 | 64 | 2 | 0 | 3.13 |
+[088] PASS  [synthetic] digest.md site row Zero  :: | Zero | 1 | 9 | 0 | 4 | 0.00 |
+
+## 3. rounding-mode discrimination
+[089] PASS  rounding is HALF_UP not truncation  :: 3.13
+[090] PASS  zero completion renders 0.00  :: 0.00
+[091] PASS  full completion renders 100.00  :: 100.00
+[092] PASS  exact fraction renders 6.25  :: 6.25
+
+## 4. input sensitivity (anti-constant)
+[093] PASS  [mutated] exit 0  :: exit 0 
+[094] PASS  [mutated] digest.json exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/mutated/digest.json
+[095] PASS  [mutated] digest.md exists  :: /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/work/qual/out/mutated/digest.md
+[096] PASS  [mutated] row_count=3  :: got 3 want 3
+[097] PASS  [mutated] scheduled=30  :: got 30 want 30
+[098] PASS  [mutated] completed=18  :: got 18 want 18
+[099] PASS  [mutated] incidents=6  :: got 6 want 6
+[100] PASS  [mutated] row_count is JSON int  :: 3
+[101] PASS  [mutated] scheduled is JSON int  :: 30
+[102] PASS  [mutated] completed is JSON int  :: 18
+[103] PASS  [mutated] incidents is JSON int  :: 6
+[104] PASS  [mutated] total completion_percent exact 2dp  :: literal 60.00 vs oracle 60.00
+[105] PASS  [mutated] total completion_percent == oracle  :: literal 60.00 vs oracle 60.00
+[106] PASS  [mutated] sites keyed exactly  :: got ['North', 'South'] want ['North', 'South']
+[107] PASS  [mutated] site North.row_count=2  :: got 2 want 2
+[108] PASS  [mutated] site North.scheduled=22  :: got 22 want 22
+[109] PASS  [mutated] site North.completed=10  :: got 10 want 10
+[110] PASS  [mutated] site North.incidents=5  :: got 5 want 5
+[111] PASS  [mutated] site North pct exact 2dp == oracle  :: literal 45.45 vs oracle 45.45
+[112] PASS  [mutated] site South.row_count=1  :: got 1 want 1
+[113] PASS  [mutated] site South.scheduled=8  :: got 8 want 8
+[114] PASS  [mutated] site South.completed=8  :: got 8 want 8
+[115] PASS  [mutated] site South.incidents=1  :: got 1 want 1
+[116] PASS  [mutated] site South pct exact 2dp == oracle  :: literal 100.00 vs oracle 100.00
+[117] PASS  [mutated] 3 pct literals all 2dp  :: ['60.00', '45.45', '100.00']
+[118] PASS  [mutated] sites reconcile with total for row_count  :: 3 vs 3
+[119] PASS  [mutated] sites reconcile with total for scheduled  :: 30 vs 30
+[120] PASS  [mutated] sites reconcile with total for completed  :: 18 vs 18
+[121] PASS  [mutated] sites reconcile with total for incidents  :: 6 vs 6
+[122] PASS  [mutated] digest.md states row_count=3  :: 3
+[123] PASS  [mutated] digest.md states scheduled=30  :: 30
+[124] PASS  [mutated] digest.md states completed=18  :: 18
+[125] PASS  [mutated] digest.md states incidents=6  :: 6
+[126] PASS  [mutated] digest.md states total completion_percent  :: 60.00
+[127] PASS  [mutated] digest.md has method section
+[128] PASS  [mutated] digest.md states method formula
+[129] PASS  [mutated] digest.md site row North  :: | North | 2 | 22 | 10 | 5 | 45.45 |
+[130] PASS  [mutated] digest.md site row South  :: | South | 1 | 8 | 8 | 1 | 100.00 |
+[131] PASS  totals respond to changed input  :: 18 vs 18
+[132] PASS  percentage responds to changed input  :: 60.00 vs 86.67
+
+## 5. determinism and byte reproducibility
+[133] PASS  deterministic digest.json  :: b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857
+[134] PASS  deterministic digest.md  :: c597cca97bd58e505d7631624c8dcfe8ca694ad883012daae3ba1bea1ba8d534
+[135] PASS  digest.json reproducible against first run  :: b5eae85b36c89b02c0678669f4bdec280e011539790e80b5f277b73b8a849857
+[136] PASS  no timestamp leakage in digest.json
+
+## 6. negative controls (must reject and write nothing)
+[137] PASS  rejects completed>scheduled  :: exit 1
+[138] PASS  writes nothing on reject (completed>scheduled)
+[139] PASS  rejects non-integer field  :: exit 1
+[140] PASS  writes nothing on reject (non-integer field)
+[141] PASS  rejects empty observations  :: exit 1
+[142] PASS  writes nothing on reject (empty observations)
+[143] PASS  rejects scheduled==0  :: exit 1
+[144] PASS  writes nothing on reject (scheduled==0)
+[145] PASS  rejects invalid JSON  :: exit 1
+[146] PASS  writes nothing on reject (invalid JSON)
+
+## 7. argument contract
+[147] PASS  usage error on missing args  :: usage: observation_digest_v1.py <fixture.json> <output-dir>
+
+## 8. float-coercion regression guards (revision-1 defect)
+[148] PASS  plain json.loads does coerce 100.00 to a binary float (hazard is real)  :: parsed as float 100.0 (trailing zero lost)
+[149] PASS  harness parse path preserves the 100.00 literal as 2dp  :: 100.00
+[150] PASS  harness accepts a correct 2dp literal  :: 100.00
+[151] PASS  harness REJECTS a float-coerced 1dp literal (regression not masked)  :: literal 100.0 vs oracle 100.00
+[152] PASS  harness REJECTS a raw Python float value  :: not a JSON decimal literal: 100.0
+[153] PASS  doctored 86.7 digest is rejected end-to-end  :: literal 86.7 vs oracle 86.67
+[154] PASS  doctored digest fails the raw-literal 2dp scan  :: ['86.7']
+
+## summary
+check_count  : 154
+passed       : 154
+failed       : 0
+qualified    : true
+procedure_sha256 : 916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db
+harness_sha256   : c721a0104a83aa16a8b80ab46263388acbdbaf9cfaf3b92257804c31a1a33a9d
+{
+  "check_count": 154,
+  "passed": 154,
+  "failed": 0,
+  "qualified": true,
+  "procedure_sha256": "916628d62af20b9fe267ac2394606ff1245627586ec0fa7d2d47087e77f071db"
+}

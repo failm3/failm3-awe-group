@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "call_id": "633016dc-cdf2-484d-823d-b3e25b71291a",
+  "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+  "role": "executor",
+  "model": "claude-sonnet-5-5",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-16T05:14:15.207Z",
+  "finished_at": "2026-11-16T05:19:27.495Z",
+  "status": "unknown",
+  "outcome": "UNKNOWN",
+  "usage": {
+    "input_tokens": 200321,
+    "output_tokens": 32251,
+    "total_tokens": 232572,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 138728
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  },
+  "reason": "provider_aborted"
+}

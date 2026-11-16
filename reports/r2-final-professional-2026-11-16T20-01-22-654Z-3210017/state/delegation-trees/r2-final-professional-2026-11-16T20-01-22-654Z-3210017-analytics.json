@@ -1,0 +1,51 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics",
+  "saved_at": "2026-11-16T20:03:55.408Z",
+  "total_agents": 2,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top0",
+      "role": "analyst",
+      "started_at": "2026-11-16T20:01:55.769Z",
+      "task": "Extract and compute exact operations metrics. Working directory is /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics. List the directory, then read input/operations.csv in full with file_read. Parse all 18 rows into (team, work_orders, completed_orders, defects, planned_minutes, actual_minutes). Compute overall totals and per-team totals for Atlas, Birch and Cedar using only these formulas: completion_percent = completed_orders / work_orders * 100 rounded to two decimals; minutes_per_completed_order = actual_minutes / completed_orders rounded to two decimals; schedule_variance_minutes = actual_minutes - planned_minutes as an integer. Then independently recompute every cell a second time from a re-read of the raw rows and assert the two passes are identical before writing anything. Serialize metrics.json with exactly the root keys row_count, totals, teams in that order; each totals and team object with exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order, schedule_variance_minutes in that order; teams in the order Atlas, Birch, Cedar. row_count must be 18. All integer metrics must be JSON numbers (no strings, no thousands separators); completion_percent and minutes_per_completed_order must serialize with exactly two decimal places. The expected values are fixed by the specification: totals work_orders 233, completed_orders 217, defects 18, planned_minutes 14985, actual_minutes 15440, completion_percent 93.13, minutes_per_completed_order 71.15, schedule_variance_minutes 455; Atlas 95/89/7/5700/5780/93.68/64.94/80; Birch 75/71/3/4875/4910/94.67/69.15/35; Cedar 63/57/8/4410/4750/90.48/83.33/340. If your independent computation disagrees with any of these, do not silently adopt the specification value and do not write a corrected variant: stop and report the discrepancy with the offending rows. Write the file with file_write and register it with save_artifact under the artifact name metrics.json.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "file_write",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "3e49f076-2136-4d7d-90f0-212d3bbb78cc"
+      ],
+      "duration_ms": 48066,
+      "finished_at": "2026-11-16T20:02:43.828Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-analytics:top1",
+      "role": "writer",
+      "started_at": "2026-11-16T20:02:43.842Z",
+      "task": "Synthesize the management document operations-brief.md in the same working directory. Read the analyst's persisted metrics.json and re-read input/operations.csv to confirm the figures it cites are derived from those rows. Write a concise brief with: (1) an executive recommendation that is actionable for a three-team six-week operation, grounded only in the observed completion, defects and schedule variance; (2) overall findings — 233 work orders, 217 completed, 93.13% completion, 18 defects, 14,985 planned against 15,440 actual minutes, 71.15 minutes per completed order, and +455 minutes of schedule variance; (3) per-team findings stating each team's work orders, completed orders, completion percent, defects and schedule variance, making the contrast explicit (Cedar lowest completion at 90.48% and highest overrun at 340 minutes with the highest defect count at 8; Birch highest completion at 94.67% with only 3 defects and 35 minutes overrun; Atlas mid-pack at 93.68% with 7 defects and 80 minutes overrun, and the tightest minutes per completed order at 64.94); (4) a Method section that names input/operations.csv as the sole source and states the exact formulas used — completion percent = completed orders divided by work orders, multiplied by 100; minutes per completed order = actual minutes divided by completed orders; schedule variance minutes = actual minutes minus planned minutes — noting units are unchanged minutes and no records were added, removed or transformed. Every number in the prose must match metrics.json exactly; do not recompute, re-round or restate a figure the analyst did not persist. Write with file_write and register with save_artifact under the artifact name operations-brief.md.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_write",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "c5aae02d-1a98-4e3c-9df5-b3369f3783bb"
+      ],
+      "duration_ms": 71570,
+      "finished_at": "2026-11-16T20:03:55.408Z"
+    }
+  ]
+}

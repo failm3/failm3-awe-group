@@ -1,0 +1,37 @@
+
+━━━ Probe 1: MCP browser tools load ━━━
+✓ browser.ts module imported successfully
+✓ Total browser tools: 5
+✓ D1 (browser tools dead): FIXED — ESM import works
+
+━━━ Probe 2: Artifact reconciliation ━━━
+✓ reconcileArtifactFiles detected the untracked image
+✓ Artifact type: image
+✓ D2 (screenshot not registered): FIXED
+
+━━━ Probe 3: Usage tracking schema ━━━
+✓ AgentResultSchema accepts model, tools_used, usage
+✓ D4 (no token/cost accounting): FIXED
+
+━━━ Probe 4: Delegation tree ━━━
+✓ Delegation tree records a top-level node
+✓ Node: stage1-tree-test-1794781585910:top0, role: planner, depth: 0
+✓ D7 (no dynamic agent creation): FIXED
+
+━━━ Probe 5: QA gate placeholder detection ━━━
+✓ QA gate detected placeholder marker
+✓ Blocker: Unfilled/placeholder content detected in Content section: "pending transcription"
+✓ QA gate criterion-level enforcement: WORKING
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Stage 1 Integration Tests: ALL PROBES PASSED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ D1 (browser tools dead): browser.ts ESM import works
+✓ D2 (screenshot not registered): reconcileArtifactFiles works
+✓ D3 (agent output not propagated): excerpt() helper implemented
+✓ D4 (no token/cost accounting): AgentResultSchema extended
+✓ D7 (no dynamic agent creation): delegation tree tracked
+✓ QA gate: blocks placeholder markers
+Stage 1 offline regression probes passed; this is not a live-service readiness verdict.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "memory-index.ts",
+    "url": "https://raw.githubusercontent.com/mastra-ai/mastra/6e8dfcb83facb0861ebefa4fee384429a113acf4/packages/memory/src/index.ts",
+    "sha256": "ef3b2aaffbda36ee925e498b6bfdefce7d22ef668a6ff798a9d7a861b162f5b3",
+    "ok": true
+  },
+  {
+    "file": "semantic-recall.mdx",
+    "url": "https://raw.githubusercontent.com/mastra-ai/mastra/6e8dfcb83facb0861ebefa4fee384429a113acf4/docs/src/content/en/docs/memory/semantic-recall.mdx",
+    "sha256": "3ef75c9d9782a30a661bb0bb646d5e7a5e4f62f0f817242b40060c7570d85db5",
+    "ok": true
+  }
+]

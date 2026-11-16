@@ -1,0 +1,155 @@
+TAP version 13
+# Subtest: MCP: transient availability is retryable, while positive availability caches
+ok 1 - MCP: transient availability is retryable, while positive availability caches
+  ---
+  duration_ms: 2.316295
+  type: 'test'
+  ...
+# Subtest: MCP: sole abort awaits late discovery AND deferred disconnect, then remains retryable
+ok 2 - MCP: sole abort awaits late discovery AND deferred disconnect, then remains retryable
+  ---
+  duration_ms: 22.485891
+  type: 'test'
+  ...
+# Subtest: MCP: non-cooperative discovery stays unsettled after disconnect, and rejected/empty discovery retries
+ok 3 - MCP: non-cooperative discovery stays unsettled after disconnect, and rejected/empty discovery retries
+  ---
+  duration_ms: 37.35024
+  type: 'test'
+  ...
+# Subtest: browser: shared discovery has independent caller cancellation and no cross-caller rejection
+ok 4 - browser: shared discovery has independent caller cancellation and no cross-caller rejection
+  ---
+  duration_ms: 34.73942
+  type: 'test'
+  ...
+# Subtest: browser: last-abort/noncooperative behavior is honest; rejected/empty results retry; positive map caches
+ok 5 - browser: last-abort/noncooperative behavior is honest; rejected/empty results retry; positive map caches
+  ---
+  duration_ms: 33.334702
+  type: 'test'
+  ...
+# Subtest: web_fetch: abort destroys transport, late response-end is inert, and no request/fallback follows
+ok 6 - web_fetch: abort destroys transport, late response-end is inert, and no request/fallback follows
+  ---
+  duration_ms: 24.031921
+  type: 'test'
+  ...
+# Subtest: web_fetch: success callback followed by abort before continuation cannot return delayed success
+ok 7 - web_fetch: success callback followed by abort before continuation cannot return delayed success
+  ---
+  duration_ms: 6.094612
+  type: 'test'
+  ...
+# Subtest: web_extract: abort destroys transport, late response-end is inert, and no request/fallback follows
+ok 8 - web_extract: abort destroys transport, late response-end is inert, and no request/fallback follows
+  ---
+  duration_ms: 17.8376
+  type: 'test'
+  ...
+# Subtest: web_extract: success callback followed by abort before continuation cannot return delayed success
+ok 9 - web_extract: success callback followed by abort before continuation cannot return delayed success
+  ---
+  duration_ms: 5.379752
+  type: 'test'
+  ...
+# Subtest: HTTP: abort during noncooperative DNS settles without connecting after late answers
+ok 10 - HTTP: abort during noncooperative DNS settles without connecting after late answers
+  ---
+  duration_ms: 21.87844
+  type: 'test'
+  ...
+# Subtest: SSRF: public names resolving to private/reserved IPv4 and IPv6 never construct transport
+ok 11 - SSRF: public names resolving to private/reserved IPv4 and IPv6 never construct transport
+  ---
+  duration_ms: 5.985503
+  type: 'test'
+  ...
+# Subtest: SSRF: redirect targets are resolved/rejected before a second connection
+ok 12 - SSRF: redirect targets are resolved/rejected before a second connection
+  ---
+  duration_ms: 6.085211
+  type: 'test'
+  ...
+# Subtest: SSRF: allowed mocked public path pins the validated address and preserves header/body behavior
+ok 13 - SSRF: allowed mocked public path pins the validated address and preserves header/body behavior
+  ---
+  duration_ms: 7.62184
+  type: 'test'
+  ...
+# Subtest: stale ownership after asynchronous DNS prevents fetch/extract transport creation
+ok 14 - stale ownership after asynchronous DNS prevents fetch/extract transport creation
+  ---
+  duration_ms: 41.930425
+  type: 'test'
+  ...
+# Subtest: stale ownership after failed primary search prevents fallback transport
+ok 15 - stale ownership after failed primary search prevents fallback transport
+  ---
+  duration_ms: 1.977066
+  type: 'test'
+  ...
+# Subtest: recursive file_list has no helper process and inherits fence/abort controls
+ok 16 - recursive file_list has no helper process and inherits fence/abort controls
+  ---
+  duration_ms: 4.443073
+  type: 'test'
+  ...
+# Subtest: shell exports the resolved AWE_DATA_DIR from any child cwd
+ok 17 - shell exports the resolved AWE_DATA_DIR from any child cwd
+  ---
+  duration_ms: 257.611657
+  type: 'test'
+  ...
+# Subtest: stale ownership before shell durable launch and executable release performs no work
+ok 18 - stale ownership before shell durable launch and executable release performs no work
+  ---
+  duration_ms: 112.323443
+  type: 'test'
+  ...
+# Subtest: escaped setsid descendants cannot perform an effect after shell settlement
+ok 19 - escaped setsid descendants cannot perform an effect after shell settlement
+  ---
+  duration_ms: 1564.594938
+  type: 'test'
+  ...
+# Subtest: process: abort SIGKILL-escalates resistant group, awaits close/quiescence, and no late file is possible
+ok 20 - process: abort SIGKILL-escalates resistant group, awaits close/quiescence, and no late file is possible
+  ---
+  duration_ms: 1184.762005
+  type: 'test'
+  ...
+# Subtest: process: cooperative current-owner helper is itself safe for process-exit wiring
+ok 21 - process: cooperative current-owner helper is itself safe for process-exit wiring
+  ---
+  duration_ms: 1192.949794
+  type: 'test'
+  ...
+# Subtest: process: confirmed SIGKILL owner recovery kills surviving resistant group before returning
+ok 22 - process: confirmed SIGKILL owner recovery kills surviving resistant group before returning
+  ---
+  duration_ms: 2381.906851
+  type: 'test'
+  ...
+# Subtest: process: malformed records fail closed without signalling or deleting evidence
+ok 23 - process: malformed records fail closed without signalling or deleting evidence
+  ---
+  duration_ms: 1.115093
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7497.642452
+[mcp] Failed to discover Playwright MCP tools: Error: ordinary temporary discovery failure
+    at Object.mcpDouble.list (/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/src/tests/r0-closure-adapters.test.ts:309:40)
+    at MCPClient.listTools (r0-closure:mcp:3:95)
+    at Module.getPlaywrightTools (/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/src/config/mcp.ts:255:47)
+    at async TestContext.<anonymous> (/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/src/tests/r0-closure-adapters.test.ts:310:20)
+    at async Test.run (node:internal/test_runner/test:1054:7)
+    at async Test.processPendingSubtests (node:internal/test_runner/test:744:7)

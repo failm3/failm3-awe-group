@@ -1,0 +1,14 @@
+{
+  "id": "db50a37e-5f78-4356-a71c-bf7d14e5abbd",
+  "mission_id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4",
+  "type": "file",
+  "name": "probe/probe-copy.js",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/probe/probe-copy.js",
+  "created_at": "2026-11-16T15:09:03.871Z",
+  "metadata": {
+    "size_bytes": 8187,
+    "sha256": "ba35ca6829678ffe1569ac789481090200a5bb81fc809c12dd3cfafc3fed91ec",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "mission_id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d",
+  "saved_at": "2026-11-16T15:59:30.245Z",
+  "total_agents": 2,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T15:50:56.816Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: No registered capability provides observation-digest-v1. The host list (browser_*, capability_library, csv_analytics, file_list, file_read, file_write, manus_search, save_artifact, shell, ti_search, web_extract, web_fetch, web_search) contains no procedure that reads input/pilot.observations.json, computes exact row/site totals and 2-decimal completion percent, and persists digest.json plus digest.md as a qualified local executable with a durable invocation receipt. csv_analytics is not JSON and is not qualified for this, so it must not be substituted. Requesting one bounded acquisition: author a self-contained local procedure at a stable path under the mission artifact directory, qualify it by running it against the real fixture (not a probe output directory) and re-deriving every figure independently, then replan with the qualified executable bytes and the fixed args [/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723/state/artifacts/r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d/input/pilot.observations.json, /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794844229723/state/artifacts/r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d].. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. status available is only valid when you name what exists: either acquired (one short string) or local_target. When you propose a local_target, also set acquired to one short string naming that procedure: a host policy may require acquired on every available observation, and without it a correct proposal is still refused. An available observation with neither is rejected as unresolvable; use missing or failed when nothing usable was verified. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "ebdd0756-91b8-4ff1-9059-e3babcc643fb",
+        "a62a4903-a9e6-4215-8d8c-1644a510d05b",
+        "81d4bc52-bb88-48bb-8433-f51484cccb6b"
+      ],
+      "duration_ms": 479344,
+      "finished_at": "2026-11-16T15:58:56.154Z"
+    },
+    {
+      "id": "r2-acquisition-3d592423-2e9a-48e2-a8df-f0014b17f75d:top1",
+      "role": "researcher",
+      "started_at": "2026-11-16T15:58:56.165Z",
+      "task": "Write the single required capability observation JSON for 'observation-digest-v1'. The acquisition investigation is already complete: do not re-run probes, do not modify existing files, do not install anything. Read the persisted evidence listed in the context and save exactly one new JSON artifact whose entire top-level object has ONLY the keys capability, status, detail, optional acquired and optional local_target. capability must be exactly \"observation-digest-v1\". status is one of available|missing|failed and must reflect what was actually verified. If the evidence shows a usable procedure exists, status MUST be available AND you MUST say what it is: either acquired (one short name) or local_target. An available observation with neither acquired nor local_target is rejected as unresolvable — never use available to mean \"the work is done\" or \"the capability is understood\". If nothing usable was actually verified, use missing or failed instead. detail is one short non-empty sentence. No other keys are permitted (no probe totals, method, source, invocation or verification fields). If the verified evidence includes a local Node procedure proposal, local_target must be {runtime:\"node\", executable_path, executable_sha256, args, probe_artifacts} with executable_path the absolute source-file path, executable_sha256 that file's actual SHA-256, args the fixed no-placeholder argument array, and probe_artifacts as [{artifact_id, sha256}] using the registry UUIDs and byte hashes from the context.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "58d5fdaa-1373-4dda-8e5c-94b24e722d2e"
+      ],
+      "duration_ms": 34085,
+      "finished_at": "2026-11-16T15:59:30.245Z"
+    }
+  ]
+}

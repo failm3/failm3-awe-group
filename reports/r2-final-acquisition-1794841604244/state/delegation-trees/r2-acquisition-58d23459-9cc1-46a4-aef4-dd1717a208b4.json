@@ -1,0 +1,127 @@
+{
+  "mission_id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4",
+  "saved_at": "2026-11-16T15:36:44.468Z",
+  "total_agents": 5,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T15:07:04.339Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: observation-digest-v1 is not present in REGISTERED CAPABILITIES and no host-qualified local procedure exists yet. One bounded acquisition is required before any execution plan: a candidate local procedure must have a stable source path under .../state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4 and accept the exact fixed args [input/pilot.observations.json, artifacts root]. Acquisition may only consult already-registered tools; discovered code is never auto-installed or trusted, and a model-authored summary of an observation is explicitly not qualification. After the bounded acquisition returns, replan with the exact qualified executable bytes, a durable invocation receipt, and independent host verification plus independent Nox QA of digest.json and digest.md.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. status available is only valid when you name what exists: either acquired (one short string) or local_target. When you propose a local_target, also set acquired to one short string naming that procedure: a host policy may require acquired on every available observation, and without it a correct proposal is still refused. An available observation with neither is rejected as unresolvable; use missing or failed when nothing usable was verified. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "b9f5a7a5-53a6-4beb-b21f-46df47750543",
+        "447541d2-ebe0-47f9-8105-d879643fd981",
+        "2b702fa1-1df3-4ad8-bb40-7aa2b08a7188",
+        "53050719-64ef-446a-ae2f-0a4ba0ef2267",
+        "f851c6ca-761e-438d-acdb-134614fc04a5",
+        "ba949bd5-9b24-47b2-a539-1a8198a416d1",
+        "ab5a7893-2917-4681-acf5-3e59e4bf5daf",
+        "ebdc000d-a6f8-4804-b75a-b31807363d9b",
+        "1ab6c3ec-1a86-4694-b17f-ce8fdbcffa7d",
+        "4d1c1682-c9a9-43e3-9d9a-88d6fcda70a3",
+        "e00599f2-4da4-4ba9-9f28-e7f717fa4e9a",
+        "898c2535-e8ee-4164-b049-9384db6d18bd",
+        "89778011-1340-4434-9d94-c400bf7cf9ba",
+        "00674a81-95e4-441c-b452-aa0682ac64f9",
+        "ec90908d-d679-424f-8164-83ea8f107540",
+        "c059078f-77fc-4a77-845e-ff282b8a5d0a",
+        "fcc62a9f-5b48-4cc9-8a19-5e054dd46b98",
+        "c86604f8-9489-4a0a-bc76-7f0c4506fad8"
+      ],
+      "duration_ms": 238842,
+      "finished_at": "2026-11-16T15:11:03.173Z"
+    },
+    {
+      "id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4:top1",
+      "role": "executor",
+      "started_at": "2026-11-16T15:11:44.578Z",
+      "task": "Invoke the acquired observation-digest-v1 procedure exactly once at its qualified path with its fixed arguments, using the host-qualified capability attempt. Run ONLY the single command supplied with the qualified attempt — do not add, prepend, chain or substitute any other command, and do not request a pre-run hash or integrity check: the host rehashes the executable and re-verifies its probes itself immediately before release, and a shell the gate refuses is a gate decision, not a missing capability. The command is: node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/procedures/observation-digest-v1.js' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4'. Confirm only from the run's own reported outcome that digest.json and digest.md now exist in that artifacts root and report the exact exit status, stdout and stderr verbatim. Do not write, edit, move or reformat the produced files yourself, and do not run any second invocation or any repair step.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell"
+      ],
+      "artifacts": [
+        "1b034c4c-204d-4559-8c89-22b1967b6b6d",
+        "46a913f7-ec41-4a00-91d4-7277cf9c7e76"
+      ],
+      "duration_ms": 88943,
+      "finished_at": "2026-11-16T15:13:13.516Z"
+    },
+    {
+      "id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4:top2",
+      "role": "analyst",
+      "started_at": "2026-11-16T15:13:13.535Z",
+      "task": "Independently recompute the observation digest from the raw input bytes and verify the acquired procedure's output. Read input/pilot.observations.json directly and, with python3 using only the standard library, compute row_count, scheduled, completed, incidents, completion_percent as 100*completed/scheduled rounded to exactly 2 decimals (0.00 when scheduled is 0), and per-site totals for scheduled/completed/incidents keyed by site, plus the input SHA-256. Then read digest.json and digest.md from the artifacts root and check: every numeric field matches your independent computation exactly; completion_percent is emitted with exactly 2 decimals; the sites object is keyed by site and its totals sum to the top-level totals; digest.md presents the same values as digest.json and states a reproducible method (input path, formula, rounding, invocation). Re-derive the site key set from the raw fixture rather than trusting the digest's own keys. Report every mismatch as a hard failure with both values; do not edit digest.json or digest.md, and do not re-run the qualified procedure. Write your findings only to a new verification file in the artifacts root.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "8f48f43d-3491-4520-a7e4-eeff406c42d2"
+      ],
+      "duration_ms": 262070,
+      "finished_at": "2026-11-16T15:17:35.599Z"
+    },
+    {
+      "id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4:top3",
+      "role": "writer",
+      "started_at": "2026-11-16T15:17:35.612Z",
+      "task": "Assemble the final deliverable record and register all artifacts. Using the invocation receipt from the executor step and the independent verification from the analyst step, write invocation-receipt.md that records the durable invocation evidence (attempt 49ac932a-75dd-41a2-bc33-d7c32ad382aa, qualification_id q-r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4, admission receipt r-b75ebe1d-6d8d-4954-b0e5-afe7ffb5c646, executable path, executable_sha256 4e2cecb1a2ffe4700575ffd588f7f9860b26c7209164b521aa0488c9d9461cf6, command_sha256 c3750ae468f4520f744c19f0ac12510baec32b02dd1ee9a189827ccf7aeea657, the verbatim command, exit status and stream output, probe artifact fcc62a9f-5b48-4cc9-8a19-5e054dd46b98 with sha256 ebbe07f9b6f4c4d83585757c7836e92352c1867a2370d174251458ffa5778f5a), and then register digest.json and digest.md as artifacts via save_artifact, citing for each its byte-level identity as observed at registration time and the analyst verdict. If the analyst verdict is FAIL, do not paper over it: register the artifacts but state plainly which acceptance criterion is unmet and stop rather than adjusting numbers by hand.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_list",
+        "save_artifact",
+        "file_write"
+      ],
+      "artifacts": [
+        "04d3abc0-ac44-45a0-8848-77d2207ec644",
+        "bafa42b0-87e2-4537-9567-7d47262e6ec8",
+        "0f0b75a8-93d0-46fa-8c28-29a0bf8a4fe2",
+        "ddd7d1b5-cd0d-4f5d-a1d4-9e74214bea58"
+      ],
+      "duration_ms": 364512,
+      "finished_at": "2026-11-16T15:23:40.120Z"
+    },
+    {
+      "id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4:top4",
+      "role": "executor",
+      "started_at": "2026-11-16T15:26:32.872Z",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MINOR] digest.md's 'Reproduce exactly' command omits the leading `--` option terminator used in the recorded qualified invocation and does not single-quote the absolute paths, so it is not character-for-character the gate-qualified command line (outputs would nonetheless be identical).\n[MINOR] invocation-receipt.md is described as 12,910 bytes in the writer's step summary while the registered revision 3 artifact is ",
+      "depth": 0,
+      "parent_id": null,
+      "status": "failed",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 611594,
+      "finished_at": "2026-11-16T15:36:44.468Z",
+      "note": "aborted"
+    }
+  ]
+}

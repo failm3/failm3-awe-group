@@ -1,0 +1,13 @@
+{
+  "id": "cf656527-3078-4b39-bdac-6bd3b563f441",
+  "mission_id": "r2-final-transfer-1794798010397-t26-on",
+  "type": "file",
+  "name": "scratch.conformance.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t26-on/scratch.conformance.cjs",
+  "created_at": "2026-11-16T06:03:59.052Z",
+  "metadata": {
+    "size_bytes": 8023,
+    "sha256": "359199b3be9b99e7399c76a5746806e57cbc45518bffbc0d2e4e9211a44ddcb4",
+    "revision": 2
+  }
+}

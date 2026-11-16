@@ -1,0 +1,17 @@
+TAP version 13
+{"comparison":"deterministic-paired-not-llm-learning","cases":7,"perArmBudget":{"toolCalls":7,"externalVerifierCalls":7,"maxBytes":32768,"maxRows":100,"llmCalls":0,"networkCalls":0},"baselineAccepted":7,"lessonAccepted":7,"identicalResults":7,"baselineToolCalls":7,"lessonToolCalls":7,"lessonChecks":12,"selectionChanges":0,"correctnessDelta":0,"toolCallDelta":0,"conclusion":"No measured solver or tool-selection improvement; lesson adds explicit QA checks only."}
+# Subtest: equal-budget paired CSV checks measure zero solver/selection gain from scoped lesson reuse
+ok 1 - equal-budget paired CSV checks measure zero solver/selection gain from scoped lesson reuse
+  ---
+  duration_ms: 2796.494195
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2803.417475

@@ -1,0 +1,14 @@
+{
+  "id": "cf60703b-5d9d-48b6-81bb-e63d3150b079",
+  "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "type": "json",
+  "name": "probe-capability-check/receipt.stdout.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/probe-capability-check/receipt.stdout.json",
+  "created_at": "2026-11-16T06:37:30.533Z",
+  "metadata": {
+    "size_bytes": 852,
+    "sha256": "70a55a910647f1499d6823162b6af303ebc4e9341704b92caaf90fbd2f74e721",
+    "reconciled": true,
+    "revision": 1
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-research",
+  "title": "Source-grounded service pilot decision brief",
+  "description": "Bounded local professional-mission harness; engineering practice only.",
+  "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+  "acceptance_criteria": [
+    "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+    "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+    "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+    "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+    "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief."
+  ],
+  "status": "pending_approval",
+  "priority": "normal",
+  "created_at": "2026-11-16T19:44:17.144Z",
+  "updated_at": "2026-11-16T19:44:17.144Z",
+  "artifacts": [],
+  "metadata": {
+    "specification": {
+      "title": "Source-grounded service pilot decision brief",
+      "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+      "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T19-44-16-972Z-3162655/state/artifacts/r2-final-professional-2026-11-16T19-44-16-972Z-3162655-research. Read only sources/pilot-charter.txt, sources/weekly-observations.txt and sources/reviewer-note.txt as factual mission inputs; these input files must remain byte-identical. Deliver research-brief.md as the substantive final artifact plus bounded child evidence notes required by recursive execution. Use exactly one top-level research-coordinator delegation. It must perform all source inventory, recursion and final synthesis itself: recursively delegate exactly two distinct source-analysis children in one parallel delegate call, save their substantive outputs exactly as evidence-alder.md and evidence-brook-cove.md, then synthesize their persisted contributions into research-brief.md. Do not add separate top-level analysts, reviewers or writers; production independent QA runs only after the coordinator returns. Children and coordinator may read/write only within this workspace. No web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+      "acceptance_criteria": [
+        "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+        "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+        "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+        "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+        "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief."
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "save_artifact",
+        "delegate"
+      ],
+      "suggested_agents": [
+        "research-coordinator",
+        "researcher",
+        "writer"
+      ],
+      "estimated_complexity": "complex",
+      "risks": [
+        "Citation drift or unsupported extrapolation must fail",
+        "Parallel recursion must be observed in the production tree, not inferred from prose"
+      ]
+    }
+  }
+}

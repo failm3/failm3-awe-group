@@ -1,0 +1,43 @@
+{
+  "argv": [
+    "/usr/bin/node",
+    "--",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b"
+  ],
+  "argv0_resolved_realpath": "/usr/bin/node",
+  "argv0_sha256": "fde6a4bf8d0562f7751d1a2d6cb9b417c4cfe107bbcb0aa3e9a24e125e348f48",
+  "started_at_utc": "2026-11-16T11:26:05.856637Z",
+  "finished_at_utc": "2026-11-16T11:26:05.895781Z",
+  "duration_ms": 39.139,
+  "duration_ns_monotonic": 39138628,
+  "exit_code": 0,
+  "stdout": "{\"wrote\":{\"digest_json\":\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.json\",\"digest_md\":\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.md\"},\"digest\":{\"row_count\":3,\"scheduled\":30,\"completed\":26,\"incidents\":6,\"completion_percent\":86.67,\"sites\":{\"North\":{\"scheduled\":22,\"completed\":18,\"incidents\":5},\"South\":{\"scheduled\":8,\"completed\":8,\"incidents\":1}}}}\n",
+  "stderr": "",
+  "pre_hashes": {
+    "observation-digest-v1.mjs": "1e6ee2f392fdb7656e567e37f571e39471feefb62562a8512391d470faddf7c9",
+    "digest.json": "3f3d1e13591a57d7fb9c12e50b7bf6f4396bc70080335859cfde0cf6f63aec4f",
+    "digest.md": "e03394a3ecb9c9f31f9b32b2c8c31aa74e073ed5932d4e99db0318b9257b8c58"
+  },
+  "post_hashes": {
+    "observation-digest-v1.mjs": "1e6ee2f392fdb7656e567e37f571e39471feefb62562a8512391d470faddf7c9",
+    "digest.json": "3f3d1e13591a57d7fb9c12e50b7bf6f4396bc70080335859cfde0cf6f63aec4f",
+    "digest.md": "e03394a3ecb9c9f31f9b32b2c8c31aa74e073ed5932d4e99db0318b9257b8c58"
+  },
+  "procedure_unchanged": true,
+  "outputs_identical_to_before": true,
+  "observed_sizes": {
+    "digest.json": 301,
+    "digest.md": 3296
+  },
+  "observed_sizes_chars": {
+    "digest.json": 301,
+    "digest.md": 3294
+  },
+  "output_mtimes_utc": {
+    "digest.json": "2026-11-16T11:26:05.884768Z",
+    "digest.md": "2026-11-16T11:26:05.884768Z"
+  },
+  "node_version": "v22.23.3"
+}

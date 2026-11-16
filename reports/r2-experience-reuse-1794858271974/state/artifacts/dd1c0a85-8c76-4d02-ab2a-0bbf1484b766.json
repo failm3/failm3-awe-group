@@ -1,0 +1,14 @@
+{
+  "id": "dd1c0a85-8c76-4d02-ab2a-0bbf1484b766",
+  "mission_id": "r2-experience-reuse-1794858271974-t13-on",
+  "type": "text",
+  "name": "FORMAT.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t13-on/FORMAT.md",
+  "created_at": "2026-11-16T20:06:02.287Z",
+  "metadata": {
+    "size_bytes": 1869,
+    "sha256": "1f3bedd8821371426ad2c1bf234091f3a0c2a3f7b02e1068717429183e56f17a",
+    "reconciled": true,
+    "revision": 1
+  }
+}

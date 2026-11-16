@@ -1,0 +1,303 @@
+{
+  "id": "sachkov_blog",
+  "source_url": "https://t.me/sachkov_blog",
+  "source_title": "Кирилл Сачков",
+  "observed_at": "2026-11-12T05:53:08Z",
+  "channel_observations": {
+    "title": "Кирилл Сачков",
+    "handle": "sachkov_blog",
+    "title_evidence_url": "https://t.me/s/sachkov_blog",
+    "accessible": true,
+    "authentication_required_for_observed_text": false,
+    "subscriber_count": null,
+    "subscriber_count_limitation": "Разные извлечения показывали 6.17K и 6.52K; точное текущее число не фиксируется.",
+    "method": "public_web_only",
+    "history_method": "Публичный предпросмотр t.me/s/sachkov_blog и ссылка пагинации ?before=704; точечное открытие постов 688 и 717 в браузере.",
+    "inspected_preview_urls": [
+      "https://t.me/s/sachkov_blog",
+      "https://t.me/s/sachkov_blog?before=704"
+    ],
+    "targeted_post_preview_urls": [
+      "https://t.me/s/sachkov_blog/688",
+      "https://t.me/s/sachkov_blog/717"
+    ],
+    "observed_post_range": {"earliest_id": "683", "latest_id": "723"},
+    "history_boundary_reached": false,
+    "completeness": "public_web_only",
+    "full_telegram_api_history_claimed": false,
+    "bulk_history_download_performed": false,
+    "thematic_relevance": "Высокая для AWE Tool Intelligence: конкретные coding-agent среды, управление сессиями, Git worktrees, оркестрация, harness, AGENTS.md и skills. Наряду с инструментами канал содержит авторские мнения, новости и продвижение курса.",
+    "relevance_evidence": [
+      {"post_url": "https://t.me/sachkov_blog/683", "message_id": "683", "assertion": "Пост с обзором AI-стека перечисляет Herdr, Orca, конфиги и полезные репозитории."},
+      {"post_url": "https://t.me/sachkov_blog/687", "message_id": "687", "assertion": "Прямая ссылка на авторский репозиторий ai-dev-kit с конфигами и ссылками на инструменты."},
+      {"post_url": "https://t.me/sachkov_blog/688", "message_id": "688", "assertion": "Прямая ссылка на Papermorph и описание skill для интерактивных веб-книг из PDF."},
+      {"post_url": "https://t.me/sachkov_blog/702", "message_id": "702", "assertion": "Автор описывает переход на Orca и ссылается на свою статью об агентских рабочих средах."},
+      {"post_url": "https://t.me/sachkov_blog/705", "message_id": "705", "assertion": "Ссылка на авторский материал об AGENTS.md."},
+      {"post_url": "https://t.me/sachkov_blog/717", "message_id": "717", "assertion": "Пост о новом приложении Herdr с прямой ссылкой herdr.dev и сравнением с Orca."}
+    ],
+    "limitations": [
+      "Это точечное исследование двух фрагментов публичной ленты, не полный исторический сбор. Массовый сбор поручен отдельному коллектору.",
+      "Диапазон идентификаторов не означает, что каждое сообщение в диапазоне доступно или было независимо проверено.",
+      "Часть медиа сопровождается приглашением открыть Telegram; вложенные изображения, видео и файлы полностью не исследованы.",
+      "Даты публикаций и исторические правки не восстановлены систематически; message_id и точные permalink сохранены.",
+      "Мнения автора, маркетинговые обещания и заявления автора о собственных тестах не считаются независимой функциональной проверкой."
+    ]
+  },
+  "resources": [
+    {
+      "name": "Herdr App",
+      "official_url": "https://herdr.dev/",
+      "repository_url": "https://github.com/herdrdev/herdr-app",
+      "resource_type": "coding_agent_workspace",
+      "description": "Нативное настольное приложение для терминалов и coding agents, построенное поверх herdr-core. В посте 717 речь о новом приложении; оно отличается от прежнего Herdr TUI с отдельным сервером.",
+      "capabilities": [
+        "Организация проектов в spaces, задач во вкладках и терминальных панелях",
+        "Отображение статусов программ через открытый протокол OSC 7501",
+        "Сохранение терминальных процессов при закрытии окна приложения",
+        "Подключение удалённых машин по SSH",
+        "Изменяемые конфигурации, layouts и JavaScript mods",
+        "Запуск и координация дочерних агентов через herdr-core"
+      ],
+      "integrations": [
+        "Любой агент, работающий в терминале; примеры официального сайта включают Claude Code и Codex",
+        "CLI hc: run, send, wait, read, ls для адаптера управления агентами",
+        "hc schema документирует OpenRPC API со streams и events для собственного клиента",
+        "OSC 7501 позволяет собственному скрипту сообщать состояние",
+        "SSH для собственных серверов, VM и других машин",
+        "JavaScript mods и CLI herdr-app для управления визуальным приложением"
+      ],
+      "verification_status": "documentation_only",
+      "claims": [
+        {"field": "discovery", "value": "Пост 717 содержит название Herdr, ссылку https://herdr.dev/ и слова о полноценном приложении на Rust.", "evidence_url": "https://t.me/sachkov_blog/717", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "repository_url", "value": "Официальный сайт ссылается на herdrdev/herdr-app как репозиторий приложения.", "evidence_url": "https://herdr.dev/", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "description", "value": "README описывает Herdr как desktop app для терминалов и coding agents; core исполняет процессы независимо от окна.", "evidence_url": "https://github.com/herdrdev/herdr-app", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "capabilities", "value": "Официальный сайт описывает spaces, tabs, OSC 7501, сохранение процессов при закрытии окна, SSH и изменяемые layouts/mods.", "evidence_url": "https://herdr.dev/", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "integrations", "value": "herdr-core документирует hc run/send/wait/read, подключение машин и OpenRPC schema со streams/events.", "evidence_url": "https://herdr.dev/core/", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "integrations", "value": "README документирует herdr-app --skill, ls/status/commands и JavaScript mods.", "evidence_url": "https://github.com/herdrdev/herdr-app", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "pricing.category", "value": "Официальный FAQ отвечает Yes на Is it free и указывает открытый исходный код приложения, core и TUI.", "evidence_url": "https://herdr.dev/", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "license.spdx", "value": "Apache-2.0", "evidence_url": "https://raw.githubusercontent.com/herdrdev/herdr-app/master/LICENSE", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "limitations", "value": "README: telemetry включена по умолчанию в релизах; mods являются доверенным несандбоксированным кодом; после reboot/core crash старые программы не восстанавливаются; Linux требует desktop session и Vulkan.", "evidence_url": "https://github.com/herdrdev/herdr-app", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "limitations", "value": "Herdr TUI и Herdr App используют разные серверы и не разделяют текущих агентов.", "evidence_url": "https://herdr.dev/", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "live_functional_test", "value": null, "evidence_url": null, "checked_at": null}
+      ],
+      "pricing": {
+        "category": "free_open_source",
+        "details": "Само приложение и core заявлены бесплатными и открытыми. Это не подтверждение бесплатности подключённых LLM/агентских подписок. Их точная стоимость в этом исследовании не установлена.",
+        "evidence_url": "https://herdr.dev/",
+        "checked_at": "2026-11-12T05:53:08Z"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "details": "Проверен LICENSE именно herdr-app. Официальный сайт отдельно заявляет Apache-2.0 для приложения, core и TUI; сторонние компоненты имеют собственные notices.",
+        "evidence_url": "https://raw.githubusercontent.com/herdrdev/herdr-app/master/LICENSE"
+      },
+      "provenance": [
+        {"source_url": "https://t.me/sachkov_blog", "post_url": "https://t.me/sachkov_blog/717", "message_id": "717"},
+        {"source_url": "https://t.me/sachkov_blog", "post_url": "https://t.me/sachkov_blog/683", "message_id": "683"}
+      ],
+      "decision": "candidate_not_approved",
+      "limitations": [
+        "Установка, запуск CLI/API и live test не выполнялись; доступность документации не является доказательством работоспособности.",
+        "Для интеграции AWE перспективен отдельный адаптер herdr-core/hc; фактическая совместимость AWE не проверена.",
+        "Нативное приложение и Herdr TUI нельзя считать одним совместимым runtime.",
+        "Закрытие окна не останавливает core, но reboot или остановка core прекращают исполняемые программы без автоматического продолжения агента.",
+        "Mods являются доверенным кодом, не sandbox; telemetry в релизах включена по умолчанию.",
+        "Linux GUI требует графической сессии и Vulkan; возможности GUI на headless AWE не проверены."
+      ]
+    },
+    {
+      "name": "Orca",
+      "official_url": "https://www.onorca.dev/",
+      "repository_url": "https://github.com/stablyai/orca",
+      "resource_type": "agent_development_environment",
+      "description": "Открытая среда разработки вокруг coding agents: параллельные агентские сессии в Git worktrees, визуальный чат и терминал, просмотр diff и встроенный браузер. Идентичность проекта подтверждена прямой ссылкой Orca в авторской статье из поста 702 и в ai-dev-kit из поста 687.",
+      "capabilities": [
+        "Изолированные Git worktrees для параллельных задач агентов",
+        "Чат и терминальный режим работы с агентами",
+        "Просмотр и комментирование diff",
+        "Координация worker agents",
+        "Встроенный браузер и документированный CLI его управления",
+        "Удалённое выполнение через Remote Orca Server, SSH и cloud VM"
+      ],
+      "integrations": [
+        "Собственные подписки/учётные записи CLI agents: Claude Code, Codex, OpenCode и другие",
+        "Orca CLI с JSON-выводом для worktrees, терминалов и браузера",
+        "Агентский skill orca-cli",
+        "Git, GitHub и Linear для задач и ревью",
+        "Remote Orca Server и SSH для контролируемых пользователем машин",
+        "Плагины и отдельная документация skills/MCP"
+      ],
+      "verification_status": "documentation_only",
+      "claims": [
+        {"field": "discovery", "value": "Автор пишет: Я недооценивал Orca, сейчас опробовал; пост даёт ссылку на статью Где работать с агентами: от терминала до ADE.", "evidence_url": "https://t.me/sachkov_blog/702", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "official_url", "value": "Авторская статья содержит гиперссылку Orca на https://www.onorca.dev/ и описывает собственный переход на эту среду.", "evidence_url": "https://sachkov.dev/materials/inside-content-agent-workspaces", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "repository_url", "value": "TOOLS.md репозитория, прямо указанного в посте 687, связывает Orca с https://github.com/stablyai/orca; официальный сайт ссылается на тот же репозиторий.", "evidence_url": "https://github.com/KirillSachkov/ai-dev-kit/blob/main/TOOLS.md", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "capabilities", "value": "README описывает parallel worktrees, chat/terminal, orchestration, review diff, browser, remote runtime.", "evidence_url": "https://github.com/stablyai/orca", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "integrations", "value": "README документирует any CLI agent, GitHub/Linear, SSH/Remote Orca Server и plugins.", "evidence_url": "https://github.com/stablyai/orca", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "integrations", "value": "CLI overview описывает orca как интерфейс к running Orca editor; перечисляет worktree, terminal, browser команды с --json и orca-cli skill.", "evidence_url": "https://www.onorca.dev/docs/cli/overview", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "pricing.category", "value": "Официальный сайт заявляет Free and open source, Bring your own agent/subscription.", "evidence_url": "https://www.onorca.dev/", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "pricing.enterprise", "value": "Enterprise-страница предлагает прямой контакт по rollout/support; публичный числовой тариф не указан, платность не установлена.", "evidence_url": "https://www.onorca.dev/enterprise", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "license.spdx", "value": "MIT", "evidence_url": "https://raw.githubusercontent.com/stablyai/orca/main/LICENSE", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "limitations", "value": "CLI требует running Orca editor; публикация artifacts публичными ссылками является opt-in функцией аккаунта, отдельной от локального использования.", "evidence_url": "https://www.onorca.dev/docs/cli/overview", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "live_functional_test", "value": null, "evidence_url": null, "checked_at": null}
+      ],
+      "pricing": {
+        "category": "free_open_source",
+        "details": "Приложение бесплатно и открыто; пользователь подключает свои agent subscriptions. Enterprise обсуждается напрямую, его цена и платность не установлены. Цены LLM, облачных VM и иных внешних сервисов здесь не подтверждены.",
+        "evidence_url": "https://www.onorca.dev/",
+        "checked_at": "2026-11-12T05:53:08Z"
+      },
+      "license": {
+        "spdx": "MIT",
+        "details": "Проверен LICENSE stablyai/orca с требованием сохранения copyright и текста разрешения; это лицензия проекта, не подписок используемых агентов.",
+        "evidence_url": "https://raw.githubusercontent.com/stablyai/orca/main/LICENSE"
+      },
+      "provenance": [
+        {"source_url": "https://t.me/sachkov_blog", "post_url": "https://t.me/sachkov_blog/702", "message_id": "702"},
+        {"source_url": "https://t.me/sachkov_blog", "post_url": "https://t.me/sachkov_blog/683", "message_id": "683"},
+        {"source_url": "https://t.me/sachkov_blog", "post_url": "https://t.me/sachkov_blog/687", "message_id": "687"},
+        {"source_url": "https://t.me/sachkov_blog", "post_url": "https://t.me/sachkov_blog/717", "message_id": "717"}
+      ],
+      "decision": "candidate_not_approved",
+      "limitations": [
+        "Установка, запуск Orca, авторизация внешних агентов и live test не выполнялись.",
+        "Перспективен CLI-адаптер AWE с JSON-выводом, но его работоспособность и безопасность не проверены.",
+        "Документированный desktop CLI управляет уже запущенным редактором; пригодность для чистого headless backend нельзя предполагать.",
+        "Worktree изолирует изменения файлов, но не служит доказательством sandbox/изоляции прав исполнения.",
+        "Публикация artifacts создаёт публичные ссылки: не подходит для приватного каталога AWE без отдельного разрешения.",
+        "Название Orca неоднозначно; идентифицирован именно stablyai/orca, а не одноимённый Plotly-пакет.",
+        "Не подтверждены производительность, качество модели и маркетинговое обещание 100x."
+      ]
+    },
+    {
+      "name": "Papermorph",
+      "official_url": "https://papermorph.diamonddoge.org/",
+      "repository_url": "https://github.com/DozenTwelve/Papermorph",
+      "resource_type": "agent_skill",
+      "description": "Skill и статический веб-движок для превращения учебников/PDF и историй в озвученные интерактивные уроки, анимации и проверяемые упражнения. README документирует Claude Code и OpenCode, экспорт MP4/SRT и SCORM для LMS.",
+      "capabilities": [
+        "Планирование книги, сценариев и storyboard",
+        "Озвученные интерактивные уроки с анимацией и упражнениями",
+        "Статические сайты без backend, базы данных или аккаунта",
+        "Экспорт глав в 1080p MP4 и SRT",
+        "Упаковка книги в SCORM для LMS",
+        "Проверки визуального результата, contact sheets и end-to-end tests как заявленный процесс skill"
+      ],
+      "integrations": [
+        "Установка papermorph skill для Claude Code или OpenCode; команда /papermorph",
+        "Локальный pipeline с uv, ffmpeg и Playwright browsers",
+        "Edge TTS или локальный Kokoro для озвучивания, согласно README",
+        "Необязательные API ElevenLabs, OpenRouter и OpenAI для платных голосов, клипов и изображений",
+        "Хостинг готовых статических папок на собственном веб-сервере",
+        "LMS через документированную SCORM-упаковку"
+      ],
+      "verification_status": "documentation_only",
+      "claims": [
+        {"field": "discovery", "value": "Пост 688 напрямую ссылается на DozenTwelve/Papermorph и описывает преобразование PDF-книги в интерактивную веб-книгу с уроками, озвучкой, анимациями и квизами.", "evidence_url": "https://t.me/sachkov_blog/688", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "official_url", "value": "README проекта ссылается на papermorph.diamonddoge.org как официальный live bookshelf с примерами.", "evidence_url": "https://github.com/DozenTwelve/Papermorph", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "capabilities", "value": "README описывает textbook PDF lessons, narration/animations/quizzes, static pages, export.py для MP4/SRT и scorm.py для LMS.", "evidence_url": "https://github.com/DozenTwelve/Papermorph", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "integrations", "value": "Get started документирует установку skill для Claude Code или OpenCode, /papermorph, uv/ffmpeg/Playwright и необязательные API ElevenLabs/OpenRouter/OpenAI.", "evidence_url": "https://github.com/DozenTwelve/Papermorph", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "model_compatibility", "value": "Пост утверждал only Opus 5.5; текущий официальный README говорит о выборе модели на каждом шаге и примерах Opus 5.5, GPT-6.1-Sol и Sonnet 5.5. Ограничение из поста не переносится как текущий факт.", "evidence_url": "https://github.com/DozenTwelve/Papermorph", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "pricing.category", "value": "Открытый MIT-код; README называет Edge TTS/Kokoro бесплатными, а ElevenLabs и некоторые OpenRouter/OpenAI шаги необязательными платными; расход основной LLM отдельно.", "evidence_url": "https://github.com/DozenTwelve/Papermorph", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "license.spdx", "value": "MIT", "evidence_url": "https://raw.githubusercontent.com/DozenTwelve/Papermorph/main/LICENSE", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "license.details", "value": "MIT относится к коду; bundled MathJax Apache-2.0; изображения, записи и данные site сохраняют собственные лицензии, в том числе CC BY-SA.", "evidence_url": "https://github.com/DozenTwelve/Papermorph", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "limitations", "value": "README возлагает проверку прав на публикацию производной книги на пользователя и запрещает PR с чужими защищёнными книгами/PDF/уроками из них.", "evidence_url": "https://github.com/DozenTwelve/Papermorph", "checked_at": "2026-11-12T05:53:08Z"},
+        {"field": "live_functional_test", "value": null, "evidence_url": null, "checked_at": null}
+      ],
+      "pricing": {
+        "category": "free_open_source_with_optional_paid_dependencies",
+        "details": "Код доступен по MIT без лицензионной платы. Общая стоимость генерации неизвестна: зависит от LLM, выбранной озвучки и необязательных API. Числа затрат из README являются примерами автора, не подтверждёнными текущими тарифами, и не используются как цены проекта.",
+        "evidence_url": "https://github.com/DozenTwelve/Papermorph",
+        "checked_at": "2026-11-12T05:53:08Z"
+      },
+      "license": {
+        "spdx": "MIT",
+        "details": "Проверен основной LICENSE. MIT покрывает код, не все материалы site; MathJax и медиа имеют отдельные условия. Права на входные PDF и публикуемые производные материалы требуют отдельной проверки.",
+        "evidence_url": "https://raw.githubusercontent.com/DozenTwelve/Papermorph/main/LICENSE"
+      },
+      "provenance": [
+        {"source_url": "https://t.me/sachkov_blog", "post_url": "https://t.me/sachkov_blog/688", "message_id": "688"}
+      ],
+      "decision": "candidate_not_approved",
+      "limitations": [
+        "Skill не устанавливался и не запускался, пример веб-книги функционально не тестировался.",
+        "Для AWE это возможный workflow/skill адаптер, а не установленный HTTP API или готовая доказанная интеграция.",
+        "Нужны uv, ffmpeg и браузеры Playwright; зависимости, версии и совместимость в среде AWE не проверены.",
+        "Поддержка нескольких моделей отражает README, а не наши независимые тесты; ограничение only Opus 5.5 из поста не подтверждено как актуальное.",
+        "Код, медиа, MathJax и исходные книги имеют разные лицензионные границы.",
+        "Платные необязательные API требуют ключей и могут передавать содержание сторонним провайдерам; ключи не запрашивались и не сохранялись.",
+        "Точные текущие тарифы внешних сервисов и полный бюджет генерации неизвестны."
+      ]
+    }
+  ],
+  "related_sources": [
+    {
+      "url": "https://github.com/KirillSachkov/ai-dev-kit",
+      "title": "AI Dev Kit · Кирилл Сачков",
+      "relation": "Авторская поддерживаемая подборка инструментов, конфигов, skills и материалов к видео; в посте 687 имеется ссылка и цитирование собственного поста 683.",
+      "evidence_url": "https://t.me/sachkov_blog/687",
+      "post_url": "https://t.me/sachkov_blog/687",
+      "official_evidence_url": "https://github.com/KirillSachkov/ai-dev-kit",
+      "accessible": true,
+      "license_spdx": null,
+      "recommendation": "Приоритетный дополнительный discovery source. Отсутствие видимой лицензии в прочитанном README/списке файлов не заменяется догадкой; не утверждать право копирования конфигов."
+    },
+    {
+      "url": "https://sachkov.dev/materials/inside-content-agent-workspaces",
+      "title": "Где работать с агентами: от терминала до ADE",
+      "relation": "Собственная статья автора, прямо связанная с постом о переходе на Orca; содержит канонические ссылки Orca и Herdr.",
+      "evidence_url": "https://t.me/sachkov_blog/702",
+      "post_url": "https://t.me/sachkov_blog/702",
+      "official_evidence_url": "https://sachkov.dev/materials/inside-content-agent-workspaces",
+      "accessible": true,
+      "license_spdx": null,
+      "recommendation": "Полезный связанный источник с обоснованием выбора среды. Статическая fetch-выгрузка вернула оболочку, но браузер прочитал статью без входа."
+    },
+    {
+      "url": "https://www.youtube.com/@SachkovDev",
+      "title": "Kirill Sachkov",
+      "relation": "Авторский видеоканал связан с обзором AI-стека в посте 683 и шортсами в посте 713.",
+      "evidence_url": "https://t.me/sachkov_blog/683",
+      "post_url": "https://t.me/sachkov_blog/713",
+      "official_evidence_url": null,
+      "accessible": null,
+      "license_spdx": null,
+      "recommendation": "Кандидат для извлечения ссылок/конфигов из видео; видео и расшифровки отдельно не исследовались."
+    },
+    {
+      "url": "https://t.me/it_krasavchik",
+      "title": null,
+      "relation": "Канал прямо назван как источник инсайдов в посте 696; пост 715 содержит ссылку на его публикацию 850 об AI-навыках.",
+      "evidence_url": "https://t.me/sachkov_blog/696",
+      "post_url": "https://t.me/sachkov_blog/715",
+      "linked_post_url": "https://t.me/it_krasavchik/850",
+      "official_evidence_url": null,
+      "accessible": null,
+      "license_spdx": null,
+      "recommendation": "Связь подтверждена исходным каналом, но тематика и собственный каталог инструментов дополнительного канала не проверены; не считать автоматически рекомендованным tool-source."
+    },
+    {
+      "url": "https://commandline.microsoft.com/agentic-software-engineering-large-scale-code-migration-language-modernization-spec-driven-development/",
+      "title": "Материал Microsoft об agentic software engineering",
+      "relation": "Пост 712 содержит прямую ссылку на материал о миграции кода, проверке поведения и спецификаций.",
+      "evidence_url": "https://t.me/sachkov_blog/712",
+      "post_url": "https://t.me/sachkov_blog/712",
+      "official_evidence_url": null,
+      "accessible": null,
+      "license_spdx": null,
+      "recommendation": "Связанный источник практик оценки агентов, а не четвёртая проверенная ресурсная запись; содержание целевой статьи независимо не проверялось."
+    }
+  ],
+  "unknown_facts": {
+    "Herdr App": {"live_test_result": null, "awe_compatibility": null, "external_agent_prices": null},
+    "Orca": {"live_test_result": null, "awe_compatibility": null, "enterprise_price": null, "enterprise_paid_status": null, "cloud_runtime_price": null},
+    "Papermorph": {"live_test_result": null, "awe_compatibility": null, "current_external_api_prices": null, "total_generation_budget": null}
+  },
+  "blockers": [],
+  "research_limitations": [
+    "Объективного блока доступа к основному каналу или трём официальным проектам не обнаружено.",
+    "HTTP-доступность и прочитанная документация не являются функциональной проверкой. Ни один ресурс не одобрен для исполнения.",
+    "Связанные источники без independent verification явно помечены null; массовый обход истории или связанных каналов не выполнялся.",
+    "Точные исторические даты и полнота сообщений предоставляются отдельным коллектором, не этим исследованием."
+  ]
+}

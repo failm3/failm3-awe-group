@@ -1,0 +1,14 @@
+{
+  "id": "ed0d1003-3f23-4e1c-8a13-a9d1bb3db4ad",
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "type": "text",
+  "name": "invocation/start_utc.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/invocation/start_utc.txt",
+  "created_at": "2026-11-16T08:30:19.687Z",
+  "metadata": {
+    "size_bytes": 21,
+    "sha256": "7dbd58ff417ac405626456bdd2248d0b0046afedf379ac1e4df4cc04ff1bc1fb",
+    "reconciled": true,
+    "revision": 1
+  }
+}

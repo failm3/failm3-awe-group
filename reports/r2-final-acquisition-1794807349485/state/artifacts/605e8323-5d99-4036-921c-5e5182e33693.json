@@ -1,0 +1,15 @@
+{
+  "id": "605e8323-5d99-4036-921c-5e5182e33693",
+  "mission_id": "r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48",
+  "type": "file",
+  "name": "evidence/independent_verify.log",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794807349485/state/artifacts/r2-acquisition-4be8f884-b67d-41fd-a7c4-00e88ae10d48/evidence/independent_verify.log",
+  "created_at": "2026-11-16T05:52:02.775Z",
+  "metadata": {
+    "size_bytes": 15578,
+    "sha256": "659dfc314bb8b11658508f2733ffe20fe0004570875aba68f3cd16bd3f5e45ef",
+    "reconciled": true,
+    "previous_artifact_id": "f34f9a53-3bd7-4af6-b8fb-9e09e7abb483",
+    "revision": 3
+  }
+}

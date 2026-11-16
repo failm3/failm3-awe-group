@@ -1,0 +1,14 @@
+{
+  "id": "7829d89a-89f2-4f41-880d-d929ad9639f7",
+  "mission_id": "r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1",
+  "type": "text",
+  "name": "probe/stderr.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/probe/stderr.txt",
+  "created_at": "2026-11-16T09:52:21.366Z",
+  "metadata": {
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reconciled": true,
+    "revision": 1
+  }
+}

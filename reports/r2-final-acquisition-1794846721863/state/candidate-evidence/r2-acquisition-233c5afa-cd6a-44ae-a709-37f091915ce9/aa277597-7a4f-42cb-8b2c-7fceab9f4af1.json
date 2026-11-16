@@ -1,0 +1,204 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "aa277597-7a4f-42cb-8b2c-7fceab9f4af1",
+    "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+    "repair_iteration": 0,
+    "spec_hash": "a9db0ac2a435b4b7413965d813e8937984e9408e472cc7d999e1037dde3ecc55",
+    "plan_hash": "f7453417d75082e038d5da92acfe86a4c169e552031fd6f1393c24afc187f0ad",
+    "artifacts": [
+      {
+        "artifact_id": "8a2ae168-f043-4ca8-9a1f-33c15a7374a9",
+        "name": "digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/digest.json",
+        "sha256": "b6f19e586465d349d74bb1999e5788fb72d502d46dcba8b320ad84f3d0cdab46",
+        "size_bytes": 403
+      },
+      {
+        "artifact_id": "11e97a9a-0fdf-4c4d-993e-6fb9ed3e2087",
+        "name": "digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/digest.md",
+        "sha256": "291f2efbd827b5c1f5a5334025e1162eafd1829cd350ddc1d9c67c8b71a4edd1",
+        "size_bytes": 921
+      },
+      {
+        "artifact_id": "ff6c184e-a972-4ba5-8315-f7a8bdb7955c",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "bb9ee557-47dc-4d40-b85d-9e4c3b2723f2",
+        "name": "nox-qa-report.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/nox-qa-report.md",
+        "sha256": "278015da0f7eefe5b1a506c7cc2ec16b8baa356271fb2f334840a733c0ca185e",
+        "size_bytes": 6968
+      },
+      {
+        "artifact_id": "3cb348ae-617e-4689-bb1e-f1aa4db42d19",
+        "name": "observation-digest-v1.observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/observation-digest-v1.observation.json",
+        "sha256": "d34494305449b2908056c74eec4e6cd43278b9395efa7392d39606bb4c9f232d",
+        "size_bytes": 2581
+      },
+      {
+        "artifact_id": "ce4825f6-313d-4146-ad7a-90b57f3b0f97",
+        "name": "procedures/observation-digest-v1.js",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/procedures/observation-digest-v1.js",
+        "sha256": "7d340bab553ba2e89be7a07f6c91a1094ed67751976ffdfa801a62d0dec20445",
+        "size_bytes": 4728
+      },
+      {
+        "artifact_id": "49828ee6-7b88-4b64-b566-9cecf57ec35d",
+        "name": "qualification/crosscheck.expected.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/qualification/crosscheck.expected.json",
+        "sha256": "68c720e768ce918da2e5adac26a1f7391e024cd18793d3a711bae03473c760b1",
+        "size_bytes": 491
+      },
+      {
+        "artifact_id": "ab959b1c-5657-4307-bd34-b9db1b9b5d18",
+        "name": "qualification/observation-digest-probe.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/qualification/observation-digest-probe.json",
+        "sha256": "68c720e768ce918da2e5adac26a1f7391e024cd18793d3a711bae03473c760b1",
+        "size_bytes": 491
+      },
+      {
+        "artifact_id": "1c2e7845-aa66-40f7-870e-c6117e8aaa3a",
+        "name": "verification-report.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/verification-report.md",
+        "sha256": "84f77374c49f332479353518da4dce7cc290879b8b6e362a19d738c34a710615",
+        "size_bytes": 6184
+      },
+      {
+        "artifact_id": "faad9971-606b-4b0e-b4f3-aa65d00d7b3c",
+        "name": "verification/verification-result.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/verification/verification-result.json",
+        "sha256": "508566cf7f36a24ea372dee6a2a0015a931d8b59e015f4dbd08dfb93318c5938",
+        "size_bytes": 6450
+      },
+      {
+        "artifact_id": "78bffa27-0978-44bc-8e1e-5385d2ced541",
+        "name": "verification/verify_digest.py",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/verification/verify_digest.py",
+        "sha256": "3791a65a68e3df9b753eb1ec8ba2c47a42f462bc81805c1fa65887687a1f112d",
+        "size_bytes": 7168
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "434565fee556be004b340d9b4f6da300dcb327bd6a26280529098fda5bdd6735",
+    "created_at": "2026-11-16T16:42:53.212Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+    "epoch_id": "aa277597-7a4f-42cb-8b2c-7fceab9f4af1",
+    "candidate_sha256": "434565fee556be004b340d9b4f6da300dcb327bd6a26280529098fda5bdd6735",
+    "execution_output_sha256": "ae8acab5ca1b1b15d6c4d17fb010f92ce085848ebd193082ac12fe14c0722b66",
+    "evidence_sha256": "9c0f0d46399ceec7bb27416797ea9cdf4aace10f4d6ba7626e56a9f6e18677c5",
+    "review": {
+      "passed": false,
+      "score": 6,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "notes": "observation-digest-v1.observation.json names the capability (observation-digest-v1) and records one bounded acquisition: a single Node procedure, built-ins only, 4728 bytes, sha256 7d340bab…0445. It records the fixed args (fixture plus artifact root) and a probe artifact (sha 68c720e7…60b1) that is byte-identical to crosscheck.expected.json. I read the procedure source and found no packages, network, child_process or eval. I hand-checked its integer half-up formula: 26/30 gives 86.67, 18/22 gives 81.82 and 8/8 gives 100. Because the spec warns that a model-authored observation is not qualification, I relied on this independent source review and arithmetic, not on the observation's own claims. The host's own qualification record is not among the artifacts, which I note but do not count against this criterion."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "notes": "No invocation receipt is among the registered artifacts or the executor output. The executor said it did not see or write one, and a prior QA pass found none for attempt 7dd43f3f-7dda-4201-87ca-74ff0d5eda72. The command sha256 (b78d6c60…cab9) is only a truncated narrative claim. The procedure bytes match the qualified sha and the executor reports exit 0, but the receipt is required and cannot be confirmed. Also, save_artifact rewrote digest.json and digest.md after the procedure ran, so the registered bytes cannot be tied to the procedure's raw output without the receipt."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "notes": "From the fixture bytes (3 rows, sha256 412c65c3…3766) I recomputed row_count 3, scheduled 30, completed 26, incidents 6 and completion_percent 86.67. North is 2/22/18/5/81.82 and South is 1/8/8/1/100. digest.json holds these as JSON integers or numbers, with a sites object keyed North and South, and site sums reconcile to the global totals. digest.md shows the same values, with South at 100.00, and includes Source, Period, the input sha and a Method section. The method covers row counting, summing, the percent formula and half-up rounding, so every value can be recomputed from the fixture. South completion_percent is the literal 100 in digest.json, because JSON.stringify drops trailing zeros. It is numerically exactly 100.00 and matches the qualified cross-check expectation. I record this as a minor defect and do not fail the criterion on it."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "notes": "All deliverables appear in the host candidate manifest with artifact IDs, sha256 and sizes. I verified the content of digest.json, digest.md, the procedure, the fixture and the probe independently, and the content matches the recomputed values. I cannot recompute the registered sha256 values here. The remaining gap, that the registered digest bytes are not tied to the procedure's raw output, is already charged to criterion 2 and not double-counted here."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "No durable invocation receipt is present for the qualified procedure run (attempt 7dd43f3f-7dda-4201-87ca-74ff0d5eda72). Criterion 2 explicitly requires one, and the invocation with exact qualified bytes and fixed args cannot be verified without it.",
+          "severity": "major"
+        },
+        {
+          "issue": "save_artifact overwrote digest.json and digest.md after the procedure ran, so there is no independent proof that the registered bytes equal the procedure's raw output.",
+          "severity": "major"
+        },
+        {
+          "issue": "digest.json serializes sites.South.completion_percent as 100, not 100.00. The value is exact, but the literal is not 2-decimal, and the qualified cross-check expectation also uses the 100.0 form.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The Method section's replay command in digest.md has no script path, and the method does not say that sites are grouped by the site field.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The registered verification-report.md and nox-qa-report.md reflect earlier rulings (FAIL and NOT COMPLETE) and are stale. A superseded first draft of nox-qa-report.md (ID 8597ae41-8857-40a1-893c-1f94d00b55f8) may still be registered.",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Have the host gate produce and register the durable invocation receipt (attempt 7dd43f3f-7dda-4201-87ca-74ff0d5eda72, full command_sha256, procedure sha 7d340bab…0445, fixed args, exit status).",
+        "Re-run the qualified procedure and register digest.json and digest.md directly from its raw output without a save_artifact overwrite, or have the host verify that the registered bytes equal the procedure's output.",
+        "Decide whether the literal 100 is acceptable for South completion_percent. If not, fix the procedure to emit 100.00 and re-qualify it.",
+        "Add the script path to the replay command in the Method section and state that sites are grouped by the site field.",
+        "Retire the superseded QA drafts and the stale verification report so the registry holds only current verdicts."
+      ],
+      "verdict": "FAIL: LLM reviewer verdict is FAIL | Criterion failed: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\" | Unresolved major defect: No durable invocation receipt is present for the qualified procedure run (attempt 7dd43f3f-7dda-4201-87ca-74ff0d5eda72). Criterion 2 explicitly requires one, and the invocation with exact qualified bytes and fixed args cannot be verified without it. | Unresolved major defect: save_artifact overwrote digest.json and digest.md after the procedure ran, so there is no independent proof that the registered bytes equal the procedure's raw output."
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "Criterion failed: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\"",
+        "Unresolved major defect: No durable invocation receipt is present for the qualified procedure run (attempt 7dd43f3f-7dda-4201-87ca-74ff0d5eda72). Criterion 2 explicitly requires one, and the invocation with exact qualified bytes and fixed args cannot be verified without it.",
+        "Unresolved major defect: save_artifact overwrote digest.json and digest.md after the procedure ran, so there is no independent proof that the registered bytes equal the procedure's raw output."
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "reason": "observation-digest-v1.observation.json names the capability (observation-digest-v1) and records one bounded acquisition: a single Node procedure, built-ins only, 4728 bytes, sha256 7d340bab…0445. It records the fixed args (fixture plus artifact root) and a probe artifact (sha 68c720e7…60b1) that is byte-identical to crosscheck.expected.json. I read the procedure source and found no packages, network, child_process or eval. I hand-checked its integer half-up formula: 26/30 gives 86.67, 18/22 gives 81.82 and 8/8 gives 100. Because the spec warns that a model-authored observation is not qualification, I relied on this independent source review and arithmetic, not on the observation's own claims. The host's own qualification record is not among the artifacts, which I note but do not count against this criterion."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "reason": "No invocation receipt is among the registered artifacts or the executor output. The executor said it did not see or write one, and a prior QA pass found none for attempt 7dd43f3f-7dda-4201-87ca-74ff0d5eda72. The command sha256 (b78d6c60…cab9) is only a truncated narrative claim. The procedure bytes match the qualified sha and the executor reports exit 0, but the receipt is required and cannot be confirmed. Also, save_artifact rewrote digest.json and digest.md after the procedure ran, so the registered bytes cannot be tied to the procedure's raw output without the receipt."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "reason": "From the fixture bytes (3 rows, sha256 412c65c3…3766) I recomputed row_count 3, scheduled 30, completed 26, incidents 6 and completion_percent 86.67. North is 2/22/18/5/81.82 and South is 1/8/8/1/100. digest.json holds these as JSON integers or numbers, with a sites object keyed North and South, and site sums reconcile to the global totals. digest.md shows the same values, with South at 100.00, and includes Source, Period, the input sha and a Method section. The method covers row counting, summing, the percent formula and half-up rounding, so every value can be recomputed from the fixture. South completion_percent is the literal 100 in digest.json, because JSON.stringify drops trailing zeros. It is numerically exactly 100.00 and matches the qualified cross-check expectation. I record this as a minor defect and do not fail the criterion on it."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": true,
+          "reason": "All deliverables appear in the host candidate manifest with artifact IDs, sha256 and sizes. I verified the content of digest.json, digest.md, the procedure, the fixture and the probe independently, and the content matches the recomputed values. I cannot recompute the registered sha256 values here. The remaining gap, that the registered digest bytes are not tied to the procedure's raw output, is already charged to criterion 2 and not double-counted here."
+        }
+      ],
+      "llm_score": 6,
+      "llm_passed": false
+    },
+    "receipt_sha256": "597c2281f22669115013f7e2b0c583bdcac520b73f7a7ab28ca7dd0a6829b362",
+    "created_at": "2026-11-16T16:43:33.169Z"
+  }
+}

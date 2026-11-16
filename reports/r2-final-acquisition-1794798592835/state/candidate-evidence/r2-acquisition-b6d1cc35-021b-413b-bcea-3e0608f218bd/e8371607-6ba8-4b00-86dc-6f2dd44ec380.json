@@ -1,0 +1,195 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "e8371607-6ba8-4b00-86dc-6f2dd44ec380",
+    "mission_id": "r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd",
+    "repair_iteration": 0,
+    "spec_hash": "d31848b82300153c91a23637c3724bfa9971bfeb3da0076ec48cecf58dfa7550",
+    "plan_hash": "210ce7357412b661bcc0317584634ae90f0723883bd70fba8332c8dfcb6d04d5",
+    "artifacts": [
+      {
+        "artifact_id": "f147f935-f4e6-4a9f-9904-cd7440d3b06b",
+        "name": "acquisition-report.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/acquisition-report.md",
+        "sha256": "005f2b568fea84468cfee75efba0bd581aa911f69470b21d2c09c19aca6bcd76",
+        "size_bytes": 6451
+      },
+      {
+        "artifact_id": "ceb00354-887a-4f10-b2a3-f0baea304c54",
+        "name": "bin/observation-digest-v1.js",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/bin/observation-digest-v1.js",
+        "sha256": "8fd9b2dbe037130b7ab995d0146d1cf8db66ea7595d2b5644a298fb8c43b282b",
+        "size_bytes": 9307
+      },
+      {
+        "artifact_id": "cf75057e-d7a4-4934-9fd1-4dbe2820adf7",
+        "name": "capability-observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/capability-observation.json",
+        "sha256": "113708002f0c5c7884e652a1e4f5359ea1fab8f714fc2f2b5eb27a2c242b8f5c",
+        "size_bytes": 3046
+      },
+      {
+        "artifact_id": "ca2e0290-cd47-40ec-bc73-6268e4d47b5a",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "43dbbd23-c41c-4804-89f5-61af6e023f92",
+        "name": "probe/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/probe/digest.json",
+        "sha256": "7c53348b7cb5d219041016fa2ee9c17daaa797b332c7b09005ca0bf6fe25719c",
+        "size_bytes": 1561
+      },
+      {
+        "artifact_id": "6ff1bec1-89c5-4d10-a3bc-74ab12f624ed",
+        "name": "probe/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/probe/digest.md",
+        "sha256": "514cab0078666040ab9a46236fcf700f1bf765fa22717ebc68c758a3bee285a2",
+        "size_bytes": 2127
+      },
+      {
+        "artifact_id": "4605de61-8974-44ea-83ae-8866f9d2ec74",
+        "name": "probe2/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/probe2/digest.json",
+        "sha256": "7c53348b7cb5d219041016fa2ee9c17daaa797b332c7b09005ca0bf6fe25719c",
+        "size_bytes": 1561
+      },
+      {
+        "artifact_id": "7a4f4767-f8e4-447d-81c8-9a39a162cb36",
+        "name": "probe2/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/probe2/digest.md",
+        "sha256": "514cab0078666040ab9a46236fcf700f1bf765fa22717ebc68c758a3bee285a2",
+        "size_bytes": 2127
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "5866b5404d9d2191d3460d7508210d6e78104897e7a63fa9950c33c6b1304beb",
+    "created_at": "2026-11-16T03:11:57.278Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd",
+    "epoch_id": "e8371607-6ba8-4b00-86dc-6f2dd44ec380",
+    "candidate_sha256": "5866b5404d9d2191d3460d7508210d6e78104897e7a63fa9950c33c6b1304beb",
+    "execution_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence_sha256": "3f11cd939d73492e1c3d473399100232f296ed06ebfcf6bbc7cb753ea7d37dc9",
+    "review": {
+      "passed": false,
+      "score": 4,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": false,
+          "notes": "The missing capability observation-digest-v1 was identified, and one bounded local acquisition is documented in acquisition-report.md and capability-observation.json. No Head replan is evidenced, and the procedure is not qualified. Section 6 of the acquisition report states that this is 'an acquisition observation, not a qualification result' and that qualification remains for the replanned phase."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "notes": "The candidate contains no invocation receipt artifact. Only probe runs into probe/ and probe2/ are reported, and they were explicitly not executed as the proposed target. Because the bytes were never qualified, no qualified invocation could have occurred. The report says the receipt 'remain[s] for the replanned phase'."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and sites totals; digest.md presents the same values with a reproducible method.",
+          "passed": false,
+          "notes": "The probe outputs are arithmetically correct, verified independently: row_count 3, scheduled 30 (12+8+10), completed 26 (11+8+7), incidents 6 (2+1+3), completion_percent 86.67 (26/30*100=86.666... rounded half-up), North 2/22/18/5, South 1/8/8/1. The probe digest.md matches these values and gives a reproducible method. However, the mission deliverables digest.json and digest.md were deliberately not written. Only probe/ and probe2/ copies exist, produced by an unqualified procedure, and the spec's risk notes that a model-authored observation is not qualification."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "notes": "The required deliverables (final digest.json, final digest.md, invocation receipt) do not exist, so they cannot be registered or verified. The candidate contains no evidence of host verification of the executable or output bytes. The report lists host verification and Nox QA as outstanding."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "The mission deliverables digest.json and digest.md were not produced at the canonical mission output location. Only probe/ and probe2/ outputs from an unqualified acquisition run exist.",
+          "severity": "critical"
+        },
+        {
+          "issue": "No durable invocation receipt binding the executable sha256 8fd9b2db...282b, the fixed args, and the output hashes is present.",
+          "severity": "critical"
+        },
+        {
+          "issue": "No Head replan or qualification step for the acquired procedure is evidenced. The candidate is an acquisition-phase snapshot submitted as a completed mission.",
+          "severity": "critical"
+        },
+        {
+          "issue": "No evidence of independent host verification of the artifact bytes.",
+          "severity": "major"
+        },
+        {
+          "issue": "The header comment in bin/observation-digest-v1.js says a validation failure exits 1, but fail() exits 2.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The self-check 'completion_percent rounded to 2 decimals via exact integer arithmetic' is hardcoded ok: true and verifies nothing.",
+          "severity": "minor"
+        },
+        {
+          "issue": "FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Have the Head replan using the acquired procedure and qualify it through host verification of executable sha256 8fd9b2dbe037130b7ab995d0146d1cf8db66ea7595d2b5644a298fb8c43b282b plus an independent arithmetic check.",
+        "Invoke the qualified bytes with fixed args (input/pilot.observations.json and the canonical mission output directory) and persist a durable invocation receipt recording the executable hash, args, exit code, stdout, and output hashes.",
+        "Register the final digest.json, digest.md, and receipt as artifacts and submit them for host verification and Nox QA.",
+        "Fix the exit-code comment mismatch, and either remove the hardcoded rounding self-check or replace it with a real recomputation.",
+        "Mark probe/ and probe2/ outputs as non-deliverable evidence so they are not confused with mission outputs."
+      ],
+      "verdict": "FAIL: FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "LLM score 4 is below the threshold 6",
+        "Criterion failed: \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\"",
+        "Criterion failed: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\"",
+        "Criterion failed: \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and sites totals; digest.md presents the same values with a reproducible method.\"",
+        "Criterion failed: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"",
+        "Unresolved critical defect: The mission deliverables digest.json and digest.md were not produced at the canonical mission output location. Only probe/ and probe2/ outputs from an unqualified acquisition run exist.",
+        "Unresolved critical defect: No durable invocation receipt binding the executable sha256 8fd9b2db...282b, the fixed args, and the output hashes is present.",
+        "Unresolved critical defect: No Head replan or qualification step for the acquired procedure is evidenced. The candidate is an acquisition-phase snapshot submitted as a completed mission.",
+        "Unresolved major defect: No evidence of independent host verification of the artifact bytes.",
+        "FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": false,
+          "reason": "The missing capability observation-digest-v1 was identified, and one bounded local acquisition is documented in acquisition-report.md and capability-observation.json. No Head replan is evidenced, and the procedure is not qualified. Section 6 of the acquisition report states that this is 'an acquisition observation, not a qualification result' and that qualification remains for the replanned phase."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "reason": "The candidate contains no invocation receipt artifact. Only probe runs into probe/ and probe2/ are reported, and they were explicitly not executed as the proposed target. Because the bytes were never qualified, no qualified invocation could have occurred. The report says the receipt 'remain[s] for the replanned phase'."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and sites totals; digest.md presents the same values with a reproducible method.",
+          "passed": false,
+          "reason": "The probe outputs are arithmetically correct, verified independently: row_count 3, scheduled 30 (12+8+10), completed 26 (11+8+7), incidents 6 (2+1+3), completion_percent 86.67 (26/30*100=86.666... rounded half-up), North 2/22/18/5, South 1/8/8/1. The probe digest.md matches these values and gives a reproducible method. However, the mission deliverables digest.json and digest.md were deliberately not written. Only probe/ and probe2/ copies exist, produced by an unqualified procedure, and the spec's risk notes that a model-authored observation is not qualification."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "reason": "The required deliverables (final digest.json, final digest.md, invocation receipt) do not exist, so they cannot be registered or verified. The candidate contains no evidence of host verification of the executable or output bytes. The report lists host verification and Nox QA as outstanding."
+        }
+      ],
+      "llm_score": 4,
+      "llm_passed": false
+    },
+    "receipt_sha256": "c05b03dfbce372c55138c3190a9ea725bf46241edc72664f3eb214128186b7f6",
+    "created_at": "2026-11-16T03:12:35.812Z"
+  }
+}

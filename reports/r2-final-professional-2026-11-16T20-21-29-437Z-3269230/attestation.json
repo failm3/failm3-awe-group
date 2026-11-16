@@ -1,0 +1,28 @@
+{
+  "schema": "r2-final-professional-attestation-v1",
+  "harness_files": [
+    {
+      "file": "scripts/r2-final-professional/README.md",
+      "sha256": "7f30552303eaa7a6c7f8122a020e7b98c4e747be86fcfae2ef124620299bbc7d"
+    },
+    {
+      "file": "scripts/r2-final-professional/fixtures.ts",
+      "sha256": "4832cae512967e24b21ae88b8aafc55efba8523573d587470e61b8de028c303c"
+    },
+    {
+      "file": "scripts/r2-final-professional/runner.ts",
+      "sha256": "3229712f3b7f85905018234f57da7930067e65eadd32e39c7f98c52f068a8da9"
+    },
+    {
+      "file": "scripts/r2-final-professional/verifier.ts",
+      "sha256": "19de685ad0271934ba89de58d95179e11c175576529b43eadeb2dd20d628f27e"
+    }
+  ],
+  "source_inputs": {
+    "sources/pilot-charter.txt": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+    "sources/weekly-observations.txt": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+    "sources/reviewer-note.txt": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+  },
+  "analytics_input_sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+  "analytics_schema_sha256": "3b6e8bea7261801c519a7cac29f538d3affb5a438ebcfa4b5b6e055b7dc7560e"
+}

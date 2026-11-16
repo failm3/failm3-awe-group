@@ -1,0 +1,30 @@
+{
+  "row_count": 3,
+  "scheduled": 30,
+  "completed": 26,
+  "incidents": 6,
+  "completion_percent": "86.67",
+  "sites": {
+    "North": {
+      "rows": 2,
+      "scheduled": 22,
+      "completed": 18,
+      "incidents": 5,
+      "completion_percent": "81.82"
+    },
+    "South": {
+      "rows": 1,
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1,
+      "completion_percent": "100.00"
+    }
+  },
+  "_arithmetic_checks": {
+    "site_scheduled_sum_equals_global": true,
+    "site_completed_sum_equals_global": true,
+    "site_incidents_sum_equals_global": true,
+    "site_rows_sum_equals_row_count": true,
+    "completed_le_scheduled": true
+  }
+}

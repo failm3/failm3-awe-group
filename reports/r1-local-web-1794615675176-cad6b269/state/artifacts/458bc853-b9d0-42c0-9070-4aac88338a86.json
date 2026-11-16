@@ -1,0 +1,13 @@
+{
+  "id": "458bc853-b9d0-42c0-9070-4aac88338a86",
+  "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "type": "file",
+  "name": "favicon.svg",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/favicon.svg",
+  "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\"><rect width=\"16\" height=\"16\" rx=\"3\" fill=\"#2b6cb0\"/><path d=\"M3.5 8.4l2.6 2.6 6-6\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
+  "created_at": "2026-11-14T00:27:05.707Z",
+  "metadata": {
+    "size_bytes": 267,
+    "sha256": "6b36de353846d23c70b25cfe3049cbaabd99e9dbc7134170456d346703c86cb2"
+  }
+}

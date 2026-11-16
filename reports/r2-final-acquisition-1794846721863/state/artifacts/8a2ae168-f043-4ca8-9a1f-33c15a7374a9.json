@@ -1,0 +1,14 @@
+{
+  "id": "8a2ae168-f043-4ca8-9a1f-33c15a7374a9",
+  "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+  "type": "data",
+  "name": "digest.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/digest.json",
+  "content": "{\n  \"row_count\": 3,\n  \"scheduled\": 30,\n  \"completed\": 26,\n  \"incidents\": 6,\n  \"completion_percent\": 86.67,\n  \"sites\": {\n    \"North\": {\n      \"rows\": 2,\n      \"scheduled\": 22,\n      \"completed\": 18,\n      \"incidents\": 5,\n      \"completion_percent\": 81.82\n    },\n    \"South\": {\n      \"rows\": 1,\n      \"scheduled\": 8,\n      \"completed\": 8,\n      \"incidents\": 1,\n      \"completion_percent\": 100\n    }\n  }\n}\n",
+  "created_at": "2026-11-16T16:36:36.063Z",
+  "metadata": {
+    "size_bytes": 403,
+    "sha256": "b6f19e586465d349d74bb1999e5788fb72d502d46dcba8b320ad84f3d0cdab46",
+    "revision": 2
+  }
+}

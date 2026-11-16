@@ -1,0 +1,79 @@
+{
+  "approved_spec_hash": "7bb4e734df0106b8d60bc3c1b52d2f78a5f81ecb3e6537b2b521150f3cb7a9a9",
+  "mission_id": "r2-acquisition-b11696ba-a8ed-402a-b142-dba609123793",
+  "version": 1,
+  "saved_at": "2026-11-16T03:16:36.060Z",
+  "timeout_ms": 1800000,
+  "elapsed_ms": 128730,
+  "completed": [
+    {
+      "index": 0,
+      "agent_role": "researcher",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: The approved objective requires the named competence observation-digest-v1 (independently read input/pilot.observations.json, compute exact row/site totals and completion percentage to 2 decimals, persist digest.json and digest.md). No registered capability provides it: REGISTERED CAPABILITIES contains only generic file_read/file_write/file_list/shell/save_artifact primitives, csv_analytics (CSV-shaped, not JSON observation fixture), and no digest toolkit. Per policy a suggested-but-absent capability must be diagnosed with status=acquire rather than silently substituted with an ad-hoc shell script. Requesting one bounded acquisition delegation restricted to already-approved registered tools (ti_search, web_search, web_fetch, file_read, file_list, shell, save_artifact) to locate a qualified local procedure, record its exact executable bytes and fixed arguments, and produce a durable qualification record. Nothing is installed or trusted from the research result automatically; a new executable plan follows only after the procedure is actually qualified. All scope boundaries hold: work confined to the mission artifact directory, local-only, no packages, network, publishing, deployment, purchases or external changes.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {executable_path, executable_sha256, args, probe_artifacts}. Use a canonical absolute executable path, the actual SHA-256, an exact fixed no-placeholder argument array, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID from the saved artifact metadata, never a basename such as digest.json. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "fingerprint": "9a839e3397d16ff80e6dd151c02658c7238c5da3f4257295df54b43ffcea5ed7",
+      "status": "success",
+      "output": "I'll start by exploring the mission directory and the input fixture.Now I'll probe the procedure into an isolated scratch directory (probe output is evidence, not the deliverable).Now registering the probe evidence artifact to obtain its registry UUID.Now writing the single hash-bound capability observation.\n[Tools used: file_list, shell, file_read, save_artifact, file_write]",
+      "artifacts": [
+        "7a7872e3-cbf3-4f32-8c15-3d6bf3483af4",
+        "905cb306-8b58-4f49-b91f-64eb1fa6b057",
+        "f2937a62-0ff6-4c42-aea5-0ddaef289e20"
+      ],
+      "duration_ms": 89369,
+      "model": "deepseek-v4-flash",
+      "tools_used": [
+        "file_list",
+        "shell",
+        "file_read",
+        "save_artifact",
+        "file_write"
+      ],
+      "qualified_attempt_ids": [],
+      "usage": {
+        "input_tokens": 146777,
+        "output_tokens": 8914,
+        "total_tokens": 155691,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 131456
+      }
+    },
+    {
+      "index": 1,
+      "agent_role": "researcher",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: The approved objective requires the named competence observation-digest-v1 (independently read input/pilot.observations.json, compute exact row/site totals and completion percentage to 2 decimals, persist digest.json and digest.md). No registered capability provides it: REGISTERED CAPABILITIES contains only generic file_read/file_write/file_list/shell/save_artifact primitives, csv_analytics (CSV-shaped, not JSON observation fixture), and no digest toolkit. Per policy a suggested-but-absent capability must be diagnosed with status=acquire rather than silently substituted with an ad-hoc shell script. Requesting one bounded acquisition delegation restricted to already-approved registered tools (ti_search, web_search, web_fetch, file_read, file_list, shell, save_artifact) to locate a qualified local procedure, record its exact executable bytes and fixed arguments, and produce a durable qualification record. Nothing is installed or trusted from the research result automatically; a new executable plan follows only after the procedure is actually qualified. All scope boundaries hold: work confined to the mission artifact directory, local-only, no packages, network, publishing, deployment, purchases or external changes.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {executable_path, executable_sha256, args, probe_artifacts}. Use a canonical absolute executable path, the actual SHA-256, an exact fixed no-placeholder argument array, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID from the saved artifact metadata, never a basename such as digest.json. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "fingerprint": "9a839e3397d16ff80e6dd151c02658c7238c5da3f4257295df54b43ffcea5ed7",
+      "status": "success",
+      "output": "I'll start by exploring the mission directory and the input fixture.Now I'll probe the procedure into an isolated scratch directory (probe output is evidence, not the deliverable).Now registering the probe evidence artifact to obtain its registry UUID.Now writing the single hash-bound capability observation.\n[Tools used: file_list, shell, file_read, save_artifact, file_write]",
+      "artifacts": [
+        "7a7872e3-cbf3-4f32-8c15-3d6bf3483af4",
+        "905cb306-8b58-4f49-b91f-64eb1fa6b057",
+        "f2937a62-0ff6-4c42-aea5-0ddaef289e20"
+      ],
+      "duration_ms": 89369,
+      "model": "deepseek-v4-flash",
+      "tools_used": [
+        "file_list",
+        "shell",
+        "file_read",
+        "save_artifact",
+        "file_write"
+      ],
+      "qualified_attempt_ids": [],
+      "usage": {
+        "input_tokens": 146777,
+        "output_tokens": 8914,
+        "total_tokens": 155691,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 131456
+      }
+    }
+  ],
+  "in_flight": [],
+  "repair_iterations": 0,
+  "capability_attempts": [],
+  "execution_adaptations": 0,
+  "execution_superseded": [],
+  "repair_provenance": [],
+  "recovery_resolutions": [],
+  "owner_id": "5c3f0606-81f5-454f-a7a6-44f054bff55b",
+  "reason": "manual"
+}

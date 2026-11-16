@@ -1,0 +1,14 @@
+{
+  "id": "e7a3737f-be7a-46fe-ba0c-f6b3d3027b35",
+  "mission_id": "r2-memory-transfer-1794781064860-target-off",
+  "type": "file",
+  "name": "lib/roster.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-target-off/lib/roster.cjs",
+  "content": "'use strict';\n\nconst DELIM = ';';\n\nfunction invalid() {\n  return new Error('INVALID_FORMAT');\n}\n\nfunction parseRosterExport(text) {\n  if (typeof text !== 'string' || text.length === 0) return [];\n  const n = text.length;\n  const rows = [];\n  let row = [];\n  let i = 0;\n\n  // True when position k holds a field separator: delimiter, LF, or CRLF.\n  const atSeparator = (k) =>\n    text[k] === DELIM || text[k] === '\\n' || (text[k] === '\\r' && text[k + 1] === '\\n');\n\n  while (true) {\n    let field = '';\n    if (text[i] === '\"') {\n      i++;\n      let closed = false;\n      while (i < n) {\n        const c = text[i];\n        if (c === '\"') {\n          if (text[i + 1] === '\"') {\n            field += '\"';\n            i += 2;\n            continue;\n          }\n          i++;\n          closed = true;\n          break;\n        }\n        field += c;\n        i++;\n      }\n      // Unterminated quote, or anything but a separator/end after the closing quote.\n      if (!closed || (i < n && !atSeparator(i))) throw invalid();\n    } else {\n      while (i < n && !atSeparator(i)) {\n        if (text[i] === '\"') throw invalid();\n        field += text[i];\n        i++;\n      }\n    }\n\n    row.push(field);\n\n    if (i >= n) {\n      rows.push(row);\n      return rows;\n    }\n    if (text[i] === DELIM) {\n      i++;\n      continue;\n    }\n    // Record separator (LF or CRLF).\n    i += text[i] === '\\r' ? 2 : 1;\n    rows.push(row);\n    row = [];\n    if (i >= n) return rows; // a trailing record separator does not add an empty row\n  }\n}\n\nmodule.exports = { parseRosterExport };\n",
+  "created_at": "2026-11-15T22:19:43.469Z",
+  "metadata": {
+    "size_bytes": 1559,
+    "sha256": "4ad6deefad44095c20a40e6347e1f522f5b794f8cd29a861e1a2c04b25676f9d",
+    "revision": 2
+  }
+}

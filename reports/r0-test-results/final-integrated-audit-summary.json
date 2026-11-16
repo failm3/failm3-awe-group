@@ -1,0 +1,459 @@
+{
+  "review": "NOX R0 fresh independent final integrated QA v5",
+  "verdict": "PASS",
+  "live_readiness_claim": false,
+  "scope": "Offline integrated R0 only; no deployment, production-readiness, external-service, network, provider, browser or MCP readiness claim.",
+  "evidence_root": ".r0-work/final-closure-v5-20261113/integrated",
+  "source": {
+    "physical_copy": "copy",
+    "manifest": ".r0-work/clause-fix-v4-runs/source.sha256",
+    "manifest_sha256": "d2562ef0a50a7d25e4da83dc01fe632720708192a756a4adf7ded77bce3680a7",
+    "manifest_files": 73,
+    "production_verification_before_after": "73/73 OK; byte-identical logs",
+    "physical_copy_verification_before_after": "73/73 OK; byte-identical logs",
+    "changed_from_v4": [
+      "src/tests/r0-runtime-storage-lease.test.ts",
+      "src/utils/storage.ts"
+    ]
+  },
+  "existing_main_gate": {
+    "started_at": "2026-11-13T14:55:34.466Z",
+    "finished_at": "2026-11-13T15:04:37.777Z",
+    "suites_passed": 22,
+    "suites_failed": 0,
+    "independent_consistency_checks_passed": 8,
+    "independent_consistency_checks_failed": 0,
+    "suite_checks": [
+      {
+        "suite": "artifact-reconciliation",
+        "result": "PASS",
+        "checks": "10/10",
+        "duration_ms": 2036,
+        "log_sha256": "620a3e90c2f8f2839d3732798a53a6b8f2940424f86b254fdf1d8702e53ef154"
+      },
+      {
+        "suite": "lifecycle-recovery",
+        "result": "PASS",
+        "checks": "12/12",
+        "duration_ms": 17919,
+        "log_sha256": "13e6ae7b79fcfa636153b44359448540cf48e50fa46670ef7a92951756303b81"
+      },
+      {
+        "suite": "qa-gate",
+        "result": "PASS",
+        "checks": "30/30",
+        "duration_ms": 1194,
+        "log_sha256": "c66b2b09c0bc39ac6f92bdb190dcc8b69001d70aec61b56083bb04fbfb10ebca"
+      },
+      {
+        "suite": "r0-closure-adapters",
+        "result": "PASS",
+        "checks": "23/23",
+        "duration_ms": 12913,
+        "log_sha256": "68a66da137401a8404ff68ab67ddfc0b251b0208c88c3909feb4c64dd1e33d57"
+      },
+      {
+        "suite": "r0-closure-core",
+        "result": "PASS",
+        "checks": "13/13",
+        "duration_ms": 5706,
+        "log_sha256": "ccef23f67ea513ad3faee4a4eb9a40a90b0c39f3347d6f971ace46a9c49a5685"
+      },
+      {
+        "suite": "r0-closure-interfaces",
+        "result": "PASS",
+        "checks": "93/93",
+        "duration_ms": 120324,
+        "log_sha256": "4d1371ed9b831dffecd1b4e7fff90b4c23c1707d5def9d39c593796a06acb8b8"
+      },
+      {
+        "suite": "r0-closure-process-lifecycle",
+        "result": "PASS",
+        "checks": "9/9",
+        "duration_ms": 58924,
+        "log_sha256": "2c1a043a743fcff39d8b361df2d5791a3dbd01d263041a2b0bd7df173caf71e9"
+      },
+      {
+        "suite": "r0-final-manager",
+        "result": "PASS",
+        "checks": "79/79",
+        "duration_ms": 34667,
+        "log_sha256": "c1fb99ae2b2fb09ccf72db6ef6949b015baf53e319fd7f9b935ffe239fa95339"
+      },
+      {
+        "suite": "r0-final-production-intent",
+        "result": "PASS",
+        "checks": "4/4",
+        "duration_ms": 9652,
+        "log_sha256": "8036aefc3180c31726f5c81b7547e6b6dac611295095cecde8b466d11aa5c945"
+      },
+      {
+        "suite": "r0-final-recursion",
+        "result": "PASS",
+        "checks": "8/8",
+        "duration_ms": 14842,
+        "log_sha256": "3fa90ff2a5c5052744eb8e52ac1cb5dc4fe553657b179bd2d566cbb6e64510bf"
+      },
+      {
+        "suite": "r0-final-tools",
+        "result": "PASS",
+        "checks": "12/12",
+        "duration_ms": 4007,
+        "log_sha256": "971ec50b98447a95def977aeae28b2570c06f661ed2f2dce76cb0f250cb6cd23"
+      },
+      {
+        "suite": "r0-independent-contracts",
+        "result": "PASS",
+        "checks": "34/34",
+        "duration_ms": 150467,
+        "log_sha256": "e8318a750b3723e04df250936d7e89aaac09ff680466df750ef899bbe0dc2be4"
+      },
+      {
+        "suite": "r0-qa-evidence",
+        "result": "PASS",
+        "checks": "PASS",
+        "duration_ms": 9731,
+        "log_sha256": "b80bdc1a3309f21dba06b97157b0d524da2c47a528f29bc1e375d29cbf000280"
+      },
+      {
+        "suite": "r0-reqa-adapters",
+        "result": "PASS",
+        "checks": "3/3",
+        "duration_ms": 12513,
+        "log_sha256": "84b2c949c58bc92fd26aefaa0bedbba4fb5401f1603d5ef687cd6dc0fc02d403"
+      },
+      {
+        "suite": "r0-reqa-manager",
+        "result": "PASS",
+        "checks": "95/95",
+        "duration_ms": 39663,
+        "log_sha256": "464898f04ff38d0f3257d95c3ec878dc237559aab1caccc7dbe6cf8a916f3b02"
+      },
+      {
+        "suite": "r0-runtime-manager",
+        "result": "PASS",
+        "checks": "76/76",
+        "duration_ms": 9826,
+        "log_sha256": "8e0287b7b84521b7f869197c0456422222b4955dbc17c5425ff8bb5cc1ef5df8"
+      },
+      {
+        "suite": "r0-runtime-recursion",
+        "result": "PASS",
+        "checks": "37/37",
+        "duration_ms": 1814,
+        "log_sha256": "d7b5f9118124eadb26cfd325035dd188492d5b985c9c7d9598af57d108cdb791"
+      },
+      {
+        "suite": "r0-runtime-storage-lease",
+        "result": "PASS",
+        "checks": "75/75",
+        "duration_ms": 17924,
+        "log_sha256": "9962698e7ee82c7866b009973b1a12db03556ab901f42dd8b4db649bb2b34304"
+      },
+      {
+        "suite": "r0-security-tools",
+        "result": "PASS",
+        "checks": "5/5",
+        "duration_ms": 3730,
+        "log_sha256": "b95514336a91b599252d6626f507c64d57755a2102b931dde68a1c0e4491782c"
+      },
+      {
+        "suite": "r0-test-harness",
+        "result": "PASS",
+        "checks": "PASS",
+        "duration_ms": 1174,
+        "log_sha256": "2a2d61ffcb7ea9053b755d2fc7d6b195a23fe48af5d32d323489330daed417ce"
+      },
+      {
+        "suite": "resume-policy",
+        "result": "PASS",
+        "checks": "16/16",
+        "duration_ms": 10292,
+        "log_sha256": "adad2be697b5209b4956b26c6752628f33bb09012f9ef46241c8f98ff2aef2b3"
+      },
+      {
+        "suite": "stage1-integration",
+        "result": "PASS",
+        "checks": "20/20",
+        "duration_ms": 3992,
+        "log_sha256": "900c64515c8c890a2d908e8f91826476d3093b7c623e789a63b98b6d75abed6c"
+      }
+    ],
+    "rerun_by_this_review": false
+  },
+  "fresh_focused_physical_copy": {
+    "started_at": "2026-11-13T15:08:36.266Z",
+    "finished_at": "2026-11-13T15:13:40.910Z",
+    "suites_passed": 6,
+    "suites_failed": 0,
+    "checks_passed": 302,
+    "checks_failed": 0,
+    "results": [
+      {
+        "suite": "artifact-reconciliation",
+        "passed": 10,
+        "failed": 0,
+        "expected": 10,
+        "ok": true
+      },
+      {
+        "suite": "r0-runtime-storage-lease",
+        "passed": 75,
+        "failed": 0,
+        "expected": 75,
+        "ok": true
+      },
+      {
+        "suite": "r0-reqa-manager",
+        "passed": 95,
+        "failed": 0,
+        "expected": 95,
+        "ok": true
+      },
+      {
+        "suite": "r0-final-manager",
+        "passed": 79,
+        "failed": 0,
+        "expected": 79,
+        "ok": true
+      },
+      {
+        "suite": "r0-closure-process-lifecycle",
+        "passed": 9,
+        "failed": 0,
+        "expected": 9,
+        "ok": true
+      },
+      {
+        "suite": "r0-independent-contracts",
+        "passed": 34,
+        "failed": 0,
+        "expected": 34,
+        "ok": true
+      }
+    ]
+  },
+  "fresh_integrated_probes": {
+    "checks_passed": 50,
+    "checks_failed": 0,
+    "results": [
+      {
+        "probe": "if03-artifacts-root-symlink",
+        "passed": 4,
+        "failed": 0,
+        "expected": 4,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "if03-artifacts-root-file",
+        "passed": 4,
+        "failed": 0,
+        "expected": 4,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "if03-post-import-root-replacement",
+        "passed": 4,
+        "failed": 0,
+        "expected": 4,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "if02-if03-expanded",
+        "passed": 24,
+        "failed": 0,
+        "expected": 24,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "if03-extended-reconciliation",
+        "passed": 6,
+        "failed": 0,
+        "expected": 6,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "if04-resistant-repair-v2",
+        "passed": 8,
+        "failed": 0,
+        "expected": 8,
+        "exit_code": 0,
+        "ok": true
+      }
+    ],
+    "if03_ancestor_01_closed": true,
+    "preimport_observations": {
+      "symlink": {
+        "kind": "symlink",
+        "importError": "Error: Storage path contains a symbolic link or non-directory component: /home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-artifacts-root-symlink/data/artifacts",
+        "managerError": "none",
+        "runError": "none",
+        "observationError": "none",
+        "returnedStatus": null,
+        "finalStatus": null,
+        "missionMetadataExists": false,
+        "dataMetadata": [],
+        "outsideMetadata": [],
+        "qaCalls": 0,
+        "qaArtifacts": [],
+        "adoptedOutside": [],
+        "finalArtifactNames": [],
+        "artifactsRoot": {
+          ".": {
+            "type": "symlink",
+            "target": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-artifacts-root-symlink/outside-artifacts-root"
+          }
+        },
+        "outsideUnchanged": true,
+        "targetBytes": "outside-target",
+        "unregisteredBytes": "outside-unregistered"
+      },
+      "file": {
+        "kind": "file",
+        "importError": "Error: Storage path contains a symbolic link or non-directory component: /home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-artifacts-root-file/data/artifacts",
+        "managerError": "none",
+        "runError": "none",
+        "observationError": "none",
+        "returnedStatus": null,
+        "finalStatus": null,
+        "missionMetadataExists": false,
+        "dataMetadata": [],
+        "outsideMetadata": [],
+        "qaCalls": 0,
+        "qaArtifacts": [],
+        "adoptedOutside": [],
+        "finalArtifactNames": [],
+        "artifactsRoot": {
+          ".": {
+            "type": "file",
+            "sha256": "3518070367ad1304be5ffd021d8deac4b706c9e5e2a127476f32b35d2fd1ed86",
+            "bytes": 15
+          }
+        },
+        "outsideUnchanged": true,
+        "targetBytes": "outside-target",
+        "unregisteredBytes": "outside-unregistered"
+      }
+    },
+    "postimport_observation": {
+      "operations": {
+        "saveArtifactFile": {
+          "returned": false,
+          "error": "Error: Storage path contains a symbolic link or non-directory component: /home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-post-import-root-replacement/data/artifacts"
+        },
+        "reconcileArtifactFiles": {
+          "returned": false,
+          "error": "Error: Storage path contains a symbolic link or non-directory component: /home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-post-import-root-replacement/data/artifacts"
+        },
+        "listArtifacts": {
+          "returned": false,
+          "error": "Error: Storage path contains a symbolic link or non-directory component: /home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-post-import-root-replacement/data/artifacts"
+        },
+        "saveMission": {
+          "returned": false,
+          "error": "Error: Storage path contains a symbolic link or non-directory component: /home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-post-import-root-replacement/data/artifacts"
+        }
+      },
+      "runError": "Error: Storage path contains a symbolic link or non-directory component: /home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/integrated/state/if03-post-import-root-replacement/data/artifacts",
+      "returnedStatus": null,
+      "finalStatus": "approved",
+      "qaCalls": 0,
+      "missionBytesUnchanged": true,
+      "missionSha256Before": "749404a4f47995f213809945233e31b2f2f60d43fcf58887ced7d3d21b817b2b",
+      "missionSha256After": "749404a4f47995f213809945233e31b2f2f60d43fcf58887ced7d3d21b817b2b",
+      "artifactRootLinkUnchanged": true,
+      "realRootUnchanged": true,
+      "outsideUnchanged": true,
+      "outsideMetadata": [],
+      "targetBytes": "outside-target",
+      "unregisteredBytes": "outside-unregistered"
+    }
+  },
+  "fresh_original_regressions": {
+    "tests_passed": 27,
+    "tests_failed": 0,
+    "source_version": "frozen v5 physical copy for every one of the 27; no v4 test result is substituted",
+    "results": [
+      {
+        "probe": "original-tool-security",
+        "passed": 7,
+        "failed": 0,
+        "expected": 7,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "original-shell-lifecycle",
+        "passed": 7,
+        "failed": 0,
+        "expected": 7,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "original-adapters",
+        "passed": 8,
+        "failed": 0,
+        "expected": 8,
+        "exit_code": 0,
+        "ok": true
+      },
+      {
+        "probe": "original-interfaces",
+        "passed": 5,
+        "failed": 0,
+        "expected": 5,
+        "exit_code": 0,
+        "ok": true
+      }
+    ]
+  },
+  "fresh_product_check_totals": {
+    "focused": 302,
+    "integrated_probes": 50,
+    "original_regressions": 27,
+    "total": 379,
+    "note": "This total excludes the separate existing 22-suite gate and the 8 evidence-consistency checks, avoiding double counting."
+  },
+  "audits": {
+    "residual_audit_processes": 0,
+    "real_awe_data_entries_newer_than_review_start": 0,
+    "forbidden_original_outside_write_exists": false
+  },
+  "harness_only_failures_retained": [
+    {
+      "log": "logs/original-shell-lifecycle-harness-error.log",
+      "result": "6/7, exit 1",
+      "cause": "Physical helper copy resolved ../copy outside the frozen source copy; corrected to ../../copy and rerun with fresh state.",
+      "corrected_result": "7/7, exit 0"
+    },
+    {
+      "result": "One audit command stopped on differing delta-log headings after integrity had passed; heading-independent bodies compared byte-identical and both still showed exactly the two expected files.",
+      "product_failure": false
+    },
+    {
+      "log": "logs/build-summary-parser-error.log",
+      "result": "The first summary-builder parse emitted FAIL despite printing focused 302/302 because artifact-reconciliation uses 'passed: 10' with a colon; the parser was corrected and rerun. No product test failed.",
+      "product_failure": false
+    }
+  ],
+  "criteria": {
+    "manifest_sha256_exact": true,
+    "production_73_of_73_before_after_identical": true,
+    "physical_copy_73_of_73_before_after_identical": true,
+    "only_the_two_authorized_files_differ_from_v4": true,
+    "existing_main_gate_22_of_22_and_crosscheck_8_of_8": true,
+    "focused_6_suites_302_of_302": true,
+    "integrated_probes_50_of_50": true,
+    "original_probes_27_of_27_on_v5_copy": true,
+    "root_and_outside_safety_observations_explicitly_hold": true,
+    "no_residual_audit_processes": true,
+    "real_awe_data_not_touched_during_review": true,
+    "forbidden_original_outside_write_absent": true
+  }
+}

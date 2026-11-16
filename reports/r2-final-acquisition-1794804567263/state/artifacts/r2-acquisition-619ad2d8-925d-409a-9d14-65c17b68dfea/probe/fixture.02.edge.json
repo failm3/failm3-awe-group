@@ -1,0 +1,5 @@
+{"source":"edge probe","period":"probe","observations":[
+ {"site":"Alpha","scheduled":32,"completed":1,"incidents":0},
+ {"site":"Alpha","scheduled":3,"completed":2,"incidents":1},
+ {"site":"Beta","scheduled":0,"completed":0,"incidents":0}
+]}

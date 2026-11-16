@@ -1,0 +1,13 @@
+{
+  "id": "c9b537c5-595b-4ad3-9eb4-dd8ab51b7aa6",
+  "mission_id": "r2-experience-reuse-1794858271974-t11-off",
+  "type": "file",
+  "name": "scratch.spec.test.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t11-off/scratch.spec.test.cjs",
+  "created_at": "2026-11-16T20:02:31.086Z",
+  "metadata": {
+    "size_bytes": 6744,
+    "sha256": "5c9a5bdfd7a289bf9ffe30311634d5843a078d543b0635a5d2702bf0c449a314",
+    "revision": 1
+  }
+}

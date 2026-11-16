@@ -1,0 +1,221 @@
+{
+  "source_handle": "iirepresent",
+  "source_url": "https://t.me/iirepresent",
+  "source_title": "ИИ Представляет",
+  "observed_at": "2026-11-12T05:52:11Z",
+  "research_status": "completed_public_preview_first_pass",
+  "channel_observations": {
+    "title": "ИИ Представляет",
+    "title_evidence_url": "https://t.me/iirepresent",
+    "description": "Самый актуальный канал о нейросетях, IT и диджитал! Все нейросети из видео в канале, используйте поиск по словам.",
+    "description_evidence_url": "https://t.me/iirepresent",
+    "public_landing_url": "https://t.me/iirepresent",
+    "public_preview_url": "https://t.me/s/iirepresent",
+    "accessibility": "Публичная посадочная страница, тексты и внешние ссылки витрины доступны без входа. Часть медиа требует Telegram либо не поддерживается браузером. Просмотренные веб-страницы не равнозначны проверке функций ресурсов.",
+    "history_method": "public_web_only",
+    "history_navigation_evidence_url": "https://t.me/s/iirepresent?before=2566",
+    "history_method_details": "На витрине обнаружена навигация before; контекстные страницы отдельных публикаций также содержат after. Проверены только витрина и два контекстных URL /2589 и /2584. Полный исторический обход не выполнялся: его ведёт отдельный коллектор.",
+    "preview_urls_reviewed": ["https://t.me/s/iirepresent", "https://t.me/s/iirepresent/2589", "https://t.me/s/iirepresent/2584"],
+    "observed_first_message_id": "2566",
+    "observed_last_message_id": "2602",
+    "observed_id_range_is_contiguous": false,
+    "history_boundary_reached": false,
+    "full_history_completeness": null,
+    "published_at_range": null,
+    "subscriber_observations": [
+      {"value_text": "116 343 subscribers", "evidence_url": "https://t.me/iirepresent"},
+      {"value_text": "117K subscribers", "evidence_url": "https://t.me/s/iirepresent"},
+      {"value_text": "116K subscribers", "evidence_url": "https://t.me/s/iirepresent/2589"}
+    ],
+    "subscriber_limitation": "Числа разных публичных страниц различаются; не используются как точная синхронная статистика.",
+    "thematic_relevance": "Высокая для обнаружения ИИ-инструментов: есть навыки Claude Code, API моделей, генерация презентаций, видеоинтеграции, OCR и утилиты. Это источник первичных наводок, а не техническая документация. Развлекательные и рекламные посты смешаны с техническими обзорами.",
+    "thematic_evidence_post_urls": ["https://t.me/iirepresent/2572", "https://t.me/iirepresent/2582", "https://t.me/iirepresent/2584", "https://t.me/iirepresent/2589", "https://t.me/iirepresent/2595"],
+    "selection_rationale": "Три приоритетных ресурса в изученных фрагментах выбраны за конкретную связь с публикацией и сильную официальную доказательную базу: MIT-навык Claudemy, документированный API MagicSlides и официальная MCP-интеграция CapCut. Это не рейтинг всего архива."
+  },
+  "resources": [
+    {
+      "name": "Claudemy",
+      "official_url": "https://assafkip.github.io/claudemy/",
+      "repository_url": "https://github.com/assafkip/claudemy",
+      "resource_type": "skill",
+      "description": "Навык и плагин Claude Code от Assaf Kipnis: исследует тему по веб-источникам и формирует примерно 12 коротких аудиоуроков с карточками, практикой и цитатами.",
+      "capabilities": [
+        "Исследование 20–40 веб-страниц с ограничением не более трёх страниц с одного сайта, согласно README",
+        "Примерно 12 двухминутных диалоговых аудиоуроков в MP3",
+        "Карточки уроков с идеей, согласованностью источников, упражнением и ссылками",
+        "Сводный playbook и предварительный образец урока для согласования",
+        "Проверка наличия цитируемых страниц среди реально прочитанных исследованием страниц, согласно заявлению автора"
+      ],
+      "integrations": [
+        "Установка как Claude Code plugin либо копирование каталога skills/claudemy в каталог навыков Claude Code",
+        "Claude Code с web search; Python 3, beautifulsoup4 и ffmpeg",
+        "ElevenLabs API для двух голосов; без ключа на macOS доступны встроенные голоса",
+        "Опциональный pandoc для экспорта карточек в Word"
+      ],
+      "verification_status": "official_sources_reviewed_not_tested",
+      "claims": [
+        {"field": "post_mention", "value": "В посте 2589 имеется прямая ссылка на assafkip/claudemy и описание навыка Claude Code для аудиокурсов.", "evidence_url": "https://t.me/iirepresent/2589", "checked_at": "2026-11-12T05:51:47Z"},
+        {"field": "official_url", "value": "README репозитория автора содержит ссылку на сайт assafkip.github.io/claudemy.", "evidence_url": "https://github.com/assafkip/claudemy", "checked_at": "2026-11-12T05:51:25Z"},
+        {"field": "description", "value": "Claudemy is a free Claude Code skill; about 12 audio lessons of 2 minutes each.", "evidence_url": "https://github.com/assafkip/claudemy", "checked_at": "2026-11-12T05:51:25Z"},
+        {"field": "capabilities", "value": "README: 20 to 40 pages; no more than 3 pages from one site; two hosts; MP3; cards; playbook; citation checker; sample lesson before continuing.", "evidence_url": "https://github.com/assafkip/claudemy", "checked_at": "2026-11-12T05:51:25Z"},
+        {"field": "integrations", "value": "README Install/Needs: Claude Code plugin or skills folder; web search; Python 3 with beautifulsoup4; ffmpeg; optional ElevenLabs API, macOS voices and pandoc.", "evidence_url": "https://github.com/assafkip/claudemy", "checked_at": "2026-11-12T05:51:25Z"},
+        {"field": "license.spdx", "value": "MIT", "evidence_url": "https://raw.githubusercontent.com/assafkip/claudemy/main/LICENSE", "checked_at": "2026-11-12T05:51:33Z"},
+        {"field": "pricing", "value": "README FAQ: skill free under MIT; users pay for their Claude plan and ElevenLabs credits if premium voices are chosen; macOS voices free.", "evidence_url": "https://github.com/assafkip/claudemy", "checked_at": "2026-11-12T05:51:25Z"},
+        {"field": "limitations", "value": "README Data: pages saved locally; if ElevenLabs key is configured, lesson text is sent to ElevenLabs; cards/playbook can work without audio.", "evidence_url": "https://github.com/assafkip/claudemy", "checked_at": "2026-11-12T05:51:25Z"}
+      ],
+      "pricing": {
+        "category": "free_with_paid_dependencies",
+        "details": "Сам навык бесплатный. Использование Claude оплачивается по пользовательскому плану; премиальные голоса требуют кредитов ElevenLabs. Встроенные голоса macOS бесплатны. Точные цены зависимостей не проверялись и неизвестны.",
+        "evidence_url": "https://github.com/assafkip/claudemy",
+        "checked_at": "2026-11-12T05:51:25Z"
+      },
+      "license": {
+        "spdx": "MIT",
+        "details": "LICENSE разрешает использование, изменение и распространение с сохранением уведомления об авторских правах и лицензии; ПО предоставляется AS IS. Лицензия навыка не заменяет условия Claude или ElevenLabs.",
+        "evidence_url": "https://raw.githubusercontent.com/assafkip/claudemy/main/LICENSE"
+      },
+      "provenance": [{"source_url": "https://t.me/iirepresent", "post_url": "https://t.me/iirepresent/2589", "message_id": "2589"}],
+      "decision": "candidate",
+      "limitations": [
+        "Не устанавливался и не запускался; функциональность, качество аудио и проверка цитат не испытаны.",
+        "Пост говорит о 40 источниках и 12 уроках, README уточняет 20–40 страниц и приблизительное число уроков; значения не являются гарантированными.",
+        "Без ElevenLabs бесплатный аудиопуть описан для macOS; бесплатная озвучка на Linux/Windows не установлена.",
+        "Использует внешнюю модель Claude; при выборе ElevenLabs туда передаётся текст уроков.",
+        "Изучены изменяемые README и LICENSE ветки main; версия для интеграции не зафиксирована.",
+        "Разрешение на включение в исполняемый реестр и live test отсутствуют."
+      ]
+    },
+    {
+      "name": "MagicSlides — YouTube to PPT / Presentation API",
+      "official_url": "https://www.magicslides.app/tools/youtube-to-ppt",
+      "repository_url": null,
+      "resource_type": "saas",
+      "description": "Облачный сервис создания презентаций из YouTube, текста и документов. Упомянутый конвертер является частью MagicSlides; официальный API документирует управление числом слайдов и экспорт PPTX/PDF.",
+      "capabilities": [
+        "Преобразование ссылки на YouTube в презентацию",
+        "Генерация презентаций из темы, текста, PDF, веб-страницы и DOCX",
+        "Параметры slideCount, language и шаблонов в документированном REST API",
+        "Возврат ссылок на PowerPoint и PDF",
+        "Новые CLI API для редактируемых презентаций, HTML-шаблонов и потоковой HTML Studio"
+      ],
+      "integrations": [
+        "REST POST https://api.magicslides.app/public/api/ppt-from-text: apiKey в JSON, youtubeURL и slideCount",
+        "CLI API на www.magicslides.app с заголовком x-api-key; не смешивать с legacy-аутентификацией",
+        "Документированные примеры Python, JavaScript/TypeScript и cURL",
+        "Потоковый SSE для HTML Studio; встраивание REST-вызова как инструмента агента возможно, но здесь не реализовано"
+      ],
+      "verification_status": "official_sources_reviewed_not_tested",
+      "claims": [
+        {"field": "post_mention", "value": "Пост 2584 содержит название YouTube To PPT и прямую ссылку на официальный конвертер MagicSlides, описывает URL видео и выбор количества слайдов.", "evidence_url": "https://t.me/iirepresent/2584", "checked_at": "2026-11-12T05:51:47Z"},
+        {"field": "description", "value": "Официальная страница YouTube to PPT заявляет создание, редактирование и скачивание PowerPoint из YouTube.", "evidence_url": "https://www.magicslides.app/tools/youtube-to-ppt", "checked_at": "2026-11-12T05:51:25Z"},
+        {"field": "capabilities", "value": "Документация описывает youtubeURL, pdfURL, websiteURL, docxURL, slideCount, language и ответы с .pptx/.pdf.", "evidence_url": "https://www.magicslides.app/docs-api", "checked_at": "2026-11-12T05:51:45Z"},
+        {"field": "integrations", "value": "Unified POST /public/api/ppt-from-text uses apiKey in request body; newer /api/cli endpoints use x-api-key header; HTML Studio returns SSE; official Python/JS/cURL examples are provided.", "evidence_url": "https://www.magicslides.app/docs-api", "checked_at": "2026-11-12T05:51:45Z"},
+        {"field": "pricing", "value": "Официальная API pricing page: 100 бесплатных презентаций ежемесячно, далее 0.50 USD за генерацию, без месячной базовой платы.", "evidence_url": "https://www.magicslides.app/pricing/api", "checked_at": "2026-11-12T05:51:45Z"},
+        {"field": "pricing.exceptions", "value": "API docs отдельно указывают 0.50 USD за Editable/HTML Template deck и 1.00 USD за HTML Studio deck; применимость общей бесплатной квоты ко всем новым CLI endpoint не установлена.", "evidence_url": "https://www.magicslides.app/docs-api", "checked_at": "2026-11-12T05:51:45Z"},
+        {"field": "license.details", "value": "Terms of Use, updated 30 January 2026: сервис IndianAppGuy Tech Private Limited; раздел 2 запрещает копирование/перепродажу/эксплуатацию частей сервиса без письменного разрешения. Это условия SaaS, не лицензия на исходный код.", "evidence_url": "https://www.magicslides.app/terms-of-use", "checked_at": "2026-11-12T05:51:45Z"},
+        {"field": "limitations.provider_conflict", "value": "API docs показывают HTML Studio модели DeepSeek и Anthropic/Claude; Terms of Use в разделе Third-Party AI Providers утверждают, что DeepSeek, OpenRouter и Claude не используются. Фактические провайдеры и обработчики данных не установлены.", "evidence_url": "https://www.magicslides.app/docs-api", "checked_at": "2026-11-12T05:51:45Z"},
+        {"field": "limitations.provider_conflict", "value": "Terms of Use: We do not use DeepSeek, OpenRouter, or Claude models in our services; не согласуется со списком моделей HTML Studio в текущей API-документации.", "evidence_url": "https://www.magicslides.app/terms-of-use", "checked_at": "2026-11-12T05:51:45Z"}
+      ],
+      "pricing": {
+        "category": "freemium_pay_as_you_go",
+        "details": "API pricing page на дату проверки: 100 презентаций бесплатно в месяц, затем 0.50 USD за презентацию без базового месячного платежа. API docs: Editable/HTML Template 0.50 USD за deck, HTML Studio 1.00 USD за deck. Нельзя переносить общую квоту на Studio без подтверждения. Тариф веб-конвертера отдельно не установлен.",
+        "evidence_url": "https://www.magicslides.app/pricing/api",
+        "checked_at": "2026-11-12T05:51:45Z"
+      },
+      "license": {
+        "spdx": null,
+        "details": "Коммерческий SaaS по Terms of Use; открытая лицензия исходного кода не установлена. Условия ограничивают копирование и перепродажу частей сервиса; API-документация отдельно предлагает встраивание в продукты. Для перепродажи или особого размещения требуется уточнение договорных условий.",
+        "evidence_url": "https://www.magicslides.app/terms-of-use"
+      },
+      "provenance": [{"source_url": "https://t.me/iirepresent", "post_url": "https://t.me/iirepresent/2584", "message_id": "2584"}],
+      "decision": "candidate",
+      "limitations": [
+        "Запросы генерации и скачивание результатов не выполнялись; доступность API, качество PPTX и обещание обработки любого YouTube-видео не проверены.",
+        "Потребуется пользовательский API-ключ; никаких ключей не получали и не сохраняли.",
+        "API-документация и Terms of Use противоречат друг другу по используемым AI-провайдерам. До передачи чувствительных материалов необходимо уточнить обработчиков данных.",
+        "В API docs есть новые CLI и legacy-семейства с разной аутентификацией; часть старых endpoint помечена deprecated.",
+        "Бесплатная API-квота и цены Studio не должны смешиваться с тарифом веб-конвертера.",
+        "Публичный официальный репозиторий и SPDX-лицензия не установлены; соответствующие поля null.",
+        "Разрешение на исполняемую интеграцию и live test отсутствуют."
+      ]
+    },
+    {
+      "name": "CapCut × ChatGPT / Codex integration",
+      "official_url": "https://www.capcut.com/tools/capcut-x-codex",
+      "repository_url": null,
+      "resource_type": "integration",
+      "description": "Официальный связанный рабочий процесс CapCut и ChatGPT: создание редактируемого видеочерновика, правка таймлайна в чате и продолжение ручного монтажа в CapCut. В Telegram назван CapCut × Codex; официальный заголовок — CapCut × ChatGPT.",
+      "capabilities": [
+        "Генерация изображений и видеоматериалов по промпту либо загрузка существующего черновика",
+        "Редактируемый видеопроект и правки последовательности, длительности сцен, текста и аудио в чате",
+        "Добавление и уточнение субтитров, эффектов и переходов",
+        "Открытие проекта в редакторе CapCut для ручного контроля",
+        "Подбор шаблонов и материалов CapCut"
+      ],
+      "integrations": [
+        "Официально описан плагин для поддерживаемой задачи в desktop-приложении ChatGPT на PC",
+        "CapCut MCP connection передаёт поддерживаемые запросы в редактируемый проект",
+        "Установка и авторизация по официальной инструкции на странице; инструкции не выполнялись",
+        "Проект открывается из чата в редакторе CapCut; произвольное подключение AWE как отдельного MCP-клиента не установлено"
+      ],
+      "verification_status": "official_sources_reviewed_not_tested",
+      "claims": [
+        {"field": "post_mention", "value": "Пост 2582: Подключаем CapCut к ChatGPT через Codex; имеется прямая официальная ссылка capcut-x-codex. Контекстная витрина отмечает Forwarded from Выключатель.", "evidence_url": "https://t.me/iirepresent/2582", "checked_at": "2026-11-12T05:51:47Z"},
+        {"field": "description", "value": "Официальная страница называется CapCut × ChatGPT; FAQ прямо называет workflow official.", "evidence_url": "https://www.capcut.com/tools/capcut-x-codex", "checked_at": "2026-11-12T05:51:24Z"},
+        {"field": "capabilities", "value": "Официальное описание: prompt/upload to editable draft; refine scenes, tracks, captions, effects and timing; open CapCut editor; templates and creative assets.", "evidence_url": "https://www.capcut.com/tools/capcut-x-codex", "checked_at": "2026-11-12T05:51:24Z"},
+        {"field": "integrations", "value": "FAQ описывает CapCut MCP connection и ChatGPT desktop app on PC, а не browser-only experience. Требуются установка и авторизация.", "evidence_url": "https://www.capcut.com/tools/capcut-x-codex", "checked_at": "2026-11-12T05:51:24Z"},
+        {"field": "limitations.availability", "value": "Официальная страница: доступность зависит от версии приложения, аккаунта и региона; сейчас за пределами США, в США coming soon. Фактическая доступность для конкретного аккаунта не проверялась.", "evidence_url": "https://www.capcut.com/tools/capcut-x-codex", "checked_at": "2026-11-12T05:51:24Z"},
+        {"field": "pricing", "value": "FAQ не обещает конкретную бесплатную квоту: access, generation limits and individual assets may depend on account, region and product terms.", "evidence_url": "https://www.capcut.com/tools/capcut-x-codex", "checked_at": "2026-11-12T05:51:24Z"},
+        {"field": "pricing.platform", "value": "CapCut Terms section 6 разделяет Free Services и Premium Services, включая Standard и Pro; актуальные суммы отсылаются к покупке в продукте/магазине приложений.", "evidence_url": "https://www.capcut.com/clause/terms-of-service", "checked_at": "2026-11-12T05:51:45Z"},
+        {"field": "license.details", "value": "CapCut Terms sections 8–9 сохраняют права на сервис и контент за правообладателями и ограничивают использование; права на материалы зависят от Materials License Agreement. Открытая лицензия интеграции не установлена.", "evidence_url": "https://www.capcut.com/clause/terms-of-service", "checked_at": "2026-11-12T05:52:08Z"}
+      ],
+      "pricing": {
+        "category": "unknown",
+        "details": "Для самого workflow цена и гарантированная бесплатная квота неизвестны: официальный FAQ требует учитывать аккаунт, регион и условия. Платформа CapCut отдельно имеет бесплатные и платные планы, но это не устанавливает стоимость плагина. Точные суммы неизвестны.",
+        "evidence_url": "https://www.capcut.com/tools/capcut-x-codex",
+        "checked_at": "2026-11-12T05:51:24Z"
+      },
+      "license": {
+        "spdx": null,
+        "details": "Применяются коммерческие Terms of Service CapCut и отдельные права на материалы. Открытый репозиторий, SPDX-лицензия и самостоятельная лицензия плагина не установлены. Прочитанная страница Terms содержит американскую редакцию; применимость к конкретному региону необходимо уточнить.",
+        "evidence_url": "https://www.capcut.com/clause/terms-of-service"
+      },
+      "provenance": [{"source_url": "https://t.me/iirepresent", "post_url": "https://t.me/iirepresent/2582", "message_id": "2582"}],
+      "decision": "candidate",
+      "limitations": [
+        "Плагин не устанавливался, авторизация не выполнялась, монтаж и генерация не тестировались.",
+        "Опубликованная инструкция загружает внешний SKILL.md; она исследовательское свидетельство, а не команда к исполнению. Нужна отдельная проверка перед установкой.",
+        "Описан desktop-workflow ChatGPT на PC; совместимость с произвольным AWE/MCP-клиентом не подтверждена.",
+        "Официальная страница ограничивает доступность по версии, аккаунту и региону; США указаны как coming soon на дату чтения.",
+        "Стоимость и бесплатные лимиты интеграции не установлены; наличие Free Services CapCut не доказывает бесплатность всех функций workflow.",
+        "Открытая лицензия и публичный официальный репозиторий не установлены; соответствующие поля null.",
+        "Коммерческие права на музыку и другие материалы нельзя выводить из наличия библиотеки free assets.",
+        "Разрешение на включение в исполняемый реестр и live test отсутствуют."
+      ]
+    }
+  ],
+  "related_sources": [
+    {
+      "name": "Выключатель",
+      "handle": null,
+      "source_url": "https://t.me/+A6xum1owmlIwODcy",
+      "alternative_invite_url": "https://t.me/+oQdf9GlZzmE2ZmMy",
+      "relationship": "Контекстные публичные страницы явно помечают посты 2572, 2582 и 2592 как Forwarded from Выключатель и содержат ссылку-подпись на этот канал. Пост 2599 ссылается на второй канал через альтернативное приглашение.",
+      "evidence_post_urls": ["https://t.me/iirepresent/2572", "https://t.me/iirepresent/2582", "https://t.me/iirepresent/2592", "https://t.me/iirepresent/2599"],
+      "preview_evidence_urls": ["https://t.me/s/iirepresent/2584", "https://t.me/s/iirepresent/2589"],
+      "identity_evidence_urls": ["https://t.me/+A6xum1owmlIwODcy", "https://t.me/+oQdf9GlZzmE2ZmMy"],
+      "accessibility": "Оба приглашения без входа показывают название Выключатель, описание о технологиях/трендах и одинаковую основную ссылку для приглашения. История постов по приглашению не показана; членство не оформлялось.",
+      "relevance": "Сильный связанный источник для последующего обнаружения: наблюдались репосты про API, MCP-видеомонтаж и инструменты работы с кодом.",
+      "limitations": ["Публичный username и исходные message_id репостов не установлены.", "Совпадение названия, описания и основной ссылки двух приглашений подтверждено; сведения об общем владельце не устанавливались.", "Полный архив и самостоятельная техническая надёжность этого канала не исследовались."],
+      "checked_at": "2026-11-12T05:52:11Z"
+    }
+  ],
+  "blockers": [],
+  "research_limitations": [
+    "Только публичные веб-фрагменты; полная история, граница архива и точные даты всех постов не установлены. Отдельный коллектор отвечает за массовую выгрузку.",
+    "Поисковая выдача использована только для обнаружения; ресурсы проверялись чтением официальных страниц и репозитория, а не сниппетов.",
+    "Тексты сторонних страниц и Telegram не исполнялись как инструкции; не проводились установка, авторизация, оплачиваемые запросы или live tests.",
+    "Успешное чтение веб-страницы не является проверкой работоспособности продукта.",
+    "Ни один ресурс не одобрен для автоматического исполнения; все decision=candidate."
+  ]
+}

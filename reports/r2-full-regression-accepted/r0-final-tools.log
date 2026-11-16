@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: D1: second fence check is under the mission lock, before raw mkdir/write, with or without mission_id
+ok 1 - D1: second fence check is under the mission lock, before raw mkdir/write, with or without mission_id
+  ---
+  duration_ms: 8.965252
+  type: 'test'
+  ...
+# Subtest: D1: stale write cannot overwrite existing bytes; normal writes retain opt-in artifact semantics
+ok 2 - D1: stale write cannot overwrite existing bytes; normal writes retain opt-in artifact semantics
+  ---
+  duration_ms: 24.219632
+  type: 'test'
+  ...
+# Subtest: D1: locked boundary also refuses abort/seal before raw file creation
+ok 3 - D1: locked boundary also refuses abort/seal before raw file creation
+  ---
+  duration_ms: 6.283227
+  type: 'test'
+  ...
+# Subtest: D2/D6: actual browser wrappers recheck cold-discovery fence and propagate abortSignal to held MCP operation
+ok 4 - D2/D6: actual browser wrappers recheck cold-discovery fence and propagate abortSignal to held MCP operation
+  ---
+  duration_ms: 11.32625
+  type: 'test'
+  ...
+# Subtest: D5: tavily in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+ok 5 - D5: tavily in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+  ---
+  duration_ms: 4.316362
+  type: 'test'
+  ...
+# Subtest: D5: ddg in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+ok 6 - D5: ddg in-flight abort destroys request, settles promptly, refuses delayed success and constructs no fallback
+  ---
+  duration_ms: 2.591617
+  type: 'test'
+  ...
+# Subtest: D5: failed Tavily arriving after abort never starts DDG
+ok 7 - D5: failed Tavily arriving after abort never starts DDG
+  ---
+  duration_ms: 2.189284
+  type: 'test'
+  ...
+# Subtest: D5: cancellation also destroys an in-flight DDG fallback after a normal Tavily failure
+ok 8 - D5: cancellation also destroys an in-flight DDG fallback after a normal Tavily failure
+  ---
+  duration_ms: 2.983651
+  type: 'test'
+  ...
+# Subtest: D5: abort after response end but before awaited continuation refuses success and fallback
+ok 9 - D5: abort after response end but before awaited continuation refuses success and fallback
+  ---
+  duration_ms: 1.979966
+  type: 'test'
+  ...
+# Subtest: D5: already aborted search constructs no HTTPS request
+ok 10 - D5: already aborted search constructs no HTTPS request
+  ---
+  duration_ms: 1.110293
+  type: 'test'
+  ...
+# Subtest: D5: ordinary Tavily success and DDG fallback remain functional
+ok 11 - D5: ordinary Tavily success and DDG fallback remain functional
+  ---
+  duration_ms: 5.520263
+  type: 'test'
+  ...
+# Subtest: D4: targeted-repair source follows AWE_DATA_DIR and defaults; importing never starts repair
+ok 12 - D4: targeted-repair source follows AWE_DATA_DIR and defaults; importing never starts repair
+  ---
+  duration_ms: 324.385115
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 476.121446

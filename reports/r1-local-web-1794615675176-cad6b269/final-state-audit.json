@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "product_contract_outcome": "PASS",
+  "mission_completion_outcome": "NOT_ACCEPTED_PAUSED_TIMEOUT",
+  "product_manifest": [
+    {
+      "path": "app.js",
+      "bytes": 9058,
+      "sha256": "ab7f2ebd7beca9906503e1902e4279dfe578455ba4ee5b10c12665b70225d19d"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 232,
+      "sha256": "3c31b9291d91989fad7ac65d70b2b4fa5257a50e169cb4600411de319c9a718e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 930,
+      "sha256": "7ab4096b237c0ea62bd8a747209a48fe67728bf0647c45dbea834a6cbc61d6ff"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 2501,
+      "sha256": "78ad22edf3eaee5bfb075286c11e36da8ec8f0761bc4ba92c97361db351a0a70"
+    }
+  ],
+  "product_tree_sha256": "a71660c6e6562f9542ed16013f4e24dedd3dcc179106ebc1bb9d72efe31ababe",
+  "browser_version": "158.0.8127.18",
+  "verifier_receipt_sha256": "5f0140392d0520ce2db9a69681c490b4faded87bf7e2519fb53b38b1755950a4",
+  "product_checks_passed": [
+    "bounded-artifact-snapshot",
+    "source-url-contract",
+    "sandboxed-js-syntax",
+    "load-local-product",
+    "accessible-empty-state",
+    "reject-blank-input",
+    "add-trim-and-keyboard",
+    "toggle-and-filter",
+    "persist-task-and-completion",
+    "reverse-toggle-and-delete",
+    "responsive-layout",
+    "dom-url-contract",
+    "runtime-errors-and-resource-policy"
+  ],
+  "mission_elapsed_ms": 600111,
+  "retained_aborted_repair_intent": "eb2f2fcc-a5b9-47f2-ab2e-0e2f971a0dfc",
+  "unrelated_root_artifacts": [
+    "app.js",
+    "favicon.svg",
+    "index.html",
+    "styles.css"
+  ],
+  "complete_mission_usage": "UNKNOWN",
+  "completed_invocation_subtotals": {
+    "invocations": 5,
+    "input_tokens": 293774,
+    "output_tokens": 43240,
+    "total_tokens": 337014,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 163061
+  },
+  "reported_aborted_invocation_not_added_to_complete_total": {
+    "call_id": "2d478e68-33cd-4df1-b485-7d8dd5aaf726",
+    "status": "unknown",
+    "total_tokens_reported": 104613
+  },
+  "provider_cost": "UNKNOWN",
+  "checks": {
+    "mission_is_not_accepted": true,
+    "exhausted_budget_is_durable": true,
+    "actual_work_quiesced_but_intent_retained": true,
+    "verifier_contract_unchanged": true,
+    "receipt_hash_valid": true,
+    "receipt_matches_current_product_manifest": true,
+    "receipt_matches_current_product_tree": true,
+    "all_bounded_verifier_checks_pass": true,
+    "evidence_is_outside_product": true,
+    "ledger_has_six_durable_starts_and_finishes": true,
+    "complete_usage_remains_unknown": true,
+    "costs_not_inferred": true,
+    "no_deployment_or_publication": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "awe.research-personal-data-scan.v1",
+  "method": "Email/domain and personal-marker scan of release text plus streamed member scanning of three source archives. No address values are reproduced here.",
+  "release_before_redaction": {
+    "gmail_occurrences": 328,
+    "affected_files": 10
+  },
+  "safe_copy_redaction": {
+    "files": 4,
+    "gmail_occurrences": 302,
+    "unique_addresses": 23,
+    "replacement": "redacted-contact-NN@example.invalid"
+  },
+  "remaining_gmail_occurrences": 26,
+  "remaining_context": "Public project metadata, imported open-source source corpora, and test fixtures; no private mailbox content is intentionally included.",
+  "archives": {
+    "runtime_tar_gz": {
+      "email_occurrences": 5
+    },
+    "academy_tar_gz": {
+      "email_occurrences": 1068
+    },
+    "audit_zip": {
+      "email_occurrences": 19
+    }
+  },
+  "limitations": "Signature/content scans cannot prove absence of all secrets or personal data in unknown encodings or binary formats."
+}

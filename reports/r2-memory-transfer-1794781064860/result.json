@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "run_root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860",
+  "source_mission_id": "r2-memory-transfer-1794781064860-source",
+  "source_outcome": {
+    "role": "coder",
+    "output": "I'll start by listing the workspace and reading the documentation and visible test.\n\nNow I'll write a full state-machine parser matching every clause of FORMAT.md.The visible test passes, so I'll check the documented edge cases that it doesn't cover: empty input, CRLF, trailing empty fields, quoted delimiters and newlines, escaped quotes, and the malformed inputs.\n\n\nI rewrote `src/ledger.cjs` so that `parseLedgerCsv` implements every clause of FORMAT.md. The visible test passes, as do my own checks of the documented cases it doesn't cover.\n\n**What was wrong:** The old code trimmed the input and split on every newline and every comma. That broke quoted fields (embedded commas, CR/LF newlines, `\"\"` escapes) and dropped empty leading and trailing fields. It also never threw `Error('INVALID_FORMAT')` for malformed input.\n\n**What I did:** I replaced it with a character-level state machine (field start, unquoted, quoted, just-closed-quote).\n- Empty input returns `[]`, and the first row is treated as data.\n- Quoted fields can contain commas, CR/LF newlines and empty text, and `\"\"` decodes to a literal `\"`.\n- Unquoted fields may be empty, including trailing ones.\n- Both LF and CRLF separate records. A single trailing separator does not create an extra empty row.\n- An unterminated quote, any character after a closing quote, or a quote inside an unquoted field throws `Error('INVALID_FORMAT')`.\n\n**Verification** (run in the mission workspace):\n- `node visible.test.cjs` printed `visible PASS` with exit code 0.\n- Extra edge checks all passed: empty input, no trailing newline, CRLF, trailing and empty unquoted fields, a quoted delimiter, a quoted `\"\"` escape, a quoted empty field, and CRLF inside a quoted field. Four malformed inputs (`\"abc`, `\"a\"b`, `a\"b`, `\"a\"\"`) each threw `INVALID_FORMAT`.\n\n**Artifacts saved** (mission_id `r2-memory-transfer-1794781064860-source`):\n- `src/ledger.cjs`, the repaired parser\n- `REPAIR_NOTES.md`, a summary of the defects, the parser design and the verification\n\n**Issues:** None. I did not modify any tests, install packages, use the network or touch files outside the workspace. A lone `\\r` is also treated as a record separator, which FORMAT.md doesn't mention but doesn't forbid.\n\n[Tools used: file_list, file_read, file_write, shell]",
+    "artifacts": [
+      "f7466f33-3a19-48ba-b48b-c2d38427f290",
+      "b8c3f9b1-b1ed-4091-b6e6-a960a821d931"
+    ],
+    "success": true,
+    "issues": [],
+    "model": "claude-fable-5-2",
+    "tools_used": [
+      "file_list",
+      "file_read",
+      "file_write",
+      "shell"
+    ],
+    "provider_max_retries": "SDK_DEFAULT",
+    "usage": {
+      "input_tokens": 47433,
+      "output_tokens": 6703,
+      "total_tokens": 54136,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 19170
+    }
+  },
+  "source_verification": {
+    "independent": true,
+    "passed": true,
+    "cases": 6,
+    "target": false,
+    "visible_test_passed": true,
+    "visible_test_sha256": "78c4895ec9405b92cc36da09e75e3d20db29c67aca65288569b48d169b3e8ac6",
+    "artifactPath": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-source/src/ledger.cjs",
+    "artifactSha256": "2593ad97d4531cfd65ea2e2cd955871303aeacfc34b78ad520ec25cfb529fd6d"
+  },
+  "experience": {
+    "version": 1,
+    "scope": "delimited-text-recovery",
+    "capabilityHash": "98914a1ac8365b1cedfa31aad9b1705936e57566b9cb5e4ce09ad7b9ae4110cb",
+    "profileHash": "b1c8d071c46d3704a282149f619746900c2b5c1169a252461272519715248c69",
+    "solverId": "coder",
+    "sourceMissionId": "r2-memory-transfer-1794781064860-source",
+    "sourceSpecHash": "7aa73a077263e8a6801ff4605e028992c5d585dce5d67c2c2d2f18c1b73b5c8d",
+    "sourceArtifactId": "f7466f33-3a19-48ba-b48b-c2d38427f290",
+    "sourceSha256": "2593ad97d4531cfd65ea2e2cd955871303aeacfc34b78ad520ec25cfb529fd6d",
+    "verificationArtifactId": "a2219908-4e5d-4a80-a189-603c6485a058",
+    "verificationSha256": "37f77ac8008a534dd3b99dc071649d7c8eb3fa649533aa08797517076ae10513",
+    "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+    "qualificationGeneration": 1,
+    "receiptId": "r2-memory-transfer-1794781064860-receipt",
+    "createdAt": "2026-11-15T22:19:14.956Z",
+    "retrieved_reference_sha256": "ef9e2b71f20c062ecba25f4268717969147dd2e6d9dd4abb039c90d796e0bd9b"
+  },
+  "target_arms": [
+    {
+      "arm": "off",
+      "mission_id": "r2-memory-transfer-1794781064860-target-off",
+      "outcome": {
+        "role": "coder",
+        "output": "I'll start by exploring the workspace.Workspace contains FORMAT.md, visible.test.cjs, and lib/roster.cjs. I'll read all three, since they're independent.\n\nI'll rewrite the parser as a single-pass state machine that follows FORMAT.md (quoted fields, `\"\"` escapes, CRLF/LF records, trailing empty fields, `INVALID_FORMAT` on malformed quotes), then run the visible test and some edge cases in the next step.\n\nNow I'll run the visible test plus an independent edge-case sweep covering the documented format.The visible test passed. My sweep failed on one case I wrote wrongly (`\"a\"b\"\"\"` really is malformed — chars after a closing quote), not on a parser bug. Removing that case and re-running:The second sweep failed on a typo in my own test again, not in the parser. The case `\"a\"\"\"\"\"` has one quote too many: it decodes to `a\"\"` and is then unterminated, so `INVALID_FORMAT` is the correct result. The intended input was `\"a\"\"\"`, which decodes to `a\"`. I'll fix that case and use counters instead of hard-coded totals.\n\nBoth the visible test and my independent edge-case sweep pass. I'll persist the verification harness as an artifact and confirm it runs from disk.I saved the verification harness. I'll run it from disk together with the visible test to confirm both pass against the final `lib/roster.cjs`.\n\nDone. The parser is repaired and both the visible test and an independent edge-case check pass.\n\n## What was wrong\nThe original `lib/roster.cjs` was a one-liner:\n\n```js\ntext.trim().split(/\\r?\\n/).map(line => line.split(';'))\n```\n\nIt had no concept of quoted fields, so `;` inside quotes split incorrectly, `\"\"` escapes were never decoded, `trim()` silently dropped leading/trailing whitespace and trailing empty fields, and nothing could ever throw `INVALID_FORMAT`. It happened to pass the visible test only because that example has no quotes.\n\n## What I did\nRewrote `parseRosterExport` as a single-pass state machine over the raw string, with no `trim()`:\n\n- **Quoted fields** — a field beginning with `\"` is read until the closing quote; it may contain `;`, LF and CRLF verbatim.\n- **Escapes** — `\"\"` inside a quoted field decodes to one literal `\"`.\n- **Unquoted fields** — read until `;`, LF, or end; may be empty, including at end of record (`\"a;b;\"` → `[\"a\",\"b\",\"\"]`).\n- **Records** — LF and CRLF separators both accepted (CR is consumed as part of CRLF, never left in a field). A trailing record separator does not append a spurious empty row; `\"\"` → `[]`.\n- **Errors** — throws `Error('INVALID_FORMAT')` on an unterminated quote, any character other than `;`/LF/CRLF after a closing quote, and a `\"` appearing inside an unquoted field.\n- The export name and signature (`{ parseRosterExport }`, single string argument) are unchanged, and `visible.test.cjs` was not modified.\n\n## Verification\n```\nvisible PASS                                  (exit 0)\nedge cases PASS (20 ok / 8 invalid)           (exit 0)\n```\nThe sweep covers empty input, LF/CRLF, blank lines, empty and trailing-empty fields, embedded delimiters and newlines in quotes, `\"\"` escapes, non-ASCII text, and all three malformed-quote classes. Note that two of my draft cases were wrong, not the parser: `\"a\"b\"\"\"` and `\"a\"\"\"\"\"` really are malformed (text after a closing quote / unterminated), and the parser rightly rejected them — I corrected the cases rather than loosening the parser.\n\n## Artifacts saved\n- `lib/roster.cjs` — the repaired parser (rewritten in place)\n- `verify.edge.cjs` — standalone edge-case verification harness documenting the format rules and error cases\n\n## Issues\nNone blocking. One judgement call worth flagging: FORMAT.md says `Empty input returns []` without defining \"empty\". I treat only a zero-length string as `[]`; a string of just `\"\\n\"` parses as one record with one empty field. A stricter reading could also return `[]` for all-whitespace input, but that would conflict with `trim()`-free handling of real empty fields. No packages, network, or external files were used, and no test files were changed.\n[Tools used: file_list, file_read, file_write, shell]",
+        "artifacts": [
+          "e7a3737f-be7a-46fe-ba0c-f6b3d3027b35",
+          "3a27cd81-acc7-49ca-a339-ed4e31254323"
+        ],
+        "success": true,
+        "issues": [],
+        "model": "claude-fable-5-2",
+        "tools_used": [
+          "file_list",
+          "file_read",
+          "file_write",
+          "shell"
+        ],
+        "provider_max_retries": 0,
+        "usage": {
+          "input_tokens": 84457,
+          "output_tokens": 10094,
+          "total_tokens": 94551,
+          "reasoning_tokens": 0,
+          "cached_input_tokens": 30029
+        }
+      },
+      "duration_ms": 111955,
+      "attributed_parser_artifact_id": "e7a3737f-be7a-46fe-ba0c-f6b3d3027b35",
+      "independent_verification": {
+        "independent": true,
+        "passed": true,
+        "cases": 6,
+        "target": true,
+        "visible_test_passed": true,
+        "visible_test_sha256": "9c23464c26d1eb4d6d12f55712636f2ca2cdcfe0cea10b1ed73c2b68e4d4ce0b",
+        "artifactPath": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-target-off/lib/roster.cjs",
+        "artifactSha256": "4ad6deefad44095c20a40e6347e1f522f5b794f8cd29a861e1a2c04b25676f9d"
+      },
+      "verification_error": null
+    },
+    {
+      "arm": "on",
+      "mission_id": "r2-memory-transfer-1794781064860-target-on",
+      "outcome": {
+        "role": "coder",
+        "output": "I'll start by reading the format spec, the visible test, and the current parser in the workspace.\n\nI'll replace the parser with a state machine that implements the full FORMAT.md for \";\"-delimited input, then run the visible test and extra edge-case checks in the next step.\n\nNext I'll run the visible test, then check the documented edge cases: empty input, CRLF, empty and trailing fields, quoted delimiters and newlines, escaped quotes, and the three malformed-input errors.\n\n\n**What I did**\n- Read FORMAT.md, visible.test.cjs and the original lib/roster.cjs. The original used `text.trim().split(/\\r?\\n/)` and `line.split(';')`. That passes the visible example but breaks on quoted fields, escaped quotes, embedded newlines, empty input and malformed input.\n- Replaced it with a small state machine in `lib/roster.cjs`. It still exports `parseRosterExport` and uses `;` as the delimiter. It implements the documented format:\n  - The first row is treated as data, and empty input returns `[]`.\n  - Quoted fields can contain `;`, CR/LF newlines and empty text.\n  - `\"\"` inside a quoted field decodes to one literal `\"`.\n  - Unquoted fields can be empty, including trailing ones.\n  - LF and CRLF separators are both accepted, and a trailing separator does not add an extra empty row.\n  - Unterminated quotes, characters after a closing quote, and quotes inside an unquoted field throw `Error('INVALID_FORMAT')`.\n- Ran `node visible.test.cjs`, which printed `visible PASS`. I also ran a throwaway edge-case script covering:\n  - empty input\n  - CRLF\n  - empty and trailing fields\n  - quoted delimiter, newline and empty text\n  - escaped quotes\n  - the three malformed-input cases (plus a `\"a\"\"` variant)\n\n  It printed `edge PASS`, and both runs exited 0.\n\n**Artifacts saved**\n- `lib/roster.cjs`, written with `file_write` under mission_id `r2-memory-transfer-1794781064860-target-on` (artifact id fedc7ccb-c496-4f20-a713-d604ebf39c52).\n\n**Issues and notes**\n- I did not modify the tests, install packages or touch anything outside the mission workspace.\n- The edge-case checks ran inline and were not saved as a file.\n- A bare `\\r` is also treated as a record separator, which is slightly more lenient than FORMAT.md, which only names LF and CRLF.\n- The verified-experience reference was a comma-delimited ledger parser. I used it only as a structural reference, adapted it to `;` and the `parseRosterExport` name, and checked the behavior against this task's FORMAT.md.\n\n[Tools used: file_list, file_read, file_write, shell]",
+        "artifacts": [
+          "fedc7ccb-c496-4f20-a713-d604ebf39c52"
+        ],
+        "success": true,
+        "issues": [],
+        "model": "claude-fable-5-2",
+        "tools_used": [
+          "file_list",
+          "file_read",
+          "file_write",
+          "shell"
+        ],
+        "provider_max_retries": 0,
+        "experience": {
+          "qualificationId": "r2-memory-transfer-1794781064860-qualification",
+          "referenceSha256": "ef9e2b71f20c062ecba25f4268717969147dd2e6d9dd4abb039c90d796e0bd9b"
+        },
+        "usage": {
+          "input_tokens": 30298,
+          "output_tokens": 5690,
+          "total_tokens": 35988,
+          "reasoning_tokens": 0,
+          "cached_input_tokens": 16140
+        }
+      },
+      "duration_ms": 56051,
+      "attributed_parser_artifact_id": "fedc7ccb-c496-4f20-a713-d604ebf39c52",
+      "independent_verification": {
+        "independent": true,
+        "passed": true,
+        "cases": 6,
+        "target": true,
+        "visible_test_passed": true,
+        "visible_test_sha256": "9c23464c26d1eb4d6d12f55712636f2ca2cdcfe0cea10b1ed73c2b68e4d4ce0b",
+        "artifactPath": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/r2-memory-transfer-1794781064860/state/artifacts/r2-memory-transfer-1794781064860-target-on/lib/roster.cjs",
+        "artifactSha256": "ecfef3705ee4864f19785a6a6242194d2d1047c94e5b7405f77531eb5c11acf6"
+      },
+      "verification_error": null
+    }
+  ],
+  "validity_checks": {
+    "source_specialist_completed": true,
+    "source_independently_verified": true,
+    "verified_experience_admitted": true,
+    "memory_on_reference_actually_injected": true,
+    "both_target_arms_executed": true,
+    "equal_pinned_model_and_max_step_cap": true,
+    "equal_actual_provider_retry_option": true,
+    "memory_off_received_no_reference": true,
+    "both_target_delegations_produced_deliverables": true,
+    "both_arms_modified_and_attributed_assigned_parser": true
+  },
+  "experiment_valid": true,
+  "transfer_observed": false,
+  "fatal": null,
+  "comparison": {
+    "memory_on_passed": true,
+    "memory_off_passed": true,
+    "same_independent_verifier": true,
+    "configured_max_steps_each": 10,
+    "configured_model_each": "claude-fable-5-2",
+    "configured_provider_retries_each": 0,
+    "token_or_spend_budget_equality": "NOT_CLAIMED"
+  },
+  "conclusion": "NO_DEMONSTRATED_CORRECTNESS_TRANSFER_IN_THIS_PAIR",
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "47abe8e6-b488-451c-98c8-3de3152b4c44",
+      "mission_id": "r2-memory-transfer-1794781064860-source",
+      "role": "coder",
+      "model": "claude-fable-5-2",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T22:17:47.307Z",
+      "finished_at": "2026-11-15T22:19:14.833Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 47433,
+        "output_tokens": 6703,
+        "total_tokens": 54136,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 19170
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "94dbccf4-44ae-428a-a5b2-8bd1147a94d9",
+      "mission_id": "r2-memory-transfer-1794781064860-target-off",
+      "role": "coder",
+      "model": "claude-fable-5-2",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T22:19:15.021Z",
+      "finished_at": "2026-11-15T22:21:06.955Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 84457,
+        "output_tokens": 10094,
+        "total_tokens": 94551,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 30029
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "c2b96f2b-d2cd-46cc-bf39-568f19e8a6a3",
+      "mission_id": "r2-memory-transfer-1794781064860-target-on",
+      "role": "coder",
+      "model": "claude-fable-5-2",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-15T22:21:07.063Z",
+      "finished_at": "2026-11-15T22:22:03.085Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 30298,
+        "output_tokens": 5690,
+        "total_tokens": 35988,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 16140
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    }
+  ],
+  "provider_cost": "UNKNOWN"
+}

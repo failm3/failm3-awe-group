@@ -1,0 +1,50 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics",
+  "saved_at": "2026-11-16T19:46:56.157Z",
+  "total_agents": 2,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics:top0",
+      "role": "analyst",
+      "started_at": "2026-11-16T19:44:40.689Z",
+      "task": "Read input/operations.csv from the mission working directory using file_list and file_read only, verify its structure and row count, and independently recompute all operations metrics from the raw integer records: per-team and overall work_orders, completed_orders, defects, planned_minutes, actual_minutes, schedule_variance_minutes (actual minus planned), completion_percent (completed/work_orders x100) and minutes_per_completed_order (actual/completed). Round only at final serialization, to exactly two decimal places, from unrounded raw arithmetic. Persist the result as metrics.json with root keys row_count, totals, teams in that order; teams in the order Atlas, Birch, Cedar; each totals/team object containing exactly work_orders, completed_orders, defects, planned_minutes, actual_minutes, completion_percent, minutes_per_completed_order, schedule_variance_minutes in that order and no extra fields. All integer metrics must be JSON numbers with no decimal point; completion_percent and minutes_per_completed_order must serialize with exactly two decimal places. Use the already-given expected values only as a cross-check after your own computation, and report any mismatch explicitly instead of forcing the numbers to match.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "cf410671-0ea1-417f-8134-b6f957ac2e56",
+        "22dfc0f2-bcb8-4c0b-ac3b-37aa8af067c3"
+      ],
+      "duration_ms": 63133,
+      "finished_at": "2026-11-16T19:45:43.815Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T19-44-16-972Z-3162655-analytics:top1",
+      "role": "writer",
+      "started_at": "2026-11-16T19:45:43.830Z",
+      "task": "Read the persisted metrics.json produced by the analyst delegation and input/operations.csv, then write operations-brief.md containing: a concise executive recommendation; exact overall and per-team findings for completion, defects and schedule variance derived only from input/operations.csv and the verified metrics; and a Method section that names input/operations.csv explicitly and states the exact formulas completed/work orders x100, actual/completed minutes, and actual minus planned minutes. Every number quoted must match the persisted metrics.json exactly, using the same two-decimal formatting for completion_percent and minutes_per_completed_order. Keep conclusions limited to the supplied six-week three-team dataset and draw no causal claims beyond the data.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "7820e063-3d5c-4821-b968-fe4e0d736dc5"
+      ],
+      "duration_ms": 72331,
+      "finished_at": "2026-11-16T19:46:56.157Z"
+    }
+  ]
+}

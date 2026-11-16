@@ -1,0 +1,40 @@
+{
+  "receipt_kind": "real-invocation",
+  "procedure_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs",
+  "procedure_sha256": "1e6ee2f392fdb7656e567e37f571e39471feefb62562a8512391d470faddf7c9",
+  "runtime": "node /usr/bin/node v22.23.3",
+  "argv": [
+    "/usr/bin/node",
+    "--",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/observation-digest-v1.mjs",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b"
+  ],
+  "invocation_count": 1,
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"wrote\":{\"digest_json\":\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.json\",\"digest_md\":\"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.md\"},\"digest\":{\"row_count\":3,\"scheduled\":30,\"completed\":26,\"incidents\":6,\"completion_percent\":86.67,\"sites\":{\"North\":{\"scheduled\":22,\"completed\":18,\"incidents\":5},\"South\":{\"scheduled\":8,\"completed\":8,\"incidents\":1}}}}\n",
+  "produced_outputs": [
+    {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.json",
+      "sha256": "3f3d1e13591a57d7fb9c12e50b7bf6f4396bc70080335859cfde0cf6f63aec4f"
+    },
+    {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794826619109/state/artifacts/r2-acquisition-59dd5658-e850-4b52-bd1a-20e062a4a38b/digest.md",
+      "sha256": "e03394a3ecb9c9f31f9b32b2c8c31aa74e073ed5932d4e99db0318b9257b8c58"
+    }
+  ],
+  "independent_verification": {
+    "method": "python3 recomputation of the fixture with decimal ROUND_HALF_UP, independent of the Node procedure",
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "sites": {
+      "North": { "scheduled": 22, "completed": 18, "incidents": 5 },
+      "South": { "scheduled": 8, "completed": 8, "incidents": 1 }
+    },
+    "matches_procedure_output": true
+  }
+}

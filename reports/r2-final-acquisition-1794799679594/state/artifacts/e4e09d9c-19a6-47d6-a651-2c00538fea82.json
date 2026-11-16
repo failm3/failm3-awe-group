@@ -1,0 +1,14 @@
+{
+  "id": "e4e09d9c-19a6-47d6-a651-2c00538fea82",
+  "mission_id": "r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24",
+  "type": "text",
+  "name": "probe_out/digest.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/probe_out/digest.md",
+  "created_at": "2026-11-16T03:28:48.920Z",
+  "metadata": {
+    "size_bytes": 1809,
+    "sha256": "8f9bd4645e00b5e476303b4971e2194993717d05357c15ebe3d787e37513cc5a",
+    "reconciled": true,
+    "revision": 1
+  }
+}

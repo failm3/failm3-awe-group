@@ -1,0 +1,7 @@
+4e68ebb29a501b242461438355dea93d327554bc9e057616ef4c24a922004adb  scripts/r1-local-web-mission.ts
+dc9647586704ae23cc5c7285f5e9d87bc4fdfab09e9a73c2aef3bd3add334aa0  src/agents/lifecycle.ts
+00c5475c03fdf3809aeeca76d68c5c0cd50e82240c990048daa6c7fe28ea7dfc  src/agents/mission-manager.ts
+578a9c8dea4743df65a5977fe1696db84061c848ae27026575e664e8daf95507  src/tests/r0-runtime-manager.test.ts
+6906557935370a7ad7f01b6b7e92e2bf9196afd9aa108cd742965dae48f51fc8  src/tests/r1-mission-admission.test.ts
+c6c45e292cef59796d3d664baa014c4e812bc42aad192eefff87d7f7556a94fb  src/capabilities/web-product.ts
+8513d2fef0f91fbf684310b6518cd58b8f6b0e7b84309174695588c502196b65  src/agents/web-qa.ts

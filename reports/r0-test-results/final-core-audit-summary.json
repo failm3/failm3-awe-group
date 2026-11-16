@@ -1,0 +1,204 @@
+{
+  "verdict": "PASS",
+  "generated_at": "2026-11-13T15:14:42.511Z",
+  "scope": "offline independent NOX R0 core QA v5; no live readiness claim",
+  "reproduced_blockers": {
+    "P0": 0,
+    "P1": 0
+  },
+  "independent_adjudicated_checks": {
+    "r0_reqa_manager_contained": {
+      "passed": 95,
+      "failed": 0
+    },
+    "r0_runtime_storage_lease_contained": {
+      "passed": 75,
+      "failed": 0
+    },
+    "independent_lineage_base": {
+      "passed": 10,
+      "failed": 0
+    },
+    "independent_lineage_cases": {
+      "passed": 50,
+      "failed": 0,
+      "cases": 9
+    },
+    "artifact_root_ordinary_controls": {
+      "passed": 11,
+      "failed": 0
+    },
+    "total": {
+      "passed": 241,
+      "failed": 0
+    }
+  },
+  "source_stability": {
+    "manifest_files": 73,
+    "manifest_sha256": "d2562ef0a50a7d25e4da83dc01fe632720708192a756a4adf7ded77bce3680a7",
+    "before": {
+      "ok": 73,
+      "failed": 0
+    },
+    "after": {
+      "ok": 73,
+      "failed": 0
+    },
+    "physical_copy_before": {
+      "ok": 73,
+      "failed": 0
+    },
+    "physical_copy_after": {
+      "ok": 73,
+      "failed": 0
+    },
+    "changed_from_v4": [
+      "src/tests/r0-runtime-storage-lease.test.ts",
+      "src/utils/storage.ts"
+    ]
+  },
+  "two_crash_positive_control": {
+    "mission_id": "f4040404-0000-4000-8000-000000000001",
+    "real_sigkills": 2,
+    "orphan_reconciliations": 2,
+    "completed_repair_proofs": 2,
+    "artifacts": {
+      "A": "e657b0fd-00f1-41a6-a05e-af5d99a6e923",
+      "B": "25dea642-d70a-497b-8fe6-c0bc26d3a225",
+      "C": "a9d82e30-92ce-489d-abf4-0334f1fa99ad"
+    },
+    "hashes": {
+      "a": "d00116a129fbfb64bc491ee5c4e29443fdee54ab6e70a77f3d8e7cfa8dfc7ac4",
+      "b": "779dfe3a125df8898f73e69752ac70ddbc6c1826004253f6949b825bde06a18d",
+      "c": "3147108c979a5d4f0912f2fe0bc56949a89c96dba69af5db82fe12dbee248db6"
+    },
+    "same_name_backing_path": "/home/nox/awe-group-cleanroom-20261112/.r0-work/final-closure-v5-20261113/core/work/lineage/base/data/artifacts/f4040404-0000-4000-8000-000000000001/index.html",
+    "resumed_plans": 0,
+    "resumed_executions": 0,
+    "final_reviews": 1,
+    "final_status": "completed",
+    "delivered": "intact C only"
+  },
+  "lineage_case_outcomes": [
+    {
+      "case": "positive",
+      "status": "completed",
+      "passed": 6,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "unprovenanced",
+      "status": "failed",
+      "passed": 5,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "proof-hash",
+      "status": "failed",
+      "passed": 5,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "same-size-final-byte",
+      "status": "failed",
+      "passed": 6,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "supersededAgain-samename",
+      "status": "failed",
+      "passed": 6,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "supersededAgain-visible-terminal",
+      "status": "failed",
+      "passed": 6,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "chain-gap",
+      "status": "failed",
+      "passed": 5,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "cycle",
+      "status": "failed",
+      "passed": 5,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    },
+    {
+      "case": "untrusted-branch",
+      "status": "completed",
+      "passed": 6,
+      "failed": 0,
+      "plans": 0,
+      "executions": 0,
+      "reviews": 1
+    }
+  ],
+  "artifact_root_ordinary_control": {
+    "manager_status": "completed",
+    "plans": 1,
+    "executions": 1,
+    "reviews": 1,
+    "qa_saw_intact_primary": true,
+    "same_name_replacement_and_reconciliation": "passed"
+  },
+  "commands": {
+    "r0-reqa-manager.contained": {
+      "command": "logs/r0-reqa-manager.contained.command.txt",
+      "log": "logs/r0-reqa-manager.contained.log",
+      "exit_code": 0
+    },
+    "r0-runtime-storage-lease.contained": {
+      "command": "logs/r0-runtime-storage-lease.contained.command.txt",
+      "log": "logs/r0-runtime-storage-lease.contained.log",
+      "exit_code": 0
+    },
+    "adversarial-lineage": {
+      "command": "logs/adversarial-lineage.command.txt",
+      "log": "logs/adversarial-lineage.log",
+      "exit_code": 0
+    },
+    "artifact-root-controls": {
+      "command": "logs/artifact-root-controls.command.txt",
+      "log": "logs/artifact-root-controls.log",
+      "exit_code": 0
+    }
+  },
+  "latest_main_gate_observed_not_rerun": {
+    "passed_suites": 22,
+    "failed_suites": 0,
+    "started_at": "2026-11-13T14:55:34.466Z",
+    "finished_at": "2026-11-13T15:04:37.777Z"
+  },
+  "residual_node_processes": 0,
+  "live_provider_or_external_evidence": false,
+  "deployment_or_live_readiness_claim": false
+}

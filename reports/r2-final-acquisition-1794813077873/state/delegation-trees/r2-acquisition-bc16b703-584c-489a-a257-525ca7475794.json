@@ -1,0 +1,34 @@
+{
+  "mission_id": "r2-acquisition-bc16b703-584c-489a-a257-525ca7475794",
+  "saved_at": "2026-11-16T07:17:30.434Z",
+  "total_agents": 1,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-bc16b703-584c-489a-a257-525ca7475794:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T07:11:40.297Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: The named competence observation-digest-v1 is absent from the registered capability set (browser_*, capability_library, csv_analytics, file_*, manus_search, save_artifact, shell, ti_search, web_*, web_search). The mission explicitly forbids substituting an ad-hoc shell script for it, and specification.risks warn that a model-authored observation is not qualification. A single bounded research/acquisition pass is required to locate or qualify an existing local procedure before any execution plan can be issued.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "artifacts": [
+        "6e26feee-cefd-441c-a145-b2c5afdc49e0",
+        "833cc65f-0565-4900-9ae8-e70a2cc1b4e1",
+        "fb0564a9-7903-4370-a0a9-1571b55e4ab2",
+        "f3784bde-db6f-46cf-a1ae-eca9f4817b03",
+        "a24cbb4f-9a42-48b9-9d12-d46f2e6444eb"
+      ],
+      "duration_ms": 350143,
+      "finished_at": "2026-11-16T07:17:30.434Z"
+    }
+  ]
+}

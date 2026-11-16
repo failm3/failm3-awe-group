@@ -1,0 +1,13 @@
+{
+  "id": "3cd6317b-80a0-485d-9822-71e79ff6565f",
+  "mission_id": "r2-final-transfer-1794798010397-t39-off",
+  "type": "file",
+  "name": "adapters/bundle.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t39-off/adapters/bundle.cjs",
+  "created_at": "2026-11-16T07:23:00.289Z",
+  "metadata": {
+    "size_bytes": 5441,
+    "sha256": "1bd17c2257061275f64a82693c08b89a885a0e832e6de947dc29070892faf7a8",
+    "revision": 2
+  }
+}

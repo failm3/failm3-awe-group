@@ -1,0 +1,107 @@
+{
+  "receipt_type": "qualification",
+  "capability": "observation-digest-v1",
+  "mission_id": "r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+  "verdict": "qualified",
+  "candidate_source": {
+    "runtime": "node",
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397/procedures/observation-digest-v1.js",
+    "executable_sha256": "3b85b93000db6393956b9fa7e428dce431965d8d729432c478819c0f706455d5",
+    "sha256_unchanged_across_probe": true,
+    "size_bytes": 4753,
+    "dependencies": [],
+    "network_access": false
+  },
+  "input_read": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397/input/pilot.observations.json",
+    "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "unmodified_by_probe": true
+  },
+  "fixed_args": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397"
+  ],
+  "host_runtime_command": "node --",
+  "probe_runs": [
+    {
+      "label": "scratch-run-1",
+      "output_dir": "probe/scratch-run-1",
+      "is_final_args_output_dir": false,
+      "exit_code": 0,
+      "digest_json_sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382"
+    },
+    {
+      "label": "scratch-run-2",
+      "output_dir": "probe/scratch-run-2",
+      "is_final_args_output_dir": false,
+      "exit_code": 0,
+      "digest_json_sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382",
+      "byte_identical_to_run_1": true
+    }
+  ],
+  "observed_totals": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "sites": {
+      "North": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": 81.82 },
+      "South": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": 100.00 }
+    }
+  },
+  "independent_verification": {
+    "method": "Recomputed every aggregate with python3 (json + collections) over the same fixture via a separate code path, plus exact-rational cross-check with fractions.Fraction. Not derived from the candidate's own output.",
+    "python3_recomputed": {
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": 86.67,
+      "north": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": 81.82 },
+      "south": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": 100.00 }
+    },
+    "exact_rationals": {
+      "26/30": "13/15 = 0.8666... -> 86.67 (round half-up, 2dp)",
+      "18/22": "9/11 = 0.8181... -> 81.82 (round half-up, 2dp)",
+      "8/8": "1 -> 100.00"
+    },
+    "agrees_with_candidate": true
+  },
+  "sensitivity_check": {
+    "purpose": "Prove the procedure computes from input bytes rather than emitting embedded values; visible example values cannot substitute for this.",
+    "modification": "Scratch copy only: appended one East/Probe row (scheduled 4, completed 1, incidents 0) to probe/perturb/perturbed.json.",
+    "result": {
+      "row_count": 4,
+      "scheduled": 34,
+      "completed": 27,
+      "incidents": 6,
+      "completion_percent": 79.41,
+      "sites": ["East", "North", "South"]
+    },
+    "totals_moved": true,
+    "new_site_key_created": true,
+    "approved_input_sha256_after": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+  },
+  "contract_checks": {
+    "reads_input_independently": true,
+    "computes_row_count": true,
+    "computes_scheduled": true,
+    "computes_completed": true,
+    "computes_incidents": true,
+    "computes_completion_percent_2dp": true,
+    "sites_object_keyed_by_site_with_totals": true,
+    "writes_digest_json": true,
+    "writes_digest_md": true,
+    "deterministic_output": true,
+    "probe_ran_in_scratch_output_dir": true,
+    "probe_never_used_final_args_output_dir": true,
+    "candidate_not_executed_in_final_output_dir_during_acquisition": true
+  },
+  "trust_boundary": {
+    "installed": false,
+    "trusted": false,
+    "reusable_only_after": "This Head replans against a verified qualified procedure.",
+    "note": "No packages installed, no network used, no host configuration changed, no external changes."
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "726a7eaa-dcda-402c-a2fd-0080e6ba904c",
+    "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research",
+    "repair_iteration": 2,
+    "spec_hash": "f1a0fecba02d7367f0e475ce57a2601355411867ee8e8dbc4d385c1d5a02b525",
+    "plan_hash": "f012ca58686cd334bf6de2ec1284bc94831d606e56380926629fc03f512320d2",
+    "artifacts": [
+      {
+        "artifact_id": "3cc21c9c-a230-4ef9-97d6-f49833bad80f",
+        "name": "evidence-alder.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/evidence-alder.md",
+        "sha256": "e85ec53113c3213a6be50def21e16e7ac83086b595e00fda2d2210a16dcd5f58",
+        "size_bytes": 3673
+      },
+      {
+        "artifact_id": "9c93f280-f420-4685-95f7-c5af57cb7688",
+        "name": "evidence-brook-cove.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/evidence-brook-cove.md",
+        "sha256": "a57c6bdefc275d81f05a3a037e62af773eeca7883d3e38f396c9963baeee8b5e",
+        "size_bytes": 4824
+      },
+      {
+        "artifact_id": "1e88cd27-97ea-49fa-aeae-a9c424efa990",
+        "name": "research-brief.md",
+        "revision": 6,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/research-brief.md",
+        "sha256": "10d0677b510b3bc84f6a6c1b8afe280be3f16a15f31c16ee47f1a00dfdef4463",
+        "size_bytes": 10978
+      },
+      {
+        "artifact_id": "ae5b7f1b-72e4-4b17-9bb0-4971379a77ed",
+        "name": "sources/pilot-charter.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/sources/pilot-charter.txt",
+        "sha256": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+        "size_bytes": 523
+      },
+      {
+        "artifact_id": "833f6bbf-300b-4630-b6d0-cf7443994d3a",
+        "name": "sources/reviewer-note.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/sources/reviewer-note.txt",
+        "sha256": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3",
+        "size_bytes": 421
+      },
+      {
+        "artifact_id": "19c980bb-37c7-4f68-a388-430e7153365b",
+        "name": "sources/weekly-observations.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-01-22-654Z-3210017/state/artifacts/r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research/sources/weekly-observations.txt",
+        "sha256": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+        "size_bytes": 593
+      }
+    ],
+    "repair_supersessions": [
+      {
+        "superseded_id": "a3a77b4c-cc83-42b7-adde-38de23a45b84",
+        "superseded_by": "990afd06-dcd5-4754-87e3-d4b4364706e4",
+        "name": "research-brief.md",
+        "superseded_sha256": "e90965253e730187c59f1185e528c78b86a9b43dd229d6cad2f40087699f245b",
+        "superseded_size_bytes": 8667,
+        "replacement_sha256": "47a03d3a2657273fff5af98e1bc7272ba0fef27e5bd8fc1d6c62378862ab850d",
+        "replacement_size_bytes": 9882,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T20:10:59.124Z",
+        "source": "repair",
+        "intent_id": "c655dbeb-e91c-40a9-bb74-40808bf8f394",
+        "provenance_id": "412b08e0-3f8b-441c-bbdf-155117742866"
+      },
+      {
+        "superseded_id": "990afd06-dcd5-4754-87e3-d4b4364706e4",
+        "superseded_by": "1e88cd27-97ea-49fa-aeae-a9c424efa990",
+        "name": "research-brief.md",
+        "superseded_sha256": "47a03d3a2657273fff5af98e1bc7272ba0fef27e5bd8fc1d6c62378862ab850d",
+        "superseded_size_bytes": 9882,
+        "replacement_sha256": "10d0677b510b3bc84f6a6c1b8afe280be3f16a15f31c16ee47f1a00dfdef4463",
+        "replacement_size_bytes": 10978,
+        "repair_iteration": 2,
+        "recorded_at": "2026-11-16T20:15:04.844Z",
+        "source": "repair",
+        "intent_id": "6e5565bd-dce3-4dc0-99ec-673c492a0828",
+        "provenance_id": "78c5c059-0a82-4688-a08a-f960db0e8b68"
+      }
+    ],
+    "repair_provenance": [
+      {
+        "provenance_id": "412b08e0-3f8b-441c-bbdf-155117742866",
+        "intent_id": "c655dbeb-e91c-40a9-bb74-40808bf8f394",
+        "repair_iteration": 1,
+        "source": "repair",
+        "outcome": "completed",
+        "recorded_at": "2026-11-16T20:10:59.124Z",
+        "supersessions": [
+          {
+            "superseded_id": "a3a77b4c-cc83-42b7-adde-38de23a45b84",
+            "superseded_by": "990afd06-dcd5-4754-87e3-d4b4364706e4",
+            "name": "research-brief.md",
+            "superseded_sha256": "e90965253e730187c59f1185e528c78b86a9b43dd229d6cad2f40087699f245b",
+            "superseded_size_bytes": 8667,
+            "replacement_sha256": "47a03d3a2657273fff5af98e1bc7272ba0fef27e5bd8fc1d6c62378862ab850d",
+            "replacement_size_bytes": 9882,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T20:10:59.124Z",
+            "source": "repair",
+            "intent_id": "c655dbeb-e91c-40a9-bb74-40808bf8f394",
+            "provenance_id": "412b08e0-3f8b-441c-bbdf-155117742866"
+          }
+        ]
+      },
+      {
+        "provenance_id": "78c5c059-0a82-4688-a08a-f960db0e8b68",
+        "intent_id": "6e5565bd-dce3-4dc0-99ec-673c492a0828",
+        "repair_iteration": 2,
+        "source": "repair",
+        "outcome": "completed",
+        "recorded_at": "2026-11-16T20:15:04.844Z",
+        "supersessions": [
+          {
+            "superseded_id": "990afd06-dcd5-4754-87e3-d4b4364706e4",
+            "superseded_by": "1e88cd27-97ea-49fa-aeae-a9c424efa990",
+            "name": "research-brief.md",
+            "superseded_sha256": "47a03d3a2657273fff5af98e1bc7272ba0fef27e5bd8fc1d6c62378862ab850d",
+            "superseded_size_bytes": 9882,
+            "replacement_sha256": "10d0677b510b3bc84f6a6c1b8afe280be3f16a15f31c16ee47f1a00dfdef4463",
+            "replacement_size_bytes": 10978,
+            "repair_iteration": 2,
+            "recorded_at": "2026-11-16T20:15:04.844Z",
+            "source": "repair",
+            "intent_id": "6e5565bd-dce3-4dc0-99ec-673c492a0828",
+            "provenance_id": "78c5c059-0a82-4688-a08a-f960db0e8b68"
+          }
+        ]
+      }
+    ],
+    "recovery_resolutions": [],
+    "candidate_sha256": "7c0533d767bd1f39d536c1106263077fd0eb9522d75fc4e249c8b896ba427d71",
+    "created_at": "2026-11-16T20:15:04.856Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-final-professional-2026-11-16T20-01-22-654Z-3210017-research",
+    "epoch_id": "726a7eaa-dcda-402c-a2fd-0080e6ba904c",
+    "candidate_sha256": "7c0533d767bd1f39d536c1106263077fd0eb9522d75fc4e249c8b896ba427d71",
+    "execution_output_sha256": "b81f3f7c59402df0d4efbb71979b65d7417aa9385eea550f45ffc01d8ae5ffc6",
+    "evidence_sha256": "16e273ff4db34e89b361b5ea146861ffc6d62c47c663635e4cfe41be6868c453",
+    "review": {
+      "passed": false,
+      "score": 6,
+      "criteria_results": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "notes": "research-brief.md (10,978 bytes, rev 6) contains §1 Executive Recommendation, §2 Factual Findings, §3 Limitations, and uses only the exact tags [S1]/[S2]/[S3] with no invented tags. evidence-alder.md and evidence-brook-cove.md are retained and attributed in §5, with each note's self-declared author quoted."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources. Put an inline citation on every factual bullet and every factual Markdown table row, including the site-totals rows.",
+          "passed": true,
+          "notes": "§4 maps S1/S2/S3 to exactly the three required paths and states no other sources were used. Spot-checking found no uncited numeric claim: the §2.6 per-site table carries [S2] on every row including 'Site total — requests observed | 480 | 480 | 480', and the §2.7 program-level table carries a citation per row. The §4 Sources table maps tags to paths rather than asserting pilot facts, so its lack of inline tags is not a violation."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "notes": "§2.2 states 480 requests for each of Alder, Brook and Cove [S2]; §2.3 states 31/43/37 delayed acknowledgements [S2]; §2.4 and the §2.7 table state the 18-minute manual baseline to 11-minute routed pilot change [S1]. All three required figures appear with citations, and the table reproduces them."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "notes": "§3 states findings apply to weekday pilot sites Alder, Brook and Cove and nothing else [S1], excludes weekend performance [S1][S3], excludes Depot as explicitly excluded and unsupported [S1][S3], and states no completed wider rollout is claimed, with rollout held behind the reviewer's repeat-measurement gate [S3]. The header scope line and §1 closing bullet repeat the bound."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": false,
+          "notes": "The required production topology is not satisfied or demonstrated. The original execution reports that the top-level delegate call collapsed to one nested child and that the runtime returned 'parallel=true ignored: a single request spawns exactly one child', with the two parallel children then launched by the top-level executor rather than by the coordinator, adding an undeclared nesting level. Repair iteration 2 could not fix the topology and instead corrected the prose: the brief's own §5 now states it 'was edited by a general-purpose executor without a delegate tool; it was not produced by a research-coordinator' and that 'the delegation topology required by acceptance criterion 5 is not demonstrated by this artifact'. This is exactly the failure mode the spec's stated risk names — parallel recursion must be observed in the production tree, not inferred from prose."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "Criterion 5 is affirmatively violated, not merely unevidenced: the brief's §5 discloses that it was authored/edited by an executor with no coordinator in the path, and the original run shows the top-level delegate call collapsing to one child with parallel=true ignored, after which the top-level agent itself spawned the two children. The spec requires the coordinator to make that single parallel call.",
+          "severity": "critical"
+        },
+        {
+          "issue": "No production-tree record demonstrates 'exactly one top-level delegation, two children in parallel, spawned by the coordinator'; the artifact set and prose are the only evidence supplied, which the spec explicitly disallows as proof of recursion.",
+          "severity": "major"
+        },
+        {
+          "issue": "The brief's header scope line ('Scope of this brief: weekday pilot sites Alder, Brook and Cove only.') is a scoping statement carrying no inline citation, and the §4 Sources table rows carry no tags — both are defensible (scope statement; tag-to-path mapping rather than pilot facts) but are the nearest things to uncited lines in an otherwise fully cited document.",
+          "severity": "minor"
+        }
+      ],
+      "recommendations": [
+        "Re-run from an execution boundary that actually exposes the delegate tool to the research-coordinator, and require the coordinator itself to issue exactly one parallel delegate call spawning evidence-alder.md and evidence-brook-cove.md before it synthesizes research-brief.md.",
+        "Capture the resulting delegation tree as run evidence (child ids, parent ids, parallel flag honoured) so criterion 5 is verified from the production tree rather than from prose.",
+        "If the environment cannot support the coordinator topology, record an explicit approver scope exception for criterion 5 rather than having a downstream executor rewrite authorship claims; the current repair's honesty is correct but cannot satisfy a structural criterion.",
+        "On the successful re-run, keep the current citation discipline: per-site bullets, a citation column on every per-site table row including site-totals, and the §4 tag-to-path mapping.",
+        "Slightly tighten provenance wording so that the brief does not need to disclaim its own authorship, and cite the header scope line to [S1] for completeness."
+      ],
+      "verdict": "FAIL: LLM reviewer verdict is FAIL | Criterion failed: \"Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.\" | Unresolved critical defect: Criterion 5 is affirmatively violated, not merely unevidenced: the brief's §5 discloses that it was authored/edited by an executor with no coordinator in the path, and the original run shows the top-level delegate call collapsing to one child with parallel=true ignored, after which the top-level agent itself spawned the two children. The spec requires the coordinator to make that single parallel call. | Unresolved major defect: No production-tree record demonstrates 'exactly one top-level delegation, two children in parallel, spawned by the coordinator'; the artifact set and prose are the only evidence supplied, which the spec explicitly disallows as proof of recursion."
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "Criterion failed: \"Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.\"",
+        "Unresolved critical defect: Criterion 5 is affirmatively violated, not merely unevidenced: the brief's §5 discloses that it was authored/edited by an executor with no coordinator in the path, and the original run shows the top-level delegate call collapsing to one child with parallel=true ignored, after which the top-level agent itself spawned the two children. The spec requires the coordinator to make that single parallel call.",
+        "Unresolved major defect: No production-tree record demonstrates 'exactly one top-level delegation, two children in parallel, spawned by the coordinator'; the artifact set and prose are the only evidence supplied, which the spec explicitly disallows as proof of recursion."
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": true,
+          "reason": "research-brief.md (10,978 bytes, rev 6) contains §1 Executive Recommendation, §2 Factual Findings, §3 Limitations, and uses only the exact tags [S1]/[S2]/[S3] with no invented tags. evidence-alder.md and evidence-brook-cove.md are retained and attributed in §5, with each note's self-declared author quoted."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources. Put an inline citation on every factual bullet and every factual Markdown table row, including the site-totals rows.",
+          "passed": true,
+          "reason": "§4 maps S1/S2/S3 to exactly the three required paths and states no other sources were used. Spot-checking found no uncited numeric claim: the §2.6 per-site table carries [S2] on every row including 'Site total — requests observed | 480 | 480 | 480', and the §2.7 program-level table carries a citation per row. The §4 Sources table maps tags to paths rather than asserting pilot facts, so its lack of inline tags is not a violation."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": true,
+          "reason": "§2.2 states 480 requests for each of Alder, Brook and Cove [S2]; §2.3 states 31/43/37 delayed acknowledgements [S2]; §2.4 and the §2.7 table state the 18-minute manual baseline to 11-minute routed pilot change [S1]. All three required figures appear with citations, and the table reproduces them."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": true,
+          "reason": "§3 states findings apply to weekday pilot sites Alder, Brook and Cove and nothing else [S1], excludes weekend performance [S1][S3], excludes Depot as explicitly excluded and unsupported [S1][S3], and states no completed wider rollout is claimed, with rollout held behind the reviewer's repeat-measurement gate [S3]. The header scope line and §1 closing bullet repeat the bound."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager with exactly one top-level research-coordinator delegation and no other top-level delegation; that coordinator must use the delegate tool to launch exactly two distinct children in parallel before synthesizing the cited brief.",
+          "passed": false,
+          "reason": "The required production topology is not satisfied or demonstrated. The original execution reports that the top-level delegate call collapsed to one nested child and that the runtime returned 'parallel=true ignored: a single request spawns exactly one child', with the two parallel children then launched by the top-level executor rather than by the coordinator, adding an undeclared nesting level. Repair iteration 2 could not fix the topology and instead corrected the prose: the brief's own §5 now states it 'was edited by a general-purpose executor without a delegate tool; it was not produced by a research-coordinator' and that 'the delegation topology required by acceptance criterion 5 is not demonstrated by this artifact'. This is exactly the failure mode the spec's stated risk names — parallel recursion must be observed in the production tree, not inferred from prose."
+        }
+      ],
+      "llm_score": 6,
+      "llm_passed": false
+    },
+    "receipt_sha256": "8a944331be5a392446bc3c258e5f3687b29daaa854c36e37f5c1910031d9a68a",
+    "created_at": "2026-11-16T20:15:45.190Z"
+  }
+}

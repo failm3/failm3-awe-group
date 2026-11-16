@@ -1,0 +1,14 @@
+{
+  "id": "b4ccd733-f68c-4e35-950f-5d3a9a138255",
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "type": "file",
+  "name": "verify/independent_reduction.py",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/verify/independent_reduction.py",
+  "created_at": "2026-11-16T07:34:26.013Z",
+  "metadata": {
+    "size_bytes": 2217,
+    "sha256": "dc79276d882e3de4bdc6e4ae23489a3fc4879997f772a74b18ed0c09e958f4f8",
+    "reconciled": true,
+    "revision": 1
+  }
+}

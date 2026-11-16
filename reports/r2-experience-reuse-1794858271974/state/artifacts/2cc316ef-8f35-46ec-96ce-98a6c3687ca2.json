@@ -1,0 +1,13 @@
+{
+  "id": "2cc316ef-8f35-46ec-96ce-98a6c3687ca2",
+  "mission_id": "r2-experience-reuse-1794858271974-t15-off",
+  "type": "file",
+  "name": "core/decoder.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t15-off/core/decoder.cjs",
+  "created_at": "2026-11-16T20:12:57.785Z",
+  "metadata": {
+    "size_bytes": 6875,
+    "sha256": "d19643f0766210c3d7ceb1fe083ff69098a3677273978ab80fb7246fbd157e4d",
+    "revision": 2
+  }
+}

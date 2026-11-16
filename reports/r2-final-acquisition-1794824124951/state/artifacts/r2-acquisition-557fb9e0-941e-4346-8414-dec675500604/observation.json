@@ -1,0 +1,21 @@
+{
+  "capability": "observation-digest-v1",
+  "status": "available",
+  "detail": "No pre-existing implementation of observation-digest-v1 was registered, and no mature open-source package provides this exact fixture-to-digest contract, so one bounded authoring step produced a dependency-free Node procedure at procedures/observation-digest-v1.js under the mission artifact root. It independently reads the JSON observation fixture, validates each row, sums scheduled/completed/incidents over all rows, groups the same sums by site, and computes completion_percent as completed/scheduled*100 rounded half-up to exactly 2 decimals using exact BigInt integer arithmetic (round(completed*10000/scheduled) hundredths) so no binary floating-point drift is possible; it persists digest.json and digest.md into the fixed output directory argument. Probe run against input/pilot.observations.json in an isolated probe directory yielded row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67 with sites North (rows 2, 22/18/5, 81.82) and South (rows 1, 8/8/1, 100.00). Those totals were confirmed by an independent Python decimal recomputation from the raw fixture rather than trusted from the procedure's own stdout. Boundary and failure tests passed: 1/32 rounds to 3.13 (half-up, not banker's 3.12), a zero-scheduled fixture yields 0.00 without dividing by zero, non-integer input exits 2 with no output written, and two repeat runs produced byte-identical digests. The proposed target itself was not executed at the final fixed output path during acquisition; the probe output above is evidence only and carries no capability/status/detail/local_target fields. Runtime /usr/bin/node is v22.23.3; no packages installed, no network use, no host or config changes.",
+  "acquired": "procedures/observation-digest-v1.js",
+  "local_target": {
+    "runtime": "node",
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/procedures/observation-digest-v1.js",
+    "executable_sha256": "49cba19507c1d4e3d80ba85afdaaf75c580e442fd2939029e999a9b2479ee2e3",
+    "args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604"
+    ],
+    "probe_artifacts": [
+      {
+        "artifact_id": "14fd73ff-a798-4527-bc9e-8c1773cb385b",
+        "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "mission_id": "r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd",
+  "saved_at": "2026-11-16T03:11:57.264Z",
+  "total_agents": 1,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd:top0",
+      "role": "researcher",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: The mission requires the named capability observation-digest-v1, which is not in the registered capabilities list. One bounded acquisition is needed to obtain a local, host-qualifiable procedure, preferably a deterministic script registered via capability_library and authored with only the approved tools file_read, file_write, file_list, shell and save_artifact. The procedure must work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd. It must independently read input/pilot.observations.json and compute exact numeric row_count, scheduled, completed, incidents, completion_percent (completed/scheduled*100, rounded to 2 decimals) and per-site totals. It must persist digest.json and digest.md, with digest.md showing the same values and a reproducible method. It must be invocable with fixed arguments, and its exact executable bytes must be hashed so the hash can be recorded in a durable invocation receipt. Constraints: no packages, no network, no web_search or web_fetch, no publishing, deployment, purchases or external changes. Do not substitute a different capability or accept a discovered package as trusted. Risks: a model-authored observation is not qualification, and visible examples do not replace independent arithmetic verification. After acquisition, the Head will replan to invoke the qualified procedure and to have the outputs pass independent host verification and Nox QA.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {executable_path, executable_sha256, args, probe_artifacts}. Use a canonical absolute executable path, the actual SHA-256, an exact fixed no-placeholder argument array, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "deepseek-v4-flash",
+      "tools_used": [
+        "file_list",
+        "shell",
+        "file_read",
+        "file_write"
+      ],
+      "duration_ms": 107469
+    }
+  ]
+}

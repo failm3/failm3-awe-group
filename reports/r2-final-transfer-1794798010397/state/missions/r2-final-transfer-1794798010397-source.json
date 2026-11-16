@@ -1,0 +1,87 @@
+{
+  "id": "r2-final-transfer-1794798010397-source",
+  "title": "Host source CSV parser qualification",
+  "description": "Controlled fresh parser repair",
+  "objective": "Qualify the host-built strict CSV parser artifact",
+  "acceptance_criteria": [
+    "The assigned CommonJS module exports its required function",
+    "The implementation satisfies all of FORMAT.md, not just visible examples",
+    "The unmodified visible test executes successfully"
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-16T03:00:12.162Z",
+  "updated_at": "2026-11-16T03:00:12.268Z",
+  "artifacts": [
+    "efa723a2-1979-4526-99e0-1629bee68fd5",
+    "54051a40-c3d1-4ec3-8a68-c2d8795d09c4"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "Host source CSV parser qualification",
+      "objective": "Qualify the host-built strict CSV parser artifact",
+      "scope": "Host source construction and independent edge verification only",
+      "acceptance_criteria": [
+        "The assigned CommonJS module exports its required function",
+        "The implementation satisfies all of FORMAT.md, not just visible examples",
+        "The unmodified visible test executes successfully"
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "shell",
+        "save_artifact"
+      ],
+      "suggested_agents": [
+        "coder"
+      ],
+      "estimated_complexity": "simple",
+      "risks": [
+        "Visible tests are intentionally tiny; the complete documented grammar and semantics are required"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-16T03:00:12.167Z",
+      "spec_hash": "f6b8d20800d02bc5d30b8ae7213d3cf6033607c16df97e98e11a7e886df32a14",
+      "snapshot": {
+        "mission_id": "r2-final-transfer-1794798010397-source",
+        "title": "Host source CSV parser qualification",
+        "description": "Controlled fresh parser repair",
+        "objective": "Qualify the host-built strict CSV parser artifact",
+        "acceptance_criteria": [
+          "The assigned CommonJS module exports its required function",
+          "The implementation satisfies all of FORMAT.md, not just visible examples",
+          "The unmodified visible test executes successfully"
+        ],
+        "specification": {
+          "title": "Host source CSV parser qualification",
+          "objective": "Qualify the host-built strict CSV parser artifact",
+          "scope": "Host source construction and independent edge verification only",
+          "acceptance_criteria": [
+            "The assigned CommonJS module exports its required function",
+            "The implementation satisfies all of FORMAT.md, not just visible examples",
+            "The unmodified visible test executes successfully"
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_list",
+            "file_write",
+            "shell",
+            "save_artifact"
+          ],
+          "suggested_agents": [
+            "coder"
+          ],
+          "estimated_complexity": "simple",
+          "risks": [
+            "Visible tests are intentionally tiny; the complete documented grammar and semantics are required"
+          ]
+        }
+      }
+    }
+  },
+  "_rev": 3
+}

@@ -1,0 +1,4 @@
+{"source":"edge","period":"test","observations":[
+ {"site":"Alpha","cohort":"x","scheduled":32,"completed":1,"incidents":0},
+ {"site":"Zeta","cohort":"x","scheduled":32,"completed":1,"incidents":0}
+]}

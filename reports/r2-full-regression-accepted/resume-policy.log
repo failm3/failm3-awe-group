@@ -1,0 +1,28 @@
+AWE GROUP — resume policy regression tests
+
+T1 — the real 25be2dad checkpoint retries failed coder only
+  ✓ successful designer is skipped
+  ✓ failed original coder is retried
+  ✓ successful devops is skipped
+  ✓ successful analyst is skipped
+  ✓ new corrective coder still runs
+  ✓ new writer still runs
+
+T2 — reordered fresh plan does not repeat successful work
+  ✓ designer matched at its new index
+  ✓ analyst matched at its new index
+  ✓ devops matched at its new index
+  ✓ coder is not accidentally skipped at checkpoint index 0
+
+T3 — repeated roles match by occurrence and only success is reusable
+  ✓ first successful coder occurrence is skipped
+  ✓ failed second coder occurrence is retried
+  ✓ partial result is not treated as verified success
+  ✓ missing checkpoint runs everything
+
+T4 — scoped coder fallback does not change the general coding route
+  ✓ top-level coder uses the controlled Fable fallback
+  ✓ general coding remains on Kimi
+
+passed: 16, failed: 0
+All resume policy regression tests passed.

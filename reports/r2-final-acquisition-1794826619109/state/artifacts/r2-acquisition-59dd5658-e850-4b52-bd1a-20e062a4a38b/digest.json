@@ -1,0 +1,19 @@
+{
+  "row_count": 3,
+  "scheduled": 30,
+  "completed": 26,
+  "incidents": 6,
+  "completion_percent": 86.67,
+  "sites": {
+    "North": {
+      "scheduled": 22,
+      "completed": 18,
+      "incidents": 5
+    },
+    "South": {
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1
+    }
+  }
+}

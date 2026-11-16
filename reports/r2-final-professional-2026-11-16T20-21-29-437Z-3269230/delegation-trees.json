@@ -1,0 +1,195 @@
+[
+  {
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+    "tree": {
+      "total_agents": 3,
+      "max_depth": 1,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+          "role": "research-coordinator",
+          "started_at": "2026-11-16T20:22:00.779Z",
+          "task": "Act as the single top-level research-coordinator for mission r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research and do all of the following yourself, in this order. (1) Source inventory: use file_list on the workspace, then file_read only sources/pilot-charter.txt (S1), sources/weekly-observations.txt (S2) and sources/reviewer-note.txt (S3). Never write to, move or modify these three files; they must remain byte-identical. (2) Recursion: make exactly ONE delegate call containing a 'children' array of exactly two distinct children and 'parallel': true. Do not make separate delegate calls for each child, and do not launch any other children. Grant each child only the tools file_read, file_list, file_write and save_artifact. Child A, role researcher, analyses the Alder site. It reads only the three sources, extracts Alder-relevant facts (request total, delayed acknowledgements, acknowledgement timing, pilot scope and reviewer caveats), cites every claim inline as [S1], [S2] or [S3], and records any source discrepancy instead of resolving it by assumption. Child A must itself persist its output as exactly evidence-alder.md in the workspace and register it with save_artifact, with an attribution header naming the child, its role and the sources read. Child B, role researcher, does the same analysis for the Brook and Cove sites and must itself persist exactly evidence-brook-cove.md, with the same attribution header and citation rules. Tell each child that a text-only reply fails, and that you cannot re-attribute a child's text. (3) Synthesis: after both children have registered their artifacts, file_read evidence-alder.md and evidence-brook-cove.md. Verify every number in them against the sources. Then write research-brief.md with file_write and register it with save_artifact. Leave both child evidence notes in place as attributed artifacts.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [
+            "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+            "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2"
+          ],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "delegate",
+            "file_write",
+            "save_artifact"
+          ],
+          "artifacts": [
+            "8b70c2db-49d5-493d-a612-3cb877b44756"
+          ],
+          "duration_ms": 229976,
+          "finished_at": "2026-11-16T20:25:50.749Z"
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+          "role": "researcher",
+          "task": "Analyse the ALDER site only, from the three immutable local pilot sources, and persist your analysis as exactly evidence-alder.md.\n\nStep 1 — Source inventory. Use file_list to see the workspace, then file_read ONLY these three files: sources/pilot-charter.txt (S1), sources/weekly-observations.txt (S2), sources/reviewer-note.txt (S3). Read nothing else. Never write to, move or modify those three files.\n\nStep 2 — Extract every Alder-relevant fact: the Alder request total and site-weeks, Alder delayed-acknowledgement count, Alder supervisor escalations, the definition of a delayed acknowledgement, the acknowledgement timing figures (baseline manual median and pilot routed median) and how acknowledgement is measured, the pilot window and scope, the weekday-only limit, the Depot exclusion, the runbook change, the reviewer sampling and reconciliation, and the reviewer's caveats and recommendation as they bear on Alder.\n\nStep 3 — Write evidence-alder.md with:\n(a) An attribution header naming you as the child analyst, your role (researcher), and the three sources read.\n(b) An Alder fact table or bullet list where EVERY factual or numerical claim carries an inline citation in exactly the form [S1], [S2] or [S3], placed after the claim. No uncited factual claim.\n(c) A short 'Discrepancies and open questions' section. If any two sources disagree, or a figure is implied rather than stated, record it with citations instead of resolving it by assumption. Do not silently reconcile anything, and do not invent a number that no source states.\n(d) A closing scope note that your evidence is limited to the weekday Alder pilot and supports no weekend or Depot conclusion.\n\nStep 4 — Persist. Call file_write to create evidence-alder.md in the workspace root, then call save_artifact with mission_id='r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research' and name='evidence-alder.md'.\n\nCRITICAL: A text-only reply fails. A reply in chat is not an artifact and the coordinator cannot re-attribute your prose to you. The deliverable exists only when you have written and registered evidence-alder.md yourself.",
+          "depth": 1,
+          "parent_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+          "status": "success",
+          "started_at": "2026-11-16T20:23:16.679Z",
+          "parallel_group_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:pg1-2",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "file_write",
+            "save_artifact"
+          ],
+          "artifacts": [
+            "25d293e0-3bef-48b2-8555-284b384fcda6",
+            "eb4db0c9-dfde-44a0-8418-dc76987ee8fe"
+          ],
+          "finished_at": "2026-11-16T20:24:40.695Z",
+          "duration_ms": 84012
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2",
+          "role": "researcher",
+          "task": "Analyse the BROOK and COVE sites only, from the three immutable local pilot sources, and persist your analysis as exactly evidence-brook-cove.md.\n\nStep 1 — Source inventory. Use file_list to see the workspace, then file_read ONLY these three files: sources/pilot-charter.txt (S1), sources/weekly-observations.txt (S2), sources/reviewer-note.txt (S3). Read nothing else. Never write to, move or modify those three files.\n\nStep 2 — Extract every Brook- and Cove-relevant fact: the Brook and Cove request totals and site-weeks, their delayed-acknowledgement counts, their supervisor escalations, the definition of a delayed acknowledgement, the acknowledgement timing figures (baseline manual median and pilot routed median) and how acknowledgement is measured, the pilot window and scope, the weekday-only limit, the Depot exclusion, the runbook change, the reviewer sampling and reconciliation, and the reviewer's caveats and recommendation as they bear on Brook and Cove.\n\nStep 3 — Write evidence-brook-cove.md with:\n(a) An attribution header naming you as the child analyst, your role (researcher), and the three sources read.\n(b) Separate Brook and Cove fact tables or bullet lists where EVERY factual or numerical claim carries an inline citation in exactly the form [S1], [S2] or [S3], placed after the claim. No uncited factual claim.\n(c) A short 'Discrepancies and open questions' section. If any two sources disagree, or a figure is implied rather than stated, record it with citations instead of resolving it by assumption. Do not silently reconcile anything, and do not invent a number that no source states.\n(d) A closing scope note that your evidence is limited to the weekday Brook and Cove pilot sites and supports no weekend or Depot conclusion.\n\nStep 4 — Persist. Call file_write to create evidence-brook-cove.md in the workspace root, then call save_artifact with mission_id='r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research' and name='evidence-brook-cove.md'.\n\nCRITICAL: A text-only reply fails. A reply in chat is not an artifact and the coordinator cannot re-attribute your prose to you. The deliverable exists only when you have written and registered evidence-brook-cove.md yourself.",
+          "depth": 1,
+          "parent_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+          "status": "success",
+          "started_at": "2026-11-16T20:23:16.679Z",
+          "parallel_group_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:pg1-2",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "file_write",
+            "save_artifact"
+          ],
+          "artifacts": [
+            "ccfe94ef-b7c7-45a6-b8bd-4b968bd7c7f0",
+            "8efced30-fa4a-4054-970e-dd62546d9392"
+          ],
+          "finished_at": "2026-11-16T20:24:09.230Z",
+          "duration_ms": 52546
+        }
+      ]
+    },
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T20:23:16.685Z",
+        "finished_at": "2026-11-16T20:24:09.230Z",
+        "artifact_ids": [
+          "ccfe94ef-b7c7-45a6-b8bd-4b968bd7c7f0",
+          "8efced30-fa4a-4054-970e-dd62546d9392"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "role": "researcher",
+        "started_at": "2026-11-16T20:23:16.684Z",
+        "finished_at": "2026-11-16T20:24:40.695Z",
+        "artifact_ids": [
+          "25d293e0-3bef-48b2-8555-284b384fcda6",
+          "eb4db0c9-dfde-44a0-8418-dc76987ee8fe"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "role": "research-coordinator",
+        "started_at": "2026-11-16T20:22:00.790Z",
+        "finished_at": "2026-11-16T20:25:50.746Z",
+        "artifact_ids": [
+          "7f51f998-2db5-44ce-893d-328328170795",
+          "8b70c2db-49d5-493d-a612-3cb877b44756"
+        ]
+      }
+    ]
+  },
+  {
+    "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+    "tree": {
+      "total_agents": 2,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0",
+          "role": "analyst",
+          "started_at": "2026-11-16T20:22:09.214Z",
+          "task": "From the working directory /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-21-29-437Z-3269230/state/artifacts/r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics, read input/operations.csv with file_read and compute the six-week team operations metrics. First confirm row_count by counting data rows (header excluded). For the whole dataset and for each of Atlas, Birch and Cedar, sum work_orders, completed_orders, defects, planned_minutes and actual_minutes from the raw integer rows; then derive completion_percent = completed_orders / work_orders x 100 rounded to exactly two decimals, minutes_per_completed_order = actual_minutes / completed_orders rounded to exactly two decimals, and schedule_variance_minutes = actual_minutes - planned_minutes. Round only at the end, from the raw integer sums, never from already-rounded intermediate values. Recompute every figure a second time by an independent re-parse of the CSV before writing. Then persist metrics.json via file_write (and register it with save_artifact) containing exactly this value and key order: {\"row_count\":18,\"totals\":{\"work_orders\":233,\"completed_orders\":217,\"defects\":18,\"planned_minutes\":14985,\"actual_minutes\":15440,\"completion_percent\":93.13,\"minutes_per_completed_order\":71.15,\"schedule_variance_minutes\":455},\"teams\":{\"Atlas\":{\"work_orders\":95,\"completed_orders\":89,\"defects\":7,\"planned_minutes\":5700,\"actual_minutes\":5780,\"completion_percent\":93.68,\"minutes_per_completed_order\":64.94,\"schedule_variance_minutes\":80},\"Birch\":{\"work_orders\":75,\"completed_orders\":71,\"defects\":3,\"planned_minutes\":4875,\"actual_minutes\":4910,\"completion_percent\":94.67,\"minutes_per_completed_order\":69.15,\"schedule_variance_minutes\":35},\"Cedar\":{\"work_orders\":63,\"completed_orders\":57,\"defects\":8,\"planned_minutes\":4410,\"actual_minutes\":4750,\"completion_percent\":90.48,\"minutes_per_completed_order\":83.33,\"schedule_variance_minutes\":340}}}. If and only if your own independent recomputation disagrees with any of those numbers, do not silently substitute a value: report the exact discrepancy in your returned summary while still persisting the file built from the raw CSV, so the Head can adjudicate.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_list",
+            "file_write"
+          ],
+          "artifacts": [
+            "da055978-4b4e-4c18-8c2c-0d0d1e447c3e"
+          ],
+          "duration_ms": 42747,
+          "finished_at": "2026-11-16T20:22:51.956Z"
+        },
+        {
+          "id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1",
+          "role": "writer",
+          "started_at": "2026-11-16T20:22:51.968Z",
+          "task": "After metrics.json exists, independently parse input/operations.csv with file_read and re-derive the overall and per-team aggregates yourself (row count, work orders, completed orders, defects, planned and actual minutes, completion percent, minutes per completed order, schedule variance) so the document is not a blind copy. Read metrics.json and confirm every figure matches your own derivation; treat any mismatch as a hard stop and report it explicitly rather than writing conflicting numbers. Then persist operations-brief.md via file_write (and register it with save_artifact) containing: (1) a concise executive recommendation grounded only in this dataset; (2) exact overall findings and per-team findings for Atlas, Birch and Cedar covering completion, defects and schedule variance, with the integer and two-decimal figures matching metrics.json; (3) a Method section that names input/operations.csv as the sole source and states the exact formulas - completion percent = completed orders / work orders x 100, minutes per completed order = actual minutes / completed orders, schedule variance minutes = actual minutes - planned minutes - and notes that figures were computed from raw integer rows and rounded to two decimals only at the end. Do not invent records, do not extrapolate beyond the six supplied weeks and three named teams, and do not convert units (no hours, no per-day rates, no currency).",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_read",
+            "file_list",
+            "file_write"
+          ],
+          "artifacts": [
+            "b766a129-316e-4143-be9f-9b24479465c3"
+          ],
+          "duration_ms": 127893,
+          "finished_at": "2026-11-16T20:24:59.857Z"
+        }
+      ]
+    },
+    "intervals": [
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+        "role": "analyst",
+        "started_at": "2026-11-16T20:22:09.225Z",
+        "finished_at": "2026-11-16T20:22:51.953Z",
+        "artifact_ids": [
+          "da055978-4b4e-4c18-8c2c-0d0d1e447c3e"
+        ]
+      },
+      {
+        "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+        "role": "writer",
+        "started_at": "2026-11-16T20:22:51.976Z",
+        "finished_at": "2026-11-16T20:24:59.854Z",
+        "artifact_ids": [
+          "10d09aaa-1104-454b-ae5c-0ae528bb3999",
+          "84471ebf-8782-439c-95b8-fd43eeeeec33",
+          "b766a129-316e-4143-be9f-9b24479465c3"
+        ]
+      }
+    ]
+  }
+]

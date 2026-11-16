@@ -1,0 +1,24 @@
+{
+  "schema": "r2-final-professional-attestation-v1",
+  "harness_files": [
+    {
+      "file": "scripts/r2-final-professional/fixtures.ts",
+      "sha256": "96842d1d0261fcb1d6e90597e735570df8ba0281ec39a3cdcd52016c577f5634"
+    },
+    {
+      "file": "scripts/r2-final-professional/runner.ts",
+      "sha256": "7a1e513cbe6f0dfaa1f4a9ae28e748bd5888abe8fd16815ab091cfb74a15a6fb"
+    },
+    {
+      "file": "scripts/r2-final-professional/verifier.ts",
+      "sha256": "db33551b70e261a1f9aa971f0bd4447a78a2fcbb38e7a65ff8e7d9c221e7550a"
+    }
+  ],
+  "source_inputs": {
+    "sources/pilot-charter.txt": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+    "sources/weekly-observations.txt": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+    "sources/reviewer-note.txt": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+  },
+  "analytics_input_sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+  "analytics_schema_sha256": "3b6e8bea7261801c519a7cac29f538d3affb5a438ebcfa4b5b6e055b7dc7560e"
+}

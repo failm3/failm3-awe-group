@@ -1,0 +1,18 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-16T03:11:17.959Z",
+  "finished_at": "2026-11-16T03:11:22.691Z",
+  "suites": [
+    {
+      "suite": "src/tests/r2-qualified-acquisition.test.ts",
+      "passed": false,
+      "exit_code": 1,
+      "signal": null,
+      "duration_ms": 4731
+    }
+  ],
+  "passed": 0,
+  "failed": 1
+}

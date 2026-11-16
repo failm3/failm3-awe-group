@@ -1,0 +1,129 @@
+PASS canonical digest is stable across object order and JSON/Mission schema round trips
+PASS snapshot is detached and deeply frozen; exact whitespace and array order matter
+PASS post-approval mission identity mutation is rejected
+PASS post-approval title mutation is rejected
+PASS post-approval description mutation is rejected
+PASS post-approval objective mutation is rejected
+PASS post-approval scope/exclusions mutation is rejected
+PASS post-approval risk mutation is rejected
+PASS post-approval criterion mutation is rejected
+PASS post-approval tool grant mutation is rejected
+PASS post-approval specialist suggestion mutation is rejected
+PASS post-approval complexity mutation is rejected
+PASS missing, malformed, partial, inconsistent or unknown specifications fail closed
+PASS storage guard rejects binding deletion, replacement and timestamp rewrite
+PASS draft edits and execution metadata/status updates remain supported
+PASS storage approval atomically persists a binding and rejects all approved field drift
+PASS storage rejects in-place mutator and fence changes against the original stored binding
+PASS save, compatibility update and CAS cannot remove or rehash an existing binding
+PASS storage permits execution updates and preserves provisioned mission workspaces
+PASS legacy unbound states stay loadable/writable without inferred approval
+PASS new malformed supplied bindings and existing corrupted bindings cannot be overwritten
+Description: Original request: evaluate the launch; keep it an unpublished draft.
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+Noninteractive approval absent; use --approve to explicitly approve and start.
+
+⏸ Mission r1-cli-explicit-approval is pending_approval; no execution was started.
+Approve interactively: npx tsx src/index.ts approve r1-cli-explicit-approval
+Approve noninteractively: npx tsx src/index.ts approve r1-cli-explicit-approval --approve
+PASS CLI absent approval leaves an unbound pending mission
+Description: Original request: evaluate the launch; keep it an unpublished draft.
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+
+🚀 Starting mission r1-cli-explicit-approval...
+
+
+══════════════════════════════════════════════════
+❌ APPROVED — QA score: 0/10
+══════════════════════════════════════════════════
+
+PASS CLI explicit approve binds before constructing the manager
+
+⚡ Prompt Master is analyzing your request...
+
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+
+Mission created: 80806096-1aab-4862-a37e-d34087ca8dc4
+
+🚀 Starting mission...
+
+
+══════════════════════════════════════════════════
+❌ APPROVED — QA score: 0/10
+══════════════════════════════════════════════════
+
+PASS CLI one-shot explicit run binds before constructing the manager
+Description: Original request: evaluate the launch; keep it an unpublished draft.
+📋 Specification:
+
+  Title:     Research an offline launch
+  Objective: Produce a source-backed launch brief
+  Scope / exclusions: IN: local evidence and a draft. OUT: publishing, purchases, production changes.
+  Criteria:
+    1. Brief cites each source
+    2. No live launch is performed
+  Complexity: moderate
+  Tools: file_read, save_artifact
+  Agents: researcher, writer
+  Risk: Source dates may be stale
+  Risk: No authority to publish
+PASS CLI does not approve a specification changed while the user was confirming
+AWE GROUP API server running on http://127.0.0.1:44545
+PASS API approval binds the complete task before manager invocation
+PASS API returns conflict for incomplete legacy approval and starts no execution
+PASS actual Head prompt includes full approved description, scope/exclusions, risks and acceptance
+PASS Head fallback retains the entire approval and never expands grants
+PASS Head cannot silently bypass an approved but unregistered suggested capability
+PASS Head rejects missing/drifted approval and pending status before model calls
+PASS Head refuses an in-flight specification mutation instead of returning fallback
+
+32 spec-binding checks passed (offline, isolated data).
+[storage] Corrupt mission r1-storage-binding-13: [
+  {
+    "origin": "array",
+    "code": "too_small",
+    "minimum": 1,
+    "inclusive": true,
+    "path": [
+      "acceptance_criteria"
+    ],
+    "message": "At least one non-blank acceptance criterion is required"
+  }
+]
+Mission r1-cli-display-race: approved specification changed while awaiting approval; reload and approve again

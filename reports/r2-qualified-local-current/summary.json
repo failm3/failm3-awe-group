@@ -1,0 +1,18 @@
+{
+  "mode": "offline_no_model_or_network_credentials",
+  "data_isolation": "fresh AWE_DATA_DIR per suite; sandbox removed after execution",
+  "per_suite_timeout_ms": 300000,
+  "started_at": "2026-11-16T03:10:36.845Z",
+  "finished_at": "2026-11-16T03:10:40.317Z",
+  "suites": [
+    {
+      "suite": "src/tests/r2-qualified-local-capability.test.ts",
+      "passed": true,
+      "exit_code": 0,
+      "signal": null,
+      "duration_ms": 3472
+    }
+  ],
+  "passed": 1,
+  "failed": 0
+}

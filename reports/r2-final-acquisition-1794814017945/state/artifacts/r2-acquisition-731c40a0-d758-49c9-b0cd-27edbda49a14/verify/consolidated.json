@@ -1,0 +1,292 @@
+{
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "verifier": "verify/verify_all.py (independent; recomputes every value from bytes)",
+  "procedure": {
+    "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/observation_digest_v1.mjs",
+    "sha256": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+    "declared_sha256": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db"
+  },
+  "fixed_args": [
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/input/pilot.observations.json",
+    "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14"
+  ],
+  "receipt_files_found": [
+    "invocation_receipt.json",
+    "invocation_receipt_runner.mjs"
+  ],
+  "hashes": {
+    "digest.json": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+    "digest.md": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+    "input/pilot.observations.json": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+    "invocation_receipt.json": "2765fc350d841b9627f927d52deb3ceaf898f570fc58ac2fe3c3573d59f49f81",
+    "invocation_receipt_runner.mjs": "575e45a525ee99a76d258435e0bf183c49ab606ae1c441d72c4277a0d178688d",
+    "observation.json": "c0f7e31e11dacb791641804f55549e5fe3c048d0506f8b28a6c1fea35d2165f9",
+    "observation_digest_v1.mjs": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db",
+    "probe/digest.json": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+    "probe/digest.md": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+    "probe2/digest.json": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+    "probe2/digest.md": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+    "probe_artifacts/digest.json": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+    "probe_artifacts/digest.md": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+    "probe_registry/digest.json": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+    "probe_registry/digest.md": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2",
+    "verification.json": "899261f03dcade38952aece14e004d0c91c6fba451f07030db89564232ef19f4",
+    "verification.md": "30f9c1a9f6df22cc48a841ecd68a3db76cb1381b1f742c6a78b7d3edf1ea4df3",
+    "verify/check_md_reproducible.out.json": "3de54c3106ab0a483582721117a70a1e61591f571e2cc4fb1f6bdbc8a2e894c7",
+    "verify/check_md_reproducible.py": "c09bc555e566591b4676fd090cca5a905a613f2f28107ceaa96ad0fbc03802d1",
+    "verify/conformance.out.json": "8bda483bc93ea7b83fdea1f46b66163a9adce5c3cf7276b51aa83d2b6cf621de",
+    "verify/conformance.py": "5a051192da56f529a0404ab73b673ff07bb3eb92dd14689bd87c4ff31ebbd274",
+    "verify/consolidated.json": "847d56406a3c4632d4e37e1642e82fd159a3306fb079904dc4400cf9033625d6",
+    "verify/independent_reduction.out.json": "45fac5d6101ee8959ba3f6ca485be0c2a6d27bb1eed03bb755242bec62388cac",
+    "verify/independent_reduction.py": "dc79276d882e3de4bdc6e4ae23489a3fc4879997f772a74b18ed0c09e958f4f8",
+    "verify/verify_all.py": "58a750563d70d298b41dc1e4b66116f01e52fabf9cc82e2b288fba227c94594b",
+    "verify/verify_deliverables.out.json": "74e9c138c273d3f6311dcb87479e3d052ba14ec26c51d295913d5c85c5e0b0b9",
+    "verify/verify_deliverables.py": "8ccfb93713b6c0923cadef98db389f6f268b27839b6c91bc28762f97089144ae"
+  },
+  "sizes": {
+    "digest.json": 467,
+    "digest.md": 1290,
+    "input/pilot.observations.json": 474,
+    "invocation_receipt.json": 6659,
+    "invocation_receipt_runner.mjs": 5397,
+    "observation.json": 2190,
+    "observation_digest_v1.mjs": 6541,
+    "probe/digest.json": 467,
+    "probe/digest.md": 1290,
+    "probe2/digest.json": 467,
+    "probe2/digest.md": 1290,
+    "probe_artifacts/digest.json": 467,
+    "probe_artifacts/digest.md": 1290,
+    "probe_registry/digest.json": 467,
+    "probe_registry/digest.md": 1290,
+    "verification.json": 13997,
+    "verification.md": 8188,
+    "verify/check_md_reproducible.out.json": 1196,
+    "verify/check_md_reproducible.py": 2632,
+    "verify/conformance.out.json": 5289,
+    "verify/conformance.py": 10669,
+    "verify/consolidated.json": 11796,
+    "verify/independent_reduction.out.json": 660,
+    "verify/independent_reduction.py": 2217,
+    "verify/verify_all.py": 14236,
+    "verify/verify_deliverables.out.json": 3049,
+    "verify/verify_deliverables.py": 6344
+  },
+  "mtimes": {
+    "digest.json": "2026-11-16 07:43:40.570421044 +0000",
+    "digest.md": "2026-11-16 07:43:40.570421044 +0000",
+    "input/pilot.observations.json": "2026-11-16 07:26:58.060959633 +0000",
+    "invocation_receipt.json": "2026-11-16 07:43:40.578421098 +0000",
+    "invocation_receipt_runner.mjs": "2026-11-16 07:43:40.476263798 +0000",
+    "observation.json": "2026-11-16 07:30:04.428558812 +0000",
+    "observation_digest_v1.mjs": "2026-11-16 07:28:33.162601584 +0000",
+    "probe/digest.json": "2026-11-16 07:28:48.410262537 +0000",
+    "probe/digest.md": "2026-11-16 07:28:48.410262537 +0000",
+    "probe2/digest.json": "2026-11-16 07:55:21.099454374 +0000",
+    "probe2/digest.md": "2026-11-16 07:55:21.100741053 +0000",
+    "probe_artifacts/digest.json": "2026-11-16 07:55:21.104530490 +0000",
+    "probe_artifacts/digest.md": "2026-11-16 07:55:21.106123964 +0000",
+    "probe_registry/digest.json": "2026-11-16 07:55:21.109955001 +0000",
+    "probe_registry/digest.md": "2026-11-16 07:55:21.111236979 +0000",
+    "verification.json": "2026-11-16 07:37:52.458077085 +0000",
+    "verification.md": "2026-11-16 07:38:32.021191278 +0000",
+    "verify/check_md_reproducible.out.json": "2026-11-16 07:36:06.856442465 +0000",
+    "verify/check_md_reproducible.py": "2026-11-16 07:36:02.580538335 +0000",
+    "verify/conformance.out.json": "2026-11-16 07:45:31.104648444 +0000",
+    "verify/conformance.py": "2026-11-16 07:45:25.918677786 +0000",
+    "verify/consolidated.json": "2026-11-16 07:54:07.491876744 +0000",
+    "verify/independent_reduction.out.json": "2026-11-16 07:34:25.978702824 +0000",
+    "verify/independent_reduction.py": "2026-11-16 07:34:23.188493797 +0000",
+    "verify/verify_all.py": "2026-11-16 07:55:40.554110118 +0000",
+    "verify/verify_deliverables.out.json": "2026-11-16 07:35:24.141399590 +0000",
+    "verify/verify_deliverables.py": "2026-11-16 07:35:18.893517112 +0000"
+  },
+  "digest_json_md_write_gap_seconds": 0.0,
+  "independent_reduction": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "sites": {
+      "North": {
+        "rows": 2,
+        "scheduled": 22,
+        "completed": 18,
+        "incidents": 5,
+        "completion_percent": "81.82"
+      },
+      "South": {
+        "rows": 1,
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1,
+        "completion_percent": "100.00"
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "D1a",
+      "check": "a durable invocation receipt file exists at mission root",
+      "status": "PASS",
+      "pass": true,
+      "detail": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/invocation_receipt.json"
+    },
+    {
+      "id": "D1b",
+      "check": "receipt mtime is at or after both deliverable mtimes (it is post-hoc, not a plan record)",
+      "status": "PASS",
+      "pass": true,
+      "detail": "receipt=1794815020.578 digest.json=1794815020.570 digest.md=1794815020.570 delta_vs_json=0.008s delta_vs_md=0.008s"
+    },
+    {
+      "id": "D1c",
+      "check": "receipt records executable path, sha256, exact argv, fixed args, exit status and completion time",
+      "status": "PASS",
+      "pass": true,
+      "detail": "{\"executable_path\": true, \"executable_sha256\": true, \"exact_argv\": true, \"fixed_args\": true, \"exit_status\": true, \"completion_time\": true}"
+    },
+    {
+      "id": "D1d",
+      "check": "receipt's recorded output sha256 values equal the bytes now on disk",
+      "status": "PASS",
+      "pass": true,
+      "detail": "receipt={'/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.json': '95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80', '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.md': '3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2'} disk={'/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.json': '95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80', '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/digest.md': '3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2'}"
+    },
+    {
+      "id": "D1e",
+      "check": "pinned procedure bytes are unchanged and equal the declared qualified hash",
+      "status": "PASS",
+      "pass": true,
+      "detail": "e51560a01847a3410c3eedbfe9d261c483e717fe32606220238a0eda757d58db"
+    },
+    {
+      "id": "D1f",
+      "check": "fixed args output position is the mission root, never a probe directory",
+      "status": "PASS",
+      "pass": true,
+      "detail": "arg2=/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14 is_probe=False"
+    },
+    {
+      "id": "D6",
+      "check": "digest.json and digest.md share one process write (mtime spread < 50 ms)",
+      "status": "PASS",
+      "pass": true,
+      "detail": "mtime spread = 0.000 ms"
+    },
+    {
+      "id": "D7",
+      "check": "all four registered probe directories exist, are byte-identical to the canonical probe pair, and none is the final args output",
+      "status": "PASS",
+      "pass": true,
+      "detail": {
+        "dirs": [
+          "probe",
+          "probe2",
+          "probe_artifacts",
+          "probe_registry"
+        ],
+        "canonical_sha256": {
+          "digest.json": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+          "digest.md": "3047ef66747e96b241f462769078c169d8a43c05da38f049a371226e322d64f2"
+        }
+      }
+    },
+    {
+      "id": "AC3a",
+      "check": "digest.json equals an independent Python reduction on every field",
+      "status": "PASS",
+      "pass": true,
+      "detail": "all fields equal"
+    },
+    {
+      "id": "AC3b",
+      "check": "global completion_percent serialises as a two-decimal JSON number",
+      "status": "PASS",
+      "pass": true,
+      "detail": "literal token: 86.67"
+    },
+    {
+      "id": "AC3c",
+      "check": "sites object per-site totals sum to the global totals",
+      "status": "PASS",
+      "pass": true,
+      "detail": "keys=['North', 'South']"
+    },
+    {
+      "id": "AC3d",
+      "check": "digest.md states the same values as digest.json, per-site at two decimals",
+      "status": "PASS",
+      "pass": true,
+      "detail": "expected rows: ['| North | 2 | 22 | 18 | 5 | 81.82 |', '| South | 1 | 8 | 8 | 1 | 100.00 |']"
+    },
+    {
+      "id": "AC3e",
+      "check": "digest.md documents a reproducible method section",
+      "status": "PASS",
+      "pass": true,
+      "detail": "Method section and reproduce line present"
+    },
+    {
+      "id": "AC3f",
+      "check": "raw digest.json: every count field is a bare integer literal (no quotes, no decimals), at global and site level",
+      "status": "PASS",
+      "pass": true,
+      "detail": {
+        "global_tokens": {
+          "row_count": "3",
+          "scheduled": "30",
+          "completed": "26",
+          "incidents": "6"
+        },
+        "site_count_tokens": [
+          "30",
+          "26",
+          "6",
+          "2",
+          "22",
+          "18",
+          "5",
+          "1",
+          "8",
+          "8",
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "D4",
+      "check": "per-site completion_percent carries two decimals as a JSON numeric literal",
+      "status": "ADVISORY",
+      "pass": true,
+      "advisory": true,
+      "detail": "literal per-site tokens: 81.82, 100. South serialises as 100 because JSON numeric literals carry no trailing-zero significance and JSON.stringify drops them. The numeric VALUE is exact (8/8*100 = 100.00), digest.md renders 100.00, and the two-decimal requirement in AC3 is scoped to the global field. The pinned procedure is immutable, so this is an unavoidable serialisation property of a correct value, not a data defect."
+    },
+    {
+      "id": "D2",
+      "check": "independent conformance harness passed all behavioural cases",
+      "status": "PASS",
+      "pass": true,
+      "detail": "verify/conformance.out.json -> all_passed: true (11 cases incl. half-up ties, scheduled=0, code-point order, malformed-input rejection)"
+    },
+    {
+      "id": "AC4a",
+      "check": "all deliverable and evidence files exist at mission root",
+      "status": "PASS",
+      "pass": true,
+      "detail": {
+        "digest.json": true,
+        "digest.md": true,
+        "invocation_receipt.json": true,
+        "verification.json": true,
+        "verification.md": true
+      }
+    }
+  ],
+  "failures": [],
+  "advisories": [
+    "D4"
+  ],
+  "verdict": "PASS"
+}

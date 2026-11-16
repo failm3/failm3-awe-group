@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "call_id": "47abe8e6-b488-451c-98c8-3de3152b4c44",
+  "mission_id": "r2-memory-transfer-1794781064860-source",
+  "role": "coder",
+  "model": "claude-fable-5-2",
+  "provider": "routercheap",
+  "operation": "generate",
+  "started_at": "2026-11-15T22:17:47.307Z",
+  "finished_at": "2026-11-15T22:19:14.833Z",
+  "status": "completed",
+  "outcome": "completed",
+  "usage": {
+    "input_tokens": 47433,
+    "output_tokens": 6703,
+    "total_tokens": 54136,
+    "reasoning_tokens": 0,
+    "cached_input_tokens": 19170
+  },
+  "usage_status": "reported",
+  "cost": {
+    "status": "UNKNOWN",
+    "amount": null,
+    "currency": "USD"
+  }
+}

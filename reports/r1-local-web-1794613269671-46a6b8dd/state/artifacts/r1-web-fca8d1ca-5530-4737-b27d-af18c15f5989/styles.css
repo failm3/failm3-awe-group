@@ -1,0 +1,14 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; max-width: 100%; }
+body { font-family: system-ui, sans-serif; line-height: 1.4; background: #f6f7f9; color: #1a1d21; overflow-wrap: anywhere; }
+.container { max-width: 40rem; margin: 0 auto; padding: 1rem; }
+h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+.task-form, .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+.task-form input[type="text"] { flex: 1 1 12rem; min-width: 0; }
+input, select, button { font: inherit; padding: 0.4rem 0.6rem; max-width: 100%; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+.task-list { list-style: none; margin: 0; padding: 0; }
+.task { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding: 0.5rem; margin-bottom: 0.5rem; background: #ffffff; border: 1px solid #d5d9df; border-radius: 6px; }
+.task input[type="checkbox"] { flex: 0 0 auto; width: 1.2rem; height: 1.2rem; padding: 0; }
+.task-text { flex: 1 1 8rem; min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
+.task.done .task-text { text-decoration: line-through; color: #5b6470; }

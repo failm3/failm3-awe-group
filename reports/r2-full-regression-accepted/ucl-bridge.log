@@ -1,0 +1,90 @@
+TAP version 13
+# Subtest: tool is registered in the Nox registry under its own id
+ok 1 - tool is registered in the Nox registry under its own id
+  ---
+  duration_ms: 2.093675
+  type: 'test'
+  ...
+# Subtest: denied with no mission tool context
+ok 2 - denied with no mission tool context
+  ---
+  duration_ms: 3.592701
+  type: 'test'
+  ...
+# Subtest: denied when the mission was not granted capability_library
+ok 3 - denied when the mission was not granted capability_library
+  ---
+  duration_ms: 0.633053
+  type: 'test'
+  ...
+# Subtest: flag off by default: DISABLED, no grant, no authority
+ok 4 - flag off by default: DISABLED, no grant, no authority
+  ---
+  duration_ms: 1.355913
+  type: 'test'
+  ...
+# Subtest: enabled but index missing: UNAVAILABLE, never throws
+ok 5 - enabled but index missing: UNAVAILABLE, never throws
+  ---
+  duration_ms: 0.399034
+  type: 'test'
+  ...
+# Subtest: enabled with index: UNVETTED candidates, hazards hidden, never approved
+ok 6 - enabled with index: UNVETTED candidates, hazards hidden, never approved
+  ---
+  duration_ms: 137.463909
+  type: 'test'
+  ...
+# Subtest: unsupported filter values fail closed without broadening results
+ok 7 - unsupported filter values fail closed without broadening results
+  ---
+  duration_ms: 96.898413
+  type: 'test'
+  ...
+# Subtest: punctuation or stopword query abstains instead of fabricating rows
+ok 8 - punctuation or stopword query abstains instead of fabricating rows
+  ---
+  duration_ms: 136.441523
+  type: 'test'
+  ...
+# Subtest: lookups never mutate the index file
+ok 9 - lookups never mutate the index file
+  ---
+  duration_ms: 161.380611
+  type: 'test'
+  ...
+# Subtest: hostile query text is treated as data, never as an instruction or FTS operator
+ok 10 - hostile query text is treated as data, never as an instruction or FTS operator
+  ---
+  duration_ms: 168.313192
+  type: 'test'
+  ...
+# Subtest: foreign, corrupt and stale indexes are refused without filesystem changes
+ok 11 - foreign, corrupt and stale indexes are refused without filesystem changes
+  ---
+  duration_ms: 514.698392
+  type: 'test'
+  ...
+# Subtest: index failure and restoration are visible on successive calls without touching Nox memory
+ok 12 - index failure and restoration are visible on successive calls without touching Nox memory
+  ---
+  duration_ms: 191.035594
+  type: 'test'
+  ...
+# Subtest: the tool cannot widen its own scope: hazardous rows only on explicit request
+ok 13 - the tool cannot widen its own scope: hazardous rows only on explicit request
+  ---
+  duration_ms: 142.119499
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1564.152556
+(node:24965) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

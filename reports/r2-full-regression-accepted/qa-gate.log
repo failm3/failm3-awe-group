@@ -1,0 +1,54 @@
+
+── T1 — regression: production false positive MUST be blocked ──
+  ✓ T1.1 gate blocks the false-positive PASS
+  ✓ T1.2 a placeholder blocker is reported
+  ✓ T1.3 LLM verdict is preserved as advisory
+  ✓ T1.4 blockers are non-empty and human-readable
+
+── T2 — negative: a genuinely complete mission MUST pass ──
+  ✓ T2.1 gate passes a complete mission
+  ✓ T2.2 no blockers reported
+
+── T3 — negative: an unevaluated criterion MUST block ──
+  ✓ T3.1 gate blocks when a criterion is unevaluated
+  ✓ T3.2 blocker names the unevaluated criterion
+  ✓ T3.3 criterion_checks records the failure
+
+── T4 — negative: a failed criterion MUST block even with a high score ──
+  ✓ T4.1 gate blocks a failed criterion at score 10
+  ✓ T4.2 blocker identifies the failed criterion
+
+── T5 — negative: major/critical defects MUST block ──
+  ✓ T5.1 gate blocks on a major defect
+  ✓ T5.2 blocker quotes the defect
+
+── T6 — negative: a low score MUST block ──
+  ✓ T6.1 gate blocks a score below the threshold
+  ✓ T6.2 blocker mentions the threshold
+
+── T7 — negative: a FAIL verdict MUST never be upgraded ──
+  ✓ T7.1 gate keeps a FAIL as FAIL
+  ✓ T7.2 blocker records the LLM FAIL
+
+── T8 — placeholder detection ──
+  ✓ T8.1 detects 'Pending transcription'
+  ✓ T8.2 detects 'placeholder'
+  ✓ T8.3 detects 'TODO'
+  ✓ T8.4 does not flag clean text
+  ✓ T8.5 no false positive on the word 'todos' inside another word
+  ✓ T8.6 marker list is non-empty
+
+── T9 — criterion matching robustness ──
+  ✓ T9.1 all three criteria matched
+  ✓ T9.2 matching survives paraphrasing
+  ✓ T9.3 similarity is bounded and monotone
+
+── T10 — deliverable presence checks ──
+  ✓ T10.1 image deliverable detected
+  ✓ T10.2 url deliverable detected
+  ✓ T10.3 missing image deliverable is reported
+  ✓ T10.4 missing url deliverable is reported
+
+============================================================
+QA GATE REGRESSION TESTS: 30 passed, 0 failed
+============================================================

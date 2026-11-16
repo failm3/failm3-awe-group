@@ -1,0 +1,416 @@
+{
+  "mission_id": "r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4",
+  "verification_type": "independent recomputation of observation-digest-v1 output",
+  "verifier": "analyst (python3 stdlib only; separate implementation from the Node procedure)",
+  "input_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/input/pilot.observations.json",
+  "input_bytes": 474,
+  "input_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+  "method": {
+    "implementation": "python3 3.x standard library only (json, hashlib, decimal.ROUND_HALF_UP)",
+    "row_source": "input/pilot.observations.json read as raw bytes, then UTF-8 decoded and parsed",
+    "completion_percent": "100*completed/scheduled quantized to 0.01 with ROUND_HALF_UP; 0.00 when scheduled==0",
+    "site_keys": "derived from the raw fixture (distinct row['site'] values), NOT taken from digest.json"
+  },
+  "raw_fixture": {
+    "source": "Lumen Harbor field pilot",
+    "period": "2026-W45",
+    "rows": [
+      {
+        "index": 0,
+        "site": "North",
+        "cohort": "Harbor",
+        "scheduled": 12,
+        "completed": 11,
+        "incidents": 2
+      },
+      {
+        "index": 1,
+        "site": "South",
+        "cohort": "Harbor",
+        "scheduled": 8,
+        "completed": 8,
+        "incidents": 1
+      },
+      {
+        "index": 2,
+        "site": "North",
+        "cohort": "Ridge",
+        "scheduled": 10,
+        "completed": 7,
+        "incidents": 3
+      }
+    ]
+  },
+  "independent_totals": {
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": "86.67",
+    "completion_percent_exact": "86.6666666667"
+  },
+  "independent_site_totals": {
+    "North": {
+      "row_count": "2",
+      "scheduled": "22",
+      "completed": "18",
+      "incidents": "5",
+      "completion_percent": "81.82"
+    },
+    "South": {
+      "row_count": "1",
+      "scheduled": "8",
+      "completed": "8",
+      "incidents": "1",
+      "completion_percent": "100.00"
+    }
+  },
+  "per_site_intermediate_sums": {
+    "North": {
+      "row_indices": [
+        0,
+        2
+      ],
+      "scheduled_terms": [
+        12,
+        10
+      ],
+      "completed_terms": [
+        11,
+        7
+      ],
+      "incidents_terms": [
+        2,
+        3
+      ],
+      "scheduled_sum": 22,
+      "completed_sum": 18,
+      "incidents_sum": 5,
+      "percent_exact": "81.8181818182",
+      "percent_2dp": "81.82"
+    },
+    "South": {
+      "row_indices": [
+        1
+      ],
+      "scheduled_terms": [
+        8
+      ],
+      "completed_terms": [
+        8
+      ],
+      "incidents_terms": [
+        1
+      ],
+      "scheduled_sum": 8,
+      "completed_sum": 8,
+      "incidents_sum": 1,
+      "percent_exact": "100.0000000000",
+      "percent_2dp": "100.00"
+    }
+  },
+  "derived_site_key_set": [
+    "North",
+    "South"
+  ],
+  "summation_check": {
+    "sum_of_site_totals_vs_top_level": {
+      "row_count": {
+        "sum_of_site_totals": 3,
+        "top_level": 3,
+        "equal": true
+      },
+      "scheduled": {
+        "sum_of_site_totals": 30,
+        "top_level": 30,
+        "equal": true
+      },
+      "completed": {
+        "sum_of_site_totals": 26,
+        "top_level": 26,
+        "equal": true
+      },
+      "incidents": {
+        "sum_of_site_totals": 6,
+        "top_level": 6,
+        "equal": true
+      }
+    },
+    "sum_of_digest_site_totals_vs_digest_top_level": {
+      "row_count": {
+        "sum_of_digest_site_totals": 3,
+        "digest_top_level": 3,
+        "equal": true
+      },
+      "scheduled": {
+        "sum_of_digest_site_totals": 30,
+        "digest_top_level": 30,
+        "equal": true
+      },
+      "completed": {
+        "sum_of_digest_site_totals": 26,
+        "digest_top_level": 26,
+        "equal": true
+      },
+      "incidents": {
+        "sum_of_digest_site_totals": 6,
+        "digest_top_level": 6,
+        "equal": true
+      }
+    }
+  },
+  "digest_json": {
+    "bytes": 563,
+    "sha256": "9cc4baeca60dc291cd863ce370ecc2ee39d66bdb6d2dc4a5694d446df2545c0d",
+    "duplicate_keys": [],
+    "field_match_table": [
+      {
+        "field": "row_count",
+        "independent": "3",
+        "digest_json": 3,
+        "match": true,
+        "present": true
+      },
+      {
+        "field": "scheduled",
+        "independent": "30",
+        "digest_json": 30,
+        "match": true,
+        "present": true
+      },
+      {
+        "field": "completed",
+        "independent": "26",
+        "digest_json": 26,
+        "match": true,
+        "present": true
+      },
+      {
+        "field": "incidents",
+        "independent": "6",
+        "digest_json": 6,
+        "match": true,
+        "present": true
+      },
+      {
+        "field": "completion_percent",
+        "independent": "86.67",
+        "digest_json": 86.67,
+        "match": true,
+        "present": true
+      }
+    ],
+    "input_sha256_match": true,
+    "site_key_set_match": true,
+    "extra_site_keys_in_digest": [],
+    "per_site_match_table": [
+      {
+        "site": "North",
+        "row_count": {
+          "independent": "2",
+          "digest_json": 2,
+          "match": true,
+          "present": true
+        },
+        "scheduled": {
+          "independent": "22",
+          "digest_json": 22,
+          "match": true,
+          "present": true
+        },
+        "completed": {
+          "independent": "18",
+          "digest_json": 18,
+          "match": true,
+          "present": true
+        },
+        "incidents": {
+          "independent": "5",
+          "digest_json": 5,
+          "match": true,
+          "present": true
+        },
+        "completion_percent": {
+          "independent": "81.82",
+          "digest_json": 81.82,
+          "match": true,
+          "present": true
+        }
+      },
+      {
+        "site": "South",
+        "row_count": {
+          "independent": "1",
+          "digest_json": 1,
+          "match": true,
+          "present": true
+        },
+        "scheduled": {
+          "independent": "8",
+          "digest_json": 8,
+          "match": true,
+          "present": true
+        },
+        "completed": {
+          "independent": "8",
+          "digest_json": 8,
+          "match": true,
+          "present": true
+        },
+        "incidents": {
+          "independent": "1",
+          "digest_json": 1,
+          "match": true,
+          "present": true
+        },
+        "completion_percent": {
+          "independent": "100.00",
+          "digest_json": 100,
+          "match": true,
+          "present": true
+        }
+      }
+    ],
+    "completion_percent_literal_check": {
+      "top_level": true,
+      "literals": [
+        "86.67",
+        "81.82",
+        "100"
+      ],
+      "note": "JSON numbers cannot carry trailing zeros; 100 vs 100.00 is encoding, value exact"
+    }
+  },
+  "digest_md": {
+    "bytes": 1930,
+    "sha256": "49440aa1ff5911e834fb1a295cf8e074f1d5206857f5515a9984d5b3aa84deb6",
+    "checks": [
+      {
+        "check": "md.overall.row_count",
+        "pass": true,
+        "detail": "md=3 expected=3"
+      },
+      {
+        "check": "md.overall.scheduled",
+        "pass": true,
+        "detail": "md=30 expected=30"
+      },
+      {
+        "check": "md.overall.completed",
+        "pass": true,
+        "detail": "md=26 expected=26"
+      },
+      {
+        "check": "md.overall.incidents",
+        "pass": true,
+        "detail": "md=6 expected=6"
+      },
+      {
+        "check": "md.overall.completion_percent",
+        "pass": true,
+        "detail": "md=86.67 expected=86.67"
+      },
+      {
+        "check": "md.site_key_set",
+        "pass": true,
+        "detail": "md=['North', 'South'] raw=['North', 'South']"
+      },
+      {
+        "check": "md.site_row.North",
+        "pass": true,
+        "detail": "md=('2', '22', '18', '5', '81.82') expected=(2,22,18,5,81.82)"
+      },
+      {
+        "check": "md.site_row.South",
+        "pass": true,
+        "detail": "md=('1', '8', '8', '1', '100.00') expected=(1,8,8,1,100.00)"
+      },
+      {
+        "check": "md.TOTAL_row_present",
+        "pass": true,
+        "detail": "total=('3', '30', '26', '6', '86.67')"
+      },
+      {
+        "check": "md.TOTAL_row_values",
+        "pass": true,
+        "detail": "md=('3', '30', '26', '6', '86.67') expected=(3,30,26,6,86.67)"
+      },
+      {
+        "check": "md.states_input_path",
+        "pass": true,
+        "detail": "absolute input fixture path present"
+      },
+      {
+        "check": "md.states_input_sha256",
+        "pass": true,
+        "detail": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+      },
+      {
+        "check": "md.states_formula",
+        "pass": true,
+        "detail": "formula stated"
+      },
+      {
+        "check": "md.states_rounding",
+        "pass": true,
+        "detail": "rounding + dp stated"
+      },
+      {
+        "check": "md.states_zero_guard",
+        "pass": true,
+        "detail": "scheduled=0 guard stated"
+      },
+      {
+        "check": "md.states_invocation",
+        "pass": true,
+        "detail": "node /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/procedures/observation-digest-v1.js /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/input/pilot.observations.json /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4"
+      },
+      {
+        "check": "md.invocation_uses_qualified_procedure",
+        "pass": true,
+        "detail": "qualified executable path"
+      },
+      {
+        "check": "md.invocation_args_exact",
+        "pass": true,
+        "detail": "fixed args = [input, artifacts-root]"
+      },
+      {
+        "check": "md.invocation_no_probe_path",
+        "pass": true,
+        "detail": "no probe dir referenced"
+      },
+      {
+        "check": "md.decimals_2dp_all_percent",
+        "pass": true,
+        "detail": {
+          "North": "81.82",
+          "South": "100.00"
+        }
+      },
+      {
+        "check": "md.same_values_as_json",
+        "pass": true,
+        "detail": "overall block equals digest.json"
+      }
+    ]
+  },
+  "mismatches": [],
+  "hard_failures": [],
+  "verdict": "PASS",
+  "verdict_reasons": [
+    "Every independently recomputed numeric field matches digest.json exactly (row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67; North 81.82; South 100.00).",
+    "The site key set derived from the raw fixture ['North','South'] equals the digest's key set, with no extra or missing keys.",
+    "Per-site totals sum exactly to the top-level totals in both the independent computation and the digest.",
+    "The recomputed input SHA-256 matches digest.json's input_sha256 and digest.md's stated SHA-256.",
+    "digest.md presents the same values as digest.json and states a reproducible method (absolute input path, formula, half-up rounding to 2 dp, zero-scheduled guard, and the exact node invocation with the qualified procedure path and the fixed args)."
+  ],
+  "notes": [
+    "digest.json encodes completion_percent as JSON numbers, so South appears as 100 while digest.md renders 100.00. This is JSON numeric encoding, not a value difference; the rendered 2-decimal form is exact in digest.md and 86.67 in JSON.",
+    "No rounding tie occurs in this fixture (86.666... and 81.818... both round unambiguously), so half-up vs half-even cannot cause divergence here.",
+    "digest.json is byte-identical to the earlier probe run probe/out-real/digest.json (sha256 9cc4baeca60dc291cd863ce370ecc2ee39d66bdb6d2dc4a5694d446df2545c0d), consistent with the determinism claim.",
+    "digest.md differs from probe/out-real/digest.md only on line 13, where the reproduce command now correctly names procedures/observation-digest-v1.js and the artifacts root instead of the probe copy path and probe output directory.",
+    "digest.json/digest.md/input/procedure were read only; their sizes and mtimes are unchanged by this verification.",
+    "Scope respected: nothing written outside the artifacts root; the qualified procedure was not re-run; the digest files were not modified."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "schema": "awe.research-release-provenance.v1",
+  "created_date": "2026-11-17",
+  "release_type": "research snapshot; R2 not accepted",
+  "sources": {
+    "primary": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy",
+      "branch": "r2/final-autonomy",
+      "head": "a2eae351f813befdae585e93e406973365920562"
+    },
+    "evidence_recovery": {
+      "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration",
+      "branch": "r2/ucl-integration",
+      "head": "c42efdde4c17507d126c797e772f9500f73bce79",
+      "restored_files": 45,
+      "selection_manifest": "reports/r2-final-evidence.sha256"
+    },
+    "historical_worktree": {
+      "path": "/home/nox/awe-group-cleanroom-20261112",
+      "branch": "r1/dev",
+      "head": "bd3859a550a046c16454f44ddc2648c81318f14e",
+      "public_copy": false,
+      "private_backup": true
+    }
+  },
+  "external_sources": [
+    {
+      "repository": "https://github.com/failm3/awe-group-runtime",
+      "commit": "d5e9d857dbdeb8f31f9a798b10b5af4af639dbda",
+      "committed_at": "2026-11-11T12:08:07Z"
+    },
+    {
+      "repository": "https://github.com/failm3/nivict-ai-academy",
+      "commit": "9b9122366a0be96303153930b9e9f8bbd10ed76c",
+      "committed_at": "2026-11-16T02:15:54Z"
+    }
+  ],
+  "unavailable_sources": [
+    "failm3/awe-opencode-recordings",
+    "failm3/awe-group-observer",
+    "failm3/awe-model-council"
+  ],
+  "transformations": [
+    "selected public evidence copy",
+    "excluded private/generated/binary material by documented allowlist",
+    "added PROJECT-INDEX, AS-IS architecture, evidence index, provenance, security scans and assembly report",
+    "redacted 302 Gmail occurrences across four academy validation JSON files to 23 stable example.invalid aliases",
+    "removed seven temporary transpiler/test-cache directories from public copy",
+    "replaced copied AGENTS.md with research-only safety instructions; original remains in Git history/private backup",
+    "added README research entry-point banner and explicit evidence-log unignore rule",
+    "restored 2120 text mission-artifact files omitted by an intermediate over-broad artifacts/ exclusion; four excluded files are R1 PNG screenshots",
+    "narrowed the artifacts exclusion to root-only /artifacts/ and added reproducible assembly exclusion rules and a snapshot verifier",
+    "removed 117 empty .oc-isolated/cache directory trees from restored mission artifacts; zero files or symlinks, source/private backup unchanged",
+    "no source-code or historical R2 verdict edits"
+  ],
+  "extensions": {
+    ".before": 1,
+    ".cjs": 3901,
+    ".css": 5,
+    ".csv": 19,
+    ".err": 10,
+    ".exit_code": 2,
+    ".html": 9,
+    ".js": 18,
+    ".json": 2932,
+    ".jsonl": 2,
+    ".lock": 1,
+    ".log": 55,
+    ".md": 616,
+    ".mjs": 370,
+    ".orig": 1,
+    ".out": 4,
+    ".py": 78,
+    ".sh": 4,
+    ".sha256": 21,
+    ".sql": 30,
+    ".sqlite": 2,
+    ".stderr": 2,
+    ".stdout": 1,
+    ".svg": 4,
+    ".toml": 1,
+    ".ts": 143,
+    ".txt": 68,
+    ".yaml": 2,
+    "[none]": 8
+  },
+  "excluded": [
+    {
+      "path": "node_modules, dist, browser binaries",
+      "reason": "reproducible from lockfile or host-specific; third-party bulk"
+    },
+    {
+      "path": ".oc-isolated, browser page captures, screenshots",
+      "reason": "private profiles/caches and possible personal page data"
+    },
+    {
+      "path": "memory.db, WAL, SHM",
+      "reason": "potential private messages; originals retained locally"
+    },
+    {
+      "path": "temporary test workspaces and .audit-cache",
+      "reason": "host-specific generated/private artifacts"
+    },
+    {
+      "path": "academy chat logs, prompts, uploads, raw provenance, archives/chunks",
+      "reason": "allowlist excludes private dialogue, archives and nonessential data"
+    },
+    {
+      "path": "unavailable external repositories",
+      "reason": "HTTP 404 without authentication; no content obtained"
+    }
+  ],
+  "licensing": {
+    "package_json": "ISC",
+    "root_license_file": false,
+    "external_runtime_github_license": null,
+    "external_academy_github_license": null,
+    "note": "Third-party rights unchanged; no blanket reuse grant inferred."
+  },
+  "historical_results": {
+    "professional_run5_original": "FAIL",
+    "professional_run5_reverification": "PASS",
+    "experience_reuse": "invalid/negative",
+    "r2": "NOT CONFIRMED",
+    "r3": "NOT STARTED"
+  },
+  "safe_copy_transformations": "SAFE-COPY-TRANSFORMATIONS.json",
+  "security_registry": "reports/research-publication-security/",
+  "link_gap_registry": "reports/RESEARCH-LINK-GAPS.json",
+  "snapshot_file_count_including_this_file": 8310,
+  "snapshot_bytes": 81161874
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "scope": "delimited-text-recovery",
+  "solverId": "coder",
+  "sourceMissionId": "r2-experience-reuse-1794858271974-source",
+  "sourceSpecHash": "ff1f6bdbdf1cb7267e5410049ac2327df434f6cda60450dbe833f7b27aa52bd3",
+  "capabilityHash": "9cbe3c7a6f6d92b5691112e0398a5c5828028cafe9f07fa9b93ad95b1d3ce104",
+  "profileHash": "9108d037318c284e1c16a6dd55bae8d07dddc86ac66723ac4b2c72a35fa00e5f",
+  "sourceArtifactId": "e8ed2d94-220a-4d0d-8a12-cd9f30c495e0",
+  "sourceSha256": "9ed9905fa6a1fc512e84012c034bcd2bff24ef60e9ec65ed790d5bf8fae91b4f",
+  "verificationArtifactId": "a8231ce6-16c7-405a-983e-9970a23b4699",
+  "verificationSha256": "c3dc8ea859709dd74a4349d92029dfeb7d9b8e5d7dccaa5221f2e6ae049911bc",
+  "qualificationId": "r2-experience-reuse-1794858271974-qualification",
+  "qualificationGeneration": 1,
+  "receiptId": "r2-experience-reuse-1794858271974-receipt",
+  "createdAt": "2026-11-16T19:44:34.196Z"
+}

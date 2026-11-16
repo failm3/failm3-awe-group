@@ -1,0 +1,14 @@
+{
+  "id": "f2792256-df7f-46a3-80b2-94c08ff0c351",
+  "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+  "type": "json",
+  "name": "probe/fixture.02.edge.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/fixture.02.edge.json",
+  "created_at": "2026-11-16T04:52:54.264Z",
+  "metadata": {
+    "size_bytes": 242,
+    "sha256": "92071c75e9c173d15ecf708278d4f167b03776e771225f3dea6b5ce76b9250cf",
+    "reconciled": true,
+    "revision": 1
+  }
+}

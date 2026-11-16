@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "kind": "live-local-agent-built-static-web-practice",
+  "qualification": "engineering-practice-only-not-product-qualified",
+  "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "run_root": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269",
+  "workspace": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "approved_spec_sha256": "f4dce2697161ab18ede9acc1c185576c18488848fd8d9704c9eb294c2c6dacb2",
+  "verifier_contract_sha256": "4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8",
+  "mission_status": "paused",
+  "independent_outcome": "PASS",
+  "independent_tree_sha256": "a71660c6e6562f9542ed16013f4e24dedd3dcc179106ebc1bb9d72efe31ababe",
+  "independent_receipt": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/independent-verification.json",
+  "accepted": false,
+  "provider_cost": "UNKNOWN",
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "cb787c91-3b32-4eba-8b9e-16e3fa0f71a3",
+      "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-14T00:21:26.554Z",
+      "finished_at": "2026-11-14T00:22:08.480Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 3000,
+        "output_tokens": 3748,
+        "total_tokens": 6748,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "e95f1cb5-3821-44c2-88f9-6472bceada9b",
+      "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+      "role": "coder",
+      "model": "claude-fable-5-2",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-14T00:22:08.571Z",
+      "finished_at": "2026-11-14T00:23:50.955Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 105845,
+        "output_tokens": 15684,
+        "total_tokens": 121529,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 50870
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "59c7d610-d91e-4e56-b6cb-f45a9fd73117",
+      "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-14T00:23:54.216Z",
+      "finished_at": "2026-11-14T00:24:10.353Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 8236,
+        "output_tokens": 1219,
+        "total_tokens": 9455,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "65211a17-ac88-4460-9162-6198970248ab",
+      "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+      "role": "executor",
+      "model": "claude-fable-5-2",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-14T00:24:10.417Z",
+      "finished_at": "2026-11-14T00:27:23.242Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 159733,
+        "output_tokens": 20890,
+        "total_tokens": 180623,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 111477
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "d51834ce-07d4-4a54-9d02-45f0c138aad9",
+      "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-14T00:27:23.331Z",
+      "finished_at": "2026-11-14T00:27:46.448Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 16960,
+        "output_tokens": 1699,
+        "total_tokens": 18659,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 714
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "2d478e68-33cd-4df1-b485-7d8dd5aaf726",
+      "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+      "role": "executor",
+      "model": "claude-fable-5-2",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-14T00:27:46.511Z",
+      "finished_at": "2026-11-14T00:31:17.489Z",
+      "status": "unknown",
+      "outcome": "UNKNOWN",
+      "usage": {
+        "input_tokens": 85008,
+        "output_tokens": 19605,
+        "total_tokens": 104613,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 24563
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      },
+      "reason": "provider_aborted"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "565d910f-8721-44ce-805d-3088c8eecec1",
+      "name": "product/index.html",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/product/index.html",
+      "sha256": "7ab4096b237c0ea62bd8a747209a48fe67728bf0647c45dbea834a6cbc61d6ff"
+    },
+    {
+      "id": "258bf739-06bb-488d-a4c5-3fc5aa2fd142",
+      "name": "product/styles.css",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/product/styles.css",
+      "sha256": "78ad22edf3eaee5bfb075286c11e36da8ec8f0761bc4ba92c97361db351a0a70"
+    },
+    {
+      "id": "575c1a32-d295-4ecd-9569-ca87c10760f4",
+      "name": "product/app.js",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/product/app.js",
+      "sha256": "a0fd4c813b034fbebe729c567cc97c5a97230afabdb8d68d3e16a3967627d77a"
+    },
+    {
+      "id": "c0912777-77b3-4f90-9fb2-86c139bc8f9a",
+      "name": "product/favicon.svg",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/product/favicon.svg",
+      "sha256": "3c31b9291d91989fad7ac65d70b2b4fa5257a50e169cb4600411de319c9a718e"
+    },
+    {
+      "id": "269f3564-73f4-44d1-9d38-4921e7d4f581",
+      "name": ".independent-qa/web-verification.json",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/.independent-qa/web-verification.json",
+      "sha256": "3f4f1340c2af93298af52540f8980fbb3871529cdfd4c56fe377413dd8cf2509"
+    },
+    {
+      "id": "cd47d27b-4d79-4db9-84ac-6e3809b21239",
+      "name": "app.js",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/app.js",
+      "sha256": "ab7f2ebd7beca9906503e1902e4279dfe578455ba4ee5b10c12665b70225d19d"
+    },
+    {
+      "id": "3eb6e0ed-c5b3-4f37-b179-b23f4ee2bdec",
+      "name": "favicon.svg",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/favicon.svg",
+      "sha256": "3c31b9291d91989fad7ac65d70b2b4fa5257a50e169cb4600411de319c9a718e"
+    },
+    {
+      "id": "be194ecd-1b3f-4abf-9a0b-400463d8337d",
+      "name": "index.html",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/index.html",
+      "sha256": "7ab4096b237c0ea62bd8a747209a48fe67728bf0647c45dbea834a6cbc61d6ff"
+    },
+    {
+      "id": "06f0c120-16f0-4faa-bf29-2c8027cc30a8",
+      "name": "styles.css",
+      "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/styles.css",
+      "sha256": "78ad22edf3eaee5bfb075286c11e36da8ec8f0761bc4ba92c97361db351a0a70"
+    }
+  ],
+  "deployment": "NOT_PERFORMED",
+  "publication": "NOT_PERFORMED"
+}

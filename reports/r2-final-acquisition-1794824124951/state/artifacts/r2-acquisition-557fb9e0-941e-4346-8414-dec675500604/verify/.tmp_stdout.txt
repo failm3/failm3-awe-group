@@ -1,0 +1,1 @@
+{"wrote":["digest.json","digest.md"],"output_dir":"/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604","row_count":3,"scheduled":30,"completed":26,"incidents":6,"completion_percent":"86.67"}

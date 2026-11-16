@@ -1,0 +1,929 @@
+{
+  "schema": "r2-final-professional-reverification-v1",
+  "mode": "offline-readback",
+  "run_root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T20-21-29-437Z-3269230",
+  "original_summary_sha256": "c9278175b2d3e9dd12d0b31293dcbe20ee15b31b946962d8d4999677da24772a",
+  "original_summary_passed": false,
+  "original_attestation_sha256": "3c2f45a2f22d9d3f8405611e2fc5b45403b3e94ac284b21b28a257c87027c964",
+  "original_protocol_intact": true,
+  "original_attestation": {
+    "schema": "r2-final-professional-attestation-v1",
+    "harness_files": [
+      {
+        "file": "scripts/r2-final-professional/README.md",
+        "sha256": "7f30552303eaa7a6c7f8122a020e7b98c4e747be86fcfae2ef124620299bbc7d"
+      },
+      {
+        "file": "scripts/r2-final-professional/fixtures.ts",
+        "sha256": "4832cae512967e24b21ae88b8aafc55efba8523573d587470e61b8de028c303c"
+      },
+      {
+        "file": "scripts/r2-final-professional/runner.ts",
+        "sha256": "3229712f3b7f85905018234f57da7930067e65eadd32e39c7f98c52f068a8da9"
+      },
+      {
+        "file": "scripts/r2-final-professional/verifier.ts",
+        "sha256": "19de685ad0271934ba89de58d95179e11c175576529b43eadeb2dd20d628f27e"
+      }
+    ],
+    "source_inputs": {
+      "sources/pilot-charter.txt": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+      "sources/weekly-observations.txt": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+      "sources/reviewer-note.txt": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+    },
+    "analytics_input_sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+    "analytics_schema_sha256": "3b6e8bea7261801c519a7cac29f538d3affb5a438ebcfa4b5b6e055b7dc7560e"
+  },
+  "missions": [
+    {
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+      "status": "completed",
+      "qa_passed": true,
+      "independent_verification": {
+        "schema": "r2-final-professional-independent-verification-v1",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "independent": true,
+        "artifacts": [
+          {
+            "id": "bd670e15-71a2-43c0-9196-925df85a842e",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "name": "sources/pilot-charter.txt",
+            "revision": 1,
+            "sha256": "1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b",
+            "size_bytes": 523,
+            "attributed_delegations": []
+          },
+          {
+            "id": "c7d4af07-aae0-445d-8cd0-787ad635a1c2",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "name": "sources/weekly-observations.txt",
+            "revision": 1,
+            "sha256": "1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70",
+            "size_bytes": 593,
+            "attributed_delegations": []
+          },
+          {
+            "id": "fdc97e11-a464-41bf-aef8-9cf425bc71e8",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "name": "sources/reviewer-note.txt",
+            "revision": 1,
+            "sha256": "04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3",
+            "size_bytes": 421,
+            "attributed_delegations": []
+          },
+          {
+            "id": "8efced30-fa4a-4054-970e-dd62546d9392",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "name": "evidence-brook-cove.md",
+            "revision": 2,
+            "sha256": "2438439bb3f60ad60ee8d85ee82dfc4d2eea765cc35e0c9efb9acbf2612fb065",
+            "size_bytes": 6232,
+            "attributed_delegations": [
+              "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:researcher"
+            ]
+          },
+          {
+            "id": "eb4db0c9-dfde-44a0-8418-dc76987ee8fe",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "name": "evidence-alder.md",
+            "revision": 2,
+            "sha256": "46d9da4e04f3e0caca52f0608008aded2fc591b07ac8098a3ebd3e50d17e43fe",
+            "size_bytes": 7881,
+            "attributed_delegations": [
+              "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:researcher"
+            ]
+          },
+          {
+            "id": "8b70c2db-49d5-493d-a612-3cb877b44756",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "name": "research-brief.md",
+            "revision": 2,
+            "sha256": "8115716b5c81f9e4b3d67703be798793996f0ff5fa7e452ec3e8c2f250537853",
+            "size_bytes": 4636,
+            "attributed_delegations": [
+              "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:research-coordinator"
+            ]
+          }
+        ],
+        "intervals": [
+          {
+            "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "role": "researcher",
+            "started_at": "2026-11-16T20:23:16.685Z",
+            "finished_at": "2026-11-16T20:24:09.230Z",
+            "artifact_ids": [
+              "ccfe94ef-b7c7-45a6-b8bd-4b968bd7c7f0",
+              "8efced30-fa4a-4054-970e-dd62546d9392"
+            ]
+          },
+          {
+            "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "role": "researcher",
+            "started_at": "2026-11-16T20:23:16.684Z",
+            "finished_at": "2026-11-16T20:24:40.695Z",
+            "artifact_ids": [
+              "25d293e0-3bef-48b2-8555-284b384fcda6",
+              "eb4db0c9-dfde-44a0-8418-dc76987ee8fe"
+            ]
+          },
+          {
+            "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+            "role": "research-coordinator",
+            "started_at": "2026-11-16T20:22:00.790Z",
+            "finished_at": "2026-11-16T20:25:50.746Z",
+            "artifact_ids": [
+              "7f51f998-2db5-44ce-893d-328328170795",
+              "8b70c2db-49d5-493d-a612-3cb877b44756"
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "check": "mission reached completed through production independent QA",
+            "passed": true,
+            "detail": "completed"
+          },
+          {
+            "check": "real Head plan and successful specialist delegation tree recorded",
+            "passed": true,
+            "detail": "3 tree nodes; 1 successful top-level nodes"
+          },
+          {
+            "check": "every durable specialist used only approved tools and host-allowlisted models",
+            "passed": true,
+            "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:[\"file_list\",\"file_read\",\"delegate\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5"
+          },
+          {
+            "check": "exactly one top-level coordinator recursively launched exactly two real children",
+            "passed": true,
+            "detail": "1 top-level / 2 nested; qualifying parents: r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+          },
+          {
+            "check": "recursive children are distinct and actually overlapped in time",
+            "passed": true,
+            "detail": "one parallel reservation, artifact-producing distinct children and common host-observed overlap required"
+          },
+          {
+            "check": "real Head model call completed",
+            "passed": true,
+            "detail": "completed"
+          },
+          {
+            "check": "independent QA model call completed",
+            "passed": true,
+            "detail": "completed"
+          },
+          {
+            "check": "real specialist model calls completed",
+            "passed": true,
+            "detail": "research-coordinator:completed, researcher:completed, researcher:completed"
+          },
+          {
+            "check": "all model ledger records are terminal and attributed to this mission",
+            "passed": true,
+            "detail": "5 calls"
+          },
+          {
+            "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+            "passed": true,
+            "detail": "head-agent:claude-opus-5-5:routercheap | research-coordinator:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+          },
+          {
+            "check": "specialist role routing uses the host-selected Sonnet route",
+            "passed": true,
+            "detail": "role overrides are host configuration, not model output"
+          },
+          {
+            "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+            "passed": true,
+            "detail": "evidence-alder.md, evidence-brook-cove.md, research-brief.md, sources/pilot-charter.txt, sources/reviewer-note.txt, sources/weekly-observations.txt"
+          },
+          {
+            "check": "exactly two research extras are delegated evidence notes",
+            "passed": true,
+            "detail": "two evidence-note artifacts required"
+          },
+          {
+            "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+            "passed": true,
+            "detail": "6 supplied / 6 terminal IDs"
+          },
+          {
+            "check": "artifact sources/pilot-charter.txt bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "bd670e15-71a2-43c0-9196-925df85a842e:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; producer=trusted-host-input"
+          },
+          {
+            "check": "artifact sources/weekly-observations.txt bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "c7d4af07-aae0-445d-8cd0-787ad635a1c2:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; producer=trusted-host-input"
+          },
+          {
+            "check": "artifact sources/reviewer-note.txt bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "fdc97e11-a464-41bf-aef8-9cf425bc71e8:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3; producer=trusted-host-input"
+          },
+          {
+            "check": "artifact evidence-brook-cove.md bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "8efced30-fa4a-4054-970e-dd62546d9392:2438439bb3f60ad60ee8d85ee82dfc4d2eea765cc35e0c9efb9acbf2612fb065; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2"
+          },
+          {
+            "check": "artifact evidence-alder.md bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "eb4db0c9-dfde-44a0-8418-dc76987ee8fe:46d9da4e04f3e0caca52f0608008aded2fc591b07ac8098a3ebd3e50d17e43fe; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1"
+          },
+          {
+            "check": "artifact research-brief.md bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "8b70c2db-49d5-493d-a612-3cb877b44756:8115716b5c81f9e4b3d67703be798793996f0ff5fa7e452ec3e8c2f250537853; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+          },
+          {
+            "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+            "passed": true,
+            "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:researcher"
+          },
+          {
+            "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+            "passed": true,
+            "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:researcher"
+          },
+          {
+            "check": "observed delegation 3 has a valid mission-bound interval and unique node",
+            "passed": true,
+            "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:research-coordinator"
+          },
+          {
+            "check": "immutable local input bytes",
+            "passed": true,
+            "detail": "sources/pilot-charter.txt:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; sources/weekly-observations.txt:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; sources/reviewer-note.txt:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+          },
+          {
+            "check": "sources section maps every citation key to an immutable input",
+            "passed": true,
+            "detail": "Sources section found"
+          },
+          {
+            "check": "all three source citations used in brief body",
+            "passed": true,
+            "detail": "[S1], [S2], [S3]"
+          },
+          {
+            "check": "no malformed or invented citation keys",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "executive recommendation is separately identified",
+            "passed": true,
+            "detail": "recommendation language found"
+          },
+          {
+            "check": "factual findings and limitations are separately identified",
+            "passed": true,
+            "detail": "Findings and Limitations headings required"
+          },
+          {
+            "check": "exact site request and delay observations are bound to S2",
+            "passed": true,
+            "detail": "each site's 480 requests and 31/43/37 delays must occur together with S2"
+          },
+          {
+            "check": "acknowledgement median change and citation present",
+            "passed": true,
+            "detail": "18-to-11-minute change must cite S1"
+          },
+          {
+            "check": "weekday/site limitations and exclusions explicit",
+            "passed": true,
+            "detail": "bounded conclusion required"
+          },
+          {
+            "check": "no completed wider-rollout claim",
+            "passed": true,
+            "detail": "future/repeated measurement only"
+          },
+          {
+            "check": "every substantive factual paragraph carries a source citation",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "brief remains within independent QA evidence window",
+            "passed": true,
+            "detail": "4636 bytes"
+          }
+        ],
+        "passed": true
+      },
+      "checks": [
+        {
+          "check": "mission reached completed through production independent QA",
+          "passed": true,
+          "detail": "completed"
+        },
+        {
+          "check": "real Head plan and successful specialist delegation tree recorded",
+          "passed": true,
+          "detail": "3 tree nodes; 1 successful top-level nodes"
+        },
+        {
+          "check": "every durable specialist used only approved tools and host-allowlisted models",
+          "passed": true,
+          "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:[\"file_list\",\"file_read\",\"delegate\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:[\"file_list\",\"file_read\",\"file_write\",\"save_artifact\"]:claude-sonnet-5-5"
+        },
+        {
+          "check": "exactly one top-level coordinator recursively launched exactly two real children",
+          "passed": true,
+          "detail": "1 top-level / 2 nested; qualifying parents: r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+        },
+        {
+          "check": "recursive children are distinct and actually overlapped in time",
+          "passed": true,
+          "detail": "one parallel reservation, artifact-producing distinct children and common host-observed overlap required"
+        },
+        {
+          "check": "real Head model call completed",
+          "passed": true,
+          "detail": "completed"
+        },
+        {
+          "check": "independent QA model call completed",
+          "passed": true,
+          "detail": "completed"
+        },
+        {
+          "check": "real specialist model calls completed",
+          "passed": true,
+          "detail": "research-coordinator:completed, researcher:completed, researcher:completed"
+        },
+        {
+          "check": "all model ledger records are terminal and attributed to this mission",
+          "passed": true,
+          "detail": "5 calls"
+        },
+        {
+          "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+          "passed": true,
+          "detail": "head-agent:claude-opus-5-5:routercheap | research-coordinator:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | researcher:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+        },
+        {
+          "check": "specialist role routing uses the host-selected Sonnet route",
+          "passed": true,
+          "detail": "role overrides are host configuration, not model output"
+        },
+        {
+          "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+          "passed": true,
+          "detail": "evidence-alder.md, evidence-brook-cove.md, research-brief.md, sources/pilot-charter.txt, sources/reviewer-note.txt, sources/weekly-observations.txt"
+        },
+        {
+          "check": "exactly two research extras are delegated evidence notes",
+          "passed": true,
+          "detail": "two evidence-note artifacts required"
+        },
+        {
+          "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+          "passed": true,
+          "detail": "6 supplied / 6 terminal IDs"
+        },
+        {
+          "check": "artifact sources/pilot-charter.txt bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "bd670e15-71a2-43c0-9196-925df85a842e:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; producer=trusted-host-input"
+        },
+        {
+          "check": "artifact sources/weekly-observations.txt bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "c7d4af07-aae0-445d-8cd0-787ad635a1c2:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; producer=trusted-host-input"
+        },
+        {
+          "check": "artifact sources/reviewer-note.txt bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "fdc97e11-a464-41bf-aef8-9cf425bc71e8:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3; producer=trusted-host-input"
+        },
+        {
+          "check": "artifact evidence-brook-cove.md bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "8efced30-fa4a-4054-970e-dd62546d9392:2438439bb3f60ad60ee8d85ee82dfc4d2eea765cc35e0c9efb9acbf2612fb065; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2"
+        },
+        {
+          "check": "artifact evidence-alder.md bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "eb4db0c9-dfde-44a0-8418-dc76987ee8fe:46d9da4e04f3e0caca52f0608008aded2fc591b07ac8098a3ebd3e50d17e43fe; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1"
+        },
+        {
+          "check": "artifact research-brief.md bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "8b70c2db-49d5-493d-a612-3cb877b44756:8115716b5c81f9e4b3d67703be798793996f0ff5fa7e452ec3e8c2f250537853; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0"
+        },
+        {
+          "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+          "passed": true,
+          "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n2:researcher"
+        },
+        {
+          "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+          "passed": true,
+          "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:d1n1:researcher"
+        },
+        {
+          "check": "observed delegation 3 has a valid mission-bound interval and unique node",
+          "passed": true,
+          "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research:top0:research-coordinator"
+        },
+        {
+          "check": "immutable local input bytes",
+          "passed": true,
+          "detail": "sources/pilot-charter.txt:1054d0f2ca2da792c7688ebc903d6dbc1872e720894743daf7b9c3fbd05f435b; sources/weekly-observations.txt:1ef5fe692d1db454e9ff91e9e0f21706f9b5fe5090abc6237f12e07291f43f70; sources/reviewer-note.txt:04c458d687e11bddab128c89814fee67c4e449d56cb455d809e5915742caa3d3"
+        },
+        {
+          "check": "sources section maps every citation key to an immutable input",
+          "passed": true,
+          "detail": "Sources section found"
+        },
+        {
+          "check": "all three source citations used in brief body",
+          "passed": true,
+          "detail": "[S1], [S2], [S3]"
+        },
+        {
+          "check": "no malformed or invented citation keys",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "executive recommendation is separately identified",
+          "passed": true,
+          "detail": "recommendation language found"
+        },
+        {
+          "check": "factual findings and limitations are separately identified",
+          "passed": true,
+          "detail": "Findings and Limitations headings required"
+        },
+        {
+          "check": "exact site request and delay observations are bound to S2",
+          "passed": true,
+          "detail": "each site's 480 requests and 31/43/37 delays must occur together with S2"
+        },
+        {
+          "check": "acknowledgement median change and citation present",
+          "passed": true,
+          "detail": "18-to-11-minute change must cite S1"
+        },
+        {
+          "check": "weekday/site limitations and exclusions explicit",
+          "passed": true,
+          "detail": "bounded conclusion required"
+        },
+        {
+          "check": "no completed wider-rollout claim",
+          "passed": true,
+          "detail": "future/repeated measurement only"
+        },
+        {
+          "check": "every substantive factual paragraph carries a source citation",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "brief remains within independent QA evidence window",
+          "passed": true,
+          "detail": "4636 bytes"
+        },
+        {
+          "check": "saved candidate copy hashes to its recorded candidate digest",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "saved QA candidate projection matches the accepted artifact registry",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true
+    },
+    {
+      "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+      "status": "completed",
+      "qa_passed": true,
+      "independent_verification": {
+        "schema": "r2-final-professional-independent-verification-v1",
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+        "independent": true,
+        "artifacts": [
+          {
+            "id": "a9311c36-9583-4131-b91e-3d0dca348acf",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+            "name": "input/operations.csv",
+            "revision": 1,
+            "sha256": "3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414",
+            "size_bytes": 547,
+            "attributed_delegations": []
+          },
+          {
+            "id": "da055978-4b4e-4c18-8c2c-0d0d1e447c3e",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+            "name": "metrics.json",
+            "revision": 1,
+            "sha256": "f9f573db6405affb9be382de925f17e66458a89e08e338a0acc831cf118d88cc",
+            "size_bytes": 835,
+            "attributed_delegations": [
+              "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0:analyst"
+            ]
+          },
+          {
+            "id": "b766a129-316e-4143-be9f-9b24479465c3",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+            "name": "operations-brief.md",
+            "revision": 3,
+            "sha256": "4961b0d226ad1502ed39f7b54b4965148cfeec15c93c192de8d93be074279d26",
+            "size_bytes": 3857,
+            "attributed_delegations": [
+              "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1:writer"
+            ]
+          }
+        ],
+        "intervals": [
+          {
+            "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+            "role": "analyst",
+            "started_at": "2026-11-16T20:22:09.225Z",
+            "finished_at": "2026-11-16T20:22:51.953Z",
+            "artifact_ids": [
+              "da055978-4b4e-4c18-8c2c-0d0d1e447c3e"
+            ]
+          },
+          {
+            "node_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1",
+            "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+            "role": "writer",
+            "started_at": "2026-11-16T20:22:51.976Z",
+            "finished_at": "2026-11-16T20:24:59.854Z",
+            "artifact_ids": [
+              "10d09aaa-1104-454b-ae5c-0ae528bb3999",
+              "84471ebf-8782-439c-95b8-fd43eeeeec33",
+              "b766a129-316e-4143-be9f-9b24479465c3"
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "check": "mission reached completed through production independent QA",
+            "passed": true,
+            "detail": "completed"
+          },
+          {
+            "check": "real Head plan and successful specialist delegation tree recorded",
+            "passed": true,
+            "detail": "2 tree nodes; 2 successful top-level nodes"
+          },
+          {
+            "check": "every durable specialist used only approved tools and host-allowlisted models",
+            "passed": true,
+            "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0:[\"file_read\",\"file_list\",\"file_write\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1:[\"file_read\",\"file_list\",\"file_write\"]:claude-sonnet-5-5"
+          },
+          {
+            "check": "at least two distinct successful production specialist delegations",
+            "passed": true,
+            "detail": "analyst:r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0, writer:r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1"
+          },
+          {
+            "check": "real Head model call completed",
+            "passed": true,
+            "detail": "completed"
+          },
+          {
+            "check": "independent QA model call completed",
+            "passed": true,
+            "detail": "completed"
+          },
+          {
+            "check": "real specialist model calls completed",
+            "passed": true,
+            "detail": "analyst:completed, writer:completed"
+          },
+          {
+            "check": "all model ledger records are terminal and attributed to this mission",
+            "passed": true,
+            "detail": "4 calls"
+          },
+          {
+            "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+            "passed": true,
+            "detail": "head-agent:claude-opus-5-5:routercheap | analyst:claude-sonnet-5-5:routercheap | writer:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+          },
+          {
+            "check": "specialist role routing uses the host-selected Sonnet route",
+            "passed": true,
+            "detail": "role overrides are host configuration, not model output"
+          },
+          {
+            "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+            "passed": true,
+            "detail": "input/operations.csv, metrics.json, operations-brief.md"
+          },
+          {
+            "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+            "passed": true,
+            "detail": "3 supplied / 3 terminal IDs"
+          },
+          {
+            "check": "artifact input/operations.csv bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "a9311c36-9583-4131-b91e-3d0dca348acf:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414; producer=trusted-host-input"
+          },
+          {
+            "check": "artifact metrics.json bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "da055978-4b4e-4c18-8c2c-0d0d1e447c3e:f9f573db6405affb9be382de925f17e66458a89e08e338a0acc831cf118d88cc; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0"
+          },
+          {
+            "check": "artifact operations-brief.md bytes, identity and accepted attribution",
+            "passed": true,
+            "detail": "b766a129-316e-4143-be9f-9b24479465c3:4961b0d226ad1502ed39f7b54b4965148cfeec15c93c192de8d93be074279d26; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1"
+          },
+          {
+            "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+            "passed": true,
+            "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0:analyst"
+          },
+          {
+            "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+            "passed": true,
+            "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1:writer"
+          },
+          {
+            "check": "immutable local input bytes",
+            "passed": true,
+            "detail": "input/operations.csv:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414"
+          },
+          {
+            "check": "metrics JSON parses",
+            "passed": true,
+            "detail": "valid JSON"
+          },
+          {
+            "check": "metrics exactly match independent raw-CSV recomputation and numeric serialization",
+            "passed": true,
+            "detail": "all integer totals and two-decimal derived metrics match"
+          },
+          {
+            "check": "metrics schema includes exact groups and two-decimal derived JSON numbers",
+            "passed": true,
+            "detail": "exact aggregate groups and canonical two-decimal JSON numbers"
+          },
+          {
+            "check": "brief has exact Atlas operational findings",
+            "passed": true,
+            "detail": "93.68% / 7 defects / 80 variance minutes"
+          },
+          {
+            "check": "brief has exact Birch operational findings",
+            "passed": true,
+            "detail": "94.67% / 3 defects / 35 variance minutes"
+          },
+          {
+            "check": "brief has exact Cedar operational findings",
+            "passed": true,
+            "detail": "90.48% / 8 defects / 340 variance minutes"
+          },
+          {
+            "check": "brief has exact overall operational findings",
+            "passed": true,
+            "detail": "93.13% / 18 defects / 455 variance minutes"
+          },
+          {
+            "check": "brief has executive recommendation and bounded six-week conclusion",
+            "passed": true,
+            "detail": "recommendation must not generalize beyond supplied data"
+          },
+          {
+            "check": "brief documents input and exact formulas",
+            "passed": true,
+            "detail": "three calculation formulas including ×100 required"
+          },
+          {
+            "check": "brief contains only independently supported numeric facts",
+            "passed": true,
+            "detail": "all brief numbers occur in metrics, a recomputed group difference, or the bounded method"
+          },
+          {
+            "check": "both documents remain within independent QA evidence window",
+            "passed": true,
+            "detail": "4692 bytes"
+          }
+        ],
+        "passed": true
+      },
+      "checks": [
+        {
+          "check": "mission reached completed through production independent QA",
+          "passed": true,
+          "detail": "completed"
+        },
+        {
+          "check": "real Head plan and successful specialist delegation tree recorded",
+          "passed": true,
+          "detail": "2 tree nodes; 2 successful top-level nodes"
+        },
+        {
+          "check": "every durable specialist used only approved tools and host-allowlisted models",
+          "passed": true,
+          "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0:[\"file_read\",\"file_list\",\"file_write\"]:claude-sonnet-5-5 | r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1:[\"file_read\",\"file_list\",\"file_write\"]:claude-sonnet-5-5"
+        },
+        {
+          "check": "at least two distinct successful production specialist delegations",
+          "passed": true,
+          "detail": "analyst:r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0, writer:r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1"
+        },
+        {
+          "check": "real Head model call completed",
+          "passed": true,
+          "detail": "completed"
+        },
+        {
+          "check": "independent QA model call completed",
+          "passed": true,
+          "detail": "completed"
+        },
+        {
+          "check": "real specialist model calls completed",
+          "passed": true,
+          "detail": "analyst:completed, writer:completed"
+        },
+        {
+          "check": "all model ledger records are terminal and attributed to this mission",
+          "passed": true,
+          "detail": "4 calls"
+        },
+        {
+          "check": "every observed model is host-allowlisted and uses the dedicated provider route",
+          "passed": true,
+          "detail": "head-agent:claude-opus-5-5:routercheap | analyst:claude-sonnet-5-5:routercheap | writer:claude-sonnet-5-5:routercheap | qa-agent:claude-opus-5-5:routercheap"
+        },
+        {
+          "check": "specialist role routing uses the host-selected Sonnet route",
+          "passed": true,
+          "detail": "role overrides are host configuration, not model output"
+        },
+        {
+          "check": "exact accepted artifact set includes inputs, deliverables and bounded child evidence",
+          "passed": true,
+          "detail": "input/operations.csv, metrics.json, operations-brief.md"
+        },
+        {
+          "check": "terminal mission and supplied registry artifacts have exact unique ID-set equality",
+          "passed": true,
+          "detail": "3 supplied / 3 terminal IDs"
+        },
+        {
+          "check": "artifact input/operations.csv bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "a9311c36-9583-4131-b91e-3d0dca348acf:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414; producer=trusted-host-input"
+        },
+        {
+          "check": "artifact metrics.json bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "da055978-4b4e-4c18-8c2c-0d0d1e447c3e:f9f573db6405affb9be382de925f17e66458a89e08e338a0acc831cf118d88cc; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0"
+        },
+        {
+          "check": "artifact operations-brief.md bytes, identity and accepted attribution",
+          "passed": true,
+          "detail": "b766a129-316e-4143-be9f-9b24479465c3:4961b0d226ad1502ed39f7b54b4965148cfeec15c93c192de8d93be074279d26; producer=r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1"
+        },
+        {
+          "check": "observed delegation 1 has a valid mission-bound interval and unique node",
+          "passed": true,
+          "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top0:analyst"
+        },
+        {
+          "check": "observed delegation 2 has a valid mission-bound interval and unique node",
+          "passed": true,
+          "detail": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics:top1:writer"
+        },
+        {
+          "check": "immutable local input bytes",
+          "passed": true,
+          "detail": "input/operations.csv:3724e24078d8f881d2cef2c324824732fcb678847176a6ca4b09c73a2565c414"
+        },
+        {
+          "check": "metrics JSON parses",
+          "passed": true,
+          "detail": "valid JSON"
+        },
+        {
+          "check": "metrics exactly match independent raw-CSV recomputation and numeric serialization",
+          "passed": true,
+          "detail": "all integer totals and two-decimal derived metrics match"
+        },
+        {
+          "check": "metrics schema includes exact groups and two-decimal derived JSON numbers",
+          "passed": true,
+          "detail": "exact aggregate groups and canonical two-decimal JSON numbers"
+        },
+        {
+          "check": "brief has exact Atlas operational findings",
+          "passed": true,
+          "detail": "93.68% / 7 defects / 80 variance minutes"
+        },
+        {
+          "check": "brief has exact Birch operational findings",
+          "passed": true,
+          "detail": "94.67% / 3 defects / 35 variance minutes"
+        },
+        {
+          "check": "brief has exact Cedar operational findings",
+          "passed": true,
+          "detail": "90.48% / 8 defects / 340 variance minutes"
+        },
+        {
+          "check": "brief has exact overall operational findings",
+          "passed": true,
+          "detail": "93.13% / 18 defects / 455 variance minutes"
+        },
+        {
+          "check": "brief has executive recommendation and bounded six-week conclusion",
+          "passed": true,
+          "detail": "recommendation must not generalize beyond supplied data"
+        },
+        {
+          "check": "brief documents input and exact formulas",
+          "passed": true,
+          "detail": "three calculation formulas including ×100 required"
+        },
+        {
+          "check": "brief contains only independently supported numeric facts",
+          "passed": true,
+          "detail": "all brief numbers occur in metrics, a recomputed group difference, or the bounded method"
+        },
+        {
+          "check": "both documents remain within independent QA evidence window",
+          "passed": true,
+          "detail": "4692 bytes"
+        },
+        {
+          "check": "saved candidate copy hashes to its recorded candidate digest",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "saved QA candidate projection matches the accepted artifact registry",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "both saved missions pass full offline readback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "whole-mission overlap is reproduced from saved intervals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "original live protocol attestation was intact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all re-verification checks pass",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "concurrency": {
+    "claimed": true,
+    "proven": true,
+    "overlap_ms": 232417,
+    "method": "Intersection of real wall-clock intervals surrounding both concurrent MissionManager.run() promises; not inferred from plan flags or sequential runs",
+    "intervals": [
+      {
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-research",
+        "started_at": "2026-11-16T20:21:29.666Z",
+        "finished_at": "2026-11-16T20:26:21.398Z"
+      },
+      {
+        "mission_id": "r2-final-professional-2026-11-16T20-21-29-437Z-3269230-analytics",
+        "started_at": "2026-11-16T20:21:29.666Z",
+        "finished_at": "2026-11-16T20:25:22.083Z"
+      }
+    ]
+  },
+  "provider_cost": "UNKNOWN",
+  "network_calls": 0,
+  "model_calls": 0,
+  "passed": true
+}

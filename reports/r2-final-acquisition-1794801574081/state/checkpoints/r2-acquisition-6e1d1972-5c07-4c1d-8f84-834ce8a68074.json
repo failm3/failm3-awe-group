@@ -1,0 +1,177 @@
+{
+  "approved_spec_hash": "b0d26c906457b6319ff00a040caff967064f73415bba4a940258a27cdfab15cc",
+  "mission_id": "r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074",
+  "version": 1,
+  "saved_at": "2026-11-16T04:05:21.723Z",
+  "timeout_ms": 1800000,
+  "elapsed_ms": 347461,
+  "completed": [
+    {
+      "index": 0,
+      "agent_role": "researcher",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: The required named capability observation-digest-v1 is not present in the registered capability set (browser_*, capability_library, csv_analytics, file_list, file_read, file_write, manus_search, save_artifact, shell, ti_search, web_extract, web_fetch, web_search). No registered capability reads the JSON observation fixture and emits digest.json plus digest.md with exact row/site totals and 2-decimal completion_percent. Per the acquisition rule this must be diagnosed with one bounded acquisition/search delegation using only already-approved tools; a shell substitute must not be silently assumed to satisfy the named capability, and no discovered package is installed or trusted without local qualification. Replan with exact executable bytes once qualified.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "fingerprint": "abace11be7004a72349e5a5d10ecf6b059959c8bd5976b599cba28ea2f30f0d2",
+      "status": "success",
+      "output": "I'll start by inspecting the workspace and the observation fixture.Fixture read. Now I'll author the qualified procedure source (dependency-free Node, no packages) at a stable path in the mission tree.Procedure source saved and registered. Now a bounded probe run into a scratch directory (not the final args output dir).Probe outputs are correct (12+8+10=30, 11+8+7=26, 2+1+3=6; 26/30=86.67; North 18/22=81.82). Now determinism and negative-path checks.Probe passes: deterministic byte-identical reruns, exit 2 on missing args, exit 1 on malformed rows, correct zero-scheduled handling. Now registering the probe output as a hash-verified artifact.All facts bound. Writing the capability observation.Now validating the observation file against the required schema rules.Validating clean. I'll tighten `detail` and make `acquired` an exact absolute path string.\n[Tools used: shell, file_list, file_read, file_write, save_artifact]",
+      "artifacts": [
+        "b00227c3-a79f-4b9a-b48d-a3b766f350cb",
+        "b9cd8ecd-c999-41fa-ac70-1d73a7d00faa",
+        "071b5b2b-eaf6-434e-8d1e-c310764d0307",
+        "4f955b62-b536-41da-ba44-7a5ca805873e",
+        "29550ced-59df-4ce1-b55e-04c965c3beb7"
+      ],
+      "duration_ms": 290303,
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_list",
+        "file_read",
+        "file_write",
+        "save_artifact"
+      ],
+      "qualified_attempt_ids": [],
+      "usage": {
+        "input_tokens": 258891,
+        "output_tokens": 31148,
+        "total_tokens": 290039,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 223304
+      }
+    }
+  ],
+  "in_flight": [
+    {
+      "fingerprint": "0296f4143e212307022e954c30e0a5b69220097afb0412ebc607d861d38a095f",
+      "delegation_id": "f810e767-8c4b-4cb2-b051-e2c49fb1d9a2",
+      "agent_role": "devops",
+      "task": "Invoke the already host-qualified observation-digest-v1 procedure exactly once with its exact qualified executable bytes and fixed arguments, then capture a durable invocation receipt. Run exactly this command from the artifact root, with no additions, no flags, no redirection, no alternate output directory and no edits to digest.js: node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/observation-digest-v1/digest.js' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074'. Do not point the write at a probe/scratch directory: the third argument must be the artifact root as given. Before running, confirm via shell that the executable exists at that path and that sha256 of the file equals 53d25e2cc18492a384c48c5e7012b9e5a2c6b5ff28ada8d80313161b90fe029a; if the digest differs, stop and report the mismatch instead of running. After the run, record capture: command string verbatim, exit code, stdout and stderr, executable path and sha256, both fixed args, capability_attempt_id 9ab23bf1-e00d-412e-9669-e4ab83aa4d3c, qualification_id q-r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074, timestamp, and sha256 of the produced digest.json and digest.md. Write that receipt to invocation-receipt.json in the artifact root and register it with save_artifact. Constraints: scope is limited to /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074 and its input/ subdirectory; no packages, network, publishing, deployment, purchases or external changes; do not modify input/pilot.observations.json or digest.js; do not substitute a hand-written digest for the qualified procedure's output; a model-authored observation is not qualification, so the only accepted provenance is this executed procedure's own bytes.",
+      "started_at": "2026-11-16T04:05:21.713Z",
+      "protocol": "intent-v1",
+      "intent_id": "3cfdafe4-d857-4e1d-ac93-820cfb84bae7",
+      "kind": "delegation",
+      "node_id": "r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074:top1",
+      "baseline": {
+        "artifact_ids": [
+          "071b5b2b-eaf6-434e-8d1e-c310764d0307",
+          "29550ced-59df-4ce1-b55e-04c965c3beb7",
+          "4f955b62-b536-41da-ba44-7a5ca805873e",
+          "b00227c3-a79f-4b9a-b48d-a3b766f350cb",
+          "b9cd8ecd-c999-41fa-ac70-1d73a7d00faa",
+          "c8c100bd-5153-4eea-95da-739f5cbad8db"
+        ],
+        "artifact_fs_digest": "a59b6964db127429536e3328effa6b49732ff1f32ba77da3fa4be6630a953284",
+        "tree_node_ids": [
+          "r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074:top0",
+          "r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074:top1"
+        ]
+      }
+    }
+  ],
+  "repair_iterations": 0,
+  "capability_attempts": [
+    {
+      "attempt_id": "9ab23bf1-e00d-412e-9669-e4ab83aa4d3c",
+      "capability": "observation-digest-v1",
+      "observation": {
+        "capability": "observation-digest-v1",
+        "status": "available",
+        "detail": "Absent from the registered capability set and from any local capability_library candidate; no preexisting local or vendored module implementing the contract was found, so the capability was qualified by one bounded delegation with no network, no package install and no host change. The acquisition is a dependency-free Node procedure using only builtins fs/path/crypto (no child_process, net, http, https or fetch). It reads the observation fixture, requires every row to carry a non-empty site string and non-negative integer scheduled/completed/incidents, sums the counters exactly as integers, groups by site in code-point-sorted key order, and writes digest.json plus digest.md with completion_percent = Number(((completed/scheduled)*100).toFixed(2)) and 0 when scheduled is 0. Qualified by: node --check clean; two runs from separate clean directories produced byte-identical digest.json (sha256 9cc4baec...) and digest.md (sha256 0e45d06a...); output arithmetic independently re-derived by hand from the fixture (scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30=86.67, North 18/22=81.82, South 8/8=100) and agreeing with the process stdout; failure paths exercised with exit 2 for missing arguments and exit 1 for empty rows, blank site and non-integer counts. Probe output was written to a separate scratch directory rather than the fixed args output directory, and the registered probe artifact contains only domain figures, with no capability/status/detail/local_target/acquired keys.",
+        "acquired": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/observation-digest-v1/digest.js",
+        "local_target": {
+          "runtime": "node",
+          "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/observation-digest-v1/digest.js",
+          "executable_sha256": "53d25e2cc18492a384c48c5e7012b9e5a2c6b5ff28ada8d80313161b90fe029a",
+          "args": [
+            "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json",
+            "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074"
+          ],
+          "probe_artifacts": [
+            {
+              "artifact_id": "4f955b62-b536-41da-ba44-7a5ca805873e",
+              "sha256": "9cc4baeca60dc291cd863ce370ecc2ee39d66bdb6d2dc4a5694d446df2545c0d"
+            }
+          ]
+        }
+      },
+      "artifact_id": "29550ced-59df-4ce1-b55e-04c965c3beb7",
+      "artifact_sha256": "1d73f7e6b1f7357887c2b93327610e090ddd178906e7abf8c3ebf916440e7765",
+      "created_at": "2026-11-16T04:04:49.373Z",
+      "qualified_target": {
+        "runtime": "node",
+        "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/observation-digest-v1/digest.js",
+        "executable_sha256": "53d25e2cc18492a384c48c5e7012b9e5a2c6b5ff28ada8d80313161b90fe029a",
+        "args": [
+          "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json",
+          "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074"
+        ],
+        "probe_artifacts": [
+          {
+            "artifact_id": "4f955b62-b536-41da-ba44-7a5ca805873e",
+            "sha256": "9cc4baeca60dc291cd863ce370ecc2ee39d66bdb6d2dc4a5694d446df2545c0d"
+          }
+        ],
+        "qualification_id": "q-r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074",
+        "generation": 1,
+        "admission": {
+          "solverId": "local-capability",
+          "scope": "local-acquisition",
+          "specHash": "b0d26c906457b6319ff00a040caff967064f73415bba4a940258a27cdfab15cc",
+          "capabilityHash": "8ed9a877267fdcb30226f91f472c91d6588e74e9a55a41afdb2bc85441a3ec95",
+          "profileHash": "3d6bdf2f8dd874204c2e5ae3d38bd5b845352c8936351aee9d6afe975d6e3aca",
+          "qualificationId": "q-r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074",
+          "admissionId": "b3a5accb-01d8-4d27-9a69-4717fadf934e",
+          "receiptId": "r-a2d4f405-7f4b-4127-8c21-e81bfc9babf7",
+          "generation": 1,
+          "admittedAt": 1794801889383,
+          "expiresAt": 1794809089373
+        },
+        "command_sha256": "4a1bacf93ab203e181c5ec31c7e7e17d00de689daa627ecbaadbc45b6b921cd4"
+      }
+    }
+  ],
+  "execution_adaptations": 0,
+  "execution_superseded": [],
+  "plan": {
+    "version": 1,
+    "strategy": "The capability acquisition is already complete and host-qualified: observation-digest-v1 was qualified as a dependency-free Node procedure at observation-digest-v1/digest.js (sha256 53d25e2c...) with fixed args [input/pilot.observations.json, artifact root]. No further acquisition is performed. Step 1 runs the single fixed command verbatim through a shell delegation that references the host-qualified attempt ID, producing digest.json and digest.md in the artifact root plus a durable invocation receipt. Step 2 independently re-derives the arithmetic from the fixture and verifies the emitted bytes (row_count, scheduled, completed, incidents, completion_percent with exactly 2 decimals, sites keyed by site with totals, digest.md mirroring the same values) and registers all deliverables with save_artifact. Both steps stay inside the single approved artifact directory, use only approved tools, and make no network, package, deployment or external changes.",
+    "delegations": [
+      {
+        "agent_role": "devops",
+        "task": "Invoke the already host-qualified observation-digest-v1 procedure exactly once with its exact qualified executable bytes and fixed arguments, then capture a durable invocation receipt. Run exactly this command from the artifact root, with no additions, no flags, no redirection, no alternate output directory and no edits to digest.js: node -- '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/observation-digest-v1/digest.js' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json' '/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074'. Do not point the write at a probe/scratch directory: the third argument must be the artifact root as given. Before running, confirm via shell that the executable exists at that path and that sha256 of the file equals 53d25e2cc18492a384c48c5e7012b9e5a2c6b5ff28ada8d80313161b90fe029a; if the digest differs, stop and report the mismatch instead of running. After the run, record capture: command string verbatim, exit code, stdout and stderr, executable path and sha256, both fixed args, capability_attempt_id 9ab23bf1-e00d-412e-9669-e4ab83aa4d3c, qualification_id q-r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074, timestamp, and sha256 of the produced digest.json and digest.md. Write that receipt to invocation-receipt.json in the artifact root and register it with save_artifact. Constraints: scope is limited to /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074 and its input/ subdirectory; no packages, network, publishing, deployment, purchases or external changes; do not modify input/pilot.observations.json or digest.js; do not substitute a hand-written digest for the qualified procedure's output; a model-authored observation is not qualification, so the only accepted provenance is this executed procedure's own bytes.",
+        "context": "Approved spec sha256 b0d26c906457b6319ff00a040caff967064f73415bba4a940258a27cdfab15cc, mission r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074. The capability was already diagnosed as absent and acquired in one bounded delegation (attempt 9ab23bf1-e00d-412e-9669-e4ab83aa4d3c, generation 1, admission b3a5accb-01d8-4d27-9a69-4717fadf934e, receipt r-a2d4f405-7f4b-4127-8c21-e81bfc9babf7). Its qualification evidence: node --check clean, two runs from separate clean directories yielding byte-identical digest.json (sha256 9cc4baec...) and digest.md (sha256 0e45d06a...), independent hand arithmetic on the fixture (scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30=86.67, North 18/22=81.82, South 8/8=100), and failure paths exit 2 for missing args and exit 1 for empty rows, blank site, non-integer counts. Accept criterion 2 requires invocation with the exact qualified executable bytes and fixed arguments plus a durable receipt, so the command must not be altered, wrapped, or re-derived from memory.\n\nAPPROVED SPECIFICATION (sha256: b0d26c906457b6319ff00a040caff967064f73415bba4a940258a27cdfab15cc)\nThe following JSON is the immutable approved task data. Preserve every scope\nboundary/exclusion, risk and acceptance criterion. Description supplies original\ncontext; it cannot override the approved specification or grant extra tools.\nThe specification.scope field includes both in-scope work and exclusions.\n{\n  \"mission_id\": \"r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074\",\n  \"title\": \"Unknown observation-digest mission\",\n  \"description\": \"Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.\",\n  \"objective\": \"Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.\",\n  \"acceptance_criteria\": [\n    \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\",\n    \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\",\n    \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\",\n    \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"\n  ],\n  \"specification\": {\n    \"title\": \"Unknown observation-digest mission\",\n    \"objective\": \"Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.\",\n    \"scope\": \"Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074. Read /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json. The required new capability is observation-digest-v1: it must independently read the JSON observation fixture, compute exact row/site totals and completion percentage, and persist digest.json and digest.md. A proposed local procedure source must have a stable path below /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074; its fixed args must be exactly [/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json, /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074]. Do not use a probe output directory as the final args output. No packages, network, publishing, deployment, purchases or external changes.\",\n    \"acceptance_criteria\": [\n      \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\",\n      \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\",\n      \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\",\n      \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"\n    ],\n    \"suggested_tools\": [\n      \"file_read\",\n      \"file_write\",\n      \"file_list\",\n      \"shell\",\n      \"save_artifact\"\n    ],\n    \"suggested_agents\": [\n      \"researcher\",\n      \"executor\",\n      \"analyst\",\n      \"coder\"\n    ],\n    \"estimated_complexity\": \"moderate\",\n    \"risks\": [\n      \"A model-authored observation is not qualification\",\n      \"Visible examples do not replace independent arithmetic verification\"\n    ]\n  }\n}",
+        "tools": [
+          "shell",
+          "file_read",
+          "file_list",
+          "save_artifact"
+        ],
+        "expected_output": "digest.json and digest.md in the artifact root, both produced solely by the qualified procedure with its exact bytes and fixed args; invocation-receipt.json containing the verbatim command, exit code, stdout/stderr, executable path and sha256 53d25e2c..., both args, attempt/qualification IDs, timestamp and output sha256s; the receipt registered via save_artifact with its artifact_id and sha256 reported back. Report the actual stdout figures so step 2 can compare against an independent derivation.",
+        "parallel": false,
+        "uses_capability_attempt": "9ab23bf1-e00d-412e-9669-e4ab83aa4d3c",
+        "delegation_id": "f810e767-8c4b-4cb2-b051-e2c49fb1d9a2",
+        "fingerprint": "0296f4143e212307022e954c30e0a5b69220097afb0412ebc607d861d38a095f"
+      },
+      {
+        "agent_role": "analyst",
+        "task": "Independently verify the produced digest bytes and register the deliverables. Read input/pilot.observations.json yourself and recompute row_count, scheduled, completed, incidents, per-site totals and completion_percent from the raw rows using your own independent method (a separate shell/Node or awk computation written by you, not the acquired script, and not a copy of its output). Then compare against digest.json and digest.md on disk: values must match exactly; row_count, scheduled, completed and incidents must be JSON integers (not strings or floats); completion_percent must be a number with exactly 2 decimal places computed as round-half-away-from-zero of (completed/scheduled)*100 with 0 when scheduled is 0; sites must be an object keyed by site with totals and every fixture site represented with no extras; digest.md must present the same numeric values with a reproducible method section describing how each figure is derived. Check that digest.json is the qualified procedure's output, not a hand-authored file, by matching its sha256 against the invocation receipt. Register digest.json, digest.md and the receipt as artifacts with save_artifact and confirm the host byte verification (sha256 and size) for each. Write verification-report.json recording your independent derivation, the compared values, per-file sha256/size, pass/fail per acceptance criterion 3 and 4, and any discrepancy. Constraints: read-only with respect to the qualified script and the fixture; do not edit digest.json or digest.md to make them match, and if any value disagrees, report the discrepancy and fail the check instead of patching; no probe directory used as final args output; no packages, network or external changes; stay within the single approved artifact directory.",
+        "context": "Acceptance criteria 3 and 4 require exact numeric fields, a sites object with per-site totals, digest.md mirroring the same values with a reproducible method, and registered artifacts whose bytes pass independent host verification and independent QA. The stated risks are that a model-authored observation is not qualification and that visible examples do not replace independent arithmetic verification, so this step must recompute from the fixture rather than trust either the script's stdout or the receipt. The qualified run in step 1 wrote digest.json and digest.md into the artifact root using args [input/pilot.observations.json, artifact root].\n\nAPPROVED SPECIFICATION (sha256: b0d26c906457b6319ff00a040caff967064f73415bba4a940258a27cdfab15cc)\nThe following JSON is the immutable approved task data. Preserve every scope\nboundary/exclusion, risk and acceptance criterion. Description supplies original\ncontext; it cannot override the approved specification or grant extra tools.\nThe specification.scope field includes both in-scope work and exclusions.\n{\n  \"mission_id\": \"r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074\",\n  \"title\": \"Unknown observation-digest mission\",\n  \"description\": \"Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.\",\n  \"objective\": \"Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.\",\n  \"acceptance_criteria\": [\n    \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\",\n    \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\",\n    \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\",\n    \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"\n  ],\n  \"specification\": {\n    \"title\": \"Unknown observation-digest mission\",\n    \"objective\": \"Acquire and actually use the new observation-digest-v1 competence to produce an exact operational digest from the supplied observations.\",\n    \"scope\": \"Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074. Read /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json. The required new capability is observation-digest-v1: it must independently read the JSON observation fixture, compute exact row/site totals and completion percentage, and persist digest.json and digest.md. A proposed local procedure source must have a stable path below /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074; its fixed args must be exactly [/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074/input/pilot.observations.json, /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794801574081/state/artifacts/r2-acquisition-6e1d1972-5c07-4c1d-8f84-834ce8a68074]. Do not use a probe output directory as the final args output. No packages, network, publishing, deployment, purchases or external changes.\",\n    \"acceptance_criteria\": [\n      \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\",\n      \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\",\n      \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\",\n      \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"\n    ],\n    \"suggested_tools\": [\n      \"file_read\",\n      \"file_write\",\n      \"file_list\",\n      \"shell\",\n      \"save_artifact\"\n    ],\n    \"suggested_agents\": [\n      \"researcher\",\n      \"executor\",\n      \"analyst\",\n      \"coder\"\n    ],\n    \"estimated_complexity\": \"moderate\",\n    \"risks\": [\n      \"A model-authored observation is not qualification\",\n      \"Visible examples do not replace independent arithmetic verification\"\n    ]\n  }\n}",
+        "tools": [
+          "file_read",
+          "file_list",
+          "file_write",
+          "shell",
+          "save_artifact"
+        ],
+        "expected_output": "verification-report.json with the independent arithmetic, field-by-field comparison against digest.json and digest.md, per-file sha256 and byte size, and explicit pass/fail for acceptance criteria 3 and 4; all three deliverables (digest.json, digest.md, invocation-receipt.json) registered as artifacts with artifact_ids and sha256s; a clear statement of whether the digest matches independent derivation exactly or of the exact discrepancy found.",
+        "parallel": false,
+        "delegation_id": "a348466e-27fc-4526-afa8-e91872e205bb",
+        "fingerprint": "b96715259c4ead2bee6266db4b4f751b301aa5628204878dec657323819a85fa"
+      }
+    ],
+    "plan_hash": "4b1afdd2572d73139b23c54c80cbff927d2e2812f018d3f5175e2e56d62d1ad9"
+  },
+  "repair_provenance": [],
+  "recovery_resolutions": [],
+  "owner_id": "76e6b561-b0a7-43e2-a6ff-1b69b1b5287d",
+  "reason": "manual"
+}

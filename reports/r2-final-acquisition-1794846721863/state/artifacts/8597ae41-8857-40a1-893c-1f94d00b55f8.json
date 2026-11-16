@@ -1,0 +1,13 @@
+{
+  "id": "8597ae41-8857-40a1-893c-1f94d00b55f8",
+  "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+  "type": "file",
+  "name": "nox-qa-report.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/nox-qa-report.md",
+  "created_at": "2026-11-16T16:41:54.563Z",
+  "metadata": {
+    "size_bytes": 12872,
+    "sha256": "71a3921146348367db0341260477464042b8335677feb83328c7536cf1c74c63",
+    "revision": 1
+  }
+}

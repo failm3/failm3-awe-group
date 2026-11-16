@@ -1,0 +1,13 @@
+{
+  "id": "82a7415a-65a0-434f-8847-56865e2a777e",
+  "mission_id": "r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14",
+  "type": "file",
+  "name": "invocation_receipt_runner.mjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794814017945/state/artifacts/r2-acquisition-731c40a0-d758-49c9-b0cd-27edbda49a14/invocation_receipt_runner.mjs",
+  "created_at": "2026-11-16T07:43:10.519Z",
+  "metadata": {
+    "size_bytes": 5447,
+    "sha256": "83bdf65c6c47fce9644afe7f44b953fad3fe395824ad9aec2d86b9a01fab26d9",
+    "revision": 2
+  }
+}

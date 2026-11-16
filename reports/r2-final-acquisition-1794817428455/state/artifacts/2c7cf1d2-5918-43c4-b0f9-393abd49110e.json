@@ -1,0 +1,14 @@
+{
+  "id": "2c7cf1d2-5918-43c4-b0f9-393abd49110e",
+  "mission_id": "r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1",
+  "type": "file",
+  "name": "invocation/audit_receipt.log",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794817428455/state/artifacts/r2-acquisition-14fac6c8-c1dd-45c6-ac93-c424600967c1/invocation/audit_receipt.log",
+  "created_at": "2026-11-16T08:34:19.174Z",
+  "metadata": {
+    "size_bytes": 2958,
+    "sha256": "99b3661cf001e486ae5cbeb4c8c6e74b423b3ec7612568802d9c5d127c2bbc57",
+    "reconciled": true,
+    "revision": 1
+  }
+}

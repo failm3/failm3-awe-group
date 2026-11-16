@@ -1,0 +1,265 @@
+{
+  "range": {
+    "from": 1794446165590,
+    "to": 1794550879481
+  },
+  "sessions": 1,
+  "subagents": 33,
+  "prompts": 18,
+  "steps": 2508,
+  "tokens": {
+    "input": 55843786,
+    "output": 1175469,
+    "reasoning": 308720,
+    "cache": {
+      "read": 145642031,
+      "write": 126237
+    }
+  },
+  "cost": 0,
+  "tools": {
+    "mode": "detail",
+    "totals": {
+      "calls": 4392,
+      "succeeded": 4307,
+      "failed": 84,
+      "unfinished": 1
+    },
+    "usage": [
+      {
+        "name": "shell",
+        "calls": 1651,
+        "succeeded": 1637,
+        "failed": 13,
+        "unfinished": 1,
+        "durationP50": 149
+      },
+      {
+        "name": "read",
+        "calls": 1647,
+        "succeeded": 1621,
+        "failed": 26,
+        "unfinished": 0,
+        "durationP50": 138
+      },
+      {
+        "name": "edit",
+        "calls": 445,
+        "succeeded": 427,
+        "failed": 18,
+        "unfinished": 0,
+        "durationP50": 34
+      },
+      {
+        "name": "grep",
+        "calls": 336,
+        "succeeded": 333,
+        "failed": 3,
+        "unfinished": 0,
+        "durationP50": 136.5
+      },
+      {
+        "name": "write",
+        "calls": 93,
+        "succeeded": 90,
+        "failed": 3,
+        "unfinished": 0,
+        "durationP50": 23
+      },
+      {
+        "name": "glob",
+        "calls": 88,
+        "succeeded": 88,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 171
+      },
+      {
+        "name": "subagent",
+        "calls": 51,
+        "succeeded": 36,
+        "failed": 15,
+        "unfinished": 0,
+        "durationP50": 158
+      },
+      {
+        "name": "patch",
+        "calls": 48,
+        "succeeded": 43,
+        "failed": 5,
+        "unfinished": 0,
+        "durationP50": 48.5
+      },
+      {
+        "name": "execute",
+        "calls": 15,
+        "succeeded": 15,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 128
+      },
+      {
+        "name": "webfetch",
+        "calls": 9,
+        "succeeded": 9,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 628
+      },
+      {
+        "name": "bash",
+        "calls": 4,
+        "succeeded": 4,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 47.5
+      },
+      {
+        "name": "skill",
+        "calls": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 10
+      },
+      {
+        "name": "websearch",
+        "calls": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "unfinished": 0,
+        "durationP50": 60021
+      },
+      {
+        "name": "question",
+        "calls": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 5387359
+      }
+    ]
+  },
+  "activeDays": 2,
+  "streak": 2,
+  "activity": [
+    {
+      "date": "2026-11-12",
+      "steps": 1377
+    },
+    {
+      "date": "2026-11-13",
+      "steps": 1131
+    }
+  ],
+  "models": [
+    {
+      "model": {
+        "id": "claude-opus-5-5",
+        "providerID": "routercheap",
+        "variant": "default"
+      },
+      "steps": 1362,
+      "tokens": {
+        "input": 37432714,
+        "output": 450630,
+        "reasoning": 0,
+        "cache": {
+          "read": 57285897,
+          "write": 0
+        }
+      },
+      "cost": 0
+    },
+    {
+      "model": {
+        "id": "kimi-k3.1-pro",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "steps": 786,
+      "tokens": {
+        "input": 15250002,
+        "output": 314669,
+        "reasoning": 296343,
+        "cache": {
+          "read": 64798821,
+          "write": 0
+        }
+      },
+      "cost": 0
+    },
+    {
+      "model": {
+        "id": "claude-sonnet-5-5",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "steps": 129,
+      "tokens": {
+        "input": 771381,
+        "output": 244267,
+        "reasoning": 0,
+        "cache": {
+          "read": 10650095,
+          "write": 0
+        }
+      },
+      "cost": 0
+    },
+    {
+      "model": {
+        "id": "claude-fable-5-2",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "steps": 102,
+      "tokens": {
+        "input": 1972623,
+        "output": 106610,
+        "reasoning": 0,
+        "cache": {
+          "read": 7458708,
+          "write": 0
+        }
+      },
+      "cost": 0
+    },
+    {
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "steps": 71,
+      "tokens": {
+        "input": 240237,
+        "output": 26204,
+        "reasoning": 8685,
+        "cache": {
+          "read": 3613187,
+          "write": 61433
+        }
+      },
+      "cost": 0
+    },
+    {
+      "model": {
+        "id": "gpt-6-astra",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "steps": 58,
+      "tokens": {
+        "input": 176829,
+        "output": 33089,
+        "reasoning": 3692,
+        "cache": {
+          "read": 1835323,
+          "write": 64804
+        }
+      },
+      "cost": 0
+    }
+  ]
+}

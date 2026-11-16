@@ -1,0 +1,236 @@
+{
+  "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research",
+  "title": "Source-grounded service pilot decision brief",
+  "description": "Bounded local professional-mission harness; engineering practice only.",
+  "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+  "acceptance_criteria": [
+    "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+    "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+    "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+    "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+    "Use the real Head/MissionManager and specialist delegation tree; the top-level research coordinator must use the delegate tool to launch at least two distinct children in parallel before synthesizing the cited brief."
+  ],
+  "status": "failed",
+  "priority": "normal",
+  "created_at": "2026-11-16T03:27:59.778Z",
+  "updated_at": "2026-11-16T03:30:40.813Z",
+  "artifacts": [
+    "80e8da94-0cc3-4fac-86bf-fdf916b83e27",
+    "b7bfe122-bc96-401a-81c9-689855309878",
+    "417c279a-5bb9-4b3a-83f4-c337e93d55b2",
+    "cbd62ba4-1721-4eb9-890b-108c3e9f231d"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "Source-grounded service pilot decision brief",
+      "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+      "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T03-27-59-584Z-557913/state/artifacts/r2-final-professional-2026-11-16T03-27-59-584Z-557913-research. Read only sources/pilot-charter.txt, sources/weekly-observations.txt and sources/reviewer-note.txt as factual mission inputs; these input files must remain byte-identical. Deliver research-brief.md as the substantive final artifact plus bounded child evidence notes required by recursive execution. The real top-level research-coordinator must recursively delegate two distinct source-analysis or evidence-synthesis children in one parallel delegate call, then synthesize their persisted contributions into the final brief. Children and coordinator may read/write only within this workspace. No web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+      "acceptance_criteria": [
+        "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+        "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+        "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+        "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+        "Use the real Head/MissionManager and specialist delegation tree; the top-level research coordinator must use the delegate tool to launch at least two distinct children in parallel before synthesizing the cited brief."
+      ],
+      "suggested_tools": [
+        "file_read",
+        "file_list",
+        "file_write",
+        "save_artifact",
+        "delegate"
+      ],
+      "suggested_agents": [
+        "research-coordinator",
+        "researcher",
+        "writer"
+      ],
+      "estimated_complexity": "complex",
+      "risks": [
+        "Citation drift or unsupported extrapolation must fail",
+        "Parallel recursion must be observed in the production tree, not inferred from prose"
+      ]
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-16T03:27:59.786Z",
+      "spec_hash": "8d042d036ff680aa755f28264b7031e7cab5d01d2948357f9a387ddf9f7bc8ff",
+      "snapshot": {
+        "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research",
+        "title": "Source-grounded service pilot decision brief",
+        "description": "Bounded local professional-mission harness; engineering practice only.",
+        "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+        "acceptance_criteria": [
+          "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+          "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "Use the real Head/MissionManager and specialist delegation tree; the top-level research coordinator must use the delegate tool to launch at least two distinct children in parallel before synthesizing the cited brief."
+        ],
+        "specification": {
+          "title": "Source-grounded service pilot decision brief",
+          "objective": "Synthesize a decision-ready, independently checkable analytical brief from the three immutable local pilot sources.",
+          "scope": "Engineering practice only. Work only in /home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T03-27-59-584Z-557913/state/artifacts/r2-final-professional-2026-11-16T03-27-59-584Z-557913-research. Read only sources/pilot-charter.txt, sources/weekly-observations.txt and sources/reviewer-note.txt as factual mission inputs; these input files must remain byte-identical. Deliver research-brief.md as the substantive final artifact plus bounded child evidence notes required by recursive execution. The real top-level research-coordinator must recursively delegate two distinct source-analysis or evidence-synthesis children in one parallel delegate call, then synthesize their persisted contributions into the final brief. Children and coordinator may read/write only within this workspace. No web/network, packages, external actions, publication, deployment, credentials or other files. Use no experience records.",
+          "acceptance_criteria": [
+            "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+            "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+            "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+            "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+            "Use the real Head/MissionManager and specialist delegation tree; the top-level research coordinator must use the delegate tool to launch at least two distinct children in parallel before synthesizing the cited brief."
+          ],
+          "suggested_tools": [
+            "file_read",
+            "file_list",
+            "file_write",
+            "save_artifact",
+            "delegate"
+          ],
+          "suggested_agents": [
+            "research-coordinator",
+            "researcher",
+            "writer"
+          ],
+          "estimated_complexity": "complex",
+          "risks": [
+            "Citation drift or unsupported extrapolation must fail",
+            "Parallel recursion must be observed in the production tree, not inferred from prose"
+          ]
+        }
+      }
+    },
+    "execution_owner": {
+      "owner_id": "b84690bf-85e9-436b-9f49-10497ef25f52",
+      "pid": 557913,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-16T03:27:59.821Z",
+      "released_at": "2026-11-16T03:30:40.813Z"
+    },
+    "mission_admission": {
+      "version": 1,
+      "mode": "engineering-practice",
+      "missionId": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research",
+      "specHash": "8d042d036ff680aa755f28264b7031e7cab5d01d2948357f9a387ddf9f7bc8ff"
+    },
+    "capability_plane": {
+      "outcome": "observed",
+      "attempts": [
+        {
+          "attempt_id": "c6013f3d-b39e-4171-be33-aa7b47b7e676",
+          "capability": "delegate",
+          "observation": {
+            "capability": "delegate",
+            "status": "missing",
+            "detail": "No capability_library, tool registry or reusable candidate store is exposed in this runtime; the mission workspace holds only sources/pilot-charter.txt, sources/weekly-observations.txt and sources/reviewer-note.txt, and the only granted tools are file_read, file_list, file_write and save_artifact, with no shell or Node execution channel. 'delegate' is inherently a host schedulerce capability: the approved criteria require the real Head/MissionManager delegation tree to launch distinct children in parallel and persist their bounded evidence notes as attributed artifacts. A local file-writing procedure cannot produce that; it would only fabricate delegation evidence and fail the risk clause that parallel recursion must be observed in the production tree rather than inferred. I therefore made no qualified local_target claim: no procedure source file could be authored, executed or SHA-256 probed here, so acquired is omitted. Open-source discovery over the network is barred by the immutable approved scope (No web/network) and could not have helped regardless, because installation and host configuration changes are prohibited and documentation alone is not accepted as proof. Determination is terminal; the cited brief cannot satisfy criterion 5 without the host registering a real delegate tool."
+          },
+          "artifact_id": "cbd62ba4-1721-4eb9-890b-108c3e9f231d",
+          "artifact_sha256": "832cbd199725043a18b227a9d00957007bc87ecb54e594d9f62a712a309e0d18",
+          "created_at": "2026-11-16T03:30:17.478Z"
+        }
+      ],
+      "plan_hash": "210ce7357412b661bcc0317584634ae90f0723883bd70fba8332c8dfcb6d04d5"
+    },
+    "execution": {
+      "delegations": [],
+      "models_used": [
+        "claude-sonnet-5-5"
+      ],
+      "tools_used": [
+        "file_list",
+        "file_read",
+        "file_write"
+      ],
+      "totals": {
+        "input_tokens": 44457,
+        "output_tokens": 10198,
+        "total_tokens": 54655,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 29327
+      },
+      "qa_score": 2,
+      "qa_passed": false,
+      "repair_iterations": 0
+    },
+    "execution_adaptations": 0,
+    "candidate": {
+      "epoch_id": "b2a7b643-2ad8-4234-91fa-297dabda3bd2",
+      "candidate_sha256": "a6545d2856139bbe6c40747e1858a44fc750c0256e7573c60ca248edef2850d6",
+      "repair_iteration": 0,
+      "evidence_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-professional-2026-11-16T03-27-59-584Z-557913/state/candidate-evidence/r2-final-professional-2026-11-16T03-27-59-584Z-557913-research/b2a7b643-2ad8-4234-91fa-297dabda3bd2.json"
+    },
+    "delegation_tree": {
+      "total_agents": 1,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-research:top0",
+          "role": "researcher",
+          "started_at": "2026-11-16T03:28:42.962Z",
+          "task": "Investigate and acquire a reusable way to provide the missing capability 'delegate'. Reason: Approved capability 'delegate' is not registered; bounded acquisition is required before execution. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}. executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "claude-sonnet-5-5",
+          "tools_used": [
+            "file_list",
+            "file_read",
+            "file_write"
+          ],
+          "duration_ms": 94515,
+          "finished_at": "2026-11-16T03:30:17.473Z"
+        }
+      ]
+    },
+    "qa_gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "LLM score 2 is below the threshold 6",
+        "Criterion failed: \"Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.\"",
+        "Criterion failed: \"Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.\"",
+        "Criterion failed: \"State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.\"",
+        "Criterion failed: \"Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.\"",
+        "Criterion failed: \"Use the real Head/MissionManager and specialist delegation tree; the top-level research coordinator must use the delegate tool to launch at least two distinct children in parallel before synthesizing the cited brief.\"",
+        "Unresolved critical defect: The primary required deliverable, research-brief.md, was never created. The candidate artifact set contains no analytical brief of any kind, so the mission produced zero of its substantive output.",
+        "Unresolved critical defect: All numerical content required by criterion 3 (three 480-request totals, 31/43/37 delayed acknowledgements, 18-to-11-minute median change) exists only in the untouched source files and was never carried into any deliverable with citations.",
+        "Unresolved critical defect: No delegation occurred: the coordinator did not invoke the delegate tool, launched no children in parallel, and persisted no attributed child evidence notes. Criterion 5 is violated by the candidate's own account.",
+        "Unresolved major defect: The candidate treats the absence of the delegate capability as a terminal determination and ships a refusal artifact in place of the deliverable. A bounded analytical brief over the three readable local sources was still achievable and independently checkable; abandoning the brief entirely when one criterion was blocked sacrifices four other criteria needlessly.",
+        "FAIL: Capability 'delegate' observation is terminal (missing): No capability_library, tool registry or reusable candidate store is exposed in this runtime; the mission workspace holds only sources/pilot-charter.txt, sources/weekly-observations.txt and sources/reviewer-note.txt, and the only granted tools are file_read, file_list, file_write and save_artifact, with no shell or Node execution channel. 'delegate' is inherently a host schedulerce capability: the approved criteria require the real Head/MissionManager delegation tree to launch distinct children in parallel and persist their bounded evidence notes as attributed artifacts. A local file-writing procedure cannot produce that; it would only fabricate delegation evidence and fail the risk clause that parallel recursion must be observed in the production tree rather than inferred. I therefore made no qualified local_target claim: no procedure source file could be authored, executed or SHA-256 probed here, so acquired is omitted. Open-source discovery over the network is barred by the immutable approved scope (No web/network) and could not have helped regardless, because installation and host configuration changes are prohibited and documentation alone is not accepted as proof. Determination is terminal; the cited brief cannot satisfy criterion 5 without the host registering a real delegate tool.",
+        "Execution plan contains no delegations",
+        "Execution plan contains no delegations"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Persist research-brief.md with an executive recommendation, separate factual findings and limitations, and inline citations in the exact form [S1], [S2], or [S3]. Also retain the bounded evidence notes produced by delegated children as attributed artifacts.",
+          "passed": false,
+          "reason": "No research-brief.md exists in the candidate artifact set — the artifacts are only capability-observation-delegate.json plus the three immutable source files. There is no executive recommendation, no findings/limitations sections, and no inline [S1]/[S2]/[S3] citations anywhere. No child evidence notes were produced or persisted; capability-observation-delegate.json is a capability-missing declaration, not a source-analysis evidence note."
+        },
+        {
+          "criterion": "Include a Sources section mapping S1 to sources/pilot-charter.txt, S2 to sources/weekly-observations.txt, and S3 to sources/reviewer-note.txt; cite every substantive factual or numerical claim and do not invent sources.",
+          "passed": false,
+          "reason": "Impossible to satisfy without a brief. No Sources section and no citation mapping exist in any produced artifact. The three source files are present and byte-consistent with their recorded sha256 values, but the mapping requirement applies to the deliverable, which was never written."
+        },
+        {
+          "criterion": "State the three 480-request site totals, 31/43/37 delayed acknowledgements for Alder/Brook/Cove, and the 18-to-11-minute acknowledgement median change with supporting citations.",
+          "passed": false,
+          "reason": "The figures exist only inside the raw sources/weekly-observations.txt (480 requests, 31/43/37 delays) and sources/pilot-charter.txt (18-minute baseline, 11-minute pilot median). The candidate deliverable never restates any of them, and no citation accompanies them."
+        },
+        {
+          "criterion": "Explicitly bound conclusions to weekday pilot sites Alder, Brook and Cove and exclude weekend and Depot generalization; do not claim a completed wider rollout.",
+          "passed": false,
+          "reason": "No conclusions were drawn at all, so the required bounding statement is absent. The source files themselves carry the weekday-only and Depot-excluded limits, but the brief that must restate and honor them does not exist."
+        },
+        {
+          "criterion": "Use the real Head/MissionManager and specialist delegation tree; the top-level research coordinator must use the delegate tool to launch at least two distinct children in parallel before synthesizing the cited brief.",
+          "passed": false,
+          "reason": "The only related artifact, capability-observation-delegate.json, declares delegate status 'missing' and states that no children were launched and no synthesis occurred. There is no production-tree evidence of a parallel delegate call and no child output to synthesize. The candidate self-reports non-compliance with this criterion."
+        }
+      ],
+      "llm_score": 2,
+      "llm_passed": false
+    }
+  },
+  "_rev": 8
+}

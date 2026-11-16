@@ -1,0 +1,139 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "d9591852-4d01-419e-878d-5cbf6ed9930b",
+    "mission_id": "r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24",
+    "repair_iteration": 0,
+    "spec_hash": "42b2ae651b798b1c1e8d8964b633cc7632c62c1ad1a12a2b1471de1b91b5518f",
+    "plan_hash": "210ce7357412b661bcc0317584634ae90f0723883bd70fba8332c8dfcb6d04d5",
+    "artifacts": [
+      {
+        "artifact_id": "3bb416c6-39bd-4a1f-8059-a410eed512eb",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "be0ba1dc-a201-47d9-83c1-e28ac20010d9",
+        "name": "observation_digest_v1.js",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/observation_digest_v1.js",
+        "sha256": "86f03fb43c30f077e0a22e2540be136847cc19721ac4d677651cac8be7a8071c",
+        "size_bytes": 9833
+      },
+      {
+        "artifact_id": "f34e8b1f-6178-4949-a0ab-0fa13d8fb5fe",
+        "name": "observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/observation.json",
+        "sha256": "0c17943415d6fd4e989fd28b81668e8c80d9c5c7cc93cc404564dbe15f26f2c6",
+        "size_bytes": 2901
+      },
+      {
+        "artifact_id": "76ffadf5-5174-4041-b374-d49759b35482",
+        "name": "probe_digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/probe_digest.json",
+        "sha256": "7a66c2d82b4f2e221a9bc0d7ac1a0b6a176a8393b31aac05440f562f9ca2e4e4",
+        "size_bytes": 1696
+      },
+      {
+        "artifact_id": "94add600-7759-4e6a-b191-ee4bf9bf2fad",
+        "name": "probe_digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/probe_digest.md",
+        "sha256": "8f9bd4645e00b5e476303b4971e2194993717d05357c15ebe3d787e37513cc5a",
+        "size_bytes": 1809
+      },
+      {
+        "artifact_id": "f6074692-0c01-473d-9a4a-96fd7f7d4450",
+        "name": "probe_out/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/probe_out/digest.json",
+        "sha256": "7a66c2d82b4f2e221a9bc0d7ac1a0b6a176a8393b31aac05440f562f9ca2e4e4",
+        "size_bytes": 1696
+      },
+      {
+        "artifact_id": "e4e09d9c-19a6-47d6-a651-2c00538fea82",
+        "name": "probe_out/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794799679594/state/artifacts/r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24/probe_out/digest.md",
+        "sha256": "8f9bd4645e00b5e476303b4971e2194993717d05357c15ebe3d787e37513cc5a",
+        "size_bytes": 1809
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "1b9cfa62bbf534c7122f821beed2fbd5adc789c98d53496cc1baa71f7a16d8b3",
+    "created_at": "2026-11-16T03:29:33.322Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24",
+    "epoch_id": "d9591852-4d01-419e-878d-5cbf6ed9930b",
+    "candidate_sha256": "1b9cfa62bbf534c7122f821beed2fbd5adc789c98d53496cc1baa71f7a16d8b3",
+    "execution_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence_sha256": "192cd371cccd93bf145718aa41cc47c75da7b21be3dc295b2c4e61c5104c693c",
+    "review": {
+      "passed": false,
+      "score": 0,
+      "criteria_results": [],
+      "defects": [
+        {
+          "issue": "QA output was not valid structured JSON",
+          "severity": "critical"
+        },
+        {
+          "issue": "FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Re-run QA with a schema-valid review"
+      ],
+      "verdict": "FAIL: FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "LLM score 0 is below the threshold 6",
+        "Criterion not evaluated: \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\"",
+        "Criterion not evaluated: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\"",
+        "Criterion not evaluated: \"digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.\"",
+        "Criterion not evaluated: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"",
+        "Unresolved critical defect: QA output was not valid structured JSON",
+        "FAIL: Acquisition for 'observation-digest-v1' produced 3 matching observations; exactly one is required"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": false,
+          "reason": "criterion was not evaluated by the QA reviewer"
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "reason": "criterion was not evaluated by the QA reviewer"
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": false,
+          "reason": "criterion was not evaluated by the QA reviewer"
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "reason": "criterion was not evaluated by the QA reviewer"
+        }
+      ],
+      "llm_score": 0,
+      "llm_passed": false
+    },
+    "receipt_sha256": "d11d60450f50c84f34becbabd727cbfc05e8c8026f2ffc84c2d405d82de71f0c",
+    "created_at": "2026-11-16T03:30:03.840Z"
+  }
+}

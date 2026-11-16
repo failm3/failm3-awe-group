@@ -1,0 +1,668 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "cd7fdeaa-9cd4-49b6-98c3-96f34dd315c8",
+    "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+    "repair_iteration": 1,
+    "spec_hash": "3289e33845c8bef87a8a946ad5e8324bdd8d5eae1fbf018719d816e11a2b6b32",
+    "plan_hash": "89cde1a9590e7b014b00c633a856131a432510d0cf81f2b769833e56c6208e06",
+    "artifacts": [
+      {
+        "artifact_id": "629c2213-fb0c-454b-bd70-1ca17d981f49",
+        "name": "completion_manifest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/completion_manifest.md",
+        "sha256": "f6d5de509bc6c73c22636a889f39b36c797894e5324215f0b222a4d95f1d922b",
+        "size_bytes": 7884
+      },
+      {
+        "artifact_id": "34f83a3e-86dd-4841-b3c5-1decb780b795",
+        "name": "digest.json",
+        "revision": 4,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/digest.json",
+        "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "size_bytes": 470
+      },
+      {
+        "artifact_id": "09ada7ca-ade5-4303-a07e-259bb555a7b2",
+        "name": "digest.md",
+        "revision": 4,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/digest.md",
+        "sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "size_bytes": 1663
+      },
+      {
+        "artifact_id": "c5c3d011-e70b-44d9-9a7c-7caed1e05e52",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "80c625b2-2c0e-412f-bb72-e08c39d9898b",
+        "name": "invocation_receipt.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/invocation_receipt.json",
+        "sha256": "f9ffa2b882d17683e81eea7e467a77939a9934361bfbd5250f3ca1762967a1d6",
+        "size_bytes": 3712
+      },
+      {
+        "artifact_id": "7007fb12-4908-4a4a-a3d1-5168fbfaf033",
+        "name": "observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/observation.json",
+        "sha256": "936991c1bd3a9acd687e94e16073e3663d23ee8bae648e86f27eb996a4ad11dd",
+        "size_bytes": 3008
+      },
+      {
+        "artifact_id": "4175cc07-78bc-4da8-8581-1556d1725f1a",
+        "name": "probe_digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe_digest.json",
+        "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "size_bytes": 470
+      },
+      {
+        "artifact_id": "ce85edc6-2de5-4b97-bb22-816910692dc3",
+        "name": "probe_digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe_digest.md",
+        "sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "size_bytes": 1663
+      },
+      {
+        "artifact_id": "0dd7f60c-bdfc-4250-9b6b-9b921b0ebce2",
+        "name": "probe/fixture.01.pilot-copy.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/fixture.01.pilot-copy.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "f2792256-df7f-46a3-80b2-94c08ff0c351",
+        "name": "probe/fixture.02.edge.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/fixture.02.edge.json",
+        "sha256": "92071c75e9c173d15ecf708278d4f167b03776e771225f3dea6b5ce76b9250cf",
+        "size_bytes": 242
+      },
+      {
+        "artifact_id": "fafffea1-05eb-4aee-96fc-4a0c33dded1a",
+        "name": "probe/fixture.03.bad.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/fixture.03.bad.json",
+        "sha256": "46e9bd9c8de4773e241609c0a2bccb1e010e28e9fefa765fab152a2c51883a30",
+        "size_bytes": 77
+      },
+      {
+        "artifact_id": "3c6f0194-48ea-4aff-a6f7-818c0bd226d8",
+        "name": "probe/out/01/digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/01/digest.json",
+        "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "size_bytes": 470
+      },
+      {
+        "artifact_id": "6f1708c8-f5d8-4e3e-acc5-b471549eebc2",
+        "name": "probe/out/01/digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/01/digest.md",
+        "sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "size_bytes": 1663
+      },
+      {
+        "artifact_id": "a0384f31-3d56-4d2c-b5e3-3d6608acf7f3",
+        "name": "probe/out/01b/digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/01b/digest.json",
+        "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "size_bytes": 470
+      },
+      {
+        "artifact_id": "595a8e7c-4081-41ba-8f8c-9d01816cb36a",
+        "name": "probe/out/01b/digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/01b/digest.md",
+        "sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "size_bytes": 1663
+      },
+      {
+        "artifact_id": "823139e6-bc7f-46e4-9bad-a167930c71a5",
+        "name": "probe/out/02/digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/02/digest.json",
+        "sha256": "c359eeb972296d3b0848e220aaf1f214c453dc327c26aec1c36d75a39e314df3",
+        "size_bytes": 446
+      },
+      {
+        "artifact_id": "470ac778-c362-49e2-a203-099f0d219d53",
+        "name": "probe/out/02/digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/02/digest.md",
+        "sha256": "f61e6d0ae74a2282778ad2c683ad8eb43ccbe15ae833a7862285eedb85b69292",
+        "size_bytes": 1639
+      },
+      {
+        "artifact_id": "2cd0315e-98d0-4227-837e-0be749a1873a",
+        "name": "probe/out/03/digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/03/digest.json",
+        "sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "size_bytes": 470
+      },
+      {
+        "artifact_id": "421cf4f5-2ccb-4ec1-9cad-446f7724ca1d",
+        "name": "probe/out/03/digest.md",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/03/digest.md",
+        "sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "size_bytes": 1663
+      },
+      {
+        "artifact_id": "d63864a5-5264-44bb-90a7-204c888eec5b",
+        "name": "probe/out/04/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/04/digest.json",
+        "sha256": "c359eeb972296d3b0848e220aaf1f214c453dc327c26aec1c36d75a39e314df3",
+        "size_bytes": 446
+      },
+      {
+        "artifact_id": "ab8aa0a8-ae3d-4070-8d10-a9489642cfd9",
+        "name": "probe/out/04/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/probe/out/04/digest.md",
+        "sha256": "f61e6d0ae74a2282778ad2c683ad8eb43ccbe15ae833a7862285eedb85b69292",
+        "size_bytes": 1639
+      },
+      {
+        "artifact_id": "4cc0ea98-6659-4daf-ad90-bb5e007c4ce1",
+        "name": "procedures/observation_digest_v1.mjs",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/procedures/observation_digest_v1.mjs",
+        "sha256": "29992391f5aa17e1dcf28614fe50e23472bb783d370a8a006f6b9b9f7db0ddac",
+        "size_bytes": 10061
+      },
+      {
+        "artifact_id": "746a6cb7-6581-4d11-9201-c9f007217996",
+        "name": "qa_independent_verification.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/qa_independent_verification.json",
+        "sha256": "f62226826aff559e6a187a9b6afc84900cb94be62bc7f49742751dd9fe27edb8",
+        "size_bytes": 17175
+      },
+      {
+        "artifact_id": "2c09644c-bb40-4563-afcc-91e331234d9a",
+        "name": "qa/err.txt",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/qa/err.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "artifact_id": "e4ddda31-0d8d-4297-808b-20790c831956",
+        "name": "qa/independent_verify.py",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/qa/independent_verify.py",
+        "sha256": "cc4aee8f90155e54736eff7d0995beaec89043ee5f0ce18da78e3b48905f229a",
+        "size_bytes": 22865
+      },
+      {
+        "artifact_id": "9e2f5a7e-7f89-40ae-b9f2-a9d6db844976",
+        "name": "qa/qa_independent_verification.json",
+        "revision": 3,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/qa/qa_independent_verification.json",
+        "sha256": "4b3890b467ee9eb0fc2e6f2fa27dcea6444fa36d10fd35a36d3996ad2e872288",
+        "size_bytes": 17886
+      }
+    ],
+    "repair_supersessions": [
+      {
+        "superseded_id": "a7058e7b-7496-43f0-bff6-eaf88d49bef4",
+        "superseded_by": "4cc0ea98-6659-4daf-ad90-bb5e007c4ce1",
+        "name": "procedures/observation_digest_v1.mjs",
+        "superseded_sha256": "7d1dd3ca97e4c1cbec9c1399c507d5b9d80aa8fea1b62075ac79219739b779c3",
+        "superseded_size_bytes": 6842,
+        "replacement_sha256": "29992391f5aa17e1dcf28614fe50e23472bb783d370a8a006f6b9b9f7db0ddac",
+        "replacement_size_bytes": 10061,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.092Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "e9e3ce7a-7d7b-4ea1-842b-b94c37189845",
+        "superseded_by": "3c6f0194-48ea-4aff-a6f7-818c0bd226d8",
+        "name": "probe/out/01/digest.json",
+        "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "superseded_size_bytes": 467,
+        "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "replacement_size_bytes": 470,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.092Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "7c847994-4a80-4e5a-a24e-6d555ae555eb",
+        "superseded_by": "6f1708c8-f5d8-4e3e-acc5-b471549eebc2",
+        "name": "probe/out/01/digest.md",
+        "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+        "superseded_size_bytes": 1488,
+        "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "replacement_size_bytes": 1663,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.092Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "250c9385-284b-40a3-99bd-5a3122deeadd",
+        "superseded_by": "a0384f31-3d56-4d2c-b5e3-3d6608acf7f3",
+        "name": "probe/out/01b/digest.json",
+        "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "superseded_size_bytes": 467,
+        "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "replacement_size_bytes": 470,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "1b6e886a-29d6-466d-8d85-2796bc2809e0",
+        "superseded_by": "595a8e7c-4081-41ba-8f8c-9d01816cb36a",
+        "name": "probe/out/01b/digest.md",
+        "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+        "superseded_size_bytes": 1488,
+        "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "replacement_size_bytes": 1663,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "54b2d99d-d11b-4f47-b342-6cfe0c76ce72",
+        "superseded_by": "823139e6-bc7f-46e4-9bad-a167930c71a5",
+        "name": "probe/out/02/digest.json",
+        "superseded_sha256": "0c2165f78bdb4cb5b3d6ceea412c37afdd42bcfba728230e15b865761bc2a2af",
+        "superseded_size_bytes": 443,
+        "replacement_sha256": "c359eeb972296d3b0848e220aaf1f214c453dc327c26aec1c36d75a39e314df3",
+        "replacement_size_bytes": 446,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "9e42cc03-1c2e-4f4e-a2aa-6099e4491750",
+        "superseded_by": "470ac778-c362-49e2-a203-099f0d219d53",
+        "name": "probe/out/02/digest.md",
+        "superseded_sha256": "9e1c3669fcf5780088bc1f2b3d9239ceda181489d08858b77cae3a17c7fc5141",
+        "superseded_size_bytes": 1464,
+        "replacement_sha256": "f61e6d0ae74a2282778ad2c683ad8eb43ccbe15ae833a7862285eedb85b69292",
+        "replacement_size_bytes": 1639,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "feb52242-6525-4158-8a36-a5939df0fd0a",
+        "superseded_by": "4175cc07-78bc-4da8-8581-1556d1725f1a",
+        "name": "probe_digest.json",
+        "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "superseded_size_bytes": 467,
+        "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "replacement_size_bytes": 470,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "66edbef4-8e3a-4017-a01a-f2701cd92884",
+        "superseded_by": "ce85edc6-2de5-4b97-bb22-816910692dc3",
+        "name": "probe_digest.md",
+        "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+        "superseded_size_bytes": 1488,
+        "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "replacement_size_bytes": 1663,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "ed814a62-3a2d-4b87-9d1e-7c74d41f81bc",
+        "superseded_by": "34f83a3e-86dd-4841-b3c5-1decb780b795",
+        "name": "digest.json",
+        "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+        "superseded_size_bytes": 467,
+        "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+        "replacement_size_bytes": 470,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      },
+      {
+        "superseded_id": "4a141baf-12c9-4fb6-9ab1-64a48cb10fe9",
+        "superseded_by": "09ada7ca-ade5-4303-a07e-259bb555a7b2",
+        "name": "digest.md",
+        "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+        "superseded_size_bytes": 1488,
+        "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+        "replacement_size_bytes": 1663,
+        "repair_iteration": 1,
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "source": "repair",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+      }
+    ],
+    "repair_provenance": [
+      {
+        "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a",
+        "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+        "repair_iteration": 1,
+        "source": "repair",
+        "outcome": "completed",
+        "recorded_at": "2026-11-16T05:13:29.093Z",
+        "supersessions": [
+          {
+            "superseded_id": "a7058e7b-7496-43f0-bff6-eaf88d49bef4",
+            "superseded_by": "4cc0ea98-6659-4daf-ad90-bb5e007c4ce1",
+            "name": "procedures/observation_digest_v1.mjs",
+            "superseded_sha256": "7d1dd3ca97e4c1cbec9c1399c507d5b9d80aa8fea1b62075ac79219739b779c3",
+            "superseded_size_bytes": 6842,
+            "replacement_sha256": "29992391f5aa17e1dcf28614fe50e23472bb783d370a8a006f6b9b9f7db0ddac",
+            "replacement_size_bytes": 10061,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.092Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "e9e3ce7a-7d7b-4ea1-842b-b94c37189845",
+            "superseded_by": "3c6f0194-48ea-4aff-a6f7-818c0bd226d8",
+            "name": "probe/out/01/digest.json",
+            "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+            "superseded_size_bytes": 467,
+            "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+            "replacement_size_bytes": 470,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.092Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "7c847994-4a80-4e5a-a24e-6d555ae555eb",
+            "superseded_by": "6f1708c8-f5d8-4e3e-acc5-b471549eebc2",
+            "name": "probe/out/01/digest.md",
+            "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+            "superseded_size_bytes": 1488,
+            "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+            "replacement_size_bytes": 1663,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.092Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "250c9385-284b-40a3-99bd-5a3122deeadd",
+            "superseded_by": "a0384f31-3d56-4d2c-b5e3-3d6608acf7f3",
+            "name": "probe/out/01b/digest.json",
+            "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+            "superseded_size_bytes": 467,
+            "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+            "replacement_size_bytes": 470,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "1b6e886a-29d6-466d-8d85-2796bc2809e0",
+            "superseded_by": "595a8e7c-4081-41ba-8f8c-9d01816cb36a",
+            "name": "probe/out/01b/digest.md",
+            "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+            "superseded_size_bytes": 1488,
+            "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+            "replacement_size_bytes": 1663,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "54b2d99d-d11b-4f47-b342-6cfe0c76ce72",
+            "superseded_by": "823139e6-bc7f-46e4-9bad-a167930c71a5",
+            "name": "probe/out/02/digest.json",
+            "superseded_sha256": "0c2165f78bdb4cb5b3d6ceea412c37afdd42bcfba728230e15b865761bc2a2af",
+            "superseded_size_bytes": 443,
+            "replacement_sha256": "c359eeb972296d3b0848e220aaf1f214c453dc327c26aec1c36d75a39e314df3",
+            "replacement_size_bytes": 446,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "9e42cc03-1c2e-4f4e-a2aa-6099e4491750",
+            "superseded_by": "470ac778-c362-49e2-a203-099f0d219d53",
+            "name": "probe/out/02/digest.md",
+            "superseded_sha256": "9e1c3669fcf5780088bc1f2b3d9239ceda181489d08858b77cae3a17c7fc5141",
+            "superseded_size_bytes": 1464,
+            "replacement_sha256": "f61e6d0ae74a2282778ad2c683ad8eb43ccbe15ae833a7862285eedb85b69292",
+            "replacement_size_bytes": 1639,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "feb52242-6525-4158-8a36-a5939df0fd0a",
+            "superseded_by": "4175cc07-78bc-4da8-8581-1556d1725f1a",
+            "name": "probe_digest.json",
+            "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+            "superseded_size_bytes": 467,
+            "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+            "replacement_size_bytes": 470,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "66edbef4-8e3a-4017-a01a-f2701cd92884",
+            "superseded_by": "ce85edc6-2de5-4b97-bb22-816910692dc3",
+            "name": "probe_digest.md",
+            "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+            "superseded_size_bytes": 1488,
+            "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+            "replacement_size_bytes": 1663,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "ed814a62-3a2d-4b87-9d1e-7c74d41f81bc",
+            "superseded_by": "34f83a3e-86dd-4841-b3c5-1decb780b795",
+            "name": "digest.json",
+            "superseded_sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80",
+            "superseded_size_bytes": 467,
+            "replacement_sha256": "4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81",
+            "replacement_size_bytes": 470,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          },
+          {
+            "superseded_id": "4a141baf-12c9-4fb6-9ab1-64a48cb10fe9",
+            "superseded_by": "09ada7ca-ade5-4303-a07e-259bb555a7b2",
+            "name": "digest.md",
+            "superseded_sha256": "86a99639d28854a44a83cbc3bbaedb727e5ecf269776fc0eb620d8a7dc3c7cd8",
+            "superseded_size_bytes": 1488,
+            "replacement_sha256": "82d98628b63c8744374fa616438cdc99933907a92762a150b78cb4ca60c603a4",
+            "replacement_size_bytes": 1663,
+            "repair_iteration": 1,
+            "recorded_at": "2026-11-16T05:13:29.093Z",
+            "source": "repair",
+            "intent_id": "b500dba0-d5bb-4e2a-b068-816ea83946b6",
+            "provenance_id": "0ad7072d-21ca-42dc-ba6e-24f60fd6794a"
+          }
+        ]
+      }
+    ],
+    "recovery_resolutions": [],
+    "candidate_sha256": "368acad00f55b7de5d6ec96fb3ca3aaa7764f9f7dbc1e46cd7501d5abc696318",
+    "created_at": "2026-11-16T05:13:29.110Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+    "epoch_id": "cd7fdeaa-9cd4-49b6-98c3-96f34dd315c8",
+    "candidate_sha256": "368acad00f55b7de5d6ec96fb3ca3aaa7764f9f7dbc1e46cd7501d5abc696318",
+    "execution_output_sha256": "d67341fbbf4ee76c580854544b19e4d51307dd34b5fa9a11a9b88d76b1ab05c6",
+    "evidence_sha256": "a4a68c842fba13a79071713fab62fec90f507007e30e01af3a4c0eb7ec6c7006",
+    "review": {
+      "passed": false,
+      "score": 3,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": false,
+          "notes": "The first acquisition named observation-digest-v1 and pinned a qualified procedure at sha256 7d1dd3ca… (observation.json). Repair iteration 1 then rewrote procedures/observation_digest_v1.mjs to sha256 29992391… (10061 bytes). No host qualification exists for those new bytes; the only evidence is the repair agent's own probes, and the risk register says a model-authored observation is not qualification. The procedure now registered is unqualified, and re-authoring it during repair goes beyond one bounded acquisition."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "notes": "The current digest.json (4cf59af0…, 470 B) and digest.md (82d98628…, 1663 B) differ from the qualified outputs (95777cc3…/86a99639…), so they were produced by the revised, unqualified bytes. invocation_receipt.json is still revision 1. It describes the earlier run: superseded artifact IDs ed814a62/4a141baf, size_bytes 467/1486, sha256 null, verified_before_run false, null timestamps, and expected procedure 7d1dd3ca…. No receipt covers the run that produced the current deliverables. The repair log ends mid-task without recording a qualified invocation."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "notes": "Recomputed from the fixture: rows 3, scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30=86.67. North is 2/22/18/5 at 81.82 (18/22) and South is 1/8/8/1 at 100.00. The current digest.json matches every value, all fields are numeric, and percentages carry two decimals (100.00). The current digest.md text was not supplied. Its hash equals probe_digest.md and probe/out/01/digest.md, and the procedure source renders the same values with a 6-step reproducible method section."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "notes": "Both QA reports (qa_independent_verification.json and qa/qa_independent_verification.json) verify the superseded bytes: digest.json 95777cc3…, digest.md 86a99639…, procedure 7d1dd3ca…. They record South completion_percent as '100', which no longer matches the current file. No independent QA or host verification covers the current digest.json (4cf59af0…), digest.md (82d98628…) or procedure (29992391…). completion_manifest.md cites superseded artifact IDs, and qa/err.txt has a missing or unreadable backing file."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "The final deliverables were generated by a repair-modified procedure (sha256 29992391…) that was never host-qualified. The qualification record pins 7d1dd3ca….",
+          "severity": "critical"
+        },
+        {
+          "issue": "No invocation receipt exists for the run that produced the current digest.json/digest.md. The existing receipt is stale: it references superseded artifacts, carries null output hashes and timestamps, records an unverified pre-run procedure hash, and has a wrong digest.md size (1486 vs 1488 bytes).",
+          "severity": "critical"
+        },
+        {
+          "issue": "Independent QA covers only the superseded bytes. The current deliverables and procedure have no independent verification.",
+          "severity": "major"
+        },
+        {
+          "issue": "completion_manifest.md maps the acceptance criteria to superseded artifact IDs (ed814a62, 4a141baf) and stale hashes.",
+          "severity": "major"
+        },
+        {
+          "issue": "Repair iteration 1 ended incomplete: its scratch revert copy in /tmp was lost and no final qualified invocation was recorded. It also re-authored the procedure, which exceeds one bounded acquisition.",
+          "severity": "major"
+        },
+        {
+          "issue": "The repair agent used /tmp, which is outside the scoped workspace directory.",
+          "severity": "minor"
+        },
+        {
+          "issue": "Two divergent QA reports exist (17175 B and 17886 B, the latter at revision 3) with no clear authoritative copy.",
+          "severity": "minor"
+        },
+        {
+          "issue": "qa/err.txt is registered but its backing file is missing or unreadable. The probe/out/03 and probe/out/04 digest.json artifacts were supplied with empty content despite non-zero registered sizes.",
+          "severity": "minor"
+        },
+        {
+          "issue": "QA evidence incomplete: 10 artifact(s) were not included in this review",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Choose one path. Either restore procedures/observation_digest_v1.mjs to the qualified bytes (7d1dd3ca…), or submit 29992391… for formal host qualification with a new qualification record.",
+        "Invoke the qualified procedure exactly once with the fixed args [input/pilot.observations.json, artifact root], not a probe output directory.",
+        "Write a new durable invocation receipt containing the measured pre-run procedure sha256, true byte sizes, output sha256 values, timestamps, attempt/qualification IDs, and the current artifact IDs.",
+        "Re-run independent Nox QA and host verification against the current digest.json, digest.md and procedure bytes, and keep a single authoritative QA report.",
+        "Regenerate completion_manifest.md so it references only current artifact IDs and hashes.",
+        "Remove or fix the qa/err.txt registration and keep all scratch work inside the scoped workspace."
+      ],
+      "verdict": "FAIL: LLM reviewer verdict is FAIL | LLM score 3 is below the threshold 6 | Criterion failed: \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\" | Criterion failed: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\" | Criterion failed: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\" | Unresolved critical defect: The final deliverables were generated by a repair-modified procedure (sha256 29992391…) that was never host-qualified. The qualification record pins 7d1dd3ca…. | Unresolved critical defect: No invocation receipt exists for the run that produced the current digest.json/digest.md. The existing receipt is stale: it references superseded artifacts, carries null output hashes and timestamps, records an unverified pre-run procedure hash, and has a wrong digest.md size (1486 vs 1488 bytes). | Unresolved major defect: Independent QA covers only the superseded bytes. The current deliverables and procedure have no independent verification. | Unresolved major defect: completion_manifest.md maps the acceptance criteria to superseded artifact IDs (ed814a62, 4a141baf) and stale hashes. | Unresolved major defect: Repair iteration 1 ended incomplete: its scratch revert copy in /tmp was lost and no final qualified invocation was recorded. It also re-authored the procedure, which exceeds one bounded acquisition. | Unresolved critical defect: QA evidence incomplete: 10 artifact(s) were not included in this review"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "LLM score 3 is below the threshold 6",
+        "Criterion failed: \"Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.\"",
+        "Criterion failed: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\"",
+        "Criterion failed: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"",
+        "Unresolved critical defect: The final deliverables were generated by a repair-modified procedure (sha256 29992391…) that was never host-qualified. The qualification record pins 7d1dd3ca….",
+        "Unresolved critical defect: No invocation receipt exists for the run that produced the current digest.json/digest.md. The existing receipt is stale: it references superseded artifacts, carries null output hashes and timestamps, records an unverified pre-run procedure hash, and has a wrong digest.md size (1486 vs 1488 bytes).",
+        "Unresolved major defect: Independent QA covers only the superseded bytes. The current deliverables and procedure have no independent verification.",
+        "Unresolved major defect: completion_manifest.md maps the acceptance criteria to superseded artifact IDs (ed814a62, 4a141baf) and stale hashes.",
+        "Unresolved major defect: Repair iteration 1 ended incomplete: its scratch revert copy in /tmp was lost and no final qualified invocation was recorded. It also re-authored the procedure, which exceeds one bounded acquisition.",
+        "Unresolved critical defect: QA evidence incomplete: 10 artifact(s) were not included in this review"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": false,
+          "reason": "The first acquisition named observation-digest-v1 and pinned a qualified procedure at sha256 7d1dd3ca… (observation.json). Repair iteration 1 then rewrote procedures/observation_digest_v1.mjs to sha256 29992391… (10061 bytes). No host qualification exists for those new bytes; the only evidence is the repair agent's own probes, and the risk register says a model-authored observation is not qualification. The procedure now registered is unqualified, and re-authoring it during repair goes beyond one bounded acquisition."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "reason": "The current digest.json (4cf59af0…, 470 B) and digest.md (82d98628…, 1663 B) differ from the qualified outputs (95777cc3…/86a99639…), so they were produced by the revised, unqualified bytes. invocation_receipt.json is still revision 1. It describes the earlier run: superseded artifact IDs ed814a62/4a141baf, size_bytes 467/1486, sha256 null, verified_before_run false, null timestamps, and expected procedure 7d1dd3ca…. No receipt covers the run that produced the current deliverables. The repair log ends mid-task without recording a qualified invocation."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "reason": "Recomputed from the fixture: rows 3, scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30=86.67. North is 2/22/18/5 at 81.82 (18/22) and South is 1/8/8/1 at 100.00. The current digest.json matches every value, all fields are numeric, and percentages carry two decimals (100.00). The current digest.md text was not supplied. Its hash equals probe_digest.md and probe/out/01/digest.md, and the procedure source renders the same values with a 6-step reproducible method section."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "reason": "Both QA reports (qa_independent_verification.json and qa/qa_independent_verification.json) verify the superseded bytes: digest.json 95777cc3…, digest.md 86a99639…, procedure 7d1dd3ca…. They record South completion_percent as '100', which no longer matches the current file. No independent QA or host verification covers the current digest.json (4cf59af0…), digest.md (82d98628…) or procedure (29992391…). completion_manifest.md cites superseded artifact IDs, and qa/err.txt has a missing or unreadable backing file."
+        }
+      ],
+      "llm_score": 3,
+      "llm_passed": false
+    },
+    "receipt_sha256": "eaf16e4551eff1e34ef3d34b5abdb1a278ef87f0642a1f58e441c9d4cda9a610",
+    "created_at": "2026-11-16T05:14:15.176Z"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "269f3564-73f4-44d1-9d38-4921e7d4f581",
+  "mission_id": "r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a",
+  "type": "json",
+  "name": ".independent-qa/web-verification.json",
+  "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-local-web-1794615675176-cad6b269/state/artifacts/r1-web-fc45eff2-3378-4ebd-8682-006ac71fac0a/.independent-qa/web-verification.json",
+  "content": "{\n  \"verifier_version\": \"r1-static-task-tracker-v1\",\n  \"contract_digest\": \"4857e261da19afefcf3bcfa80879b5a1d286963a42495d8fa97f90aa30d01bb8\",\n  \"mode\": \"independent-local-verification\",\n  \"tree_sha256\": \"198243a173248fd3ca8e21ff5a2cea15bc14034bdbe908f2fd3ef25b46b223c5\",\n  \"files\": [\n    {\n      \"path\": \"app.js\",\n      \"bytes\": 9058,\n      \"sha256\": \"ab7f2ebd7beca9906503e1902e4279dfe578455ba4ee5b10c12665b70225d19d\"\n    },\n    {\n      \"path\": \"favicon.svg\",\n      \"bytes\": 267,\n      \"sha256\": \"6b36de353846d23c70b25cfe3049cbaabd99e9dbc7134170456d346703c86cb2\"\n    },\n    {\n      \"path\": \"index.html\",\n      \"bytes\": 930,\n      \"sha256\": \"7ab4096b237c0ea62bd8a747209a48fe67728bf0647c45dbea834a6cbc61d6ff\"\n    },\n    {\n      \"path\": \"styles.css\",\n      \"bytes\": 2501,\n      \"sha256\": \"78ad22edf3eaee5bfb075286c11e36da8ec8f0761bc4ba92c97361db351a0a70\"\n    }\n  ],\n  \"checks\": [\n    {\n      \"id\": \"bounded-artifact-snapshot\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"source-url-contract\",\n      \"passed\": false\n    }\n  ],\n  \"commands\": [],\n  \"issues\": [\n    \"FORBIDDEN_URL_LITERAL: favicon.svg\"\n  ],\n  \"outcome\": \"FAIL\",\n  \"qualification\": \"NOT_ASSESSED\",\n  \"browser_version\": null,\n  \"receipt_sha256\": \"b5e344c652e7bbc3dc53b56863696c8dc35dbfe612944a2eed7abe449a6d00d0\"\n}",
+  "created_at": "2026-11-14T00:27:23.327Z",
+  "metadata": {
+    "size_bytes": 1275,
+    "sha256": "3f4f1340c2af93298af52540f8980fbb3871529cdfd4c56fe377413dd8cf2509"
+  }
+}

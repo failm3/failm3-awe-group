@@ -1,0 +1,74 @@
+{
+  "procedure": "observation-digest-v1",
+  "runtime": "node",
+  "runtime_binary": "/usr/bin/node",
+  "runtime_version": "v22.23.3",
+  "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/procedures/observation-digest-v1.js",
+  "executable_sha256": "4e2cecb1a2ffe4700575ffd588f7f9860b26c7209164b521aa0488c9d9461cf6",
+  "executable_bytes": 8207,
+  "dependencies": ["node:fs", "node:path", "node:crypto"],
+  "static_review": {
+    "syntax_check": "pass",
+    "builtin_modules_only": true,
+    "network_api_references": 0,
+    "child_process_or_shell_references": 0,
+    "dynamic_code_evaluation_references": 0,
+    "installs_or_downloads": 0
+  },
+  "probes": [
+    {
+      "name": "real_fixture",
+      "input": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794841604244/state/artifacts/r2-acquisition-58d23459-9cc1-46a4-aef4-dd1717a208b4/input/pilot.observations.json",
+      "input_sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "exit_code": 0,
+      "row_count": 3,
+      "scheduled": 30,
+      "completed": 26,
+      "incidents": 6,
+      "completion_percent": 86.67,
+      "site_names": ["North", "South"],
+      "site_completion_percent": {"North": 81.82, "South": 100.0},
+      "digest_json_sha256": "9cc4baeca60dc291cd863ce370ecc2ee39d66bdb6d2dc4a5694d446df2545c0d",
+      "digest_json_bytes": 563
+    },
+    {
+      "name": "synthetic_edge_cases",
+      "covers": ["repeated site key aggregation", "scheduled=0 division guard", "3dp rounding via 100*completed/scheduled"],
+      "exit_code": 0,
+      "row_count": 3,
+      "scheduled": 10,
+      "completed": 8,
+      "incidents": 3,
+      "completion_percent": 80.0,
+      "site_completion_percent": {"Alpha": 80.0, "Zeta": 0.0},
+      "digest_json_sha256": "e72e68bd666f1000b4fcd9cc9658f254acde92fd3a9eb5898080f99929a14aef"
+    },
+    {
+      "name": "determinism_rerun",
+      "check": "identical input and identical output-root-independent fields",
+      "digest_json_byte_identical_across_runs": true
+    }
+  ],
+  "contract_rejections": [
+    {"case": "one_argument", "exit_code": 2},
+    {"case": "three_arguments", "exit_code": 2},
+    {"case": "relative_input_path", "exit_code": 2},
+    {"case": "missing_input_file", "exit_code": 2},
+    {"case": "input_not_json", "exit_code": 2},
+    {"case": "top_level_array", "exit_code": 2},
+    {"case": "empty_observations", "exit_code": 2},
+    {"case": "negative_count", "exit_code": 2},
+    {"case": "non_integer_count", "exit_code": 2}
+  ],
+  "contract_rejection_side_effects": "0 output files written by rejected runs",
+  "independent_arithmetic_verification": {
+    "tool": "python3 recomputation from the raw fixture, separate implementation from the node procedure",
+    "totals_agree": true,
+    "site_totals_agree": true,
+    "site_key_set_agree": true,
+    "input_sha256_recomputed_match": true,
+    "site_rows_reconcile_to_totals": true,
+    "verdict": "ARITHMETIC AGREES"
+  },
+  "probe_note": "Probes executed an isolated copy of the procedure (probe/probe-copy.js) with byte-identical content, writing only into sandbox directories. The proposed target was not executed at its qualified path, and the qualified fixed output directory was not written to."
+}

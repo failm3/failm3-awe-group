@@ -1,0 +1,83 @@
+ M .gitignore
+ M README.md
+ M package.json
+ M src/agents/head-agent.ts
+ M src/agents/lifecycle.ts
+ M src/agents/mission-manager.ts
+ M src/agents/qa-agent.ts
+ M src/agents/qa-gate.ts
+ M src/agents/recursion.ts
+ M src/agents/specialists.ts
+ M src/api/server.ts
+ M src/cli/index.ts
+ M src/config/mcp.ts
+ M src/config/models.ts
+ M src/index.ts
+ M src/memory/index.ts
+ M src/run-targeted-repair.ts
+ M src/tests/artifact-reconciliation.test.ts
+ M src/tests/lifecycle-recovery.test.ts
+ M src/tests/stage1-integration.test.ts
+ M src/tools/browser.ts
+ M src/tools/index.ts
+ M src/tools/manus-search.ts
+ M src/tools/ti-search.ts
+ M src/types/index.ts
+ M src/utils/storage.ts
+?? NOX-R0-FINAL-ENGINEERING-REPORT.md
+?? design-spec.md
+?? reports/NOX-OWNER-READINESS-REVIEW-01.md
+?? reports/r0-baseline-critical.sha256
+?? reports/r0-baseline/
+?? reports/r0-external-context/
+?? reports/r0-final-closure-core-reqa-v2.md
+?? reports/r0-final-closure-core-reqa-v4.md
+?? reports/r0-final-closure-core-reqa-v5.md
+?? reports/r0-final-closure-integrated-reqa-v2.md
+?? reports/r0-final-closure-integrated-reqa-v3.md
+?? reports/r0-final-closure-integrated-reqa-v4.md
+?? reports/r0-final-closure-integrated-reqa-v5.md
+?? reports/r0-final-closure-reqa.md
+?? reports/r0-final-independent-qa.md
+?? reports/r0-final-independent-reqa.md
+?? reports/r0-final-integrated-core-reqa.md
+?? reports/r0-final-integrated-lifecycle-reqa.md
+?? reports/r0-final-integrated-tools-reqa.md
+?? reports/r0-independent-adapter-reqa.md
+?? reports/r0-independent-baseline/
+?? reports/r0-independent-final-closure-reqa.md
+?? reports/r0-independent-lifecycle-audit.md
+?? reports/r0-independent-lifecycle-reqa-final.md
+?? reports/r0-opencode-cost-observed.json
+?? reports/r0-subagents.json
+?? reports/r0-test-results/
+?? screenshots/
+?? scripts/capture-viewports.cjs
+?? scripts/dbg.cjs
+?? scripts/run-offline-tests.mjs
+?? scripts/verify-nivict.cjs
+?? src/agents/r0-runtime-compat.ts
+?? src/security/
+?? src/tests/helpers/
+?? src/tests/r0-closure-adapters.test.ts
+?? src/tests/r0-closure-core.test.ts
+?? src/tests/r0-closure-interfaces.test.ts
+?? src/tests/r0-closure-process-lifecycle.test.ts
+?? src/tests/r0-final-manager.test.ts
+?? src/tests/r0-final-production-intent.test.ts
+?? src/tests/r0-final-recursion-worker.ts
+?? src/tests/r0-final-recursion.test.ts
+?? src/tests/r0-final-tools.test.ts
+?? src/tests/r0-independent-contracts.test.ts
+?? src/tests/r0-qa-evidence.test.ts
+?? src/tests/r0-reqa-adapters.test.ts
+?? src/tests/r0-reqa-manager.test.ts
+?? src/tests/r0-runtime-manager.test.ts
+?? src/tests/r0-runtime-recursion.test.ts
+?? src/tests/r0-runtime-storage-lease.test.ts
+?? src/tests/r0-security-tools.test.ts
+?? src/tests/r0-test-harness.test.ts
+?? src/utils/process-registry.ts
+?? src/utils/r0-runtime-fs.ts
+?? tokens.css
+?? tokens.json

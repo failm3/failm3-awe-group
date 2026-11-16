@@ -1,0 +1,43 @@
+PASS  digest.json parses as a JSON object
+PASS  digest.json row_count == independently derived 3 :: 3
+PASS  digest.json row_count is an unquoted JSON integer
+PASS  digest.json scheduled == independently derived 30 :: 30
+PASS  digest.json scheduled is an unquoted JSON integer
+PASS  digest.json completed == independently derived 26 :: 26
+PASS  digest.json completed is an unquoted JSON integer
+PASS  digest.json incidents == independently derived 6 :: 6
+PASS  digest.json incidents is an unquoted JSON integer
+PASS  digest.json completion_percent == 86.67 :: 86.67
+PASS  completion_percent rendered with exactly 2 decimals
+PASS  no quoted completion_percent in digest.json
+PASS  source passthrough :: 'Lumen Harbor field pilot'
+PASS  period passthrough :: '2026-W45'
+PASS  sites keyed exactly by observed sites :: ['North', 'South']
+PASS  site North row_count :: 2 vs 2
+PASS  site North scheduled :: 22 vs 22
+PASS  site North completed :: 18 vs 18
+PASS  site North incidents :: 5 vs 5
+PASS  site North completion_percent :: 81.82 vs 81.82
+PASS  site South row_count :: 1 vs 1
+PASS  site South scheduled :: 8 vs 8
+PASS  site South completed :: 8 vs 8
+PASS  site South incidents :: 1 vs 1
+PASS  site South completion_percent :: 100.0 vs 100.00
+PASS  per-site row_count sums to global row_count
+PASS  per-site scheduled sums to global scheduled
+PASS  per-site completed sums to global completed
+PASS  per-site incidents sums to global incidents
+PASS  digest.md row_count cell :: '3'
+PASS  digest.md scheduled cell :: '30'
+PASS  digest.md completed cell :: '26'
+PASS  digest.md incidents cell :: '6'
+PASS  digest.md completion_percent cell :: '86.67'
+PASS  digest.md site row for North
+PASS  digest.md site row for South
+PASS  digest.md total row
+PASS  digest.md has a reproducible method section
+PASS  digest.md states the input path
+PASS  digest.md records fixture sha256 :: 412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766
+
+checks_passed=40 checks_failed=0
+VERDICT: INDEPENDENT_PARITY_OK

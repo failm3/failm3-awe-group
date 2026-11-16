@@ -1,0 +1,14 @@
+{
+  "id": "aa8e114d-478c-456d-977d-907b78b4fc18",
+  "mission_id": "r2-acquisition-b11696ba-a8ed-402a-b142-dba609123793",
+  "type": "text",
+  "name": "probe/edgeout/digest.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798867011/state/artifacts/r2-acquisition-b11696ba-a8ed-402a-b142-dba609123793/probe/edgeout/digest.md",
+  "created_at": "2026-11-16T03:15:54.628Z",
+  "metadata": {
+    "size_bytes": 1511,
+    "sha256": "44113fd93c6fb8dd78a7691e30dbbd052a516584d8047ee199f0003dfb557c37",
+    "reconciled": true,
+    "revision": 1
+  }
+}

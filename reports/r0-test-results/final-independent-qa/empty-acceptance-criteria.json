@@ -1,0 +1,18 @@
+{
+  "probe": "real MissionSchema/SpecificationSchema/applyQAGate/manager/storage; injected offline plan/executor/reviewer; no provider/network/browser/MCP",
+  "isolated_data_dir": "/home/nox/awe-group-cleanroom-20261112/reports/r0-test-results/final-independent-qa/probe-state-VrFkFF/data",
+  "acceptance_criteria": [],
+  "specification_schema_accepted": true,
+  "mission_schema_accepted": true,
+  "qa_gate": {
+    "passed": true,
+    "blockers": [],
+    "criterion_checks": [],
+    "llm_score": 10,
+    "llm_passed": true
+  },
+  "specialist_calls": 1,
+  "final_status": "completed",
+  "persisted_qa_gate_passed": true,
+  "expected": "reject empty criteria or fail closed; a mission with zero evaluated acceptance criteria must not complete"
+}

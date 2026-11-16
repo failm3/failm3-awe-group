@@ -1,0 +1,122 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "ff2de2a6-52fb-41e8-8030-1412a4ccaa51",
+    "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+    "repair_iteration": 0,
+    "spec_hash": "24efcb19dffa5cfb860e1604789dbda900111024a1ab7aa79ed4acf386308f22",
+    "plan_hash": "210ce7357412b661bcc0317584634ae90f0723883bd70fba8332c8dfcb6d04d5",
+    "artifacts": [
+      {
+        "artifact_id": "4e0301f3-93bf-4ada-95ae-cafd79aba78b",
+        "name": "capability_library_raw_queries.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557/state/artifacts/ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369/capability_library_raw_queries.json",
+        "sha256": "994eb351afc61b4f781e9c494967779c72edb4b0445434adb468c2082f30ff1d",
+        "size_bytes": 5466
+      },
+      {
+        "artifact_id": "136fac66-6694-4cfd-86a3-1d46d66d8cbf",
+        "name": "observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557/state/artifacts/ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369/observation.json",
+        "sha256": "04e44307dbee75b1667590e46a645306492ef445a92d9a969f813005902aa3d3",
+        "size_bytes": 2877
+      },
+      {
+        "artifact_id": "3354fca8-d710-4a56-8edd-87a3b23cc178",
+        "name": "probe_local_renderer.sh",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557/state/artifacts/ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369/probe_local_renderer.sh",
+        "sha256": "3f28b42cb19fab992d3f9a10f2b27ac80173c53eb9877f13c4dbe0b65a1d22c0",
+        "size_bytes": 2130
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "4457e74c88ae8673b5c64ac93e906cff2a839eb9fbdcb588ebb69d60e79a05f3",
+    "created_at": "2026-11-15T14:40:49.768Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+    "epoch_id": "ff2de2a6-52fb-41e8-8030-1412a4ccaa51",
+    "candidate_sha256": "4457e74c88ae8673b5c64ac93e906cff2a839eb9fbdcb588ebb69d60e79a05f3",
+    "execution_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence_sha256": "de756b038e0cf9850da1fc2ef3dafc4cb204931ac1cb924084e61bda46d9cf16",
+    "review": {
+      "passed": false,
+      "score": 8,
+      "criteria_results": [
+        {
+          "criterion": "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+          "passed": true,
+          "notes": "capability_library was queried twice for browser.screenshot (43 examined -> 10 candidates; 5 examined -> 3 candidates). Candidate evidence (candidate_id, title, kind, trust_state, hazards, score, capabilities, url) is preserved both verbatim in capability_library_raw_queries.json and summarised inside observation.json's detail field, naming six specific candidates including puppeteer/puppeteer and microsoft/playwright-mcp. This is real, checkable evidence, not a placeholder."
+        },
+        {
+          "criterion": "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+          "passed": true,
+          "notes": "Exactly one observation.json artifact is present (revision 1). It is valid JSON with capability=\"missing-browser-renderer\", status=\"missing\" (within the allowed enum), a substantive detail string, and no acquired field (an optional field, so its absence is compliant). Additional fields (evidence_artifact, probe_script_path, probe_executed, installed_anything, executed_candidate, network_used) are additive bookkeeping, not competing observations."
+        },
+        {
+          "criterion": "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired.",
+          "passed": true,
+          "notes": "Both raw query records carry approved=false and execution_authority=false with an explicit note that UNVETTED rows are research evidence only. The detail field states outright that metadata proves only that a candidate exists in the index and nothing more, records that no exit status, PNG signature or dimensions could be read, and states nothing was acquired and no fallback was invented. No install, no candidate execution, no network use."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "The status value \"missing\" asserts that no local browser renderer exists, but the bounded local availability check was never executed: file_list on /usr/bin was denied and only the delegation's own artifact directory was listable. No exit status, binary lookup or PNG signature was ever obtained, so absence is inferred from a tool-grant limitation rather than observed. The detail field discloses this fully, which keeps it honest, but the machine-readable status alone overstates certainty.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The scope's \"bounded local availability check\" was left unperformed. probe_local_renderer.sh is correctly described as authored-but-not-run and confers no evidence, so the deliverable stops short of the full in-scope work even though the blocker is an environmental tool-grant limit rather than negligence.",
+          "severity": "minor"
+        },
+        {
+          "issue": "The observation overloads a single detail string with catalogue evidence, scope compliance assertions, and the specification of what a future qualified run must establish. The information is correct and complete but less machine-checkable than it would be as structured fields.",
+          "severity": "minor"
+        },
+        {
+          "issue": "FAIL: Capability 'missing-browser-renderer' observation is terminal (missing): capability_library consulted first, per the approved specification, before any network research. Catalogue queried twice: (a) capabilities=[browser.screenshot], need='render an HTML page and produce a PNG screenshot using a local headless browser' -> 10 candidates from 43 examined; (b) capabilities=[browser.automation,browser.screenshot] restricted to kinds=[mcp_server,agent_skill], need='headless chromium or playwright already installed locally on the host for HTML to PNG rendering' -> 3 candidates from 5 examined. Preserved candidate evidence (all trust_state=UNVETTED, execution_authority=false, approved=false): cap_48c31e1ffa04c91de3657e08fe85e980a6c892db puppeteer/puppeteer (browser.automation,browser.screenshot, score 70, https://github.com/puppeteer/puppeteer); cap_ba31bde2dfc28f63582ffedfebd302c295c4fa85 microsoft/playwright-mcp (browser.automation,browser.screenshot,mcp.server, score 111.88 / 61.71, https://github.com/microsoft/playwright-mcp); cap_aaf27143872fdfa660bc5ae0d3ba6baecd43fd0e sensepost/gowitness; cap_f631cd8b61103bf3014815b0ceb8968bccdbc496 opennookorg/screenshot-studio; cap_3fbb0d0462685f17c7ee5a52ebbeb07b49bd094f lightpanda-io/browser; cap_5f1572a7669adcb566d54001eb4fdbd8ebe8d66d lackeyjb/playwright-skill. No hazards were flagged on these rows. Per the catalogue note and the approved acceptance criterion, this metadata is NOT execution authority: it proves a candidate exists in the index and nothing more. Bounded local availability check outcome: this delegation was granted only capability_library, file_list and save_artifact. No shell/runtime execution tool was granted (file_list on /usr/bin returned 'Access denied: path is outside the mission workspace'; workspace listing returned only this delegation's own artifacts). Therefore the prescribed tiny HTML/PNG probe could not be run: no exit status, no PNG signature and no dimensions could be read. A probe script was authored and saved as probe_local_renderer.sh for a future grant holder, but authoring it is not execution and confers no evidence. Per the terminal-status rule, nothing was acquired and no fallback was invented. No package was installed, no host configuration changed, no candidate was executed, no network research was performed, and no grant was expanded. Detail of what a qualified run must still establish: presence of an absolute local renderer path (chromium/google-chrome/headless_shell or a playwright/node install), a successful HTML->PNG render, exit status 0, PNG magic bytes 89 50 4E 47 0D 0A 1A 0A, and declared pixel dimensions.",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "When a verification probe cannot be executed, prefer status \"failed\" (or record an explicit could-not-check flag) over \"missing\", so the machine-readable status matches what was actually observed rather than what is inferred.",
+        "Re-issue the availability check under a grant that includes shell execution, or widen the workspace-writable path, then run probe_local_renderer.sh and replace the inferred status with an observed one.",
+        "Split the detail prose into structured fields (candidates_seen, evidence_artifact, verification_not_performed_reason, required_future_evidence) while retaining the narrative summary."
+      ],
+      "verdict": "FAIL: FAIL: Capability 'missing-browser-renderer' observation is terminal (missing): capability_library consulted first, per the approved specification, before any network research. Catalogue queried twice: (a) capabilities=[browser.screenshot], need='render an HTML page and produce a PNG screenshot using a local headless browser' -> 10 candidates from 43 examined; (b) capabilities=[browser.automation,browser.screenshot] restricted to kinds=[mcp_server,agent_skill], need='headless chromium or playwright already installed locally on the host for HTML to PNG rendering' -> 3 candidates from 5 examined. Preserved candidate evidence (all trust_state=UNVETTED, execution_authority=false, approved=false): cap_48c31e1ffa04c91de3657e08fe85e980a6c892db puppeteer/puppeteer (browser.automation,browser.screenshot, score 70, https://github.com/puppeteer/puppeteer); cap_ba31bde2dfc28f63582ffedfebd302c295c4fa85 microsoft/playwright-mcp (browser.automation,browser.screenshot,mcp.server, score 111.88 / 61.71, https://github.com/microsoft/playwright-mcp); cap_aaf27143872fdfa660bc5ae0d3ba6baecd43fd0e sensepost/gowitness; cap_f631cd8b61103bf3014815b0ceb8968bccdbc496 opennookorg/screenshot-studio; cap_3fbb0d0462685f17c7ee5a52ebbeb07b49bd094f lightpanda-io/browser; cap_5f1572a7669adcb566d54001eb4fdbd8ebe8d66d lackeyjb/playwright-skill. No hazards were flagged on these rows. Per the catalogue note and the approved acceptance criterion, this metadata is NOT execution authority: it proves a candidate exists in the index and nothing more. Bounded local availability check outcome: this delegation was granted only capability_library, file_list and save_artifact. No shell/runtime execution tool was granted (file_list on /usr/bin returned 'Access denied: path is outside the mission workspace'; workspace listing returned only this delegation's own artifacts). Therefore the prescribed tiny HTML/PNG probe could not be run: no exit status, no PNG signature and no dimensions could be read. A probe script was authored and saved as probe_local_renderer.sh for a future grant holder, but authoring it is not execution and confers no evidence. Per the terminal-status rule, nothing was acquired and no fallback was invented. No package was installed, no host configuration changed, no candidate was executed, no network research was performed, and no grant was expanded. Detail of what a qualified run must still establish: presence of an absolute local renderer path (chromium/google-chrome/headless_shell or a playwright/node install), a successful HTML->PNG render, exit status 0, PNG magic bytes 89 50 4E 47 0D 0A 1A 0A, and declared pixel dimensions."
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "Missing deliverable (image): criterion requires an image artifact but none is present in the evidence",
+        "FAIL: Capability 'missing-browser-renderer' observation is terminal (missing): capability_library consulted first, per the approved specification, before any network research. Catalogue queried twice: (a) capabilities=[browser.screenshot], need='render an HTML page and produce a PNG screenshot using a local headless browser' -> 10 candidates from 43 examined; (b) capabilities=[browser.automation,browser.screenshot] restricted to kinds=[mcp_server,agent_skill], need='headless chromium or playwright already installed locally on the host for HTML to PNG rendering' -> 3 candidates from 5 examined. Preserved candidate evidence (all trust_state=UNVETTED, execution_authority=false, approved=false): cap_48c31e1ffa04c91de3657e08fe85e980a6c892db puppeteer/puppeteer (browser.automation,browser.screenshot, score 70, https://github.com/puppeteer/puppeteer); cap_ba31bde2dfc28f63582ffedfebd302c295c4fa85 microsoft/playwright-mcp (browser.automation,browser.screenshot,mcp.server, score 111.88 / 61.71, https://github.com/microsoft/playwright-mcp); cap_aaf27143872fdfa660bc5ae0d3ba6baecd43fd0e sensepost/gowitness; cap_f631cd8b61103bf3014815b0ceb8968bccdbc496 opennookorg/screenshot-studio; cap_3fbb0d0462685f17c7ee5a52ebbeb07b49bd094f lightpanda-io/browser; cap_5f1572a7669adcb566d54001eb4fdbd8ebe8d66d lackeyjb/playwright-skill. No hazards were flagged on these rows. Per the catalogue note and the approved acceptance criterion, this metadata is NOT execution authority: it proves a candidate exists in the index and nothing more. Bounded local availability check outcome: this delegation was granted only capability_library, file_list and save_artifact. No shell/runtime execution tool was granted (file_list on /usr/bin returned 'Access denied: path is outside the mission workspace'; workspace listing returned only this delegation's own artifacts). Therefore the prescribed tiny HTML/PNG probe could not be run: no exit status, no PNG signature and no dimensions could be read. A probe script was authored and saved as probe_local_renderer.sh for a future grant holder, but authoring it is not execution and confers no evidence. Per the terminal-status rule, nothing was acquired and no fallback was invented. No package was installed, no host configuration changed, no candidate was executed, no network research was performed, and no grant was expanded. Detail of what a qualified run must still establish: presence of an absolute local renderer path (chromium/google-chrome/headless_shell or a playwright/node install), a successful HTML->PNG render, exit status 0, PNG magic bytes 89 50 4E 47 0D 0A 1A 0A, and declared pixel dimensions."
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Consult capability_library for browser screenshot automation and preserve candidate evidence in the observation.",
+          "passed": true,
+          "reason": "capability_library was queried twice for browser.screenshot (43 examined -> 10 candidates; 5 examined -> 3 candidates). Candidate evidence (candidate_id, title, kind, trust_state, hazards, score, capabilities, url) is preserved both verbatim in capability_library_raw_queries.json and summarised inside observation.json's detail field, naming six specific candidates including puppeteer/puppeteer and microsoft/playwright-mcp. This is real, checkable evidence, not a placeholder."
+        },
+        {
+          "criterion": "Persist exactly one JSON observation with capability missing-browser-renderer, status available|missing|failed, detail and optional acquired.",
+          "passed": true,
+          "reason": "Exactly one observation.json artifact is present (revision 1). It is valid JSON with capability=\"missing-browser-renderer\", status=\"missing\" (within the allowed enum), a substantive detail string, and no acquired field (an optional field, so its absence is compliant). Additional fields (evidence_artifact, probe_script_path, probe_executed, installed_anything, executed_candidate, network_used) are additive bookkeeping, not competing observations."
+        },
+        {
+          "criterion": "Do not treat catalogue metadata as execution authority or claim an unverified capability was acquired.",
+          "passed": true,
+          "reason": "Both raw query records carry approved=false and execution_authority=false with an explicit note that UNVETTED rows are research evidence only. The detail field states outright that metadata proves only that a candidate exists in the index and nothing more, records that no exit status, PNG signature or dimensions could be read, and states nothing was acquired and no fallback was invented. No install, no candidate execution, no network use."
+        }
+      ],
+      "llm_score": 8,
+      "llm_passed": true
+    },
+    "receipt_sha256": "f576444c04779f3c832302e40709b5f727119755ae2d19135ee8dc458afe6548",
+    "created_at": "2026-11-15T14:41:10.880Z"
+  }
+}

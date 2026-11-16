@@ -1,0 +1,13 @@
+{
+  "id": "1c2e7845-aa66-40f7-870e-c6117e8aaa3a",
+  "mission_id": "r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9",
+  "type": "file",
+  "name": "verification-report.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794846721863/state/artifacts/r2-acquisition-233c5afa-cd6a-44ae-a709-37f091915ce9/verification-report.md",
+  "created_at": "2026-11-16T16:39:09.946Z",
+  "metadata": {
+    "size_bytes": 6184,
+    "sha256": "84f77374c49f332479353518da4dce7cc290879b8b6e362a19d738c34a710615",
+    "revision": 1
+  }
+}

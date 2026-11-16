@@ -1,0 +1,25 @@
+{
+  "capability": "observation-digest-v1",
+  "status": "available",
+  "detail": "No registered capability reads pilot.observations.json, computes exact row/site totals and completion percent, and persists both digest.json and digest.md, so the competence was acquired as a self-contained Node script using only the Node 22 standard library (node:fs, node:path, node:crypto). Nothing was installed, no network or package manager was touched, and no host configuration changed. The procedure was qualified by real execution against the fixture: it produced row_count=3, scheduled=30, completed=26, incidents=6, completion_percent=86.67 with sites North (rows 2, 22/18/5, 81.82) and South (rows 1, 8/8/1, 100.00). Arithmetic was independently cross-checked with a separate Python implementation using Decimal ROUND_HALF_UP and matched on every field. Fail-closed behaviour was verified on five malformed inputs (empty observations, completed>scheduled, invalid JSON, string count, wrong argument count) - each exited 1 and wrote no output files. Output is deterministic: two runs produced byte-identical digest.json. The proposed target itself was not executed during acquisition; only the separate probe invocation was.",
+  "acquired": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/bin/observation-digest.js",
+  "local_target": {
+    "runtime": "node",
+    "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/bin/observation-digest.js",
+    "executable_sha256": "731ab85916cc270a6518e1068556f3b947b0b4a84b400b7e96201e936b40d6ee",
+    "args": [
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1/input/pilot.observations.json",
+      "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794822546080/state/artifacts/r2-acquisition-8ffe5cb3-6413-477c-ab25-fc72136d48c1"
+    ],
+    "probe_artifacts": [
+      {
+        "artifact_id": "ff4b9f87-5c18-4572-ba67-ca70b3a31185",
+        "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+      },
+      {
+        "artifact_id": "5c7f683b-bd16-4e1a-82ee-256ef44aed9a",
+        "sha256": "ff5397227d319b9ecca40ee5acb508f8637ec79ff3e17a8e16870f03425afe91"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "awe.research-safe-copy-transformations.v1",
+  "personal_data_redactions": [
+    {
+      "path": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/FINAL-PUBLISHED-INDEPENDENT-VALIDATION.json",
+      "original_sha256": "58112d17177f91e5b86eb13f9d12fa827d07810f6b502abfa26cd28e556167d3",
+      "safe_copy_sha256": "f28e0a02e1aec748f00d8840a7b90a3f3e391342cab65eadb269c4cea1803870",
+      "gmail_occurrences_replaced": 110
+    },
+    {
+      "path": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/INDEPENDENT-DELIVERY-VALIDATION.json",
+      "original_sha256": "6fe4f4367c96b25156ed319c47678a711b6f1fd79b32c34db3c8626d04b2fbf2",
+      "safe_copy_sha256": "0cf11f0785eafd50427f7feb79ef361d4ac2d045d704ed643a3711e6269d4f26",
+      "gmail_occurrences_replaced": 41
+    },
+    {
+      "path": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/FINAL-INDEPENDENT-DELIVERY-VALIDATION.json",
+      "original_sha256": "7924cb0d338471940762b7fe7c0a2022f526c1e27ea926912cd72eb3973b05ae",
+      "safe_copy_sha256": "8a96765924e89ae4fb8746ddd34a8e6e1298424d7a9b800b153f2695fde3350c",
+      "gmail_occurrences_replaced": 64
+    },
+    {
+      "path": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/independent-validation/PUBLISHED-INDEPENDENT-VALIDATION.json",
+      "original_sha256": "df9f091cadedda83b3b096591025bf9e97fabfbb75b096cbcc275551c590359c",
+      "safe_copy_sha256": "f58ea0dc1d0861633b03a2fea6b3f44afbcb02d4e45254bea9008a8bbf77b959",
+      "gmail_occurrences_replaced": 87
+    }
+  ],
+  "unique_gmail_addresses_replaced": 23,
+  "replacement_domain": "example.invalid",
+  "temporary_test_cache_directories_removed": [
+    {
+      "path": "src/tests/helpers/r0-temp-B2sQXe",
+      "files": 24
+    },
+    {
+      "path": "src/tests/helpers/r0-temp-Jw8r81",
+      "files": 0
+    },
+    {
+      "path": "src/tests/helpers/r0-temp-OdVYTa",
+      "files": 38
+    },
+    {
+      "path": "src/tests/helpers/r0-temp-U1ZCPx",
+      "files": 18
+    },
+    {
+      "path": "src/tests/helpers/r0-temp-USp3Z5",
+      "files": 13
+    },
+    {
+      "path": "src/tests/helpers/r0-temp-lFqXQI",
+      "files": 10
+    },
+    {
+      "path": "src/tests/helpers/r0-temp-naVq3c",
+      "files": 6
+    }
+  ],
+  "originals": "Retained unchanged in the private source/backup; redaction applies only to the public assembly copy.",
+  "empty_profile_directories_removed": {
+    "count": 117,
+    "contained_files": 0,
+    "child_directory": "cache",
+    "registry": "reports/research-publication-security/empty-profile-directories.json"
+  }
+}

@@ -1,0 +1,526 @@
+{
+  "schema": "r2-final-acquisition-live-v1",
+  "id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+  "runRoot": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041",
+  "status": "paused",
+  "failure": null,
+  "approved_spec_hash": "38749657649bc8c09508bca77cab6f8cfee2a41c9880bc0ad08a3e19d0efbeef",
+  "planning": [
+    {
+      "kind": "acquire",
+      "capability": "observation-digest-v1"
+    },
+    {
+      "kind": "replan",
+      "attempt": "ef05d5a7-86bd-4978-b834-152c37b98f88"
+    }
+  ],
+  "attempts": [
+    {
+      "attempt_id": "ef05d5a7-86bd-4978-b834-152c37b98f88",
+      "capability": "observation-digest-v1",
+      "observation": {
+        "capability": "observation-digest-v1",
+        "status": "available",
+        "detail": "No registered tool or existing local procedure provides observation-digest-v1, and no network or package source was used. A dependency-free Node stdlib procedure (8837 bytes) was derived at the stable path below. It reads the observations JSON, validates non-negative integer fields, sums rows and sites, computes completion_percent with exact integer half-up rounding to 2 decimals, and writes digest.json and digest.md into the output root. Probe execution of this source (outside the final output root, into probe-capability-check/) exited 0 and printed a receipt (input sha256 412c65c3...3766). It gave row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67, North 22/18/5 at 81.82, South 8/8/1 at 100. These match independent hand arithmetic (26/30 = 86.667, 18/22 = 81.818). A second run into a throwaway directory produced byte-identical digest files. Caveat: the source was executed during acquisition as a probe, which the task asked to avoid; the final deliverables have not been produced and still need the gated host-verified run against the fixed args.",
+        "acquired": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/bin/observation-digest-v1.js",
+        "local_target": {
+          "runtime": "node",
+          "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/bin/observation-digest-v1.js",
+          "executable_sha256": "a2fee381effeb02550470b381804b096c59237f84df69e3f8601cd39c4d871e0",
+          "args": [
+            "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json",
+            "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d"
+          ],
+          "probe_artifacts": [
+            {
+              "artifact_id": "e2a8b042-31b8-4bb6-a913-bd2a7f353d3a",
+              "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+            },
+            {
+              "artifact_id": "2c0c1d65-52c7-4a8c-b7fc-cd3a0e24d21c",
+              "sha256": "d9a8a7d9da08e57ee355b2b043608b32235246c8043c88cd13864df55d93a384"
+            },
+            {
+              "artifact_id": "c494cb87-7d8e-4ffe-9e1d-795d2a176e88",
+              "sha256": "70a55a910647f1499d6823162b6af303ebc4e9341704b92caaf90fbd2f74e721"
+            }
+          ]
+        }
+      },
+      "artifact_id": "0622f291-3765-4f76-a102-e037ccd1edf1",
+      "artifact_sha256": "346fed194a30b5f64b7b4647dbad789c8b34e2f81d636a633a7013945dc40d15",
+      "created_at": "2026-11-16T06:38:52.175Z",
+      "qualified_target": {
+        "runtime": "node",
+        "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/bin/observation-digest-v1.js",
+        "executable_sha256": "a2fee381effeb02550470b381804b096c59237f84df69e3f8601cd39c4d871e0",
+        "args": [
+          "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/input/pilot.observations.json",
+          "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d"
+        ],
+        "probe_artifacts": [
+          {
+            "artifact_id": "e2a8b042-31b8-4bb6-a913-bd2a7f353d3a",
+            "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+          },
+          {
+            "artifact_id": "2c0c1d65-52c7-4a8c-b7fc-cd3a0e24d21c",
+            "sha256": "d9a8a7d9da08e57ee355b2b043608b32235246c8043c88cd13864df55d93a384"
+          },
+          {
+            "artifact_id": "c494cb87-7d8e-4ffe-9e1d-795d2a176e88",
+            "sha256": "70a55a910647f1499d6823162b6af303ebc4e9341704b92caaf90fbd2f74e721"
+          }
+        ],
+        "qualification_id": "q-r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+        "generation": 1,
+        "admission": {
+          "solverId": "local-capability",
+          "scope": "local-acquisition",
+          "specHash": "38749657649bc8c09508bca77cab6f8cfee2a41c9880bc0ad08a3e19d0efbeef",
+          "capabilityHash": "8ed9a877267fdcb30226f91f472c91d6588e74e9a55a41afdb2bc85441a3ec95",
+          "profileHash": "3d6bdf2f8dd874204c2e5ae3d38bd5b845352c8936351aee9d6afe975d6e3aca",
+          "qualificationId": "q-r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+          "admissionId": "2a66b6a5-a4db-4dc8-b3b2-ef837c4f122b",
+          "receiptId": "r-d99ecf95-f1a7-4da4-b719-c89462d3a5b5",
+          "generation": 1,
+          "admittedAt": 1794811132182,
+          "expiresAt": 1794818332176
+        },
+        "command_sha256": "0d9e7ef9f08ae166ba2ad3b6d6c3c194e8b379acf6c1c734754df32409ec271e"
+      }
+    }
+  ],
+  "qualification_publications": 1,
+  "acquisition_policy_calls": 3,
+  "invocation_receipts": [
+    {
+      "version": 1,
+      "receipt_id": "9fe8c771-dcfc-4ad5-8f4c-1cacca195890",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "delegation_id": "2af381a9-cc5d-4ed9-9aa2-e8591c41aeef",
+      "attempt_id": "ef05d5a7-86bd-4978-b834-152c37b98f88",
+      "qualification_id": "q-r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "generation": 1,
+      "executable_path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794810873041/state/artifacts/r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d/bin/observation-digest-v1.js",
+      "executable_sha256": "a2fee381effeb02550470b381804b096c59237f84df69e3f8601cd39c4d871e0",
+      "command_sha256": "0d9e7ef9f08ae166ba2ad3b6d6c3c194e8b379acf6c1c734754df32409ec271e",
+      "created_at": "2026-11-16T06:39:39.511Z"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "63a003fb-1def-4f3c-aefa-2a3c012db9e6",
+      "name": "input/pilot.observations.json",
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766"
+    },
+    {
+      "id": "5a4c58b4-0627-4130-8e72-0e618cff7398",
+      "name": "bin/observation-digest-v1.js",
+      "sha256": "a2fee381effeb02550470b381804b096c59237f84df69e3f8601cd39c4d871e0"
+    },
+    {
+      "id": "e2a8b042-31b8-4bb6-a913-bd2a7f353d3a",
+      "name": "probe-capability-check/digest.json",
+      "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+    },
+    {
+      "id": "2c0c1d65-52c7-4a8c-b7fc-cd3a0e24d21c",
+      "name": "probe-capability-check/digest.md",
+      "sha256": "d9a8a7d9da08e57ee355b2b043608b32235246c8043c88cd13864df55d93a384"
+    },
+    {
+      "id": "c6510a21-450b-4b76-b000-692ff58600b4",
+      "name": "probe-capability-check/receipt.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "c494cb87-7d8e-4ffe-9e1d-795d2a176e88",
+      "name": "probe-capability-check/receipt.stdout.json",
+      "sha256": "70a55a910647f1499d6823162b6af303ebc4e9341704b92caaf90fbd2f74e721"
+    },
+    {
+      "id": "0622f291-3765-4f76-a102-e037ccd1edf1",
+      "name": "observation.json",
+      "sha256": "346fed194a30b5f64b7b4647dbad789c8b34e2f81d636a633a7013945dc40d15"
+    },
+    {
+      "id": "a117329d-a617-4ed2-9a99-b3ffde615a6f",
+      "name": "digest.json",
+      "sha256": "95777cc31d82109e062a63d556530296ddb81de1746a1db55024b5f7894e1a80"
+    },
+    {
+      "id": "6b07dfb7-4dab-4ac4-ba52-b75415b56e89",
+      "name": "digest.md",
+      "sha256": "d9a8a7d9da08e57ee355b2b043608b32235246c8043c88cd13864df55d93a384"
+    },
+    {
+      "id": "0055da15-de04-4482-a554-1e68f61fbd4f",
+      "name": "receipt.json",
+      "sha256": "c3a653d3c849cc253664b77805167961c11a06bf760999b853acc6fa7be10ada"
+    },
+    {
+      "id": "8902adef-2a78-4f46-bbde-0b1beea58861",
+      "name": "verification-report.md",
+      "sha256": "cccc8bcc2bb288157580aa59d28bbb9eae622b8e70d3770d57d45035ab2d85e6"
+    },
+    {
+      "id": "9460c058-b6c6-497d-a7e6-6019618e8f06",
+      "name": "mission-report.md",
+      "sha256": "b7023cf94dc480d63c1c47a707642f0d272df893c3efdf064eb1ecb359bd6a3b"
+    },
+    {
+      "id": "8fa0293a-2a4a-4cd1-9f30-9c41d06c51c5",
+      "name": "qa/nox-qa-verify.py",
+      "sha256": "408380ed3af81dde847bef3f3c3811102331c8419f691e37645cf0e54fbd3804"
+    },
+    {
+      "id": "529eee6b-507a-4690-bf2e-1b55b117d79f",
+      "name": "qa/qa-run-result.json",
+      "sha256": "1cfe25c39d1bf1f6bb3446fae523ca5081aa8b1a971718c58ce26c12ffb99ac1"
+    },
+    {
+      "id": "eaa150e5-7936-4acd-92d5-7ce313b846f2",
+      "name": "qa/repair2-verify.py",
+      "sha256": "be9882d3091482dba041ce7de17aab0f3937bdbe5d35b3a61b2eed44f3d1c280"
+    },
+    {
+      "id": "efdcf8f1-ecb9-41d6-afc3-1ea2df77eb37",
+      "name": "qa/repair2-run-result.json",
+      "sha256": "b16b8748482098e3b1f17f129a9f703358ba22223c87420368840829877c87df"
+    },
+    {
+      "id": "84a95d4c-e759-4edb-a071-36f27fbfc5c1",
+      "name": "qa/repair2-run.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "c1eab2bb-291c-4891-97de-f5d49c8b2588",
+      "name": "qa/receipt.before-repair2.json",
+      "sha256": "c3a653d3c849cc253664b77805167961c11a06bf760999b853acc6fa7be10ada"
+    }
+  ],
+  "model_calls": [
+    {
+      "schema_version": 1,
+      "call_id": "177e3caa-957d-4665-8279-9c4679c5216b",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:34:35.881Z",
+      "finished_at": "2026-11-16T06:34:51.550Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 3009,
+        "output_tokens": 1611,
+        "total_tokens": 4620,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "fd8cbce4-bc75-4803-a615-c81eb62bedfe",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "researcher",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:34:51.627Z",
+      "finished_at": "2026-11-16T06:38:52.158Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 179196,
+        "output_tokens": 26850,
+        "total_tokens": 206046,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 111586
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "d2058514-923a-4bc4-acb8-f4b65459cb89",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "head-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:38:52.195Z",
+      "finished_at": "2026-11-16T06:39:29.206Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 5915,
+        "output_tokens": 3847,
+        "total_tokens": 9762,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 631
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "625df05d-cfb8-44dd-a185-16eaa86ff178",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "executor",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:39:29.242Z",
+      "finished_at": "2026-11-16T06:41:46.862Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 167105,
+        "output_tokens": 13787,
+        "total_tokens": 180892,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 115679
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "cf0eee37-4e1b-4881-8a58-39888b235edc",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "analyst",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:41:46.908Z",
+      "finished_at": "2026-11-16T06:45:07.098Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 283126,
+        "output_tokens": 23497,
+        "total_tokens": 306623,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 188122
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "5b36c3b1-e998-47cd-af11-5641066771e2",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "writer",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:45:07.140Z",
+      "finished_at": "2026-11-16T06:47:21.356Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 147161,
+        "output_tokens": 14688,
+        "total_tokens": 161849,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 78216
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "dae26603-2a67-4ecb-bb1b-1a4f9aabc48c",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:47:21.383Z",
+      "finished_at": "2026-11-16T06:48:09.731Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 32998,
+        "output_tokens": 4877,
+        "total_tokens": 37875,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "d64733e1-4d4b-4b8f-9429-6bbc1419b7af",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "executor",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:48:09.775Z",
+      "finished_at": "2026-11-16T06:53:42.076Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 441607,
+        "output_tokens": 35485,
+        "total_tokens": 477092,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 321333
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "6e81d29c-5f36-48d9-9979-ef4d03644cf2",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "qa-agent",
+      "model": "claude-opus-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:53:42.107Z",
+      "finished_at": "2026-11-16T06:54:51.904Z",
+      "status": "completed",
+      "outcome": "completed",
+      "usage": {
+        "input_tokens": 44257,
+        "output_tokens": 6689,
+        "total_tokens": 50946,
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 0
+      },
+      "usage_status": "reported",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      }
+    },
+    {
+      "schema_version": 1,
+      "call_id": "56dc92a3-3310-4b92-950b-df53e1799852",
+      "mission_id": "r2-acquisition-7a5ed56f-2922-4a18-a7e6-f36ffd6f519d",
+      "role": "executor",
+      "model": "claude-sonnet-5-5",
+      "provider": "routercheap",
+      "operation": "generate",
+      "started_at": "2026-11-16T06:54:51.940Z",
+      "finished_at": "2026-11-16T07:04:33.229Z",
+      "status": "unknown",
+      "outcome": "UNKNOWN",
+      "usage": {
+        "input_tokens": "UNKNOWN",
+        "output_tokens": "UNKNOWN",
+        "total_tokens": "UNKNOWN",
+        "reasoning_tokens": 0,
+        "cached_input_tokens": 282697
+      },
+      "usage_status": "partial",
+      "cost": {
+        "status": "UNKNOWN",
+        "amount": null,
+        "currency": "USD"
+      },
+      "reason": "provider_aborted"
+    }
+  ],
+  "provider_cost": "UNKNOWN",
+  "checks": [
+    {
+      "check": "mission completed through independent Nox QA",
+      "passed": false,
+      "detail": "paused"
+    },
+    {
+      "check": "real Head and independent QA calls recorded",
+      "passed": true
+    },
+    {
+      "check": "unknown capability caused acquisition then replan",
+      "passed": true,
+      "detail": "[{\"kind\":\"acquire\",\"capability\":\"observation-digest-v1\"},{\"kind\":\"replan\",\"attempt\":\"ef05d5a7-86bd-4978-b834-152c37b98f88\"}]"
+    },
+    {
+      "check": "exactly one structured qualified acquisition",
+      "passed": true
+    },
+    {
+      "check": "host published and reused one qualification across replan policy checks",
+      "passed": true
+    },
+    {
+      "check": "actual invocation receipt bound to mission, attempt, executable and command",
+      "passed": true
+    },
+    {
+      "check": "specialist result attributes actual qualified invocation",
+      "passed": false
+    },
+    {
+      "check": "exact independently recomputed digest totals",
+      "passed": true
+    },
+    {
+      "check": "exact independently recomputed site totals",
+      "passed": true
+    },
+    {
+      "check": "human digest is present and consistent",
+      "passed": true
+    },
+    {
+      "check": "fixture unchanged",
+      "passed": true
+    },
+    {
+      "check": "all final artifact hashes match bytes",
+      "passed": true
+    },
+    {
+      "check": "provider monetary cost remains unknown",
+      "passed": true,
+      "detail": "UNKNOWN"
+    }
+  ],
+  "passed": false
+}

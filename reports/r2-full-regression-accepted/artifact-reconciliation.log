@@ -1,0 +1,13 @@
+  ✓ root file is registered
+  ✓ nested HTML is registered with its relative path
+  ✓ nested CSS is registered
+  ✓ nested verification tool is registered
+  ✓ nested screenshot is registered
+  ✓ screenshot type is image
+  ✓ temporary files are ignored
+  ✓ all five real files were found
+  ✓ second reconciliation is idempotent
+  ✓ artifact registry contains no duplicates
+
+passed: 10, failed: 0
+Nested artifact reconciliation regression test passed.

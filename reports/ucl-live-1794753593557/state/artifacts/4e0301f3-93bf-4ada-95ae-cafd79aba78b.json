@@ -1,0 +1,13 @@
+{
+  "id": "4e0301f3-93bf-4ada-95ae-cafd79aba78b",
+  "mission_id": "ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369",
+  "type": "data",
+  "name": "capability_library_raw_queries.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-ucl-integration/reports/ucl-live-1794753593557/state/artifacts/ucl-live-6869c6cb-72eb-44b7-80c8-ea76d07ce369/capability_library_raw_queries.json",
+  "created_at": "2026-11-15T14:40:38.121Z",
+  "metadata": {
+    "size_bytes": 5466,
+    "sha256": "994eb351afc61b4f781e9c494967779c72edb4b0445434adb468c2082f30ff1d",
+    "revision": 1
+  }
+}

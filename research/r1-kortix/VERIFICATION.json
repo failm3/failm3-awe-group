@@ -1,0 +1,198 @@
+{
+  "session": "ae5a2f34-4215-4e82-a92e-80ac8463df65",
+  "date": "2026-11-13",
+  "status": "FINAL_RESEARCH_EDITORIAL_RECHECK_NOT_INDEPENDENT_REPASS",
+  "file_checks": {
+    "sections": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L"
+    ],
+    "missing": [],
+    "broken_main_document_links": [],
+    "opencode_lines": 728,
+    "previous_markdown_files": 23,
+    "application_tests_run": false
+  },
+  "original_evidence_and_review_unchanged": {
+    "evidence/opencode-audit.md": true,
+    "evidence/previous/H-BUILD-BUY-REUSE-MATRIX.md": true,
+    "evidence/previous/GITHUB-HANDOFF.md": true,
+    "evidence/previous/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md": true,
+    "evidence/previous/F-SKILL-LIFECYCLE.md": true,
+    "evidence/previous/L-OWNER-DECISIONS-AND-UNKNOWN.md": true,
+    "evidence/previous/D-TOOLS-CONNECTORS-LIBRARIAN.md": true,
+    "evidence/previous/E-KNOWLEDGE-INGESTION.md": true,
+    "evidence/previous/awe-nox-requirements-coverage.md": true,
+    "evidence/previous/spec.md": true,
+    "evidence/previous/K-OPENCODE-READY-IMPLEMENTATION-PACK.md": true,
+    "evidence/previous/status.md": true,
+    "evidence/previous/G-CAPABILITY-PACKS.md": true,
+    "evidence/previous/editorial-resolution.md": true,
+    "evidence/previous/EXECUTION-BRIEF.md": true,
+    "evidence/previous/awe-nox-review.md": true,
+    "evidence/previous/awe-nox-opencode-backlog.md": true,
+    "evidence/previous/I-TARGET-INTEGRATION-MAP.md": true,
+    "evidence/previous/awe-nox-final-report.md": true,
+    "evidence/previous/M-SOURCES-AND-EVIDENCE-APPENDIX.md": true,
+    "evidence/previous/README.md": true,
+    "evidence/previous/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md": true,
+    "evidence/previous/A-EXECUTIVE-SUMMARY.md": true,
+    "evidence/previous/B-NOX-AS-IS-SOURCE-AUDIT.md": true,
+    "review/INDEPENDENT-REVIEW.md": true,
+    "review/REVIEW-VERIFICATION.json": true,
+    "review/REQUIRED-CORRECTIONS.md": true
+  },
+  "upstream_metadata": [
+    {
+      "name": "@mastra/core",
+      "version": "1.82.0",
+      "engines": {
+        "node": ">=22.13.0"
+      },
+      "license": "Apache-2.0",
+      "peerDependencies": {
+        "zod": "^3.25.0 || ^4.0.0"
+      },
+      "dependencies": {
+        "ws": "^8.22.0",
+        "chat": "^4.44.0",
+        "hono": "^4.13.13",
+        "yaml": "^2.9.1",
+        "execa": "^9.6.1",
+        "fastq": "^1.20.3",
+        "p-map": "^7.1.1",
+        "re2js": "^2.9.0",
+        "croner": "^10.0.1",
+        "dotenv": "^17.4.2",
+        "ignore": "^7.0.14",
+        "jpeg-js": "^0.4.4",
+        "p-retry": "^7.1.1",
+        "lru-cache": "^11.5.3",
+        "picomatch": "^4.0.7",
+        "json-schema": "^0.4.0",
+        "xxhash-wasm": "^1.1.0",
+        "@lukeed/uuid": "^2.0.1",
+        "hono-openapi": "^1.5.0",
+        "posthog-node": "^5.57.1",
+        "@a2a-js/sdk-v1": "npm:@a2a-js/sdk@~1.0.1",
+        "@a2a-js/sdk-v0_3": "npm:@a2a-js/sdk@~0.3.14",
+        "@isaacs/ttlcache": "^2.1.5",
+        "@ai-sdk/provider-v5": "npm:@ai-sdk/provider@2.0.5",
+        "@ai-sdk/provider-v6": "npm:@ai-sdk/provider@3.0.19",
+        "@ai-sdk/provider-v7": "npm:@ai-sdk/provider@4.0.35",
+        "@mastra/schema-compat": "1.3.17",
+        "@standard-schema/spec": "^1.1.0",
+        "@ai-sdk/provider-utils-v6": "npm:@ai-sdk/provider-utils@4.0.63",
+        "@ai-sdk/provider-utils-v7": "npm:@ai-sdk/provider-utils@5.0.72"
+      },
+      "integrity_match": true
+    },
+    {
+      "name": "@mastra/memory",
+      "version": "1.41.0",
+      "engines": {
+        "node": ">=22.13.0"
+      },
+      "license": "Apache-2.0",
+      "peerDependencies": {
+        "@mastra/core": ">=1.80.0-0 <2.0.0-0"
+      },
+      "dependencies": {
+        "zod": "^4.6.7",
+        "diff": "^9.0.0",
+        "lru-cache": "^11.5.3",
+        "async-mutex": "^0.5.0",
+        "json-schema": "^0.4.0",
+        "xxhash-wasm": "^1.1.0",
+        "probe-image-size": "^7.4.0",
+        "@mastra/schema-compat": "1.3.17"
+      },
+      "integrity_match": true
+    },
+    {
+      "name": "@mastra/libsql",
+      "version": "1.29.0",
+      "engines": {
+        "node": ">=22.13.0"
+      },
+      "license": "Apache-2.0",
+      "peerDependencies": {
+        "@mastra/core": ">=1.76.0-0 <2.0.0-0"
+      },
+      "dependencies": {
+        "@libsql/client": "^0.18.0"
+      },
+      "integrity_match": true
+    },
+    {
+      "name": "@mastra/mcp",
+      "version": "2.8.0",
+      "engines": {
+        "node": ">=22.13.0"
+      },
+      "license": "Apache-2.0",
+      "peerDependencies": {
+        "zod": "^4.2.0",
+        "@mastra/core": ">=1.79.0-0 <2.0.0-0"
+      },
+      "dependencies": {
+        "tsx": "^4.23.15",
+        "exit-hook": "^5.1.0",
+        "fast-deep-equal": "^3.1.3",
+        "json-schema-to-typescript": "16.0.0",
+        "@modelcontextprotocol/core": "2.4.0",
+        "@modelcontextprotocol/node": "2.1.2",
+        "@modelcontextprotocol/client": "2.4.0",
+        "@modelcontextprotocol/server": "2.4.0",
+        "@modelcontextprotocol/ext-apps": "^2.0.3"
+      }
+    },
+    {
+      "name": "@composio/mastra",
+      "version": "0.10.6",
+      "engines": {
+        "node": ">=22.22.3"
+      },
+      "license": "ISC",
+      "peerDependencies": {
+        "zod": "^3.25 || ^4",
+        "@mastra/core": "^1.46.0",
+        "@composio/core": ">=0.10.0 <1.0.0 || >=1.0.0-beta.0 <1.0.0"
+      },
+      "dependencies": {
+        "@mastra/schema-compat": "^1.3.13"
+      }
+    },
+    {
+      "name": "@playwright/mcp",
+      "version": "0.0.85",
+      "engines": {
+        "node": ">=18"
+      },
+      "license": "Apache-2.0",
+      "peerDependencies": null,
+      "dependencies": {
+        "playwright": "1.66.0-alpha-2026-11-09",
+        "playwright-core": "1.66.0-alpha-2026-11-09"
+      }
+    }
+  ],
+  "runtime_tests": "NOT_RUN",
+  "current_source": "UNAVAILABLE",
+  "independent_draft_verdict": "CHANGES_REQUIRED",
+  "independent_recheck": "NOT_PERFORMED",
+  "editorial_disposition": "M1 M2 M3 m1 m2 addressed; see REVIEW-DISPOSITION.md",
+  "deployment": false,
+  "access_changes": false,
+  "github_publication": false
+}

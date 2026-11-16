@@ -1,0 +1,14 @@
+{
+  "id": "10fa62e8-94cb-42a4-8567-9b2761863266",
+  "mission_id": "r2-experience-reuse-1794858271974-t06-off",
+  "type": "file",
+  "name": "extra.test.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-experience-reuse-1794858271974/state/artifacts/r2-experience-reuse-1794858271974-t06-off/extra.test.cjs",
+  "content": "'use strict';\nconst assert = require('node:assert/strict');\nconst { parseExport: p } = require('./src/export.cjs');\nconst F = { message: 'INVALID_FORMAT' };\nconst V = { message: 'INVALID_VALUE' };\n\nassert.deepEqual(p(''), []);\nassert.deepEqual(\n  p('WINDOW=1;RATE=0;LIMIT=1\\r\\nLIMIT=25;RATE=30;WINDOW=30\\rWINDOW=2;RATE=2;LIMIT=2\\n'),\n  [{ WINDOW: 1, RATE: 0, LIMIT: 1 }, { WINDOW: 30, RATE: 30, LIMIT: 25 }, { WINDOW: 2, RATE: 2, LIMIT: 2 }]\n);\n\nconst r = p('ZED= z ;\"COLOR=amber\";WINDOW= 3 ;RATE=1;LIMIT=1;\"NOTE=a;b=c\\r\\n\"\"q\"\"\"');\nassert.deepEqual(Object.keys(r[0]), ['WINDOW', 'RATE', 'LIMIT', 'COLOR', 'ZED', 'NOTE']);\nassert.deepEqual(r[0], { WINDOW: 3, RATE: 1, LIMIT: 1, COLOR: 'amber', ZED: 'z', NOTE: 'a;b=c\\r\\n\"q\"' });\n\nconst pr = p('WINDOW=1;RATE=1;LIMIT=1;PROTO__=x');\nassert.equal(Object.getPrototypeOf(pr[0]), Object.prototype);\nassert.deepEqual(p('WINDOW=1;RATE=1;LIMIT=1;FLAGS=a,b'), [{ WINDOW: 1, RATE: 1, LIMIT: 1, FLAGS: 'a,b' }]);\n\nfor (const s of [\n  'WINDOW=1;RATE=1;LIMIT=1;',\n  'WINDOW=1;RATE=1;LIMIT=1\\n\\nWINDOW=1;RATE=1;LIMIT=1',\n  '\"WINDOW=1;RATE=1;LIMIT=1',\n  '\"WINDOW=1\"x;RATE=1;LIMIT=1',\n  'WINDOW=\"1\";RATE=1;LIMIT=1',\n  'WINDOW=1=2;RATE=1;LIMIT=1',\n  ' WINDOW=1;RATE=1;LIMIT=1',\n  'window=1;RATE=1;LIMIT=1',\n  'WINDOW=1;WINDOW=2;RATE=1;LIMIT=1',\n  'WINDOW=1;\"WINDOW=1\";RATE=1;LIMIT=1',\n  'WINDOW=99;RATE=1;BAD KEY=1',\n  'WINDOW;RATE=1;LIMIT=1',\n  '1A=1;WINDOW=1;RATE=1;LIMIT=1',\n]) assert.throws(() => p(s), F, s);\n\nfor (const s of [\n  'WINDOW=0;RATE=1;LIMIT=1',\n  'WINDOW=31;RATE=1;LIMIT=1',\n  'WINDOW=01;RATE=1;LIMIT=1',\n  'WINDOW=1;RATE=31;LIMIT=1',\n  'WINDOW=1;RATE=1;LIMIT=26',\n  'WINDOW=1;RATE=1;LIMIT=0',\n  'WINDOW=1;RATE=1',\n  'WINDOW=1;RATE=-1;LIMIT=1',\n  'WINDOW=1;RATE=+1;LIMIT=1',\n  'WINDOW=1.0;RATE=1;LIMIT=1',\n  'WINDOW=;RATE=1;LIMIT=1',\n  'WINDOW=1;RATE=1;LIMIT=1;COLOR=Green',\n  'WINDOW=1;RATE=1;LIMIT=1;COLOR=',\n  'WINDOW=1;RATE=1 2;LIMIT=1',\n]) assert.throws(() => p(s), V, s);\n\n// Semantic error in an earlier record wins over a syntax error in a later one.\nassert.throws(() => p('WINDOW=0;RATE=1;LIMIT=1\\n\"bad'), V);\n\nconsole.log('extra PASS');\n",
+  "created_at": "2026-11-16T19:53:59.544Z",
+  "metadata": {
+    "size_bytes": 2095,
+    "sha256": "9a4e005700521903353cbd84ef62225f2d38f8884c6f2d0ba720b448a9cbed16",
+    "revision": 1
+  }
+}

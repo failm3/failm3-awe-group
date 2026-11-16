@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280">
+<title>Rescue-Shift Analytics — Shift Completion &amp; Incidents</title>
+<style>
+  /* Self-contained dashboard. No external fonts, images, scripts or stylesheets.
+     Fixed 1280x720 canvas so a fullPage:false headless capture is lossless. */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1280px;height:720px;overflow:hidden}
+  body{
+    background:#0d1626;
+    color:#e9f0fa;
+    font-family:system-ui,-apple-system,"Segoe UI","DejaVu Sans",sans-serif;
+    font-size:15px;
+    line-height:1.35;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    width:1280px;height:720px;
+    padding:26px 30px 24px;
+    display:flex;flex-direction:column;
+    background:
+      radial-gradient(900px 320px at 1080px -60px,rgba(79,209,165,.10),transparent 70%),
+      radial-gradient(760px 300px at -60px 700px,rgba(90,169,230,.10),transparent 70%);
+  }
+
+  /* ---------- header ---------- */
+  .hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:1px solid #223350}
+  .eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#4fd1a5;font-weight:650}
+  h1{font-size:25px;line-height:1.15;letter-spacing:-.2px;font-weight:680;margin-top:5px;color:#f2f7ff}
+  .sub{font-size:13.5px;color:#93a8c4;margin-top:5px}
+  .sub b{color:#c3d4ea;font-weight:600}
+  .hdr-r{text-align:right;flex:none}
+  .stamp{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:12.5px;font-weight:600;color:#9ff0d1;
+    background:rgba(79,209,165,.10);border:1px solid rgba(79,209,165,.34);
+    padding:5px 11px;border-radius:999px;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:#4fd1a5;display:block}
+  .stamp-sub{font-size:12px;color:#7d93af;margin-top:7px;font-family:ui-monospace,"DejaVu Sans Mono",monospace}
+
+  /* ---------- KPI row ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:16px}
+  .card{
+    background:linear-gradient(180deg,#172237 0%,#131d2f 100%);
+    border:1px solid #26374f;border-radius:12px;
+    padding:14px 15px 13px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    min-height:126px;
+  }
+  .card.accent{border-color:#2f6f5c;background:linear-gradient(180deg,#16302b 0%,#132420 100%)}
+  .k-label{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#8ba1bf;font-weight:650}
+  .k-val{font-size:38px;font-weight:700;letter-spacing:-1px;line-height:1;color:#f4f9ff;font-variant-numeric:tabular-nums}
+  .k-val .unit{font-size:16px;font-weight:600;letter-spacing:0;color:#8ba1bf;margin-left:4px}
+  .card.accent .k-val{color:#6ff0bd}
+  .k-foot{font-size:12px;color:#7d93af}
+  .k-foot b{color:#b8cbe2;font-weight:600}
+  .track{height:7px;border-radius:4px;background:#223349;overflow:hidden;margin-top:9px}
+  .track>i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#2f9e76,#6ff0bd)}
+
+  /* ---------- district panel ---------- */
+  .panel{
+    margin-top:16px;flex:1 1 auto;min-height:0;
+    background:#121c2d;border:1px solid #26374f;border-radius:12px;
+    padding:14px 18px 12px;display:flex;flex-direction:column;
+  }
+  .panel-h{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:10px}
+  h2{font-size:16px;font-weight:670;letter-spacing:-.1px;color:#eef5ff}
+  .legend{font-size:12px;color:#7d93af}
+  .legend .sw{display:inline-block;width:10px;height:10px;border-radius:3px;background:linear-gradient(90deg,#2f9e76,#6ff0bd);vertical-align:-1px;margin-right:6px}
+
+  table{width:100%;border-collapse:collapse;table-layout:fixed;font-variant-numeric:tabular-nums}
+  col.c-d{width:190px}
+  col.c-n{width:88px}
+  col.c-h{width:120px}
+  col.c-h2{width:124px}
+  col.c-i{width:112px}
+  th{
+    font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:#8399b6;font-weight:650;
+    text-align:right;padding:0 10px 8px;border-bottom:1px solid #2a3b55;
+  }
+  th:first-child{text-align:left;padding-left:2px}
+  th.num-h,td.num-h{text-align:right}
+  td{padding:11px 10px;border-bottom:1px solid #1e2c42;font-size:15px;vertical-align:middle}
+  td:first-child{padding-left:2px}
+  tbody tr:last-child td{border-bottom:none}
+  .dname{font-size:15px;font-weight:640;color:#f0f6ff;display:flex;align-items:center;gap:9px}
+  .chip{display:inline-block;width:4px;height:24px;border-radius:2px;background:#3f6fa8}
+  .rk{font-size:11.5px;color:#6f85a1;font-weight:600;font-family:ui-monospace,"DejaVu Sans Mono",monospace}
+  .num{font-weight:600;color:#dbe7f5}
+  .num.muted{color:#a9bcda;font-weight:500}
+  .inc{font-weight:600;color:#f0b354}
+  .inc.zero{color:#7d93af}
+  .pct{font-weight:680;color:#9ff0d1;font-size:15.5px}
+  .pct.mid{color:#8fc6f2}
+  .pct.low{color:#f0b354}
+  .cellbar{display:flex;align-items:center;gap:12px;justify-content:flex-end}
+  .bar{flex:1 1 auto;height:10px;border-radius:5px;background:#20304a;overflow:hidden;max-width:230px}
+  .bar>i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,#2f9e76,#6ff0bd)}
+  .bar>i.mid{background:linear-gradient(90deg,#2f7fb5,#8fc6f2)}
+  .bar>i.low{background:linear-gradient(90deg,#a97a29,#f0b354)}
+  .pctcell{width:66px;text-align:right;flex:none}
+  tfoot td{padding:11px 10px;border-top:2px solid #31465f;border-bottom:none;font-size:15px;background:rgba(255,255,255,.018)}
+  tfoot .dname{color:#ffffff;font-weight:700}
+  tfoot .num{color:#eef5ff;font-weight:700}
+  tfoot .pct{color:#c9f7e4}
+
+  .foot{
+    margin-top:auto;padding-top:10px;border-top:1px solid #1e2c42;
+    display:flex;justify-content:space-between;gap:24px;
+    font-size:12px;color:#7d93af;line-height:1.5;
+  }
+  .foot code{font-family:ui-monospace,"DejaVu Sans Mono",monospace;font-size:11.5px;color:#a9bcda}
+  .foot .right{text-align:right;flex:none}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="hdr">
+    <div>
+      <div class="eyebrow">Rescue-shift operations</div>
+      <h1>Shift completion &amp; incident review</h1>
+      <div class="sub">Source <b>input/rescue-shifts.csv</b> &middot; <b>6</b> shifts &middot; <b>3</b> districts &middot; all hour figures are scheduled/completed hours (h)</div>
+    </div>
+    <div class="hdr-r">
+      <div class="stamp"><span class="dot"></span>Verified metrics</div>
+      <div class="stamp-sub">metrics.json &middot; sha256 502022dd&hellip;</div>
+    </div>
+  </header>
+
+  <section class="kpis" aria-label="Top-level metrics">
+    <div class="card">
+      <div class="k-label">Rows counted</div>
+      <div class="k-val">6<span class="unit">shifts</span></div>
+      <div class="k-foot"><b>row_count</b> &mdash; one row per shift_id</div>
+    </div>
+    <div class="card">
+      <div class="k-label">Scheduled hours</div>
+      <div class="k-val">59<span class="unit">h</span></div>
+      <div class="k-foot"><b>scheduled_hours</b> &mdash; column total</div>
+    </div>
+    <div class="card">
+      <div class="k-label">Completed hours</div>
+      <div class="k-val">53<span class="unit">h</span></div>
+      <div class="k-foot"><b>completed_hours</b> &mdash; column total</div>
+    </div>
+    <div class="card">
+      <div class="k-label">Incidents</div>
+      <div class="k-val">9<span class="unit">reported</span></div>
+      <div class="k-foot"><b>incidents</b> &mdash; column total</div>
+    </div>
+    <div class="card accent">
+      <div class="k-label">Completion rate</div>
+      <div class="k-val">89.83<span class="unit">%</span></div>
+      <div class="track"><i style="width:89.83%"></i></div>
+      <div class="k-foot"><b>completion_percent</b> &mdash; 53 &divide; 59 &times; 100</div>
+    </div>
+  </section>
+
+  <section class="panel" aria-label="District comparison">
+    <div class="panel-h">
+      <h2>District comparison</h2>
+      <div class="legend"><span class="sw"></span>Bar length = completed hours as a share of that district&rsquo;s scheduled hours (scaled 0 to 100 percent)</div>
+    </div>
+
+    <table>
+      <colgroup>
+        <col class="c-d"><col class="c-n"><col class="c-h"><col class="c-h2"><col class="c-i"><col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">District</th>
+          <th scope="col" class="num">Shifts</th>
+          <th scope="col" class="num">Scheduled&nbsp;(h)</th>
+          <th scope="col" class="num">Completed&nbsp;(h)</th>
+          <th scope="col" class="num">Incidents</th>
+          <th scope="col" class="num">Completion %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="dname"><i class="chip"></i>South</span></td>
+          <td class="num-h"><span class="num">2</span></td>
+          <td class="num-h"><span class="num muted">14</span></td>
+          <td class="num-h"><span class="num">13</span></td>
+          <td class="num-h"><span class="inc">3</span></td>
+          <td class="num-h"><span class="cellbar"><span class="bar"><i class="mid" style="width:92.86%"></i></span><span class="pctcell"><span class="pct mid">92.86%</span></span></span></td>
+        </tr>
+        <tr>
+          <td><span class="dname"><i class="chip"></i>West</span></td>
+          <td class="num-h"><span class="num">2</span></td>
+          <td class="num-h"><span class="num muted">23</span></td>
+          <td class="num-h"><span class="num">22</span></td>
+          <td class="num-h"><span class="inc">1</span></td>
+          <td class="num-h"><span class="cellbar"><span class="bar"><i style="width:95.65%"></i></span><span class="pctcell"><span class="pct">95.65%</span></span></span></td>
+        </tr>
+        <tr>
+          <td><span class="dname"><i class="chip"></i>North</span></td>
+          <td class="num-h"><span class="num">2</span></td>
+          <td class="num-h"><span class="num muted">22</span></td>
+          <td class="num-h"><span class="num">18</span></td>
+          <td class="num-h"><span class="inc">5</span></td>
+          <td class="num-h"><span class="cellbar"><span class="bar"><i class="low" style="width:81.82%"></i></span><span class="pctcell"><span class="pct low">81.82%</span></span></span></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><span class="dname">All districts</span></td>
+          <td class="num-h"><span class="num">6</span></td>
+          <td class="num-h"><span class="num">59</span></td>
+          <td class="num-h"><span class="num">53</span></td>
+          <td class="num-h"><span class="inc">9</span></td>
+          <td class="num-h"><span class="cellbar"><span class="bar"><i style="width:89.83%"></i></span><span class="pctcell"><span class="pct">89.83%</span></span></span></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="foot">
+      <div>Rows sorted by completion % (highest first). District totals reconcile exactly to the top-level metrics: shifts 2+2+2=6, scheduled 14+23+22=59, completed 13+22+18=53, incidents 3+1+5=9.</div>
+      <div class="right"><code>completion % = completed_hours / scheduled_hours &times; 100</code><br>rounded half-up to 2 decimal places</div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

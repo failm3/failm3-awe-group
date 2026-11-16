@@ -1,0 +1,13 @@
+{
+  "mission_id": "r1-web-fca8d1ca-5530-4737-b27d-af18c15f5989",
+  "outcome": "FAIL",
+  "audit": {
+    "receipt_hash_valid": true,
+    "receipt_and_disk_manifest_match": true,
+    "tree_hash_matches_manifest": true,
+    "both_independent_receipts_identical": false,
+    "remained_failed_and_paused": true,
+    "checkpoint_has_no_in_flight_work": true,
+    "costs_not_inferred": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "passed": false,
+  "score": 7,
+  "criteria_results": [
+    {
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "passed": true,
+      "notes": "The missing capability is stated explicitly as observation-digest-v1 (capability_before='absent'), and one bounded acquisition is recorded (acquisition_count=1, bounded=true, network_used=false, packages_installed=false). The authored procedure sits at a stable path inside the mission directory (procedures/observation_digest_v1.py, sha256 916628d6...). Qualification is genuinely mechanical rather than self-asserted: an independent integer-arithmetic oracle distinct from the procedure's Decimal path, a synthetic fixture with rounding tie-breaks (3.125 -> 3.13), a mutated-input sensitivity case, byte-determinism across det-a/det-b, and five fail-closed negative controls, logged at 154/154 checks with exit 0 and empty stderr."
+    },
+    {
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "passed": true,
+      "notes": "The receipt records the exact argv form [python3, procedures/observation_digest_v1.py, input/pilot.observations.json, <mission dir>]; the two fixed args match the approved specification byte-for-byte, and the output directory is the mission directory, not a probe directory (output_dir_is_not_probe_dir=true). The executable sha256 916628d6... equals the registered procedure artifact bytes, so the qualified bytes are the invoked bytes. Exit 0, empty stderr, stdout sha 771f1a0e..., and the receipt's self_consistency block ties the procedure-reported digest hashes to the actual output bytes. The receipt is itself a registered artifact (6af1c8aa..., 6324 bytes) with an ordering proof (qualification 06:02:08 < invocation 06:02:28 < receipt 06:02:41)."
+    },
+    {
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "passed": true,
+      "notes": "Arithmetic independently re-derived from the fixture: scheduled 12+8+10=30; completed 11+8+7=26; incidents 2+1+3=6; row_count=3; 26/30=86.666.. -> 86.67. Sites keyed by site with totals: North scheduled 22 / completed 18 / incidents 5 / row_count 2 / 81.82 (18/22=81.818..), South 8/8/1/1/100.00. All values are exact integers with completion_percent rendered to two decimals (JSON literals 100.00 and 0.00 preserved, not coerced to floats). digest.md carries the same values: its sha (c597cca9..., 1596 bytes) is identical across three independent invocations (primary, det-a, det-b) and matches the procedure's self-reported hash, and the mutated fixture produces a correspondingly different md hash, so the md is generated from the same single computation rather than transcribed."
+    },
+    {
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "passed": false,
+      "notes": "Every deliverable is registered with a sha256 in the epoch, and the digest bytes reconcile end to end. However the integrity listing is stale: evidence/artifact_manifest.json (revision 1, 214f950c...) still records the superseded repair-iteration-1 bytes for evidence/build_receipt.py (89237084.../3980 vs registered cdbdb98a.../6940), evidence/invocation_receipt.json (d1442f43.../5423 vs registered 6af1c8aa.../6324) and work/invocation_timestamp.txt (7ae11990... vs registered e75b9bb7...), and it omits three registered evidence files (evidence/independent_verify.stderr, work/qual/qualification.stderr, work/qual/qualification.exit_code). Relatedly, evidence/independent_verify.log is unchanged across repair iteration 2 (still revision 4, 11894c0f...), so independent host verification was not re-run against the final repair-2 evidence bytes. Re-hashing the tree against the manifest would therefore report three mismatches."
+    }
+  ],
+  "defects": [
+    {
+      "issue": "evidence/artifact_manifest.json was not regenerated after repair iteration 2: it lists superseded hashes and sizes for evidence/build_receipt.py (89237084.../3980 vs registered cdbdb98a.../6940), evidence/invocation_receipt.json (d1442f43.../5423 vs registered 6af1c8aa.../6324) and work/invocation_timestamp.txt (7ae11990... vs registered e75b9bb7...), and omits evidence/independent_verify.stderr, work/qual/qualification.stderr and work/qual/qualification.exit_code. Independent re-hashing against the manifest fails for three files.",
+      "severity": "major"
+    },
+    {
+      "issue": "evidence/independent_verify.log is carried over unchanged from repair iteration 1 (revision 4, sha256 11894c0f..., 11540 bytes) even though build_receipt.py, invocation_receipt.json and invocation_timestamp.txt changed in repair iteration 2, and no independent_verify exit-code artifact is registered. Independent host verification is therefore not demonstrated against the final artifact set.",
+      "severity": "major"
+    },
+    {
+      "issue": "digest.md bytes were not included in the supplied candidate bundle, so its content could only be checked indirectly through its registered hash, cross-run hash equality and the verifier log rather than by direct inspection of the rendered table and method section.",
+      "severity": "minor"
+    },
+    {
+      "issue": "QA evidence incomplete: 19 artifact(s) were not included in this review",
+      "severity": "critical"
+    },
+    {
+      "issue": "Artifact 'evidence/independent_verify.stderr' backing file is missing or unreadable",
+      "severity": "critical"
+    },
+    {
+      "issue": "Artifact 'evidence/independent_verify.stderr' backing file is missing or unreadable",
+      "severity": "critical"
+    }
+  ],
+  "recommendations": [
+    "Regenerate evidence/artifact_manifest.json last, after all repairs, and make it self-referential: include every registered artifact (including the two .stderr files, qualification.exit_code and the manifest itself) with post-repair hashes.",
+    "Re-run evidence/independent_verify.py against the final tree, capture exit code plus stdout/stderr as separate registered artifacts, and re-run it whenever any evidence byte changes so the verification cannot predate the artifacts it covers.",
+    "Add a guard to the build driver that aborts if any file's on-disk sha256 differs from the manifest entry, so a stale manifest can never be registered.",
+    "Include digest.md content in the review bundle so reviewers can confirm the method section and table values directly rather than by hash inference."
+  ],
+  "verdict": "FAIL: Artifact 'evidence/independent_verify.stderr' backing file is missing or unreadable"
+}

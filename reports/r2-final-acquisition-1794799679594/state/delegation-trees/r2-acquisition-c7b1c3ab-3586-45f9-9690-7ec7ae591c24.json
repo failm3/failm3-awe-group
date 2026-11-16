@@ -1,0 +1,27 @@
+{
+  "mission_id": "r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24",
+  "saved_at": "2026-11-16T03:29:33.307Z",
+  "total_agents": 1,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-c7b1c3ab-3586-45f9-9690-7ec7ae591c24:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T03:28:26.338Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: No registered capability computes the required observation digest: the registered set (browser_click, browser_get_text, browser_navigate, browser_screenshot, browser_type, capability_library, csv_analytics, file_list, file_read, file_write, manus_search, save_artifact, shell, ti_search, web_extract, web_fetch, web_search) contains nothing named observation-digest-v1 and csv_analytics cannot produce the required digest.json/digest.md contract with exact per-site totals and completion_percent formatted to 2 decimals. Substituting an ad-hoc shell one-liner would silently replace the named capability, so one bounded acquisition is required before an executable plan can be issued. Root cause: the named competence was never qualified on this host; no existing host-qualified attempt ID is available for reuse.. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}. executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "deepseek-v4-flash",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_write",
+        "save_artifact"
+      ],
+      "duration_ms": 66976,
+      "finished_at": "2026-11-16T03:29:33.307Z"
+    }
+  ]
+}

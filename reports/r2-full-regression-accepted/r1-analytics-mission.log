@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: R1 offline production analytics: bound spec, independent QA, fresh-process lesson reuse and revocation fence
+ok 1 - R1 offline production analytics: bound spec, independent QA, fresh-process lesson reuse and revocation fence
+  ---
+  duration_ms: 2953.566717
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2960.023957

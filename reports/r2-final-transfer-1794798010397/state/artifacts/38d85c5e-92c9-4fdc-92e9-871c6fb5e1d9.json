@@ -1,0 +1,15 @@
+{
+  "id": "38d85c5e-92c9-4fdc-92e9-871c6fb5e1d9",
+  "mission_id": "r2-final-transfer-1794798010397-t09-off",
+  "type": "file",
+  "name": "lib/input.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t09-off/lib/input.cjs",
+  "created_at": "2026-11-16T04:06:44.557Z",
+  "metadata": {
+    "size_bytes": 5768,
+    "sha256": "c2b88b6cf40bcc2f4120621dc98ff42b1c33560cea97ad3f295c4c53a03c9875",
+    "reconciled": true,
+    "previous_artifact_id": "30dccccb-d9c1-4ef1-8ac0-4746a0aecdb7",
+    "revision": 3
+  }
+}

@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: tool context denies no grant and unknown tool grants do not expand permissions
+ok 1 - tool context denies no grant and unknown tool grants do not expand permissions
+  ---
+  duration_ms: 4.931513
+  type: 'test'
+  ...
+# Subtest: workspace path rejects traversal and symlink escape
+ok 2 - workspace path rejects traversal and symlink escape
+  ---
+  duration_ms: 1.043288
+  type: 'test'
+  ...
+# Subtest: shell abort kills local child and reports failure
+ok 3 - shell abort kills local child and reports failure
+  ---
+  duration_ms: 132.166468
+  type: 'test'
+  ...
+# Subtest: stale owner is fenced again at artifact registration
+ok 4 - stale owner is fenced again at artifact registration
+  ---
+  duration_ms: 2.255589
+  type: 'test'
+  ...
+# Subtest: web fetch validates protocol, credentials, and private destinations
+ok 5 - web fetch validates protocol, credentials, and private destinations
+  ---
+  duration_ms: 2.017869
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 148.524238

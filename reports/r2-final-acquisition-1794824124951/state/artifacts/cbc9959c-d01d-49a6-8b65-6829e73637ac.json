@@ -1,0 +1,14 @@
+{
+  "id": "cbc9959c-d01d-49a6-8b65-6829e73637ac",
+  "mission_id": "r2-acquisition-557fb9e0-941e-4346-8414-dec675500604",
+  "type": "data",
+  "name": "verify/write-scope-evidence.json",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794824124951/state/artifacts/r2-acquisition-557fb9e0-941e-4346-8414-dec675500604/verify/write-scope-evidence.json",
+  "content": "{\n  \"test\": \"write-scope and determinism\",\n  \"output_dir_used\": \"a fresh temp dir OUTSIDE the mission root (created and removed inside one shell call)\",\n  \"exit_code\": 0,\n  \"stderr_bytes\": 0,\n  \"files_written_to_cwd\": [],\n  \"files_written_to_output_dir\": [\n    \"digest.json\",\n    \"digest.md\"\n  ],\n  \"files_written_outside_output_dir\": [],\n  \"writes_outside_artifact_root_count\": 0,\n  \"mission_artifact_root_unchanged_by_rerun\": true,\n  \"determinism\": {\n    \"digest.json\": {\n      \"rerun_sha256\": \"4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81\",\n      \"delivered_sha256\": \"4cf59af0838a32749ba9dbd951494bafa30544d0f7c36b0324d58f5714948f81\",\n      \"byte_identical\": true\n    },\n    \"digest.md\": {\n      \"rerun_sha256\": \"ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef\",\n      \"delivered_sha256\": \"ee224a465f2568a7dcf0f4231047233cafd1b07cc20949cb14a18f5f483dc1ef\",\n      \"byte_identical\": true\n    }\n  },\n  \"static_audit\": \"grep of procedures/observation-digest-v1.js: writes only via fs.mkdirSync/fs.writeFileSync under the resolved output-dir argument at lines 223-225; no child_process, no network modules, no writes to the input path or script directory; validation failures call fail() which exits 2 before any write.\",\n  \"pass\": true\n}\n",
+  "created_at": "2026-11-16T10:26:55.474Z",
+  "metadata": {
+    "size_bytes": 1274,
+    "sha256": "9f88e617a2b10b9641905ffc4cb48b654a8b1ee0aae729715aa09a0c898c791c",
+    "revision": 2
+  }
+}

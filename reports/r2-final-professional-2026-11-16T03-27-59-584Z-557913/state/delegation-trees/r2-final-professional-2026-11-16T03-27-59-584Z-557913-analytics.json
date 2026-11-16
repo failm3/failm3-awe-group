@@ -1,0 +1,43 @@
+{
+  "mission_id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics",
+  "saved_at": "2026-11-16T03:30:48.950Z",
+  "total_agents": 2,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics:top0",
+      "role": "analyst",
+      "started_at": "2026-11-16T03:28:21.210Z",
+      "task": "Independently parse input/operations.csv (six weeks, three teams) and persist metrics.json in the required schema: row_count, totals, and per-team entries, including completed/work orders, completion_percent (completed/work orders ×100), minutes_per_completed_order (actual/completed minutes), and schedule variance (actual minus planned minutes). Compute all integers from raw rows first, then derive the two decimal metrics, and serialize completion_percent and minutes_per_completed_order with exactly two decimal places. All integer metrics must be JSON numbers, not strings. Verify the recomputed totals against a second independent pass over the rows before writing.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_list",
+        "file_write"
+      ],
+      "duration_ms": 87508,
+      "finished_at": "2026-11-16T03:29:48.713Z"
+    },
+    {
+      "id": "r2-final-professional-2026-11-16T03-27-59-584Z-557913-analytics:top1",
+      "role": "writer",
+      "started_at": "2026-11-16T03:29:48.731Z",
+      "task": "Synthesize operations-brief.md from input/operations.csv and the persisted metrics.json: a concise executive recommendation plus exact overall and per-team findings on completion, defects and schedule variance. Include a Method section that names input/operations.csv and states the exact formulas — completed/work orders ×100, actual/completed minutes, and actual minus planned minutes. Cross-check every figure quoted in the document against metrics.json and the raw rows so document totals match the independently parsed metrics.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_write"
+      ],
+      "duration_ms": 60226,
+      "finished_at": "2026-11-16T03:30:48.950Z"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "candidate": {
+    "schema": "nox-candidate-epoch-v1",
+    "epoch_id": "8801a995-d39c-426a-a562-e6bd231a0da7",
+    "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+    "repair_iteration": 0,
+    "spec_hash": "bc1b5f25f5f23335e55a16c0091cb4144f559751b283d40eb2c077293defed83",
+    "plan_hash": "210ce7357412b661bcc0317584634ae90f0723883bd70fba8332c8dfcb6d04d5",
+    "artifacts": [
+      {
+        "artifact_id": "32e94705-187c-4374-a74e-40116d9db797",
+        "name": "input/pilot.observations.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/input/pilot.observations.json",
+        "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+        "size_bytes": 474
+      },
+      {
+        "artifact_id": "0a31e8ba-971f-4f13-bf12-ed2b4a9add62",
+        "name": "observation.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/observation.json",
+        "sha256": "b18f2b1cd1ad74848996fa3b3469ad0d8a78a98309a893a337fd8baae405b606",
+        "size_bytes": 2269
+      },
+      {
+        "artifact_id": "bef85584-c938-43d0-83dd-8d83ba4adb78",
+        "name": "probes/probe-run-1/digest.json",
+        "revision": 2,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/probes/probe-run-1/digest.json",
+        "sha256": "8ac8593f71638a3df3e51a9b65a1bfc9ae263ab0242e40dd4af6a70c7f44e824",
+        "size_bytes": 415
+      },
+      {
+        "artifact_id": "4bd0dbd5-cce7-4715-9379-de14a1cccc2f",
+        "name": "probes/probe-run-1/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/probes/probe-run-1/digest.md",
+        "sha256": "c0157cb3227052af9480524b3ef2a7af66523dc7e1e936f2285bbfc6190483b1",
+        "size_bytes": 2206
+      },
+      {
+        "artifact_id": "dd122e7e-4d3a-44d6-bb5a-a5a7685dedcb",
+        "name": "probes/probe-run-2/digest.json",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/probes/probe-run-2/digest.json",
+        "sha256": "8ac8593f71638a3df3e51a9b65a1bfc9ae263ab0242e40dd4af6a70c7f44e824",
+        "size_bytes": 415
+      },
+      {
+        "artifact_id": "a8f5ad3d-79b4-4404-b821-0d7c24a48a5b",
+        "name": "probes/probe-run-2/digest.md",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/probes/probe-run-2/digest.md",
+        "sha256": "c0157cb3227052af9480524b3ef2a7af66523dc7e1e936f2285bbfc6190483b1",
+        "size_bytes": 2206
+      },
+      {
+        "artifact_id": "50100302-8eab-4e35-813a-c757d52c2d09",
+        "name": "procedures/observation_digest_v1.py",
+        "revision": 1,
+        "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794816592440/state/artifacts/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae/procedures/observation_digest_v1.py",
+        "sha256": "8d0636f7e9e2dfe3752a50aee359862e9d9e69dd05a444504f1581da1743b275",
+        "size_bytes": 10798
+      }
+    ],
+    "repair_supersessions": [],
+    "repair_provenance": [],
+    "recovery_resolutions": [],
+    "candidate_sha256": "b7492c107a8b2674b1f7094c53e67852a97cdf1400dc737caf72ad68190da768",
+    "created_at": "2026-11-16T08:16:02.801Z"
+  },
+  "receipt": {
+    "schema": "nox-candidate-review-v1",
+    "mission_id": "r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae",
+    "epoch_id": "8801a995-d39c-426a-a562-e6bd231a0da7",
+    "candidate_sha256": "b7492c107a8b2674b1f7094c53e67852a97cdf1400dc737caf72ad68190da768",
+    "execution_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence_sha256": "49d18faca3b2334fadfe9796278954bd26834eb761955c569f33cd83106a6108",
+    "review": {
+      "passed": false,
+      "score": 6,
+      "criteria_results": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "notes": "observation.json names observation-digest-v1 as the missing capability, records exactly one bounded acquisition (a single stdlib-only source at procedures/observation_digest_v1.py, sha256 8d0636f7...3b275, size 10798) and documents a replan onto that local procedure. Qualification is real rather than model-asserted: the procedure was executed into probes/probe-run-1 and probes/probe-run-2, producing byte-identical outputs (both digest.json sha256 8ac8593f...4e824, both digest.md sha256 c0157cb3...83b1), and the figures were cross-checked by an independent awk pass over the raw fixture. I reproduced the arithmetic from the fixture myself and the claimed qualification values are correct."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "notes": "Only partly met. The executable bytes are pinned (sha256 in observation.json matches the registered procedure artifact) and the input-side fixed argument is exact, but the specification requires the second fixed argument to be exactly the artifact root as output directory and forbids using a probe output directory as the final args output. Every recorded invocation used probes/probe-run-1 or probes/probe-run-2 as argv[2], and observation.json itself states 'Nothing was executed against the final output directory during acquisition' with no later root-level invocation evidenced. So the procedure was never run with the mandated fixed argument pair. There is also no standalone durable invocation receipt artifact (command line, argv, binary hash, exit code, stdout/stderr, output hashes); the invocation is only narrated as prose inside observation.json, which is a model-authored observation of a run, not a receipt of that run."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "notes": "Verified independently against input/pilot.observations.json: 3 rows, scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30=86.666...=86.67. North: 2 rows, 22 scheduled, 18 completed, 5 incidents, 18/22=81.818...=81.82. South: 1 row, 8/8/1, 100.00. digest.json carries these as numeric values with a sites object keyed by site and per-site totals, and the per-site sums reconcile to the grand totals. digest.md reproduces every figure and states the reproducible method (exact Decimal summation of Decimal(str(value)), ROUND_HALF_UP to two decimals, 0.0 when scheduled is 0, sorted site keys, deterministic rewrite). The procedure source implements exactly that, so the method is genuinely reproducible. Caveat: South's completion_percent serialises as 100.0 in JSON while the markdown shows 100.00 - numerically identical and within two-decimal precision, so not failing, but noted below."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "notes": "The required final deliverables are missing from the candidate artifact set. digest.json and digest.md exist only under probes/probe-run-1 and probes/probe-run-2; there is no digest.json or digest.md at the fixed-args output directory (the artifact root) and no such artifact is registered. The probe copies are correctly registered with matching sha256s and I re-verified their content byte-for-byte against my own computation, but a probe directory is explicitly disallowed as the final args output, so the mission's operative deliverables were never produced or registered. registration plus host byte verification therefore cannot be established for the deliverables the specification asks for."
+        }
+      ],
+      "defects": [
+        {
+          "issue": "The final digest was never produced at the specification-mandated output directory: no root-level digest.json or digest.md exists or is registered. All outputs live in probes/probe-run-1 and probes/probe-run-2, which the specification explicitly forbids as the final args output.",
+          "severity": "critical"
+        },
+        {
+          "issue": "The procedure was never invoked with the exact fixed argument pair [input/pilot.observations.json, <artifact root>]; every recorded run substituted a probe directory as argv[2], so the fixed-args invocation required by criterion 2 did not occur.",
+          "severity": "major"
+        },
+        {
+          "issue": "No durable invocation receipt artifact. The invocation is only described in prose inside observation.json; there is no machine-checkable record binding the executable hash, exact argv, exit status, captured stderr totals line and output hashes to a specific run.",
+          "severity": "major"
+        },
+        {
+          "issue": "South's completion_percent serialises as 100.0 rather than 100.00 in digest.json, weakening the literal two-decimal presentation (the markdown does render 100.00).",
+          "severity": "minor"
+        },
+        {
+          "issue": "digest.md's reproducible command line shows a literal '<outdir>' placeholder instead of the concrete fixed second argument, so the documented method is not directly replayable as written.",
+          "severity": "minor"
+        },
+        {
+          "issue": "FAIL: Delegation references a missing/unqualified capability attempt or omits shell: 9550605c-b361-4a19-8a5a-f95c1b9a4f5a",
+          "severity": "critical"
+        }
+      ],
+      "recommendations": [
+        "Re-run the qualified procedure with the exact fixed arguments, i.e. python3 procedures/observation_digest_v1.py <...>/input/pilot.observations.json <...>/r2-acquisition-ac8a8235-1dde-42a6-9a99-d1ccf47500ae, writing digest.json and digest.md at the artifact root, and register both as artifacts.",
+        "Emit a dedicated invocation receipt artifact (JSON) capturing the procedure sha256, exact argv list, working directory, exit code, the stderr totals line, and the sha256 of each produced file; keep the probe runs only as subordinate qualification evidence.",
+        "Normalize completion_percent to a fixed two-decimal rendering in digest.json (or document that numeric JSON values are exact to two decimals) so 100.0 vs 100.00 is not ambiguous.",
+        "In digest.md, substitute the concrete output directory into the reproduction command instead of '<outdir>'.",
+        "Keep the existing exactness work and negative-case tests (exit 4 on malformed JSON and missing field, exit 2 on wrong arity) - those are solid and worth preserving."
+      ],
+      "verdict": "FAIL: FAIL: Delegation references a missing/unqualified capability attempt or omits shell: 9550605c-b361-4a19-8a5a-f95c1b9a4f5a"
+    },
+    "gate": {
+      "passed": false,
+      "blockers": [
+        "LLM reviewer verdict is FAIL",
+        "Criterion failed: \"The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.\"",
+        "Criterion failed: \"All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.\"",
+        "Unresolved critical defect: The final digest was never produced at the specification-mandated output directory: no root-level digest.json or digest.md exists or is registered. All outputs live in probes/probe-run-1 and probes/probe-run-2, which the specification explicitly forbids as the final args output.",
+        "Unresolved major defect: The procedure was never invoked with the exact fixed argument pair [input/pilot.observations.json, <artifact root>]; every recorded run substituted a probe directory as argv[2], so the fixed-args invocation required by criterion 2 did not occur.",
+        "Unresolved major defect: No durable invocation receipt artifact. The invocation is only described in prose inside observation.json; there is no machine-checkable record binding the executable hash, exact argv, exit status, captured stderr totals line and output hashes to a specific run.",
+        "FAIL: Delegation references a missing/unqualified capability attempt or omits shell: 9550605c-b361-4a19-8a5a-f95c1b9a4f5a"
+      ],
+      "criterion_checks": [
+        {
+          "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+          "passed": true,
+          "reason": "observation.json names observation-digest-v1 as the missing capability, records exactly one bounded acquisition (a single stdlib-only source at procedures/observation_digest_v1.py, sha256 8d0636f7...3b275, size 10798) and documents a replan onto that local procedure. Qualification is real rather than model-asserted: the procedure was executed into probes/probe-run-1 and probes/probe-run-2, producing byte-identical outputs (both digest.json sha256 8ac8593f...4e824, both digest.md sha256 c0157cb3...83b1), and the figures were cross-checked by an independent awk pass over the raw fixture. I reproduced the arithmetic from the fixture myself and the claimed qualification values are correct."
+        },
+        {
+          "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+          "passed": false,
+          "reason": "Only partly met. The executable bytes are pinned (sha256 in observation.json matches the registered procedure artifact) and the input-side fixed argument is exact, but the specification requires the second fixed argument to be exactly the artifact root as output directory and forbids using a probe output directory as the final args output. Every recorded invocation used probes/probe-run-1 or probes/probe-run-2 as argv[2], and observation.json itself states 'Nothing was executed against the final output directory during acquisition' with no later root-level invocation evidenced. So the procedure was never run with the mandated fixed argument pair. There is also no standalone durable invocation receipt artifact (command line, argv, binary hash, exit code, stdout/stderr, output hashes); the invocation is only narrated as prose inside observation.json, which is a model-authored observation of a run, not a receipt of that run."
+        },
+        {
+          "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+          "passed": true,
+          "reason": "Verified independently against input/pilot.observations.json: 3 rows, scheduled 12+8+10=30, completed 11+8+7=26, incidents 2+1+3=6, 26/30=86.666...=86.67. North: 2 rows, 22 scheduled, 18 completed, 5 incidents, 18/22=81.818...=81.82. South: 1 row, 8/8/1, 100.00. digest.json carries these as numeric values with a sites object keyed by site and per-site totals, and the per-site sums reconcile to the grand totals. digest.md reproduces every figure and states the reproducible method (exact Decimal summation of Decimal(str(value)), ROUND_HALF_UP to two decimals, 0.0 when scheduled is 0, sorted site keys, deterministic rewrite). The procedure source implements exactly that, so the method is genuinely reproducible. Caveat: South's completion_percent serialises as 100.0 in JSON while the markdown shows 100.00 - numerically identical and within two-decimal precision, so not failing, but noted below."
+        },
+        {
+          "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+          "passed": false,
+          "reason": "The required final deliverables are missing from the candidate artifact set. digest.json and digest.md exist only under probes/probe-run-1 and probes/probe-run-2; there is no digest.json or digest.md at the fixed-args output directory (the artifact root) and no such artifact is registered. The probe copies are correctly registered with matching sha256s and I re-verified their content byte-for-byte against my own computation, but a probe directory is explicitly disallowed as the final args output, so the mission's operative deliverables were never produced or registered. registration plus host byte verification therefore cannot be established for the deliverables the specification asks for."
+        }
+      ],
+      "llm_score": 6,
+      "llm_passed": false
+    },
+    "receipt_sha256": "d0b2c204f8b60690be696c4eb902d09ab7d8a83b7f45208c3f0b05c3e195ecfd",
+    "created_at": "2026-11-16T08:17:04.686Z"
+  }
+}

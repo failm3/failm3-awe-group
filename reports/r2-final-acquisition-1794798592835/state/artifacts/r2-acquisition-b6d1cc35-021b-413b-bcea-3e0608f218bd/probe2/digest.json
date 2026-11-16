@@ -1,0 +1,60 @@
+{
+  "capability": "observation-digest-v1",
+  "method": "deterministic sums over observations[]; completion_percent = round_half_up(completed*100/scheduled, 2)",
+  "source": "Lumen Harbor field pilot",
+  "period": "2026-W45",
+  "input_file": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794798592835/state/artifacts/r2-acquisition-b6d1cc35-021b-413b-bcea-3e0608f218bd/input/pilot.observations.json",
+  "row_count": 3,
+  "scheduled": 30,
+  "completed": 26,
+  "incidents": 6,
+  "completion_percent": 86.67,
+  "completion_percent_string": "86.67",
+  "sites": [
+    {
+      "site": "North",
+      "row_count": 2,
+      "scheduled": 22,
+      "completed": 18,
+      "incidents": 5
+    },
+    {
+      "site": "South",
+      "row_count": 1,
+      "scheduled": 8,
+      "completed": 8,
+      "incidents": 1
+    }
+  ],
+  "validations": [
+    {
+      "check": "row_count equals observations length",
+      "ok": true
+    },
+    {
+      "check": "site scheduled sums equal global scheduled",
+      "ok": true
+    },
+    {
+      "check": "site completed sums equal global completed",
+      "ok": true
+    },
+    {
+      "check": "site incidents sums equal global incidents",
+      "ok": true
+    },
+    {
+      "check": "completed <= scheduled globally",
+      "ok": true
+    },
+    {
+      "check": "completion_percent rounded to 2 decimals via exact integer arithmetic",
+      "ok": true
+    },
+    {
+      "check": "site names unique after normalisation",
+      "ok": true
+    }
+  ],
+  "validations_all_passed": true
+}

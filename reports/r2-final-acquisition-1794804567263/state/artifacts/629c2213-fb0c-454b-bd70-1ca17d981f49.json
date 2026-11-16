@@ -1,0 +1,13 @@
+{
+  "id": "629c2213-fb0c-454b-bd70-1ca17d981f49",
+  "mission_id": "r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea",
+  "type": "text",
+  "name": "completion_manifest.md",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794804567263/state/artifacts/r2-acquisition-619ad2d8-925d-409a-9d14-65c17b68dfea/completion_manifest.md",
+  "created_at": "2026-11-16T05:05:26.228Z",
+  "metadata": {
+    "size_bytes": 7884,
+    "sha256": "f6d5de509bc6c73c22636a889f39b36c797894e5324215f0b222a4d95f1d922b",
+    "revision": 1
+  }
+}

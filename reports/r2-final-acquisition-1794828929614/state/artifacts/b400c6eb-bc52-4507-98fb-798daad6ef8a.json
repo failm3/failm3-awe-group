@@ -1,0 +1,14 @@
+{
+  "id": "b400c6eb-bc52-4507-98fb-798daad6ef8a",
+  "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "type": "text",
+  "name": "probe/repair/tool-probe-before.txt",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794828929614/state/artifacts/r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21/probe/repair/tool-probe-before.txt",
+  "created_at": "2026-11-16T12:02:00.798Z",
+  "metadata": {
+    "size_bytes": 30,
+    "sha256": "4d7dfa2465052c507be6594e482d28fdf7f113f62100050bd43c4a90ee9c7b49",
+    "reconciled": true,
+    "revision": 1
+  }
+}

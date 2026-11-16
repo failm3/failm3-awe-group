@@ -1,0 +1,2072 @@
+{
+  "schema": "awe.research-link-audit.v1",
+  "method": "Local Markdown inline-link target existence check. External HTTP links and anchors are not treated as local files.",
+  "initial_local_links_checked": 1007,
+  "initial_missing_targets": 257,
+  "initial_missing_by_area": {
+    "PROJECT-INDEX.md": 2,
+    "ti-service": 1,
+    "research": 254
+  },
+  "note": "Assembly report target was pending at the initial scan. Historical imported documents retain their original unresolved local references; no silent rewriting. New navigation is audited separately before release.",
+  "initial_missing": [
+    {
+      "file": "PROJECT-INDEX.md",
+      "target": "AWE-RESEARCH-REPOSITORY-ASSEMBLY-REPORT.md"
+    },
+    {
+      "file": "PROJECT-INDEX.md",
+      "target": "AWE-RESEARCH-REPOSITORY-ASSEMBLY-REPORT.md"
+    },
+    {
+      "file": "ti-service/README.md",
+      "target": "CONTRACT.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/OWNER-RECOVERY-REQUEST-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/TECHNICAL-RECOVERY-CHECKPOINT-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/reviews/technical-recovery-06.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/MANIFEST.sha256"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/RECOVERY-BASELINE-02.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/evidence/pg-validation-real-01/evidence/command-01315.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/evidence/cold-technical-review-02.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/PG-RESULT-03.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-contract.mjs#L28"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-ports.mjs#L15"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/service.mjs#L532"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-phase.mjs#L26"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/SEC-02/G1-02D/lifecycle.mjs#L120"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-phase.mjs#L17"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-ports.mjs#L3"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/persistence/migrations/001-up.sql#L144"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/stdio-rpc.mjs#L13"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/guardian-engine.mjs#L3"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-monitor-core.mjs#L51"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/SEC-02/G1-02D/lifecycle.mjs#L135"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-grant.mjs#L12"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/persistence/migrations/007-d03-quota-master01-up.proposed.sql#L8"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/INTEGRATION-01/adapters/literal-profile.mjs#L37"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-windows-host.mjs#L22"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/memory-storage.mjs#L96"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-windows-host.mjs#L50"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/execution_security/local-reviewed.mjs#L38"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/INTEGRATION-01/adapters/literal-profile.mjs#L66"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/evidence/pg-validation-real-01/evidence/real-ledger-inspection.json.00003#L34"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-host-channel.mjs#L22"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/monitor-paths.mjs#L2"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/recovery-filesystem.mjs#L5"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/TECHNICAL-RECOVERY-RESULT-02.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/service.mjs#L309"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/service.mjs#L560"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/contracts/validate.mjs#L59"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/budget/d09-quota-port.mjs#L19"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/INTEGRATION-01/adapters/literal-profile.mjs#L58"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/05-GITHUB-PUBLICATION.md",
+      "target": "build_audit_snapshot.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/07-V4-SUPPLEMENT-RESULTS.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/08-COPY-PASTE-AUDITOR-TASK.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "build_audit_snapshot.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "review_audit_bundle.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "prepare_public_audit_bundle.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/README.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/README.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../R1-CAPABILITY-PROGRAM/PROMPTS/OPENCODE-R1-READONLY-REUSE-INVENTORY-DRAFT.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/NOX-SAFE-SELF-UPDATE-CORTEX-MARKET-AUDIT-DRAFT-2026-11-13.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/CORTEX-NOX-ENTERPRISE-CAPABILITY-RESEARCH-FINAL-2026-11-13.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/CORTEX-R0-STATUS-ADDENDUM-2026-11-13-0424UTC.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../CHAT-LOGS/NOX-CURRENT-CHAT-CONTINUITY-2026-11-13.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/NOX-R0-EXACT-SENT-TO-OPENCODE-2026-11-13-0156UTC.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/04-models.md",
+      "target": "../llm02/broker.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/OWNER-FINALIZATION-REPORT-04.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "../MASTER-INTEGRATION-01/owner-finalization-host.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "career-crash-fixture.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "../tests/qa02/browser.test.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/03-architecture.md",
+      "target": "../awe/hermes_runtime/native-binding.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/03-architecture.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/ADMISSION-BLOCKER-03.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/05-career-integrations.md",
+      "target": "../awe/tool_registry/common.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/05-career-integrations.md",
+      "target": "../tests/qa02/browser.test.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/07-delivery.md",
+      "target": "career-crash-fixture.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/NATIVE-01/RESULT.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/RESULT.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/CONTROLLER-REVIEW-05.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/MANIFEST.sha256"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/FINAL-COMPLETE-INTEGRITY-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-CHECKPOINT-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/result.txt"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/tools/verify-complete-finalization.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/receipts/397-command-02601.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/OWNER-FINALIZATION-REPORT-04.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "02-inventory.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "02-inventory.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "verify-inputs.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "career-crash-fixture.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/05-READY-MADE-INTEGRATION-ATLAS.md",
+      "target": "/workspace/source-docs/03-OPENCODE-ENGINEERING-REVIEW.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "03-COMPLETE-4504-REGISTRY.jsonl"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "solutions-research.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "17-SOURCE-AND-EVIDENCE-LEDGER.jsonl"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "raw-provenance/RAW-PROVENANCE.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "awe-nox-evidence-ledger.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "recheck/log.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/B-NOX-AS-IS-SOURCE-AUDIT.md",
+      "target": "recheck/log.json"
+    },
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "release/source-provenance.json"
+    },
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "evidence/baseline-verification.json"
+    },
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "evidence/TEST-RESULTS.json"
+    },
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "qa/REPORT.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "awe-nox-evidence-ledger.json"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "recheck/log.json"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/B-NOX-AS-IS-SOURCE-AUDIT.md",
+      "target": "recheck/log.json"
+    }
+  ],
+  "final_markdown_files_checked": 616,
+  "final_local_links_checked": 1008,
+  "final_missing_targets": 255,
+  "final_missing_by_area": {
+    "research": 254,
+    "ti-service": 1
+  },
+  "final_missing": [
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "release/source-provenance.json"
+    },
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "evidence/baseline-verification.json"
+    },
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "evidence/TEST-RESULTS.json"
+    },
+    {
+      "file": "research/external/awe-group-runtime/E1/README.md",
+      "target": "qa/REPORT.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/OWNER-RECOVERY-REQUEST-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/TECHNICAL-RECOVERY-CHECKPOINT-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/reviews/technical-recovery-06.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/MANIFEST.sha256"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/RECOVERY-BASELINE-02.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/evidence/pg-validation-real-01/evidence/command-01315.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/evidence/cold-technical-review-02.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/PG-RESULT-03.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-contract.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-ports.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/service.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-phase.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/SEC-02/G1-02D/lifecycle.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-phase.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-ports.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/persistence/migrations/001-up.sql"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/stdio-rpc.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/guardian-engine.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-monitor-core.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/SEC-02/G1-02D/lifecycle.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/technical-recovery-grant.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/persistence/migrations/007-d03-quota-master01-up.proposed.sql"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/INTEGRATION-01/adapters/literal-profile.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-windows-host.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/memory-storage.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-windows-host.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/execution_security/local-reviewed.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/INTEGRATION-01/adapters/literal-profile.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/evidence/pg-validation-real-01/evidence/real-ledger-inspection.json.00003"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/pg-host-channel.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/monitor-paths.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/recovery-filesystem.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/MASTER-INTEGRATION-01/TECHNICAL-RECOVERY-RESULT-02.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/service.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/state/service.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/contracts/validate.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/awe/budget/d09-quota-port.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUDIT-01 — независимый технический аудит — 2026-11-07.md",
+      "target": "C:/Users/1/.codex/worktrees/92ef/AWE-GROUP-INT04/INTEGRATION-01/adapters/literal-profile.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/NATIVE-01/RESULT.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/RESULT.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/CONTROLLER-REVIEW-05.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/MANIFEST.sha256"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/FINAL-COMPLETE-INTEGRITY-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-CHECKPOINT-01.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/result.txt"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/tools/verify-complete-finalization.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/COMPLETE-01/receipts/397-command-02601.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/01-evidence.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/OWNER-FINALIZATION-REPORT-04.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/03-architecture.md",
+      "target": "../awe/hermes_runtime/native-binding.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/03-architecture.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/ADMISSION-BLOCKER-03.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/04-models.md",
+      "target": "../llm02/broker.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/05-career-integrations.md",
+      "target": "../awe/tool_registry/common.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/05-career-integrations.md",
+      "target": "../tests/qa02/browser.test.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "../MASTER-INTEGRATION-01/MASTER02/FINALIZATION/OWNER-FINALIZATION-REPORT-04.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "../MASTER-INTEGRATION-01/owner-finalization-host.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "career-crash-fixture.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/06-resilience-updates.md",
+      "target": "../tests/qa02/browser.test.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/07-delivery.md",
+      "target": "career-crash-fixture.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "02-inventory.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "02-inventory.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "verify-inputs.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/ASTRA-AUTONOMY-AUDIT-2026-11-08/README.md",
+      "target": "career-crash-fixture.mjs"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/05-GITHUB-PUBLICATION.md",
+      "target": "build_audit_snapshot.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/07-V4-SUPPLEMENT-RESULTS.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/08-COPY-PASTE-AUDITOR-TASK.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "build_audit_snapshot.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "review_audit_bundle.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "prepare_public_audit_bundle.py"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/README.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/README.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/AWE-CAREER-01-AUDIT-PACK-2026-11-09/README.md",
+      "target": "UPLOADS/AWE_AUDIT_FINAL_v4.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../R1-CAPABILITY-PROGRAM/PROMPTS/OPENCODE-R1-READONLY-REUSE-INVENTORY-DRAFT.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/NOX-SAFE-SELF-UPDATE-CORTEX-MARKET-AUDIT-DRAFT-2026-11-13.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/CORTEX-NOX-ENTERPRISE-CAPABILITY-RESEARCH-FINAL-2026-11-13.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/CORTEX-R0-STATUS-ADDENDUM-2026-11-13-0424UTC.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../CHAT-LOGS/NOX-CURRENT-CHAT-CONTINUITY-2026-11-13.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/CHECKPOINTS/NEXT-CHAT-START-HERE.md",
+      "target": "../PROMPTS/NOX-R0-EXACT-SENT-TO-OPENCODE-2026-11-13-0156UTC.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/B-NOX-AS-IS-SOURCE-AUDIT.md",
+      "target": "recheck/log.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "awe-nox-evidence-ledger.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "recheck/log.json"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/KORTIX-2026-11-13-ENTERPRISE-RESEARCH/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/05-READY-MADE-INTEGRATION-ATLAS.md",
+      "target": "/workspace/source-docs/03-OPENCODE-ENGINEERING-REVIEW.md"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "03-COMPLETE-4504-REGISTRY.jsonl"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "solutions-research.zip"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "17-SOURCE-AND-EVIDENCE-LEDGER.jsonl"
+    },
+    {
+      "file": "research/external/nivict-ai-academy/AWE-GROUP/RESEARCH/NOX-R2-CORTEX-DELIVERABLES-2026-11-14/README.md",
+      "target": "raw-provenance/RAW-PROVENANCE.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/B-NOX-AS-IS-SOURCE-AUDIT.md",
+      "target": "recheck/log.json"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/C-ENTERPRISE-AGENT-ENGINEERING-RESEARCH.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/J-INDEPENDENT-REVIEW-AND-EVAL-MATRIX.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "awe-nox-evidence-ledger.json"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "recheck/log.json"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "baseline.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-final-report.md",
+      "target": "ENTERPRISE-EVIDENCE-INDEX.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "E-PROFESSIONAL-KNOWLEDGE-SOURCES-ATLAS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "F-SKILLS-AND-LEARNING-SYSTEM.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "G-DOMAIN-CAPABILITY-PACKS.md"
+    },
+    {
+      "file": "research/r1-kortix/evidence/previous/awe-nox-requirements-coverage.md",
+      "target": "D-TOOLS-AND-CONNECTORS-ATLAS.md"
+    },
+    {
+      "file": "ti-service/README.md",
+      "target": "CONTRACT.md"
+    }
+  ],
+  "final_note": "All current navigation links resolve. Remaining missing targets are retained historical references plus ti-service/CONTRACT.md; imported evidence is not silently rewritten."
+}

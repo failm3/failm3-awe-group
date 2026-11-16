@@ -1,0 +1,282 @@
+{
+  "captured_at": "2026-11-13T06:20:43.702468+00:00",
+  "date": "2026-11-13",
+  "mechanism": "OpenCode native child sessions; metadata obtained with opencode session export --sanitize",
+  "max_concurrent_initial_engineers": 3,
+  "max_concurrent_r0_subagents": 3,
+  "provider": "routercheap",
+  "session_count": 10,
+  "cost_caveat": "OpenCode aggregate/session cost 0 is not a provider invoice and does not prove zero Router.Cheap spend. Actual provider spend is UNKNOWN.",
+  "sessions": [
+    {
+      "role": "R0 Runtime Engineer",
+      "session_id": "ses_e2d5bd74dffeR8cf1fo9CuEfJT",
+      "workspace": ".r0-work/runtime",
+      "model": {
+        "id": "claude-sonnet-5-5",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 358608,
+        "output": 138163,
+        "reasoning": 0,
+        "cache": {
+          "read": 5377604,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794535336168,
+        "updated": 1794537533677,
+        "busy": 1794535336263,
+        "idle": 1794537533722
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 Security & Tools Engineer",
+      "session_id": "ses_e2d5bd747ffeECQFrwXIv4ktI4",
+      "workspace": ".r0-work/security",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 240162,
+        "output": 13753,
+        "reasoning": 4196,
+        "cache": {
+          "read": 2548480,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794535336201,
+        "updated": 1794536159519,
+        "busy": 1794535336348,
+        "idle": 1794536159545
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 Independent QA Engineer / adversarial tests",
+      "session_id": "ses_e2d5bd736ffekmpmtX9Qj2aypb",
+      "workspace": ".r0-work/qa",
+      "model": {
+        "id": "gpt-6-astra",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 53770,
+        "output": 14287,
+        "reasoning": 1631,
+        "cache": {
+          "read": 800256,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794535336237,
+        "updated": 1794536171104,
+        "busy": 1794535336405,
+        "idle": 1794536171128
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 independent adversarial code audit",
+      "session_id": "ses_e2d2cf734ffehI8uf4etcxFjqN",
+      "workspace": "main tree; read-only audit",
+      "model": {
+        "id": "kimi-k3.1-pro",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 785036,
+        "output": 18593,
+        "reasoning": 18944,
+        "cache": {
+          "read": 2270801,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794538408182,
+        "updated": 1794539331105,
+        "busy": 1794538408216,
+        "idle": 1794539331123
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 independent P0 re-audit",
+      "session_id": "ses_e2d142e0cffeqS9bR2YQsYRX0E",
+      "workspace": "main tree; read-only audit",
+      "model": {
+        "id": "kimi-k3.1-pro",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 1297560,
+        "output": 36461,
+        "reasoning": 43644,
+        "cache": {
+          "read": 4161695,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794540032537,
+        "updated": 1794541468158,
+        "busy": 1794540032560,
+        "idle": 1794541468209
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 final independent QA / closure audits",
+      "session_id": "ses_e2ce55c53ffeA1JCdAfHZDba6B",
+      "workspace": "main tree; independent QA",
+      "model": {
+        "id": "kimi-k3.1-pro",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 1995304,
+        "output": 40732,
+        "reasoning": 33326,
+        "cache": {
+          "read": 4065694,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794543100886,
+        "updated": 1794550829254,
+        "busy": 1794550666317,
+        "idle": 1794549563069
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 final tool boundary fixes",
+      "session_id": "ses_e2cd72044ffeUt9e8xRhGSt1Io",
+      "workspace": ".r0-work/r0-final-tools",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 75,
+        "output": 12451,
+        "reasoning": 4489,
+        "cache": {
+          "read": 1064707,
+          "write": 61433
+        }
+      },
+      "time": {
+        "created": 1794544033803,
+        "updated": 1794544762107,
+        "busy": 1794544033930,
+        "idle": 1794544762142
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 integrity recovery fixes",
+      "session_id": "ses_e2cd72036ffeDY1tkXpVg6GmnS",
+      "workspace": ".r0-work/r0-final-manager",
+      "model": {
+        "id": "claude-sonnet-5-5",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 113675,
+        "output": 58322,
+        "reasoning": 0,
+        "cache": {
+          "read": 1810317,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794544033850,
+        "updated": 1794545046862,
+        "busy": 1794544034039,
+        "idle": 1794545046891
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 recursive grants budget fixes",
+      "session_id": "ses_e2cd72027ffelmaSU9i1i3iE39",
+      "workspace": ".r0-work/r0-final-recursion",
+      "model": {
+        "id": "gpt-6-astra",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 45,
+        "output": 8124,
+        "reasoning": 1145,
+        "cache": {
+          "read": 512315,
+          "write": 64804
+        }
+      },
+      "time": {
+        "created": 1794544033896,
+        "updated": 1794544629515,
+        "busy": 1794544034156,
+        "idle": 1794544629537
+      },
+      "outcome": "succeeded"
+    },
+    {
+      "role": "R0 failed-outcome/recovery, repair budget and supersession fixes",
+      "session_id": "ses_e2c916224ffeuCc1pOjyYmjtZx",
+      "workspace": ".r0-work/r0-reqa-manager",
+      "model": {
+        "id": "claude-sonnet-5-5",
+        "providerID": "routercheap",
+        "variant": "high"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 302686,
+        "output": 70019,
+        "reasoning": 0,
+        "cache": {
+          "read": 3917237,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794548604432,
+        "updated": 1794549921363,
+        "busy": 1794548604487,
+        "idle": 1794549921405
+      },
+      "outcome": "succeeded"
+    }
+  ]
+}

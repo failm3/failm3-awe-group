@@ -1,0 +1,13 @@
+{
+  "id": "d39196e0-d4a7-4755-b3b5-a3f325dbd33a",
+  "mission_id": "r2-final-transfer-1794798010397-t14-on",
+  "type": "file",
+  "name": "scratch/verify.cjs",
+  "path": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-transfer-1794798010397/state/artifacts/r2-final-transfer-1794798010397-t14-on/scratch/verify.cjs",
+  "created_at": "2026-11-16T04:41:40.151Z",
+  "metadata": {
+    "size_bytes": 6568,
+    "sha256": "947bd1bbc6893416142aebcf1b94b3ba258692f5638bee611e4cb0393415d9e3",
+    "revision": 1
+  }
+}

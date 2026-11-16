@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: real sandbox excludes synthetic sibling, shared state, credentials, sockets and egress
+ok 1 - real sandbox excludes synthetic sibling, shared state, credentials, sockets and egress
+  ---
+  duration_ms: 51.186585
+  type: 'test'
+  ...
+# Subtest: linked-worktree .git file is masked without exposing its control state
+ok 2 - linked-worktree .git file is masked without exposing its control state
+  ---
+  duration_ms: 10.486778
+  type: 'test'
+  ...
+# Subtest: production shell grant writes its own artifact and denies another mission
+ok 3 - production shell grant writes its own artifact and denies another mission
+  ---
+  duration_ms: 913.133553
+  type: 'test'
+  ...
+# Subtest: confined actor cannot rename an opened grant into an unmounted host directory
+ok 4 - confined actor cannot rename an opened grant into an unmounted host directory
+  ---
+  duration_ms: 49.099611
+  type: 'test'
+  ...
+# Subtest: production shell renders with the read-only browser cache without exposing control state
+ok 5 - production shell renders with the read-only browser cache without exposing control state
+  ---
+  duration_ms: 1510.316123
+  type: 'test'
+  ...
+# Subtest: pre-spawn resource-construction failure removes durable launching evidence
+ok 6 - pre-spawn resource-construction failure removes durable launching evidence
+  ---
+  duration_ms: 8.935348
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2549.86626

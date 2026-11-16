@@ -1,0 +1,169 @@
+{
+  "id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+  "title": "R1 live descriptive CSV qualification",
+  "description": "Engineering qualification only. Read /home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv. Use csv_analytics to save csv-analytics.json. No external writes, no network, no currency conversion, no invented inputs. Raw input is immutable.",
+  "objective": "Calculate exact descriptive transaction analytics and persist an owner-readable result.",
+  "acceptance_criteria": [
+    "Save a CSV analytics evidence artifact with independently reproducible exact USD and EUR totals, duplicate and pending counts."
+  ],
+  "status": "completed",
+  "priority": "normal",
+  "created_at": "2026-11-13T21:38:50.437Z",
+  "updated_at": "2026-11-13T21:39:35.720Z",
+  "artifacts": [
+    "f84ab38e-18af-452f-9f5d-7f0d49d0082e",
+    "0a267d13-629b-4c00-af60-faa6f65c6e7d"
+  ],
+  "metadata": {
+    "specification": {
+      "title": "R1 live descriptive CSV qualification",
+      "objective": "Calculate exact descriptive transaction analytics and persist an owner-readable result.",
+      "scope": "Engineering qualification only. Read /home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv. Use csv_analytics to save csv-analytics.json. No external writes, no network, no currency conversion, no invented inputs. Raw input is immutable.",
+      "acceptance_criteria": [
+        "Save a CSV analytics evidence artifact with independently reproducible exact USD and EUR totals, duplicate and pending counts."
+      ],
+      "suggested_tools": [
+        "csv_analytics",
+        "file_read"
+      ],
+      "suggested_agents": [
+        "analyst"
+      ],
+      "estimated_complexity": "simple",
+      "risks": [
+        "Conflicting event IDs or malformed input must block analytics"
+      ],
+      "csv_limits": {
+        "maxBytes": 100000,
+        "maxRows": 1000
+      },
+      "csv_input": {
+        "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv",
+        "sha256": "dc8688503d27d1b45303147b8e2fe2cf8ef98f2e1d807e38112a1cfe8e9bd645"
+      }
+    },
+    "approved_spec_binding": {
+      "version": 1,
+      "algorithm": "sha256",
+      "approved_at": "2026-11-13T21:38:50.446Z",
+      "spec_hash": "a8180aaefe2d846e5547b0d9bd761b5a627ac79bcf4061c1709d15fed4b5e465",
+      "snapshot": {
+        "mission_id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629",
+        "title": "R1 live descriptive CSV qualification",
+        "description": "Engineering qualification only. Read /home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv. Use csv_analytics to save csv-analytics.json. No external writes, no network, no currency conversion, no invented inputs. Raw input is immutable.",
+        "objective": "Calculate exact descriptive transaction analytics and persist an owner-readable result.",
+        "acceptance_criteria": [
+          "Save a CSV analytics evidence artifact with independently reproducible exact USD and EUR totals, duplicate and pending counts."
+        ],
+        "specification": {
+          "title": "R1 live descriptive CSV qualification",
+          "objective": "Calculate exact descriptive transaction analytics and persist an owner-readable result.",
+          "scope": "Engineering qualification only. Read /home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv. Use csv_analytics to save csv-analytics.json. No external writes, no network, no currency conversion, no invented inputs. Raw input is immutable.",
+          "acceptance_criteria": [
+            "Save a CSV analytics evidence artifact with independently reproducible exact USD and EUR totals, duplicate and pending counts."
+          ],
+          "suggested_tools": [
+            "csv_analytics",
+            "file_read"
+          ],
+          "suggested_agents": [
+            "analyst"
+          ],
+          "estimated_complexity": "simple",
+          "risks": [
+            "Conflicting event IDs or malformed input must block analytics"
+          ],
+          "csv_limits": {
+            "maxBytes": 100000,
+            "maxRows": 1000
+          },
+          "csv_input": {
+            "path": "/home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv",
+            "sha256": "dc8688503d27d1b45303147b8e2fe2cf8ef98f2e1d807e38112a1cfe8e9bd645"
+          }
+        }
+      }
+    },
+    "engineering_authorization": "User-approved R1 implementation and qualification; no product admission",
+    "execution_owner": {
+      "owner_id": "be82da05-6c0d-4451-bbd2-d0c95096bc16",
+      "pid": 640749,
+      "host": "LAPTOP-V0FEF2BB",
+      "purpose": "run",
+      "generation": 1,
+      "acquired_at": "2026-11-13T21:38:50.463Z",
+      "released_at": "2026-11-13T21:39:35.720Z"
+    },
+    "execution": {
+      "delegations": [
+        {
+          "agent_role": "analyst",
+          "status": "success",
+          "model": "deepseek-v4-flash",
+          "tools_used": [
+            "file_read",
+            "csv_analytics"
+          ],
+          "usage": {
+            "input_tokens": 12183,
+            "output_tokens": 1147,
+            "total_tokens": 13330,
+            "reasoning_tokens": 0
+          },
+          "duration_ms": 13878
+        }
+      ],
+      "models_used": [
+        "deepseek-v4-flash"
+      ],
+      "tools_used": [
+        "file_read",
+        "csv_analytics"
+      ],
+      "totals": {
+        "input_tokens": 12183,
+        "output_tokens": 1147,
+        "total_tokens": 13330,
+        "reasoning_tokens": 0
+      },
+      "qa_score": 9,
+      "qa_passed": true,
+      "repair_iterations": 0
+    },
+    "delegation_tree": {
+      "total_agents": 1,
+      "max_depth": 0,
+      "nodes": [
+        {
+          "id": "r1-live-237dbc13-6c96-4221-b268-a53e7457e629:top0",
+          "role": "analyst",
+          "task": "1. Use file_read to read /home/nox/awe-group-cleanroom-20261112/reports/r1-live-1794605930179/state/artifacts/r1-live-237dbc13-6c96-4221-b268-a53e7457e629/transactions.csv and inspect its structure. 2. Run csv_analytics on that exact path with expected sha256 dc8688503d27d1b45303147b8e2fe2cf8ef98f2e1d807e38112a1cfe8e9bd645, maxBytes 100000 and maxRows 1000, saving the output as csv-analytics.json in the mission artifact directory. 3. The artifact must contain: the input path and verified sha256; row counts; the exact USD total and the exact EUR total, reported separately as decimal strings computed without floating point; the duplicate count, with the event IDs involved; the pending count; and the counting rules applied, so that any reader can independently reproduce every figure from the raw CSV. 4. If the hash does not match, a limit is exceeded, the input is malformed, or any event ID appears with conflicting field values, do not compute or report totals. In that case, csv_analytics must save csv-analytics.json with status 'blocked', the specific reason, and the offending rows or IDs.",
+          "depth": 0,
+          "parent_id": null,
+          "status": "success",
+          "children": [],
+          "model": "deepseek-v4-flash",
+          "tools_used": [
+            "file_read",
+            "csv_analytics"
+          ],
+          "duration_ms": 13875
+        }
+      ]
+    },
+    "qa_gate": {
+      "passed": true,
+      "blockers": [],
+      "criterion_checks": [
+        {
+          "criterion": "Save a CSV analytics evidence artifact with independently reproducible exact USD and EUR totals, duplicate and pending counts.",
+          "passed": true,
+          "reason": "csv-analytics.json is persisted with schema r1-csv-evidence-v1, input sha256 matching the approved hash, and reference verifier outcome MATCH. An independent recomputation from transactions.csv agrees with every figure. USD settled sales are 10500 (s1 counted once), settled refunds 1500 (r1), net 9000, and pending sales 9900 (p1, count 1). EUR settled sales are 7200 (s2), net 7200, with no pending events. Rows: raw=5, unique=4, duplicate_rows=1. The calculation rules (deduplication, integer cents, no FX conversion, pending excluded from net) are stated in the report, so the result is reproducible."
+        }
+      ],
+      "llm_score": 9,
+      "llm_passed": true
+    }
+  },
+  "_rev": 6
+}

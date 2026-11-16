@@ -1,0 +1,301 @@
+{
+  "report_type": "independent-verification",
+  "capability": "observation-digest-v1",
+  "mission_id": "r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+  "verifier_role": "independent verifier (did not author the procedure, did not run it, did not trust the procedure's or the upstream agents' stated numbers)",
+  "generated_at_utc": "2026-11-16T09:08:20Z",
+  "overall_verdict": "FAIL",
+  "overall_verdict_scope": "Deliverable existence and invocation evidence FAIL. The arithmetic that was produced is independently confirmed CORRECT and byte-identical to the qualified probe baseline. No number matched by coincidence or by restatement.",
+  "summary": "Every aggregate in the qualified observation-digest-v1 output is correct: row_count 3, scheduled 30, completed 26, incidents 6, completion_percent 86.67, sites North rows 2/22/18/5 (81.82) and South rows 1/8/8/1 (100.00). I recomputed all of it from input/pilot.observations.json bytes with python3 and cross-checked every percentage with fractions.Fraction plus a Decimal ROUND_HALF_UP path; the documented half-up-to-2-dp rule is validated across 80600 (completed, scheduled) cases with zero mismatches against the procedure's integer-cent formula. digest.json in both probe runs and the archived qualified probe output are byte-identical to the qualified baseline sha256 9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382, so there is no divergence to explain. However, the mission root contains no digest.json, no digest.md and no invocation receipt: the fixed-args final invocation never ran (the executor reported itself blocked on a shell qualification denial and wrote nothing). The acceptance criteria that depend on those final deliverables therefore fail. The correct outputs exist only under probe/ output directories, which the approved scope explicitly forbids as the final args output.",
+
+  "inputs_verified_from_disk": [
+    {
+      "path": "input/pilot.observations.json",
+      "sha256": "412c65c3e20f2154045686615f37a5f905a88598a3c2c08149db51fda8523766",
+      "size_bytes": 474,
+      "matches_qualification_receipt": true,
+      "matches_expected_input_hash_from_upstream": true,
+      "read_method": "python3 json.loads on the raw bytes; hashed with hashlib.sha256"
+    },
+    {
+      "path": "procedures/observation-digest-v1.js",
+      "sha256": "3b85b93000db6393956b9fa7e428dce431965d8d729432c478819c0f706455d5",
+      "size_bytes": 4753,
+      "matches_qualification_receipt": true,
+      "receipt_declared_size_bytes": 4753,
+      "dependencies": [],
+      "network_access_declared": false,
+      "note": "Hash and size both match the qualification receipt, so the bytes on disk are the bytes that were qualified."
+    }
+  ],
+
+  "independent_recompute": {
+    "method": "python3 standard library only (json, hashlib, collections, fractions.Fraction, decimal). Re-derived from input bytes on a separate code path; no value was taken from the procedure's output, the qualification receipt, or the upstream expectation block.",
+    "row_count": 3,
+    "scheduled": 30,
+    "completed": 26,
+    "incidents": 6,
+    "completion_percent": 86.67,
+    "completion_percent_raw_token": "86.67",
+    "sites": {
+      "North": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5, "completion_percent": 81.82 },
+      "South": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1, "completion_percent": 100.00 }
+    },
+    "site_percent_raw_tokens": { "North": "81.82", "South": "100.00" },
+    "aggregation_consistency": {
+      "site_rows_sum_to_row_count": true,
+      "site_scheduled_sum_to_total": true,
+      "site_completed_sum_to_total": true,
+      "site_incidents_sum_to_total": true
+    },
+    "per_row_source_values": [
+      { "site": "North", "cohort": "Harbor", "scheduled": 12, "completed": 11, "incidents": 2 },
+      { "site": "South", "cohort": "Harbor", "scheduled": 8, "completed": 8, "incidents": 1 },
+      { "site": "North", "cohort": "Ridge", "scheduled": 10, "completed": 7, "incidents": 3 }
+    ],
+    "hand_check": "scheduled 12+8+10=30; completed 11+8+7=26; incidents 2+1+3=6; North scheduled 12+10=22, completed 11+7=18, incidents 2+3=5; South 8/8/1."
+  },
+
+  "exact_rational_percentage_check": {
+    "method": "completion_percent = completed*100/scheduled held as fractions.Fraction; rounding done by adding 1/2 in rational arithmetic then taking floor of the scaled value, so the result is exact and never touches binary floating point. Cross-checked against decimal.Decimal(...).quantize(0.01, ROUND_HALF_UP).",
+    "total": {
+      "fraction_completed_over_scheduled": "13/15",
+      "decimal_value": "0.8666666666666667",
+      "fraction_of_percentage": "260/3",
+      "rounded_half_up_2dp": "86.67",
+      "decimal_round_half_up_2dp": "86.67",
+      "is_exact_tie_at_2dp": false,
+      "third_decimal_digit": 6,
+      "agrees_with_procedure": true
+    },
+    "north": {
+      "fraction_completed_over_scheduled": "9/11",
+      "decimal_value": "0.8181818181818182",
+      "fraction_of_percentage": "900/11",
+      "rounded_half_up_2dp": "81.82",
+      "decimal_round_half_up_2dp": "81.82",
+      "is_exact_tie_at_2dp": false,
+      "third_decimal_digit": 8,
+      "agrees_with_procedure": true
+    },
+    "south": {
+      "fraction_completed_over_scheduled": "1",
+      "decimal_value": "1",
+      "fraction_of_percentage": "100",
+      "rounded_half_up_2dp": "100.00",
+      "decimal_round_half_up_2dp": "100.00",
+      "is_exact_tie_at_2dp": true,
+      "tie_note": "Whole number: rounding is a no-op here, but it is the only value in the dataset that lands exactly on a 2-dp boundary.",
+      "agrees_with_procedure": true
+    }
+  },
+
+  "rounding_rule_audit": {
+    "documented_rule": "completed / scheduled x 100, rounded half-up to 2 decimals using integer arithmetic",
+    "procedure_formula": "cents = floor((completed*20000 + scheduled) / (2*scheduled))",
+    "sweep_cases_tested": 80600,
+    "sweep_domain": "scheduled 1..400, completed 0..scheduled",
+    "sweep_mismatches_vs_exact_Fraction_half_up": 0,
+    "tie_behavior_confirmed_half_up_not_half_even": [
+      { "completed": 1, "scheduled": 32, "exact": "3.125", "half_up": "3.13", "half_even": "3.12", "procedure": "3.13" },
+      { "completed": 1, "scheduled": 160, "exact": "0.625", "half_up": "0.63", "half_even": "0.62", "procedure": "0.63" }
+    ],
+    "verdict": "The implemented integer formula is exactly equivalent to half-up rounding at 2 decimals over the entire tested domain, and it demonstrably differs from banker's rounding on genuine ties. The rule as documented is the rule as implemented."
+  },
+
+  "digest_json_field_by_field": {
+    "compared_files": [
+      { "path": "probe/scratch-run-1/digest.json", "sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382" },
+      { "path": "probe/scratch-run-2/digest.json", "sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382" },
+      { "path": "probe/qualified-probe-digest.json", "sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382" }
+    ],
+    "all_three_byte_identical": true,
+    "top_level_key_order": ["row_count", "scheduled", "completed", "incidents", "completion_percent", "sites"],
+    "fields": [
+      { "field": "row_count", "expected": 3, "observed": 3, "is_json_number": true, "python_type": "int", "pass": true },
+      { "field": "scheduled", "expected": 30, "observed": 30, "is_json_number": true, "python_type": "int", "pass": true },
+      { "field": "completed", "expected": 26, "observed": 26, "is_json_number": true, "python_type": "int", "pass": true },
+      { "field": "incidents", "expected": 6, "observed": 6, "is_json_number": true, "python_type": "int", "pass": true },
+      { "field": "completion_percent", "expected": 86.67, "observed": 86.67, "raw_token": "86.67", "raw_token_has_exactly_2_decimals": true, "is_json_number": true, "python_type": "float", "pass": true }
+    ],
+    "sites": {
+      "is_object_keyed_by_site": true,
+      "keys": ["North", "South"],
+      "keys_match_expected": true,
+      "totals_present_for_every_site": true,
+      "per_site_fields": [
+        { "site": "North", "field": "rows", "expected": 2, "observed": 2, "pass": true },
+        { "site": "North", "field": "scheduled", "expected": 22, "observed": 22, "pass": true },
+        { "site": "North", "field": "completed", "expected": 18, "observed": 18, "pass": true },
+        { "site": "North", "field": "incidents", "expected": 5, "observed": 5, "pass": true },
+        { "site": "North", "field": "completion_percent", "expected_raw_token": "81.82", "observed_raw_token": "81.82", "pass": true },
+        { "site": "South", "field": "rows", "expected": 1, "observed": 1, "pass": true },
+        { "site": "South", "field": "scheduled", "expected": 8, "observed": 8, "pass": true },
+        { "site": "South", "field": "completed", "expected": 8, "observed": 8, "pass": true },
+        { "site": "South", "field": "incidents", "expected": 1, "observed": 1, "pass": true },
+        { "site": "South", "field": "completion_percent", "expected_raw_token": "100.00", "observed_raw_token": "100.00", "pass": true }
+      ]
+    },
+    "all_fields_pass": true,
+    "trailing_newline_present": true,
+    "byte_size": 338,
+    "two_decimal_representation_note": "Every completion_percent token in the raw bytes carries exactly two decimal places, including '100.00'. JavaScript and Python parse that to the float 100.0, so the trailing zero is a text-level property of the serialized JSON, not something a parsed number can retain. The requirement 'completion_percent to 2 decimals' is satisfied on the bytes, which is the only place it can be satisfied for a JSON number. The procedure deliberately hand-builds the JSON to preserve this."
+  },
+
+  "digest_md_field_by_field": {
+    "compared_files": [
+      { "path": "probe/scratch-run-1/digest.md", "sha256": "aeb19a11ddbcb4fdd4005f0978d09a42bbb00d9765a7c554e646bdd1dff541b8" },
+      { "path": "probe/scratch-run-2/digest.md", "sha256": "aeb19a11ddbcb4fdd4005f0978d09a42bbb00d9765a7c554e646bdd1dff541b8" }
+    ],
+    "all_byte_identical": true,
+    "values_present_as_rendered_rows": [
+      { "row": "row_count", "rendered": "| row_count | 3 |", "present": true, "pass": true },
+      { "row": "scheduled", "rendered": "| scheduled | 30 |", "present": true, "pass": true },
+      { "row": "completed", "rendered": "| completed | 26 |", "present": true, "pass": true },
+      { "row": "incidents", "rendered": "| incidents | 6 |", "present": true, "pass": true },
+      { "row": "completion_percent", "rendered": "| completion_percent | 86.67 |", "present": true, "pass": true },
+      { "row": "North", "rendered": "| North | 2 | 22 | 18 | 5 | 81.82 |", "present": true, "pass": true },
+      { "row": "South", "rendered": "| South | 1 | 8 | 8 | 1 | 100.00 |", "present": true, "pass": true }
+    ],
+    "same_values_as_json": true,
+    "method_documented": true,
+    "method_reproducible": true,
+    "method_evidence": {
+      "has_method_section": "## Method",
+      "states_completed_over_scheduled_times_100": true,
+      "states_round_half_up_to_2_decimals": true,
+      "states_integer_arithmetic": true,
+      "states_site_totals_use_exact_site_value": true,
+      "states_percentages_for_sites_use_same_formula": true,
+      "cites_source_file_and_period": "pilot.observations.json (Lumen Harbor field pilot), period 2026-W45"
+    },
+    "all_fields_pass": true
+  },
+
+  "baseline_byte_comparison": {
+    "qualified_probe_baseline_sha256": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382",
+    "observed_sha256_probe_scratch_run_1": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382",
+    "observed_sha256_probe_scratch_run_2": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382",
+    "observed_sha256_probe_qualified_probe_digest": "9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382",
+    "match": true,
+    "divergence": "none",
+    "divergence_explanation": "All three digest.json copies are byte-for-byte identical to the qualified baseline, so there is no divergence to account for. Independent field-by-field and exact-rational recomputation also agrees with the baseline's contents, meaning the baseline hash and independent arithmetic corroborate each other rather than merely agreeing by construction.",
+    "not_comparable": [
+      { "path": "probe/perturb/out/digest.json", "sha256": "8e77294ef17d79012c9bfc20383d304d49e44ad71068e99db53879c82045e01a", "reason": "Produced from a deliberately perturbed fixture (extra East row), so it must NOT equal the baseline. Its divergence is expected and correct." }
+    ]
+  },
+
+  "negative_controls": {
+    "perturbation_recompute": {
+      "fixture": "probe/perturb/perturbed.json",
+      "fixture_sha256": "7b78e7e51cbfe9c4154d862b77dd3d5842b95dd6deeec169994f5a9cb25f87c0",
+      "note_fixture_hash": "Verified with sha256sum at verification time; the fixture is scratch input, not part of acceptance.",
+      "recomputed_row_count": 4,
+      "recomputed_scheduled": 34,
+      "recomputed_completed": 27,
+      "recomputed_incidents": 6,
+      "recomputed_completion_percent": 79.41,
+      "agrees_with_procedure_output": true,
+      "purpose": "Confirms the procedure's output tracks input bytes. A procedure that echoed embedded constants would have kept 86.67 here."
+    },
+    "procedure_and_input_hashes_reverified_at_verification_time": true,
+    "conclusion": "The output is a function of the input bytes, not a restatement of the expected values."
+  },
+
+  "deliverable_inventory": {
+    "mission_root": "/home/nox/.local/share/opencode/worktree/f08b0d/r2-final-autonomy/reports/r2-final-acquisition-1794819588442/state/artifacts/r2-acquisition-77986c32-d4ae-4755-8c0e-71dc4e23d397",
+    "required_final_digest_json": { "expected_path": "digest.json", "exists": false, "sha256": null },
+    "required_final_digest_md": { "expected_path": "digest.md", "exists": false, "sha256": null },
+    "required_invocation_receipt": { "expected_path": "invocation-receipt.json", "exists": false, "sha256": null },
+    "root_listing": ["input/", "procedures/", "probe/", "observation.json", ".oc-isolated/"],
+    "digest_files_present_anywhere_in_tree": [
+      "probe/perturb/out/digest.json",
+      "probe/perturb/out/digest.md",
+      "probe/scratch-run-1/digest.json",
+      "probe/scratch-run-1/digest.md",
+      "probe/scratch-run-2/digest.json",
+      "probe/scratch-run-2/digest.md"
+    ],
+    "all_digests_found_live_under_probe_directories": true,
+    "scope_conflict": "Approved scope states: 'Do not use a probe output directory as the final args output.' The only existing digest artifacts are therefore explicitly disqualified as final deliverables."
+  },
+
+  "acceptance_criteria_verdicts": [
+    {
+      "criterion": "Head identifies the missing named capability, performs one bounded acquisition and replans with an actually qualified local procedure.",
+      "verdict": "PASS",
+      "evidence": "observation.json names the absent capability (observation-digest-v1) and records one bounded acquisition to procedures/observation-digest-v1.js. probe/qualification-receipt.json records verdict 'qualified'. I independently confirmed the procedure bytes on disk hash to 3b85b930...55d5 at 4753 bytes, exactly the size and hash the receipt claims, so the qualified bytes are the installed bytes.",
+      "caveat": "This criterion concerns acquisition and qualification, which are documented and hash-confirmed. It does not require the final run."
+    },
+    {
+      "criterion": "The acquired procedure is invoked with its exact qualified executable bytes and fixed arguments; a durable invocation receipt is present.",
+      "verdict": "FAIL",
+      "evidence": "No invocation receipt exists anywhere in the mission tree (searched for *receipt*: only probe/qualification-receipt.json, which is a qualification receipt, not an invocation receipt). No digest.json or digest.md exists in the mission root, which is the second fixed argument, so the fixed-args invocation demonstrably never occurred. The executor's own report states it stopped before running the procedure and wrote nothing.",
+      "what_would_fix_it": "One execution of `node -- procedures/observation-digest-v1.js <abs input path> <abs mission root>` against the hash-verified procedure (3b85b930...55d5), with a receipt recording the executable hash, the exact fixed args, exit code, and the resulting digest.json hash.",
+      "note": "The probe runs did use the exact qualified bytes, but they wrote to scratch output directories, not to the fixed second argument, and a probe run is not the fixed-args invocation."
+    },
+    {
+      "criterion": "digest.json has exact numeric row_count, scheduled, completed, incidents, completion_percent (2 decimals), and a sites object keyed by site with totals; digest.md presents the same values with a reproducible method.",
+      "verdict": "FAIL",
+      "evidence": "The required files do not exist at the mission root, so the criterion cannot be satisfied as delivered. The content requirement itself is fully met by the bytes that do exist: I verified all five top-level values as exact JSON numbers, 2-decimal completion_percent tokens, a sites object with totals for each site, and a digest.md that repeats every value with a four-step reproducible method.",
+      "conditional": "If the same qualified executable bytes are run once with the fixed args, the produced digest.json will be 9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382. That hash is the acceptance check for this criterion, and the content is already proven correct.",
+      "note": "Content verdict: PASS. Deliverable-location verdict: FAIL. The criterion as written requires the artifact, so the gate result is FAIL."
+    },
+    {
+      "criterion": "All deliverables are registered artifacts whose bytes pass independent host verification and independent Nox QA.",
+      "verdict": "FAIL",
+      "evidence": "There are no final deliverables registered. observation.json registers two probe artifacts (a051cf91... sha 9cd7f88d... and 8f29f4da... sha 67a49b65...), and I resolved the second hash: 67a49b65328adcd989fc0d389f558e731d4ac3714814c2b7a32ed1d1802725fb is the sha256 of probe/qualification-receipt.json itself, not of a missing digest file. So the two registered probe artifacts are the probe digest.json and the qualification receipt. Neither is a final deliverable, and no digest.md final artifact is registered at all.",
+      "what_would_fix_it": "Produce and register digest.json and digest.md at the mission root, then have host verification and Nox QA run against those registered bytes."
+    }
+  ],
+
+  "expectation_block_reconciliation": {
+    "upstream_expected": {
+      "row_count": 3, "scheduled": 30, "completed": 26, "incidents": 6, "completion_percent": 86.67,
+      "sites": { "North": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5 }, "South": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1 } }
+    },
+    "independently_derived": {
+      "row_count": 3, "scheduled": 30, "completed": 26, "incidents": 6, "completion_percent": 86.67,
+      "sites": { "North": { "rows": 2, "scheduled": 22, "completed": 18, "incidents": 5 }, "South": { "rows": 1, "scheduled": 8, "completed": 8, "incidents": 1 } }
+    },
+    "mismatches": [],
+    "note": "Expectations were treated as unaudited claims. Every number was derived from the 474 input bytes before any comparison, and no expectation was adjusted to fit an output or vice versa. Agreement is total, which is a corroboration, not the basis of the finding."
+  },
+
+  "risks_addressed": [
+    {
+      "risk": "A model-authored observation is not qualification",
+      "handling": "I did not accept observation.json or the qualification receipt's prose as evidence. I re-hashed the procedure and input from disk, re-derived the arithmetic on an independent python3 code path, and treated the qualifier's own numbers only as a hash-compared cross-check. The acquisition claim that survives scrutiny is the byte-level one: procedure hash and size match the receipt."
+    },
+    {
+      "risk": "Visible examples do not replace independent arithmetic verification",
+      "handling": "The visible example values were recomputed from the fixture with exact rationals and a separately implemented rounding rule, validated over 80600 cases, and shown to move correctly under a perturbed fixture. No number was accepted because it appeared in an example or a previous agent's summary."
+    },
+    {
+      "risk": "The candidate's own output is not evidence of its correctness",
+      "handling": "Correctness rests on the Fraction/Decimal recompute and the negative control, not on the procedure's output. The baseline byte match then confirms the procedure lands on the independently derived truth."
+    }
+  ],
+
+  "artifacts_produced_by_this_verification": [
+    "verification-report.json",
+    "verification-report.md"
+  ],
+
+  "scope_compliance": {
+    "worked_only_in_mission_dir": true,
+    "wrote_only_into_mission_dir": true,
+    "transient_scratch_note": "One temporary helper script was written to /tmp and deleted immediately after use; it is not a deliverable and its content is fully reproduced by the inline verification commands.",
+    "python_standard_library_only": true,
+    "packages_installed": [],
+    "network_used": false,
+    "external_changes": false,
+    "publishing_deployment_purchases": [],
+    "read_only_on_inputs": true,
+    "inputs_modified": false,
+    "procedure_executed_by_verifier": false,
+    "procedure_execution_avoided_because": "Verification is read-only arithmetic per the exclusions; running the procedure would create output the task did not authorize me to place in the mission root."
+  },
+
+  "conclusion": "The observation-digest-v1 procedure is genuinely qualified and its arithmetic is exactly right on the real fixture, and its bytes reproduce the qualified baseline hash precisely. The mission nonetheless fails its acceptance criteria because the final fixed-args invocation never happened: the mission root holds no digest.json, no digest.md and no invocation receipt, and the only digest artifacts sit in probe directories that the approved scope forbids as the final output. The gap is execution and registration, not correctness or qualification. Once the procedure runs once against its fixed arguments, the expected digest.json is 9cd7f88dc7782d713708a0fba8f76400753253e04aec3c333209dd496ae54382 with content independently confirmed above."
+}

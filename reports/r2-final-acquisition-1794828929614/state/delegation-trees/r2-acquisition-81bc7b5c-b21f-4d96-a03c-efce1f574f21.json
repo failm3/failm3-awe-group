@@ -1,0 +1,132 @@
+{
+  "mission_id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21",
+  "saved_at": "2026-11-16T12:02:07.923Z",
+  "total_agents": 5,
+  "max_depth": 0,
+  "nodes": [
+    {
+      "id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21:top0",
+      "role": "researcher",
+      "started_at": "2026-11-16T11:36:02.052Z",
+      "task": "Investigate and acquire a reusable way to provide the missing capability 'observation-digest-v1'. Reason: required by the approved mission. Discover existing local or mature open-source options, When capability_library is available, consult it first for unvetted reusable candidates before reaching for the network. Its metadata never approves, installs or executes a candidate and does not replace concrete feasibility and security verification. Evaluate concrete feasibility and security, and where possible use an already-approved tool or local runtime to establish the capability. Do not install packages, change host configuration, purchase anything, expand scope or claim success from documentation alone. Persist a concise JSON observation with capability, status (available|missing|failed), detail and optional acquired. Omit acquired when nothing was acquired; do not use null. When present, acquired must be one short string naming the approved tool or absolute local procedure, never an object. An available+acquired string alone is not an invocation grant. status available is only valid when you name what exists: either acquired (one short string) or local_target. When you propose a local_target, also set acquired to one short string naming that procedure: a host policy may require acquired on every available observation, and without it a correct proposal is still refused. An available observation with neither is rejected as unresolvable; use missing or failed when nothing usable was verified. To propose a qualified local Node procedure, include local_target: {runtime: \"node\", executable_path, executable_sha256, args, probe_artifacts}; runtime is required and must be exactly \"node\". executable_path is the canonical absolute path of the procedure source file itself (not /usr/bin/node), and executable_sha256 is that source file's actual SHA-256. The trusted gate supplies the fixed 'node --' runtime command; do not include node or '--' in args. Use an exact fixed no-placeholder argument array appropriate to the approved deliverable paths, and probe_artifacts as [{artifact_id, sha256}] referencing persisted real probe output. artifact_id must be the registry UUID actually returned by save_artifact/file_write or listed by file_list; never use a basename, name, path, or a UUID quoted only in another file. sha256 must be the actual bytes hash of that same registry artifact. Probe output is evidence, not the final deliverable: its JSON must not contain capability/status/detail/local_target fields that could be mistaken for the observation. Write exactly one observation JSON object with only capability, status, detail, optional acquired and optional local_target keys; do not add probe totals, method, source or other domain fields. Do not execute the proposed target during acquisition. Use exact absolute runtime paths supplied in the task; relative runtime paths resolve to the mission directory and are not a valid absence check. This acquisition is already authorized within the existing approved tool grants: do not require a second mapping-approval record. If status is missing or failed, the observation is terminal: do not invent a fallback or expand grants.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_list",
+        "file_write",
+        "save_artifact"
+      ],
+      "artifacts": [
+        "9190e326-92fb-4f19-b316-35c4a8135b2c",
+        "dec8f4e5-7763-43c9-811b-6145de3f893a",
+        "b7c337c4-b511-4c3a-94de-e032fd92ff33",
+        "d41b5b16-76f7-46a5-9294-30816fcd92ac",
+        "584dbc26-2c94-40a3-875c-f2730310e5cd",
+        "44b939a0-85f2-4916-ab65-97a0b47f4bc3",
+        "e7a4145e-78fb-485e-b425-fdd63b145063",
+        "526a77f3-b4bc-496f-bbec-26a28c820e5e",
+        "7ebc69f2-133d-4bc3-84a5-d82fb910d28e",
+        "b04acdbf-46e7-48b0-9524-c8b8880c5788",
+        "70d526bb-3191-4787-b15e-e0251e76ee15",
+        "f71ec3ac-80c4-4e46-8aa6-5770a988b017",
+        "34956b16-3404-40cd-8b4e-6d339e34e5ad",
+        "196ee7f7-41cc-482b-b657-7eda2cf57ed9",
+        "449387d7-998c-4890-a13e-49aacb2504a2",
+        "7618f780-039e-4193-b340-b825d8c1fb09",
+        "199893ec-5515-4719-b4de-c3220a23742d",
+        "cb787dc0-0e5b-4912-9749-15caaa241119"
+      ],
+      "duration_ms": 318012,
+      "finished_at": "2026-11-16T11:41:20.058Z"
+    },
+    {
+      "id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21:top1",
+      "role": "devops",
+      "started_at": "2026-11-16T11:41:55.625Z",
+      "task": "Bind the existing host-qualified capability attempt c38a40ad-d8b7-4de2-b4f6-57d4155f4e14 and execute exactly one invocation of the qualified procedure using the fixed command supplied by the host gate, with no additions, no wrappers, no extra flags, and no other shell command of any kind. The gate itself rehashes the executable (expected sha256 8daae21f0617c3ac4e1e178344ff8e1f10be46331bd10d245a302ad1574e6017) and re-verifies its probes before release; do not request or attempt a pre-run hash check, listing, or probe, since any such command will be refused by the gate and that refusal is a gate decision, not a missing capability. After the invocation, record a durable invocation receipt stating the attempt ID, the executable path, its sha256, the exact argv (runtime node, the two fixed positional args, in that order), the working directory, exit code 0, and the wall-clock time. Also capture the observed output locations and byte sizes of digest.json and digest.md as produced in the mission workspace root.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "tools_used": [
+        "shell",
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "e51fe53a-405c-47ab-a857-2aace40f996d",
+        "8ae0c535-396f-4562-87cc-f0cc89e43837",
+        "afcd3df3-b375-40d7-8f53-7ca75764f2d1"
+      ],
+      "duration_ms": 110178,
+      "finished_at": "2026-11-16T11:43:45.796Z"
+    },
+    {
+      "id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21:top2",
+      "role": "analyst",
+      "started_at": "2026-11-16T11:43:45.810Z",
+      "task": "Independently verify the produced digests without invoking or trusting the Node procedure's own arithmetic. Read input/pilot.observations.json directly from the fixture bytes, recompute row_count, scheduled, completed, incidents, completion_percent to exactly 2 decimals with half-up rounding via a hand-worked or decimal-based route distinct from the Node implementation, and recompute per-site totals for every site key. Then parse digest.json and check: row_count, scheduled, completed, incidents and completion_percent are numeric (not strings) and exactly equal the independent values; sites is an object keyed by site name where each entry carries numeric totals and every site's contribution sums to the grand totals; completion_percent is rendered with exactly 2 decimals (86.67, not 86.7 or 86.666...). Check digest.md states the same values as digest.json with no divergence, and that it documents a reproducible method (fixture path, input shape, formula for completion_percent, rounding rule) sufficient for a third party to reproduce the numbers. Record every comparison, the independent computation, and any mismatch explicitly.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-sonnet-5-5",
+      "tools_used": [
+        "file_read",
+        "file_write"
+      ],
+      "artifacts": [
+        "73aab63e-a6b3-411a-9712-b698d05cb4fb",
+        "04100c3a-30bf-46ff-9601-ded5a86c1b49"
+      ],
+      "duration_ms": 169078,
+      "finished_at": "2026-11-16T11:46:34.884Z"
+    },
+    {
+      "id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21:top3",
+      "role": "devops",
+      "started_at": "2026-11-16T11:46:34.898Z",
+      "task": "Register the deliverables as artifacts and close out. Read digest.json, digest.md and the invocation receipt from the mission workspace, register each as an artifact via save_artifact so their exact bytes are durably recorded, and record the returned artifact identifiers and sha256 values. Then re-read each registered artifact's bytes or its recorded hash and confirm host verification status, cross-checking that the registered digest bytes are byte-identical to the files the qualified invocation produced and that no post-hoc edit occurred. Assemble a final QA summary that maps every acceptance criterion to concrete evidence: named capability identified and acquired once with a host-qualified attempt; fixed bytes plus fixed args invoked with a durable receipt; digest.json numeric field set and sites object; digest.md parity and reproducible method; and independent artifact registration and verification including the analyst's independent arithmetic PASS.",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "tools_used": [
+        "file_read",
+        "save_artifact",
+        "file_list"
+      ],
+      "artifacts": [
+        "07dbba0c-e33e-4d4e-ad0d-c86b3d4c3cbd",
+        "8802926a-175f-4f9d-8563-2145ec8ba6d1",
+        "54b2eedb-9eb9-410a-97e5-6e719a93dff8",
+        "8b07b548-4591-4407-9756-5c840fdf4c9f",
+        "e1fc6aec-e3b7-44ba-8830-e6136c220840",
+        "a8f19996-e250-44fa-8f48-c47e35aee40a",
+        "59ba9f6d-ee8f-4c6d-b3c8-4defcf313bd0"
+      ],
+      "duration_ms": 316156,
+      "finished_at": "2026-11-16T11:51:51.049Z"
+    },
+    {
+      "id": "r2-acquisition-81bc7b5c-b21f-4d96-a03c-efce1f574f21:top4",
+      "role": "executor",
+      "started_at": "2026-11-16T11:54:19.547Z",
+      "task": "Fix the following defects identified by QA without changing the approved scope:\n[MINOR] Several byte sizes appear to be character counts rather than UTF-8 byte lengths: the receipt, analyst and registration records and qa-summary state digest.md as 1514 bytes while the host manifest and probe copies record 1516 for the same sha256 (em dash encodes as 3 bytes), and the registration record gives verification/independent-verification.md as 10241 against a host value of 10412. The 'bytes_unchanged' ",
+      "depth": 0,
+      "parent_id": null,
+      "status": "success",
+      "children": [],
+      "model": "claude-opus-5-5",
+      "duration_ms": 468374,
+      "finished_at": "2026-11-16T12:02:07.923Z"
+    }
+  ]
+}
